@@ -1,0 +1,200 @@
+//////////////////////////////////////////////////////////////////
+// STALKER Shaders MAX 1.05 - Extreme Preset - By Kingo64, Sky4CE, Meltac, JJ Walker
+#ifndef SSM_Mount
+#define SSM_Mount
+//////////////////////////////////////////////////////////////////
+//Feature Enable/Disable: Comment a feature (Add the //) to disable, or uncomment (Remove the //) to enable.
+//////////////////////////////////////////////////////////////////
+// Comments with a '#' are my notes
+//////////////////////////////////////////////////////////////////
+
+	//World effects
+	#define DEPTH_OF_FIELD 		// Enables Depth Of Field   # Blurs objects in the distance
+	#define PARALLAX_OCCLUSION	// Enables Parallax Occlusion Mapping  # Makes surfaces look bumpy and 3d at the cost of fps. Worth it
+	#define SSAO			// Enables Screen Space Ambient Occlusion  # Looks good if you are stuck on Object Dynamic Lighting
+	//#define SUN_SHAFTS		// Enables Sun Shafts (god rays) # Only noticable on Full Dynamic Lighting, looks very nice but causes poor performance on some computers. Also makes the environment much brighter and natural.
+	#define USE_SJITTER		// Uses shadow jittering, a modern method of smoothing out shadow edges. Applies to flashlight, and to world if SUN_FILTER is enabled.
+	#define USE_SUNMASK		// Enables sun shadow masking # Seems to be the line that produces shadows based on sun orientation. I am not sure if F32 needs or it should avoid it
+
+	//Screen Space effects
+	//#define USE_MBLUR		// Enables Motion Blur # This forces Motion Blur on like -mblur. Adjust the blur amount with MBLUR_COEF later in this script.
+	//#define IMPROVED_MBLUR		// Use distance-depending Motion Blur - Adjust START_DIST and FINAL_DIST to your needs. 
+	//#define SKY4CE_MBLUR 		// # Seems to break Motion Blur and Anti-Aliasing altogether
+	//#define SATURATION_FILTER	// Enables Saturation Filter, giving a grey like appearance to areas which are "unsafe".
+	//#define CONTRAST_FILTER		// Enables Contrast Filter, giving a grey like appearance to areas which are "unsafe".
+
+
+	//Other
+	//#define USE_F32		// Enables Float32 mod. Breaks saturation and contrast filters. # If you are using Panoramic Mod 2.1 FINAL from Argus make sure you have a // at the start of this line 
+	//#define USE_F32_FOG		// Enables Float32 style fog. Requires Float32 to be enabled.
+	#define CUSTOM_SHADOW_RESOLUTION int(2048) // Use a custom shadow size. Default is 1024 (1024x1024).
+
+//////////////////////////////////////////////////////////////
+//Depth Of Field
+//////////////////////////////////////////////////////////////
+
+	//Basic options:
+	#define DOF_QUALITY int(12)	//Amount of DOF samples. Maximum value is 12.
+
+	//Distance Options:
+	#define MINDIST float(15.0)	// Minimum distance DOF starts. Default is 0.4.  // TWILIGHT KET USES 15
+	#define MAXDIST float(275)	// Distance at which DOF stops rendering. Default is 375
+	#define MAXCOF	float(4.0)	// Blur amount - if using DDOF, this should not differ too much from DDOF_MAXCOF (I use same value)
+	
+	// Meltac: Total DOF Extensions
+	//
+	// Blur methods - enable at least one; can be combined/applied together,
+	// however in my experience the overall effect was worse in combination;
+	// use r2_aa_kernel to adjust the mix, 0.3 = full classic; 0.7 = full gaussian
+	#define DOF_CLASSIC			// Use classic blur algorithm, as implemented by Sky4Ace
+	#define DOF_GAUSSIAN			// Use simple gaussian blur algorithm (blurs stronger with same MAXCOF value)
+	#define DOF_CORRECTION float (6.0)	// Factor to equalize the amount of gaussian to classic blur. Don't change this unless you know what you're doing.
+	
+	// Oversampling for better quality (not really improving much, but making game startup slower - use at your own risk)
+	#define DOF_OVERSAMPLING int(1)		// oversampling ratio. Default is 1.
+	
+	// Near Field DOF (see also Dynamic DOF, because the effects are interfering!)	
+	#define MAXNEAR float(0.7)		// Distance at which Near Field DOF starts. Default is 0.7. Larger values will blur your weapon more, and not only its near part.
+	#define MINNEAR float(0.0)		// Distance at which Near Field DOF stops. Default is 0.0
+	#define MAXCOF_NEAR float(15.0)		// Near Field blur amount. Interferes heavily with DDOF. Default is value 7.0 without, 15.0 with DDOF.
+	
+	// Zoom DOF
+	#define ZOOM_MINDIST float(15.0)	// Minimum distance (radius) from screen center where DOF starts.
+	#define ZOOM_MAXDIST float(260.0)	// Distance radius from screen center at which DOF stops rendering (beyond that value - full blur). 
+	#define ZOOM_MAXCOF float(80.0)		// Blur amount at the screen border while zooming.
+	#define ZOOM_FACTOR float(10.0)		// The stepness of the blur amount raising from center to border. Good values are 10-12.
+	#define ZOOM_BARRIER float (20.0)	// (DEBUG) Distance from the screen center at which blurring starts, in relative pixels.
+	
+	// Dynamic DOF
+	//#define DDOF				// Enable/disable Dynamic DOF (blurring coefficient is MAXCOF)	
+	#define DDOF_MINDIST_ADD float(0.7)	// Added to view distance, at this distance begins blurring
+	#define DDOF_MAXDIST_FACTOR float(4.0)	// Mindist times factor = maxdist
+	#define DDOF_MINDIST float(0.0)		// Minimum distance DDOF starts.
+	#define DDOF_MAXDIST float(10.0)	// Distance at which DOF stops rendering. Beyond this view distance, only minor DDOF
+	#define DDOF_MAXCOF float(4.0)		// DDOF blur factor - good balanced is value 2.0 - 5.0 - see also MAXCOF
+
+	// End Meltac
+	
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+//Anti-Aliasing (does not really work well, use at your own risk; at the moment, non-zoom mode only)
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+	// Basic options:
+	//#define AA				// Enable Anti-Aliasing
+	#define AA_KERNEL  float(100.0)		// PS: 0.5	
+
+	#define AA_BARRIER_X float(0.800000)
+	#define AA_BARRIER_Y float(0.500000)
+	#define AA_BARRIER_Z float(0.000000)
+	
+	#define AA_WEIGHTS_X float(0.250000)
+	#define AA_WEIGHTS_Y float(0.250000)
+	#define AA_WEIGHTS_Z float(0.000000)
+
+//////////////////////////////////////////////////////////////
+//Parallax Occlusion Mapping
+//////////////////////////////////////////////////////////////
+
+	//Basic Options:
+	#define MAX_SAMPLES int(40)		//Maximum amount of samples done to a texture.
+	#define MIN_SAMPLES int(5)		//Minimum amount of samples done to a texture.
+	#define PARALLAX_OFFSET float(0.015)	//Height of surface per sample.
+	#define FINAL_INTERSECTION_LOOPS int(5)	//Amount of additional samples to increase accuracy.
+
+	//Performance Options:
+	//#define PARALLAX_FADE			//Parllax textures fade back to regular normals with distance; increases FPS and fixes anisotropic filtering. #Disabling this strangely gave me a much higher FPS.
+	#define START_FADE float(0.0003)	//Distance the fading starts
+	#define STOP_FADE float(0.0004)		//Distance the fading stops, and the texture returns to just using normals.
+	
+	//Other Options:
+	//#define USE_TEXTURE_PACK		//Uses height maps built into texture files, rather than self generating them. Requires special textures (81mb) # Put a // at the start of this line if you are running low on RAM or get 'Out of Memory' errors. Also it may cause other problems such as disabling the feature altogether
+  	//#define CORRECT_PERSPECTIVE		//WARNING!!! artifacts will appear if defined
+	#define CONTRAST_COEF_Q1 float(0.6)	//Amount of contrast in calculations.
+	#define CONTRAST_COEF_Q2 float(1)	//Amount of contrast in calculations.
+	#define BRIGHTNESS_COEF float(0.25)	//Amount of brightness in calculations.
+
+//////////////////////////////////////////////////////////////
+//Screen Space Ambient Occlusion
+//////////////////////////////////////////////////////////////
+
+	//Basic Options:
+	#define SSAO_QUALITY int(3) 	//Amount of SSAO samples. Use 2 for low quality and 3 for high quality. 0 and 1 are invalid. #The only noticable difference is the framerate :P
+	#define SSAO_TEX_CONT		//Increase texture contrast for diffuse lighting   # This line makes SSAO much darker. If it is too dark add a // to the start of the line or increase the value on the line below.
+	#define CONT_COEF float(0.3)	//Brightness increase amount
+
+	//Only for testing.
+	#define FADE_DIST float(4)
+	#define FADE_COEF float(0.2)
+
+//////////////////////////////////////////////////////////////
+//Sun Shafts
+//////////////////////////////////////////////////////////////
+
+	//Basic options:
+	#define RAY_SAMPLES int(20)	//Amount of sun ray samples. The higher this is, the better the quality and the lower your framerate.
+	#define SS_INTENSITY float(0.5)	// intesity of sun shafts
+
+	//Only for testing.
+	#define SS_CONTRAST float(4)	//Amount of contrast during sunray calculation.
+	//#define SS_FARNEARLERP	//# Seemed to give me more FPS but caused massive sun errors. Leave it disabled.
+
+//////////////////////////////////////////////////////////////
+//Motion Blur
+//////////////////////////////////////////////////////////////
+
+	//Basic options:
+	#define MBLUR_SAMPLES int(20)	// Quality(Intesity)
+
+	//Details:
+	#define SCALE_X float(-0.03) 	// Velocity ratio X
+	#define SCALE_Y float(0.03) 	// Velocity ratio Y
+	#define START_DIST float(1.0) 	// Interpolation start distance
+	#define FINAL_DIST float(300.0) // Interpolation end distance
+	#define VEL_START float(0.001) 	//Velocity softening at start distance - default is 0.009, but I consider this value too high
+	#define VEL_FIN float(0.02) 	//Velocity softening at end distance
+	#define IMB_CLAMP float(0.01) 	//Motion Blur Ratio Clamp
+	
+	// Meltac: Use this instead of the "r2_mblur" setting in the console to define the motion blur amount
+	//#define MBLUR_COEF float2(1.0,0.0)
+
+//////////////////////////////////////////////////////////////
+//Saturation and Contrast
+//////////////////////////////////////////////////////////////
+
+	//Basic options:
+	#define COLOR_SATURATION float(0.5)		//Level of Grey. 0 is all grey (Black and White), 1 is no Grey (Why have this enabled?)
+	#define COLOR_SAT_SUN_COEF float(1)		//How much influence sun lighting has on the saturation.
+	#define CONTRAST_FILTER_COEF float(0.15)	//Level of full screen contrast.
+
+//////////////////////////////////////////////////////////////
+//Float32 v2.0
+//////////////////////////////////////////////////////////////
+
+	//Basic options:
+	#define CT_int  1.25f 		//Cook Tolerance of the sun.
+	#define CT_int_in   1.25f 	//Cook Tolerance of indoor lighting.
+	#define BLOOM_val 0.6h 		//Bloom brightness - Increases HDR brightness of the sky
+	#define HDR_int  10.h 		//HDR cutoff - Total HDR brightness
+
+//RADEON COMPATIBILITY MODE - For those who can not use Fetch4 or have issues! Not needed on most modern GPUs.
+	//#define NO_F4
+
+//////////////////////////////
+//Forced Settings - Debug
+//////////////////////////////
+
+// #define USE_GAMMA_22
+// #define USE_SUNFILTER
+// #define USE_HWSMAP
+// #define USE_HWSMAP_PCF	// nVidia GF3+, R600+
+// #define USE_BRANCHING
+// #define USE_VTF		// VertexTextureFetch
+// #define FP16_FILTER
+// #define FP16_BLEND
+// #define USE_PARALLAX
+// #define USE_TDETAIL
+// #define USE_LM_HEMI
+// #define USE_DISTORT
+// #define DBG_TMAPPING
+
+#endif
