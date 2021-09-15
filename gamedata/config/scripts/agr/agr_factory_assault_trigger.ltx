@@ -1,0 +1,8 @@
+[logic]
+active = {+agr_help_stalkers_start} nil, sr_idle
+
+[sr_idle]
+on_actor_inside = %+agr_factory_assault_start% sr_idle@sos
+
+[sr_idle@sos]
+on_timer = 7000 | nil %+agr_help_stalkers_start%

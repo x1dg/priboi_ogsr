@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<window>
+
+	<background x="0" y="0" width="1024" height="768">
+		<texture x="0" y="0" width="1024" height="768">ui\ui_static_mm_back_04</texture>
+	</background>
+
+	<form x="256" y="168" width="560" height="460">
+		<texture>ui_menu_options_dlg</texture>
+
+		<caption x="30" y="0" width="500" height="25" complex_mode="0">
+			<text x="40" y="5it" font="graffiti32" r="238" g="155" b="23" a="255" align="l">Save point</text>
+		</caption>
+		
+		<label_patrol_name x="65" y="57" width="50" height="23">
+			<text font="letterica18" r="238" g="155" b="23">Patrol name</text>
+		</label_patrol_name>
+		
+		<patrol_name x="170" y="52" width="280" height="23">
+			<texture>ui_linetext_e</texture>
+			<text font="letterica18" r="240" g="217" b="182"/>
+		</patrol_name>
+		
+		<label_anim_name x="65" y="92" width="50" height="23">
+			<text font="letterica18" r="238" g="155" b="23">Animation</text>
+		</label_anim_name>
+		
+		<anim_name x="170" y="87" width="280" height="23">
+			<texture>ui_linetext_e</texture>
+			<text font="letterica18" r="240" g="217" b="182"/>
+		</anim_name>
+		
+		<label_sig_name x="65" y="127" width="50" height="23">
+			<text font="letterica18" r="238" g="155" b="23">Signal</text>
+		</label_sig_name>
+		
+		<sig_name x="170" y="122" width="280" height="23">
+			<texture>ui_linetext_e</texture>
+			<text font="letterica18" r="240" g="217" b="182"/>
+		</sig_name>
+
+		<frame x="65" y="170" width="449" height="230">
+			<texture>ui_tablist_textbox</texture>
+		</frame>
+		
+		<list_view x="70" y="180" width="210" height="310" item_height="18">
+			<font font="letterica16" r="216" g="186" b="140" />
+		</list_view>
+
+		<btn_save x="221" y="427" width="157" height="48">
+			<texture>ui_button_main01</texture>
+			<text font="graffiti22">Save</text>
+			<text_color>
+				<e r="227" g="199" b="178"/>
+				<t r="180" g="153" b="155"/>
+				<d r="106" g="95" b="91"/>
+				<h r="0" g="0" b="0"/>
+			</text_color>
+		</btn_save>
+
+		<btn_cancel x="377" y="427" width="157" height="48">
+			<texture>ui_button_main01</texture>			
+			<text font="graffiti22">ui_mm_cancel</text>
+			<text_color>
+				<e r="227" g="199" b="178"/>
+				<t r="180" g="153" b="155"/>
+				<d r="106" g="95" b="91"/>
+				<h r="0" g="0" b="0"/>
+			</text_color>
+		</btn_cancel>
+
+	</form>
+</window>

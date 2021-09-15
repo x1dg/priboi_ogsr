@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<!-- ИСТОРИЯ СООБЩЕНИЙ -->
+<window>
+
+	<list x="0" y="0" width="610" height="590" right_ident="6" always_show_scroll="0" scroll_profile="pda">
+        <font font="letterica18" color="white_2"/>
+    </list>
+    
+	<news_item  x="0" y="0" width="520" height="100">
+		<text_cont x="65" y="25" width="520" height="10" complex_mode="1">
+			<text align="l" font="letterica16" color="white_3"/>
+		</text_cont>
+		
+		<date_text_cont x="65" y="10" width="160" height="10">
+			<text align="l" font="letterica16" color="grey_3"/>
+		</date_text_cont>
+		
+		<image x="0" y="11" width="61" height="40" stretch="1"/>
+	</news_item>	
+
+	<talk_item  x="0" y="0" width="520" height="100">
+		<text_cont x="65" y="25" width="520" height="10" complex_mode="1">
+			<text align="l" font="letterica16" color="white_3"/>
+		</text_cont>
+		
+		<date_text_cont x="65" y="10" width="160" height="10">
+			<text align="l" font="letterica16" color="grey_3"/>
+		</date_text_cont>
+		
+		<image x="0" y="11" width="61" height="40" stretch="1"/>
+	</talk_item>	
+	
+</window>

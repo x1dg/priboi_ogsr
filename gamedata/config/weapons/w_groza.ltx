@@ -1,0 +1,282 @@
+[wpn_groza]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency 		= 
+$spawn                   	= "weapons\groza"	; option for Level Editor
+$npc				= on			; option for Level Editor
+$prefetch 			= 16
+scheduled			= off              	; option for ALife Simulator
+cform                   	= skeleton
+class                   	= WP_GROZA
+min_radius              	= 30
+max_radius              	= 150
+description			= enc_weapons1_wpn-groza
+
+ef_main_weapon_type		= 2
+ef_weapon_type			= 6
+
+;-----------------------------------------------------------------------------------
+holder_range_modifier		= 1.0		; во сколько раз увеличивается eye_range 
+holder_fov_modifier		= 0.7		; во сколько раз увеличивается eye_fov
+;-----------------------------------------------------------------------------------
+
+cost				= 19120
+weapon_class			= assault_rifle
+
+ammo_limit			= 300
+ammo_current			= 180
+ammo_elapsed			= 20
+
+ammo_mag_size		 	= 20
+ammo_class		 	= ammo_9x39_pab9, ammo_9x39_sp5, ammo_9x39_ap
+fire_modes			= 1, -1
+launch_speed			= 0
+
+grenade_class			= ammo_vog-25, ammo_vog-25p, ammo_vog-25_teg, ammo_vog-25_hbgteg
+
+hand_dependence		 	= 1
+single_handed			= 0
+
+slot 				= 2		; // secondary
+animation_slot			= 8		; type of the animation that will be used
+
+inv_name	         	= wpn-groza
+inv_name_short		 	= wpn-groza
+inv_weight		 	= 3.2
+
+inv_grid_width			= 4
+inv_grid_height			= 2
+inv_grid_x			= 25
+inv_grid_y			= 6
+
+kill_msg_x			= 67
+kill_msg_y			= 123
+kill_msg_width			= 64
+kill_msg_height			= 30
+
+;-----------------------------------------------------------------------------------
+;базовая дисперсия
+fire_dispersion_base		= 0.18	;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+control_inertion_factor		= 1.15f
+
+;отдача
+cam_relax_speed         	= 5.2	;скорость возврата в исходное положение
+cam_dispersion          	= 0.3	;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc		= 0.12	;увеличениe cam_dispersion с каждым выстрелом
+cam_dispertion_frac		= 0.75	;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
+cam_max_angle			= 8.5	;максимальный угол отдачи
+cam_max_angle_horz		= 9.0	;(degree) maximum shot horizontal degree 
+cam_step_angle_horz		= 0.85	;(degree) size of step camera moved in horizontal position while shooting
+
+fire_dispersion_condition_factor = 5	;увеличение дисперсии в процентах при максимальном износе 
+misfire_probability 		= 0.003	;вероятность осечки при максимальном износе 
+misfire_condition_k		= 0.05
+condition_shot_dec 		= 0.0001 ;увеличение износа при каждом выстреле
+;-----------------------------------------------------------------------------------
+
+direction			= 0, 0, 1
+
+fire_point              	= 0.0, 0.194, 0.274
+
+flame_particles		    	= weapons\generic_weapon05
+smoke_particles			= weapons\generic_shoot_00
+grenade_flame_particles 	= weapons\generic_weapon01
+
+
+shell_point			= 0.0, 0.194, 0.04
+shell_dir			= 0.0, 0.0, 0.4
+;shell_particles			= weapons\generic_shells
+rpm_empty_click 		= 200
+
+PDM_disp_base 			= 1.0
+PDM_disp_vel_factor 		= 1.2
+PDM_disp_accel_factor 		= 1.2
+PDM_crouch	 		= 1.0
+PDM_crouch_no_acc 		= 1.0
+
+; ttc
+hit_power           		= 1.1 ;0.65, 0.65, 0.65, 0.70
+hit_impulse		 	= 170
+hit_type 			= fire_wound
+
+fire_distance           	= 400
+bullet_speed			= 300	;начальная скорость пули
+rpm                    		= 700
+
+use_aim_bullet			= true		;Поддерживается ли первая суппер пуля
+time_to_aim			= 1.0	
+
+grenade_vel			= 76
+; end ttc
+
+silencer_hit_power       	= 1.1; 0.70 ;0.58
+silencer_hit_impulse	 	= 120
+silencer_fire_distance   	= 250
+silencer_bullet_speed	 	= 280
+
+hud                     	= wpn_groza_hud
+normal                  	= 0, 1, 0
+
+;----------------------------------------------------------
+position                	= -0.026, -0.144, 0.0
+orientation      	   	= 0, 0, 0
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+strap_position         		= -0.15,-0.38,0.35	; position (offset) and orientation of the weapon when it is strapped
+strap_orientation      		= -10,-5,10		; (3rd person view in degrees)
+strap_bone0			= bip01_spine2
+strap_bone1			= bip01_spine1
+
+startup_ammo            	= 90
+visual                  	= weapons\groza\wpn_groza.ogf ;weapons\groza2\wpn_groza2.ogf
+
+light_color		 	= 0.6,0.5,0.3
+light_range		 	= 5
+light_var_color		 	= 0.05
+light_var_range		 	= 0.5
+light_time 		 	= 0.2
+
+ph_mass			 	= 5
+;cost			 	= 2100
+
+;addons
+scope_status			= 2
+silencer_status			= 0
+grenade_launcher_status		= 1
+
+zoom_enabled			= true
+scope_zoom_factor	    	= 60 ;40	;30
+
+scope_name 			= wpn_addon_scope	; section name for the attachable scope
+scope_x 			= 63			; offset in inventory icon
+scope_y 			= -4
+silencer_name  			= wpn_addon_silencer ; section name for the attachable silencer
+silencer_x 			= 180			; offset in inventory icon
+silencer_y 			= 17				
+
+;звуки
+snd_draw			= weapons\generic_draw, 0.5
+snd_holster			= weapons\generic_holster, 0.5
+;snd_shoot			= weapons\t_groza_shot
+snd_shoot		    	= weapons\groza_shoot
+snd_shoot1			= weapons\groza_shoot2
+snd_empty			= weapons\gen_empty, 0.5
+snd_reload			= weapons\groza_reload_empty ;weapons\groza_reload, 0.7, 0.45
+snd_shoot_grenade		= weapons\gen_grenshoot
+snd_reload_grenade		= weapons\gen_grenload, 0.6, 1.3
+snd_switch			= weapons\groza_switch, 0.6, 0.45
+
+;params when silencer is attached 
+;similar to corresponding params without prefix silencer_
+
+;silencer_flame_particles 	= weapons\generic_weapon01
+silencer_smoke_particles 	= weapons\generic_shoot_00
+
+snd_silncer_shot		= weapons\w_ak74_shot1, 0.6
+
+silencer_light_color		= 0.6,0.5,0.3
+silencer_light_range		= 0.01
+silencer_light_var_color	= 0.05
+silencer_light_var_range	= 0.5
+silencer_light_time 		= 0.2
+
+ 
+[wpn_groza_hud]
+allow_inertion			= true
+
+shell_point             	= -0.25, 0.0, 0.05
+;shell_point		 	= -0.15, -0.03, 0.05
+shell_dir		 	= 0.0, 1.0, 0.0
+
+fire_point			= 0,0,-0.5; -0.020000,0.000000,0.060000
+fire_bone               	= muzzle ;wpn_body
+orientation             	= 0, 0, 0
+position                = -0.042,-0.15,0.3; -0.016, 0, 0.1
+visual                  	= weapons\groza\wpn_groza_hud.ogf ;weapons\groza2\wpn_groza2_hud.ogf
+
+grenade_bone    		= grenade ;grenade_0
+
+anim_idle				= idle
+anim_idle_aim			= aim
+anim_reload				= reload
+anim_draw				= draw
+anim_holster			= holster
+anim_shoot				= shoot
+anim_idle_sprint		= sprint
+
+anim_idle_g				= idle_g
+anim_idle_g_aim         = aim_g
+anim_reload_g			= reload_g
+anim_shoot_g			= shoot_g
+anim_switch_grenade_on	= switch_on
+anim_switch_grenade_off	= switch_off
+anim_draw_g				= draw_g
+anim_holster_g			= holster_g
+
+anim_idle_gl			= idle
+anim_reload_gl			= reload
+anim_draw_gl			= draw
+anim_holster_gl			= holster
+anim_shoot_gl			= shoot
+anim_idle_gl_aim        = aim
+
+;смещения HUD для режима приближения
+;zoom_offset			= -0.1572, -0.0332, -0.145
+;zoom_rotate_x		= 0.011600
+;zoom_rotate_y		= 0.036900
+zoom_offset			= -0.12825,0.02075,-0.29; -0.13155,0.02105,0.05
+zoom_rotate_x		= 0.022
+zoom_rotate_y		= 0.0349
+
+
+;тоже самое, но для подствольника
+grenade_zoom_offset			= -0.12025,-0.2,0.05
+grenade_zoom_rotate_x		= -0.255
+grenade_zoom_rotate_y		= 0.0349
+;grenade_zoom_offset		= -0.161200,-0.538399,0.000000
+;grenade_zoom_rotate_x		= -0.650698
+;grenade_zoom_rotate_y		= 0.035000
+
+
+zoom_hide_crosshair		= true	;to hide crosshair in zoom 
+
+
+[wpn_groza1]:wpn_groza
+
+$spawn                   	= "weapons\groza1"	; option for Level Editor
+description			= enc_weapons1_wpn-groza1
+cost				= 14700
+ammo_elapsed			= 30
+ammo_mag_size		 	= 30
+ammo_class		 	= ammo_7.62x39_fmj, ammo_7.62x39_ap
+inv_name	         	= wpn-groza1
+inv_name_short		 	= wpn-groza1
+inv_grid_x			= 0
+inv_grid_y			= 14
+fire_dispersion_base		= 0.14	;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+cam_dispersion          	= 0.2	;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc		= 0.1	;увеличениe cam_dispersion с каждым выстрелом
+cam_max_angle			= 8.5	;максимальный угол отдачи
+cam_max_angle_horz		= 9.0	;(degree) maximum shot horizontal degree 
+cam_step_angle_horz		= 0.75	;(degree) size of step camera moved in horizontal position while shooting
+hit_power           		= 0.80 ; 0.50, 0.52, 0.55, 0.58
+hit_impulse		 	= 40 ;150
+fire_distance           	= 450
+bullet_speed			= 450	;начальная скорость пули
+silencer_hit_power       	= 0.55
+silencer_hit_impulse	 	= 30 ;100
+silencer_fire_distance   	= 300
+silencer_bullet_speed	 	= 350
+hud                     	= wpn_groza1_hud
+visual                  	= weapons\groza\wpn_groza.ogf
+
+[wpn_groza1_hud]:wpn_groza_hud
+visual                  	= weapons\groza\wpn_groza_hud.ogf
+
+
+;смещения HUD для режима приближения
+;zoom_offset			= -0.1572, -0.0332, -0.145
+;zoom_rotate_x		= 0.011600
+;zoom_rotate_y		= 0.036900
+zoom_offset			= -0.12825,0.02075,-0.29 ;-0.12025,0.02175,0.05
+zoom_rotate_x		= 0.022
+zoom_rotate_y		= 0.0349

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<!-- ОКНО ИНФОРМАЦИИ О НПС В КОНТАКТАХ В КПК -->
+<window>
+	<!-- ICON -->
+	<icon_static x="0" y="0" width="106" height="120"></icon_static>
+
+	<!-- NAME -->
+	<name_static x="121" y="0" width="240" height="16">
+		<text x="0" y="0" font="letterica25" color="grey_2" complex_mode="0"/>
+	</name_static>
+
+	<!-- RANK -->
+	<rank_caption x="121" y="44" width="240" height="15">
+		<text x="0" y="0" font="letterica16" color="grey_2">rank</text>
+	</rank_caption>
+	<rank_static x="121" y="59" width="240" height="16">
+		<text x="0" y="0" font="letterica18" color="grey_3"></text>
+	</rank_static>
+	
+	<!-- COMMUNITY -->
+	<community_caption x="121" y="91" width="240" height="15">
+		<text x="0" y="0" font="letterica16" color="grey_2">community</text>
+	</community_caption>
+	<community_static x="121" y="104" width="240" height="15">
+		<text x="0" y="0" font="letterica18" color="grey_3"></text>
+	</community_static>
+
+	<!-- RELATION -->
+	<relation_static x="121" y="104" width="240" height="15">
+		<text x="0" y="0" font="letterica18" color="grey_3"></text>
+	</relation_static>
+</window>

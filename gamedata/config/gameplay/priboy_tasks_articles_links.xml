@@ -1,0 +1,169 @@
+<!-- Priboy storyline task's descriptions (articles) -->
+<!-- by barin -->
+<!-- last edited: 10.08.2008 -->
+
+<article id="priboy_rad_heli_crash_article_id" name="priboy_rad_heli_crash" article_type="task" group="priboy_rad_heli_crash">
+	<text>priboy_rad_heli_crash_article</text>
+</article>
+
+<article id="priboy_heli_crash_article_id" name="priboy_heli_crash" article_type="task" group="priboy_heli_crash">
+	<text>priboy_heli_crash_article</text>
+</article>
+
+<article id="priboy_assault_agro_mercs_article_id" name="priboy_assault_agro_mercs" article_type="task" group="priboy_assault_agro_mercs">
+	<text>priboy_assault_agro_mercs_article</text>
+</article>
+
+<article id="priboy_assault_monolith_control_article_id" name="priboy_assault_monolith_control" article_type="task" group="priboy_assault_monolith_control">
+	<text>priboy_assault_monolith_control_article</text>
+</article>
+
+<article id="priboy_eliminate_sarcophagus_article_id" name="priboy_eliminate_sarcophagus" article_type="task" group="priboy_eliminate_sarcophagus">
+	<text>priboy_eliminate_sarcophagus_article</text>
+</article>
+
+<article id="priboy_find_uadz32_squad_article_id" name="priboy_find_uadz32_squad" article_type="task" group="priboy_find_uadz32_squad">
+	<text>priboy_find_uadz32_squad_article</text>
+</article>
+
+<article id="priboy_help_wounded_article_id" name="priboy_help_wounded" article_type="task" group="priboy_help_wounded">
+	<text>priboy_help_wounded_article</text>
+</article>
+
+<article id="priboy_help_wounded_stalker_article_id" name="priboy_help_wounded_stalker" article_type="task" group="priboy_help_wounded_stalker">
+	<text>priboy_help_wounded_stalker_article</text>
+</article>
+
+<article id="priboy_bring_vodka_article_id" name="priboy_bring_vodka" article_type="task" group="priboy_bring_vodka">
+	<texture x="0" y="0" width="270" height="150">ui\ui_vodka</texture>
+	<text>priboy_bring_vodka_article</text>
+</article>
+
+<article id="priboy_talk_to_esc_commanders_article_id" name="priboy_talk_to_esc_commanders" article_type="task" group="priboy_talk_to_esc_commanders">
+	<texture x="200" y="549" width="150" height="101">ui\ui_icon_photo</texture>
+	<text>priboy_talk_to_esc_commanders_article</text>
+</article>
+
+<article id="priboy_find_cnpp_blueprints_article_id" name="priboy_find_cnpp_blueprints" article_type="task" group="priboy_find_cnpp_blueprints">
+	<texture x="0" y="0" width="320" height="240">ui\bar_npp_blueprints</texture>
+	<text>priboy_find_cnpp_blueprints_article</text>
+</article>
+
+<article id="priboy_find_cnpp_accident_report_1_article_id" name="priboy_find_cnpp_accident_report_1" article_type="task" group="priboy_find_cnpp_accident_report_1">
+	<text>priboy_find_cnpp_accident_report_1_article</text>
+</article>
+
+<article id="priboy_find_cnpp_accident_report_2_article_id" name="priboy_find_cnpp_accident_report_2" article_type="task" group="priboy_find_cnpp_accident_report_2">
+	<texture x="0" y="0" width="320" height="240">ui\x10_npp_crash2_doc</texture>
+	<text>priboy_find_cnpp_accident_report_2_article</text>
+</article>
+
+<article id="priboy_find_cnpp_accident_report_3_article_id" name="priboy_find_cnpp_accident_report_3" article_type="task" group="priboy_find_cnpp_accident_report_3">
+	<texture x="0" y="0" width="320" height="240">ui\pri_npp_crash3_doc_monbase</texture>
+	<text>priboy_find_cnpp_accident_report_3_article</text>
+</article>
+
+<article id="priboy_find_mutations_report_1_article_id" name="priboy_find_mutations_report_1" article_type="task" group="priboy_find_mutations_report_1">
+	<text>priboy_find_mutations_report_1_article</text>
+</article>
+
+<article id="priboy_find_mutations_report_2_article_id" name="priboy_find_mutations_report_2" article_type="task" group="priboy_find_mutations_report_2">
+	<texture x="0" y="0" width="320" height="240">ui\pri_che_mutat2_school</texture>
+	<text>priboy_find_mutations_report_2_article</text>
+</article>
+
+<article id="priboy_find_mutations_report_3_article_id" name="priboy_find_mutations_report_3" article_type="task" group="priboy_find_mutations_report_3">
+	<text>priboy_find_mutations_report_3_article</text>
+</article>
+
+<article id="priboy_find_deadcity_docs_1_article_id" name="priboy_find_deadcity_docs_1" article_type="task" group="priboy_find_deadcity_docs_1">
+	<text>priboy_find_deadcity_docs_1_article</text>
+</article>
+
+<article id="priboy_find_deadcity_docs_2_article_id" name="priboy_find_deadcity_docs_2" article_type="task" group="priboy_find_deadcity_docs_2">
+	<texture x="0" y="0" width="320" height="240">ui\x18_dar_document4</texture>
+	<text>priboy_find_deadcity_docs_2_article</text>
+</article>
+
+<article id="priboy_find_uhsf_docs_1_article_id" name="priboy_find_uhsf_docs_1" article_type="task" group="priboy_find_uhsf_docs_1">
+	<texture x="0" y="0" width="320" height="240">ui\pri_esc_doc_secret_uhsf_doc1</texture>
+	<text>priboy_find_uhsf_docs_1_article</text>
+</article>
+
+<article id="priboy_find_uhsf_docs_2_article_id" name="priboy_find_uhsf_docs_2" article_type="task" group="priboy_find_uhsf_docs_2">
+	<text>priboy_find_uhsf_docs_2_article</text>
+</article>
+
+<article id="priboy_find_uhsf_accident_report_article_id" name="priboy_find_uhsf_accident_report" article_type="task" group="priboy_find_uhsf_accident_report">
+	<texture x="0" y="0" width="320" height="240">ui\x10_uhsf_accident_gar_uhsf_doc</texture>
+	<text>priboy_find_uhsf_accident_report_article</text>
+</article>
+
+<article id="priboy_find_docs_pendrive_article_id" name="priboy_find_docs_pendrive" article_type="task" group="priboy_find_docs_pendrive">
+	<texture x="863" y="218" width="161" height="105">ui\ui_iconstotal</texture>
+	<text>priboy_find_docs_pendrive_article</text>
+</article>
+
+<article id="priboy_find_kruglov_pendrive_article_id" name="priboy_find_kruglov_pendrive" article_type="task" group="priboy_find_kruglov_pendrive">
+	<text>priboy_find_kruglov_pendrive_article</text>
+</article>
+
+<article id="priboy_find_ghost_memo_article_id" name="priboy_find_ghost_memo" article_type="task" group="priboy_find_ghost_memo">
+	<text>priboy_find_ghost_memo_article</text>
+</article>
+
+<article id="priboy_find_kgb_docs_article_id" name="priboy_find_kgb_docs" article_type="task" group="priboy_find_kgb_docs">
+	<text>priboy_find_kgb_docs_article</text>
+</article>
+
+<article id="priboy_find_crazy_flash_article_id" name="priboy_find_crazy_flash" article_type="task" group="priboy_find_crazy_flash">
+	<text>priboy_find_crazy_flash_article</text>
+</article>
+
+<article id="priboy_find_dezik_key_article_id" name="priboy_find_dezik_key" article_type="task" group="priboy_find_dezik_key">
+	<text>priboy_find_dezik_key_article</text>
+</article>
+
+<article id="priboy_find_dezik_pda_article_id" name="priboy_find_dezik_pda" article_type="task" group="priboy_find_dezik_pda">
+	<text>priboy_find_dezik_pda_article</text>
+</article>
+
+<article id="priboy_find_strelok_pendrive_article_id" name="priboy_find_strelok_pendrive" article_type="task" group="priboy_find_strelok_pendrive">
+	<texture x="0" y="0" width="320" height="240">ui\pri_gunslinger_flash</texture>
+	<text>priboy_find_strelok_pendrive_article</text>
+</article>
+
+<article id="priboy_find_sid_memo_article_id" name="priboy_find_sid_memo" article_type="task" group="priboy_find_sid_memo">
+	<text>priboy_find_sid_memo_article</text>
+</article>
+
+<article id="priboy_find_decoder_article_id" name="priboy_find_decoder" article_type="task" group="priboy_find_decoder">
+	<text>priboy_find_decoder_article</text>
+</article>
+
+<article id="priboy_find_pripyat_docs_article_id" name="priboy_find_pripyat_docs" article_type="task" group="priboy_find_pripyat_docs">
+	<texture x="0" y="0" width="320" height="240">ui\mon_pri_hotel_documents</texture>
+	<text>priboy_find_pripyat_docs_article</text>
+</article>
+
+<article id="priboy_find_x16_docs_article_id" name="priboy_find_x16_docs" article_type="task" group="priboy_find_x16_docs">
+	<texture x="0" y="0" width="320" height="240">ui\sar_x16_documents</texture>
+	<text>priboy_find_x16_docs_article</text>
+</article>
+
+<article id="priboy_find_genetic_book_article_id" name="priboy_find_genetic_book" article_type="task" group="priboy_find_genetic_book">
+	<text>priboy_find_genetic_book_article</text>
+</article>
+
+<article id="priboy_find_x18_code_1_article_id" name="priboy_find_x18_code_1" article_type="task" group="priboy_find_x18_code_1">
+	<text>priboy_find_x18_code_1_article</text>
+</article>
+
+<article id="priboy_find_x18_code_2_article_id" name="priboy_find_x18_code_2" article_type="task" group="priboy_find_x18_code_2">
+	<text>priboy_find_x18_code_2_article</text>
+</article>
+
+<article id="priboy_find_x18_code_3_article_id" name="priboy_find_x18_code_3" article_type="task" group="priboy_find_x18_code_3">
+	<texture x="0" y="0" width="320" height="240">ui\sar_x18_second_code</texture>
+	<text>priboy_find_x18_code_3_article</text>
+</article>

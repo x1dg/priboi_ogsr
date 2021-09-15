@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<!-- ОКНО ОПИСАНИЯ СТАТЕЙ В ЖУРНАЛЕ И ЭНЦИКЛОПЕДИИ -->
+<window>
+
+	<events_wnd>
+		<objective_item x="0" y="0" width="390" height="20">
+			<image x="0" y="0" width="5" height="5" stretch="1" align="c"/>
+			
+			<text_cont x="0" y="230" width="400" height="500" complex_mode="1">
+				<text y="10" font="letterica18" color="white_2"/>
+			</text_cont>
+		</objective_item>
+	</events_wnd>
+
+	<encyclopedia_wnd>
+		<objective_item x="0" y="0" width="380" height="10">
+			<image x="0" y="0" width="5" height="5" stretch="1" align="c"/>
+			
+			<text_cont x="0" y="230" width="390" height="500" complex_mode="1">
+				<text y="10" font="letterica18" color="white_2"/>
+			</text_cont>
+		</objective_item>
+	</encyclopedia_wnd>
+
+</window>

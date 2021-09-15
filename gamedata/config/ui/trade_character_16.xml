@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<!-- ИНФОРМАЦИЯ О ГГ/НПС -->
+<window>
+	<icon_static x="0" y="0" width="129" height="108"/>
+
+	<name_static x="-245" y="3" width="142" height="32">
+		<text font="letterica16" color="inv_rel_name" align="l" complex_mode="1"/>
+	</name_static>
+
+	<rank_caption x="-245" y="36" width="153" height="15">
+		<text align="l" font="letterica16" color="inv_rel_caption">ui_st_rank</text>
+	</rank_caption>
+	<rank_static x="-164" y="36" width="153" height="15">
+		<text align="r" font="letterica16" color="inv_rel_text"/>
+	</rank_static>
+
+	<community_caption x="-245" y="50" width="153" height="15">
+		<text align="l" font="letterica16" color="inv_rel_caption">ui_st_community</text>
+	</community_caption>
+	<community_static x="-164" y="50" width="153" height="15">
+		<text align="r" font="letterica16" color="inv_rel_text"/>
+	</community_static>
+
+	<relation_caption x="-245" y="64" width="153" height="15">
+		<text align="l" font="letterica16" color="inv_rel_caption">ui_st_relation</text>
+	</relation_caption>
+	<relation_static x="-164" y="64" width="153" height="15">
+		<text align="r" font="letterica16" color="inv_rel_text"/>
+	</relation_static>
+</window>

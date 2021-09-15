@@ -1,0 +1,20 @@
+<!-- ОПРЕДЕЛЕНИЕ ТЕКСТУР: ОКНА ТОРГОВЛИ/ОБЫСКА -->
+<ui_texture>
+    <file_name>ui\ui_inventory2</file_name>
+    <texture id="ui_trade_wnd"				x="0" y="0" width="1024" height="768"/>		<!-- окна торговли/обыска -->
+    <texture id="ui_charinfo_left"			x="0" y="768" width="182" height="203"/>	<!-- нпс/труп/ящик -->
+    <texture id="ui_charinfo_right"			x="0" y="768" width="182" height="203"/>	<!-- главный герой -->
+	<texture id="ui_trade_wnd_left"			x="517" y="770" width="507" height="118"/>	<!-- фрейм "стоимость" у нпс -->
+    <texture id="ui_trade_wnd_right"		x="517" y="770" width="507" height="118"/>	<!-- фрейм "стоимость" от гг -->
+    <texture id="ui_weight_wnd"				x="833" y="889" width="191" height="27"/>	<!-- фрейм "вес" -->
+	<texture id="ui_big_inventory_button_e"	x="781" y="936" width="243" height="24"/>	<!-- кнопка "выход" большая обычная -->
+	<texture id="ui_big_inventory_button_h"	x="781" y="960" width="243" height="24"/>	<!-- кнопка "выход" большая подсвеченная -->
+	<texture id="ui_big_inventory_button_t"	x="781" y="984" width="243" height="24"/>	<!-- кнопка "выход" большая активная -->
+	<texture id="ui_big_inventory_button_d"	x="781" y="936" width="243" height="24"/>	<!-- кнопка "выход" большая неактивная -->
+	<texture id="ui_inventory_button_e"		x="648" y="936" width="133" height="24"/>	<!-- кнопка "торговать","взять все"/"выход" обычная -->
+	<texture id="ui_inventory_button_h"		x="648" y="960" width="133" height="24"/>	<!-- кнопка "торговать","взять все"/"выход" подсвеченная -->
+	<texture id="ui_inventory_button_t"		x="648" y="984" width="133" height="24"/>	<!-- кнопка "торговать","взять все"/"выход" активная -->
+	<texture id="ui_inventory_button_d"		x="648" y="936" width="133" height="24"/>	<!-- кнопка "торговать","взять все"/"выход" неактивная -->
+	<texture id="ui_shadow_box"				x="648" y="918" width="376" height="16"/>	<!-- йоу нигга, это еще чо за черный квадрат, мать вашу!? -->
+	<texture id="ui_item_line"				x="648" y="1023" width="298" height="1"/>	<!-- пунткирная линия -->
+</ui_texture>

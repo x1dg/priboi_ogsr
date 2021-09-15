@@ -1,0 +1,6 @@
+<!-- ОПРЕДЕЛЕНИЕ ТЕКСТУР: ГЛАВНОЕ МЕНЮ -->
+<ui_texture>
+    <file_name>ui\ui_mainMenu</file_name>
+    <texture id="ui_menu_background"	x="0" y="0" width="1024" height="768" />	<!-- фоновое изображение -->
+    <texture id="ui_menu_move"			x="5" y="773" width="274" height="61" />	<!-- пункт меню -->
+</ui_texture>

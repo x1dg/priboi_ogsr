@@ -1,0 +1,391 @@
+
+[m_cat_attack_params]
+
+;---------------------------------------------------------------------------------------------------------------------------------------------
+;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, top, bottom) |	Test Dist
+;---------------------------------------------------------------------------------------------------------------------------------------------
+;Left leg strike
+stand_attack_0 =	  	0.25,		0.15,		    20,        0.0, 0.5, 1.0,		 -1.2, 1.2, -1.2, 1.2,								  2.5
+;Both leg strike
+stand_attack_1 =	  	0.30,		0.15,		    30,        0.0, 0.5, 1.0,		 -1.2, 1.2, -1.2, 1.2,								  3.5
+stand_attack_rat_0  =	0.40,		0.20,			40,		0.0, -0.5,1.0,       -0.6, 0.6, -1.6, 0.6,								2.0
+jump_attack_2		=	0.50,		0.20,			30,		0.0, -0.5,1.0,       -0.6, 0.6, -1.6, 0.6,								2.0
+
+
+[m_cat_attack_effector]
+
+duality_h		= 0.01
+duality_v		= 0.01
+blur			= 0.01
+gray			= 0.5
+noise_intensity = 0.0
+noise_grain		= 1
+noise_fps		= 30
+color_base		= 0.65,0.15,0.1
+color_gray		= 0.333,0.333,0.333
+color_add		= 0,0,0
+time			= 0.3
+time_attack		= 0.05		; fade in
+time_release    = 0.25		; fade out
+
+; camera effects
+ce_time				= 0.45	;time 
+ce_amplitude		= -10.0 
+ce_period_number	= 2.0 
+ce_power			= 1.5	; power 
+
+[m_cat_step_params]
+;-------------------------------------------------------------------------------------------------------------
+;	anim			| cycles | time1 | power1 | time2 | power2 | time3 | power3 | time4 | power4 |
+;-------------------------------------------------------------------------------------------------------------
+stand_walk_fwd_0	=	   8,	    0.2,     1,	    0.25,    0.7,    0.5,     1.0,     0.7,    1.0
+stand_walk_dmg_0	=      7,	    0.2,     1,	    0.25,    0.7,    0.5,     1.0,     0.7,    1.0
+stand_run_0			=	   6,	    0.2,     1,	    0.25,    0.7,    0.5,     1.0,     0.7,    1.0
+stand_run_dmg_0		=	   6,	    0.2,     1,	    0.25,    0.7,    0.7,     1.0,     0.7,    1.0
+stand_steal_0		=	   1,	    0.2,     1,	    0.25,    0.7,    0.7,     1.0,     0.7,    1.0
+stand_drag_0		=	   1,	    0.2,     1,	    0.25,    0.7,    0.7,     1.0,     0.7,    1.0
+
+;===========================================================================
+; IMMUNITIES
+;===========================================================================
+[cat_immunities]
+burn_immunity 					= 1.0				;úþ¤¯¯ø¡øõýªv øüüºýøªõªð 
+strike_immunity 				= 1.0
+shock_immunity 					= 1.0
+wound_immunity 					= 0.9
+radiation_immunity 				= 0.01
+telepatic_immunity 				= 1.0
+chemical_burn_immunity 			= 1.0
+explosion_immunity 				= 1.0
+fire_wound_immunity  			= 1.0
+
+
+[m_cat_e]:monster_base
+GroupControlSection	= spawn_group
+
+;-- barin start
+;-- space restrictor, Burner, Electro, Radioactivity, Fruit punch, Burnt Fuzz, Whirligig, Vortex, Springboard, ???
+SpaceRestrictionSection = space_restrictor, zone_zharka_static, zone_witches_galantine, zone_radioactive, zone_ameba, zone_burning_fuzz1, zone_mincer, zone_gravi_zone, zone_mosquito_bald, zone_buzz
+;-- barin end
+
+;$spawn              = "monsters\cat"			; option for Level Editor
+$npc			    = on						; option for Level Editor
+;$prefetch 			= 16
+Scheduled		    = on						; option for ALife Simulator
+Human		     	= off						; option for ALife Simulator
+Health				= 400						; option for ALife Simulator
+MinSpeed		    = 1.0						; option for ALife Simulator
+MaxSpeed		    = 1.5						; option for ALife Simulator
+going_speed         = 1.0                      ; option for ALife Simulator
+search_speed        = .5                       ; option for ALife Simulator
+visual				= monsters\cat\cat
+corpse_visual		= monsters\cat\cat
+icon = ui_npc_monster_cat	
+MaxHealthValue		= 400			; range [0..200]
+DynamicObjectsCount	= 32
+
+Spawn_Inventory_Item_Section = mutant_cat_head
+Spawn_Inventory_Item_Probability = 0.3
+
+cform                = skeleton					; collision class
+class                = SM_CAT_S					; AI class
+
+ef_creature_type	 = 2				; option for evaluation functions
+ef_weapon_type		 = 2
+ef_detector_type			 = 1
+panic_threshold			= 0.0
+
+bone_torso			 = bip01_spine1 			; bone name
+bone_head			 = bip01_head				; bone name
+bone_fire			 = bip01_head				; bone name
+weapon_usage		 = 0						; boolean
+
+; movement
+ph_box0_center 		 = 0.0,  0.3,  0.0
+ph_box0_size 		 = 0.30, 0.3,  0.30
+ph_box1_center 		 = 0.0,  0.3,  0.0
+ph_box1_size 		 = 0.30, 0.3,  0.30
+ph_crash_speed_min			= 10
+ph_crash_speed_max			= 30
+ph_collision_damage_factor	= 0.1
+ph_mass 		     = 50;30						; also it's the food
+
+smart_terrain_choose_interval	= 00:15:00
+satiety_threshold		= 0.5							; below this value monster fill hunger
+critical_wound_threshold		= 0.4
+critical_wound_decrease_quant	= 0.
+
+destroyed_vis_name	 = physics\dead_body\skelet_crash_monster
+
+;---------------------------------------------------------------------
+ph_skeleton_airr_lin_factor   = 2.0 ;550.0 (èçìåííî èç-çà òîãî, ÷òî óáðàíî äîìíîæåíèå êîýôôèöèåíò 0.002 èç êîäà)
+ph_skeleton_airr_ang_factor   = 0.0 ;0.0 (èçìåííî èç-çà òîãî, ÷òî óáðàíî äîìíîæåíèå íà êîýôôèöèåíò 0.3 èç êîäà (0.0*0.3=0.0))
+ph_skeleton_hinger_factor1    = 1.0 ;1.0 (èçìåííî èç-çà òîãî, ÷òî óáðàíî äîìíîæåíèå íà êîýôôèöèåíò 5.0 èç êîäà)
+ph_skeleton_ddelay	     	  = 15.0 ;Âðåìÿ èçìåíåíèÿ çíà÷åíèÿ òðåíèÿ â ñóñòàâå ñ ìîìåíòà ñîçäàíèÿ øåëëà, ñåê
+
+ph_skel_fatal_impulse_factor  = 6.0
+ph_after_death_velocity_factor= 0.75
+ph_skel_shot_up_factor        = 0.25
+;---------------------------------------------------------------------
+
+SoundThreshold		 = 0.06						; range [0..1]
+
+
+eye_fov				 = 110	;140
+eye_range			 = 30	;50	;40;
+
+min_view_distance   		= 0.7				; êîýôôèöèåíò, êîòîðûé ìíîæèòñÿ íà eye_range, â çàâèñèìîñòè îò óãëà
+max_view_distance	 		= 1.0				; êîýôôèöèåíò, êîòîðûé ìíîæèòñÿ íà eye_range, â çàâèñèìîñòè îò óãëà
+visibility_threshold	 	= 100.0				; çíà÷åíèå, ïðè äîñòèæåíèè ñóììîé êîòîðîãî îáúåêò ñ÷èòàåòñÿ âèäèìûì
+always_visible_distance 	= 0.4
+time_quant					= 0.001
+decrease_value				= 0.01				; çíà÷åíèå, íà êîòîðîå óìåíüøàåòñÿ âåñ, åñëè îáúåêò ïîïàë â ôðóñòóì, íî îòñ¸êñÿ ïî êàêèì-òî ïðè÷èíàì
+velocity_factor		     	= 0.5
+luminocity_factor			= 0.5 				; ôàêòîð îñâåùåíèÿ (òîëüêî äëÿ Àêò¸ðà)
+transparency_threshold		= 0.25
+
+max_hear_dist		 = 60
+
+
+
+; speed factors			linear | angular_real | angular_path | min |  max
+Velocity_Stand			= 0,		3.0,			3.0,		1,		1		;0,	1.79,	1,		1
+Velocity_WalkFwdNormal	= 1.2,		1.5,			1.5,		0.2,	2.0
+Velocity_WalkFwdDamaged	= 1.2,		2.14,			2.14,		0.2,	2.0	
+Velocity_RunFwdNormal	= 7.5,		2.5,			2.5,		0.2,	1	
+Velocity_RunFwdDamaged	= 4.5,  	3.0,			3.0,		0.2,	1
+Velocity_Drag			= 1.5,		2.14,			2.14,		1,		1
+Velocity_Steal			= 1.3,		2.14,			2.14,		1,		1
+
+; acceleration
+Accel_Generic			= 1.5
+Accel_Calm			= 1.5
+Accel_Aggressive		= 4.5
+
+;attack parameters
+MinAttackDist		= 1.4
+MaxAttackDist		= 2.0
+
+as_min_dist				= 0.3
+as_step					= 0.4
+
+DayTime_Begin		= 6			; ýð¢ðûð ôý  ôû  üþý¸ª¨ð
+DayTime_End			= 21		; úþýõ¡ ôý  ôû  üþý¸ª¨ð
+Min_Satiety		= 0.4	;0.6		; üøý. ýþ¨üð ¸vªþ¸ªø (üõý¹°õ - ºöõ óþûþôývù)
+Max_Satiety		= 1.0		; üðú¸. ýþ¨üð ¸vªþ¸ªø (ñþû¹°õ - þ¢õý¹ ¸vªvù)
+
+distance_to_corpse	= 1.5		; ôø¸ª. ôþ ª¨ºÿð, ÿ¨ø úþªþ¨þù þý ÿõ¨õ¿þôøª ò ¸þ¸ªþ ýøõ õôv
+
+;							  fSearchRange,fCoverFromEnemyWeight,fOptEnemyDistance,fOptEnemyDistanceWeight,fMinEnemyDistance,fMinEnemyDistanceWeight,fMaxEnemyDistance,fMaxEnemyDistanceWeight
+selector_cover           =      20.0,            -1000.0,                30.0,                 0.0,                  0.0,              100000.0,             100000.0,               1000.0,
+
+
+;							  fSearchRange,fOptEnemyDistance,fOptEnemyDistanceWeight,fMinEnemyDistance,fMinEnemyDistanceWeight,fMaxEnemyDistance,fMaxEnemyDistanceWeight
+selector_free_hunting    =     20.0,            20.0,               1000.0,             0.0,               10000.0,					1000.0,             10000.0,      
+selector_hear_sound		=      20.0,            1.0,				1000.0,             0.0,               0.0,						1000.0,             10000.0,      
+selector_getaway		=      20.0,            20.0,               1000.0,             0.0,               10000.0,					1000.0,				10000.0,      
+selector_approach		=      20.0,            1.0,                1000.0,             0.0,               0.0,						1000.0,				10000.0,      
+;							  fSearchRange,fOptEnemyDistance,fOptEnemyDistanceWeight,fMinEnemyDistance,fMinEnemyDistanceWeight,fMaxEnemyDistance,fMaxEnemyDistanceWeight
+selector_walk_around	=      20.0,            6.0,                 1000.0,             4.0,               5000.0,					8.0,				5000.0,      
+
+
+terrain				 = 255,000,255,255
+
+hit_type = strike
+
+;entity condition
+
+satiety_v 						= 0.01				;¸úþ¨þ¸ª¹ ºüõý¹°õýø  ¸vªþ¸ªø ¸þ ò¨õüõýõü
+radiation_v 					= 0.00001			;¸úþ¨þ¸ª¹ ºüõý¹°õýø  ¨ðôøð¡øø
+satiety_power_v 				= 0.005				;ºòõûø¢õýøõ ¸øûv ÿ¨ø ºüõý¹°õýøø ¸vªþ¸ªø 
+satiety_health_v 				= 0.001				;ºòõûø¢õýøõ ÷ôþ¨þò¹  ÿ¨ø ºüõý¹°õýøø ¸vªþ¸ªø 
+satiety_critical 				= -1.0				;ú¨øªø¢õ¸úþõ ÷ýð¢õýø  ¸vªþ¸ªø (ò ÿ¨þ¡õýªð¿ þª 0..1) úþóôð ÷ôþ¨þò¹õ ýð¢øðýðõª ºüõý¹°ðª¹¸ 
+radiation_health_v 				= 0.01				;ºüõý¹°õýøõ ÷ôþ¨þò¹  ÿ¨ø òþ÷ôõù¸ªòøø ¨ðôøð¡øø
+morale_v						= 0.01				;¸úþ¨þ¸ª¹ òþ¸¸ªðýþòûõýø  üþ¨ðûø
+health_hit_part 				= 1.0				;ÿ¨þ¡õýª ¿øªð, º¿þô øù ýð þªýøüðýøõ ÷ôþ¨þò¹ 
+power_hit_part 					= 1.0				;ÿ¨þ¡õýª ¿øªð, º¿þô øù ýð þªýøüðýøõ ¸øûv
+psy_health_v					= 0.1						;ñêîðîñòü âîññòàíîâëåíèÿ psy-çäîðîâüÿ
+
+immunities_sect					= cat_immunities
+
+
+;îòêðûòûå ðàíû
+bleeding_v						= 0.01						;ïîòåðÿ êðîâè ïðè íîìèíàëüíîé ðàíå â ñåêóíäó
+wound_incarnation_v				= 0.01				;êðóòèçíà êðèâîé çàæèâëåíèÿ (êàêîé ïðîöåíò ðàíû îñòàíåòñÿ ïîñëå çàæèâëåíèÿ â èãðîâóþ ñåêóíäó)
+min_wound_size					= 0.01
+
+
+sleep_health 					= 1.0				;úþ¤¯¯ø¡øõýªv ¸úþ¨þ¸ªõù ø÷üõýõýø  ÿð¨ðüõª¨þò òþ ò¨õü  ¸ýð
+sleep_power 					= 1.0
+sleep_satiety 					= 1.0
+sleep_radiation 				= 1.0
+sleep_psy_health			= 1.0
+
+eat_freq						=	5.0	; ¢ð¸ªþªð ºúº¸þò ò ¸õú
+eat_slice						=	0.01	; ºòõûø¢õýøõ ¸vªþ¸ªø ÿ¨ø 1 ºúº¸õ
+eat_slice_weight				=	10.0	; ºüõý¹°õýøõ õôv º ª¨ºÿð
+
+; Morale
+Morale_Hit_Quant				= 0.1
+Morale_Attack_Success_Quant		= 0.1
+Morale_Take_Heart_Speed			= 0.1
+Morale_Despondent_Speed			= 0.1
+Morale_Stable_Speed				= 0.05
+Morale_Despondent_Threashold	= 0.5
+
+
+; Sounds
+sound_idle				= monsters\cat\1
+sound_eat				= monsters\cat\2
+sound_aggressive			= monsters\cat\3
+sound_attack_hit		= monsters\cat\4
+sound_take_damage		= monsters\cat\5
+sound_die				= monsters\cat\6
+sound_threaten			= monsters\cat\7
+sound_landing			= monsters\cat\8
+sound_steal				= monsters\cat\9
+sound_panic				= monsters\cat\10
+sound_growling			= monsters\cat\11
+sound_die_in_anomaly	= monsters\cat\12
+
+killer_clsids				= Z_MINCER,Z_GALANT,ZS_BFUZZ,ZS_MBALD,ZS_GALAN,ZS_MINCE
+
+
+; jump parameters
+jump_delay					= 3000
+jump_factor					= 2.0
+jump_ground_trace_range		= 0.8
+jump_hit_trace_range		= 1.0
+jump_build_line_distance	= 0.0
+jump_min_distance			= 3.5
+jump_max_distance			= 6.0
+jump_max_angle				= 0.6
+
+idle_sound_delay		= 55000
+eat_sound_delay			= 3000
+attack_sound_delay		= 6000
+
+sound_distant_idle			= monsters\cat\1
+distant_idle_sound_delay	= 80000
+distant_idle_sound_range	= 100.0	
+
+DamagedThreshold		= 0.2
+
+material				= creatures\small
+
+min_view_distance   		= 0.8				; êîýôôèöèåíò, êîòîðûé ìíîæèòñÿ íà eye_range, â çàâèñèìîñòè îò óãëà
+max_view_distance	 		= 1.0				; êîýôôèöèåíò, êîòîðûé ìíîæèòñÿ íà eye_range, â çàâèñèìîñòè îò óãëà
+visibility_threshold	 	= 100.0				; çíà÷åíèå, ïðè äîñòèæåíèè ñóììîé êîòîðîãî îáúåêò ñ÷èòàåòñÿ âèäèìûì
+always_visible_distance 	= 0.3
+time_quant					= 0.001
+decrease_value				= 0.01				; çíà÷åíèå, íà êîòîðîå óìåíüøàåòñÿ âåñ, åñëè îáúåêò ïîïàë â ôðóñòóì, íî îòñ¸êñÿ ïî êàêèì-òî ïðè÷èíàì
+velocity_factor		     	= 0.5
+luminocity_factor			= 1.5 				; ôàêòîð îñâåùåíèÿ (òîëüêî äëÿ Àêò¸ðà)
+transparency_threshold		= 0.25
+
+
+DynamicObjectsCount		= 32
+
+squad_attack_algorithm	= 1
+
+attack_effector			= m_cat_attack_effector
+
+attack_params			= m_cat_attack_params
+step_params				= m_cat_step_params
+damage					= m_cat_damage
+
+LegsCount				= 4
+
+script_binding  		= bind_monster.bind
+
+;species of monster
+species					= cat
+rank					= 0
+spec_rank				= weak
+community				= cat
+;monster_type			= indoor
+
+
+
+[m_cat_damage]
+;bone_name		 = <hit_scale>,-1,<wound_scale>
+;<hit_scale>	- êîýôô. èçìåíåíèÿ õèòà (óìåíüøåíèÿ çäîðîâüÿ) 
+;<wound_scale>	- êîýôô. èçìåíåíèÿ âåëè÷èíû îòêðûòîé ðàíû
+
+default				= 1, -1, 0.10 ;0.15, -1, 0.10
+
+bip01_pelvis 		= 0.2, -1, 0.05
+bip01_spine 		= 0.2, -1, 0.05
+bip01_spine1 		= 0.2, -1, 0.05
+bip01_neck 			= 0.25, -1, 0.05
+bip01_head 			= 0.2, -1, 0.30
+bone01 				= 0.2, -1, 0.30
+bone03 				= 0.2, -1, 0.30
+bone05 				= 0.2, -1, 0.30
+bip01_ponytail1 	= 0.2, -1, 0.30
+bip01_ponytail2		= 0.2, -1, 0.30
+
+[cat_weak]:m_cat_e	
+$spawn = "monsters\cat"	
+monster_type		= indoor
+rank = 0	
+spec_rank = weak	
+community = cat	
+Tele_Time_To_Hold	= 200
+icon = ui_npc_monster_cat
+panic_threshold		= 0.2
+immunities_sect		= cat_immunities
+attack_params		= m_cat_attack_params
+smart_terrain_choose_interval	= 00:15:00
+
+[cat_resp]:m_cat_e	
+$spawn = "monsters\cat"	
+monster_type		= indoor
+rank = 0	
+spec_rank = weak	
+community = cat	
+Tele_Time_To_Hold	= 200
+icon = ui_npc_monster_cat
+panic_threshold		= 0.05
+immunities_sect		= cat_immunities
+attack_params		= m_cat_attack_params
+smart_terrain_choose_interval	= 00:15:00
+
+[rat_resp]:m_cat_e	
+$spawn = "monsters\rat"	
+monster_type		= indoor
+rank = 0	
+visual				 = monsters\rat\rat_1
+corpse_visual		 = monsters\rat\rat_1
+spec_rank = weak	
+community = rat	
+icon = ui_npc_monster_cat
+panic_threshold		= 0.2
+immunities_sect		= cat_immunities
+attack_params		= m_resp_rat_attack_params
+step_params				= m_resp_rat_step_params
+smart_terrain_choose_interval	= 00:15:00
+damage					= m_resp_rat_damage
+
+[m_resp_rat_attack_params]
+
+;---------------------------------------------------------------------------------------------------------------------------------------------
+;	anim			| time[0..1] | hit_power | impulse | impulse_dir (x,y,z)  |	Field of hit_test  (left,right, top, bottom) |	Test Dist
+;---------------------------------------------------------------------------------------------------------------------------------------------
+;Left leg strike
+stand_idle_0 =	  	0.25,		0.15,		    20,        0.0, 0.5, 1.0,		 -1.2, 1.2, -1.2, 1.2,								  2.5
+
+
+[m_resp_rat_step_params]
+;-------------------------------------------------------------------------------------------------------------
+;	anim			| cycles | time1 | power1 | time2 | power2 | time3 | power3 | time4 | power4 |
+;-------------------------------------------------------------------------------------------------------------
+stand_idle_0	=	   8,	    0.2,     1,	    0.25,    0.7,    0.5,     1.0,     0.7,    1.0
+
+
+[m_resp_rat_damage]
+;bone_name		 = <hit_scale>,-1,<wound_scale>
+;<hit_scale>	- êîýôô. èçìåíåíèÿ õèòà (óìåíüøåíèÿ çäîðîâüÿ) 
+;<wound_scale>	- êîýôô. èçìåíåíèÿ âåëè÷èíû îòêðûòîé ðàíû
+
+default				= 1, -1, 0.10 ;0.15, -1, 0.10

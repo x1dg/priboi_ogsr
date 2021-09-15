@@ -1,0 +1,409 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<encyclopedia>
+
+<!-- ******************************************************************************************* -->	
+<!-- FOODS AND MEDICAMENTS -->
+	
+<!-- Priboi 1.1 addendum -->
+
+	<article id="equipment_vodka_absolut" name="Russian Standard Platinum Vodka" group="Equipment/Food">
+		<ltx>absolut_vodka</ltx>
+		<text>enc_equipment_vodka_absolut</text>
+    </article>
+    
+    <article id="equipment_vodka_nemiroff" name="Nemiroff Vodka" group="Equipment/Food">
+		<ltx>nemiroff_vodka</ltx>
+		<text>enc_equipment_vodka_nemiroff</text>
+    </article>
+    
+    <article id="equipment_vodka_smirnoff" name="Smirnoff Vodka" group="Equipment/Food">
+		<ltx>smirnoff_vodka</ltx>
+		<text>enc_equipment_vodka_smirnoff</text>
+    </article>
+    
+    <article id="equipment_vodka_water" name="Clean Water" group="Equipment/Food">
+		<ltx>mineral_water</ltx>
+		<text>enc_equipment_vodka_water</text>
+    </article>
+    
+    <article id="equipment_food_kukorica" name="Corn" group="Equipment/Food">
+		<ltx>korn_conserva</ltx>
+		<text>enc_equipment_food_kukorica</text>
+    </article>
+    
+    <article id="equipment_food_olives" name="Olives Meal" group="Equipment/Food">
+		<ltx>olives_conserva</ltx>
+		<text>enc_equipment_food_olives</text>
+    </article>
+
+	<article id="equipment_food_sardinia" name="Sardina" group="Equipment/Food">
+		<ltx>sardinia_conserva</ltx>
+		<text>enc_equipment_food_sardinia</text>
+    </article>
+    
+    <article id="equipment_food_meal" name="Meal" group="Equipment/Food">
+		<ltx>yantar_food</ltx>
+		<text>enc_equipment_food_meal</text>
+    </article>
+    
+    <article id="equipment_food_peanut" name="Peanut" group="Equipment/Food">
+		<ltx>peanut_conserva</ltx>
+		<text>enc_equipment_food_peanut</text>
+    </article>
+    
+    <article id="equipment_food_ratpie" name="Rat Pie" group="Equipment/Food">
+		<ltx>tushkano_conserva</ltx>
+		<text>enc_equipment_food_ratpie</text>
+    </article>
+
+<!-- END Priboi 1.1 addendum -->
+
+	<article id="equipment_food_bread1" name="Bread" group="Equipment/Food">
+		<ltx>bread</ltx>
+		<text>enc_equipment_food_bread1</text>
+    </article>
+
+	<article id="equipment_food_kolbasa1" name="Kolbasa" group="Equipment/Food">
+		<ltx>kolbasa</ltx>
+		<text>enc_equipment_food_kolbasa1</text>
+	</article>
+
+	<article id="equipment_food_conserva1" name="Conserva" group="Equipment/Food">
+		<ltx>conserva</ltx>
+		<text>enc_equipment_food_conserva1</text>
+	</article>
+
+	<article id="equipment_food_vodka1" name="Vodka" group="Equipment/Food">
+		<ltx>vodka</ltx>
+		<text>enc_equipment_food_vodka1</text>
+	</article>
+
+	<article id="equipment_medi_antirad1" name="Antirad" group="Equipment/Medi">
+		<ltx>antirad</ltx>
+		<text>enc_equipment_medi_antirad1</text>
+	</article>
+
+	<article id="equipment_medi_medkit1" name="Medkit" group="Equipment/Medi">
+		<ltx>medkit</ltx>
+		<text>enc_equipment_medi_medkit1</text>
+	</article>
+	
+	<article id="equipment_medi_bandage1" name="bandage" group="Equipment/Medi">
+		<ltx>bandage</ltx>
+		<text>enc_equipment_medi_bandage1</text>
+	</article>
+	
+	<!-- barin start -->
+	<article id="equipment_medi_medkit2" name="Medkit_army" group="Equipment/Medi">
+		<ltx>medkit_army</ltx>
+		<text>enc_equipment_medi_medkit2</text>
+	</article>
+	
+	<article id="equipment_medi_medkit3" name="Medkit_scientific" group="Equipment/Medi">
+		<ltx>medkit_scientic</ltx>
+		<text>enc_equipment_medi_medkit3</text>
+	</article>
+	
+	<article id="equipment_medi_antidote" name="enc_antidote_name" group="Equipment/Medi">
+		<ltx>antidote</ltx>
+		<text>enc_antidote_descr</text>
+	</article>
+	
+	<article id="equipment_medi_energy_drink" name="energy_drink_name" group="Equipment/Food">
+		<ltx>energy_drink</ltx>
+		<text>enc_equipment_energydrink</text>
+	</article>
+	<!-- barin end -->
+
+<!-- ******************************************************************************************* -->
+<!-- INSTRUMENTS AND DEVICES -->
+	
+	<!-- barin start -->
+	<article id="equipment_devic_guitar" name="enc_guitar_name" group="Equipment/Devic">
+		<ltx>guitar_a</ltx>
+		<text>enc_guitar_descr</text>
+	</article>
+	
+	<article id="equipment_devic_harmonica" name="enc_harmonica_name" group="Equipment/Devic">
+		<ltx>harmonica_a</ltx>
+		<text>enc_harmonica_descr</text>
+	</article>
+	
+	<article id="equipment_devic_hand_radio" name="enc_hand_radio_name" group="Equipment/Devic">
+		<ltx>hand_radio</ltx>
+		<text>enc_hand_radio_descr</text>
+	</article>
+	
+	<article id="equipment_devic_detector_simple" name="Detector" group="Equipment/Devic">
+		<ltx>detector_simple</ltx>
+		<text>enc_equipment_devic_detect1</text>
+	</article>
+	
+	<article id="equipment_devic_detector_advanced" name="detector_advanced" group="Equipment/Devic">
+		<ltx>detector_advances</ltx>
+		<text>detector_advanced_descr</text>
+	</article>
+	
+	<article id="equipment_devic_detector_elite" name="st_detector" group="Equipment/Devic">
+		<ltx>detector_elite</ltx>
+		<text>st_detector_descr</text>
+	</article>
+	<!-- barin end -->
+	
+	<article id="equipment_devic_device-torch1" name="device-torch" group="Equipment/Devic">
+		<ltx>device_torch</ltx>
+		<text>enc_equipment_devic_device-torch1</text>
+	</article>
+	
+	<article id="equipment_devic_binocul1" name="Binocul" group="Equipment/Devic">
+		<ltx>wpn_binoc</ltx>
+		<text>enc_equipment_devic_binocul1</text>
+	</article>
+	
+	<article id="equipment_devic_device-pda1" name="device-pda" group="Equipment/Devic">
+		<ltx>device_pda</ltx>
+		<text>enc_equipment_devic_device-pda1</text>
+	</article>
+	
+    <article id="equipment_devic_detect1" name="Detect1" group="Equipment/Devic">
+		<ltx>detector_simple</ltx>
+		<text>enc_equipment_devic_detect1</text>
+	</article>
+
+<!-- ******************************************************************************************* -->
+<!-- ITEMS -->
+
+	<!-- barin start -->
+	<article id="equipment_items_matras" name="amk_matras" group="Equipment/Items">
+		<ltx>matras</ltx>
+		<text>enc_amk_matras</text>
+	</article>
+	
+	<article id="equipment_items_cigarettes" name="enc_cigarette_name" group="Equipment/Items">
+		<ltx>cigarette</ltx>
+		<text>enc_cigarette_descr</text>
+	</article>
+	<!-- barin end -->
+
+<!-- ******************************************************************************************* -->
+<!-- SUITS -->
+
+	<!-- barin start -->
+	<article id="equipment_suits_armor1" name="outfit_soldier_name" group="Equipment/Armors">
+		<ltx>soldier_outfit</ltx>
+		<text>outfit_soldier_description</text>
+	</article>
+	
+	<article id="equipment_suits_armor2" name="specops_outfit_name" group="Equipment/Armors">
+		<ltx>specops_outfit</ltx>
+		<text>specops_outfit_description</text>
+	</article>
+	
+	<article id="equipment_suits_armor3" name="specnaz_outfit_name_m1" group="Equipment/Armors">
+		<ltx>outfit_specnaz_m1</ltx>
+		<text>specnaz_outfit_description_m1</text>
+	</article>
+	
+	<article id="equipment_suits_armor4" name="military_outfit_name" group="Equipment/Armors">
+		<ltx>military_outfit</ltx>
+		<text>military_outfit_description</text>
+	</article>
+	
+	<article id="equipment_suits_armor5" name="SKAT-9" group="Equipment/Armors">
+		<ltx>military_stalker_outfit</ltx>
+		<text>outfit_military_stalker</text>
+	</article>
+	
+	<article id="equipment_suits_armor6" name="SKAT-9M" group="Equipment/Armors">
+		<ltx>military_commander_outfit</ltx>
+		<text>outfit_military_commander</text>
+	</article>
+	
+	<article id="equipment_suits_armor7" name="dolg_outfit_name" group="Equipment/Armors">
+		<ltx>dolg_outfit</ltx>
+		<text>dolg_outfit_description</text>
+	</article>
+	
+	<article id="equipment_suits_armor8" name="dolg_outfit_name_m1" group="Equipment/Armors">
+		<ltx>outfit_dolg_m1</ltx>
+		<text>dolg_outfit_description_m1</text>
+	</article>
+	
+	<article id="equipment_suits_armor9" name="dolg_scientific_outfit_name" group="Equipment/Armors">
+		<ltx>dolg_scientific_outfit</ltx>
+		<text>dolg_scientific_outfit_description</text>
+	</article>
+	
+	<article id="equipment_suits_armor10" name="protection_outfit_name" group="Equipment/Armors">
+		<ltx>protection_outfit</ltx>
+		<text>protection_outfit_description</text>
+	</article>
+	
+	<article id="equipment_suits_armor11" name="ecolog_outfit_name" group="Equipment/Armors">
+		<ltx>ecolog_outfit</ltx>
+		<text>ecolog_outfit_description</text>
+	</article>
+	
+	<article id="equipment_suits_armor12" name="scientific_outfit_name" group="Equipment/Armors">
+		<ltx>scientific_outfit</ltx>
+		<text>scientific_outfit_description</text>
+	</article>
+	
+	<article id="equipment_suits_armor13" name="outfit_soldier_name" group="Equipment/Armors">
+		<ltx>novice_outfit</ltx>
+		<text>outfit_soldier_description</text>
+	</article>
+	
+	<article id="equipment_suits_armor14" name="novice_outfit_name_m" group="Equipment/Armors">
+		<ltx>outfit_novice_m1</ltx>
+		<text>novice_outfit_description_m</text>
+	</article>
+	
+	<article id="equipment_suits_armor15" name="stalker_outfit_name" group="Equipment/Armors">
+		<ltx>stalker_outfit</ltx>
+		<text>stalker_outfit_description</text>
+	</article>
+	
+	<article id="equipment_suits_armor16" name="stalker_outfit_name_m1" group="Equipment/Armors">
+		<ltx>outfit_stalker_m1</ltx>
+		<text>stalker_outfit_description_m1</text>
+	</article>
+	
+	<article id="equipment_suits_armor17" name="stalker_outfit_name_m2" group="Equipment/Armors">
+		<ltx>outfit_stalker_m2</ltx>
+		<text>stalker_outfit_description_m2</text>
+	</article>
+	
+	<article id="equipment_suits_armor18" name="exo_outfit_name" group="Equipment/Armors">
+		<ltx>exo_outfit</ltx>
+		<text>exo_outfit_description</text>
+	</article>
+	
+	<article id="equipment_suits_armor19" name="exo_outfit_name_m1" group="Equipment/Armors">
+		<ltx>outfit_exo_m1</ltx>
+		<text>exo_outfit_description_m1</text>
+	</article>
+	
+	<article id="equipment_suits_armor20" name="svoboda_light_outfit_name" group="Equipment/Armors">
+		<ltx>svoboda_light_outfit</ltx>
+		<text>svoboda_light_outfit_description</text>
+	</article>
+	
+	<article id="equipment_suits_armor21" name="svoboda_outfit_name_m1" group="Equipment/Armors">
+		<ltx>outfit_svoboda_m1</ltx>
+		<text>svoboda_outfit_description_m1</text>
+	</article>
+	
+	<article id="equipment_suits_armor22" name="svoboda_heavy_outfit_name" group="Equipment/Armors">
+		<ltx>svoboda_heavy_outfit</ltx>
+		<text>svoboda_heavy_outfit_description</text>
+	</article>
+
+	<article id="equipment_suits_armor23" name="killer_outfit_name" group="Equipment/Armors">
+		<ltx>killer_outfit</ltx>
+		<text>killer_outfit_description</text>
+	</article>
+	
+	<article id="equipment_suits_armor24" name="killer_outfit_name_m1" group="Equipment/Armors">
+		<ltx>outfit_killer_m1</ltx>
+		<text>killer_outfit_description_m1</text>
+	</article>
+
+	<article id="equipment_suits_armor25" name="bandit_outfit_name" group="Equipment/Armors">
+		<ltx>bandit_outfit</ltx>
+		<text>bandit_outfit_description</text>
+	</article>
+	
+	<article id="equipment_suits_armor26" name="bandit_outfit_name_m" group="Equipment/Armors">
+		<ltx>outfit_bandit_m1</ltx>
+		<text>bandit_outfit_description_m</text>
+	</article>
+
+	<article id="equipment_suits_armor27" name="monolit_outfit_name" group="Equipment/Armors">
+		<ltx>monolit_outfit</ltx>
+		<text>monolit_outfit_description</text>
+	</article>
+	<!-- barin end -->
+	
+<!-- ******************************************************************************************* -->
+<!-- GSC STUFF (NOT USED) -->
+	
+    <!-------------------------------- Detect4 ----------------------------->
+
+    <article id="equipment_items_detect4" name="Detect4" group="Equipment/Items">
+        <texture x="250" y="250" width="250" height="100">ui\ui_icon_equipment</texture>
+        <text>enc_equipment_items_detect4</text>
+    </article>
+
+    <!-------------------------------- Health ----------------------------->
+
+    <article id="equipment_items_health" name="Health" group="Equipment/Items">
+        <texture x="250" y="250" width="250" height="100">ui\ui_icon_equipment</texture>
+        <text>enc_equipment_items_health</text>
+    </article>
+
+    <!-------------------------------- Diagnost ----------------------------->
+
+    <article id="equipment_items_diagnost" name="Diagnost" group="Equipment/Items">
+        <texture x="250" y="250" width="250" height="100">ui\ui_icon_equipment</texture>
+        <text>enc_equipment_items_diagnost</text>
+    </article>
+
+
+
+
+    <!------------------------------------------------------------------->
+    <!------------------------------ Armors ------------------------------>
+    <!------------------------------------------------------------------->
+
+
+    <!-------------------------------- Armor1 ----------------------------->
+
+    <article id="equipment_armors_armor1" name="Armor1" group="Equipment/Armors">
+        <texture x="250" y="250" width="250" height="100">ui\ui_icon_equipment</texture>
+        <text>enc_equipment_armors_armor1</text>
+    </article>
+
+
+    <!-------------------------------- Sci1 ----------------------------->
+
+    <article id="equipment_armors_sci1" name="Sci1" group="Equipment/Armors">
+        <texture x="250" y="250" width="250" height="100">ui\ui_icon_equipment</texture>
+        <text>enc_equipment_armors_sci1</text>
+    </article>
+
+
+    <!-------------------------------- Sci2 ----------------------------->
+
+    <article id="equipment_armors_sci2" name="Sci2" group="Equipment/Armors">
+        <texture x="250" y="250" width="250" height="100">ui\ui_icon_equipment</texture>
+        <text>enc_equipment_armors_sci2</text>
+    </article>
+
+
+    <!-------------------------------- Arm-light ----------------------------->
+
+    <article id="equipment_armors_arm-light" name="Arm-light" group="Equipment/Armors">
+        <texture x="250" y="250" width="250" height="100">ui\ui_icon_equipment</texture>
+        <text>enc_equipment_armors_arm-light</text>
+    </article>
+
+
+    <!-------------------------------- Arm-medium ----------------------------->
+
+    <article id="equipment_armors_arm-medium" name="Arm-medium" group="Equipment/Armors">
+        <texture x="250" y="250" width="250" height="100">ui\ui_icon_equipment</texture>
+        <text>enc_equipment_armors_arm-medium</text>
+    </article>
+
+
+    <!-------------------------------- Arm-heavy ----------------------------->
+
+    <article id="equipment_armors_arm-heavy" name="Arm-heavy" group="Equipment/Armors">
+        <texture x="250" y="250" width="250" height="100">ui\ui_icon_equipment</texture>
+        <text>enc_equipment_armors_arm-heavy</text>
+    </article>
+
+
+</encyclopedia>
+

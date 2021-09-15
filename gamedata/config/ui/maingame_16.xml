@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding="UTF-8" ?>
+<!-- ХУД -->
+<window x="0" y="0" w="640" h="480" texture="1">
+	<speech_menu x="260" y="550" width="300" height="265" always_show_scroll="0">
+		<text font="letterica18" color="hud_tutorial"/>
+	</speech_menu>
+
+	<!-- Здоровье: фон, шкала -->
+	<static_health x="877" y="732" width="142.4" height="30" stretch="1">
+		<texture>ui_hud_shkala_health</texture>
+	</static_health>
+	<progress_bar_health x="9" y="4" width="125.1" height="10" horz="1" min="0" max="100" pos="0">
+		<progress width="125.1" height="10" stretch="1">
+			<texture color="hud_scale_health">ui_hud_shk_health</texture>
+		</progress>
+	</progress_bar_health>
+
+	<!-- Броня: фон, шкала -->
+	<static_armor x="877" y="732" width="142.4" height="90" stretch="1">
+		<texture></texture>
+	</static_armor>
+	<progress_bar_armor x="9" y="4" width="125.1" height="10" horz="1" min="0" max="100" pos="0">
+		<progress width="125.1" height="10" stretch="1">
+			<texture color="hud_scale_armor">ui_hud_shk_armour</texture>
+		</progress>
+	</progress_bar_armor>
+
+	<!-- Патроны: фон, счетчик, иконка -->
+	<static_weapon x="877" y="642" width="142.4" height="90" stretch="1">
+		<text align="r" complex_mode="0" x="-9" y="68" font="letterica16" color="hud_weapon_name"/>
+		<auto_static x="2" y="110" width="143" height="8" stretch="1">
+			<texture color="hud_weapon_pane">ui\seq\ui_weapon_pane</texture>
+		</auto_static>
+		<texture>ui_hud_frame_patron</texture>
+	</static_weapon>
+	<static_ammo x="0" y="16" width="98.9" height="45" stretch="1">
+		<text x="-8" y="13" align="c" complex_mode="1" font="letterica25" color="hud_scale_ammo">Ammo</text>
+		<auto_static x="6" y="0" width="128.9" height="52" stretch="1">
+			<texture>ui_hud_frame_ammo</texture>
+		</auto_static>
+	</static_ammo>
+	<static_wpn_icon x="110" y="44" heading="1" alignment="c">
+	</static_wpn_icon>
+
+	<!-- Состояние автомобиля из car_panel.xml -->
+	<car_panel x="884" y="728" width="132" height="5"/>
+
+	<!-- Текст взаимодействия с объектами -->
+	<quick_info x="1" y="712" width="1022" height="50" complex_mode="1" light_anim="ui_btn_hint" la_cyclic="0" la_texture="1" la_text="1" la_alpha="1">
+		<text align="c" font="letterica18" color="hud_use"/>
+	</quick_info>
+
+	<!-- Индикаторы состояния -->
+	<icons_scroll_view x="970" y="-31" width="64" height="635" always_show_scroll="0"
+		 left_ident="0" right_ident="20" top_indent="0" bottom_indent="0"
+		 vert_interval="12" inverse_dir="1" flip_vert="1"/>
+
+	<radiation_static x="0" y="0" width="26.2" height="35" stretch="1" la_texture="1" la_alpha="1" light_anim="ui_slow_blinking_alpha">
+		<auto_static x="-6" y="-8" width="36.3" height="50" stretch="1" la_texture="1" la_alpha="1" light_anim="ui_too_slow_blinking">
+			<texture_offset x="0" y="-15"/>
+			<texture color="hud_layer_rad">ui\seq\ui_underlayer_hole</texture>
+		</auto_static>
+		<texture_offset x="0" y="-15"/>
+		<texture>ui_hud_icon_radiation</texture>
+	</radiation_static>
+
+	<wound_static x="0" y="0" width="26.2" height="35" stretch="1">
+		<auto_static x="-6" y="-8" width="36.3" height="50" stretch="1">
+			<texture_offset x="0" y="-15"/>
+			<texture color="hud_layer_wound">ui\seq\ui_underlayer_pulsar</texture>
+		</auto_static>
+		<texture_offset x="0" y="-15"/>
+		<texture>ui_hud_icon_drop</texture>
+	</wound_static>
+
+	<psy_health_static x="0" y="0" width="26.2" height="35" stretch="1">
+		<auto_static x="-6" y="-8" width="36.3" height="50" stretch="1">
+			<texture_offset x="0" y="-15"/>
+			<texture color="hud_layer_psyhealth">ui\seq\ui_underlayer_hole</texture>
+		</auto_static>
+		<texture_offset x="0" y="-15"/>
+		<texture>ui_hud_icon_psycho</texture>
+	</psy_health_static>
+
+	<starvation_static x="0" y="0" width="26.2" height="35" stretch="1">
+		<auto_static x="-6" y="-8" width="36.3" height="50" stretch="1">
+			<texture_offset x="0" y="-15"/>
+			<texture color="hud_layer_satiety">ui\seq\ui_underlayer_starvation</texture>
+		</auto_static>
+		<texture_offset x="0" y="-15"/>
+		<texture>ui_hud_icon_eat</texture>
+	</starvation_static>
+
+	<weapon_jammed_static x="0" y="0" width="26.2" height="35" stretch="1">
+		<auto_static x="-1" y="-1" width="26.2" height="35" stretch="1">
+			<texture_offset x="0" y="-15"/>
+			<texture color="hud_layer_weapon">ui\seq\ui_underlayer_weapon</texture>
+		</auto_static>
+		<texture_offset x="0" y="-15"/>
+		<texture>ui_hud_icon_weapon</texture>
+	</weapon_jammed_static>
+
+	<invincible_static x="0" y="0" width="26.2" height="35" stretch="1">
+		<auto_static x="-5" y="-6" width="35.9" height="48" stretch="1">
+			<texture_offset x="0" y="-15"/>
+			<texture>ui\seq\ui_underlayer_thorn</texture>
+		</auto_static>
+		<auto_static x="-6" y="-8" width="36.3" height="50" stretch="1">
+			<texture_offset x="0" y="-15"/>
+			<texture color="hud_layer_godmode">ui\seq\ui_underlayer_glare</texture>
+		</auto_static>
+		<texture_offset x="0" y="-15"/>
+		<texture>ui_hud_icon_goodmode</texture>
+	</invincible_static>
+
+	<artefact_static x="0" y="0" width="26.2" height="35" stretch="1">
+		<auto_static x="-6" y="-8" width="36.3" height="50" stretch="1">
+			<texture_offset x="0" y="-15"/>
+			<texture color="hud_layer_artefact">ui\seq\ui_underlayer_rays</texture>
+		</auto_static>
+		<texture_offset x="0" y="-15"/>
+		<texture>ui_hud_icon_artefact</texture>
+	</artefact_static>
+
+	<can_sleep_static x="0" y="0" width="26.2" height="35" stretch="1">
+		<auto_static x="-6" y="-8" width="36.3" height="50" stretch="1">
+			<texture_offset x="0" y="-15"/>
+			<texture color="hud_layer_sleep">ui\seq\ui_underlayer_hole</texture>
+		</auto_static>
+		<texture_offset x="0" y="-15"/>
+		<texture>ui_hud_icon_sleep</texture>
+	</can_sleep_static>
+
+	<thirst_static x="0" y="0" width="26.2" height="35" stretch="1">
+		<auto_static x="-6" y="-8" width="36.3" height="50" stretch="1">
+			<texture_offset x="0" y="-15"/>
+			<texture color="hud_layer_thirst">ui\seq\ui_underlayer_hole</texture>
+		</auto_static>
+		<texture_offset x="0" y="-15"/>
+		<texture>ui_hud_icon_thirsty</texture>
+	</thirst_static>
+
+	<!-- Новое сообщение (задачи, журнал, энцмклопедия) -->
+	<flashing_icons>
+		<flashing_icon x="9" y="99" width="9" height="11" stretch="1" type="pda" la_alpha="1" la_texture="1" light_anim="ui_slow_blinking_alpha">
+			<texture color="hud_new_msg">ui_hud_icon_PDA</texture>
+		</flashing_icon>
+	</flashing_icons>
+
+	<!-- Счетчик НПС -->
+	<static_pda_online x="-0.5" y="34" width="32" height="24" light_anim="ui_pda_contacts" la_cyclic="0" la_texture="0" la_text="1" la_alpha="1">
+		<text y="0" align="c" font="letterica16" color="hud_online"/>
+	</static_pda_online>
+
+	<!-- Поднять передмет -->
+	<pick_up_item x="437" y="400" width="150" height="100"/>
+
+	<!-- Панель артефактов -->
+	<artefact_panel x="10" y="800" width="730" height="50" cell_width="38" cell_height="50" stretch="1" scale="0.5"/>
+
+	<!-- Звук появления нового НПС на карте -->
+	<new_contact_snd>detectors\contact_1</new_contact_snd>
+</window>

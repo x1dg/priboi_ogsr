@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="kb_use_antirad">
+		<text>Fast use slot 1</text>
+	</string>
+	<string id="kb_use_energy_drink">
+		<text>Fast use slot 2</text>
+	</string>
+	<string id="kb_use_b190">
+		<text>Fast use slot 3</text>
+	</string>
+	<string id="kb_use_bipsizon">
+		<text>Fast use slot 4</text>
+	</string>
+	<string id="kb_set_hudmask">
+		<text>Helmet on/off</text>
+	</string>
+	<string id="ui_fast_use_slots_wnd">
+		<text>Fast use slot</text>
+	</string>
+	<string id="kb_set_godmode">
+		<text>God mode</text>
+	</string>
+	<string id="kb_set_unlimitedammo">
+		<text>Unlimited ammo</text>
+	</string>
+	<string id="st_ui_hudmask_off">
+		<text>Helmet/gasmask off</text>
+	</string>
+	<string id="st_ui_hudmask_on">
+		<text>Helmet/gasmask on</text>
+	</string>
+	<string id="st_ui_hudmask_no_blur">
+		<text>Helmet/gasmask on (without breath effect)</text>
+	</string>
+	<string id="st_ui_godmode_on">
+		<text>God mode on</text>
+	</string>
+	<string id="st_ui_godmode_off">
+		<text>God mode off</text>
+	</string>
+	<string id="st_ui_un_ammo_on">
+		<text>Unlimited ammo</text>
+	</string>
+	<string id="st_ui_un_ammo_off">
+		<text>Endless ammo</text>
+	</string>
+	<string id="st_pda_lang">
+		<text>Language layout</text>
+	</string>
+	<string id="st_pda_note">
+		<text>Current note</text>
+	</string>
+	<string id="st_pda_note_1_back">
+		<text>1 note back</text>
+	</string>
+	<string id="st_pda_note_1_fwd">
+		<text>1 note forward</text>
+	</string>
+	<string id="st_pda_note_10_back">
+		<text>10 note back</text>
+	</string>
+	<string id="st_pda_note_10_fwd">
+		<text>10 note forward</text>
+	</string>
+	<string id="st_pda_remind">
+		<text>Set text is a reminder</text>
+	</string>
+	<string id="st_pda_vol_down">
+		<text>Volume down</text>
+	</string>
+	<string id="st_pda_vol_up">
+		<text>Volume up</text>
+	</string>
+	<string id="st_pda_header_bulldozer">
+		<text>Options\Games\Bulldozer</text>
+	</string>
+	<string id="st_pda_header_arcanoid">
+		<text>Options\Games\Arcanoid</text>
+	</string>
+	<string id="st_pda_header_minesweeper">
+		<text>Options\Games\Minesweeper</text>
+	</string>
+	<string id="st_pda_header_blackjack">
+		<text>Options\Games\Blackjack</text>
+	</string>
+	<string id="st_pda_header_thimbles">
+		<text>Options\Games\Thimbles</text>
+	</string>
+	<string id="st_pda_header_numbers">
+		<text>Options\Games\Numbers</text>
+	</string>
+	<string id="st_pda_header_questions">
+		<text>Options\Games\Questions</text>
+	</string>
+	<string id="st_pda_header_options">
+		<text>Options</text>
+	</string>
+	<string id="st_pda_off_hint">
+		<text>PDA off</text>
+	</string>
+	<string id="st_pda_exit">
+		<text>Quit</text>
+	</string>
+	<string id="st_pda_close">
+		<text>Close</text>
+	</string>
+	<string id="st_pda_options_hint">
+		<text>PDA options</text>
+	</string>
+	<string id="st_ui_buy">
+		<text>Buy</text>
+	</string>
+	<string id="st_ui_sell">
+		<text>Sell</text>
+	</string>
+	<string id="st_ui_kg">
+		<text>kg</text>
+	</string>
+</string_table>

@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<window>
+	<!-- PDA OTIONS WINDOW -->
+	<options>
+		<!-- PDA options main window -->
+		<pda_noise x="0" y="24" width="1024" height="744" stretch="1">
+			<texture x="0" y="24" width="1024" height="744">ui\ui_pda_interference</texture>
+		</pda_noise>
+		<pda_back x="0" y="24" width="1024" height="744" stretch="1" light_anim="ui_btn_hint" la_cyclic="0" la_texture="1" la_alpha="1">
+			<texture>ui_shadow_box</texture>
+		</pda_back>
+
+		<!-- PDA hide and exit buttons -->
+		<pda_hide x="36" y="60" width="64" height="32" hint="">
+			<texture/>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text/>
+		</pda_hide>
+		<btn_pda_exit x="970" y="30" width="33" height="34" hint="st_pda_off_hint">
+			<texture>ui_pda_exit_button</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_off</sound_t>
+		</btn_pda_exit>
+
+		<!-- PDA title -->
+		<pda_frame x="0" y="24" width="1024" height="744" light_anim="ui_btn_hint" la_cyclic="0" la_texture="1" la_alpha="1">
+			<texture x="0" y="24" width="1024" height="744">ui\ui_pda</texture>
+		</pda_frame>
+		<pda_frame_line x="36" y="60" width="1024" height="32" light_anim="asus_logo_01" la_alpha="1" la_texture="0" la_text="1" la_cyclic="1">
+			<texture x="0" y="924" width="955" height="29">ui\ui_pda</texture>
+			<text font="letterica18" x="10" y="6" color="grey_2">st_pda_header_options</text>
+		</pda_frame_line>
+		<pda_money x="768" y="66" width="214" height="20">
+			<text font="letterica18" align="r" color="grey_2"/>
+		</pda_money>
+
+		<!-- PDA labels -->
+		<pda_btn_box1 x="36" y="140" width="188" height="184">
+			<texture>ui_pda_frame</texture>
+		</pda_btn_box1>
+		<pda_btn_box2 x="36" y="336" width="188" height="45">
+			<texture>ui_pda_frame</texture>
+		</pda_btn_box2>
+		<pda_btn_box3 x="36" y="393" width="188" height="313">
+			<texture>ui_pda_frame</texture>
+		</pda_btn_box3>
+
+		<!-- PDA textbox -->
+		<pda_text_box x="236" y="101" width="755" height="605">
+			<!-- <texture>ui_tablist_textbox</texture> -->
+			<texture>ui_pda_frame</texture>
+		</pda_text_box>
+		<pda_edit_box x="238" y="106" width="752" height="602">
+			<text font="letterica16" color="grey_4" align="lt"/>
+		</pda_edit_box>
+		<pda_bar_ruslat x="951" y="670" width="34" height="27" hint="st_pda_lang">
+			<texture>ui_pda_small_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_off</sound_t>
+			<text x="-2" color="grey_4" align="c" />
+		</pda_bar_ruslat>
+
+		<!-- PDA notes spin -->
+		<pda_bar_record_number x="116" y="101" width="30" height="30" hint="st_pda_note">
+			<text color="grey_4"/>
+		</pda_bar_record_number>
+		<pda_bar_minus10 x="36" y="101" width="34" height="27" hint="st_pda_note_10_back">
+			<texture>ui_pda_x2_back_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_off</sound_t>
+		</pda_bar_minus10>
+		<pda_bar_minus1 x="73" y="101" width="34" height="27" hint="st_pda_note_1_back">
+			<texture>ui_pda_back_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_off</sound_t>
+		</pda_bar_minus1>
+		<pda_bar_plus1 x="156" y="101" width="34" height="27" hint="st_pda_note_1_fwd">
+			<texture>ui_pda_fwd_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_off</sound_t>
+		</pda_bar_plus1>
+		<pda_bar_plus10 x="192" y="101" width="32" height="27" hint="st_pda_note_10_fwd">
+			<texture>ui_pda_x2_fwd_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_off</sound_t>
+		</pda_bar_plus10>
+
+		<!-- PDA action buttons -->
+		<pda_send x="44" y="149" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+		</pda_send>
+		<pda_save x="44" y="184" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+		</pda_save>
+		<pda_clear x="44" y="219" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+		</pda_clear>
+		<pda_reminder x="44" y="254" width="172" height="27" hint="st_pda_remind">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+		</pda_reminder>
+		<pda_exe x="44" y="289" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+		</pda_exe>
+		<pda_radio x="44" y="345" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+		</pda_radio>
+		<pda_games x="44" y="402" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+		</pda_games>
+
+		<!-- PDA radio on mode -->
+		<pda_bar_volume_down x="771" y="670" width="109" height="27" hint="st_pda_vol_down">
+			<texture>ui_pda_minus_button</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_off</sound_t>
+		</pda_bar_volume_down>
+		<pda_bar_volume_up x="846" y="670" width="109" height="27" hint="st_pda_vol_up">
+			<texture>ui_pda_plus_button</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_off</sound_t>
+		</pda_bar_volume_up>
+		<pda_radio_eq x="248" y="668" width="512" height="27" stretch="1"
+			frames="59" duration="2800" columns="1" frame_width="512" frame_height="43" cyclic="1" autoplay="1">
+			<texture color="grey_4">ui\seq\ui_equalize</texture>
+		</pda_radio_eq>
+
+		<!-- PDA minigames subwindow -->
+		<pda_sub_wnd x="400" y="290" width="420" height="220">
+			<texture x="0" y="0" width="420" height="220">ui\ui_pda_options</texture>
+		</pda_sub_wnd>
+		<pda_sub_exit x="781" y="297" width="32" height="16" hint="st_pda_exit">
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+		</pda_sub_exit>
+
+		<!-- PDA minigames: bulldozer -->
+		<pda_game_bulldozer x="426" y="322" width="40" height="40">
+			<texture x="80" y="472" width="40" height="40">ui\ui_pda_options</texture>
+			<text x="0" y="28" width="96" height="16" font="letterica16" align="c" color="grey_4"/>
+		</pda_game_bulldozer>
+
+		<!-- PDA minigames: minesweeper -->
+		<pda_game_minesweeper x="502" y="322" width="40" height="40">
+			<texture x="0" y="472" width="40" height="40">ui\ui_pda_options</texture>
+			<text x="0" y="28" width="96" height="16" font="letterica16" align="c" color="grey_4"/>
+		</pda_game_minesweeper>
+
+		<!-- PDA minigames: arcanoid -->
+		<pda_game_arcanoid x="580" y="322" width="40" height="40">
+			<texture x="40" y="472" width="40" height="40">ui\ui_pda_options</texture>
+			<text x="0" y="28" width="96" height="16" font="letterica16" align="c" color="grey_4"/>
+		</pda_game_arcanoid>
+
+		<!-- PDA minigames: blackjack -->
+		<pda_game_blackjack x="662" y="322" width="40" height="40">
+			<texture x="120" y="472" width="40" height="40">ui\ui_pda_options</texture>
+			<text x="0" y="28" width="96" height="16" font="letterica16" align="c" color="grey_4"/>
+		</pda_game_blackjack>
+
+		<!-- PDA minigames: thimbles -->
+		<pda_game_thimbles x="748" y="322" width="40" height="40">
+			<texture x="160" y="472" width="40" height="40">ui\ui_pda_options</texture>
+			<text x="0" y="28" width="96" height="16" font="letterica16" align="c" color="grey_4"/>
+		</pda_game_thimbles>
+
+		<!-- PDA minigames: numbers -->
+		<pda_game_numbers x="426" y="384" width="40" height="40">
+			<texture x="200" y="472" width="40" height="40">ui\ui_pda_options</texture>
+			<text x="0" y="28" width="96" height="16" font="letterica16" align="c" color="grey_4"/>
+		</pda_game_numbers>
+
+		<!-- PDA minigames: questions -->
+		<pda_game_questions x="502" y="384" width="40" height="40">
+			<texture x="240" y="472" width="40" height="40">ui\ui_pda_options</texture>
+			<text x="0" y="28" width="96" height="16" font="letterica16" align="c" color="grey_4"/>
+		</pda_game_questions>
+
+		<!-- PDA reminder subwindow -->
+		<pda_reminder_wnd x="400" y="290" width="420" height="220">
+			<texture x="0" y="0" width="420" height="220">ui\ui_pda_options</texture>
+			<text x="0" y="42" width="96" height="16" font="letterica16" align="c" color="grey_4"/>
+		</pda_reminder_wnd>
+		<pda_remind_box x="582" y="389" width="50" height="21">
+			<texture>ui_cb_listbox</texture>
+		</pda_remind_box>
+		<pda_remind_edit x="582" y="389" width="50" height="21">
+			<text font="letterica16" color="grey_4"/>
+		</pda_remind_edit>
+		<pda_start x="522" y="460" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+		</pda_start>
+	</options>
+
+	<!-- BULLDOZER GAME -->
+	<bulldozer>
+		<bulldozer_back x="36" y="24" width="955" height="605" stretch="1">
+			<texture>ui_shadow_box</texture>
+		</bulldozer_back>
+		<bulldozer_pda x="0" y="24" width="1024" height="744">
+			<texture x="0" y="24" width="1024" height="744">ui\ui_pda</texture>
+		</bulldozer_pda>
+		<bulldozer_header x="36" y="60" width="1024" height="32">
+			<texture x="0" y="924" width="955" height="29">ui\ui_pda</texture>
+			<text font="letterica18" x="10" y="6" color="grey_2">st_pda_header_bulldozer</text>
+		</bulldozer_header>
+		<bulldozer_frame x="36" y="101" width="955" height="605">
+			<texture>ui_pda_frame</texture>
+		</bulldozer_frame>
+		<bulldozer_exit x="952" y="110" width="30" height="30" hint="st_pda_close">
+			<texture x="450" y="32" width="30" height="30">ui\ui_pda_options</texture>
+		</bulldozer_exit>
+		<bulldozer_off x="970" y="30" width="33" height="34" hint="st_pda_off_hint">
+			<texture>ui_pda_exit_button</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_off</sound_t>
+		</bulldozer_off>
+
+		<bulldozer_count x="335" y="110" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+		</bulldozer_count>
+		<bulldozer_level x="517" y="110" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+		</bulldozer_level>
+	</bulldozer>
+
+	<!-- ARCANOID GAME -->
+	<arcanoid>
+		<arcanoid_back x="36" y="24" width="955" height="605" stretch="1">
+			<texture>ui_shadow_box</texture>
+		</arcanoid_back>
+		<arcanoid_pda x="0" y="24" width="1024" height="744">
+			<texture x="0" y="24" width="1024" height="744">ui\ui_pda</texture>
+		</arcanoid_pda>
+		<arcanoid_header x="36" y="60" width="1024" height="32">
+			<texture x="0" y="924" width="955" height="29">ui\ui_pda</texture>
+			<text font="letterica18" x="10" y="6" color="grey_2">st_pda_header_arcanoid</text>
+		</arcanoid_header>
+		<arcanoid_frame x="36" y="101" width="955" height="605">
+			<texture>ui_pda_frame</texture>
+		</arcanoid_frame>
+		<arcanoid_exit x="952" y="110" width="30" height="30" hint="st_pda_close">
+			<texture x="450" y="32" width="30" height="30">ui\ui_pda_options</texture>
+		</arcanoid_exit>
+		<arcanoid_off x="970" y="30" width="33" height="34" hint="st_pda_off_hint">
+			<texture>ui_pda_exit_button</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_off</sound_t>
+		</arcanoid_off>
+
+		<arcanoid_area>
+			<texture x="412" y="502" width="100" height="10">ui\ui_pda_options</texture>
+			<auto_static x="18" y="3">
+				<texture color="white_2">ui\seq\ui_dialog_connect</texture>
+			</auto_static>
+		</arcanoid_area>
+
+		<arcanoid_ball/>
+
+		<arcanoid_stats x="888" y="116" width="35" height="40" stretch="1">
+			<text font="letterica18" align="r" color="grey_3"/>
+		</arcanoid_stats>
+	</arcanoid>
+
+	<!-- MINESWEEPER GAME -->
+	<minesweeper>
+		<minesweeper_back x="36" y="24" width="955" height="605" stretch="1">
+			<texture>ui_shadow_box</texture>
+		</minesweeper_back>
+		<minesweeper_pda x="0" y="24" width="1024" height="744">
+			<texture x="0" y="24" width="1024" height="744">ui\ui_pda</texture>
+		</minesweeper_pda>
+		<minesweeper_header x="36" y="60" width="1024" height="32">
+			<texture x="0" y="924" width="955" height="29">ui\ui_pda</texture>
+			<text font="letterica18" x="10" y="6" color="grey_2">st_pda_header_minesweeper</text>
+		</minesweeper_header>
+		<minesweeper_frame x="36" y="101" width="955" height="605">
+			<texture>ui_pda_frame</texture>
+		</minesweeper_frame>
+		<minesweeper_exit x="952" y="110" width="30" height="30" hint="st_pda_close">
+			<texture x="450" y="32" width="30" height="30">ui\ui_pda_options</texture>
+		</minesweeper_exit>
+		<minesweeper_off x="970" y="30" width="33" height="34" hint="st_pda_off_hint">
+			<texture>ui_pda_exit_button</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_off</sound_t>
+		</minesweeper_off>
+	</minesweeper>
+
+	<!-- BLACKJACK GAME -->
+	<blackjack>
+		<back x="36" y="24" width="955" height="605" stretch="1">
+			<texture>ui_shadow_box</texture>
+		</back>
+		<pda x="0" y="24" width="1024" height="744">
+			<texture x="0" y="24" width="1024" height="744">ui\ui_pda</texture>
+		</pda>
+		<header x="36" y="60" width="1024" height="32">
+			<texture x="0" y="924" width="955" height="29">ui\ui_pda</texture>
+			<text font="letterica18" x="10" y="6" color="grey_2">st_pda_header_blackjack</text>
+		</header>
+		<money x="768" y="66" width="214" height="20">
+			<text font="letterica18" align="r" color="grey_2"/>
+	    </money>
+
+		<frame x="36" y="101" width="955" height="605">
+			<texture>ui_pda_frame</texture>
+		</frame>
+
+		<buttons x="182" y="406" width="188" height="190">
+			<texture>ui_pda_frame</texture>
+		</buttons>
+		<bet_bar x="182" y="204" width="188" height="1">
+			<texture>ui_pda_line_h</texture>
+		</bet_bar>
+
+		<field1 x="382" y="204" width="460" height="190">
+			<texture>ui_pda_frame</texture>
+		</field1>
+		<field1_bar x="383" y="235" width="458" height="1">
+			<texture>ui_pda_line_h</texture>
+		</field1_bar>
+
+		<field2 x="382" y="406" width="460" height="190">
+			<texture>ui_pda_frame</texture>
+		</field2>
+		<field2_bar x="383" y="437" width="458" height="1">
+			<texture>ui_pda_line_h</texture>
+		</field2_bar>
+
+		<off x="970" y="30" width="33" height="34" hint="st_pda_close">
+			<texture>ui_pda_exit_button</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_off</sound_t>
+		</off>
+
+		<start_game x="190" y="416" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+		</start_game>
+		<take_card x="190" y="452" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_game_cards_take</sound_t>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+		</take_card>
+		<turn x="190" y="488" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+		</turn>
+		<repeat_game x="190" y="524" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_game_cards_start</sound_t>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+		</repeat_game>
+		<escape x="190" y="560" width="172" height="27" hint="st_pda_close">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+		</escape>
+
+		<enemy x="393" y="212" width="512" height="20" complex_mode="1">
+			<text font="letterica16" align="l" color="grey_4"/>
+	    </enemy>
+		<you x="393" y="415" width="256" height="20" complex_mode="1">
+			<text font="letterica16" align="l" color="grey_4"/>
+	    </you>
+
+		<bet x="223" y="299" width="64" height="20" complex_mode="1">
+			<text font="letterica18" align="l" color="grey_4"/>
+	    </bet>
+		<edit_box x="283" y="295" width="50" height="26">
+			<texture>ui_linetext_e</texture>
+			<text font="letterica18" align="l" color="grey_4">100</text>
+		</edit_box>
+
+		<card_six_с x="100" y="500" width="80" height="139">
+			<texture x="0" y="0" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_six_с>
+		<card_six_p x="100" y="500" width="80" height="139">
+			<texture x="80" y="0" width="80" height="139" >ui\ui_game_cards</texture>
+	    </card_six_p>
+		<card_six_b x="100" y="500" width="80" height="139">
+			<texture x="160" y="0" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_six_b>
+		<card_six_k x="100" y="500" width="80" height="139">
+			<texture x="240" y="0" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_six_k>
+
+		<card_seven_с x="100" y="500" width="80" height="139">
+			<texture x="0" y="139" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_seven_с>
+		<card_seven_p x="100" y="500" width="80" height="139">
+			<texture x="80" y="139" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_seven_p>
+		<card_seven_b x="100" y="500" width="80" height="139">
+			<texture x="160" y="139" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_seven_b>
+		<card_seven_k x="100" y="500" width="80" height="139">
+			<texture x="240" y="139" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_seven_k>
+
+		<card_eight_с x="100" y="500" width="80" height="139">
+			<texture x="480" y="0" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_eight_с>
+		<card_eight_p x="100" y="500" width="80" height="139">
+			<texture x="560" y="0" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_eight_p>
+		<card_eight_b x="100" y="500" width="80" height="139">
+			<texture x="320" y="0" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_eight_b>
+		<card_eight_k x="100" y="500" width="80" height="139">
+			<texture x="400" y="0" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_eight_k>
+
+		<card_nine_с x="100" y="500" width="80" height="139">
+			<texture x="800" y="0" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_nine_с>
+		<card_nine_p x="100" y="500" width="80" height="139">
+			<texture x="880" y="0" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_nine_p>
+		<card_nine_b x="100" y="500" width="80" height="139">
+			<texture x="640" y="0" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_nine_b>
+		<card_nine_k x="100" y="500" width="80" height="139">
+			<texture x="720" y="0" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_nine_k>
+
+		<card_ten_с x="100" y="500" width="80" height="139">
+			<texture x="480" y="139" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_ten_с>
+		<card_ten_p x="100" y="500" width="80" height="139">
+			<texture x="560" y="139" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_ten_p>
+		<card_ten_b x="100" y="500" width="80" height="139">
+			<texture x="320" y="139" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_ten_b>
+		<card_ten_k x="100" y="500" width="80" height="139">
+			<texture x="400" y="139" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_ten_k>
+
+		<card_valet_с x="100" y="500" width="80" height="139">
+			<texture x="720" y="139" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_valet_с>
+		<card_valet_p x="100" y="500" width="80" height="139">
+			<texture x="800" y="139" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_valet_p>
+		<card_valet_b x="100" y="500" width="80" height="139">
+			<texture x="880" y="139" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_valet_b>
+		<card_valet_k x="100" y="500" width="80" height="139">
+			<texture x="640" y="139" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_valet_k>
+
+		<card_dama_с x="100" y="500" width="80" height="139">
+			<texture x="80" y="278" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_dama_с>
+		<card_dama_p x="100" y="500" width="80" height="139">
+			<texture x="240" y="278" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_dama_p>
+		<card_dama_b x="100" y="500" width="80" height="139">
+			<texture x="160" y="278" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_dama_b>
+		<card_dama_k x="100" y="500" width="80" height="139">
+			<texture x="0" y="278" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_dama_k>
+
+		<card_king_с x="100" y="500" width="80" height="139">
+			<texture x="400" y="278" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_king_с>
+		<card_king_p x="100" y="500" width="80" height="139">
+			<texture x="560" y="278" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_king_p>
+		<card_king_b x="100" y="500" width="80" height="139">
+			<texture x="480" y="278" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_king_b>
+		<card_king_k x="100" y="500" width="80" height="139">
+			<texture x="320" y="278" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_king_k>
+
+		<card_tuz_с x="100" y="500" width="80" height="139">
+			<texture x="720" y="278" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_tuz_с>
+		<card_tuz_p x="100" y="500" width="80" height="139">
+			<texture x="880" y="278" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_tuz_p>
+		<card_tuz_b x="100" y="500" width="80" height="139">
+			<texture x="800" y="278" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_tuz_b>
+		<card_tuz_k x="100" y="500" width="80" height="139">
+			<texture x="640" y="278" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_tuz_k>
+
+		<card_back x="100" y="500" width="80" height="139">
+			<texture x="880" y="556" width="80" height="139">ui\ui_game_cards</texture>
+	    </card_back>
+	</blackjack>
+
+	<!-- THIMBLES GAME -->
+	<thimbles>
+		<back x="36" y="24" width="955" height="605" stretch="1">
+			<texture>ui_shadow_box</texture>
+		</back>
+		<pda x="0" y="24" width="1024" height="744">
+			<texture x="0" y="24" width="1024" height="744">ui\ui_pda</texture>
+		</pda>
+		<header x="36" y="60" width="1024" height="32">
+			<texture x="0" y="924" width="955" height="29">ui\ui_pda</texture>
+			<text font="letterica18" x="10" y="6" color="grey_2">st_pda_header_thimbles</text>
+		</header>
+		<money x="768" y="66" width="214" height="20">
+			<text font="letterica18" align="r" color="grey_2"/>
+	    </money>
+
+		<frame x="36" y="101" width="955" height="605">
+			<texture>ui_pda_frame</texture>
+		</frame>
+
+		<buttons x="136" y="377" width="195" height="147">
+			<texture>ui_pda_frame</texture>
+		</buttons>
+		<bet_bar x="136" y="278 " width="195" height="1">
+			<texture>ui_pda_line_h</texture>
+		</bet_bar>
+
+		<field x="342" y="278" width="550" height="246">
+			<texture>ui_pda_frame</texture>
+		</field>
+		<field_bar x="343" y="309" width="548" height="1">
+			<texture>ui_pda_line_h</texture>
+		</field_bar>
+
+		<off x="970" y="30" width="33" height="34" hint="st_pda_close">
+			<texture>ui_pda_exit_button</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_off</sound_t>
+		</off>
+
+		<btn_start x="148" y="391" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+	    </btn_start>
+		<btn_play_else x="148" y="438" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_game_thimbles_start</sound_t>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+	    </btn_play_else>
+		<btn_quit x="148" y="483" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+	    </btn_quit>
+		<btn_select_ball_1 x="351" y="483" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+	    </btn_select_ball_1>
+		<btn_select_ball_2 x="531" y="483" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+	    </btn_select_ball_2>
+		<btn_select_ball_3 x="711" y="483" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+	    </btn_select_ball_3>
+
+		<ball x="390" y="363" width="75" height="75">
+			<texture x="10" y="0" width="75" height="75">ui\ui_game_thimbles</texture>
+	    </ball>
+		<thimble x="392" y="322" width="96" height="148">
+			<texture x="0" y="90" width="96" height="148">ui\ui_game_thimbles</texture>
+	    </thimble>
+
+		<enemy x="351" y="286" width="512" height="20" complex_mode="1">
+			<text font="letterica16" align="l" color="grey_4"/>
+	    </enemy>
+
+		<bet x="175" y="319" width="64" height="20" complex_mode="1">
+			<text font="letterica18" align="l" color="grey_4"/>
+	    </bet>
+		<edit_box x="236" y="316" width="50" height="26">
+			<texture>ui_linetext_e</texture>
+			<text font="letterica18" align="l" color="grey_4">100</text>
+		</edit_box>
+	</thimbles>
+
+	<!-- NUMBERS GAME -->
+	<numbers>
+		<back x="36" y="24" width="955" height="605" stretch="1">
+			<texture>ui_shadow_box</texture>
+		</back>
+		<pda x="0" y="24" width="1024" height="744">
+			<texture x="0" y="24" width="1024" height="744">ui\ui_pda</texture>
+		</pda>
+		<header x="36" y="60" width="1024" height="32">
+			<texture x="0" y="924" width="955" height="29">ui\ui_pda</texture>
+			<text font="letterica18" x="10" y="6" color="grey_2">st_pda_header_numbers</text>
+		</header>
+		<money x="768" y="66" width="214" height="20">
+			<text font="letterica18" align="r" color="grey_2"/>
+	    </money>
+
+		<frame x="36" y="101" width="955" height="605">
+			<texture>ui_pda_frame</texture>
+		</frame>
+
+		<buttons x="136" y="377" width="195" height="147">
+			<texture>ui_pda_frame</texture>
+		</buttons>
+		<bet_bar x="136" y="278 " width="195" height="1">
+			<texture>ui_pda_line_h</texture>
+		</bet_bar>
+
+		<field x="342" y="278" width="550" height="246">
+			<texture>ui_pda_frame</texture>
+		</field>
+		<field_bar x="343" y="309" width="548" height="1">
+			<texture>ui_pda_line_h</texture>
+		</field_bar>
+
+		<off x="970" y="30" width="33" height="34" hint="st_pda_close">
+			<texture>ui_pda_exit_button</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_off</sound_t>
+		</off>
+
+		<btn_start x="148" y="391" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+	    </btn_start>
+		<btn_play_else x="148" y="438" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+	    </btn_play_else>
+		<btn_quit x="148" y="483" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+	    </btn_quit>
+
+		<btn_guess_num x="380" y="350" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+	    </btn_guess_num>
+		<btn_on_guess_num x="678" y="350" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+	    </btn_on_guess_num>
+		<edit_box x="560" y="352" width="110" height="26">
+			<texture>ui_linetext_e</texture>
+			<text font="letterica18" align="c" color="grey_4">1</text>
+		</edit_box>
+
+		<bet x="175" y="319" width="64" height="20" complex_mode="1">
+			<text font="letterica18" align="l" color="grey_4"/>
+	    </bet>
+		<edit_box_bet x="236" y="316" width="50" height="26">
+			<texture>ui_linetext_e</texture>
+			<text font="letterica18" align="l" color="grey_4">100</text>
+		</edit_box_bet>
+
+		<answer x="818" y="286" width="64" height="30" complex_mode="1">
+			<text font="letterica18" align="r" color="transparent"/>
+	    </answer>
+	</numbers>
+
+	<!-- QUESTIONS GAME -->
+	<game_questions>
+		<back x="36" y="24" width="955" height="605" stretch="1">
+			<texture>ui_shadow_box</texture>
+		</back>
+		<pda x="0" y="24" width="1024" height="744">
+			<texture x="0" y="24" width="1024" height="744">ui\ui_pda</texture>
+		</pda>
+		<header x="36" y="60" width="1024" height="32">
+			<texture x="0" y="924" width="955" height="29">ui\ui_pda</texture>
+			<text font="letterica18" x="10" y="6" color="grey_2">st_pda_header_questions</text>
+		</header>
+		<money x="768" y="66" width="214" height="20">
+			<text font="letterica18" align="r" color="grey_2"/>
+	    </money>
+
+		<frame x="36" y="101" width="955" height="605">
+			<texture>ui_pda_frame</texture>
+		</frame>
+
+		<buttons x="136" y="377" width="195" height="147">
+			<texture>ui_pda_frame</texture>
+		</buttons>
+		<bet_bar x="136" y="278 " width="195" height="1">
+			<texture>ui_pda_line_h</texture>
+		</bet_bar>
+
+		<field x="342" y="278" width="550" height="246">
+			<texture>ui_pda_frame</texture>
+		</field>
+		<field_bar x="343" y="423" width="548" height="1">
+			<texture>ui_pda_line_h</texture>
+		</field_bar>
+
+		<off x="970" y="30" width="33" height="34" hint="st_pda_close">
+			<texture>ui_pda_exit_button</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_off</sound_t>
+		</off>
+
+		<btn_start x="148" y="391" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+	    </btn_start>
+		<btn_next_que x="148" y="438" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+	    </btn_next_que>
+		<btn_quit x="148" y="483" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+	    </btn_quit>
+		<btn_answer_1 x="408" y="439" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+	    </btn_answer_1>
+		<btn_answer_2 x="408" y="481" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+	    </btn_answer_2>
+		<btn_answer_3 x="648" y="439" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+	    </btn_answer_3>
+		<btn_answer_4 x="648" y="481" width="172" height="27" hint="">
+			<texture>ui_pda_action_btn</texture>
+			<sound_h>device\pda\pda_tap_hover</sound_h>
+			<sound_t>device\pda\pda_tap_active</sound_t>
+			<text_color><d color="grey_1"/></text_color>
+			<text y="0" font="letterica16" align="c" color="grey_4"/>
+	    </btn_answer_4>
+
+		<question_items>
+			<question_1 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">С помощью части тела каких мутантов ученые изготавливают ряд\nлекарств, самым распространенным из которых является противора-\n-диационная сыворотка?</text>
+			</question_1>
+			<question_2 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Какая аномалия порождает артефакт 'Лунный Свет'?</text>
+			</question_2>
+			<question_3 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Какая из аномалий порождает артефакт 'Пружина'?</text>
+			</question_3>
+			<question_4 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Какое количество разновидностей артефактов образует аномалия "Жгучий пух"?</text>
+			</question_4>
+			<question_5 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Какой из перечисленных артефактов образует аномалия "Воронка"?:\n"Слизь", "Слюда", "Каменный цветок".</text>
+			</question_5>
+			<question_6 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Назовите из перечисленных артефактов тот, который не имеет отрицательных свойств: \n"Золотая рыбка", "Колобок", "Лунный свет".</text>
+			</question_6>
+			<question_7 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Плоть - это мутировавшая(ий): Бульдог, Кабан, Теленок, Свинья?</text>
+			</question_7>
+			<question_8 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Псевдособаки произошли от: Собак, Свиней, Зайцев, Волков?</text>
+			</question_8>
+			<question_9 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Спорят два Сталкера неуча. Один говорит другому, что десятичный\nлогарифм числа 100000 равен 5, а другой утверждает, что он равен 4.\nКто из них прав?</text>
+			</question_9>
+			<question_10 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Какая из перечисленных аномалий не существует на самом деле?: "Лифт", \n"Машина времени", "Ржавые волосы", "Гейзер".</text>
+			</question_10>
+			<question_11 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Какой из перечисленных артефактов значительно увеличивает выносливость\nвладельцу?:"Душа", "Лунный свет", "Колобок", "Морской еж".</text>
+			</question_11>
+			<question_12 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Какая аномалия образует артефакты, имеющие свойство придавать выносливость?</text>
+			</question_12>
+			<question_13 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Если одеть эти два артефакта, то владелец получит приимущество от разрыва в 10%.\nО каких артефактах идет речь?:\n1)Кристалл и кристальная колючка.\n2)Батарейка и Колобок.\n3)Душа и Морской еж.\n4)Золотая рыбка и Колобок.</text>
+			</question_13>
+			<question_14 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Какая аномалия образует следующие артефакты?: Медуза, Каменный цветок, Ночная звезда.</text>
+			</question_14>
+			<question_15 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">"Это самая загадочная и скрытная группировка в Зоне, в существование которой\nмногие даже не верят". О чем идет речь?</text>
+			</question_15>
+			<question_16 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Тихий убийца Сталкер, который по легенде убил главаря группировки "Последний День"\nКак звали этого Сталкера?</text>
+			</question_16>
+			<question_17 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">"Он погиб, и хабар его лежал под крестом на братской могиле в Припяти". О ком речь?</text>
+			</question_17>
+			<question_18 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Назовите современный модификат автомата АК-74.</text>
+			</question_18>
+			<question_19 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Популярная в Зоне снайперская винтовка с прикладом системы булл-пап.</text>
+			</question_19>
+			<question_20 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Как называется планка крепления прицела на оружие производства НАТО?</text>
+			</question_20>
+			<question_21 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Что такое "ласточкин хвост"?:\n1) Cоставная часть гранаты\n2) Женская группировка в Зоне\n3) Крепежная планка для прицела\n4) Крепежная планка для подствольника</text>
+			</question_21>
+			<question_22 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Вертолет, упавший в каменном лесу на радаре.</text>
+			</question_22>
+			<question_23 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Подствольный гранатомет для автоматов, используемых в странах Варшавского договора.</text>
+			</question_23>
+			<question_24 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Образца какого года автомат АК-74?</text>
+			</question_24>
+			<question_25 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Состоит на вооружении вооружённых сил и полиции США, многих \nвоенизированных и правоохранительных формирований во всём мире. \nСтоль же популярна(ен) и у представителей преступного мира благодаря мощному \nпатрону и большой ёмкости магазина. О каком оружии идет речь?</text>
+			</question_25>
+			<question_26 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Пистолет полицейского назначения украинского производства,\nпришедший на смену ПМм. Обладает лучшими по сравнению с последним точностью боя,\nэргономикой и более вместительным магазином, однако менее надёжен. \nО каком оружии идет речь?</text>
+			</question_26>
+			<question_27 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">У какого из перечисленных оружий объем магазина равен 13?:\nBrowning HP, Colt M1911, HK USP, Beretta 92FS.</text>
+			</question_27>
+			<question_28 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Какая из группировок считает, что нельзя скрывать от человечества\n происходящее в Зоне отчуждения?</text>
+			</question_28>
+			<question_29 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Какое количество разновидностей артефактов образует\nаномалия "Холодец"?</text>
+			</question_29>
+			<question_30 x="350" y="288" width="534" height="130" complex_mode="1">
+				<text font="letterica16" align="c" vert_align="c" color="grey_4">Какая аномалия образует артефакт "Ломоть Мяса"?</text>
+			</question_30>
+		</question_items>
+	</game_questions>
+
+	<!-- GAME MESSAGE BOX -->
+	<message_box>
+		<back x="0" y="0" width="1024" height="768">
+			<texture a="190">ui\ui_crete</texture>
+		<auto_static x="0" y="0" width="1024" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="330" y="420" width="301" height="92"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<auto_static x="306" y="296" width="412" height="182" stretch="1"
+			light_anim="asus_logo_01" la_cyclic="1" la_texture="1" la_alpha="1">
+			<texture color="inv_highlight">ui_message_highlight</texture>
+		</auto_static>
+		</back>
+
+		<header x="0" y="310" width="1024" height="32" complex_mode="1">
+			<text font="graffiti32" align="c" color="white_2"/>
+		</header>
+
+		<content x="330" y="350" width="390" height="56" complex_mode="1">
+			<text font="letterica18" align="l" vert_align="t" color="grey_5"/>
+		</content>
+
+		<button_ok x="420" y="422" width="182" height="346" check_mode="0">
+			<texture>ui_message_button</texture>
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+	        <text y="-153" font="letterica18">Btn_OK</text>
+	    </button_ok>
+	</message_box>
+</window>

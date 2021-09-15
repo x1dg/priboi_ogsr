@@ -1,0 +1,588 @@
+<!-- Priboy storyline tasks definitions -->
+<!-- by barin aka pepe_84 -->
+<!-- last edited: 28.12.2007 -->
+
+<game_task id="priboy_talk_to_esc_commanders">
+	<title>priboy_talk_to_blokpost_commander_title</title>
+	<objective>
+		<icon>ui_iconsTotal_priboy_talk_to_esc_commanders</icon>
+		<text>priboy_talk_to_blokpost_commander_title</text>
+		<article>priboy_talk_to_esc_commanders_article_id</article>
+		<function_complete>priboy_tasks.commanders_talk_complete</function_complete>
+		<infoportion_fail>priboy_commanders_dead</infoportion_fail>
+		<infoportion_set_complete>priboy_find_cnpp_blueprints_infoportion</infoportion_set_complete>
+		<infoportion_set_fail>priboy_find_cnpp_blueprints_infoportion</infoportion_set_fail>
+	</objective>
+	<objective>
+		<text>priboy_talk_to_blokpost_commander_title</text>
+		<map_location_type hint="esc_blokpost_commander_mapspot">green_location</map_location_type>
+		<object_story_id>esc_blokpost_commander</object_story_id>
+		<infoportion_complete>commander_talk_done</infoportion_complete>
+		<infoportion_fail>blockpost_commander_dead</infoportion_fail>
+		<function_call_complete>priboy_tasks.remove_commander_map_spot</function_call_complete>
+		<function_call_fail>priboy_tasks.remove_commander_map_spot</function_call_fail>
+	</objective>
+	<objective>
+		<text>priboy_talk_to_buddy_title</text>
+		<map_location_type hint="esc_buddy_mapspot">green_location</map_location_type>
+		<object_story_id>esc_lager_leader</object_story_id>
+		<infoportion_complete>buddy_talk_done</infoportion_complete>
+		<infoportion_fail>buddy_dead</infoportion_fail>
+		<function_call_complete>priboy_tasks.remove_commander_map_spot</function_call_complete>
+		<function_call_fail>priboy_tasks.remove_commander_map_spot</function_call_fail>
+	</objective>
+	<objective>
+		<text>priboy_talk_to_kuznetsov_title</text>
+		<map_location_type hint="esc_kuznetsov_mapspot">green_location</map_location_type>
+		<object_story_id>esc_kuznetsov</object_story_id>
+		<infoportion_complete>kuznetsov_talk_done</infoportion_complete>
+		<infoportion_fail>kuznetsov_dead</infoportion_fail>
+		<function_call_complete>priboy_tasks.remove_commander_map_spot</function_call_complete>
+		<function_call_fail>priboy_tasks.remove_commander_map_spot</function_call_fail>
+	</objective>
+</game_task>
+
+<game_task id="priboy_bring_vodka">
+	<title>priboy_bring_vodka_title</title>
+	<objective>
+		<icon>ui_iconsTotal_priboy_bring_vodka</icon>
+		<text>priboy_bring_vodka_title</text>
+		<article>priboy_bring_vodka_article_id</article>
+		<infoportion_fail>blockpost_commander_dead</infoportion_fail>
+		<infoportion_complete>priboy_vodka_task_done</infoportion_complete>
+		<function_complete>priboy_tasks.vodka_task_done</function_complete>
+		<function_call_complete>priboy_tasks.remove_commander_map_spot</function_call_complete>
+		<function_call_fail>priboy_tasks.remove_commander_map_spot</function_call_fail>
+	</objective>
+	<objective>
+		<text>priboy_find_vodka_title</text>
+		<infoportion_complete>priboy_vodka_found</infoportion_complete>
+		<infoportion_fail>blockpost_commander_dead</infoportion_fail>
+	</objective>
+	<objective>
+		<text>priboy_bring_vodka_to_commander_title</text>
+		<map_location_type hint="esc_blokpost_commander_mapspot">green_location</map_location_type>
+		<object_story_id>esc_blokpost_commander</object_story_id>
+		<infoportion_complete>priboy_vodka_brought</infoportion_complete>
+		<infoportion_fail>blockpost_commander_dead</infoportion_fail>
+	</objective>
+</game_task>
+
+<game_task id="priboy_heli_crash">
+	<title>priboy_heli_crash_title</title>
+	<objective>
+		<text>priboy_heli_crash_title</text>
+		<icon>ui_iconsTotal_priboy_heli_crash</icon>
+		<article>priboy_heli_crash_article_id</article>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>
+	<objective>
+		<text>priboy_heli_crash_title</text>
+		<map_location_type hint="Crash site">crlc_big</map_location_type>
+		<object_story_id>mil_heli_crash_site</object_story_id>
+	</objective>
+</game_task>
+
+<game_task id="priboy_rad_heli_crash">
+	<title>priboy_rad_heli_crash_title</title>
+	<objective>
+		<text>priboy_rad_heli_crash_title</text>
+		<icon>ui_iconsTotal_priboy_rad_heli_crash</icon>
+		<article>priboy_rad_heli_crash_article_id</article>
+		<function_complete>priboy_tasks.rad_heli_crash</function_complete>
+	</objective>
+	<objective>
+		<text>priboy_rad_heli_crash_examine_title</text>
+		<map_location_type hint="Crash site">crlc_big</map_location_type>
+		<object_story_id>rad_heli_crash_site</object_story_id>
+		<infoportion_complete>rad_heli_crash_site_done</infoportion_complete>
+	</objective>
+	<objective>
+		<text>priboy_rad_heli_crash_find_chief_title</text>
+		<map_location_type hint="S.O.S message">green_location</map_location_type>
+		<object_story_id>rad_last_scientist_sos</object_story_id>
+		<infoportion_complete>rad_heli_crash_chief_done</infoportion_complete>
+	</objective>
+</game_task>
+
+<game_task id="priboy_help_wounded">
+	<title>priboy_help_wounded_title</title>
+	<objective>
+		<icon>ui_iconsTotal_priboy_help_wounded</icon>
+		<text>priboy_help_wounded_title</text>
+		<article>priboy_help_wounded_article_id</article>
+		<infoportion_complete>val_sos_got_medkit</infoportion_complete>
+		<infoportion_fail>val_sos_dead</infoportion_fail>
+	</objective>
+	<objective>
+		<text>priboy_help_wounded_find_title</text>
+		<map_location_type hint="val_sos_help_main_hint">green_location</map_location_type>
+		<object_story_id>val_sos_stalker</object_story_id>
+		<infoportion_complete>val_sos_actor_near_wounded</infoportion_complete>
+		<infoportion_fail>val_sos_dead</infoportion_fail>
+	</objective>
+	<objective>
+		<text>priboy_help_wounded_title</text>
+		<map_location_type hint="val_sos_help_main_hint">green_location</map_location_type>
+		<object_story_id>val_sos_stalker</object_story_id>
+		<infoportion_complete>val_sos_got_medkit</infoportion_complete>
+		<infoportion_fail>val_sos_dead</infoportion_fail>
+	</objective>
+</game_task>
+
+<game_task id="priboy_help_wounded_stalker">
+	<title>priboy_help_wounded_stalker_title</title>
+	<objective>
+		<icon>ui_iconsTotal_priboy_help_wounded_stalker</icon>
+		<text>priboy_help_wounded_stalker_title</text>
+		<article>priboy_help_wounded_stalker_article_id</article>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>
+	<objective>
+		<text>priboy_help_wounded_stalker_title</text>
+		<map_location_type hint="S.O.S message">green_location</map_location_type>
+		<object_story_id>gar_stalker</object_story_id>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_uadz32_squad">
+	<title>priboy_find_uadz32_squad_title</title>
+	<objective>
+		<text>priboy_find_uadz32_squad_title</text>
+		<icon>ui_iconsTotal_priboy_find_uadz32_squad</icon>
+		<article>priboy_find_uadz32_squad_article_id</article>
+		<function_complete>priboy_tasks.lost_military_squad_done</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_uadz32_squad_title</text>
+		<infoportion_complete>priboy_uadz32_squad_found</infoportion_complete>
+	</objective>
+	<objective>
+		<text>priboy_find_uadz32_squad_situation_title</text>
+		<infoportion_complete>priboy_uadz32_squad_situation</infoportion_complete>
+	</objective>
+	<objective>
+		<text>priboy_find_uadz32_new_orders_title</text>
+		<infoportion_complete>priboy_uadz32_new_orders</infoportion_complete>
+	</objective>
+</game_task>
+
+<game_task id="priboy_assault_agro_mercs">
+	<title>priboy_assault_agro_mercs_title</title>
+	<objective>
+		<text>priboy_assault_agro_mercs_title</text>
+		<icon>ui_iconsTotal_priboy_assault_agro_mercs</icon>
+		<article>priboy_assault_agro_mercs_article_id</article>
+		<function_complete>priboy_tasks.priboy_assault_agro_mercs</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_assault_agro_mercs_factory_title</text>
+		<function_complete>priboy_tasks.agro_factory</function_complete>
+		<infoportion_set_complete>priboy_agro_factory_mercs_dead</infoportion_set_complete>
+	</objective>
+	<objective>
+		<text>priboy_assault_agro_mercs_hq_title</text>
+		<map_location_type hint="Mercenary commander">kill_stalker_location</map_location_type>
+		<object_story_id>agr_nii_commander</object_story_id>
+		<infoportion_complete>priboy_agro_hq_mercs_done</infoportion_complete>
+	</objective>
+</game_task>
+
+<game_task id="priboy_eliminate_sarcophagus">
+	<title>priboy_eliminate_sarcophagus_title</title>
+	<objective>
+		<text>priboy_eliminate_sarcophagus_title</text>
+		<icon>ui_iconsTotal_priboy_eliminate_sarcophagus</icon>
+		<article>priboy_eliminate_sarcophagus_article_id</article>
+		<function_complete>priboy_tasks.priboy_eliminate_sarcophagus_done</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_eliminate_sarcophagus_title</text>
+		<infoportion_complete>priboy_eliminate_sarcophagus_done</infoportion_complete>
+		<function_call_complete>priboy_tasks.remove_variables</function_call_complete>
+	</objective>
+	<objective>
+		<text>priboy_eliminate_sarcophagus_doors_title</text>
+		<infoportion_complete>priboy_eliminate_sarcophagus_doors</infoportion_complete>
+		<function_call_complete>priboy_tasks.remove_variables</function_call_complete>
+	</objective>
+</game_task>
+
+<game_task id="priboy_assault_monolith_control">
+	<title>priboy_assault_monolith_control_title</title>
+	<objective>
+		<text>priboy_assault_monolith_control_eliminate_title</text>
+		<icon>ui_iconsTotal_priboy_eliminate_monolith</icon>
+		<article>priboy_assault_monolith_control_article_id</article>
+		<function_complete>priboy_tasks.priboy_assault_monolith_control</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_assault_monolith_control_eliminate_title</text>
+		<infoportion_complete>priboy_assault_monolith_control_done</infoportion_complete>
+		<function_call_complete>priboy_tasks.remove_variables</function_call_complete>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_cnpp_blueprints">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_cnpp_blueprints_title</text>
+		<icon>ui_iconsTotal_priboy_find_cnpp_blueprints</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_cnpp_blueprints_title</text>
+		<article>priboy_find_cnpp_blueprints_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_cnpp_accident_report_1">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_cnpp_accident_report_1_title</text>
+		<icon>ui_iconsTotal_priboy_find_cnpp_accident_report_1</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_cnpp_accident_report_1_title</text>
+		<article>priboy_find_cnpp_accident_report_1_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_cnpp_accident_report_2">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_cnpp_accident_report_2_title</text>
+		<icon>ui_iconsTotal_priboy_find_cnpp_accident_report_2</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_cnpp_accident_report_2_title</text>
+		<article>priboy_find_cnpp_accident_report_2_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_cnpp_accident_report_3">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_cnpp_accident_report_3_title</text>
+		<icon>ui_iconsTotal_priboy_find_cnpp_accident_report_3</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_cnpp_accident_report_3_title</text>
+		<article>priboy_find_cnpp_accident_report_3_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_mutations_report_1">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_mutations_report_1_title</text>
+		<icon>ui_iconsTotal_priboy_find_mutations_report_1</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_mutations_report_1_title</text>
+		<article>priboy_find_mutations_report_1_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_mutations_report_2">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_mutations_report_2_title</text>
+		<icon>ui_iconsTotal_priboy_find_mutations_report_2</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_mutations_report_2_title</text>
+		<article>priboy_find_mutations_report_2_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_mutations_report_3">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_mutations_report_3_title</text>
+		<icon>ui_iconsTotal_priboy_find_mutations_report_3</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_mutations_report_3_title</text>
+		<article>priboy_find_mutations_report_3_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_deadcity_docs_1">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_deadcity_docs_1_title</text>
+		<icon>ui_iconsTotal_priboy_find_deadcity_docs_1</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_deadcity_docs_1_title</text>
+		<article>priboy_find_deadcity_docs_1_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_deadcity_docs_2">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_deadcity_docs_2_title</text>
+		<icon>ui_iconsTotal_priboy_find_deadcity_docs_2</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_deadcity_docs_2_title</text>
+		<article>priboy_find_deadcity_docs_2_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_uhsf_docs_1">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_uhsf_docs_1_title</text>
+		<icon>ui_iconsTotal_priboy_find_uhsf_docs_1</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_uhsf_docs_1_title</text>
+		<article>priboy_find_uhsf_docs_1_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_uhsf_docs_2">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_uhsf_docs_2_title</text>
+		<icon>ui_iconsTotal_priboy_find_uhsf_docs_2</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_uhsf_docs_2_title</text>
+		<article>priboy_find_uhsf_docs_2_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_uhsf_accident_report">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_uhsf_accident_report_title</text>
+		<icon>ui_iconsTotal_priboy_find_uhsf_accident_report</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_uhsf_accident_report_title</text>
+		<article>priboy_find_uhsf_accident_report_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_docs_pendrive">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_docs_pendrive_title</text>
+		<icon>ui_iconsTotal_priboy_find_docs_pendrive</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_docs_pendrive_title</text>
+		<article>priboy_find_docs_pendrive_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_kruglov_pendrive">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_kruglov_pendrive_title</text>
+		<icon>ui_iconsTotal_priboy_find_kruglov_pendrive</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_kruglov_pendrive_title</text>
+		<article>priboy_find_kruglov_pendrive_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_ghost_memo">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_ghost_memo_title</text>
+		<icon>ui_iconsTotal_priboy_find_ghost_memo</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_ghost_memo_title</text>
+		<article>priboy_find_ghost_memo_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_kgb_docs">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_kgb_docs_title</text>
+		<icon>ui_iconsTotal_priboy_find_kgb_docs</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_kgb_docs_title</text>
+		<article>priboy_find_kgb_docs_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_crazy_flash">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_crazy_flash_title</text>
+		<icon>ui_iconsTotal_priboy_find_crazy_flash</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_crazy_flash_title</text>
+		<article>priboy_find_crazy_flash_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_dezik_key">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_dezik_key_title</text>
+		<icon>ui_iconsTotal_priboy_find_dezik_key</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_dezik_key_title</text>
+		<article>priboy_find_dezik_key_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_dezik_pda">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_dezik_pda_title</text>
+		<icon>ui_iconsTotal_priboy_find_dezik_pda</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_dezik_pda_title</text>
+		<article>priboy_find_dezik_pda_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_strelok_pendrive">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_strelok_pendrive_title</text>
+		<icon>ui_iconsTotal_priboy_find_strelok_pendrive</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_strelok_pendrive_title</text>
+		<article>priboy_find_strelok_pendrive_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_sid_memo">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_sid_memo_title</text>
+		<icon>ui_iconsTotal_priboy_find_sid_memo</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_sid_memo_title</text>
+		<article>priboy_find_sid_memo_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_decoder">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_decoder_title</text>
+		<icon>ui_iconsTotal_priboy_find_decoder</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_decoder_title</text>
+		<article>priboy_find_decoder_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_pripyat_docs">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_pripyat_docs_title</text>
+		<icon>ui_iconsTotal_priboy_find_pripyat_docs</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_pripyat_docs_title</text>
+		<article>priboy_find_pripyat_docs_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_x16_docs">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_x16_docs_title</text>
+		<icon>ui_iconsTotal_priboy_find_x16_docs</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_x16_docs_title</text>
+		<article>priboy_find_x16_docs_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_genetic_book">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_genetic_book_title</text>
+		<icon>ui_iconsTotal_priboy_find_genetic_book</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_genetic_book_title</text>
+		<article>priboy_find_genetic_book_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_x18_code_1">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_x18_code_1_title</text>
+		<icon>ui_iconsTotal_priboy_find_x18_code_1</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_x18_code_1_title</text>
+		<article>priboy_find_x18_code_1_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_x18_code_2">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_x18_code_2_title</text>
+		<icon>ui_iconsTotal_priboy_find_x18_code_2</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_x18_code_2_title</text>
+		<article>priboy_find_x18_code_2_article_id</article>
+	</objective>
+</game_task>
+
+<game_task id="priboy_find_x18_code_3">
+	<title>priboy_find_uhsf_documents</title>
+	<objective>
+		<text>priboy_find_x18_code_3_title</text>
+		<icon>ui_iconsTotal_priboy_find_x18_code_3</icon>
+		<function_complete>priboy_tasks.has_task_target</function_complete>
+	</objective>	
+	<objective>
+		<text>priboy_find_x18_code_3_title</text>
+		<article>priboy_find_x18_code_3_article_id</article>
+	</objective>
+</game_task>

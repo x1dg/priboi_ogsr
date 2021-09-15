@@ -1,0 +1,183 @@
+[wpn_svd]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn                  = "weapons\svd"		; option for Level Editor
+$npc			 		= on				; option for Level Editor
+$prefetch 		 		= 8
+scheduled               = off              	; option for ALife Simulator
+cform                   = skeleton
+class                   = WP_SVD
+min_radius              = 0
+max_radius              = 50
+description				= enc_weapons1_wpn-svd
+
+ef_main_weapon_type		 = 3
+ef_weapon_type			 = 8
+
+;--- scope weapons -----------------------------------------------------------------
+holder_range_modifier	= 2.15               ; во сколько раз увеличивается eye_range 
+holder_fov_modifier		= 0.3              ; во сколько раз увеличивается eye_fov
+;-----------------------------------------------------------------------------------
+
+cost					= 70000 ;27000
+weapon_class			= sniper_rifle
+
+ammo_limit				= 60
+ammo_current			= 10
+ammo_elapsed			= 0
+
+ammo_mag_size			= 10
+ammo_class				= ammo_7.62x54_7h14, ammo_7.62x54_ap; , ammo_7.62x54_7h1  
+
+sprint_allowed			= true
+;-----------------------------------------------------------------------------------
+;базовая дисперсия
+fire_dispersion_base		= 0.0009 ;0.011;0.0075	;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+control_inertion_factor		= 1.8f; 2.2f
+	
+;отдача
+cam_relax_speed         	= 0	;скорость возврата в исходное положение
+cam_relax_speed_ai         	= 120.5
+cam_dispersion          	= 2.0	;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc		= 0.5	;увеличениe cam_dispersion с каждым выстрелом
+cam_dispertion_frac		= 1.0	;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
+cam_max_angle			= 15.0	;максимальный угол отдачи
+cam_max_angle_horz		= 3.0	;(degree) maximum shot horizontal degree 
+cam_step_angle_horz		= 0.25	;(degree) size of step camera moved in horizontal position while shooting
+
+fire_dispersion_condition_factor = 5	;увеличение дисперсии в процентах при максимальном износе 
+misfire_probability 		= 0.005 ;вероятность осечки при максимальном износе 
+misfire_condition_k			= 0.05
+condition_shot_dec 			= 0.00001 ;увеличение износа при каждом выстреле
+;-----------------------------------------------------------------------------------
+
+hand_dependence 		= 1
+single_handed			= 0
+
+slot 					= 2		; // secondary
+animation_slot			= 2		; type of the animation that will be used
+
+
+inv_name				= wpn-svd
+inv_name_short			= wpn-svd
+inv_weight				= 4.3
+
+inv_grid_width			= 6
+inv_grid_height			= 2
+inv_grid_x				= 0 ;41
+inv_grid_y				= 0
+
+kill_msg_x			= 0
+kill_msg_y			= 0
+kill_msg_width		= 98
+kill_msg_height		= 23
+
+direction               = 0, 0, 1
+
+fire_point              = 0.0, 0.227, 0.944
+
+flame_particles		    = weapons\generic_weapon06
+smoke_particles		   	= weapons\generic_shoot_00
+rpm_empty_click 		= 200
+
+shell_point		 		= 0.0, 0.23, 0.179
+shell_dir		 		= 0.0, 0.0, 0.4
+; shell_particles	 		= weapons\arsenal_shells1
+
+PDM_disp_base 			= 6.0
+PDM_disp_vel_factor 		= 0.9
+PDM_disp_accel_factor 		= 1.0
+PDM_crouch	 		= 1.0
+PDM_crouch_no_acc 		= 1.0
+
+; ttc
+hit_power           = 2.0 ;1.85, 1.20, 1.10, 1.17
+hit_impulse		 	= 170 ;70
+hit_type 			= fire_wound
+
+fire_distance           	= 900 ;1000
+bullet_speed		 	= 830	;начальная скорость пули
+rpm                     	= 120
+; end ttc
+
+use_aim_bullet				= true		;Поддерживается ли первая суппер пуля
+time_to_aim					= 1.0	
+
+hud                     = wpn_svd_sk1_hud
+normal                  = 0, 1, 0
+position         	    = -0.026,-0.172,0
+orientation             = 0, 0, 0
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+strap_position         		= -0.16,-0.36,0.15			; position (offset) and orientation of the weapon when it is strapped
+strap_orientation      		= -10,-5,10					; (3rd person view in degrees)
+strap_bone0					= bip01_spine2
+strap_bone1					= bip01_spine1
+
+startup_ammo            = 10
+visual                  = weapons\svd\wpn_svd.ogf
+
+light_color		 		= 0.6,0.5,0.3
+light_range		 		= 4.0
+light_var_color		 	= 0.05
+light_var_range		 	= 0.5
+light_time 		 		= 0.2
+
+ph_mass			 		= 5
+
+;addons
+scope_status				= 1 ;2
+silencer_status				= 0 ;2
+grenade_launcher_status		= 0
+zoom_enabled				= true
+
+scope_name 					= wpn_addon_scope			; section name for the attachable scope
+scope_x 					= 42						; offset in inventory icon
+scope_y 					= 3
+
+scope_zoom_factor	    = 10
+scope_texture			= wpn\wpn_crosshair
+
+;silencer_name  				= wpn_addon_silencer ;wpn_addon_sil_762_pms
+;silencer_x 					= 41 ;260
+;silencer_y 					= -12 ;16
+
+silencer_light_color		= 1.0, 0.1, 0.0
+silencer_light_range		= 0.01
+silencer_light_var_color	= 0.05
+silencer_light_var_range	= 0.5
+silencer_light_time 		= 0.2
+
+;SOUND by: --Darius6 for SmP 2.4 --
+snd_draw		= darius\generic_draw, 0.4
+snd_holster		= darius\generic_holster, 0.4
+snd_shoot		= darius\sr25_shot
+snd_empty		= darius\rifle_empty, 0.4
+snd_reload		= darius\svd_reload, 0.5
+;snd_silncer_shot	= darius\ak_silenced_01, 0.5
+
+silencer_smoke_particles 	= weapons\generic_shoot_00
+
+[wpn_svd_sk1_hud]
+
+shell_point			= -0.140000,-0.030000,0.080000
+shell_dir		 		= 0.0, 1.0, 0.0
+
+fire_point			= 0.462,0.0,0.00924
+fire_bone               = wpn_body
+orientation             = 0, 0, 0
+position                = 0, 0, 0
+visual                  = Arsenal_Mod\wpn_svd_sk1_hud.ogf
+
+anim_idle			= idle
+anim_idle_aim		= idle_aim
+anim_reload			= reload
+anim_draw			= draw
+anim_holster		= holster
+anim_shoot			= shoot
+anim_idle_sprint	= idle_sprint
+
+;смещения HUD для режима приближения
+zoom_offset				= -0.127151,0.043251,-0.145000
+zoom_rotate_x			= 0.000000
+zoom_rotate_y			= -0.000000

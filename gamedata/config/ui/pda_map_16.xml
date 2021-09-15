@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<!-- КАРТА В КПК -->
+<window>
+
+	<map_wnd>
+		<main_wnd x="27" y="101" width="1000" height="620">
+			<text_hint x="386" y="640" width="400" height="22" complex_mode="1">
+				<text font="letterica18" align="r"/>
+			</text_hint>
+
+			<map_header_frame_line x="8" y="17" width="1000" height="900">
+				<title x="10" y="1" width="435" height="18">
+					<text font="letterica16" color="white_4"/>
+				</title>
+				<texture>ui_pda_blank</texture>
+
+				<tool_bar>
+					<global_map_btn x="641" y="508" width="15.7" height="21" check_mode="0" stretch="1" hint="global_map_btn_hint">
+						<window_name>global_map_btn</window_name>
+						<texture>zoom_off</texture>
+						<sound_h>device\pda\pda_tap_hover</sound_h>
+						<sound_t>device\pda\pda_tap_active</sound_t>
+					</global_map_btn>
+
+					<actor_btn x="660" y="508" width="15.7" height="21" check_mode="0" stretch="1" hint="actor_btn_hint">
+						<window_name>actor_btn</window_name>
+						<texture>zoom_on</texture>
+						<sound_h>device\pda\pda_tap_hover</sound_h>
+						<sound_t>device\pda\pda_tap_active</sound_t>
+					</actor_btn>
+
+					<zoom_out_btn x="641" y="532" width="15.7" height="21" check_mode="1" stretch="1" hint="zoom_out_btn_hint">
+						<window_name>zoom_out_btn</window_name>
+						<texture>zoom_out</texture>
+						<sound_h>device\pda\pda_tap_hover</sound_h>
+						<sound_t>device\pda\pda_tap_active</sound_t>
+					</zoom_out_btn>
+
+					<zoom_in_btn x="660" y="532" width="15.7" height="21" check_mode="1" stretch="1" hint="zoom_in_btn_hint">
+						<window_name>zoom_in_btn</window_name>
+						<texture>zoom_in</texture>
+						<sound_h>device\pda\pda_tap_hover</sound_h>
+						<sound_t>device\pda\pda_tap_active</sound_t>
+					</zoom_in_btn>
+				</tool_bar>
+				
+			</map_header_frame_line>
+
+			<main_map_frame x="0" y="0" width="715" height="604" a="90">
+				<texture>ui_pda_frame</texture>
+				<level_frame x="4" y="6" width="684" height="570"/>
+			</main_map_frame>
+		</main_wnd>
+	</map_wnd>
+
+</window>

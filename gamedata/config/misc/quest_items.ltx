@@ -1,0 +1,994 @@
+;-- priboy documents (tasks targets)
+;-- barin 28.12.2007
+;-- thanks to xStream to help to make the documents not disappear (different class needed)
+
+;testing
+
+[dar_pass_document]:ammo_base
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn 				= "devices\quest_items\yan_x16_documents"
+$prefetch			= 16
+class				= AMMO
+cform				= skeleton
+visual		 		= equipments\item_document_1.ogf
+inv_weight			= 1.0
+quest_item			= true
+
+description			= item_doc_sid_desc
+inv_name			= item_doc_sid_name
+inv_name_short	= item_doc_sid_name
+
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 6
+inv_grid_y			= 19
+
+radius				=	2
+cost           		=	100
+
+box_size=1
+
+k_dist      = 1
+k_disp      = 3
+k_hit     = 1.4
+k_impulse   = 1.2
+k_pierce    = 1.35
+impair      = 1.15
+buck_shot   = 1
+tracer      = off
+wm_size         = 0.05
+
+;end testing
+
+[priboy_document]:ammo_base
+GroupControlSection = spawn_group
+discovery_dependency = 
+$spawn      = "devices\quest_items\yan_x16_documents"
+class     = AMMO
+cform                   = skeleton
+visual                  = equipments\item_document_1.ogf
+description       = 
+$prefetch     = 64
+
+radius=1
+cost           = 100
+quest_item			= true
+
+inv_name    = document
+inv_name_short    = doc
+inv_weight    = 0.1
+
+inv_grid_width    = 2
+inv_grid_height   = 1
+inv_grid_x        = 6
+inv_grid_y        = 19
+
+box_size	= 1
+
+k_dist      = 1
+k_disp      = 3
+k_hit       = 1.4
+k_impulse   = 1.2
+k_pierce    = 1.35
+impair      = 1.15
+buck_shot   = 1
+tracer      = off
+wm_size     = 0.01
+
+
+;-- NPP Blueprints
+[npp_build_doc]:priboy_document
+$spawn 			= "devices\quest_items\dar_document4"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_document_1.ogf
+quest_item			= true
+description			= item_npp_build_desc
+inv_name			= item_npp_build_name
+inv_name_short	= item_npp_build_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 6
+inv_grid_y			= 19
+cost					= 100
+
+;-- NPP Accident #1
+[npp_crash1_doc]:priboy_document
+$spawn 			= "devices\quest_items\dar_document4"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_document_1.ogf
+quest_item			= true
+description			= item_npp_crash1_desc
+inv_name			= item_npp_crash1_name
+inv_name_short	= item_npp_crash1_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 6
+inv_grid_y			= 19
+cost					= 100
+
+;-- Mutations Report #1
+[che_mutat1_doc]:priboy_document
+$spawn 			= "devices\quest_items\dar_document4"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_document_1.ogf
+quest_item			= true
+description			= item_che_mutat1_desc
+inv_name			= item_che_mutat1_name
+inv_name_short	= item_che_mutat1_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 6
+inv_grid_y			= 19
+cost					= 100
+
+;-- Documents from Dead City #2
+[dar_document4]:priboy_document
+$spawn			= "devices\quest_items\dar_document4"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_document_1.ogf
+quest_item			= true
+description			= item_doc_x18_desc
+inv_name			= item_doc_x18p4_name
+inv_name_short	= item_doc_x18p4_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 6
+inv_grid_y			= 19
+cost					= 100
+
+;-- Mutations Report #2
+[che_mutat2_doc]:priboy_document
+$spawn 			= "devices\quest_items\dar_document4"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_document_1.ogf
+quest_item			= true
+description			= item_che_mutat2_desc
+inv_name			= item_che_mutat2_name
+inv_name_short	= item_che_mutat2_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 6
+inv_grid_y			= 19
+cost					= 100
+
+;-- NPP Accident #3
+[npp_crash3_doc]:priboy_document
+$spawn 			= "devices\quest_items\dar_document4"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_document_1.ogf
+quest_item			= true
+description			= item_npp_crash3_desc
+inv_name			= item_npp_crash3_name
+inv_name_short	= item_npp_crash3_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 6
+inv_grid_y			= 19
+cost					= 100
+
+;-- UHSF Documents #2
+[quest_case_02]:priboy_document
+$spawn 			= "devices\quest_items\quest_case_02"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_merger.ogf
+quest_item			= true
+description			= item_quest_case_02_desc
+inv_name			= item_quest_case_02_name
+inv_name_short	= item_quest_case_02_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 8
+inv_grid_y			= 18
+cost					= 100
+
+;-- UHSF Accident Report
+[gar_uhsf_doc]:priboy_document
+$spawn 			= "devices\quest_items\dar_document4"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_document_1.ogf
+quest_item			= true
+description			= item_gar_uhsf_doc_desc
+inv_name			= item_gar_uhsf_doc_name
+inv_name_short	= item_gar_uhsf_doc_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 6
+inv_grid_y			= 19
+cost					= 100
+
+;-- UHSF Documents #1
+[esc_doc_secret]:priboy_document
+$spawn 			= "devices\quest_items\dar_document4"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_delo.ogf
+quest_item			= true
+description			= item_doc_secret_desc
+inv_name			= item_doc_secret_name
+inv_name_short	= item_doc_secret_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 6
+inv_grid_y			= 18
+cost					= 100
+
+;-- X18 Lab New Code
+[x18_code_lost]:priboy_document
+$spawn 			= "devices\quest_items\dar_document1"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_document_1.ogf
+quest_item			= true
+description			= item_x18_code_lost_desc
+inv_name			= item_x18_code_lost_name
+inv_name_short	= item_x18_code_lost_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 6
+inv_grid_y			= 19
+cost					= 100
+
+;-- Kruglov's genetic book
+;-- code: 57978XY (valid: 5797812)
+[doc_uhsf_secrets]:priboy_document
+$spawn 			= "devices\quest_items\dar_document1"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_book_01.ogf
+quest_item			= true
+description			= item_doc_uhsf_secrets_desc
+inv_name			= item_doc_uhsf_secrets_name
+inv_name_short	= item_doc_uhsf_secrets_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 6
+inv_grid_y			= 18
+cost					= 0
+
+;-- Dead City Documents #1
+[cit_documents]:priboy_document
+$spawn 			= "devices\quest_items\dar_document1"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_document_1.ogf
+quest_item			= true
+description			= item_cit_documents_desc
+inv_name			= item_cit_documents_name
+inv_name_short	= item_cit_documents_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 6
+inv_grid_y			= 18
+cost					= 100
+
+;-- Doc's flash drive
+[bar_ecolog_flash]:identity_immunities
+$spawn			= "devices\quest_items\bar_ecolog_flash"
+class					= II_ATTCH
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_flash_2.ogf
+quest_item			= true
+description			= item_flash_eco_rost_desc
+inv_name			= item_flash_eco_rost_name
+inv_name_short	= item_flash_eco_rost_name
+inv_weight			= 0
+inv_grid_width		= 1
+inv_grid_height	= 1
+inv_grid_x			= 11
+inv_grid_y			= 23
+cost					= 100
+
+;-- PDA P4a sensor
+[kruglov_flash]:detector_elite
+$spawn			= "devices\quest_items\kruglov_flash"
+visual					= equipments\item_datchik3.ogf
+quest_item			= true
+description			= item_detector_yantar_desc
+inv_name			= item_detector_yantar_name
+inv_name_short	= item_detector_yantar_name
+inv_weight			= 0
+inv_grid_width		= 1
+inv_grid_height	= 1
+inv_grid_x			= 5
+inv_grid_y			= 14
+cost					= 0
+
+;-- Ghost's Memo from 2009
+[ghost_doc_uhsf]:priboy_document
+$spawn 			= "devices\quest_items\dar_document4"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_document_1.ogf
+quest_item			= true
+description			= item_ghost_doc_uhsf_desc
+inv_name			= item_ghost_doc_uhsf_name
+inv_name_short	= item_ghost_doc_uhsf_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 6
+inv_grid_y			= 19
+cost					= 100
+
+;-- KGB Secret F24
+[kgb_secret_doc]:priboy_document
+$spawn 			= "devices\quest_items\dar_document4"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_document_1.ogf
+quest_item			= true
+description			= item_kgb_secret_desc
+inv_name			= item_kgb_secret_name
+inv_name_short	= item_kgb_secret_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 6
+inv_grid_y			= 19
+cost					= 100
+
+;-- X18 Lab Code #2
+;-- code (second doors): 74368
+[x18_lab_second_code]:priboy_document
+$spawn 			= "devices\quest_items\dar_document1"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_document_1.ogf
+quest_item			= true
+description			= item_x18_lab_second_code_desc
+inv_name			= item_x18_lab_second_code_name
+inv_name_short	= item_x18_lab_second_code_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 6
+inv_grid_y			= 19
+cost					= 0
+
+;-- Siro's flash drive
+[crazy_flash]:identity_immunities
+$spawn 			= "devices\quest_items\crazy_flash"
+class					= II_ATTCH
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_minipda.ogf
+quest_item			= true
+description			= item_flash_crazy_mil_desc
+inv_name			= item_flash_crazy_mil_name
+inv_name_short	= item_flash_crazy_mil_name
+inv_weight			= 0
+inv_grid_width		= 1
+inv_grid_height	= 1
+inv_grid_x			= 11
+inv_grid_y			= 23
+cost					= 100
+
+;-- Dezik's Key
+[cit_doctors_key]:identity_immunities
+$spawn			= "devices\quest_items\cit_doctors_key"
+class					= II_ATTCH
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_flash_2.ogf
+quest_item			= true
+description			= cit_doctors_key_desc
+inv_name			= cit_doctors_key_name
+inv_name_short	= cit_doctors_key_name
+inv_weight			= 0
+inv_grid_width		= 1
+inv_grid_height	= 1
+inv_grid_x			= 3
+inv_grid_y			= 19
+cost					= 100
+
+;-- Dezik Lohnar's PDA
+[mil_svoboda_leader_pda]:identity_immunities
+$spawn			= "devices\quest_items\mil_svoboda_leader_pda"
+class					= II_ATTCH
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_pda.ogf
+quest_item			= true
+description			= item_pda_dezodor_desc
+inv_name			= item_pda_dezodor_name
+inv_name_short	= item_pda_dezodor_name
+inv_weight			= 0
+inv_grid_width		= 1
+inv_grid_height	= 1
+inv_grid_x			= 5
+inv_grid_y			= 14
+cost					= 100
+
+;-- Strelok's flash drive
+[gunslinger_flash]:priboy_document
+$spawn			= "devices\quest_items\gunslinger_flash"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_flash_1.ogf
+quest_item			= true
+description			= item_flash_gslinger_agro_desc
+inv_name			= item_flash_gslinger_agro_name
+inv_name_short	= item_flash_gslinger_agro_name
+inv_weight			= 0
+inv_grid_width		= 1
+inv_grid_height	= 1
+inv_grid_x			= 11
+inv_grid_y			= 23
+cost					= 100
+
+;-- Sidorovich Memo
+[sid_doc_last]:priboy_document
+$spawn			= "devices\quest_items\dar_document4"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_document_1.ogf
+quest_item			= true
+description			= item_sid_doc_last_desc
+inv_name			= item_sid_doc_last_name
+inv_name_short	= item_sid_doc_last_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 6
+inv_grid_y			= 19
+cost					= 100
+
+;-- X18 Lab Access Code
+;-- code (first doors): 36321
+[x18_code_found]:priboy_document
+$spawn			= "devices\quest_items\dar_document1"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_document_1.ogf
+quest_item			= true
+description			= item_x18_code_found_desc
+inv_name			= item_x18_code_found_name
+inv_name_short	= item_x18_code_found_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 6
+inv_grid_y			= 19
+cost					= 0
+
+;-- Documents from Lab X16
+[lab_x16_documents]:priboy_document
+$spawn			= "devices\quest_items\yan_x16_documents"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_document_2.ogf
+quest_item			= true
+description			= item_doc_x16_desc
+inv_name			= item_doc_x16_name
+inv_name_short	= item_doc_x16_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 6
+inv_grid_y			= 18
+cost					= 100
+
+;-- NPP Accident #2
+[npp_crash2_doc]:priboy_document
+$spawn 			= "devices\quest_items\dar_document4"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_document_1.ogf
+quest_item			= true
+description			= item_npp_crash2_desc
+inv_name			= item_npp_crash2_name
+inv_name_short	= item_npp_crash2_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 6
+inv_grid_y			= 19
+cost					= 100
+
+;-- Mutations Report #3
+[che_mutat3_doc]:priboy_document
+$spawn 			= "devices\quest_items\dar_document4"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_document_1.ogf
+quest_item			= true
+description			= item_che_mutat3_desc
+inv_name			= item_che_mutat3_name
+inv_name_short	= item_che_mutat3_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 6
+inv_grid_y			= 19
+cost					= 100
+
+;-- Decoder
+[decoder]:priboy_document
+$spawn 			= "devices\quest_items\decoder"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_decoder.ogf
+quest_item			= true
+description			= item_decoder_desc
+inv_name			= item_decoder_name	
+inv_name_short	= item_decoder_name
+inv_weight			= 0
+inv_grid_width		= 1
+inv_grid_height	= 1
+inv_grid_x			= 11
+inv_grid_y			= 3
+cost					= 0
+
+;-- Documents from the Hotel in Pripyat
+[pri_decoder_documents]:priboy_document
+$spawn			= "devices\quest_items\decoder_documents"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_document_01.ogf
+quest_item			= true
+description			= item_docs_hiden_pri_desc
+inv_name			= item_docs_hiden_pri_name
+inv_name_short	= item_docs_hiden_pri_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 6
+inv_grid_y			= 19
+cost					= 100
+
+;--------------------------------------------------------
+;--------------------------------------------------------
+
+;-- Letter from Sidorovich #1 (Cordon)
+;[dar_pass_document]:priboy_document
+;$spawn      = "devices\quest_items\yan_x16_documents" ; option for Level Editor
+;class     = AMMO
+;cform                   = skeleton
+;visual                  = equipments\item_document_1.ogf
+;$prefetch     = 64
+
+;radius=1
+;cost           = 100
+;quest_item			= true
+
+;description			= item_doc_sid_desc
+;inv_name			= item_doc_sid_name
+;inv_name_short	= item_doc_sid_name
+;inv_weight    = 2
+
+;inv_grid_width		= 2
+;inv_grid_height	= 1
+;inv_grid_x			= 6
+;inv_grid_y			= 19
+
+;-- Letter from Sidorovich #2 (Bar)
+[sid_letter_ltp]:priboy_document
+$spawn 			= "devices\quest_items\dar_document1"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_document_1.ogf
+quest_item			= true
+description			= item_sid_letter_ltp_desc
+inv_name			= item_sid_letter_ltp_name
+inv_name_short	= item_sid_letter_ltp_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 6
+inv_grid_y			= 19
+cost					= 100
+
+;-- Outpost Documents to Priboi
+[quest_case_01]:priboy_document
+$spawn 			= "devices\quest_items\quest_case_01"
+class					= AMMO
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_dipl.ogf
+quest_item			= true
+description     = item_case_esc_desc
+inv_name			= item_case_esc_name
+inv_name_short	= item_case_esc_name
+inv_weight			= 0
+inv_grid_width		= 3
+inv_grid_height	= 1
+inv_grid_x			= 14
+inv_grid_y			= 33
+cost					= 100
+
+;-- Priboi Slepchenko ID
+[hand_radio_mil]:identity_immunities
+$spawn 			= "equipment\hand_radio"
+class					= II_ATTCH
+cform					= skeleton
+visual					= equipments\item_fmradio.ogf
+radius				= 1
+quest_item			= true
+description			= item_hand_radio_mil_desc
+inv_name			= item_hand_radio_mil_name
+inv_name_short	= item_hand_radio_mil_name
+inv_weight			= 0.1
+inv_grid_width		= 1
+inv_grid_height	= 1
+inv_grid_x			= 11
+inv_grid_y			= 23
+cost					= 0
+belt					= true
+
+;-- Convoy report
+[mil_convoy_report]:identity_immunities
+$spawn 			= "devices\quest_items\quest_case_01"
+class					= II_ATTCH
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_merger.ogf
+quest_item			= true
+description     = item_mil_convoy_report_desc
+inv_name			= item_mil_convoy_report_name
+inv_name_short	= item_mil_convoy_report_name
+inv_weight			= 0
+inv_grid_width		= 2
+inv_grid_height	= 1
+inv_grid_x			= 8
+inv_grid_y			= 18
+cost					= 100
+
+;-- Scientist's flash drive
+[mil_scientist_flash]:identity_immunities
+$spawn			= "devices\quest_items\bar_ecolog_flash"
+class					= II_ATTCH
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_flash_2.ogf
+quest_item			= true
+description			= item_mil_scientist_flash_desc
+inv_name			= item_mil_scientist_flash_name
+inv_name_short	= item_mil_scientist_flash_name
+inv_weight			= 0
+inv_grid_width		= 1
+inv_grid_height	= 1
+inv_grid_x			= 11
+inv_grid_y			= 23
+cost					= 100
+
+;-- Garbage stalker's flash drive
+[gar_stalker_uhsf_info]:identity_immunities
+$spawn			= "devices\quest_items\bar_ecolog_flash"
+class					= II_ATTCH
+cform					= skeleton
+radius				= 1
+visual					= equipments\item_flash_2.ogf
+quest_item			= true
+description			= item_gar_stalker_uhsf_info_desc
+inv_name			= item_gar_stalker_uhsf_info_name
+inv_name_short	= item_gar_stalker_uhsf_info_name
+inv_weight			= 0.1
+inv_grid_width		= 1
+inv_grid_height	= 1
+inv_grid_x			= 11
+inv_grid_y			= 23
+cost					= 100
+
+;-- Tyran's pda
+[bar_tiran_pda]:identity_immunities
+GroupControlSection	= spawn_group
+$spawn 					= "devices\quest_items\bar_tiran_pda"
+class							= II_ATTCH
+cform							= skeleton
+visual							= equipments\item_pda.ogf
+radius						= 1
+quest_item					= true
+description					= item_pda_tiran_desc
+inv_name					= item_pda_tiran_name
+inv_name_short			= item_pda_tiran_name
+inv_weight					= 0
+inv_grid_width				= 2
+inv_grid_height			= 1
+inv_grid_x					= 6
+inv_grid_y					= 13
+cost							= 100
+
+;-- Lucky's pda
+[bar_lucky_pda]:identity_immunities
+GroupControlSection		= spawn_group
+$spawn 					= "devices\quest_items\bar_lucky_pda"
+class							= II_ATTCH
+cform							= skeleton
+visual							= equipments\item_pda.ogf
+radius						= 1
+quest_item					= true
+description					= item_pda_lucky_desc
+inv_name					= item_pda_lucky_name
+inv_name_short			= item_pda_lucky_name
+inv_weight					= 0
+inv_grid_width				= 2
+inv_grid_height			= 1
+inv_grid_x					= 6
+inv_grid_y					= 13
+cost							= 100
+
+;-- priboy stuff end
+;--------------------------------------------------------
+;--------------------------------------------------------
+;--------------------------------------------------------
+
+[af_blood_tutorial]:af_blood
+$spawn				= "devices\quest_items\tutorial_blood"
+quest_item			= true
+
+[dynamite]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn 				= "devices\quest_items\dynamite"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= physics\box\expl_dinamit.ogf
+radius				= 1
+;script_binding		= stalker.object_init
+quest_item			= true
+
+description         = item_dynamite_esc_desc
+
+inv_name			= item_dynamite_esc_name
+inv_name_short		= item_dynamite_esc_name
+inv_weight			= 0
+
+inv_grid_width		= 2
+inv_grid_height		= 2
+inv_grid_x			= 4
+inv_grid_y			= 18
+cost				= 0
+
+[esc_wounded_flash]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn 				= "devices\quest_items\esc_wounded_flash"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+radius				= 1
+visual				= equipments\item_minipda.ogf
+;script_binding		= stalker.object_init
+quest_item			= false
+
+description         = item_flash_esc_desc
+
+inv_name			= item_flash_esc_name
+inv_name_short		= item_flash_esc_name
+inv_weight			= 0
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 11
+inv_grid_y			= 23
+cost				= 0
+
+[val_key_to_underground]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn 				= "devices\quest_items\val_key_to_underground"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\item_flash_2.ogf
+radius				= 1
+;script_binding		= stalker.object_init
+quest_item			= false
+
+description			= item_key_x18_desc
+
+inv_name			= item_key_x18_name
+inv_name_short		= item_key_x18_name
+inv_weight			= 0
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 3
+inv_grid_y			= 19
+cost				= 1000
+
+[good_psy_helmet]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn 				= "devices\quest_items\good_psy_helmet"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\item_psi_helmet.ogf
+radius				= 1
+;script_binding		= stalker.object_init
+quest_item			= false
+
+description         = yan_good_psy_helmet_desc
+
+inv_name			= yan_good_psy_helmet_name
+inv_name_short		= yan_good_psy_helmet_name
+inv_weight			= 0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 2
+inv_grid_y			= 18
+cost				= 20000
+
+[bad_psy_helmet]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn 				= "devices\quest_items\bad_psy_helmet"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\item_psi_helmet.ogf
+radius				= 1
+;script_binding		= stalker.object_init
+quest_item			= false
+
+description         = yan_bad_psy_helmet_desc
+
+inv_name			= yan_bad_psy_helmet_name
+inv_name_short		= yan_bad_psy_helmet_name
+inv_weight			= 0
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 2
+inv_grid_y			= 18
+cost				= 10000
+
+[dar_pass_flash]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn 				= "devices\quest_items\dar_pass_flash"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\item_flash_2.ogf
+radius				= 1
+quest_item			= false
+
+inv_name			= "Scientist" Flash card
+inv_name_short		= "Scientist" flash
+inv_weight			= 0
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 3
+inv_grid_y			= 19
+cost				= 0
+
+[dar_document1]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn 				= "devices\quest_items\dar_document1"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\item_document_01.ogf
+radius				= 1
+quest_item			= false
+
+description			= item_doc_x18_desc
+
+inv_name			= item_doc_x18p1_name
+inv_name_short		= item_doc_x18p1_name
+inv_weight			= 0
+
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x			= 6
+inv_grid_y			= 19
+cost				= 0
+
+[dar_document2]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn 				= "devices\quest_items\dar_document2"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\item_document_01.ogf
+radius				= 1
+quest_item			= false
+
+description			= item_doc_x18_desc
+
+inv_name			= item_doc_x18p2_name
+inv_name_short		= item_doc_x18p2_name
+inv_weight			= 0
+
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x			= 6
+inv_grid_y			= 19
+cost				= 0
+
+[dar_document3]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn 				= "devices\quest_items\dar_document3"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\item_document_01.ogf
+radius				= 1
+quest_item			= false
+
+description			= item_doc_x18_desc
+
+inv_name			= item_doc_x18p3_name
+inv_name_short		= item_doc_x18p3_name
+inv_weight			= 0
+
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x			= 6
+inv_grid_y			= 19
+cost				= 0
+
+[dar_document5]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn 				= "devices\quest_items\dar_document5"
+;$prefetch 			= 32
+class				= II_ATTCH
+cform				= skeleton
+visual				= equipments\item_document_1.ogf
+radius				= 1
+quest_item			= false
+
+description			= item_doc_x18_desc
+
+inv_name			= item_doc_x18p5_name
+inv_name_short		= item_doc_x18p5_name
+inv_weight			= 0
+
+inv_grid_width		= 2
+inv_grid_height		= 1
+inv_grid_x			= 6
+inv_grid_y			= 19
+cost				= 0

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+ 
+<ui_si>	
+ 
+	<background x="600" y="0" width="450" height="460" stretch="1">
+		<texture x="0" y="0" width="450" height="460">ui\ui_dg_cheats</texture>
+	</background>
+ 
+	<list x="625" y="57" width="390" height="365" item_height="16">
+		<font font="letterica16" r="216" g="186" b="140" />
+	</list>
+
+
+	<btn_mob x="970" y="32" width="50" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>монстр</text>
+	</btn_mob>
+
+	<btn_anom x="920" y="32" width="50" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>тачки</text>
+	</btn_anom>
+	
+	<btn_stalker x="870" y="32" width="50" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>люди</text>
+	</btn_stalker>
+
+	<btn_ammo x="620" y="32" width="50" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>патрон</text>
+	</btn_ammo>
+
+	<btn_wpn x="670" y="32" width="50" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>оружие</text>
+	</btn_wpn>
+
+	<btn_art x="720" y="32" width="50" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>артеф</text>
+	</btn_art>
+
+	<btn_item x="770" y="32" width="50" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>предмет</text>
+	</btn_item>
+
+	<btn_outf x="820" y="32" width="50" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>броня</text>
+	</btn_outf>
+	
+	<btn_create x="625" y="422" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>принять</text>
+	</btn_create>
+	
+	<btn_close x="742" y="422" width="117" height="29">
+		<texture_e>ui_button_ordinary_e</texture_e>
+		<texture_t>ui_button_ordinary_t</texture_t>
+		<texture_h>ui_button_ordinary_h</texture_h>
+		<text>выход</text>
+	</btn_close>
+ 
+
+		<dialog x="450" y="470" width="510" height="206">
+			<texture>ui_frame_error</texture>
+		</dialog>
+
+		<capt x="90" y="4" width="200" height="29">
+			<text font="graffiti19" color="ui_6">Меню телепортации</text>
+		</capt>
+
+		<msg2 x="215" y="50" width="200" height="30">
+			<text font="letterica18" color="ui_6">Введите координаты: X, Y, Z</text>
+		</msg2>
+		
+		<msg x="180" y="55" width="200" height="30">
+			<text font="letterica18" color="ui_6"></text>
+		</msg>
+
+		<edit_box x="200" y="85" width="70" height="23">
+			<texture>ui_linetext_e</texture>
+			<text font="letterica18" r="240" g="217" b="182"/>
+		</edit_box>
+
+		<edit_box2 x="290" y="85" width="70" height="23">
+			<texture>ui_linetext_e</texture>
+			<text font="letterica18" r="240" g="217" b="182"/>
+		</edit_box2>
+
+		<edit_box3 x="380" y="85" width="70" height="23">
+			<texture>ui_linetext_e</texture>
+			<text font="letterica18" r="240" g="217" b="182"/>
+		</edit_box3>
+
+		<btn_1 x="26" y="85" width="117" height="29">
+			<texture_e>ui_button_ordinary_e</texture_e>
+			<texture_t>ui_button_ordinary_t</texture_t>
+			<texture_h>ui_button_ordinary_h</texture_h>
+			<text>Переместиться</text>
+		</btn_1>
+
+		<btn_quit x="30" y="100" width="117" height="29">
+			<texture_e>ui_button_ordinary_e</texture_e>
+			<texture_t>ui_button_ordinary_t</texture_t>
+			<texture_h>ui_button_ordinary_h</texture_h>
+			<text>Не надо</text>
+		</btn_quit>
+
+
+</ui_si>

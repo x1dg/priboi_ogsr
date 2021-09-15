@@ -1,0 +1,574 @@
+<?xml version='1.0' encoding="windows-1251"?>
+
+<game_information_portions>
+	<!-- Tutorial artefact -->
+	<info_portion id="tutorial_artefact_start"></info_portion>
+	<info_portion id="tutorial_artefact_gain"></info_portion>
+	<info_portion id="tutorial_artefact_done"></info_portion>
+	<info_portion id="tutorial_flesh_start"></info_portion>
+	<info_portion id="tutorial_flesh_die"></info_portion>
+	<info_portion id="tutorial_flesh_die_processed"></info_portion>
+	<info_portion id="tutorial_alarm_start"></info_portion>
+	<info_portion id="tutorial_alarm_played"></info_portion>
+
+
+	<info_portion id="esc_kill_gunslinger">
+		<!-- barin start -->
+		<!--
+			<task>storyline_eliminate_gunslinger</task>
+		-->
+		<!-- barin end -->
+		<article>tutorial_jump</article>
+		<article>tutorial_overload</article>
+		<article>sl_beginning</article>
+		<article>sl_first_opinions</article>
+		<article>sl_first_deep_raid</article>
+		<article>sl_wishmaster_legend</article>
+		
+		<article>about_enciclopedia</article>
+		<article>tutorial_crouch</article>
+		<article>tutorial_binocular</article>
+		<article>tutorial_hide_weapon</article>
+		
+		<article>tutorial_radiation</article>
+		<article>tutorial_sprint</article>
+		<article>tutorial_weakness</article>
+		<article>tutorial_weapon</article>
+		<article>tutorial_wound</article>
+		<article>tutorial_artefact</article>		
+		<article>aes_soldier_info</article>
+		<article>zone_surge_story</article>	
+		<!--<article>zones_mystery</article>-->
+		<article>stalker_story_1</article>
+		<article>stalker_story_2</article>
+		<article>stalker_story_3</article>
+		<article>stalker_story_4</article>
+		<article>stalker_story_5</article>
+		<article>stalker_story_6</article>
+		<article>stalker_story_7</article>
+		<article>stalker_story_8</article>
+		<article>stalker_story_9</article>
+		<article>stalker_story_10</article>
+		<article>stalker_story_11</article>
+		<article>stalker_story_12</article>
+		<article>stalker_story_13</article>
+		<article>stalker_story_14</article>
+		<article>stalker_story_15</article>
+		<article>stalker_story_16</article>
+		<article>stalker_story_17</article>
+		<article>stalker_story_18</article>
+		<article>stalker_story_19</article>
+		<article>stalker_story_20</article>
+		<article>zone_zone-story_story-2010</article>
+		<article>zone_zone-story_story-raid</article>
+		<article>zone_zone-story_story-2006</article>
+		<article>zone_zone-story_story-2008</article>
+		
+		<!-- LOCATIONS -->
+		<article>zone_locations_escape</article>
+		<article>zone_locations_garbage</article>
+		<article>zone_locations_agroprom</article>
+		<article>zone_locations_darkdolina</article>
+		<article>zone_locations_darklab</article>
+		<article>zone_locations_bar</article>
+		<article>zone_locations_rostok</article>
+		<article>zone_locations_yantar</article>
+		<article>zone_locations_military-loc</article>
+		<article>zone_locations_deadcity</article>
+		<article>zone_locations_pripiat</article>
+		<article>zone_locations_radar</article>
+		<article>zone_locations_stancia</article>
+		
+		<!-- SOCIAL -->
+		<article>social_military_army</article>
+		<article>social_military_milstalkers</article>
+		<article>social_stalker-clans_monolith</article>
+		<article>social_stalker-clans_loners</article>
+		<article>social_stalker-clans_bandits</article>
+		<article>social_stalker-clans_killers</article>
+		<article>social_stalker-clans_freedom</article>
+		<article>social_stalker-clans_duty</article>
+		<article>social_stalker_group_clearsky</article>
+		<article>social_scientists_mobile-labs</article>
+		<article>social_scientists_mobile-groups</article>
+		<article>social_stalker-clans_zomstalkers</article>		
+		
+		<!-- MUTANTS -->
+		<article>mutant_zombie_general</article>
+		<article>mutant_zombieg_general</article>
+		<article>mutant_fracture_general</article>
+		<article>mutant_burer_general</article>		
+		<article>mutant_controller_general</article>
+		<article>mutant_bloodsucker_general</article>
+		<article>mutant_pseudogiant_general</article>		
+		<article>mutant_poltergeist_general</article>
+		<article>mutant_flesh_general</article>
+		<article>mutant_boar_general</article>
+		<article>mutant_chimera_general</article>
+		<article>mutant_blind_general</article>
+		<article>mutant_pseudodog_general</article>
+		<article>mutant_snork_general</article>
+		<article>mutant_tushkano</article>
+		<article>mutant_crow_general</article>
+		<article>mutant_cat_general</article>		
+		
+		<!-- ANOMALIES -->
+		<article>zone_anomalies_activation_basic</article>
+		<article>zone_anomalies_activation_why</article>
+		<article>zone_anomalies_activation_practice</article>
+		<article>zone_surge</article>
+		<article>zone_anomalies_meat</article>
+		<article>zone_anomalies_bald</article>
+		<article>zone_anomalies_gravi</article>
+		<article>zone_anomalies_meat</article>
+		<article>zone_anomalies_zharka</article>
+		<article>zone_anomalies_fuzz</article>
+		<article>zone_anomalies_ameba</article>
+		<article>zone_anomalies_lift</article>
+		<article>zone_anomalies_radioactive</article>
+		<article>zone_anomalies_time</article>
+		<!-- barin start
+			<article>zone_anomalies_rusty</article>
+		barin end -->		
+		
+		<!-- ARTIFACTS -->
+		<!-- barin start -->
+		<article>zone_artifact_af-electra-priboi</article>
+		<!-- barin end -->
+		<article>zone_artifact_af-blood</article>
+		<article>zone_artifact_af-medusa</article>
+		<article>zone_artifact_af-cristall-flower</article>
+		<article>zone_artifact_af-night-star</article>
+		<article>zone_artifact_af-vyvert</article>
+		<article>zone_artifact_af-gravi</article>
+		<article>zone_artifact_af-gold-fish</article>
+		<article>zone_artifact_af-blood</article>
+		<article>zone_artifact_af-mincer-meat</article>
+		<article>zone_artifact_af-soul</article>
+		<article>zone_artifact_af-drops</article>
+		<article>zone_artifact_af-fireball</article>
+		<article>zone_artifact_af-cristall</article>
+		<article>zone_artifact_af-electra-sparkler</article>
+		<article>zone_artifact_af-electra-flash</article>
+		<article>zone_artifact_af-electra-moonlight</article>
+		<article>zone_artifact_af-rusty-thorn</article>
+		<article>zone_artifact_af-rusty-kristall</article>
+		<article>zone_artifact_af-rusty-sea-urchin</article>
+		<article>zone_artifact_af-fuzz-kolobok</article>
+		<article>zone_artifact_af-ameba-slime</article>
+		<article>zone_artifact_af-ameba-slug</article>
+		<article>zone_artifact_af-ameba-mica</article>
+		<article>zone_artifact_af-dummy-glassbeads</article>
+		<article>zone_artifact_af-dummy-pellicle</article>
+		<article>zone_artifact_af-dummy-battery</article>
+		<article>zone_artifact_af-dummy-dummy</article>
+		<article>zone_artifact_af-dummy-spring</article>
+		
+		<!-- EGUIPMENT -->
+		<article>equipment_food_bread1</article>
+		<article>equipment_food_kolbasa1</article>
+		<article>equipment_food_conserva1</article>
+		<article>equipment_medi_energy_drink</article>
+		<article>equipment_food_vodka1</article>
+		<article>equipment_medi_antirad1</article>
+		<article>equipment_medi_antidote</article>
+		<article>equipment_medi_medkit1</article>
+		<article>equipment_medi_medkit2</article>
+		<article>equipment_medi_medkit3</article>
+		<article>equipment_medi_bandage1</article>
+		<article>equipment_devic_guitar</article>
+		<article>equipment_devic_harmonica</article>
+		<article>equipment_devic_device-torch1</article>
+		<article>equipment_devic_binocul1</article>		
+		<article>equipment_devic_hand_radio</article>		
+		<article>equipment_devic_device-pda1</article>
+		<article>equipment_devic_detector_simple</article>
+		<article>equipment_devic_detector_advanced</article>
+		<article>equipment_devic_detector_elite</article>
+		<article>equipment_items_matras</article>
+		<article>equipment_items_cigarettes</article>
+		
+		<!-- new 1.1 items-->
+		
+		<article>equipment_vodka_absolut</article>
+		<article>equipment_vodka_nemiroff</article>
+		<article>equipment_vodka_smirnoff</article>
+		<article>equipment_vodka_water</article>
+		<article>equipment_food_kukorica</article>
+		<article>equipment_food_olives</article>
+		<article>equipment_food_sardinia</article>
+		<article>equipment_food_meal</article>
+		<article>equipment_food_peanut</article>
+		<article>equipment_food_ratpie</article>
+			
+		<!-- barin start
+			<article>equipment_items_detect4</article>
+			<article>equipment_items_health</article>
+			<article>equipment_items_diagnost</article>
+			<article>equipment_armors_armor1</article>
+			<article>equipment_armors_sci1</article>
+			<article>equipment_armors_sci2</article>
+			<article>equipment_armors_arm-light</article>
+			<article>equipment_armors_arm-medium</article>
+			<article>equipment_armors_arm-heavy</article>
+		barin end -->
+		
+		<!-- SUITS -->
+		<!--<article>equipment_suits_armor1</article>-->
+		<article>equipment_suits_armor2</article>
+		<article>equipment_suits_armor3</article>
+		<article>equipment_suits_armor4</article>
+		<article>equipment_suits_armor5</article>
+		<article>equipment_suits_armor6</article>
+		<article>equipment_suits_armor7</article>
+		<article>equipment_suits_armor8</article>
+		<article>equipment_suits_armor9</article>
+		<article>equipment_suits_armor10</article>
+		<article>equipment_suits_armor11</article>
+		<article>equipment_suits_armor12</article>
+		<article>equipment_suits_armor13</article>
+		<article>equipment_suits_armor14</article>
+		<article>equipment_suits_armor15</article>
+		<article>equipment_suits_armor16</article>
+		<article>equipment_suits_armor17</article>
+		<article>equipment_suits_armor18</article>
+		<article>equipment_suits_armor19</article>
+		<article>equipment_suits_armor20</article>
+		<article>equipment_suits_armor21</article>
+		<article>equipment_suits_armor22</article>
+		<article>equipment_suits_armor23</article>
+		<article>equipment_suits_armor24</article>
+		<article>equipment_suits_armor25</article>
+		<article>equipment_suits_armor26</article>
+		<article>equipment_suits_armor27</article>
+		
+		<!-- WEAPONS -->
+		<article>weapons1_ammo_ammo-9x18-fmj</article>
+		<article>weapons1_ammo_ammo-9x18-pmm</article>
+		<article>weapons1_ammo_ammo-9x19-fmj</article>
+		<article>weapons1_ammo_ammo-9x19-pbp</article>
+		<article>weapons1_ammo_ammo-11.43x23-fmj</article>
+		<article>weapons1_ammo_ammo-11.43x23-hydro</article>
+		<article>weapons1_ammo_ammo-5.45x39-fmj</article>
+		<article>weapons1_ammo_ammo-5.45x39-ap</article>
+		<article>weapons1_ammo_ammo-9x39-pab9</article>
+		<article>weapons1_ammo_ammo-9x39-ap</article>
+		<article>weapons1_ammo_ammo-9x39-sp5</article>
+		<article>weapons1_ammo_ammo-5.56x45-ss190</article>
+		<article>weapons1_ammo_ammo-5.56x45-ap</article>
+		<article>weapons1_ammo_ammo-7.62x54-7h1</article>
+		<article>weapons1_ammo_ammo-7.62x54-ap</article>
+		<article>weapons1_ammo_ammo-7.62x54-7h14</article>
+		<article>weapons1_ammo_ammo-12x70-buck</article>
+		<article>weapons1_ammo_ammo-12x76-zhekan</article>
+		<article>weapons1_ammo_ammo-12x76-dart</article>
+		<article>weapons1_ammo_ammo-m209</article>
+		<article>weapons1_ammo_ammo-vog-25</article>
+		<article>weapons1_ammo_ammo-vog-25p</article>
+		<article>weapons1_ammo_ammo-og-7b</article>
+		<article>weapons1_ammo_ammo-gauss</article>
+		
+		<article>weapons1_ammo_ammo-vog_teg</article>
+		<article>weapons1_ammo_ammo-vog_hbgteg</article>
+		<article>weapons1_ammo_ammo-16x70-kart</article>
+		<article>weapons1_ammo_ammo-16x70-zhekan</article>
+		<article>weapons1_ammo_ammo-16x70-buck</article>
+		<article>weapons1_arsenal_7.62x25_p</article>
+		<article>weapons1_arsenal_7.62x25_ps</article>
+		
+		<article>weapons1_wpn-pm</article>
+		<article>weapons1_wpn-pb</article>
+		<article>weapons1_wpn-fort</article>
+		<article>weapons1_wpn-walther</article>
+		<article>weapons1_wpn-beretta</article>
+		<article>weapons1_wpn-sig220</article>
+		<article>weapons1_wpn-colt1911</article>
+		<article>weapons1_wpn-toz34</article>
+		<article>weapons1_wpn-bm16</article>
+		<article>weapons1_wpn-spas12</article>
+		<article>weapons1_wpn-wincheaster1300</article>
+		<article>weapons1_wpn-mp5</article>
+		<article>weapons1_wpn-ak74</article>
+		<article>weapons1_wpn-ak74u</article>
+		<article>weapons1_wpn-vintorez</article>
+		<article>weapons1_wpn-val</article>
+		<article>weapons1_wpn-groza</article>
+		<article>weapons1_wpn-abakan</article>
+		<article>weapons1_wpn-lr300</article>
+		<article>weapons1_wpn-fn2000</article>
+		<article>weapons1_wpn-l85</article>
+		<article>weapons1_wpn-g36</article>
+		<article>weapons1_wpn-sig550</article>
+		<article>weapons1_wpn-svd</article>
+		<article>weapons1_wpn-svu</article>
+		<article>weapons1_wpn-gauss</article>
+		<article>weapons1_wpn-addon-grenade-launcher</article>
+		<article>weapons1_wpn-addon-grenade-launcher-m203</article>
+		<article>weapons1_wpn-rg-6</article>
+		<article>weapons1_wpn-rpg7</article>
+		<article>weapons1_grenade-f1</article>
+		<article>weapons1_grenade-rgd5</article>
+		<article>weapons1_grenade-gd05</article>
+		<!-- *gr1ph start* -->
+		<article>weapons1_krissv</article>
+		<article>weapons1_mp7a3</article>
+		<article>weapons1_bm16-full</article>
+		<article>weapons1_ppsh41</article>
+		<article>weapons1_ak47</article>
+		<article>weapons1_ak103</article>
+		<article>weapons1_benelli-short</article>
+		<article>weapons1_bizon</article>
+		<article>weapons1_m1891</article>
+		<article>weapons1_m1891s</article>
+		<article>weapons1_mac10</article>
+		<article>weapons1_mp5k</article>
+		<article>weapons1_ots33</article>
+		<article>weapons1_p90</article>
+		<article>weapons1_pkm</article>
+		<article>weapons1_s12c</article>
+		<article>weapons1_tmp</article>
+		<article>weapons1_tec9</article>
+		<!-- *gr1ph end* -->
+		<article>weapons1_groza1</article>
+		<article>weapons1_fn2000c</article>
+		<article>weapons1_toz34s</article>
+
+
+		<!-- VEHICLES -->
+		<article>vehicles_zaporozh</article>
+		<article>vehicles_kamaz</article>
+		<article>vehicles_btr-70</article>
+		<article>vehicles_niva</article>
+		<article>vehicles_tr-13</article>
+		<article>vehicles_mi-24</article>
+		<article>vehicles_uaz</article>
+		<article>vehicles_niva-civil</article>
+		<article>vehicles_moskvich</article>
+		<!-- ps 1.1 new vehicles by xman99-->
+		<article>vehicles_gaz</article>
+		<article>vehicles_zaz-986</article>
+		<article>vehicles_lada</article>
+		<article>vehicles_laz-blue</article>
+		<article>vehicles_laz-red</article>
+		<article>vehicles_zil-131</article>
+		<article>vehicles_kamaz_2</article>
+    
+    </info_portion>	
+
+	<!-- Tutorial wounded -->
+	<info_portion id="tutorial_wounded_start">
+	 	<task>esc_flash_task</task>
+	</info_portion>
+	<info_portion id="esc_first_novice_dead"></info_portion>
+	<info_portion id="esc_second_novice_dead"></info_portion>
+	<info_portion id="esc_hit_bandits"></info_portion>
+	<info_portion id="esc_heli_attack"></info_portion>
+	<info_portion id="esc_heli_fire"></info_portion>
+	<info_portion id="esc_heli_direct"></info_portion>
+	<info_portion id="tutorial_wounded_must_spawn"></info_portion>
+	<info_portion id="tutorial_wounded_give_info">
+	</info_portion>
+	<info_portion id="tutorial_wounded_help"></info_portion>
+	<info_portion id="tutorial_wounded_die"></info_portion>
+	<info_portion id="tutorial_wounded_death"></info_portion>
+	<info_portion id="tutorial_wounded_fail"></info_portion>
+	<info_portion id="tutorial_wounded_end"></info_portion>
+	<info_portion id="tutorial_wounded_heal"></info_portion>
+	<info_portion id="esc_petruha_report"></info_portion>
+	<info_portion id="esc_petruha_friend_die"></info_portion>
+	<info_portion id="esc_petruha_report2"></info_portion>
+	<info_portion id="esc_report_send"></info_portion>
+	<info_portion id="esc_lager_friendship"></info_portion>
+	<info_portion id="tutorial_end"></info_portion>
+	<info_portion id="tutorial_wounded_volk_greet"></info_portion>
+	<info_portion id="esc_wolf_say"></info_portion>
+	<info_portion id="esc_serious_talk"></info_portion>
+	<info_portion id="esc_wounded_arrive"></info_portion>
+	<info_portion id="esc_tutorial_secret"></info_portion>
+	<info_portion id="esc_tutorial_secret_find"></info_portion>
+	<info_portion id="esc_shustryi_secret"></info_portion>
+	<info_portion id="esc_shustryi_secret_find"></info_portion>
+
+	<!-- Fox -->
+	<info_portion id="escape_stalker_help"></info_portion>
+	<info_portion id="escape_fox_heal"></info_portion>
+	<info_portion id="escape_stalker_spawn"></info_portion>
+	<info_portion id="escape_stalker_dog_spawn"></info_portion>	
+	<info_portion id="escape_stalker_dog_die"></info_portion>	
+	<info_portion id="escape_stalker_meet">
+		<task>esc_help_wounded_from_raid</task>
+	</info_portion>
+	<info_portion id="escape_stalker_give">
+	</info_portion>	
+	<info_portion id="escape_stalker_done"></info_portion>
+	<info_portion id="esc_dogs_return"></info_portion>
+	<info_portion id="esc_fox_thanks"></info_portion>
+	
+	
+	<!-- Blokpost_case -->
+	<info_portion id="escape_blockpost_case">
+		<task>esc_blockpost_case_to_trader</task>
+	</info_portion>
+	<info_portion id="escape_blockpost_case_have"></info_portion>
+	<info_portion id="escape_blockpost_case_done"></info_portion>
+	<info_portion id="esc_matugalnik_off"></info_portion>
+	
+	<!-- Dinamyte -->
+	<info_portion id="escape_dynamite_start">
+<!--		<task>esc_dinamit_to_volk</task>
+		<article>esc_volk_dynamite</article> -->
+	</info_portion>
+	<info_portion id="escape_dynamite_meet"></info_portion>
+	<info_portion id="esc_petruha_great"></info_portion>
+	<info_portion id="escape_factory_assault_say_hello"></info_portion>
+	<info_portion id="escape_dynamite_gain"></info_portion>
+	<info_portion id="escape_dynamite_have"></info_portion>
+	<info_portion id="escape_dynamite_done"></info_portion>
+	<info_portion id="esc_petruha_die"></info_portion>
+	<info_portion id="esc_volk_reward"></info_portion>
+
+	<!-- Newbie_lager_help -->
+	<info_portion id="escape_lager_help">
+		<task>esc_defend_lager</task>
+	</info_portion>
+	<info_portion id="escape_lager_spawn_killers"></info_portion>
+	<info_portion id="esc_killers_raid"></info_portion>
+	<info_portion id="escape_lager_killers_die">
+		<disable>escape_lager_spawn_killers</disable>
+	</info_portion>
+	<info_portion id="escape_lager_complete"></info_portion>
+	<info_portion id="esc_fanat_spawn"></info_portion>
+	<info_portion id="esc_open_killer_fire"></info_portion>
+	<info_portion id="esc_open_lager_fire"></info_portion>
+	<info_portion id="esc_fanat_die"></info_portion>
+	<info_portion id="esc_path_to_lager"></info_portion>
+	<info_portion id="esc_lager_destroyed"></info_portion>
+	<info_portion id="esc_wolf_dead"></info_portion>
+	<info_portion id="esc_assault_to_lager"></info_portion>
+	
+	<!-- Порядок фраз торговца -->
+	<info_portion id="esc_trader_talked_about_zone"></info_portion>
+	<info_portion id="esc_trader_talked_about_me"></info_portion>
+	<info_portion id="esc_trader_talked_about_army"></info_portion>
+	<info_portion id="esc_trader_return"></info_portion>
+
+	<!-- Используется для отладки скрипта -->
+	<info_portion id="esc_trader_monolog_1"></info_portion>
+	<info_portion id="esc_trader_monolog_1_played"></info_portion>
+	<info_portion id="esc_trader_tutorial_choice"></info_portion>
+	<info_portion id="esc_trader_tutorial_choice_played"></info_portion>
+	<info_portion id="esc_trader_experienced"></info_portion>
+	<info_portion id="esc_trader_map_quest_1_played"></info_portion>
+	<info_portion id="esc_trader_newbie"></info_portion>
+	<info_portion id="esc_trader_newbie_course_done"></info_portion>
+	<info_portion id="esc_trader_tutorial_chosen"></info_portion>
+	<info_portion id="esc_trader_can_leave"></info_portion>
+	<info_portion id="esc_trader_direct"></info_portion>
+
+	<!-- вспомогательные в лагере -->
+	<info_portion id="esc_return"></info_portion>
+	<info_portion id="esc_darklab_documents_read"></info_portion>
+	<info_portion id="esc_wolf_thanks_complete"></info_portion>
+	<info_portion id="esc_trader_speak"></info_portion>
+
+	<!-- Приветствия торговца -->
+	<info_portion id="esc_trader_hello_played"></info_portion>
+	<info_portion id="esc_trader_bye_played"></info_portion>
+	
+	<info_portion id="tutorial_volk_acquainted"></info_portion>
+
+	<info_portion id="tutorial_heli_attack"></info_portion>
+	<info_portion id="esc_close_door"></info_portion>
+
+	<!-- infoportions for factory on escape -->
+	<info_portion id="escape_factory_quest"></info_portion>
+	<info_portion id="esc_bandits_assault"></info_portion>
+	<info_portion id="esc_bandits_start"></info_portion>
+	<info_portion id="escape_assault_finished"></info_portion>
+	<info_portion id="esc_kolyan_lost">
+	</info_portion>
+	<info_portion id="esc_kolyan_found"></info_portion>
+	<info_portion id="esc_prison"></info_portion>
+	
+	<!-- infoportions for raid -->
+	<info_portion id="esc_raid1_start"></info_portion>
+
+	<!-- infoportions for blockpost -->
+	<info_portion id="esc_blockpost_alarm">
+		<disable>esc_blockpost_normal</disable>
+	</info_portion>
+	<info_portion id="esc_blockpost_normal">
+		<disable>esc_blockpost_alarm</disable>
+	</info_portion>
+	<info_portion id="esc_commander_die"></info_portion>
+
+	<!-- infoportions for bridge soldiers -->
+	<info_portion id="esc_bridge_pass_on">
+		<disable>esc_bridge_pass_off</disable>
+	</info_portion>
+	<info_portion id="esc_bridge_pass_off">
+		<disable>esc_bridge_pass_on</disable>
+	</info_portion>
+	<info_portion id="esc_bridge_pass_fire"></info_portion>
+
+	<!-- infoportions for restrictor -->
+	<info_portion id="esc_flesh_in_anomaly"></info_portion>
+	<info_portion id="esc_boar_dogs_restrictor"></info_portion>
+
+	<!-- test infoportions -->
+	<info_portion id="test_info_1"></info_portion>
+	<info_portion id="test_info_2"></info_portion>
+	<info_portion id="test_info_3"></info_portion>
+	<info_portion id="test_info_4"></info_portion>
+	<info_portion id="test_info_5"></info_portion>
+	
+	
+	<!-- trader bandits on factory -->
+	<info_portion id="esc_kill_bandits_quest_have">
+	<!--	<task>esc_dinamit_to_volk</task>
+		<article>kill_factory_bandits</article> -->
+	</info_portion>
+	<info_portion id="esc_kill_bandits_quest_kill"></info_portion>
+	<info_portion id="esc_kill_bandits_noquest_kill"></info_portion>
+	<info_portion id="esc_kill_bandits_quest_done"></info_portion>
+	<info_portion id="esc_assault_start"></info_portion>
+	<info_portion id="esc_assault_charge"></info_portion>
+	<info_portion id="esc_heli_go"></info_portion>
+
+	<!-- интересные места -->
+	<info_portion id="esc_tutorial_secret_place">
+	</info_portion>
+	<info_portion id="esc_tutorial_secret_place_found"></info_portion>
+	
+	<!-- труп у аномалии -->
+	<info_portion id="esc_tutorial_dead_novice"></info_portion>
+	
+	
+	<info_portion id="esc_zombie_rise2"></info_portion>
+		
+	<!-- проводник -->
+	<info_portion id="esc_find_doctor_start">
+		<task>doctor_meet</task>
+	</info_portion>
+	<info_portion id="esc_find_doctor_done"></info_portion>
+	
+	<!-- Коррумпированый пост на мосту -->
+	<info_portion id="esc_bridge_soldiers"></info_portion>
+	
+	<info_portion id="esc_dog_spawn"></info_portion>
+
+	<info_portion id="esc_find_railroad_passage_start">
+		<task>find_railroad_passage</task>
+	</info_portion>
+	<info_portion id="esc_find_railroad_passage_find_stalker"></info_portion>
+	<info_portion id="esc_find_railroad_passage_done"></info_portion>
+
+	<info_portion id="esc_tutorial_start"></info_portion>
+	
+	<info_portion id="trader_job">
+		<task>esc_trader_job</task>
+	</info_portion>
+	<info_portion id="esc_fanat_dead"></info_portion>
+	
+	
+</game_information_portions>

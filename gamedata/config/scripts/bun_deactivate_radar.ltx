@@ -1,0 +1,14 @@
+[logic]
+active    = sr_idle@nil %+bar_deactivate_radar_done%
+ 
+[sr_idle@wait]
+on_timer = 1000 | sr_idle@nil
+;on_info = {+bar_deactivate_radar_done} sr_sound_act@psy_sound %=run_cam_effector(radar_stop:2506:false)%
+
+;[sr_sound_act@psy_sound]
+;snd = affects\psy_blackout
+;stereo = true
+;on_signal = sound_end | nil
+
+[sr_idle@nil]
+on_timer = 100 | %+bar_deactivate_radar_done%

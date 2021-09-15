@@ -1,0 +1,35 @@
+<!-- ОПРЕДЕЛЕНИЕ ТЕКСТУР: ПАНЕЛЬ ВВОДА ПАРОЛЕЙ/ОКНА ДИАЛОГОВ-->
+<ui_texture>
+    <file_name>ui\ui_numpad</file_name>
+    <texture id="ui_numpad_lockframe"		x="0" y="0" width="339" height="383"/>		<!-- панель ввода пароля -->
+    <texture id="ui_numpad_key00"			x="339" y="135" width="72" height="45"/>	<!-- кнопка "0" -->
+    <texture id="ui_numpad_key01"			x="339" y="90" width="72" height="45"/>		<!-- кнопка "1" -->
+    <texture id="ui_numpad_key02"			x="411" y="90" width="72" height="45"/>		<!-- кнопка "2" -->
+    <texture id="ui_numpad_key03"			x="483" y="90" width="72" height="45"/>		<!-- кнопка "3" -->
+    <texture id="ui_numpad_key04"			x="339" y="45" width="72" height="45"/>		<!-- кнопка "4" -->
+    <texture id="ui_numpad_key05"			x="411" y="45" width="72" height="45"/>		<!-- кнопка "5" -->
+    <texture id="ui_numpad_key06"			x="483" y="45" width="72" height="45"/>		<!-- кнопка "6" -->
+    <texture id="ui_numpad_key07"			x="339" y="0" width="72" height="45"/>		<!-- кнопка "7" -->
+    <texture id="ui_numpad_key08"			x="411" y="0" width="72" height="45"/>		<!-- кнопка "8" -->
+    <texture id="ui_numpad_key09"			x="483" y="0" width="72" height="45"/>		<!-- кнопка "9" -->
+    <texture id="ui_numpad_key0c"			x="411" y="135" width="72" height="45"/>	<!-- кнопка "очистить" -->
+    <texture id="ui_numpad_key0b"			x="483" y="135" width="72" height="45"/>	<!-- кнопка "назад" -->
+    <texture id="ui_numpad_keyEnter" 		x="339" y="180" width="111" height="45"/>	<!-- кнопка "ок" -->
+    <texture id="ui_numpad_keyCancel"		x="450" y="180" width="111" height="45"/>	<!-- кнопка "отмена" -->
+    <texture id="ui_numpad_void"			x="580" y="0" width="72" height="45"/>		<!-- кнопка пустая -->
+	<texture id="ui_mm_overlay"				x="0" y="626" width="266" height="398"/>	<!-- панель главного меню -->
+	<texture id="ui_talk_dialogue"			x="390" y="264"	width="634" height="760"/>	<!-- диалоговое окно -->
+	<texture id="ui_talk_button_e"			x="770" y="184" width="243" height="24"/>	<!-- кнопка "торговать" большая обычная -->
+	<texture id="ui_talk_button_h"			x="770" y="208" width="243" height="24"/>	<!-- кнопка "торговать" большая подсвеченная -->
+	<texture id="ui_talk_button_t"			x="770" y="231" width="243" height="24"/>	<!-- кнопка "торговать" большая активная -->
+	<texture id="ui_talk_button_d"			x="770" y="160" width="243" height="24"/>	<!-- кнопка "торговать" большая неактивная -->
+	<texture id="ui_item_frame_lt"			x="0" y="501" width="120" height="34"/>		<!-- всплывающее окно описания lt -->
+    <texture id="ui_item_frame_l"			x="0" y="535" width="120" height="21"/>		<!-- всплывающее окно описания l -->
+    <texture id="ui_item_frame_lb"			x="0" y="556" width="120" height="36"/>		<!-- всплывающее окно описания lb -->
+    <texture id="ui_item_frame_b"			x="115" y="556" width="2" height="36"/>		<!-- всплывающее окно описания b -->
+    <texture id="ui_item_frame_rb"			x="120" y="556" width="122" height="36"/>	<!-- всплывающее окно описания rb -->
+    <texture id="ui_item_frame_r"			x="120" y="535" width="122" height="21"/>	<!-- всплывающее окно описания r -->
+    <texture id="ui_item_frame_rt"			x="120" y="501" width="122" height="34"/>	<!-- всплывающее окно описания rt -->
+    <texture id="ui_item_frame_t"			x="115" y="501" width="2" height="34"/>		<!-- всплывающее окно описания t -->
+    <texture id="ui_item_frame_back"		x="128" y="548" width="4" height="4"/>		<!-- всплывающее окно описания back -->
+</ui_texture>

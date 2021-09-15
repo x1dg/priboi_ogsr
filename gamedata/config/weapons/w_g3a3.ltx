@@ -1,0 +1,205 @@
+;;; Rewritten by Panzerdraco for L.U.R.K Mod.
+;;; A line with one or more ";"'s before it indicates a comment, and won't be read by the script.
+
+;-----H&K G3-----;
+;-----Base Setup-----;
+[wpn_g3]:identity_immunities
+$spawn                   	= "weapons\g3"
+$npc                     	= on
+$prefetch 		         	= 8
+scheduled                	= off
+cform                    	= skeleton
+class                    	= WP_LR300
+min_radius               	= 30
+max_radius               	= 100
+
+inv_name				= "H&K G3A3"
+inv_name_short			= "H&K G3A3"
+description				= enc_weapons1_wpn_g3
+
+cost						= 20500; 58500 ;5500
+inv_weight					= 5.0;4.5
+
+hud                      	= wpn_g3_hud
+visual                   	= weapons\g3\wpn_g3.ogf
+
+ef_main_weapon_type			= 2
+ef_weapon_type				= 6
+
+holder_range_modifier		= 1
+holder_fov_modifier			= 1
+
+hand_dependence		 		= 1
+single_handed				= 0
+
+sprint_allowed				= true
+
+slot 			         	= 2
+animation_slot			 	= 2
+
+inv_grid_width     = 6
+inv_grid_height    = 2
+inv_grid_x         = 34 ;9
+inv_grid_y         = 2 ;27
+
+kill_msg_x					= 0
+kill_msg_y					= 28
+kill_msg_width				= 84
+kill_msg_height				= 28
+
+ammo_limit		         	= 210
+ammo_current		     	= 90
+ammo_elapsed		     	= 30
+
+ph_mass						= 5
+
+
+;-----Ballistics, Handling & Accuracy-----;
+hit_power                	= 0.85 ;0.59
+hit_impulse		        	= 80 ; 1
+hit_type 					= fire_wound
+
+fire_distance            	= 500
+bullet_speed				= 780 ;760
+rpm                      	= 600
+
+ammo_mag_size				= 20
+ammo_class					= ammo_7.62x51_fmj, ammo_7.62x51_ap
+fire_modes					= 1
+	
+tri_state_reload			= off
+
+control_inertion_factor		= 1.05f
+
+fire_dispersion_base		= 0.21
+handling_factor				= 1.00
+use_aim_bullet				= true
+time_to_aim					= 0.50
+
+PDM_disp_base 				= 4.00
+PDM_disp_vel_factor 		= 0.75
+PDM_disp_accel_factor 		= 1.75
+PDM_crouch	 				= 0.50
+PDM_crouch_no_acc 			= 0.50
+
+cam_relax_speed        	 	= 4.8
+cam_relax_speed_ai      	= 360
+cam_dispersion         	 	= 0.48
+cam_step_angle_horz			= 0.5
+cam_dispersion_inc			= 0.25
+cam_dispertion_frac			= 0.40
+cam_max_angle				= 18.0
+cam_max_angle_horz			= 9.0
+
+fire_dispersion_condition_factor 	= 2.000
+misfire_probability 				= 0.005
+misfire_condition_k					= 0.05
+condition_shot_dec 					= 0.0002
+
+
+;-----Sights & Attachments-----;
+;--Scope & Sight--
+zoom_enabled				= true
+
+scope_status				= 1;2
+scope_name 				= wpn_addon_scope_susat_g3 ;wpn_addon_scope1
+scope_x 					= 72
+scope_y 					= 1 ;5
+
+scope_zoom_factor	    	= 30;50; 80
+;max_zoom_factor			= 5
+scope_texture				= wpn\scope_acog_g3_new; wpn\wpn_crosshair_acog; wpn\wpn_crosshair_g36
+
+;--Silencer--
+silencer_status				= 0;2
+
+silencer_name  				= wpn_addon_silencer ;wpn_addon_sil_762_ar
+silencer_x 					= 238 ;208
+silencer_y 					= 10
+
+;--Grenade Launcher--
+grenade_launcher_status		= 0
+;grenade_vel				= 75
+;grenade_class				= ammo_m209
+launch_speed				= 75
+
+;grenade_launcher_name 		= wpn_addon_grenade_launcher_m203
+;grenade_launcher_x 		= 118
+;grenade_launcher_y 		= 25
+
+
+;-----Sounds, Particles, Muzzleflash & Miscellaneous-----;
+
+snd_draw			= weapons\G3A3\g3_draw
+snd_holster			= weapons\generic_holster
+snd_shoot			= weapons\G3A3\g3_shoot
+snd_shoot1			= weapons\G3A3\g3_shoot1
+snd_empty			= weapons\gen_empty
+snd_reload			= weapons\G3A3\g3_reload, 0.82, 0.02
+snd_silncer_shot			= weapons\w_ak74_shot_g3 
+
+rpm_empty_click 	 		= 200
+
+light_disabled				= false
+
+light_color					= 1.0,1.0,0.4
+light_range					= 1.0
+light_var_color				= 0.0
+light_var_range				= 0.5
+light_time 					= 0.1
+
+silencer_light_color		= 0.0,0.0,0.0
+silencer_light_range		= 0.00
+silencer_light_var_color	= 0.00
+silencer_light_var_range	= 0.0
+silencer_light_time 		= 0.0
+
+flame_particles				= weapons\generic_weapon05
+smoke_particles				= weapons\generic_shoot_00
+grenade_flame_particles		= weapons\generic_weapon01
+silencer_smoke_particles 	= weapons\generic_shoot_00
+
+shell_point		 			= 0.0, 0.42, 0.08
+shell_dir		 			= 0.0, 1.0, 0.0
+; shell_particles	 			= weapons\arsenal_shells1
+
+normal                   	= 0, 1, 0
+position         	    	= -0.02,-0.353,0.00
+orientation              	= 0.001, 0, 0
+
+direction                	= 0, 0, 1
+
+fire_point               	= 0,0.42,0.61
+
+weapon_remove_time			= 1000
+
+strap_position         		= -0.16,-0.36,0.15
+strap_orientation      		= -10,-5,10
+strap_bone0					= bip01_spine2
+strap_bone1					= bip01_spine1
+
+
+[wpn_g3_hud]
+shell_point          		= 0,0, -0.96
+shell_dir			 		= 0.0, 0.0, 0.0
+
+fire_point               	= 0,0,-0.7
+fire_bone                	= muzzle
+orientation              	= 0, 0, 0
+position                	= 0.10,-0.03,0.01
+visual                   	= weapons\g3\wpn_g3_hud.ogf
+
+anim_idle					= idle
+anim_idle_aim				= idle_aim
+anim_reload					= reload
+anim_draw					= draw
+anim_holster				= holster
+anim_shoot					= shoot
+anim_idle_sprint			= idle_sprint
+
+
+zoom_hide_crosshair			= true
+zoom_rotate_time			= 0.25
+zoom_offset					= -0.10,0.03,-0.11
+zoom_rotate_x				= 0.00
+zoom_rotate_y				= 0.0

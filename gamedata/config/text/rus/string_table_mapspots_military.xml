@@ -1,0 +1,68 @@
+	<!-- barin start -->
+	<string id="mil_dolg_task_report">
+		<text>Поговорить с командиром из Долга</text>
+	</string>
+	<!-- barin end -->
+	<string id="rad_heli_crash_hint">
+		<text>Место крушения</text>
+	</string>	
+	<string id="mil_cap_hint">
+		<text>Поговорить с командиром Барьера</text>
+	</string>
+	<string id="mil_courier_hint1">
+		<text>Следуй за предателем</text>
+	</string>
+	<string id="mil_courier_hint2">
+		<text>Дождись, пока предатель вызовет агента</text>
+	</string>
+	<string id="mil_courier_hint3">
+		<text>Убей мерзавца-предателя</text>
+	</string>
+	<string id="mil_courier_hint4">
+		<text>Убей информатора</text>
+	</string>
+	<string id="mil_crazy_hint">
+		<text>Забрать флешку у сумасшедшего сталкера</text>
+	</string>
+	<string id="mil_dolg_khutor">
+		<text>Хутор Долга</text>
+	</string>
+	<string id="mil_freedom_sniper">
+		<text>Убрать снайпера</text>
+	</string>
+	<string id="mil_hunters_hint1">
+		<text>Поговорить с Угрюмым</text>
+	</string>
+	<string id="mil_hunters_hint2">
+		<text>Вернуться к Скряге</text>
+	</string>
+	<string id="mil_kill_dolg_hint">
+		<text>Уничтожить группу Долга</text>
+	</string>
+	<string id="mil_kill_lukash_hint">
+		<text>Убить Дезика</text>
+	</string>
+	<string id="mil_miser_hint">
+		<text>Убить Скрягу</text>
+	</string>
+	<string id="mil_report_to_max_hint">
+		<text>Доложить Максу</text>
+	</string>
+	<string id="mil_return_to_lukash_hint">
+		<text>Доложить Лукашу</text>
+	</string>
+	<string id="mil_return_to_max_hint">
+		<text>Отдать флешку Максу</text>
+	</string>
+	<string id="mil_rg6_hint1">
+		<text>Найти Повара на базе Свободы</text>
+	</string>
+	<string id="mil_rg6_hint2">
+		<text>Поговорить с Поваром</text>
+	</string>
+	<string id="mil_rg6_hint3">
+		<text>Взять РГ-6 "Бульдог" из схрона в деревне</text>
+	</string>
+	<string id="mil_watertower_hint">
+		<text>Водонапорная башня</text>
+	</string>

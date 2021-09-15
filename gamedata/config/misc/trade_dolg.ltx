@@ -1,0 +1,9 @@
+
+#include "traders\dolg_buy.ltx"
+#include "traders\dolg_stock.ltx"
+#include "traders\dolg_sell.ltx"
+
+[trader]
+buy_condition	= dolg_buy
+sell_condition	= {+priboy_uadz32_squad_found} dolg_sell_aes, dolg_sell
+buy_supplies	= {+priboy_uadz32_squad_found} dolg_stock_aes, dolg_stock

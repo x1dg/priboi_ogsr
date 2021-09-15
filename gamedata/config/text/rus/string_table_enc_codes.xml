@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+
+	<string id="access_code">
+		<text>Код доступа</text>
+	</string>
+	
+	<string id="x18_first_doors_name">
+		<text>X18 код доступа №1</text>
+	</string>
+	
+	<string id="x18_first_doors_descr">
+		<text>X18 код доступа №1: 18746</text>
+	</string>
+	
+	<string id="x18_second_doors_name">
+		<text>X18 код доступа №2</text>
+	</string>
+	
+	<string id="x18_second_doors_descr">
+		<text>X18 код доступа №2: 86195</text>
+	</string>
+	
+	<string id="radar_doors_name">
+		<text>Код доступа убежища в Рыжем Лесу</text>
+	</string>
+	
+	<string id="radar_doors_descr">
+		<text>Код доступа убежища в Рыжем Лесу: 78159736</text>
+	</string>
+	
+	<string id="bunker_first_doors_name">
+		<text>X10 код доступа №1</text>
+	</string>
+	
+	<string id="bunker_first_doors_descr">
+		<text>X10 код доступа №1: 19750208</text>
+	</string>
+	
+	<string id="bunker_second_doors_name">
+		<text>X10 код доступа №2</text>
+	</string>
+	
+	<string id="bunker_second_doors_descr">
+		<text>X10 код доступа №2: 022138</text>
+	</string>
+
+	<string id="top_secret">
+		<text>Секретный Документ</text>
+	</string>
+
+</string_table>

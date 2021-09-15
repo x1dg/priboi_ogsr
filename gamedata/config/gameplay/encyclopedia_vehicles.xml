@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<encyclopedia>
+    <!-- LIST OF ENCYCLOPEDIA Vehicles -->
+
+    <!-------------------------------- Niva ----------------------------->
+
+    <article id="vehicles_niva" name="Lada Niva Military Service" group="Vehicles">
+        <texture x="0" y="0" width="200" height="200">ui\ui_niva_green2</texture>
+        <text>\n\nThe Niva (2121) was Lada's (VAZ/AutoVAZ) first non-Fiat model. Much of its mechanicals are carried over from the Fiat based Lada models, though the body and four-wheel drive system were designed by Lada. Production began in 1977 and still carries through with only minor changes to the engine, rear hatch design, and interior trim levels. \n In basic form, the Niva has a carbureted 1.6-litre overhead cam four-cylinder petrol engine producing 54 kW (72 hp) and 126 N·m (93 ft·lbf), a four- or five-speed manual transmission, and full-time four-wheel drive. There are no hubs and the transfercase can be locked on the fly. The original Niva has a maximum speed of around 130 km/h (80 mph), and can cruise at 90 km/h (56 mph) while consuming petrol at a respectable 8.25 litres/100km (28.5 mpg(US)). Its towing capacity is rated for up to 860 kg (1900 lb).</text>
+    </article>
+
+    <!-------------------------------- Niva2 ----------------------------->
+
+    <article id="vehicles_niva-civil" name="Lada Niva Hospital Service" group="Vehicles">
+        <texture x="0" y="0" width="200" height="200">ui\ui_niva_white2</texture>
+        <text>\n\nThe Niva (2121) was Lada's (VAZ/AutoVAZ) first non-Fiat model. Much of its mechanicals are carried over from the Fiat based Lada models, though the body and four-wheel drive system were designed by Lada. Production began in 1977 and still carries through with only minor changes to the engine, rear hatch design, and interior trim levels. \n In basic form, the Niva has a carbureted 1.6-litre overhead cam four-cylinder petrol engine producing 54 kW (72 hp) and 126 N·m (93 ft·lbf), a four- or five-speed manual transmission, and full-time four-wheel drive. There are no hubs and the transfercase can be locked on the fly. The original Niva has a maximum speed of around 130 km/h (80 mph), and can cruise at 90 km/h (56 mph) while consuming petrol at a respectable 8.25 litres/100km (28.5 mpg(US)). Its towing capacity is rated for up to 860 kg (1900 lb).</text>
+    </article>
+
+    <!-------------------------------- btr-70 ----------------------------->
+
+    <article id="vehicles_btr-70" name="Btr-70 Armored Personell Carrier" group="Vehicles">
+        <texture x="0" y="0" width="200" height="200">ui\ui_btr</texture>
+        <text>\n\nThe BTR-70 is an eight-wheeled armored personnel carrier originally developed during the late 1970s and fielded by the Warsaw Pact and allies beginning in the early 1980s. Introduced as a successor to the earlier BTR-60, it most closely resembles a BTR-60PB. Other improvements include heavier armor plating and tires less prone to puncture. In other respects, the vehicle is very similar to the BTR-60PB, with a more powerful (although still fuel hungry) engine configuration and armament of a primary heavy machine gun and secondary PKT machine gun on a roof mounted turret. \n The vehicle's designers moved the side troop doors. On the vehicle's predecessor, these doors were located above the beltline between the second and third pairs of wheels on both sides of the vehicle. On the BTR-70, the doors are below the beltline between the second and third pairs of wheels. As Soviet doctrine calls for unloading troops from the vehicle while it is in motion, the door location increases the chances that a soldier will be pulled under a wheel and killed. \n Like the vehicle's predecessor it is fully amphibious with minimal preparation. A licensed Romanian copy was designated the TAB-77 and had various improvements and changes to make local production easier, including a better turret and different engines.</text>
+    </article>
+
+
+    
+    <!-------------------------------- mi-24 ----------------------------->
+
+    <article id="vehicles_mi-24" name="Mi-24 Helicopter" group="Vehicles">
+        <texture x="0" y="0" width="200" height="200">ui\ui_mi24_2</texture>
+        <text>\n\nThe core of the aircraft was taken from the Mil Mi-8 (NATO reporting name "Hip"), two top mounted turboshaft engines driving a mid-mounted 17.3 m five-blade main rotor and a three blade tail rotor. The engine positions give the aircraft its distinctive double air intake. The original versions have an angular greenhouse-style cockpit. \n Versions D and above include a characteristic tandem cockpit with a "double bubble" canopy. Other components of the airframe came from the Mi-14 "Haze". Weapon hardpoints are provided by two short mid-mounted wings (which also provide lift), each offering three stations. The load-out mix is mission dependent; they can be tasked with close air support, anti-tank operations, or aerial combat. The body is heavily armored and the titanium rotor blades can resist impacts from .50 caliber (12.7 mm) rounds. The cockpit is overpressurized to protect the crew in NBC conditions. The craft uses a retractable tricycle undercarriage. As a combination gunship and troop transport, the Mi-24 has no direct NATO counterpart. \n While some have compared the UH-1 "Huey" as NATO's direct counterpart to the Mi-24, the helicopter that created the concept of a troop carrying gunship, this is not true. While UH-1 helicopters were used in Vietnam to ferry troops, and were used as gunships, they were not able to do both at the same time. For a UH-1 to be a gunship, the entire passenger area of the helicopter would be stripped to accommodate extra fuel and ammunition, making it useless for troop carrying. The Mi-24 can do both at the same time, and this was greatly exploited by airborne units of the Soviet Army during the 1980-1989 Soviet invasion of Afghanistan.</text>
+    </article>
+
+
+    <!-------------------------------- Kamaz ----------------------------->
+
+    <article id="vehicles_kamaz" name="Kamaz Truck" group="Vehicles">
+        <texture x="0" y="0" width="200" height="200">ui\ui_kamaz</texture>
+        <text>\n\nKamaz (Kamskiy avtomobilny zavod - Kama Automobile Zavod - Kamaz or KAMA Heavy-Duty Truck Production Plant) is a Russian truck manufacturer located in Naberezhnye Chelny, Tatarstan, Russian Federation. KAMAZ assembled their first truck model in February 1976 and now, 30 years later, the heavy duty models are exported to many countries including Eastern Europe, China and North Africa. Its trucks are known for their simple yet functional design, robust appearance and great efficiency. \n In 1969 the Central Committee of the CPSU and Ministerial council of the USSR decided to begin construction of factories for the manufacture of supersized cars in the city of Naberezhnye Chelny. \n Construction actually began on December 13, 1969, but the first KamAZ rolled off the main assembly conveyor on February 16, 1976. In 1987 the line for the manufacture of Oka midget cars (VAZ-1111) was created. The first car rolled out on December 21, 1987. On June 25, 1990 the production association was transformed into an open joint-stock company. On April 14, 1993 a fire destroyed the Factory of engines KamAZ.</text>
+    </article>
+
+    
+    <!-------------------------------- UAZ ----------------------------->
+
+    <article id="vehicles_uaz" name="Uaz Jeep" group="Vehicles">
+        <texture x="0" y="0" width="200" height="200">ui\ui_uaz</texture>
+        <text>\n\nUAZ (Ulyanovsky Avtomobilny Zavod) is an automobile manufacturer based in Ulyanovsk, Russia which makes SUVs, buses, trucks and jeeps. Production started in 1941. \n By mid-60es, the new management of the plant completed development of first original UAZ cars. The GAZ-69 offroad vehicle was replaced by UAZ-469. UAZ-469 was very similar in design to the original Jeep - a sturdy, but not-so-comfortable car that was able to drive in virtually any terrain and was easy to fix. The Uaz-469 reached legendary status for its reliability and off-road ability. The car didn't enter the personal use market until late 80s and was reserved for police forces and paramilitary (its commercially-available analog was produced by LuAZ, which was too close to border to be associated with the military).</text>
+    </article>
+     <!-------------------------------- Zaporozh ----------------------------->
+
+    <article id="vehicles_zaporozh" name="Zaporozhets 926" group="Vehicles">
+        <texture x="0" y="0" width="200" height="200">ui\ui_zaz</texture>
+        <text>\n\nThe ZAZ-965 model was made between 1960 and 1969. Despite speculations that the design was copied from the Fiat 600, ZAZ representatives say the car was an exclusively Soviet design, created by Soviet ZAZ engineers jointly with colleagues from Moscow's NAMI. It was powered by a MeMZ-965, a rear-mounted, aircooled OHV 887 cc V4 engine of partially aluminium design, giving 26 hp (19.4 kW) (27 hp (20.1 kW) in the ZAZ-965A). \n A common (and false) urban legend is that the Zaporozhets's engine was used as a starter motor in Soviet tanks. The base model was manufactured between 1960 and 1963, and the ZAZ-965A, which had the air-intake "ears" removed, between 1962 and 1969. \n Interestingly, the engine looks a bit like the VW aircooled boxer four, except that the two cylinder banks are at a 45 degree angle. As Russian car owners were expected to do much of the servicing themselves, and auto workshops were in short supply anyway, this layout was more practical. Especially if there was four feet of snow.</text>
+    </article>
+
+<!-------------------------------- Moskvich ----------------------------->
+
+    <article id="vehicles_moskvich" name="Moskvich" group="Vehicles">
+        <texture x="0" y="0" width="200" height="200">ui\ui_moskvich</texture>
+        <text>\n\nIn 1929 the construction of Moscow Automotive Plant began with initial production of 24,000 vehicles. In 1941 the plant was evacuated to Ural and the entire production converted for the manufacture of the military equipment at the dawn of World War II. After the war, the Soviet Union brought an entire Opel manufacturing line from Rüsselsheim in Germany. \n A factory called MZMA (Moskovsky Zavod Malolitrazhnykh Avtomobiley, that is, Moscow Compact Car Factory) started in 1947 to manufacture an automobile called Moskvitch 400 based on the Opel Kadett. Further models were developed by Soviet engineers. In 1969, the factory changed name to AZLK (Avtomobilny Zavod imeni Leninskogo Komsomola, which means Youth Communist League Car Factory). \n Moskvitch cars were never meant to be a fashion statement. \n They were sturdy, reliable on substandard roads and were offered at an affordable price. The 1960s and early 1970s were the glory days, when the cars were exported to many countries throughout the world. Demand always exceeded production, so people had to wait a long time for a new car. Until the 1980s all Moskvitch cars were compact rear-wheel drive saloons and estates with solid rear axles suspended by leaf springs.</text>
+    </article>
+
+<!-------------------------------- Tractor ----------------------------->
+
+<article id="vehicles_tr-13" name="Avto Tr40 Tractor" group="Vehicles">
+        <texture x="0" y="0" width="200" height="200">ui\ui_traktor</texture>
+        <text>\n\nThere was no other vehicle that made Stalin feel more proud. This one is an AVTO Belarus T40 series tractor from the 80's... a teenager from the farmland. Don't forget this: "Whatever happens, keep the agriculture in focus"</text>
+    </article>
+
+   
+<!-------------------------------- Zil 131 ----------------------------->
+
+<article id="vehicles_zil-131" name="ZIL-131 Army Truck" group="Vehicles">
+        <texture x="0" y="0" width="200" height="200">ui\ui_zil_131</texture>
+        <text>\n\nThe ZIL-131 is a general purpose 3.5 tons 6x6 army truck, the basic model being a general cargo truck. Variants include a tractor-trailer truck, a dump truck, a fuel truck, and a 6x6 for towing a 4-wheeled powered trailer. The ZIL-131 also serves as a platform for the BM-51 "Prima" rocket launcher, a 50-tube variant of the BM-21 "Grad".\n\n
+The ZIL-131 is part of a family of two trucks sharing identical components by ZIL, which also included the ZIL-130. Both trucks were introduced in 1967. The ZIL-131 6x6 has the same equipment as the GAZ-66 and Ural-375D. Unlike the ZIL-131, the ZIL-130 is intended for civilian use.</text>
+    </article>
+
+   
+<!-------------------------------- Red Autobus ----------------------------->
+
+<article id="vehicles_laz-red" name="Laz-695 Red Autobus" group="Vehicles">
+        <texture x="0" y="0" width="200" height="200">ui\ui_laz_red</texture>
+        <text>\n\nThe Lviv Bus Factory, (L’vivs’ky Avtomobil’ny Zavod, literally "Lviv Automobile Factory"), mostly known under its obsolete name L’vivs’ky Avtobusnyi Zavod (literally "Lviv Bus Factory") is a bus manufacturing company in Lviv, Ukraine. Their brand-name is LAZ, and the company and its products are often referred to with this acronym rather than the full name. It was one of the major bus manufacturers in the Soviet Union and the largest-ever industrial company in the city. Now it is a private, closed joint stock company. Some of its most widely-known products include the 695 city bus and its stretched tourist-oriented version, the 699. ElectroLAZ, the distinctive modern LAZ trolleybus can be seen circulating in several Ukrainian cities.</text>
+    </article>
+
+<!-------------------------------- Blue Autobus ----------------------------->
+
+<article id="vehicles_laz-blue" name="Laz Blue Autobus" group="Vehicles">
+        <texture x="0" y="0" width="200" height="200">ui\ui_laz_blue</texture>
+        <text>\n\nThe Lviv Bus Factory, (L’vivs’ky Avtomobil’ny Zavod, literally "Lviv Automobile Factory"), mostly known under its obsolete name L’vivs’ky Avtobusnyi Zavod (literally "Lviv Bus Factory") is a bus manufacturing company in Lviv, Ukraine. Their brand-name is LAZ, and the company and its products are often referred to with this acronym rather than the full name. It was one of the major bus manufacturers in the Soviet Union and the largest-ever industrial company in the city. Now it is a private, closed joint stock company. Some of its most widely-known products include the 695 city bus and its stretched tourist-oriented version, the 699. ElectroLAZ, the distinctive modern LAZ trolleybus can be seen circulating in several Ukrainian cities.</text>
+    </article>
+
+<!-------------------------------- Lada ----------------------------->
+   
+<article id="vehicles_lada" name="Vaz-2103 Zhiguli" group="Vehicles">
+        <texture x="0" y="0" width="200" height="200">ui\ui_lada</texture>
+        <text>\n\nThe VAZ-2103 is a mid-sized family car, sedan, produced by AvtoVAZ and introduced in 1970. Better known as the Lada outside of its native Russia, it was a localised version of the Fiat 124 tailored for the Soviet and Eastern European market.\n
+Known as the Zhiguli within the Soviet Union, the main differences between the VAZ-2101-2103 and the Fiat 124 are the use of thicker gauge steel for the bodyshell, an overhead camshaft engine (in place of the original Fiat OHV unit), and the use of aluminium drum brakes on the rear wheels in place of disc brakes. Early versions of the car featured a starting handle for cranking the engine manually should the battery go flat in Siberian winter conditions, and an auxiliary fuel pump.\n
+AvtoVAZ were forbidden from selling the car in competing markets alongside Fiat 124; however exports to Western European nations began in 1974 when the 124 was discontinued in favour of Fiat's newer 131 Mirafiori model.</text>
+    </article>
+   
+<!-------------------------------- Zapor 986 ----------------------------->
+
+<article id="vehicles_zaz-986" name="Zaporozhets 968" group="Vehicles">
+        <texture x="0" y="0" width="200" height="200">ui\ui_zaz</texture>
+        <text>\n\nModel ZAZ-966 was made from 1967 to 1974. It had a restyled chassis, no longer resembling the Fiat 600, similar to the German NSU Prinz (it also looks like a Hillman Imp and Chevy Corvair). The engines were slightly updated as well, but the infamous "ears" were back.
+The ZAZ-968 was produced from 1972 to 1980. It featured the newer MeMZ-968 engine, which increased the displacement to 1.2L and the power output to 42 hp (31 kW). The ZAZ-968M had the ears removed and was made from 1979 to 1994.\n
+The 968 was replaced by the heavily updated ZAZ Tavria hatchback, which was quite different from the Zaporozhets, in featuring front wheel drive and a watercooled engine. It has been claimed that the Tavria was based on the Ford Fiesta Mark I, with changes that worsened the design.</text>
+    </article>
+
+<!-------------------------------- ZIL2 ----------------------------->
+
+<article id="vehicles_gaz" name="ZIL-130 Truck" group="Vehicles">
+        <texture x="0" y="0" width="200" height="200">ui\ui_zil_blue</texture>
+        <text>\n\nZIL-130 is a Soviet truck designed and developed by ZIL, Moscow, Russia. Replaced an older model ZIL-164. First prototypes - 1958. Since 1962 in serial production, since 1964 in mass production. One of the most popular cargo trucks in USSR and Russia, in total ZIL made 3,380,000 up to 1994. Since 1995 production moved to the Urals Motor Plant (UamZ) (renamed UamZ-43140)\n
+ZIL-130 became the first ZIL truck painted in civil white and blue colors. Before this model virtually all ZIL trucks were painted in khaki military colors.</text>
+</article>
+
+
+<!-------------------------------- Kamaz ----------------------------->
+
+    <article id="vehicles_kamaz_2" name="Kamaz Truck 2" group="Vehicles">
+        <texture x="0" y="0" width="200" height="200">ui\ui_kamaz</texture>
+        <text>\n\nKamaz (Kamskiy avtomobilny zavod - Kama Automobile Zavod - Kamaz or KAMA Heavy-Duty Truck Production Plant) is a Russian truck manufacturer located in Naberezhnye Chelny, Tatarstan, Russian Federation. KAMAZ assembled their first truck model in February 1976 and now, 30 years later, the heavy duty models are exported to many countries including Eastern Europe, China and North Africa. Its trucks are known for their simple yet functional design, robust appearance and great efficiency. \n In 1969 the Central Committee of the CPSU and Ministerial council of the USSR decided to begin construction of factories for the manufacture of supersized cars in the city of Naberezhnye Chelny. \n Construction actually began on December 13, 1969, but the first KamAZ rolled off the main assembly conveyor on February 16, 1976. In 1987 the line for the manufacture of Oka midget cars (VAZ-1111) was created. The first car rolled out on December 21, 1987. On June 25, 1990 the production association was transformed into an open joint-stock company. On April 14, 1993 a fire destroyed the Factory of engines KamAZ.</text>
+    </article>
+</encyclopedia>
+

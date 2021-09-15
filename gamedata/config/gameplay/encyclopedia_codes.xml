@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<encyclopedia>
+
+	<article id="enc_x18_first_doors" name="x18_first_doors_name" group="access_code">
+		<text>x18_first_doors_descr</text>
+	</article>
+	
+	<article id="enc_x18_second_doors" name="x18_second_doors_name" group="access_code">
+		<text>x18_second_doors_descr</text>
+	</article>
+	
+	<article id="enc_radar_doors" name="radar_doors_name" group="access_code">
+		<text>radar_doors_descr</text>
+	</article>
+	
+	<article id="enc_bunker_first_doors" name="bunker_first_doors_name" group="access_code">
+		<text>bunker_first_doors_descr</text>
+	</article>
+	
+	<article id="enc_bunker_second_doors" name="bunker_second_doors_name" group="access_code">
+		<text>bunker_second_doors_descr</text>
+	</article>
+	
+	<article id="enc_npp_build_doc" name="item_npp_build_name" group="top_secret">
+		<ltx>npp_build_doc</ltx>
+		<text>item_npp_build_desc</text>
+	</article>
+	
+	<article id="enc_quest_case_02" name="item_quest_case_02_name" group="top_secret">
+		<ltx>quest_case_02</ltx>
+		<text>item_quest_case_02_desc</text>
+	</article>
+	
+	<article id="enc_dar_document4" name="item_doc_x18p4_name" group="top_secret">
+		<ltx>dar_document4</ltx>
+		<text>item_doc_x18_desc</text>
+	</article>
+	
+	<article id="enc_esc_doc_secret" name="item_doc_secret_name" group="top_secret">
+		<ltx>esc_doc_secret</ltx>
+		<text>item_doc_secret_desc</text>
+	</article>
+	
+	<article id="enc_che_mutat1_doc" name="item_che_mutat1_name" group="top_secret">
+		<ltx>che_mutat1_doc</ltx>
+		<text>item_che_mutat1_desc</text>
+	</article>
+	
+	<article id="enc_crazy_flash" name="item_flash_crazy_mil_name" group="top_secret">
+		<ltx>crazy_flash</ltx>
+		<text>item_flash_crazy_mil_desc</text>
+	</article>
+	
+	<article id="enc_npp_crash1_doc" name="item_npp_crash1_name" group="top_secret">
+		<ltx>npp_crash1_doc</ltx>
+		<text>item_npp_crash1_desc</text>
+	</article>
+	
+	<article id="enc_kgb_secret_doc" name="item_kgb_secret_name" group="top_secret">
+		<ltx>kgb_secret_doc</ltx>
+		<text>item_kgb_secret_desc</text>
+	</article>
+	
+	<article id="enc_npp_crash3_doc" name="item_npp_crash3_name" group="top_secret">
+		<ltx>npp_crash3_doc</ltx>
+		<text>item_npp_crash3_desc</text>
+	</article>
+	
+	<article id="enc_mil_svoboda_leader_pda" name="item_pda_dezodor_name" group="top_secret">
+		<ltx>mil_svoboda_leader_pda</ltx>
+		<text>item_pda_dezodor_desc</text>
+	</article>
+	
+	<article id="enc_npp_crash2_doc" name="item_npp_crash2_name" group="top_secret">
+		<ltx>npp_crash2_doc</ltx>
+		<text>item_npp_crash2_desc</text>
+	</article>
+	
+	<article id="enc_x18_code_lost" name="item_x18_code_lost_name" group="top_secret">
+		<ltx>x18_code_lost</ltx>
+		<text>item_x18_code_lost_desc</text>
+	</article>
+	
+	<article id="enc_cit_documents" name="item_cit_documents_name" group="top_secret">
+		<ltx>cit_documents</ltx>
+		<text>item_cit_documents_desc</text>
+	</article>
+	
+	<article id="enc_cit_doctors_key" name="cit_doctors_key_name" group="top_secret">
+		<ltx>cit_doctors_key</ltx>
+		<text>cit_doctors_key_desc</text>
+	</article>
+	
+	<article id="enc_kruglov_flash" name="item_detector_yantar_name" group="top_secret">
+		<ltx>kruglov_flash</ltx>
+		<text>item_detector_yantar_desc</text>
+	</article>
+	
+	<article id="enc_gar_uhsf_doc" name="item_gar_uhsf_doc_name" group="top_secret">
+		<ltx>gar_uhsf_doc</ltx>
+		<text>item_gar_uhsf_doc_desc</text>
+	</article>
+	
+	<article id="enc_bar_ecolog_flash" name="item_flash_eco_rost_name" group="top_secret">
+		<ltx>bar_ecolog_flash</ltx>
+		<text>item_flash_eco_rost_desc</text>
+	</article>
+	
+	<article id="enc_gunslinger_flash" name="item_flash_gslinger_agro_name" group="top_secret">
+		<ltx>gunslinger_flash</ltx>
+		<text>item_flash_gslinger_agro_desc</text>
+	</article>
+	
+	<article id="enc_doc_uhsf_secrets" name="item_doc_uhsf_secrets_name" group="top_secret">
+		<ltx>doc_uhsf_secrets</ltx>
+		<text>item_doc_uhsf_secrets_desc</text>
+	</article>
+	
+	<article id="enc_x18_lab_second_code" name="item_x18_lab_second_code_name" group="top_secret">
+		<ltx>x18_lab_second_code</ltx>
+		<text>item_x18_lab_second_code_desc</text>
+	</article>
+	
+	<article id="enc_ghost_doc_uhsf" name="item_ghost_doc_uhsf_name" group="top_secret">
+		<ltx>ghost_doc_uhsf</ltx>
+		<text>item_ghost_doc_uhsf_desc</text>
+	</article>
+	
+	<article id="enc_che_mutat2_doc" name="item_che_mutat2_name" group="top_secret">
+		<ltx>che_mutat2_doc</ltx>
+		<text>item_che_mutat2_desc</text>
+	</article>
+	
+	<article id="enc_sid_doc_last" name="item_sid_doc_last_name" group="top_secret">
+		<ltx>sid_doc_last</ltx>
+		<text>item_sid_doc_last_desc</text>
+	</article>
+	
+	<article id="enc_x18_code_found" name="item_x18_code_found_name" group="top_secret">
+		<ltx>x18_code_found</ltx>
+		<text>item_x18_code_found_desc</text>
+	</article>
+	
+	<article id="enc_lab_x16_documents" name="item_doc_x16_name" group="top_secret">
+		<ltx>lab_x16_documents</ltx>
+		<text>item_doc_x16_desc</text>
+	</article>
+	
+	<article id="enc_che_mutat3_doc" name="item_che_mutat3_name" group="top_secret">
+		<ltx>che_mutat3_doc</ltx>
+		<text>item_che_mutat3_desc</text>
+	</article>
+	
+	<article id="enc_decoder" name="item_decoder_name" group="top_secret">
+		<ltx>decoder</ltx>
+		<text>item_decoder_desc</text>
+	</article>
+	
+	<article id="enc_pri_decoder_documents" name="item_docs_hiden_pri_name" group="top_secret">
+		<ltx>pri_decoder_documents</ltx>
+		<text>item_docs_hiden_pri_desc</text>
+	</article>
+	
+	<article id="enc_mil_convoy_report" name="item_mil_convoy_report_name" group="top_secret">
+		<ltx>mil_convoy_report</ltx>
+		<text>item_mil_convoy_report_desc</text>
+	</article>
+	
+	<article id="enc_gar_stalker_uhsf_info" name="item_gar_stalker_uhsf_info_name" group="top_secret">
+		<ltx>gar_stalker_uhsf_info</ltx>
+		<text>item_gar_stalker_uhsf_info_desc</text>
+	</article>
+	
+	<article id="enc_dar_pass_document" name="item_doc_sid_name" group="top_secret">
+		<ltx>dar_pass_document</ltx>
+		<text>item_doc_sid_desc</text>
+	</article>
+	
+	<article id="enc_sid_letter_ltp" name="item_sid_letter_ltp_name" group="top_secret">
+		<ltx>sid_letter_ltp</ltx>
+		<text>item_sid_letter_ltp_desc</text>
+	</article>
+	
+	<article id="enc_quest_case_01" name="item_case_esc_name" group="top_secret">
+		<ltx>quest_case_01</ltx>
+		<text>item_case_esc_desc</text>
+	</article>
+	
+	<article id="enc_mil_scientist_flash" name="item_mil_scientist_flash_name" group="top_secret">
+		<ltx>mil_scientist_flash</ltx>
+		<text>item_mil_scientist_flash_desc</text>
+	</article>
+
+</encyclopedia>
+   

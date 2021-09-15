@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<!-- ОКНО ТОРГОВЛИ -->
+<window>
+	<!-- Состояние предмета -->
+	<condition_progess_bar x="0" y="0" width="22.4" height="5" animated="1" horz="1" min="0" max="100" pos="1">
+		<min_color color="inv_condition_min"/>
+		<middle_color color="inv_condition_mid"/>
+		<max_color color="inv_condition_max"/>
+		<background width="22.4" height="5" stretch="1">
+			<texture x="0" y="908" width="30" height="5" color="inv_condition_base">ui_inv_shk_itembar</texture>
+		</background>
+		<progress width="22.4" height="5" stretch="1">
+			<texture x="0" y="908" width="30" height="5">ui_inv_shk_itembar</texture>
+		</progress>
+	</condition_progess_bar>
+
+	<!-- Главное окно -->
+	<main x="0" y="0" width="1024" height="768">
+	<auto_static width="128" height="768" stretch="1">
+		<texture width="170" height="768">ui\ui_sidepanels</texture>
+	</auto_static>
+	<auto_static x="895" width="130" height="768" stretch="1">
+		<texture x="171" width="170" height="768">ui\ui_sidepanels</texture>
+	</auto_static>W
+	<auto_static x="128" y="0" width="767.6" height="768" stretch="1">
+		<texture>ui_trade_wnd</texture>
+	</auto_static>
+	</main>
+	<top_background x="134" y="223" width="380" height="118" stretch="1">
+		<texture>ui_trade_wnd_left</texture>
+	</top_background>
+	<bottom_background x="515" y="223" width="380" height="118" stretch="1">
+		<texture>ui_trade_wnd_right</texture>
+	</bottom_background>
+
+	<!-- Иконка ГГ -->
+	<static_icon x="763.5" y="11" width="123.6" height="108"/>
+
+	<!-- Иконка НПС -->
+	<static_icon x="383.5" y="11" width="123.6" height="108"/>
+
+	<!-- ГГ: панель "продать", сумма денег, сетка инвентаря-->
+	<our_bag_static x="510" y="222" width="369" height="506" always_show_scroll="1">
+		<text x="143" y="47" font="letterica18" color="black_4" align="c">st_ui_sell</text>
+	</our_bag_static>
+
+	<our_money_static x="121" y="-126" width="119" height="46">
+		<text align="r" font="graffiti22" color="inv_money" complex_mode="0"/>
+	</our_money_static>
+
+	<dragdrop_list x="8" y="77" width="368" height="429"
+			cell_width = "29.2" cell_height="39" rows_num="12" cols_num="12"
+			group_similar="1" unlimited="1" condition_progress_bar="1"/>
+
+	<!-- НПС: панель "продать", сумма денег, сетка инвентаря-->
+	<others_bag_static x="134" y="222" width="372" height="506" stretch="1" always_show_scroll="1">
+		<text x="137" y="47" font="letterica18" color="black_4" align="c">st_ui_buy</text>
+	</others_bag_static>
+
+	<other_money_static x="117" y="-126" width="119" height="46">
+		<text align="r" font="graffiti22" color="inv_money" complex_mode="0"/>
+	</other_money_static>
+
+	<dragdrop_list x="5" y="77" width="368" height="429"
+			cell_width = "29.2" cell_height="39" rows_num="12" cols_num="12"
+			group_similar="1" unlimited="1" condition_progress_bar="1"/>
+
+	<!-- ГГ: содержимое на продажу-->
+	<static x="519" y="130" width="374" height="128"/>
+	<dragdrop_list x="0" y="0" width="365" height="128"
+			cell_width = "23.9" cell_height="32" rows_num="5" cols_num="15"
+			group_similar="1" unlimited="1" condition_progress_bar="1"/>
+
+	<!-- НПС: содержимое на продажу-->
+	<static x="139" y="130" width="373" height="128"/>
+	<dragdrop_list x="0" y="0" width="365" height="128"
+			cell_width = "23.9" cell_height="32" rows_num="5" cols_num="15"
+			group_similar="1" unlimited="1" condition_progress_bar="1"/>
+
+	<!-- Характеристики ГГ -->
+	<actor_chars>
+		<!-- репутация -->
+		<reputation_caption x="518" y="75" width="153" height="15">
+			<text align="l" font="letterica16" color="inv_rel_caption"/>
+		</reputation_caption>
+		<reputation_static x="600" y="75" width="153" height="15">
+			<text align="r" font="letterica16" color="inv_rel_text"/>
+		</reputation_static>
+	</actor_chars>
+
+	<!-- Цена за хабар -->
+	<price_mt_static x="5" y="139" width="128" height="20">
+		<phrase x="0" y="2000" width="170" font="letterica18" color="inv_tr_money"></phrase>
+		<phrase x="0" y="2000" font="letterica18" color="inv_tr_money"></phrase>
+		<phrase align="l" font="letterica18" color="inv_tr_money"></phrase>
+	</price_mt_static>
+
+	<desc_frame_window/>
+	<desc_static/>
+
+	<!-- Торговать -->
+	<button x="265" y="738" width="240" height="24" accel="kSPACE" highlight_text="1">
+        <texture>ui_big_inventory_button</texture>
+		<sound_t>interface\inv_money</sound_t>
+        <text font="graffiti22" color="grey_5" align="c">ui_st_trade</text>
+		<text_color>
+			<e color="white_1"/>
+			<t color="grey_2"/>
+			<d color="grey_2"/>
+			<h color="black_1"/>
+		</text_color>
+	</button>
+
+	<!-- Уйти -->
+    <button x="514" y="738" width="240" height="24" accel="kX" highlight_text="1">
+        <texture>ui_big_inventory_button</texture>
+        <text font="graffiti22" color="grey_5" align="c">ui_st_leave</text>
+		<text_color>
+			<e color="white_1"/>
+			<t color="grey_2"/>
+			<d color="grey_2"/>
+			<h color="black_1"/>
+		</text_color>
+    </button>
+</window>

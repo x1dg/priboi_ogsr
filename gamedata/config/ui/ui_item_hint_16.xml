@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<!-- ВСПЛЫВАЮЩЕЕ ОКНО ОПИСАНИЯ ПРЕДМЕТОВ -->
+<main>
+	<description x="0" y="0" width="242" height="768">
+		<item_pane x="2" y="2" width="235.3" height="36" stretch="1">
+			<texture color="inv_hint_pane">ui\seq\ui_hint_pane</texture>
+		</item_pane>
+
+		<item_line x="8" y="62" width="223.3" height="1" stretch="1">
+			<texture color="inv_item_line">ui_item_line</texture>
+		</item_line>
+
+		<texture>ui_item_frame</texture>
+
+		<item_name x="-5" y="3" width="250" height="40" complex_mode="1">
+			<text font="letterica18" align="c" vert_align="c" color="inv_item_name">ui_inv_description</text>
+		</item_name>
+
+		<weight x="8" y="38" width="80" height="18">
+			<text  align="l" font="letterica18" color="inv_item_weight"/>
+		</weight>
+
+		<scroll_v x="8" y="56" width="252" height="678"
+				right_ident="0" left_ident="0" top_indent="10" bottom_indent="0"
+				vert_interval="1" always_show_scroll="0"/>
+
+		<list x="0" y="0" width="232" height="100" complex_mode="1">
+			<text font="letterica16" color="inv_item_descr"/>
+		</list>
+
+		<condition x="132" y="38" width="112" height="19" horz="1" min="0" max="100" pos="100">
+			<min_color color="inv_condition_min"/>
+			<middle_color color="inv_condition_mid"/>
+			<max_color color="inv_condition_max"/>
+			<progress x="-15" y="6" heading="1">
+				<texture>ui_scale_statebar</texture>
+			</progress>
+			<background>				
+				<auto_static width="98.9" height="19" stretch="1">
+					<texture>ui_inv_shk_statebar</texture>
+				</auto_static>
+			</background>
+		</condition>
+	</description>
+
+	<properties x="0" y="0" width="290" height="19" complex_mode="1">
+		<line x="0" y="3" width="223.3" height="1" stretch="1">
+			<texture color="inv_item_line">ui_item_line</texture>
+		</line>
+
+		<icon x="1" y="0" width="14.2" height="19" stretch="1"/>
+
+		<label x="19" y="0" width="270" height="19" complex_mode="1">
+			<text y="1" font="letterica16" align="l" vert_align="c"/>
+		</label>
+	</properties>
+	<properties_from_ini x="0" y="0" width="290" height="25"/>
+</main>

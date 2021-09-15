@@ -1,0 +1,194 @@
+[wpn_ak47]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency 	= 
+$spawn                  = "weapons\ak47"					; option for Level Editor
+$npc			 		= on				; option for Level Editor
+$prefetch 		 		= 8
+scheduled               = off              ; option for ALife Simulator
+cform                   = skeleton
+class                   = WP_LR300
+min_radius              = 0
+max_radius              = 50
+description				= enc_weapons1_wpn-ak47
+
+ef_main_weapon_type		= 1 ;2
+ef_weapon_type			= 6
+
+;-----------------------------------------------------------------------------------
+holder_range_modifier	= 1.0		       ; во сколько раз увеличивается eye_range 
+holder_fov_modifier		= 0.7              ; во сколько раз увеличивается eye_fov
+;-----------------------------------------------------------------------------------
+
+
+weapon_class			= assault_rifle
+
+cost					= 14600
+
+ammo_limit		 		= 210
+ammo_current			= 30
+ammo_elapsed		 	= 30
+
+ammo_mag_size		 	= 30
+ammo_class		 		= ammo_7.62x39_fmj, ammo_7.62x39_ap
+fire_modes				= 1, -1
+
+hand_dependence		 	= 1
+single_handed			= 0
+
+inv_name				= wpn-ak47
+inv_name_short			= wpn-ak47
+inv_weight				= 4.3
+
+inv_grid_width			= 5
+inv_grid_height		= 2
+inv_grid_x				= 2
+inv_grid_y				= 39
+
+kill_msg_x			= 72
+kill_msg_y			= 82
+kill_msg_width		= 56
+kill_msg_height		= 23
+
+slot 					= 2		; // secondary
+animation_slot			= 2		; type of the animation that will be used
+
+;-----------------------------------------------------------------------------------
+;params of weapon recoil
+fire_dispersion_base			= 0.03		;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+control_inertion_factor			= 1.25f
+
+;отдача
+cam_relax_speed         		=5;3.5; 0.15		;скорость возврата в исходное положение
+cam_dispersion          		= 0.15		;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc			= 0.3		;увеличениe cam_dispersion с каждым выстрелом
+cam_dispertion_frac			= 0.9		;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
+cam_max_angle				= 10.0	    	;максимальный угол отдачи
+cam_max_angle_horz			= 20.0		;(degree) maximum shot horizontal degree 
+cam_step_angle_horz			= 1.1;1		;(degree) size of step camera moved in horizontal position while shooting
+
+fire_dispersion_condition_factor 	= 5	    	;увеличение дисперсии в процентах при максимальном износе 
+misfire_probability 		= 0.003	;вероятность осечки при максимальном износе 
+misfire_condition_k			= 0.05
+condition_shot_dec 			= 0.0001	;увеличение износа при каждом выстреле
+;-----------------------------------------------------------------------------------
+
+direction               = 0, 0, 1
+
+fire_point             	=  0,0.216,0.638
+flame_particles			= weapons\generic_weapon05
+smoke_particles         = weapons\generic_shoot_00
+
+shell_point		 		= 0,0.216,0.174
+shell_dir		 		= 0.0, 1.0, 0.0
+
+rpm_empty_click 	 	= 200
+
+PDM_disp_base 			= 1.0
+PDM_disp_vel_factor 		= 0.8
+PDM_disp_accel_factor 		= 0.8
+PDM_crouch	 		= 1.0
+PDM_crouch_no_acc 		= 1.0
+
+; ttc
+hit_power        	= 0.95 ;0.7, 0.75, 0.8, 0.75
+hit_impulse		 	= 150
+hit_type 			= fire_wound
+
+fire_distance          	= 500 ;1000
+bullet_speed			= 715 ;920 ;начальная скорость пули
+rpm                     = 600
+; end ttc
+
+use_aim_bullet				= true		;Поддерживается ли первая суппер пуля
+time_to_aim					= 1.0
+
+silencer_hit_power       	= 0.95;0.75
+silencer_hit_impulse	 	= 100 ;150
+silencer_fire_distance   	= 300
+silencer_bullet_speed	 	= 350 ;450
+
+hud                     = wpn_ak47_hud
+normal                  = 0, 1, 0
+position         	    = -0.026,-0.172,0
+orientation             = 0, 0, 0
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+strap_position         		= -0.16,-0.36,0.15			; position (offset) and orientation of the weapon when it is strapped
+strap_orientation      		= -10,-5,10					; (3rd person view in degrees)
+strap_bone0					= bip01_spine2
+strap_bone1					= bip01_spine1
+
+startup_ammo            = 1000
+visual                  = weapons\arsenal\wpn_ak47.ogf
+
+light_color		 		= 0.6,0.5,0.3
+light_range		 		= 5
+light_var_color		 	= 0.05
+light_var_range		 	= 0.1
+light_time 		 		= 0.2
+
+ph_mass			 		= 5
+
+;addons
+scope_status			= 0 ;2
+silencer_status			= 2
+grenade_launcher_status	= 0
+
+scope_name 					= wpn_addon_scope			; section name for the attachable scope
+scope_x 					= 42						; offset in inventory icon
+scope_y 					= 0 ;3
+
+silencer_name  				= wpn_addon_silencer
+silencer_name  				= wpn_addon_silencer
+silencer_x 					= 218
+silencer_y 					= 10 ;13
+
+;silencer_flame_particles 	= weapons\generic_weapon01
+silencer_smoke_particles 	= weapons\generic_shoot_00
+
+silencer_light_color		= 1.0, 0.1, 0.0
+silencer_light_range		= 0.01
+silencer_light_var_color	= 0.05
+silencer_light_var_range	= 0.5
+silencer_light_time 		= 0.2
+
+zoom_enabled			= true
+scope_zoom_factor	    = 55 ;40
+
+;звуки
+snd_draw			= weapons\generic_draw
+snd_holster			= weapons\generic_holster
+snd_shoot			= weapons\ak47_shot
+snd_empty			= weapons\gen_empty, 0.5
+snd_reload			= weapons\ak47_reload
+
+;params when silencer is attached 
+;similar to corresponding params without prefix silencer_
+
+;silencer_flame_particles 	= weapons\generic_weapon01
+silencer_smoke_particles 	= weapons\generic_shoot_00
+
+snd_silncer_shot			= weapons\ak47_silent
+
+[wpn_ak47_hud]
+shell_point          	= 0.00, 0.00, 0.00
+shell_dir		 = 0.0, 0.0, 0.0
+
+fire_point              = 0.110000,-0.005000,-0.014000
+fire_bone               = wpn_body
+orientation             = 0, 0, 0
+position                = 0, 0, 0
+visual                  = weapons\arsenal\wpn_ak47_hud.ogf
+
+anim_idle			= idle
+anim_idle_aim		= idle_aim
+anim_reload			= reload
+anim_draw			= draw
+anim_holster		= holster
+anim_shoot			= shoot
+anim_idle_sprint	= idle_sprint
+
+;смещения HUD для режима приближения
+zoom_offset			= -0.126501,0.044001,-0.130000
+zoom_rotate_x		= -0.000001
+zoom_rotate_y		= 0.000001

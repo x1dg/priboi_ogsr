@@ -1,0 +1,1106 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<!-- ДИАЛОГОВЫЕ ОКНА СООБЩЕНИЙ -->
+<window>
+	<!-- Перейти на другую локацию? -->
+	<message_box_change_level type="yes_no" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="42" stretch="1"><texture>ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_lchanger</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">level_changer_invitation</text>
+		</message_text>
+
+		<button_yes x="202" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_Yes</text>
+		</button_yes>
+
+		<button_no x="384" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_No</text>
+		</button_no>
+	</message_box_change_level>
+
+	<!-- Вы действительно хотите удалить файл? -->
+	<message_box_delete_file_name type="yes_no" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="42" stretch="1"><texture>ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_question</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_mm_delete_existing_file_q</text>
+		</message_text>
+
+		<button_yes x="202" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_Yes</text>
+		</button_yes>
+
+		<button_no x="384" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_No</text>
+		</button_no>
+	</message_box_delete_file_name>
+
+	<!-- Файл с таким именем уже существует. Перезаписать? -->
+	<message_box_file_already_exist type="yes_no" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="42" stretch="1"><texture>ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_warning</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_file_exist_owerwrite_q</text>
+		</message_text>
+
+		<button_yes x="202" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_Yes</text>
+		</button_yes>
+
+		<button_no x="384" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_No</text>
+		</button_no>
+	</message_box_file_already_exist>
+
+	<!-- Имя файла пустое -->
+	<message_box_empty_file_name type="ok" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="1" stretch="1"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_info</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_file_name_is_empty</text>
+		</message_text>
+
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_OK</text>
+		</button_ok>
+	</message_box_empty_file_name>
+
+	<!-- Загрузка игры приведёт к потере не сохранённых данных. Желаете продолжить? -->
+	<message_box_confirm_load_save type="yes_no" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="42" stretch="1"><texture>ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_warning</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_load_game_confirm</text>
+		</message_text>
+
+		<button_yes x="202" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_Yes</text>
+		</button_yes>
+
+		<button_no x="384" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_No</text>
+		</button_no>
+	</message_box_confirm_load_save>
+
+	<!-- Вы действительно хотите покинуть Зону? -->
+	<message_box_quit_game type="quit_game" x="130" y="0" width="768" height="768" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="42" stretch="1"><texture>ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_question</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_want_to_leave_game_q</text>
+		</message_text>
+
+		<button_yes x="202" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_Yes</text>
+		</button_yes>
+
+		<button_no x="384" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_No</text>
+		</button_no>
+	</message_box_quit_game>
+
+	<!-- Действительно ли Вы хотите выйти в Windows? -->
+	<message_box_quit_windows type="quit_windows" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="42" stretch="1"><texture>ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_question</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_mm_quit_windows_message</text>
+		</message_text>
+
+		<button_yes x="202" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_Yes</text>
+		</button_yes>
+
+		<button_no x="384" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_No</text>
+		</button_no>
+	</message_box_quit_windows>
+
+	<!-- Изменения вступят в силу только после перезагрузки игры. -->
+	<message_box_restart_game type="ok" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="1" stretch="1"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_info</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_mm_need_restart</text>
+		</message_text>
+
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_OK</text>
+		</button_ok>
+	</message_box_restart_game>
+
+	<!-- Вы не можете запустить второй тип освещения на Вашем компьютере -->
+	<message_box_check_r2 type="ok" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="1" stretch="1"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_error</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_cant_run_r2</text>
+		</message_text>
+
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_OK</text>
+		</button_ok>
+	</message_box_check_r2>
+
+	<!-- Не совпадает версия сохранённой игры, или сохранённая игра испорчена. -->
+	<message_box_invalid_saved_game type="ok" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="1" stretch="1"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_error</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_invalid_saved_game</text>
+		</message_text>
+
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_OK</text>
+		</button_ok>
+	</message_box_invalid_saved_game>
+
+	<!-- Ошибка -->
+	<message_box_error type="ok" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="1" stretch="1"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_error</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_error</text>
+		</message_text>
+
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<text y="-149" font="letterica18">Btn_OK</text>
+			<texture>ui_message_button</texture>
+		</button_ok>
+	</message_box_error>
+
+	<!-- IP/хост: порт | Пароль-->
+	<message_box_direct_ip type="direct_ip" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="42" stretch="1"><texture>ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_info</texture>
+		</picture>
+
+		<cap_host x="220" y="348" width="112" height="25">
+			<text font="letterica18" vert_align="c">mm_mp_host_port</text>
+		</cap_host>
+		<cap_password x="220" y="380" width="112" height="25">
+			<text font="letterica18" vert_align="c">mm_mp_password</text>
+		</cap_password>
+		<edit_host x="346" y="348" width="210" height="25" max_symb_count="24">
+			<text x="3" font="letterica18" vert_align="c"></text>
+			<texture>ui_linetext_e</texture>
+		</edit_host>
+		<edit_password x="346" y="380" width="210" height="25" password="1" max_symb_count="24">
+			<text x="3" font="letterica18" vert_align="c"></text>
+			<texture>ui_linetext_e</texture>
+		</edit_password>
+
+		<button_yes x="202" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_Yes</text>
+		</button_yes>
+
+		<button_no x="384" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_Cancel</text>
+		</button_no>
+	</message_box_direct_ip>
+
+	<!-- Пароль-->
+	<message_box_password type="password" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="42" stretch="1"><texture>ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_info</texture>
+		</picture>
+
+		<cap_user_password x="200" y="348" width="112" height="25">
+			<text font="letterica18" vert_align="c">mm_mp_userpassword</text>
+		</cap_user_password>
+		<cap_password x="200" y="380" width="112" height="25">
+			<text font="letterica18" vert_align="c">mm_mp_password</text>
+		</cap_password>
+		<edit_user_password x="362" y="348" width="220" height="25" password="1" max_symb_count="20">
+			<text x="3" font="letterica18" vert_align="c"/>
+			<texture>ui_linetext_e</texture>
+		</edit_user_password>
+		<edit_password x="362" y="380" width="220" height="25" password="1" max_symb_count="20">
+			<text x="3" font="letterica18" vert_align="c"></text>
+			<texture>ui_linetext_e</texture>
+		</edit_password>
+
+		<button_yes x="202" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_Yes</text>
+		</button_yes>
+
+		<button_no x="384" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_Cancel</text>
+		</button_no>
+	</message_box_password>
+
+	<!-- Ошибка соединения: неверный хост -->
+	<message_box_invalid_host type="ok" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="1" stretch="1"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_error</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_conn_invalid_host</text>
+		</message_text>
+
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_OK</text>
+		</button_ok>
+	</message_box_invalid_host>
+
+	<!-- Ошибка соединения: неверный пароль -->
+	<message_box_invalid_pass type="ok" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="1" stretch="1"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_error</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_conn_invalid_pass</text>
+		</message_text>
+
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_OK</text>
+		</button_ok>
+	</message_box_invalid_pass>
+
+	<!-- Ошибка соединения: сервер заполнен -->
+	<message_box_session_full type="ok" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="1" stretch="1"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_error</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_conn_sess_full</text>
+		</message_text>
+
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_OK</text>
+		</button_ok>
+	</message_box_session_full>
+
+	<!-- Ошибка соединения: соединение прервано сервером -->
+	<message_box_server_reject type="ok" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="1" stretch="1"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_error</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_conn_rejected_server</text>
+		</message_text>
+
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_OK</text>
+		</button_ok>
+	</message_box_server_reject>
+
+	<!-- Ошибка соединения: Неверный CD-Key -->
+	<message_box_cdkey_invalid type="ok" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="1" stretch="1"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_error</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_conn_cdkey_invalid</text>
+		</message_text>
+
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_OK</text>
+		</button_ok>
+	</message_box_cdkey_invalid>
+
+	<!-- Ошибка соединения: Такой CD-Key уже используется -->
+	<message_box_cdkey_in_use type="ok" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="1" stretch="1"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_error</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_conn_cdkey_in_use</text>
+		</message_text>
+
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_OK</text>
+		</button_ok>
+	</message_box_cdkey_in_use>
+
+	<!-- Ошибка соединения: Ваш CD-Key заблокирован; свяжитесь со службой поддержки -->
+	<message_box_cdkey_disabled type="ok" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="1" stretch="1"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_error</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_conn_cdkey_disabled</text>
+		</message_text>
+
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_OK</text>
+		</button_ok>
+	</message_box_cdkey_disabled>
+
+	<!-- Ошибка соединения: Отличаются версии -->
+	<message_box_different_version type="ok" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="1" stretch="1"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_error</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_conn_version_differs</text>
+		</message_text>
+
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_OK</text>
+		</button_ok>
+	</message_box_different_version>
+
+	<!-- Онлайн услуги S.T.A.L.K.E.R. недоступны. -->
+	<message_box_gs_service_not_available type="ok" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="1" stretch="1"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_error</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_err_gs_not_available</text>
+		</message_text>
+
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_OK</text>
+		</button_ok>
+	</message_box_gs_service_not_available>
+
+	<!-- Невозможно присоединиться к мастер-серверу -->
+	<message_box_sb_master_server_connect_failed type="ok" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="1" stretch="1"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_error</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_err_sb_master_server_conn_fail</text>
+		</message_text>
+
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_OK</text>
+		</button_ok>
+	</message_box_sb_master_server_connect_failed>
+
+	<!-- Доступен новый патч. Хотите загрузить его сейчас? -->
+	<msg_box_new_patch type="yes_no" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="42" stretch="1"><texture>ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_question</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_conn_new_patch</text>
+		</message_text>
+
+		<button_yes x="202" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_Yes</text>
+		</button_yes>
+
+		<button_no x="384" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_No</text>
+		</button_no>
+	</msg_box_new_patch>
+
+	<!-- Невозможно скачать патч. -->
+	<msg_box_patch_download_error type="ok" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="1" stretch="1"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_error</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_patch_download_error</text>
+		</message_text>
+
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_OK</text>
+		</button_ok>
+	</msg_box_patch_download_error>
+
+	<!-- Патч успешно скачан. Установить? -->
+	<msg_box_patch_download_success type="yes_no" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="42" stretch="1"><texture>ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_question</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_patch_download_success</text>
+		</message_text>
+
+		<button_yes x="202" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_Yes</text>
+		</button_yes>
+
+		<button_no x="384" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_No</text>
+		</button_no>
+	</msg_box_patch_download_success>
+
+	<!-- Нет новых патчей -->
+	<msg_box_no_new_patch type="ok" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="1" stretch="1"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_info</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_conn_no_new_patch</text>
+		</message_text>
+
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<text y="-149" font="letterica18">Btn_OK</text>
+			<texture>ui_message_button</texture>
+		</button_ok>
+	</msg_box_no_new_patch>
+
+	<!-- Голосование отключено -->
+	<cant_vote type="ok" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="1" stretch="1"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_info</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_voting_disabled</text>
+		</message_text>
+
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<text y="-149" font="letterica18">Btn_OK</text>
+			<texture>ui_message_button</texture>
+		</button_ok>
+	</cant_vote>
+
+	<!-- Пожалуйста, выберите хотя бы одну карту -->
+	<select_map type="ok" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="1" stretch="1"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_info</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_select_one_map</text>
+		</message_text>
+
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<text y="-149" font="letterica18">Btn_OK</text>
+			<texture>ui_message_button</texture>
+		</button_ok>
+	</select_map>
+
+	<!-- You can buy a spawn for 1000 $. Press Yes to pay -->
+	<message_box_buy_spawn type="yes_no" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="42" stretch="1"><texture>ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_info</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">You can buy a spawn for 1000 $. Press Yes to pay</text>
+		</message_text>
+
+		<button_yes x="202" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_Yes</text>
+		</button_yes>
+
+		<button_no x="384" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<texture>ui_message_button</texture>
+			<text y="-149" font="letterica18">Btn_No</text>
+		</button_no>
+	</message_box_buy_spawn>
+
+	<!-- Соединение с мастер-сервером. -->
+	<msg_box_connect_to_master_server type="ok" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="1" stretch="1"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_info</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_connecting_to_masterserver</text>
+		</message_text>
+
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<text y="-149" font="letterica18">ui_mm_cancel</text>
+			<texture>ui_message_button</texture>
+		</button_ok>
+	</msg_box_connect_to_master_server>
+
+	<!-- Отказано мастер-сервером. -->
+	<msg_box_kicked_by_server type="ok" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="1" stretch="1"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_error</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_kicked_by_server</text>
+		</message_text>
+
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<text y="-149" font="letterica18">Btn_OK</text>
+			<texture>ui_message_button</texture>
+		</button_ok>
+	</msg_box_kicked_by_server>
+
+	<!-- Ошибка загрузки. -->
+	<msg_box_error_loading type="ok" x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="150">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="150">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="-130" y="0" width="1154" height="768" stretch="1"><texture>ui\ui_msg_wnd</texture></auto_static>
+		<auto_static x="202" y="430" width="376" height="1" stretch="1"><texture x="224" y="122" width="376" height="1">ui_message_frame</texture></auto_static>
+		<picture x="352" y="238" width="59.9" height="80" stretch="1">
+			<texture>ui_message_error</texture>
+		</picture>
+
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_st_error_loading</text>
+		</message_text>
+
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<text y="-149" font="letterica18">Btn_OK</text>
+			<texture>ui_message_button</texture>
+		</button_ok>
+	</msg_box_error_loading>
+
+	<!-- Ремкоплекты -->
+	<message_box_out_of_item type="ok" x="0" y="0" width="1024" height="768" stretch="1">
+		<texture></texture>
+		<picture><texture></texture></picture>
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_remkit_out_of_item</text>
+		</message_text>
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<text y="-149" font="letterica18">ui_st_btn_ok</text>
+			<texture>ui_message_button</texture>
+		</button_ok>
+	</message_box_out_of_item>
+
+	<message_box_select_item type="ok" x="173" y="256" width="677" height="255" stretch="1">
+		<texture></texture>
+		<picture><texture></texture></picture>
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_remkit_select_item</text>
+		</message_text>
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<text y="-149" font="letterica18">ui_st_btn_ok</text>
+			<texture>ui_message_button</texture>
+		</button_ok>
+	</message_box_select_item>
+
+	<message_box_invalid_item type="ok" x="0" y="0" width="1024" height="768" stretch="1">
+		<texture></texture>
+		<picture><texture></texture></picture>
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_remkit_invalid_item</text>
+		</message_text>
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<text y="-149" font="letterica18">ui_st_btn_ok</text>
+			<texture>ui_message_button</texture>
+		</button_ok>
+	</message_box_invalid_item>
+
+	<message_box_item_not_repaireble type="ok" x="0" y="0" width="1024" height="768" stretch="1">
+		<texture></texture>
+		<picture><texture></texture></picture>
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_remkit_item_not_repaireble</text>
+		</message_text>
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<text y="-149" font="letterica18">ui_st_btn_ok</text>
+			<texture>ui_message_button</texture>
+		</button_ok>
+	</message_box_item_not_repaireble>
+
+	<message_box_item_not_wanted type="ok" x="0" y="0" width="1024" height="768" stretch="1">
+		<texture></texture>
+		<picture><texture></texture></picture>
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_remkit_item_not_wanted</text>
+		</message_text>
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<text y="-149" font="letterica18">ui_st_btn_ok</text>
+			<texture>ui_message_button</texture>
+		</button_ok>
+	</message_box_item_not_wanted>
+
+	<message_box_repair_success type="ok" x="0" y="0" width="1024" height="768" stretch="1">
+		<texture></texture>
+		<picture><texture></texture></picture>
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_remkit_repair_success</text>
+		</message_text>
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<text y="-149" font="letterica18">ui_st_btn_ok</text>
+			<texture>ui_message_button</texture>
+		</button_ok>
+	</message_box_repair_success>
+
+	<message_box_repair_without_changes type="ok" x="0" y="0" width="1024" height="768" stretch="1">
+		<texture></texture>
+		<picture><texture></texture></picture>
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_remkit_repair_without_changes</text>
+		</message_text>
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<text y="-149" font="letterica18">ui_st_btn_ok</text>
+			<texture>ui_message_button</texture>
+		</button_ok>
+	</message_box_repair_without_changes>
+
+	<message_box_repair_failure type="ok" x="0" y="0" width="1024" height="768" stretch="1">
+		<texture></texture>
+		<picture><texture></texture></picture>
+		<message_text x="94" y="296" width="577" height="150" complex_mode="1">
+			<text align="c" vert_align="c" font="letterica18">ui_remkit_repair_failure</text>
+		</message_text>
+		<button_ok x="290" y="432" width="182" height="337" check_mode="0">
+			<sound_h>device\pda\menu_button_h</sound_h>
+			<sound_t>device\pda\menu_button_t</sound_t>
+			<text y="-149" font="letterica18">ui_st_btn_ok</text>
+			<texture>ui_message_button</texture>
+		</button_ok>
+	</message_box_repair_failure>
+</window>

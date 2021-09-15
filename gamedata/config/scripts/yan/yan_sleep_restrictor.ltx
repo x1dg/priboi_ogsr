@@ -1,0 +1,20 @@
+[logic]
+active = sr_idle@1
+
+[sr_idle@1]
+on_timer = 1000 | sr_idle@2_1
+
+[sr_idle@2_1]
+on_timer = 3000 | sr_idle@2_2
+
+[sr_idle@2_2]
+on_timer = 2500 | sr_idle@2 
+
+[sr_idle@2]
+on_timer = 15000 | sr_idle@2_3
+
+[sr_idle@2_3]
+on_timer = 3000 | sr_idle@3 
+
+[sr_idle@3]
+on_timer = 7000 | nil 

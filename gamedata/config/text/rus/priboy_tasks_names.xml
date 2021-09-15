@@ -1,0 +1,155 @@
+<!-- Priboy tasks names and titles -->
+<!-- by barin aka pepe_84 -->
+<!-- last edited: 28.12.2007 -->
+
+<string id="priboy_rad_heli_crash">
+	<text>Спасти учёных</text>
+</string>
+
+<string id="priboy_heli_crash">
+	<text>Исследовать место крушения вертолёта</text>
+</string>
+
+<string id="priboy_assault_agro_mercs">
+	<text>Зачистить НИИ Агропром от наёмников</text>
+</string>
+
+<string id="priboy_assault_monolith_control">
+	<text>Взять штурмом Центр Управления Монолитом</text>
+</string>
+
+<string id="priboy_eliminate_sarcophagus">
+	<text>Подавить сопротвление в Саркофаге</text>
+</string>
+
+<string id="priboy_find_uadz32_squad">
+	<text>Разыщи пропавшую нруппу спецназа ДЗ-32</text>
+</string>
+
+<string id="priboy_talk_to_esc_commanders">
+	<text>Пообщаться с начальником Кордона</text>
+</string>
+
+<string id="priboy_bring_vodka">
+	<text>Принести 20 бутылок водки</text>
+</string>
+
+<string id="priboy_help_wounded">
+	<text>Помочь раненому сталкеру</text>
+</string>
+
+<string id="priboy_help_wounded_stalker">
+	<text>Найти похищенные документы</text>
+</string>
+
+<string id="priboy_find_cnpp_blueprints">
+	<text>Найти чертежи ЧАЭС</text>
+</string>
+
+<string id="priboy_find_cnpp_accident_report_1">
+	<text>Найти Доклад об Аварии на ЧАЭС №1</text>
+</string>
+
+<string id="priboy_find_cnpp_accident_report_2">
+	<text>Найти Доклад об Аварии на ЧАЭС №2</text>
+</string>
+
+<string id="priboy_find_cnpp_accident_report_3">
+	<text>Найти Доклад об Аварии на ЧАЭС №3</text>
+</string>
+
+<string id="priboy_find_mutations_report_1">
+	<text>Найти Отчет о Мутациях №1</text>
+</string>
+
+<string id="priboy_find_mutations_report_2">
+	<text>Найти Отчет о Мутациях №2</text>
+</string>
+
+<string id="priboy_find_mutations_report_3">
+	<text>Найти Отчёт о Мутациях №3</text>
+</string>
+
+<string id="priboy_find_deadcity_docs_1">
+	<text>Найти Документы Мёртвого Города №1</text>
+</string>
+
+<string id="priboy_find_deadcity_docs_2">
+	<text>Найти Документы Мёртвого Города №2</text>
+</string>
+
+<string id="priboy_find_uhsf_docs_1">
+	<text>Найти документы UHSF №1</text>
+</string>
+
+<string id="priboy_find_uhsf_docs_2">
+	<text>Найти документы UHSF №2</text>
+</string>
+
+<string id="priboy_find_uhsf_accident_report">
+	<text>Найти доклад UHSF об аварии</text>
+</string>
+
+<string id="priboy_find_docs_pendrive">
+	<text>Найти флешку Доктора</text>
+</string>
+
+<string id="priboy_find_kruglov_pendrive">
+	<text>Найти специальный КПК с детектором</text>
+</string>
+
+<string id="priboy_find_ghost_memo">
+	<text>Найти записки Призрака</text>
+</string>
+
+<string id="priboy_find_kgb_docs">
+	<text>Найти Секретные документы КГБ</text>
+</string>
+
+<string id="priboy_find_crazy_flash">
+	<text>Найти флешку Чокнутого</text>
+</string>
+
+<string id="priboy_find_dezik_key">
+	<text>Найти ключ Дезика</text>
+</string>
+
+<string id="priboy_find_dezik_pda">
+	<text>Найти КПК Дезика Лохнара</text>
+</string>
+
+<string id="priboy_find_strelok_pendrive">
+	<text>Найти флешку Стрелка</text>
+</string>
+
+<string id="priboy_find_sid_memo">
+	<text>Найти записи Сидоровича</text>
+</string>
+
+<string id="priboy_find_decoder">
+	<text>Найти Декодер</text>
+</string>
+
+<string id="priboy_find_pripyat_docs">
+	<text>Найти документы из гостиницы в Припяти</text>
+</string>
+
+<string id="priboy_find_x16_docs">
+	<text>Найти документы из лаборатории X16</text>
+</string>
+
+<string id="priboy_find_genetic_book">
+	<text>Найти книгу о генетических исследованиях</text>
+</string>
+
+<string id="priboy_find_x18_code_1">
+	<text>Найти код лаборатории X18 №1</text>
+</string>
+
+<string id="priboy_find_x18_code_2">
+	<text>Найти код лаборатории X18 №2</text>
+</string>
+
+<string id="priboy_find_x18_code_3">
+	<text>Найти код доступа к лаборатории X18</text>
+</string>

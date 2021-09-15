@@ -1,0 +1,60 @@
+<!-- barin start -->
+	<string id="esc_kuznetsov_mapspot">
+		<text>Майор Кузнецов</text>
+	</string>
+	<string id="esc_blokpost_commander_mapspot">
+		<text>Командир Блокпоста</text>
+	</string>
+	<string id="esc_buddy_mapspot">
+		<text>Чувак</text>
+	</string>
+<!-- barin end -->
+
+	<string id="blokpost_case">
+		<text>Кейс с документами</text>
+	</string>
+	<string id="esc_fox">
+		<text>Раненый Лис.</text>
+	</string>
+	<string id="esc_mill">
+		<text>Заброшенная фабрика. Последний раз пропавшего братка видели там.</text>
+	</string>
+	<string id="escape_trader">
+		<text>Торговец.</text>
+	</string>
+	<string id="factory_bandits">
+		<text>Бандиты на фабрике.</text>
+	</string>
+	<string id="killers_team">
+		<text>Неизвестная группа наёмников.</text>
+	</string>
+	<string id="novice_leader">
+		<text>Лидер лагеря новичков.</text>
+	</string>
+	<string id="soldiers_bridge">
+		<text>Военный блокпост под разрушенным мостом.</text>
+	</string>
+	<string id="tutorial_artefact">
+		<text>Артефакт.</text>
+	</string>
+	<string id="tutorial_bandits">
+		<text>Бандиты, похитившие нашего разведчика.</text>
+	</string>
+	<string id="tutorial_secret">
+		<text>Тайник погибшего сталкера.</text>
+	</string>
+	<string id="tutorial_secret_place1">
+		<text>Тайник погибшего сталкера.</text>
+	</string>
+	<string id="tutorial_secret_shustryi">
+		<text>Тайник Шустрого.</text>
+	</string>
+	<string id="tutorial_wounded">
+		<text>Шустрый, пленный.</text>
+	</string>
+	<string id="volk">
+		<text>Волк, лидер лагеря новичков.</text>
+	</string>
+	<string id="wolfs_rangers">
+		<text>Разведчики Волка.</text>
+	</string>

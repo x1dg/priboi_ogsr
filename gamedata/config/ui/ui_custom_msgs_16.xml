@@ -1,0 +1,422 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<!-- ПОЛЬЗОВАТЕЛЬСКИЙ ХУД -->
+<header>
+	<!-- Таймер -->
+  	<hud_timer  x="395" y="3" width="236" height="60" stretch="1">
+        <text x="-1" y="27" font="graffiti32" color="hud_timer" align="c"/>
+        <texture>ui_hud_frame_clock</texture>
+		<auto_static x="83" y="28" width="70" height="27" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="1" la_text="0" la_alpha="1">
+			<texture color="hud_timer_flash">ui_hud_frame_flash</texture>
+		</auto_static>
+    </hud_timer>
+	<hud_timer_text x="338" y="5" width="350" height="18">
+		<text font="letterica16" color="hud_timer_name" align="c"/>
+	</hud_timer_text>
+
+	<!-- Часы на миникарте -->
+    <hud_show_time  x="-26" y="12" width="98" height="19" complex_mode="1">
+       <text align="c" font="letterica16" color="hud_game_time"/>
+    </hud_show_time>
+
+	<hud_save_warning x="256" y="200" width="512" height="200" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<text x="0" y="0" font="letterica18" color="red" align="c" complex_mode="1"/>
+	</hud_save_warning>
+
+	<!-- Главное задание -->
+	<main_task x="358" y="80" width="308.8" height="52" complex_mode="1" stretch="1" light_anim="buy_menu_info" la_cyclic="0" la_texture="1" la_text="1" la_alpha="1">
+		<texture>ui_hud_frame_task</texture>
+		<text font="letterica18" color="hud_main_task" align="c" vert_align="c"/>
+	</main_task>
+	
+	<!-- Активация функций -->
+	<func_task  x="358" y="80" width="308.8" height="52" stretch="1" light_anim="buy_menu_info" la_cyclic="0" la_texture="1" la_text="1" la_alpha="1" ttl="5">
+		<texture>ui_hud_frame_task</texture>
+		<text font="letterica18" color="hud_main_task" align="c" vert_align="c"/>
+	</func_task>
+
+	<!-- Использовано -->
+	<item_used  x="110" y="686" width="800" height="30">
+		<text font="letterica18" color="hud_used_item" align="c"/>
+	</item_used>
+	
+	<!-- Использовано из быстрого слота -->
+	<slot_used x="110" y="686" width="800" height="30" ttl="3">
+		<text font="letterica18" color="hud_used_item" align="c"/>
+	</slot_used>
+
+	<!-- Игра сохранена -->
+	<game_saved  x="110" y="738" width="800" height="30">
+		<text font="letterica18" color="hud_saved_game" align="c"/>
+	</game_saved>
+
+	<!-- Автосохранение... -->
+	<autosave  x="110" y="738" width="800" height="30">
+		<text font="letterica18" color="hud_autosave" align="c">st_autosave</text>
+	</autosave>
+
+	<!-- Недостаточно денег -->
+	<not_enough_money_mine  x="515" y="-10" width="400" height="768">
+		<auto_static x="0" y="0" width="373" height="746" stretch="1" light_anim="ui_btn_hint" la_cyclic="0" la_texture="1">
+			<texture>ui_shadow_box</texture>
+		</auto_static>
+		<auto_static a="128" x="159" y="334" width="62.2" height="47" stretch="1">
+			<texture>ui_iconsTotal_found_money</texture>
+		</auto_static>
+		<texture/>
+		<text x="-9" y="392" font="letterica18" color="white_2" align="c" light_anim="ui_btn_hint" la_cyclic="0" la_text="1" la_alpha="1">st_not_enough_money</text>
+	</not_enough_money_mine>
+
+	<!-- У НПС недостаточно денег -->
+	<not_enough_money_other  x="134" y="-10" width="400" height="768">
+		<auto_static x="0" y="0" width="373" height="746" stretch="1" light_anim="ui_btn_hint" la_cyclic="0" la_texture="1">
+			<texture>ui_shadow_box</texture>
+		</auto_static>
+		<auto_static a="128" x="162" y="334" width="62.2" height="47" stretch="1">
+			<texture>ui_iconsTotal_found_money</texture>
+		</auto_static>
+		<texture/>
+		<text x="-7" y="392" font="letterica18" color="white_2" align="c" light_anim="ui_btn_hint" la_cyclic="0" la_text="1" la_alpha="1">st_not_enough_money_npc</text>
+	</not_enough_money_other>
+
+	<!-- Оружие заклинило. Нужно перезарядить -->
+	<gun_jammed x="82" y="204" width="56.9" height="76" stretch="1" ttl="3">
+		<texture color="hud_hazard_gun">ui\seq\ui_underlayer_hazard</texture>
+		<auto_static x="13.5" y="17" width="29.9" height="40" stretch="1">
+			<texture color="hud_hazard_gun">ui_hud_hazard_gun_jammed</texture>
+		</auto_static>
+		<text color="transparent">gun_jammed</text>
+	</gun_jammed>
+
+	<!-- Вы слишком истощены, чтобы двигаться -->
+	<cant_walk x="42" y="204" width="56.9" height="76" stretch="1" ttl="3">
+		<texture color="hud_hazard_walk">ui\seq\ui_underlayer_hazard</texture>
+		<auto_static x="13.5" y="17" width="29.9" height="40" stretch="1">
+			<texture color="hud_hazard_walk">ui_hud_hazard_cant_walk</texture>
+		</auto_static>
+		<text color="transparent">cant_walk</text>
+	</cant_walk>
+
+	<!-- Вы слишком перегружены, чтобы двигаться -->
+	<cant_walk_weight x="42" y="204" width="56.9" height="76" stretch="1" ttl="3">
+		<texture color="hud_hazard_weight">ui\seq\ui_underlayer_hazard</texture>
+		<auto_static x="13.5" y="17" width="29.9" height="40" stretch="1">
+			<texture color="hud_hazard_weight">ui_hud_hazard_cant_walk_weight</texture>
+		</auto_static>
+		<text color="transparent">cant_walk_weight</text>
+	</cant_walk_weight>
+
+	<!-- Пси-излучение -->
+	<cs_psy_danger x="122" y="204" width="56.9" height="76" stretch="1">
+		<texture color="hud_hazard_psi">ui\seq\ui_underlayer_hazard</texture>
+		<auto_static x="13.5" y="17" width="29.9" height="40" stretch="1">
+			<texture color="hud_hazard_psi">ui_hud_hazard_psi_area</texture>
+		</auto_static>
+		<text color="transparent"/>
+	</cs_psy_danger>
+
+	<!-- Высокая радиация -->
+	<cs_radiation_danger x="2" y="204" width="56.9" height="76" stretch="1">
+		<texture color="hud_hazard_radiation">ui\seq\ui_underlayer_hazard</texture>
+		<auto_static x="13.5" y="17" width="29.9" height="40" stretch="1">
+			<texture color="hud_hazard_radiation">ui_hud_hazard_radiation_area</texture>
+		</auto_static>
+		<text color="transparent"/>
+	</cs_radiation_danger>
+
+	<!-- Отладочная информация -->
+	<cs_debug  x="16" y="234" width="600" height="100" complex_mode="1">
+		<text font="letterica16" color="hud_debug" align="l"/>
+	</cs_debug>
+
+	<!-- Work in progress -->
+	<cs_demo_play x="140" y="685" width="600" height="50" complex_mode="1" stretch="1" light_anim="" la_cyclic="1" la_texture="1" la_alpha="1">
+		<text font="letterica18" color="hud_debug" align="l"/>
+	</cs_demo_play>
+	
+	<!-- Шкала жизни врага -->
+	<cs_enemy_health x="782" y="20" width="226.4" height="36" stretch="1">
+		<text x="0" y="3" width="302" height="17" font="letterica16" color="hud_enemy_name" align="c"/>
+		<texture>ui_hud_enemy_frame</texture>
+		<enemy_health x="3" y="23" width="220.4" height="9" stretch="1" horz="1" min="0" max="100">
+			<progress width="220.4" height="9" stretch="1">
+				<texture color="hud_scale_enemy">ui_hud_enemy_progress</texture>
+			</progress>
+		</enemy_health>
+	</cs_enemy_health>
+
+	<!-- Удары контролера -->
+	<controller_fx x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>act\act_controller_hit</texture>
+	</controller_fx>
+
+	<controller_fx2 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>act\act_controller_hit1</texture>
+	</controller_fx2>
+
+	<!-- Повреждение от монстров -->
+	<monster_claws x="512" y="150" width="512" height="512" alignment="c" stretch="1" heading="1" light_anim="monster_claws" la_alpha="1" la_cyclic="0">
+		<texture>controller\controller_blood_02</texture>
+	</monster_claws>
+
+	<!-- Интро -->
+	<sleep_001 x="20" y="20" width="984" height="728">
+		<texture x="0" y="0" width="984" height="728">car\trabantnoise</texture>
+	</sleep_001>
+
+	<!-- Пинг в мультиплеере -->
+	<max_ping_warn_1 x="512" y="300" width="360" height="64" alignment="c" ttl="8">
+		<texture x="0" y="0" width="360" height="64" a="30">ui\ui_cm_connection_error</texture>
+		<text x="80" y="50" font="graffiti32" color="white_2"/>
+	</max_ping_warn_1>
+	<max_ping_warn_2 x="512" y="300" width="360" height="64" alignment="c" ttl="8">
+		<texture x="0" y="0" width="360" height="64" a="64">ui\ui_cm_connection_error</texture>
+		<text x="80" y="50" font="graffiti32" color="white_2"/>
+	</max_ping_warn_2>
+	<max_ping_warn_3 x="512" y="300" width="360" height="64" alignment="c" ttl="8">
+		<texture x="0" y="0" width="360" height="64" a="160">ui\ui_cm_connection_error</texture>
+		<text x="80" y="50" font="graffiti32" color="white_2"/>
+	</max_ping_warn_3>
+	<max_ping_warn_4 x="512" y="300" width="360" height="64" alignment="c" ttl="8">
+		<texture x="0" y="0" width="360" height="64" a="255">ui\ui_cm_connection_error</texture>
+		<text x="80" y="50" font="graffiti32" color="white_2"/>
+	</max_ping_warn_4>
+	
+	<!-- Вес -->
+	<inv_weight_static x="990" y="600" width="26.8" height="35" stretch="1">
+		<auto_static x="-6" y="-8" width="36.3" height="50" stretch="1">
+			<texture color="hud_layer_weight">ui\seq\ui_underlayer_weight</texture>
+		</auto_static>
+		<texture>ui_hud_icon_weight</texture>
+	</inv_weight_static>
+
+	<!-- Быстрые слоты -->
+	<quick_slot0 x="10" y="719" width="29.9" height="40" stretch="1">
+	<texture>ui\ui_icon_equipment</texture>
+	    <counter x="-4" y="-2" width="25" height="15" stretch="1">
+	        <texture a="136">ui_fast_use_count_back</texture>
+	        <text x="-0.5" y="1" color="hud_slot_count" font="letterica16" align="c" vert_align="c"/>
+	    </counter>
+        <auto_frameline x="16" y="34" width="21" height="23">
+			<texture>null</texture>
+        </auto_frameline>
+	</quick_slot0>
+
+	<quick_slot1 x="51" y="719" width="29.9" height="40" stretch="1">
+	<texture>ui\ui_icon_equipment</texture>
+	    <counter x="-4" y="-2" width="25" height="15" stretch="1">
+	        <texture a="136">ui_fast_use_count_back</texture>
+	        <text x="-0.5" y="1" color="hud_slot_count" font="letterica16" align="c" vert_align="c"/>
+	    </counter>
+        <auto_frameline x="16" y="34" width="21" height="23">
+			<texture>null</texture>
+        </auto_frameline>
+	</quick_slot1>
+
+	<quick_slot2 x="91" y="719" width="29.9" height="40" stretch="1">
+	<texture>ui\ui_icon_equipment</texture>
+	    <counter x="-4" y="-2" width="25" height="15" stretch="1">
+	        <texture a="136">ui_fast_use_count_back</texture>
+	        <text x="-0.5" y="1" color="hud_slot_count" font="letterica16" align="c" vert_align="c"/>
+	    </counter>
+        <auto_frameline x="16" y="34" width="21" height="23">
+			<texture>null</texture>
+        </auto_frameline>
+	</quick_slot2>
+
+	<quick_slot3 x="131" y="719" width="29.9" height="40" stretch="1">
+	<texture>ui\ui_icon_equipment</texture>
+	    <counter x="-4" y="-2" width="25" height="15" stretch="1">
+	        <texture a="136">ui_fast_use_count_back</texture>
+	        <text x="-0.5" y="1" color="hud_slot_count" font="letterica16" align="c" vert_align="c"/>
+	    </counter>
+        <auto_frameline x="16" y="34" width="21" height="23">
+			<texture>null</texture>
+        </auto_frameline>
+	</quick_slot3>
+
+    <quick_slot0_text x="28" y="748" width="14" height="15" stretch="1">
+		<texture a="136">ui_fast_use_count_back</texture>
+        <text x="-0.5" y="1" color="hud_slot_key" align="c" vert_align="c" font="letterica16"/>
+    </quick_slot0_text>
+    <quick_slot1_text x="68" y="748" width="14" height="15" stretch="1">
+		<texture a="136">ui_fast_use_count_back</texture>
+        <text x="-0.5" y="1" color="hud_slot_key" align="c" vert_align="c" font="letterica16"/>
+    </quick_slot1_text>
+    <quick_slot2_text x="108" y="748" width="14" height="15" stretch="1">
+		<texture a="136">ui_fast_use_count_back</texture>>
+        <text x="-0.5" y="1" color="hud_slot_key" align="c" vert_align="c" font="letterica16"/>
+    </quick_slot2_text>
+    <quick_slot3_text x="148" y="748" width="14" height="15" stretch="1">
+		<texture a="136">ui_fast_use_count_back</texture>
+        <text x="-0.5" y="1" color="hud_slot_key" align="c" vert_align="c" font="letterica16"/>
+    </quick_slot3_text>
+	
+	<!-- Использование предметов -->
+	<none_static><texture/></none_static>
+	<medkit_static x="1" y="640" width="57" height="76" stretch="1" light_anim="ui_slow_blinking_alpha" la_alpha="1">
+		<texture color="hud_layer_medkit">ui\seq\ui_underlayer_smoke</texture>
+		<auto_static x="17" y="19" width="22.5" height="36" stretch="1" light_anim="ui_slow_blinking_alpha">
+			<texture>ui_hud_use_medkit</texture>
+		</auto_static>
+    </medkit_static>
+	<bandage_static x="41" y="640" width="57" height="76" stretch="1">
+		<texture color="hud_layer_bandage">ui\seq\ui_underlayer_tornado</texture>
+		<auto_static x="17" y="19" width="22.5" height="36" stretch="1">
+			<texture>ui_hud_use_bandage</texture>
+		</auto_static>
+    </bandage_static>	
+	<antirad_static x="81" y="640" width="57" height="76" stretch="1" light_anim="ui_slow_blinking_alpha" la_alpha="1">
+		<texture color="hud_layer_antirad">ui\seq\ui_underlayer_smoke</texture>
+		<auto_static x="17" y="19" width="22.5" height="36" stretch="1" light_anim="ui_slow_blinking_alpha">
+			<texture>ui_hud_use_antirad</texture>
+		</auto_static>
+    </antirad_static>	
+	<energy_static x="121" y="640" width="57" height="76" stretch="1">
+		<texture color="hud_layer_drink">ui\seq\ui_underlayer_tornado</texture>
+		<auto_static x="17" y="19" width="22.5" height="36" stretch="1">
+			<texture>ui_hud_use_drink</texture>
+		</auto_static>
+    </energy_static>
+	<eat_static x="161" y="640" width="57" height="76" stretch="1">
+		<texture color="hud_layer_food">ui\seq\ui_underlayer_smoke</texture>
+		<auto_static x="17" y="19" width="22.5" height="36" stretch="1">
+			<texture>ui_hud_use_food</texture>
+		</auto_static>
+    </eat_static>
+
+	<!-- Текстура дыхания -->
+	<hud_blur1 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>hud\breath1</texture>
+	</hud_blur1>
+	<hud_blur2 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>hud\breath2</texture>
+	</hud_blur2>
+	<hud_blur3 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>hud\breath5</texture>
+	</hud_blur3>
+	<hud_blur4 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>hud\breath3</texture>
+	</hud_blur4>
+	<hud_blur5 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture>hud\breath4</texture>
+	</hud_blur5>
+
+	<!-- Худ кровотечения -->
+	<hud_blood1 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="64">hud\blood_drops</texture>
+		<auto_static x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="1" la_alpha="1">
+			<texture>hud\blood_drops</texture>
+		</auto_static>
+	</hud_blood1>
+	<hud_blood2 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="64">hud\blood_drops</texture>
+	</hud_blood2>
+	<hud_blood3 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="64">hud\blood_drops</texture>
+		<auto_static x="0" y="0" width="1024" height="768" stretch="1" light_anim="credits_head" la_cyclic="1" la_texture="1" la_alpha="1">
+			<texture>hud\blood_veins</texture>
+		</auto_static>
+	</hud_blood3>
+	<hud_blood4 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="64">hud\blood_veins</texture>
+	</hud_blood4>
+	<hud_blood5 x="0" y="0" width="1024" height="768" stretch="1">
+		<texture a="64">hud\blood_drops</texture>
+	</hud_blood5>
+	
+	<!-- Худы шлемов -->
+	<hud_gaz_blue x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet1</texture>
+	</hud_gaz_blue>
+	<hud_gaz_green x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet2</texture>
+	</hud_gaz_green>
+	<hud_gaz_yellow x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet3</texture>
+	</hud_gaz_yellow>
+	<hud_gaz_red x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet4</texture>
+	</hud_gaz_red>
+	<hud_gaz_red2 x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet5</texture>
+	</hud_gaz_red2>
+	<hud_gaz_red3 x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet6</texture>
+	</hud_gaz_red3>
+	
+	<hud_merc_blue x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet1</texture>
+	</hud_merc_blue>
+	<hud_merc_green x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet2</texture>
+	</hud_merc_green>
+	<hud_merc_yellow x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet3</texture>
+	</hud_merc_yellow>
+	<hud_merc_red x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet4</texture>
+	</hud_merc_red>
+	<hud_merc_red2 x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet5</texture>
+	</hud_merc_red2>
+	<hud_merc_red3 x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet6</texture>
+	</hud_merc_red3>
+	
+	<hud_sci_blue x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet1</texture>
+	</hud_sci_blue>
+	<hud_sci_green x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet2</texture>
+	</hud_sci_green>
+	<hud_sci_yellow x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet3</texture>
+	</hud_sci_yellow>
+	<hud_sci_red x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet4</texture>
+	</hud_sci_red>
+	<hud_sci_red2 x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet5</texture>
+	</hud_sci_red2>
+	<hud_sci_red3 x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet6</texture>
+	</hud_sci_red3>
+	
+	<hud_mil_blue x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet1</texture>
+	</hud_mil_blue>
+	<hud_mil_green x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet2</texture>
+	</hud_mil_green>
+	<hud_mil_yellow x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet3</texture>
+	</hud_mil_yellow>
+	<hud_mil_red x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet4</texture>
+	</hud_mil_red>
+	<hud_mil_red2 x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet5</texture>
+	</hud_mil_red2>
+	<hud_mil_red3 x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet6</texture>
+	</hud_mil_red3>
+	
+	<hud_exo_blue x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet1</texture>
+	</hud_exo_blue>
+	<hud_exo_green x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet2</texture>
+	</hud_exo_green>
+	<hud_exo_yellow x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet3</texture>
+	</hud_exo_yellow>
+	<hud_exo_red x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet4</texture>
+	</hud_exo_red>
+	<hud_exo_red2 x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet5</texture>
+	</hud_exo_red2>
+	<hud_exo_red3 x="0" y="0" width="1024" height="768" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
+		<texture>hud\hud_helmet6</texture>
+	</hud_exo_red3>
+</header>

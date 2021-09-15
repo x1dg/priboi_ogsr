@@ -1,0 +1,9 @@
+
+#include "traders\ecolog_buy.ltx"
+#include "traders\ecolog_stock.ltx"
+#include "traders\ecolog_sell.ltx"
+
+[trader]
+buy_condition	= ecolog_buy
+sell_condition	= {+priboy_uadz32_squad_found} ecolog_sell_aes, {+rad_heli_crash_chief_done} ecolog_sell_rad_ecolog, ecolog_sell
+buy_supplies	= {+priboy_uadz32_squad_found} ecolog_stock_aes, {+rad_heli_crash_chief_done} ecolog_stock_rad_ecolog, ecolog_stock

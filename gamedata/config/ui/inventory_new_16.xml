@@ -1,0 +1,490 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<!-- ИНВЕНТАРЬ -->
+<w>
+	<!-- Состояние предмета -->
+	<condition_progess_bar x="0" y="0" width="22.4" height="5" animated="1" horz="1" min="0" max="100" pos="1">
+		<min_color color="inv_condition_min"/>
+		<middle_color color="inv_condition_mid"/>
+		<max_color color="inv_condition_max"/>
+		<background width="22.4" height="5" stretch="1">
+			<texture x="0" y="908" width="30" height="5" color="inv_condition_base">ui_inv_shk_itembar</texture>
+		</background>
+		<progress width="22.4" height="5" stretch="1">
+			<texture x="0" y="908" width="30" height="5">ui_inv_shk_itembar</texture>
+		</progress>
+	</condition_progess_bar>
+
+	<!-- Состояние костюма -->
+	<condition_outfit_progress x="150" y="444" width="43.4" height="5" animated="1" horz="1" min="0" max="100" pos="100">
+		<min_color color="inv_condition_min"/>
+		<middle_color color="inv_condition_mid"/>
+		<max_color color="inv_condition_max"/>
+		<progress width="43.4" height="5" stretch="1">
+			<texture>ui_inv_shk_itembar</texture>
+		</progress>
+    </condition_outfit_progress>
+
+	<!-- Состояние оружия 1 слота -->
+    <condition_weapon1_progress x="245.5" y="556" width="43.4" height="5" animated="1" horz="1" min="0" max="100" pos="100">
+		<min_color color="inv_condition_min"/>
+		<middle_color color="inv_condition_mid"/>
+		<max_color color="inv_condition_max"/>
+		<progress width="43.4" height="5" stretch="1">
+			<texture>ui_inv_shk_itembar</texture>
+		</progress>
+    </condition_weapon1_progress>
+
+	<!-- Состояние оружия 2 слота -->
+    <condition_weapon2_progress x="245.5" y="668" width="43.4" height="5" animated="1" horz="1" min="0" max="100" pos="100">
+		<min_color color="inv_condition_min"/>
+		<middle_color color="inv_condition_mid"/>
+		<max_color color="inv_condition_max"/>
+		<progress width="43.4" height="5" stretch="1">
+			<texture>ui_inv_shk_itembar</texture>
+		</progress>
+    </condition_weapon2_progress>
+
+	<!-- Счетчик предметов -->
+	<cell_item_text x="0" y="0" width="22.4" height="14" stretch="1">
+		<texture a="180">ui_fast_use_count_back</texture>
+		<text x="0" y="-1" width="22.4" height="16" font="letterica16" color="white" align="c" vert_align="t"/>
+	</cell_item_text>
+
+	<!-- Контекстное меню -->
+	<properties_box>
+		<texture>ui_cb_listbox</texture>
+		<list x="0" y="0" width="10" height="10" item_height="18"  always_show_scroll="0" can_select="1" bottom_indent="10" right_ident="10" left_ident="20">
+			<font_s color="white_2"/>
+			<font color="grey_2" font="letterica16"/>
+		</list>
+	</properties_box>
+
+	<!-- Главное окно -->
+	<main x="0" y="0" width="1024" height="768"/>
+	<auto_static width="128" height="768" stretch="1">
+		<texture width="170" height="768">ui\ui_sidepanels</texture>
+	</auto_static>
+	<auto_static x="895" width="130" height="768" stretch="1">
+		<texture x="171" width="170" height="768">ui\ui_sidepanels</texture>
+	</auto_static>
+	<back x="128" y="0" width="767.6" height="768" stretch="1">
+		<texture>ui_inventory_main</texture>
+	</back>
+
+	<!-- Деньги ГГ -->
+    <money_static x="158" y="80" width="100" height="46">
+		<text align="r" y="16" font="graffiti22" color="inv_money" complex_mode="0"/>
+    </money_static>
+
+	<!-- Характеристики ГГ -->
+	<actor_chars>
+		<!-- иконка -->
+		<icon_static x="270.5" y="11" width="123.6" height="108" stretch="1">
+			<texture>ui_npc_u_actor</texture>
+		</icon_static>
+
+		<!-- имя -->
+		<name_static x="138" y="15">
+			<text font="letterica16" color="inv_rel_name" align="l"/>
+		</name_static>
+
+		<!-- ранг -->
+		<rank_caption x="138" y="46" width="153" height="15">
+			<text align="l" font="letterica16" color="inv_rel_caption"/>
+		</rank_caption>
+		<rank_static x="105" y="46" width="153" height="15">
+			<text align="r" font="letterica16" color="inv_rel_text"/>
+		</rank_static>
+
+		<!-- группировка -->
+		<community_caption x="138" y="60" width="153" height="15">
+			<text align="l" font="letterica16" color="inv_rel_caption"/>
+		</community_caption>
+		<community_static x="105" y="60" width="153" height="15">
+			<text align="r" font="letterica16" color="inv_rel_text"/>
+		</community_static>
+
+		<!-- репутация -->
+		<reputation_caption x="138" y="74" width="153" height="15">
+			<text align="l" font="letterica16" color="inv_rel_caption"/>
+		</reputation_caption>
+		<reputation_static x="105" y="74" width="153" height="15">
+			<text align="r" font="letterica16" color="inv_rel_text"/>
+		</reputation_static>
+	</actor_chars>
+
+	<!-- Рюкзак -->
+    <dragdrop_bag x="0" y="0" width="483.5" height="661"
+			cell_width="29.2" cell_height="39" rows_num="17" cols_num="16"
+			unlimited="1" group_similar="1" condition_progress_bar="1"/>
+
+	<!-- Слот костюма -->
+    <dragdrop_outfit x="134" y="298" width="74.9" height="150" custom_placement="0"
+            cell_width="37.4" cell_height="50" rows_num="3" cols_num="2"
+            virtual_cells="1" vc_vert_align="c" vc_horiz_align="c"
+			condition_progress_bar="0" a="0"/>
+
+	<!-- Слот пистолета -->
+    <dragdrop_pistol x="135" y="460" width="262.3" height="100" custom_placement="0"
+            cell_width="37.4" cell_height="50" rows_num="2" cols_num="7"
+            virtual_cells="1" vc_vert_align="c" vc_horiz_align="c"
+			condition_progress_bar="0" a="0"/>
+
+	<!-- Слот автомата -->
+    <dragdrop_automatic x="135" y="572" width="262.3" height="100" custom_placement="0"
+            cell_width="37.4" cell_height="50" rows_num="2" cols_num="7"
+            virtual_cells="1" vc_vert_align="c" vc_horiz_align="c"
+			condition_progress_bar="0" a="0"/>
+
+	<!-- Пояс -->
+	<dragdrop_belt x="407.5" y="11" width="482.7" height="46"
+            cell_width="34.4" cell_height="46" rows_num="1" cols_num="14"/>
+
+	<!-- Слоты OGSE -->
+	<dragdrop_knife x="219" y="245" width="92.2" height="41" custom_placement="0"
+            cell_width="30.7" cell_height="41" rows_num="1" cols_num="3"
+			virtual_cells="1" vc_vert_align="c" vc_horiz_align="c" a="0"/>
+	<dragdrop_binocular x="218" y="191" width="53.9" height="36" custom_placement="0"
+            cell_width="26.9" cell_height="36" rows_num="1" cols_num="2"
+			virtual_cells="1" vc_vert_align="c" vc_horiz_align="c" a="0"/>
+	<dragdrop_detector x="321" y="245" width="29.9" height="40" custom_placement="0"
+            cell_width="29.9" cell_height="40" rows_num="1" cols_num="1"
+			virtual_cells="1" vc_vert_align="c" vc_horiz_align="c" a="0"/>
+	<dragdrop_torch x="281" y="191" width="53.9" height="36" custom_placement="0"
+            cell_width="26.9" cell_height="36" rows_num="1" cols_num="2"
+			virtual_cells="1" vc_vert_align="c" vc_horiz_align="c" a="0"/>
+	<dragdrop_helmet x="134" y="186" width="74.9" height="100" custom_placement="0"
+            cell_width="37.4" cell_height="50" rows_num="2" cols_num="2"
+			virtual_cells="1" vc_vert_align="c" vc_horiz_align="c" a="0"/>
+	<dragdrop_biodetector x="364" y="245" width="29.9" height="40" custom_placement="0"
+            cell_width="29.9" cell_height="40" rows_num="1" cols_num="1"
+			virtual_cells="1" vc_vert_align="c" vc_horiz_align="c" a="0"/>
+	<dragdrop_nv x="343" y="191" width="53.9" height="36" custom_placement="0"
+            cell_width="26.9" cell_height="36" rows_num="1" cols_num="2"
+			virtual_cells="1" vc_vert_align="c" vc_horiz_align="c" a="0"/>
+
+	<!-- Подсветка слотов -->
+	<highlights>
+		<highlight_knife x="218" y="245" width="91.4" height="40" stretch="1">
+			<texture_h>ui_slot_highlight</texture_h>
+			<texture_t>ui_slot_highlight</texture_t>
+		</highlight_knife>
+		<highlight_weapon1 x="137" y="462" width="258.1" height="97" stretch="1">
+			<texture_h>ui_slot_highlight</texture_h>
+			<texture_t>ui_slot_highlight</texture_t>
+		</highlight_weapon1>
+		<highlight_weapon2 x="137" y="573" width="258.1" height="97" stretch="1">
+			<texture_h>ui_slot_highlight</texture_h>
+			<texture_t>ui_slot_highlight</texture_t>
+		</highlight_weapon2>
+		<highlight_binoc x="218" y="186" width="51.7" height="45" stretch="1">
+			<texture_h>ui_slot_highlight</texture_h>
+			<texture_t>ui_slot_highlight</texture_t>
+		</highlight_binoc>
+		<highlight_outfit x="137" y="298" width="71.2" height="149" stretch="1">
+			<texture_h>ui_slot_highlight</texture_h>
+			<texture_t>ui_slot_highlight</texture_t>
+		</highlight_outfit>
+		<highlight_detector x="320" y="245" width="32.2" height="40" stretch="1">
+			<texture_h>ui_slot_highlight</texture_h>
+			<texture_t>ui_slot_highlight</texture_t>
+		</highlight_detector>
+		<highlight_torch x="279" y="186" width="53.2" height="45" stretch="1">
+			<texture_h>ui_slot_highlight</texture_h>
+			<texture_t>ui_slot_highlight</texture_t>
+		</highlight_torch>
+		<highlight_helmet x="137" y="186" width="70.4" height="99" stretch="1">
+			<texture_h>ui_slot_highlight</texture_h>
+			<texture_t>ui_slot_highlight</texture_t>
+		</highlight_helmet>
+		<highlight_bio x="362.2" y="245" width="32.2" height="40" stretch="1">
+			<texture_h>ui_slot_highlight</texture_h>
+			<texture_t>ui_slot_highlight</texture_t>
+		</highlight_bio>
+		<highlight_nv x="342" y="186" width="52.7" height="45" stretch="1">
+			<texture_h>ui_slot_highlight</texture_h>
+			<texture_t>ui_slot_highlight</texture_t>
+		</highlight_nv>
+		<highlight_f1 x="137" y="685" width="58.4" height="71" stretch="1">
+			<texture_h>ui_slot_highlight</texture_h>
+		</highlight_f1>
+		<highlight_f2 x="205" y="685" width="56.9" height="71" stretch="1">
+			<texture_h>ui_slot_highlight</texture_h>
+		</highlight_f2>
+		<highlight_f3 x="271" y="685" width="58.4" height="71" stretch="1">
+			<texture_h>ui_slot_highlight</texture_h>
+		</highlight_f3>
+		<highlight_f4 x="338.5" y="685" width="56.9" height="71" stretch="1">
+			<texture_h>ui_slot_highlight</texture_h>
+		</highlight_f4>
+	</highlights>
+	
+	<!-- Отображение отключенных слотов -->
+	<slots_cover x="135.5" y="184" width="260.8" height="113" stretch="1">
+		<texture>ui_slots_cover</texture>
+	</slots_cover>
+
+	<!-- Параметры костюма -->
+	<outfit_info x="216" y="298" width="178.9" height="150">
+		<scroll_view x="0" y="0" width="178.9" height="150"
+		always_show_scroll="1" scroll_profile="pda"/>
+
+		<!-- Ожог -->
+		<static_burn_immunity x="-2" y="0" width="230" height="19" complex_mode="1" heading="1">
+			<texture color="inv_icons_immunity">ui_inv_icon_burn_immunity</texture>
+			<text font="letterica16" x="21" y="2" color="inv_immunity"/>
+			<auto_static x="2" y="19" width="158.9" height="1" stretch="1">
+				<texture x="648" y="1023" width="212" height="1">ui_item_line</texture>
+			</auto_static>
+		</static_burn_immunity>
+
+		<!-- Электрошок -->
+		<static_strike_immunity x="-2" y="0" width="230" height="19" complex_mode="1" heading="1">
+			<texture color="inv_icons_immunity">ui_inv_icon_strike_immunity</texture>
+			<text font="letterica16" x="21" y="2" color="inv_immunity"/>
+			<auto_static x="2" y="19" width="158.9" height="1" stretch="1">
+				<texture x="648" y="1023" width="212" height="1">ui_item_line</texture>
+			</auto_static>
+		</static_strike_immunity>
+
+		<!-- Удар -->
+		<static_shock_immunity x="-2" y="0" width="230" height="19" complex_mode="1" heading="1">
+			<texture color="inv_icons_immunity">ui_inv_icon_shock_immunity</texture>
+			<text font="letterica16" x="21" y="2" color="inv_immunity"/>
+			<auto_static x="2" y="19" width="158.9" height="1" stretch="1">
+				<texture x="648" y="1023" width="212" height="1">ui_item_line</texture>
+			</auto_static>
+		</static_shock_immunity>
+
+		<!-- Разрыв -->
+		<static_wound_immunity x="-2" y="0" width="230" height="19" complex_mode="1" heading="1">
+			<texture color="inv_icons_immunity">ui_inv_icon_wound_immunity</texture>
+			<text font="letterica16" x="21" y="2" color="inv_immunity"/>
+			<auto_static x="2" y="19" width="158.9" height="1" stretch="1">
+				<texture x="648" y="1023" width="212" height="1">ui_item_line</texture>
+			</auto_static>
+		</static_wound_immunity>
+
+		<!-- Радиация -->
+		<static_radiation_immunity x="-2" y="0" width="230" height="19" complex_mode="1" heading="1">
+			<texture color="inv_icons_immunity">ui_inv_icon_radiation_immunity</texture>
+			<text font="letterica16" x="21" y="2" color="inv_immunity"/>
+			<auto_static x="2" y="19" width="158.9" height="1" stretch="1">
+				<texture x="648" y="1023" width="212" height="1">ui_item_line</texture>
+			</auto_static>
+		</static_radiation_immunity>
+
+		<!-- Телепатия-->
+		<static_telepatic_immunity x="-2" y="0" width="230" height="19" complex_mode="1" heading="1">
+			<texture color="inv_icons_immunity">ui_inv_icon_telepatic_immunity</texture>
+			<text font="letterica16" x="21" y="2" color="inv_immunity"/>
+			<auto_static x="2" y="19" width="158.9" height="1" stretch="1">
+				<texture x="648" y="1023" width="212" height="1">ui_item_line</texture>
+			</auto_static>
+		</static_telepatic_immunity>
+
+		<!-- Химический ожог -->
+		<static_chemical_burn_immunity x="-2" y="0" width="230" height="19" complex_mode="1" heading="1">
+			<texture color="inv_icons_immunity">ui_inv_icon_chemical_burn_immunity</texture>
+			<text font="letterica16" x="21" y="2" color="inv_immunity"/>
+			<auto_static x="2" y="19" width="158.9" height="1" stretch="1">
+				<texture x="648" y="1023" width="212" height="1">ui_item_line</texture>
+			</auto_static>
+		</static_chemical_burn_immunity>
+
+		<!-- Взрыв -->
+		<static_explosion_immunity x="-2" y="0" width="230" height="19" complex_mode="1" heading="1">
+			<texture color="inv_icons_immunity">ui_inv_icon_explosion_immunity</texture>
+			<text font="letterica16" x="21" y="2" color="inv_immunity"/>
+			<auto_static x="2" y="19" width="158.9" height="1" stretch="1">
+				<texture x="648" y="1023" width="212" height="1">ui_item_line</texture>
+			</auto_static>
+		</static_explosion_immunity>
+
+		<!-- Пулестойкость -->
+		<static_fire_wound_immunity x="-2" y="0" width="230" height="19" complex_mode="1" heading="1">
+			<texture color="inv_icons_immunity">ui_inv_icon_fire_wound_immunity</texture>
+			<text font="letterica16" x="21" y="2" color="inv_immunity"/>
+			<auto_static x="2" y="19" width="158.9" height="1" stretch="1">
+				<texture x="648" y="1023" width="212" height="1">ui_item_line</texture>
+			</auto_static>
+		</static_fire_wound_immunity>
+
+		<!-- Восстановление здоровья -->
+		<static_health_restore_speed x="-2" y="0" width="257" height="19" complex_mode="1" heading="1">
+			<texture color="inv_icons_immunity">ui_inv_icon_health_restore_speed</texture>
+			<text font="letterica16" x="21" y="2" color="inv_immunity"/>
+			<auto_static x="2" y="19" width="158.9" height="1" stretch="1">
+				<texture x="648" y="1023" width="212" height="1">ui_item_line</texture>
+			</auto_static>
+		</static_health_restore_speed>
+
+		<!-- Кровотечение -->
+		<static_bleeding_restore_speed x="-2" y="0" width="257" height="19" complex_mode="1" heading="1">
+			<texture color="inv_icons_immunity">ui_inv_icon_bleeding_restore_speed</texture>
+			<text font="letterica16" x="21" y="2" color="inv_immunity"/>
+			<auto_static x="2" y="19" width="158.9" height="1" stretch="1">
+				<texture x="648" y="1023" width="212" height="1">ui_item_line</texture>
+			</auto_static>
+		</static_bleeding_restore_speed>
+
+		<!-- Выведение радиации -->
+		<static_radiation_restore_speed x="-2" y="0" width="257" height="19" complex_mode="1" heading="1">
+			<texture color="inv_icons_immunity">ui_inv_icon_radiation_restore_speed</texture>
+			<text font="letterica16" x="21" y="2" color="inv_immunity"/>
+			<auto_static x="2" y="19" width="158.9" height="1" stretch="1">
+				<texture x="648" y="1023" width="212" height="1">ui_item_line</texture>
+			</auto_static>
+		</static_radiation_restore_speed>
+
+		<!-- Выносливость -->
+		<static_power_restore_speed x="-2" y="0" width="257" height="19" complex_mode="1" heading="1">
+			<texture color="inv_icons_immunity">ui_inv_icon_power_restore_speed</texture>
+			<text font="letterica16" x="21" y="2" color="inv_immunity"/>
+			<auto_static x="2" y="19" width="158.9" height="1" stretch="1">
+				<texture x="648" y="1023" width="212" height="1">ui_item_line</texture>
+			</auto_static>
+		</static_power_restore_speed>
+
+		<!-- Пси-здоровье -->
+ 		<static_psy_health_restore_speed x="-2" y="0" width="180" height="19" complex_mode="1" heading="1">
+			<texture color="inv_icons_immunity">ui_inv_icon_telepatic</texture>
+			<text font="letterica16" x="21" y="2" color="inv_immunity"/>
+			<auto_static x="2" y="19" width="158.9" height="1" stretch="1">
+				<texture x="648" y="1023" width="212" height="1">ui_item_line</texture>
+			</auto_static>
+		</static_psy_health_restore_speed>
+
+		<!-- Сытость -->
+		<static_satiety_restore_speed x="-2" y="0" width="257" height="19" complex_mode="1" heading="1">
+			<texture color="inv_icons_immunity">ui_inv_icon_satiety_restore_speed</texture>
+			<text font="letterica16" x="21" y="2" color="inv_immunity"/>
+			<auto_static x="2" y="19" width="158.9" height="1" stretch="1">
+				<texture x="648" y="1023" width="212" height="1">ui_item_line</texture>
+			</auto_static>
+		</static_satiety_restore_speed>
+	</outfit_info>
+
+	<static_personal/>
+
+	<!-- Шкала здоровья -->
+    <progress_bar_health x="139" y="145" width="160.4" height="15" horz="1" min="0" max="100" pos="0">
+		<progress width="160.4" height="15" stretch="1">
+			<texture color="inv_bar_health">ui_inv_shk_healthbar</texture>
+		</progress>
+    </progress_bar_health>
+
+	<!-- Значок кровотечения -->
+	<bleeding_state>
+		<pulse_anim x="314" y="130" width="33.7" height="45" stretch="1"
+			la_texture="1" la_alpha="1" light_anim="ui_too_slow_blinking">
+			<texture color="hud_layer_wound">ui\seq\ui_underlayer_pulsar</texture>
+		</pulse_anim>
+		<icon1 x="314" y="130" width="33.7" height="45" stretch="1">
+			<texture color="inv_radblood_25">ui_icon_bleeding</texture>
+		</icon1>
+		<icon2 x="314" y="130" width="33.7" height="45" stretch="1">
+			<texture color="inv_radblood_50">ui_icon_bleeding</texture>
+		</icon2>
+		<icon3 x="314" y="130" width="33.7" height="45" stretch="1">
+			<texture color="inv_radblood_75">ui_icon_bleeding</texture>
+		</icon3>
+		<icon4 x="314" y="130" width="33.7" height="45" stretch="1">
+			<texture color="inv_radblood_100">ui_icon_bleeding</texture>
+		</icon4>
+	</bleeding_state>
+
+	<!-- Значок радиации -->
+	<radiation_state>
+		<absorb_anim x="356.5" y="130" width="33.7" height="45" stretch="1"
+			la_texture="1" la_alpha="1" light_anim="ui_too_slow_blinking">
+			<texture color="hud_layer_rad">ui\seq\ui_underlayer_hole</texture>
+		</absorb_anim>
+		<icon1 x="356.5" y="130" width="33.7" height="45" stretch="1">
+			<texture color="inv_radblood_25">ui_icon_radiation</texture>
+		</icon1>
+		<icon2 x="356.5" y="130" width="33.7" height="45" stretch="1">
+			<texture color="inv_radblood_50">ui_icon_radiation</texture>
+		</icon2>
+		<icon3 x="356.5" y="130" width="33.7" height="45" stretch="1">
+			<texture color="inv_radblood_75">ui_icon_radiation</texture>
+		</icon3>
+		<icon4 x="356.5" y="130" width="33.7" height="45" stretch="1">
+			<texture color="inv_radblood_100">ui_icon_radiation</texture>
+		</icon4>
+	</radiation_state>
+
+	<!-- Шкала пси-здоровья -->
+    <progress_bar_psy/>
+
+	<!-- Шкала радиационного заражения -->
+	<progress_bar_radiation/>
+
+	<!-- Шкала опыта -->
+    <progress_bar_rank/>
+
+	<!-- Фон для текстур состояния -->
+    <progress_background/>
+
+	<!-- Тектура фона опыта (МП) -->
+    <progress_back_rank/>
+
+	<!-- Теустура фона и иконки уровня (МП) -->
+    <rank x="138" y="46" width="56.2" height="65" stretch="1">
+		<texture>ui_inventory_rank</texture>
+		<pic x="10.4" y="17" width="46" height="47" stretch="1"/>
+    </rank>
+
+	<!-- Вес -->
+	<bag_static x="404.5" y="69" width="490" height="692" complex_mode="1">
+      	<text x="386" y="673" font="letterica16" color="inv_kg" complex_mode="1"/>
+		<auto_static x="467" y="673" width="32" height="24">
+			<text font="letterica16" color="inv_kg">st_ui_kg</text>
+		</auto_static>
+    </bag_static>
+
+	<!-- "Время" -->
+    <time_static x="688" y="742" width="200" height="30">
+        <text font="letterica16" color="inv_time_label">ui_inv_time</text>
+	</time_static>
+
+	<!-- Часы -->
+    <time_static_str x="-50" y="0" width="107" height="30">
+         <text align="r" font="letterica16" color="inv_time"/>
+	</time_static_str>
+
+	<!-- Окно описания -->
+    <descr_static/>
+
+	<!-- "Костюм" -->
+    <character_frame_window/>
+
+	<bottom_static/>
+	<belt_slots/>
+
+	<!-- Выход -->
+    <exit_button x="404" y="738" width="240" height="24" highlight_text="1">
+        <texture>ui_big_inventory_button</texture>
+        <text font="graffiti22" color="grey_5" align="c">ui_inv_exit</text>
+		<text_color>
+			<e color="white_1"/>
+			<t color="grey_2"/>
+			<d color="grey_2"/>
+			<h color="black_1"/>
+		</text_color>
+    </exit_button>
+
+	<!-- Звуки действий в инвентаре -->
+	<action_sounds>
+		<snd_open>interface\inv_open</snd_open>
+		<snd_close>interface\inv_close</snd_close>
+		<snd_item_to_slot>interface\inv_slot</snd_item_to_slot>
+		<snd_item_to_belt>interface\inv_belt</snd_item_to_belt>
+		<snd_item_to_ruck>interface\inv_ruck</snd_item_to_ruck>
+		<snd_properties>interface\inv_properties</snd_properties>
+		<snd_drop_item>interface\inv_drop</snd_drop_item>
+		<snd_attach_addon>interface\inv_attach_addon</snd_attach_addon>
+		<snd_detach_addon>interface\inv_detach_addon</snd_detach_addon>
+		<snd_item_use>interface\inv_slot</snd_item_use>
+	</action_sounds>
+</w>

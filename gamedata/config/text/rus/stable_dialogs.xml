@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+    <string id="actor_break_dialog_0">
+        <text>Спасибо, но мне пора. До встречи.</text>
+    </string>
+    <string id="actor_help_wounded_0">
+        <text>Ты как?</text>
+    </string>
+    <string id="actor_help_wounded_1">
+        <text>Ранен я, не видишь что-ли? Аптечку надо или хоть бинт...</text>
+    </string>
+    <string id="actor_help_wounded_11">
+        <text>Вот, держи аптечку.</text>
+    </string>
+    <string id="actor_help_wounded_111">
+        <text>Спасибо, брат! Я этого не забуду.</text>
+    </string>
+    <string id="actor_help_wounded_12">
+        <text>Вот, бинт у меня есть.</text>
+    </string>
+    <string id="actor_help_wounded_13">
+        <text>Извини, нету у меня ничего.</text>
+    </string>
+    <string id="actor_help_wounded_131">
+        <text>А как же ты по Зоне ходишь? А если заболеешь или ещё что? Ты сам себе, и то не поможешь!</text>
+    </string>
+    <string id="actor_help_wounded_14">
+        <text>Прости, парень, но если отдам тебе свою - у самого не останется.</text>
+    </string>
+    <string id="actor_help_wounded_141">
+        <text>Ну как знаешь, только запомни - аукнется тебе это когда-нибудь... Зона всё видит.</text>
+    </string>
+    <string id="hello_dialog_2">
+        <text>Эй! Ты тот военный, которого недавно прислали в Зону? Удачи тебе, боец! Если нужна будет помощь, поговори с майором Кузнецовым под мостом, или с этим... С командиром Блокпоста. Да, встетишь Фаната - с ним потолкуй, он многое про Зону знает.</text>
+    </string>
+    <string id="hello_dialog_3">
+        <text>Эй, не поможешь мне, а?</text>
+    </string>
+</string_table>

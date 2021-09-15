@@ -1,0 +1,52 @@
+<!-- ОПРЕДЕЛЕНИЕ ТЕКСТУР: ИНВЕНТАРЬ -->
+<ui_texture>
+    <file_name>ui\ui_inventory</file_name>
+    <texture id="ui_inventory_main"		x="0" y="0" width="1024" height="768"/>		<!-- окно инвентаря -->
+    <texture id="ui_inventory_mp_buy"	x="0" y="0" width="1024" height="768"/>		<!-- окно инвентаря мп -->
+    <texture id="ui_inventory_mp_shop"	x="686" y="118" width="336" height="612"/>	<!-- окно покупки в мп -->
+    <texture id="ui_inventory_rank"		x="0" y="959" width="75" height="65"/>		<!-- окно иконки для ранга в мп -->
+	<texture id="ui_inv_shk_statebar"	x="0" y="868" width="132" height="19"/>		<!-- фон состояния предмета -->
+	<texture id="ui_inv_shk_general"	x="112" y="768" width="131" height="67"/>	<!-- шкала жизни/пси/радиации-->
+	<texture id="ui_inv_shk_healthbar"	x="0" y="889" width="214" height="16"/>		<!-- шкала состояния здоровья ЗП -->
+	<texture id="ui_inv_shk_itembar"	x="0" y="908" width="58" height="5"/>		<!-- шкала состояния предмета ЗП -->
+    <texture id="ui_inv_btn_e"			x="75" y="960" width="104" height="30"/>	<!-- [кнопка] -->
+    <texture id="ui_inv_btn_d"			x="75" y="990" width="104" height="30"/>	<!-- [кнопка] -->
+    <texture id="ui_inv_btn_h"			x="179" y="960" width="104" height="30"/>	<!-- [кнопка] -->
+    <texture id="ui_inv_btn_t"			x="179" y="990" width="104" height="30"/>	<!-- [кнопка] -->
+    <texture id="ui_inv_btn_buy_e"		x="283" y="960" width="103" height="46"/>	<!-- [кнопка] -->
+    <texture id="ui_inv_btn_buy_h"		x="386" y="960" width="103" height="46"/>	<!-- [кнопка] -->
+    <texture id="ui_inv_btn_buy_t"		x="489" y="960" width="103" height="46"/>	<!-- [кнопка] -->
+    <texture id="ui_inv_btn_buy_d"		x="283" y="960" width="103" height="46"/>	<!-- [кнопка] -->
+    <texture id="ui_inv_btn_drop_e"		x="592" y="960" width="113" height="64"/>	<!-- [кнопка] -->
+    <texture id="ui_inv_btn_drop_h"	 	x="705" y="960" width="113" height="64"/>	<!-- [кнопка] -->
+    <texture id="ui_inv_btn_drop_t"		x="818" y="960" width="113" height="64"/>	<!-- [кнопка] -->
+    <texture id="ui_inv_btn_drop_d"		x="592" y="960" width="113" height="64"/>	<!-- [кнопка] -->
+	<texture id="ui_icon_accuracy"		x="244" y="768" width="18" height="18"/>	<!-- значок точности -->
+    <texture id="ui_icon_handling"		x="262" y="768" width="18" height="18"/>	<!-- значок удобства -->
+    <texture id="ui_icon_damage"		x="280" y="768" width="18" height="18"/>	<!-- значок повреждения -->
+    <texture id="ui_icon_rpm"			x="298" y="768" width="18" height="18"/>	<!-- значок скорострельности -->
+    <texture id="ui_icon_condition"		x="316" y="768" width="18" height="18"/>	<!-- значок состояния -->
+    <texture id="ui_icon_RADIOACTIVITY"	x="335" y="768" width="19" height="19"/>	<!-- значок радиации -->
+    <texture id="ui_icon_ARMOR"			x="353" y="768" width="19" height="19"/>	<!-- значок брони -->
+    <texture id="ui_icon_ENDURANCE"		x="370" y="768" width="19" height="19"/>	<!-- значок выносливости -->
+    <texture id="ui_icon_BLOOD"			x="386" y="768" width="19" height="19"/>	<!-- значок кровотечения -->
+    <texture id="ui_icon_PSY"			x="405" y="768" width="19" height="19"/>	<!-- значок пси-здоровья -->
+    <texture id="ui_icon_HEALTH"		x="426" y="768" width="19" height="19"/>	<!-- значок здоровья -->
+    <texture id="ui_icon_bleeding"		x="872" y="770" width="45" height="45"/>	<!-- значок кровотечения ЗП -->
+    <texture id="ui_icon_radiation"		x="918" y="770" width="45" height="45"/>	<!-- значок радиации ЗП -->
+    <texture id="ui_scale_bg"			x="0" y="768" width="110" height="14"/>		<!-- шкала фоновая -->
+	<texture id="ui_scale_red"			x="0" y="787" width="110" height="14"/>		<!-- шкала здоровья -->
+	<texture id="ui_scale_yellow"		x="0" y="806" width="110" height="14"/>		<!-- шкала радиации -->
+	<texture id="ui_scale_green"		x="0" y="825" width="110" height="14"/>		<!-- шкала опыта -->
+    <texture id="ui_scale_blue"			x="0" y="844" width="110" height="14"/>		<!-- шкала пси-здоровья -->
+	<texture id="ui_scale_statebar"		x="0" y="860" width="128" height="7"/>		<!-- шкала состояния предмета -->
+	<texture id="ui_slots_belt"			x="356" y="0" width="668" height="68"/>		<!-- окно пояса -->
+	<texture id="ui_slots_cover"		x="470" y="770" width="348" height="113"/>	<!-- отключенные слоты-->
+	<texture id="ui_slot_highlight"		x="426" y="845" width="32" height="32"/>	<!-- подсветка слотов -->
+	<texture id="ui_slot_knife"			x="314" y="838" width="100" height="50"/>	<!-- фейковые слоты: нож (неисп.) -->
+	<texture id="ui_slot_pda"			x="244" y="786" width="50" height="50"/>	<!-- фейковые слоты: кпк (неисп.) -->
+	<texture id="ui_slot_bolt"			x="416" y="786" width="50" height="50"/>	<!-- фейковые слоты: болт (неисп.) -->
+	<texture id="ui_slot_torch"			x="244" y="840" width="50" height="50"/>	<!-- фейковые слоты: фонарь (неисп.) -->
+	<texture id="ui_slot_detector"		x="302" y="786" width="50" height="50"/>	<!-- фейковые слоты: детектор (неисп.) -->
+	<texture id="ui_slot_binocular"		x="364" y="786" width="50" height="50"/>	<!-- фейковые слоты: бинокль (неисп.) -->
+</ui_texture>

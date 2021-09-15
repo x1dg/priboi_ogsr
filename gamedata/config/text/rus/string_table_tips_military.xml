@@ -1,0 +1,36 @@
+	<string id="mil_actor_blockpost">
+		<text>Ты достиг Барьера. Даже не думай поднимать тут шум. Однако любая помощь - приветствуется.</text>
+	</string>
+	<string id="mil_after_sniper_dead">
+		<text>Эй, солдат, иди сюда за наградой и дальнейшими указаниями</text>
+	</string>
+	<string id="mil_fblockpost_warning">
+		<text>Солдат, отступаем на наши позиции</text>
+	</string>
+	<string id="mil_info_freedom_radio">
+		<text>Если ты проведешь ночь на башне в деревне - кое-что обязательно произойдет...</text>
+	</string>
+	<string id="mil_info_max_mines">
+		<text>Не забудь о минах! Одна ошибка - и тебе конец...</text>
+	</string>
+	<string id="mil_info_max_village">
+		<text>Осторожнее, Прибой. Похоже, в деревне масса аномалий, а мутанты быстрые и невидимые!</text>
+	</string>
+	<string id="mil_info_to_all">
+		<text>Внимание всем желающим расплавить свои мозги: дорога в Рыжий Лес находится под защитой Монолита, который стреляет без предупреждения. Желаем удачи!</text>
+	</string>
+	<string id="mil_max_attack_signal">
+		<text>К оружию! Вынесем мутантов!</text>
+	</string>
+	<string id="mil_mission_complete">
+		<text>Работа сделана, отступаем на ферм и получаем свои кровные...</text>
+	</string>
+	<string id="mil_scull_attack_signal">
+		<text>Вперёд, мужики! Путь свободен!</text>
+	</string>
+	<string id="mil_scull_info">
+		<text>Эй, солдат, придави этих снайперов!</text>
+	</string>
+	<string id="mil_sniper_to_player_warning">
+		<text>Осторожнее, Прибой, не то получишь пулю...</text>
+	</string>

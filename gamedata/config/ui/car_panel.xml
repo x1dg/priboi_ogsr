@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<!-- ПАНЕЛЬ СОСТОЯНИЯ АВТОМОБИЛЯ -->
+<!-- Расположение на худе в maingame.xml -->
+<w>
+	<!-- Текстура состояния автомобиля -->
+	<car_health_static x="0" y="0" width="220">
+		<texture>ui_hud_shkala_car</texture>
+	</car_health_static>
+
+	<!-- Шкала состояния автомобиля -->
+	<car_health_progress_bar x="2" y="2" width="169" height="2" horz="1" min="0" max="100" pos="0">
+		<progress>
+			<texture color="hud_scale_car">ui_hud_shk_car</texture>
+		</progress>
+	</car_health_progress_bar>
+</w>

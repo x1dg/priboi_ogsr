@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<!-- ЯЧЕЙКИ БЫСТРОГО ИСПОЛЬЗОВАНИЯ В ИНВЕНТАРЕ -->
+<window>
+
+	<!-- Список предметов -->
+    <List1_frame x="368" y="10" width="652" height="729">
+        <texture x="6" y="64" width="652" height="727">ui_tablist_textblack</texture>
+		<auto_static x="12" y="44">
+			<texture>ui_item_line</texture>
+		</auto_static>
+		<auto_static x="312" y="44">
+			<texture>ui_item_line</texture>
+		</auto_static>
+		<auto_static x="-2" y="13" width="647" height="25">
+			<text align="c" font="letterica18" color="white_2" complex_mode="1">ui_fast_use_slots_wnd</text>
+		</auto_static>
+    </List1_frame>
+
+    <List1 x="380" y="63" width="634" height="667" always_show_scroll="1" item_height="18" active_bg="1">
+		<font font="letterica18" color="white_1" complex_mode="1"/>
+
+		<frameline x="0" y="0" width="1" height="1">
+			<texture>null</texture>
+		</frameline>
+
+		<button1 x="367" y="738" width="240" height="24" highlight_text="1">
+			<texture>ui_big_inventory_button</texture>
+			<text font="graffiti22" color="grey_5" align="c">ui_inv_exit</text>
+			<text_color>
+				<e color="white_1"/>
+				<t color="grey_2"/>
+				<d color="grey_2"/>
+				<h color="black_1"/>
+			</text_color>
+		</button1>
+    </List1>
+
+	<!-- Иконки предметов -->
+	<quick_slot0 x="30" y="700" width="40" height="40" stretch="1">
+		<texture>ui\ui_icon_equipment</texture>
+	</quick_slot0>
+
+	<quick_slot1 x="121" y="700" width="40" height="40" stretch="1">
+		<texture>ui\ui_icon_equipment</texture>
+	</quick_slot1>
+
+	<quick_slot2 x="210" y="700" width="40" height="40" stretch="1">
+		<texture>ui\ui_icon_equipment</texture>
+	</quick_slot2>
+
+	<quick_slot3 x="298" y="700" width="40" height="40" stretch="1">
+		<texture>ui\ui_icon_equipment</texture>
+	</quick_slot3>
+
+	<!-- Клавиши ячеек -->
+	<quick_slot1_text x="16.5" y="744" width="16" height="16">
+		<text color="hud_slot_key" align="с" font="letterica16"/>
+	</quick_slot1_text>
+	<quick_slot2_text x="108" y="744" width="16" height="16">
+		<text color="hud_slot_key" align="с" font="letterica16"/>
+	</quick_slot2_text>
+	<quick_slot3_text x="197" y="744" width="16" height="16">
+		<text color="hud_slot_key" align="с" font="letterica16"/>
+	</quick_slot3_text>
+	<quick_slot4_text x="286" y="744" width="16" height="16">
+		<text color="hud_slot_key" align="с" font="letterica16"/>
+	</quick_slot4_text>
+</window>

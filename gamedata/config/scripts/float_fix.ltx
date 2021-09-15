@@ -1,0 +1,11 @@
+;-- float_fix for spawned objects
+
+[collide]
+ignore_static
+ignore_ragdoll
+
+[logic]
+active = ph_idle@do_not_float
+
+[ph_idle@do_not_float]
+on_info = %=floating_fix% nil

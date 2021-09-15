@@ -1,0 +1,245 @@
+;;;;;;;;;;;;;;;;;;;;;;
+[wpn_val]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency 		= 
+$spawn                  	= "weapons\val"	; option for Level Editor
+$npc			 	= on		; option for Level Editor
+$prefetch 			= 8
+scheduled            		= off           ; option for ALife Simulator
+cform                		= skeleton
+class                		= WP_VAL
+min_radius			= 1
+max_radius			= 150
+description			= enc_weapons1_wpn-val
+
+ef_main_weapon_type		= 1 ;2
+ef_weapon_type			= 6
+
+;-----------------------------------------------------------------------------------
+holder_range_modifier		= 1.2		 ; во сколько раз увеличивается eye_range 
+holder_fov_modifier		= 0.7            ; во сколько раз увеличивается eye_fov
+;-----------------------------------------------------------------------------------
+
+cost		 	 	= 18000 ; 16300
+weapon_class			= assault_rifle
+
+ammo_limit			= 240
+ammo_current			= 180
+ammo_elapsed			= 20
+	
+ammo_mag_size			= 20
+ammo_class		 	= ammo_9x39_pab9, ammo_9x39_sp5, ammo_9x39_ap  
+fire_modes			= 1, -1
+		
+hand_dependence		 	= 1
+single_handed			= 0
+	
+slot 				= 2		; // secondary
+animation_slot		 	= 2		; type of the animation that will be used
+
+inv_name	         	= wpn-val
+inv_name_short		 	= wpn-val
+inv_weight		 	= 2.5
+
+inv_grid_width			= 4
+inv_grid_height			= 2
+inv_grid_x			= 15
+inv_grid_y			= 4
+
+kill_msg_x			= 0
+kill_msg_y			= 154
+kill_msg_width			= 78
+kill_msg_height			= 21
+
+;-----------------------------------------------------------------------------------
+;базовая дисперсия
+fire_dispersion_base		= 0.11	;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+control_inertion_factor		= 1.12f
+
+;отдача
+cam_relax_speed         	= 5	;скорость возврата в исходное положение
+cam_dispersion          	= 0.3	;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc		= 0.05	;увеличениe cam_dispersion с каждым выстрелом
+cam_dispertion_frac		= 1.0	;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
+cam_max_angle			= 7.0	;максимальный угол отдачи
+cam_max_angle_horz		= 10.0	;(degree) maximum shot horizontal degree 
+cam_step_angle_horz		= 0.5	;(degree) size of step camera moved in horizontal position while shooting
+
+fire_dispersion_condition_factor = 5	;увеличение дисперсии в процентах при максимальном износе 
+misfire_probability 		= 0.003	;вероятность осечки при максимальном износе 
+misfire_condition_k		= 0.05
+condition_shot_dec 		= 0.00001 ;увеличение износа при каждом выстреле
+;-----------------------------------------------------------------------------------
+
+
+direction            	    	= 0, 0, 1
+
+fire_point           	    	= 0.0, 0.174, 0.562
+
+smoke_particles			= weapons\generic_shoot_00
+
+shell_point		 	= 0.0, 0.174, 0.078
+shell_dir		 	= 0.0, 1.0, 0.0
+; shell_particles	 		= weapons\generic_shells
+
+rpm_empty_click 		= 200
+
+PDM_disp_base 			= 1.0
+PDM_disp_vel_factor 		= 1.2
+PDM_disp_accel_factor 		= 1.2
+PDM_crouch	 		= 1.0
+PDM_crouch_no_acc 		= 1.0
+
+; ttc
+hit_power        		= 1.1 ;0.79 ;0.60, 0.62, 0.65, 0.68
+hit_impulse		 	= 80
+hit_type 			= fire_wound
+
+fire_distance   	    	= 300 ;450
+bullet_speed			= 290	;начальная скорость пули
+rpm             		= 900 ;650
+; end ttc
+
+use_aim_bullet			= true		;Поддерживается ли первая суппер пуля
+time_to_aim			= 1.0	
+
+hud             	        = wpn_val_hud
+normal          	        = 0, 1, 0
+
+;----------------------------------------------------------
+position        	        = -0.026, -0.131, 0.0
+orientation     	        = 0, 0, 0
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+;под мишкой
+strap_position         		= -0.26,-0.11,0.25	; position (offset) and orientation of the weapon when it is strapped
+strap_orientation      		= -15,-9,110		; (3rd person view in degrees)
+strap_bone0			= bip01_spine2
+strap_bone1			= bip01_spine1
+
+startup_ammo    	        = 90
+visual          	        = weapons\val\wpn_val.ogf
+
+light_disabled			= true
+
+ph_mass			 	= 5
+
+;addons
+scope_status			= 2;0
+silencer_status			= 1
+grenade_launcher_status		= 0
+
+zoom_enabled			= true
+scope_zoom_factor		= 85;60 ;50
+scope_name 			= wpn_addon_scope
+scope_texture			= wpn\wpn_crosshair
+scope_x 			= 37	; offset in inventory icon
+scope_y 			= 0
+;звуки
+
+;----Sound------
+snd_draw				= darius\generic_draw, 0.4
+snd_holster				= darius\generic_holster, 0.4
+snd_shoot				= darius\9x39_silenced_00, 0.9
+snd_empty				= darius\rifle_empty, 0.5
+snd_reload				= darius\vss_reload, 0.6 
+snd_close				= weapons\generic_close
+
+;snd_draw			= weapons\svu_draw, 0.5, 0,1
+;snd_holster			= weapons\generic_holster, 0.5
+;snd_shoot			= weapons\tm_val_shot_0, 0.6
+;snd_shoot1			= weapons\tm_val_shot_1, 0.6
+;snd_shoot2			= weapons\tm_val_shot_2, 0.6
+;snd_shoot3			= weapons\tm_val_shot_3, 0.6
+;snd_empty			= weapons\gen_empty, 0.5
+;snd_reload			= weapons\val_reload, 0.7, 0.5
+;snd_close			= weapons\generic_close, 0.5
+
+ 
+[wpn_val_hud]
+shell_point			= -0.030000,-0.020000,0.050000
+shell_dir		 	= 0.0, 1.0, 0.0
+
+fire_point       	        = 0.200000,0.020000,0.060000
+fire_bone        	        = wpn_body
+orientation      	        = 0, 0, 0
+position         	        = 0, 0, 0
+visual           	        = Arsenal_Mod\wpn_val_sk1_hud.ogf ;weapons\val\wpn_val_hud.ogf
+
+anim_idle			= idle
+anim_reload			= reload
+anim_draw			= draw
+anim_holster			= holster
+anim_shoot			= shoot ;shoot1
+anim_idle_aim			= idle_aim
+anim_idle_sprint		= idle_sprint
+
+;смещения HUD для режима приближения
+zoom_offset			= -0.1264,0.0279,-0.1369   ; -0.132450,0.054700,-0.080700
+zoom_rotate_x			= 0.0 ;0.024500
+zoom_rotate_y			= 0.0 ;0.017200
+
+
+[wpn_sr3vihr]:wpn_val
+
+$spawn                  	= "weapons\sr3vihr"	; option for Level Editor
+description			= enc_weapons1_wpn-sr3vihr
+cost		 	 	= 15000 ;10230
+slot 				= 1		; // secondary
+animation_slot		 	= 8		; type of the animation that will be used
+inv_name	         	= wpn-sr3vihr
+inv_name_short		 	= wpn-sr3vihr
+inv_weight		 	= 1.9
+
+inv_grid_width			= 2
+inv_grid_height			= 2
+inv_grid_x			= 30
+inv_grid_y			= 10
+
+fire_dispersion_base		= 0.18
+control_inertion_factor		= 1.02f
+holder_range_modifier		= 1.0
+holder_fov_modifier		= 0.8
+cam_dispersion          	= 0.35	;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc		= 0.08	;увеличениe cam_dispersion с каждым выстрелом
+cam_dispertion_frac		= 0.9	;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
+
+fire_point           	    	= 0.0, 0.174, 0.33
+flame_particles			= weapons\generic_weapon05
+hit_power        		= 0.75, 0.77, 0.80, 0.83 ;0.54, 0.58, 0.61, 0.64
+
+fire_distance   	    	= 200 ;300 ;240
+bullet_speed			= 280 ;270	;начальная скорость пули
+rpm             		= 600 ;850
+
+hud             	        = wpn_sr3vihr_hud
+position        	        = -0.016, -0.131, 0.0
+orientation     	        = 3, 0, 0
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+; под мишкой
+strap_position         		= 0.05,-0.2,-0.11 	; position (offset) and orientation of the weapon when it is strapped
+strap_orientation      		= -15,9,-80		; (3rd person view in degrees)
+strap_bone0			= bip01_spine1
+strap_bone1			= bip01_spine
+
+visual          	        = weapons\sr3_vihr\wpn_sr3vihr.ogf
+
+silencer_status			= 0
+
+snd_shoot			= weapons\walther_shoot, 0.9
+snd_shoot1			= weapons\walther_shoot2, 0.9
+snd_shoot2			= weapons\walther_shoot2, 0.9
+snd_shoot3			= weapons\walther_shoot2, 0.9
+snd_reload			= weapons\val_reload, 0.7, 0.5
+
+[wpn_sr3vihr_hud]:wpn_val_hud
+
+fire_point       	        = 0.0,0.0,0.03
+visual           	        = weapons\sr3_vihr\wpn_sr3vihr_hud.ogf
+anim_shoot			= shoot
+
+;смещения HUD для режима приближения
+zoom_offset			= -0.13245,0.059,0.1
+zoom_rotate_x			= 0.039
+zoom_rotate_y			= 0.0172

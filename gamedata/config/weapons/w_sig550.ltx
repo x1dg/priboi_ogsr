@@ -1,0 +1,235 @@
+[wpn_sig550]:identity_immunities
+GroupControlSection		= spawn_group
+discovery_dependency 	= 
+$spawn                  = "weapons\sg550"					; option for Level Editor
+$npc			 		= on				; option for Level Editor
+$prefetch 		 		= 8
+scheduled               = off              ; option for ALife Simulator
+cform                   = skeleton
+class                   = WP_AK74
+min_radius              = 0
+max_radius              = 50
+description				= enc_weapons1_wpn-sig550
+
+ef_main_weapon_type		= 1 ;2
+ef_weapon_type			= 6
+
+;-----------------------------------------------------------------------------------
+holder_range_modifier	= 1.0		       ; во сколько раз увеличивается eye_range 
+holder_fov_modifier		= 0.7              ; во сколько раз увеличивается eye_fov
+;-----------------------------------------------------------------------------------
+
+
+weapon_class			= assault_rifle
+
+cost					= 20100 ;11190
+
+ammo_limit		 		= 210
+ammo_current			= 30
+ammo_elapsed		 	= 30
+
+ammo_mag_size		 	= 30
+ammo_class		 		= ammo_5.56x45_ss190, ammo_5.56x45_ap
+grenade_class			= ammo_m209
+fire_modes				= 1, -1
+launch_speed = 0
+
+hand_dependence		 	= 1
+single_handed			= 0
+
+inv_name				= wpn-sig550 ;ars-sg550
+inv_name_short			= wpn-sig550 ;ars-sg550
+inv_weight				= 4.1
+
+inv_grid_width				= 5
+inv_grid_height			= 2
+inv_grid_x				= 5 ;46
+inv_grid_y				= 7
+
+kill_msg_x			= 175
+kill_msg_y			= 0
+kill_msg_width		= 82
+kill_msg_height		= 28
+
+slot 					= 2		; // secondary
+animation_slot			= 2		; type of the animation that will be used
+
+;-----------------------------------------------------------------------------------
+;params of weapon recoil
+fire_dispersion_base			= 0.011		;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+control_inertion_factor			= 1.25f
+
+;отдача
+cam_relax_speed         		= 0		;скорость возврата в исходное положение
+cam_relax_speed_ai         		= 5.2
+cam_dispersion          		= 0.15		;увеличения угла (в градусах) с каждым выстрелом
+cam_dispersion_inc			= 0.3		;увеличениe cam_dispersion с каждым выстрелом
+cam_dispertion_frac			= 0.9		;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
+cam_max_angle				= 10.0	    	;максимальный угол отдачи
+cam_max_angle_horz			= 20.0		;(degree) maximum shot horizontal degree 
+cam_step_angle_horz			= 1.1;1		;(degree) size of step camera moved in horizontal position while shooting
+
+fire_dispersion_condition_factor 	= 5	    	;увеличение дисперсии в процентах при максимальном износе 
+misfire_probability 		= 0.003	;вероятность осечки при максимальном износе 
+misfire_condition_k			= 0.05
+condition_shot_dec 			= 0.0002	;увеличение износа при каждом выстреле
+;--------------------------------------------------------------------------------
+
+direction               = 0, 0, 1
+
+fire_point             	=  0,0.223,0.683
+; shell_particles	 		= weapons\arsenal_shells1
+flame_particles			= weapons\generic_weapon05
+grenade_flame_particles		= weapons\generic_weapon01
+
+shell_point		 		= 0,0.245,0.125
+shell_dir		 		= 0.0, 1.0, 0.0
+
+rpm_empty_click 	 	= 200
+
+PDM_disp_base 			= 0.7
+PDM_disp_vel_factor 		= 0.8
+PDM_disp_accel_factor 		= 0.8
+PDM_crouch	 		= 1.0
+PDM_crouch_no_acc 		= 1.0
+
+; ttc
+hit_power        	= 0.93 ;0.80 ;0.78
+hit_impulse		 	= 90 ;34
+hit_type 			= fire_wound
+
+fire_distance          	= 400 ;1000
+bullet_speed			= 900 ;начальная скорость пули
+rpm                     = 700
+; end ttc
+
+use_aim_bullet				= true		;Поддерживается ли первая суппер пуля
+time_to_aim					= 1.0
+
+silencer_hit_power       	= 0.93; 0.70
+silencer_hit_impulse	 	= 70; 29
+silencer_fire_distance   	= 300
+silencer_bullet_speed	 	= 450
+
+hud                     = wpn_sg550_sk1_hud
+normal                  = 0, 1, 0
+position         	    = -0.026,-0.172,0
+orientation             = 0, 0, 0
+
+;--STRAP PARAMETERS-----------------------------------------------------------------
+strap_position         		= -0.16,-0.36,0.15			; position (offset) and orientation of the weapon when it is strapped
+strap_orientation      		= -10,-5,10					; (3rd person view in degrees)
+strap_bone0					= bip01_spine2
+strap_bone1					= bip01_spine1
+
+startup_ammo            = 1000
+visual                  = weapons\sig550\wpn_sig550.ogf
+
+light_color		 		= 0.6,0.5,0.3
+light_range		 		= 5
+light_var_color		 	= 0.05
+light_var_range		 	= 0.1
+light_time 		 		= 0.2
+
+ph_mass			 		= 5
+
+;addons
+scope_status			= 2
+silencer_status			= 2
+grenade_launcher_status	= 2
+
+scope_name 					= wpn_addon_scope_susat ;wpn_addon_acog
+scope_x 					= 70
+scope_y 					= 0 ;-3 ;-6
+
+silencer_name  				= wpn_addon_silencer ;wpn_addon_sil_556_ar
+silencer_x 					= 210
+silencer_y 					= 15 ;13
+
+grenade_launcher_name 		= wpn_addon_grenade_launcher_m203
+grenade_launcher_x 			= 120
+grenade_launcher_y 			= 32 ;28
+
+;silencer_flame_particles 	= weapons\generic_weapon01
+silencer_smoke_particles 	= weapons\generic_shoot_00
+
+silencer_light_color		= 1.0, 0.1, 0.0
+silencer_light_range		= 0.01
+silencer_light_var_color	= 0.05
+silencer_light_var_range	= 0.5
+silencer_light_time 		= 0.2
+
+zoom_enabled			= true
+scope_zoom_factor	    = 60 ;90 ;80
+
+;SOUND by: --Darius6 for SmP 2.4--
+snd_draw				= darius\generic_draw, 0.4
+snd_holster				= darius\generic_holster, 0.4
+snd_shoot				= darius\sig550_fire01
+snd_empty				= darius\rifle_empty, 0.4
+snd_reload				= darius\sg550_reload, 0.5
+snd_shoot_grenade			= darius\grenade_launch, 0.8
+snd_reload_grenade		= darius\m203_reload, 0.6
+snd_switch				= weapons\groza_switch, 1.0, 0.5
+snd_silncer_shot			= darius\aug_silenced, 0.5
+
+[wpn_sg550_sk1_hud]
+shell_point          	= 0.00, 0.00, 0.00
+shell_dir		 = 0.0, 0.0, 0.0
+
+fire_bone               = wpn_body
+fire_point              = 0.206001,-0.001,0.003
+fire_point2             = 0.13,0.0,-0.09
+
+orientation             = 0, 0, 0
+position                = 0, 0, 0
+visual                  = Arsenal_Mod\wpn_sg550_sk1_hud.ogf
+
+grenade_bone            	= grenka1	; name of the bone in the model for grenade launcher
+
+; animation names
+
+anim_idle					= idle
+anim_idle_aim				= idle_aim
+anim_reload					= reload
+anim_draw					= draw
+anim_holster				= holster
+anim_shoot					= shoot
+anim_idle_sprint			= idle_sprint
+
+; animation names
+; attached grenade launcher [GRENADE fire mode]
+anim_idle_g					= idle_g
+anim_idle_g_aim				= idle_g_aim
+anim_reload_g				= reload_g
+anim_shoot_g				= shoot_g
+anim_switch_grenade_on		= g_on
+anim_switch_grenade_off		= g_off
+anim_draw_g					= draw_g
+anim_holster_g				= holster_g
+
+; attached grenade launcher [NORMAL fire mode]
+anim_idle_gl				= idle_w_gl
+anim_idle_gl_aim			= idle_w_gl_aim
+anim_reload_gl				= reload_w_gl
+anim_draw_gl				= draw_w_gl
+anim_holster_gl				= holster_w_gl
+anim_shoot_gl				= shoot_w_gl
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;HUD offset in zoom mode (to all)
+;(use CONSOLE: hud_adjust_mode 0,1,2, then keys WSADQE and P to show current value in console)
+
+zoom_offset			= -0.127001,0.016949,-0.125
+zoom_rotate_x		= -0.0
+zoom_rotate_y		= 0.0
+
+grenade_normal_zoom_offset			= -0.127001,0.016949,-0.125
+grenade_normal_zoom_rotate_x		= -0.0
+grenade_normal_zoom_rotate_y		= 0.0
+
+grenade_zoom_offset			= -0.127001,0.016949,-0.125
+grenade_zoom_rotate_x		= 0.0
+grenade_zoom_rotate_y		= -0.0
+
+zoom_hide_crosshair	= true						;to hide crosshair in zoom

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<string id="kb_use_antirad">
+		<text>Быстрый слот 1</text>
+	</string>
+	<string id="kb_use_energy_drink">
+		<text>Быстрый слот 2</text>
+	</string>
+	<string id="kb_use_b190">
+		<text>Быстрый слот 3</text>
+	</string>
+	<string id="kb_use_bipsizon">
+		<text>Быстрый слот 4</text>
+	</string>
+	<string id="kb_set_hudmask">
+		<text>Снять/одеть шлем</text>
+	</string>
+	<string id="ui_fast_use_slots_wnd">
+		<text>Ячейка быстрого использования</text>
+	</string>
+	<string id="kb_set_godmode">
+		<text>Бессмертие</text>
+	</string>
+	<string id="kb_set_unlimitedammo">
+		<text>Бесконечные патроны</text>
+	</string>
+	<string id="st_ui_hudmask_off">
+		<text>Шлем/противогаз снят</text>
+	</string>
+	<string id="st_ui_hudmask_on">
+		<text>Шлем/противогаз одет</text>
+	</string>
+	<string id="st_ui_hudmask_no_blur">
+		<text>Шлем/противогаз (без эффекта дыхания) одет</text>
+	</string>
+	<string id="st_ui_godmode_on">
+		<text>Бессмертие включено</text>
+	</string>
+	<string id="st_ui_godmode_off">
+		<text>Бессмертие выключено</text>
+	</string>
+	<string id="st_ui_un_ammo_on">
+		<text>Бесконечные патроны</text>
+	</string>
+	<string id="st_ui_un_ammo_off">
+		<text>Ограниченные патроны</text>
+	</string>
+	<string id="st_pda_lang">
+		<text>Раскладка</text>
+	</string>
+	<string id="st_pda_note">
+		<text>Текущая запись</text>
+	</string>
+	<string id="st_pda_note_1_back">
+		<text>На 1 запись назад</text>
+	</string>
+	<string id="st_pda_note_1_fwd">
+		<text>На 1 запись вперёд</text>
+	</string>
+	<string id="st_pda_note_10_back">
+		<text>На 10 записей назад</text>
+	</string>
+	<string id="st_pda_note_10_fwd">
+		<text>На 10 записей вперёд</text>
+	</string>
+	<string id="st_pda_remind">
+		<text>Использовать текст как напоминание</text>
+	</string>
+	<string id="st_pda_vol_down">
+		<text>Уменьшить громкость</text>
+	</string>
+	<string id="st_pda_vol_up">
+		<text>Увеличить громкость</text>
+	</string>
+	<string id="st_pda_header_bulldozer">
+		<text>Функции/Игры/Бульдозер</text>
+	</string>
+	<string id="st_pda_header_arcanoid">
+		<text>Функции/Игры/Арканоид</text>
+	</string>
+	<string id="st_pda_header_minesweeper">
+		<text>Функции/Игры/Сапер</text>
+	</string>
+	<string id="st_pda_header_blackjack">
+		<text>Функции/Игры/Блэкджек</text>
+	</string>
+	<string id="st_pda_header_thimbles">
+		<text>Функции/Игры/Напёрстки</text>
+	</string>
+	<string id="st_pda_header_numbers">
+		<text>Функции/Игры/Числа</text>
+	</string>
+	<string id="st_pda_header_questions">
+		<text>Функции/Игры/Вопросы</text>
+	</string>
+	<string id="st_pda_header_options">
+		<text>Функции</text>
+	</string>
+	<string id="st_pda_off_hint">
+		<text>Выключить КПК</text>
+	</string>
+	<string id="st_pda_exit">
+		<text>Выйти</text>
+	</string>
+	<string id="st_pda_close">
+		<text>Закрыть</text>
+	</string>
+	<string id="st_pda_options_hint">
+		<text>Дополнительные функции</text>
+	</string>
+	<string id="st_ui_buy">
+		<text>Купить</text>
+	</string>
+	<string id="st_ui_sell">
+		<text>Продать</text>
+	</string>
+	<string id="st_ui_kg">
+		<text>кг</text>
+	</string>
+</string_table>

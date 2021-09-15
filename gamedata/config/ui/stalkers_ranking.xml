@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<!-- РАНГИ В КПК -->
+<window>
+
+	<main_wnd x="55" y="85" width="990" height="624"/> 
+
+	<character_info x="12" y="40" width="450" height="270"/>
+
+	<list x="0" y="24" width="600" height="604" top_indent="40" always_show_scroll="0" can_select="1" scroll_profile="pda"/>
+
+	<chicon_frame_window x="571" y="16" width="365" height="604" a="80">
+		<texture>ui_pda_frame</texture>	
+	</chicon_frame_window>
+
+	<chicon_frame_line x="1" y="29" width="363" height="21">
+        <texture>ui_pda_line_h</texture>
+	</chicon_frame_line>
+
+	<info_frame_window x="-19" y="16" width="580" height="604" a="80">
+		<texture>ui_pda_frame</texture>
+	</info_frame_window>
+	<info_frame_line x="1" y="29" width="578" height="27">
+		<title x="10" y="-23" width="435" height="18">
+			<text font="letterica18" color="grey_2">st_pda_top20</text>
+		</title>
+        <texture>ui_pda_line_h</texture>
+	</info_frame_line>
+    <left_auto>
+		<auto_static x="50" y="30" width="1" height="572" stretch="1">
+			<texture x="267" y="800" width="1" height="28" a="136">ui\ui_pda</texture>
+		</auto_static>
+		<auto_static x="450" y="30" width="1" height="572" stretch="1">
+			<texture x="267" y="800" width="1" height="28" a="136">ui\ui_pda</texture>
+		</auto_static>
+		<auto_static align="r" x="10" y="38" width="30" height="20" >
+			<text font="letterica18" color="grey_2">##</text>
+		</auto_static>
+		<auto_static align="r" x="62" y="38" width="100" height="20" >
+			<text font="letterica18" color="grey_2">Name</text>
+		</auto_static>
+		<auto_static align="r" x="526" y="38" width="100" height="20" >
+			<text font="letterica18" color="grey_2" complex_mode="0">Rank</text>
+		</auto_static>
+    </left_auto>
+
+	<a_static x="548" y="-29" width="32" height="32" frames="16" duration="1000" columns="8" frame_width="32" frame_height="32" cyclic="1" autoplay="1">
+		<texture>ui\ui_pda_anims_02</texture>
+	</a_static>
+
+    <right_auto>
+		<auto_static x="1" y="160" width="363" height="1" stretch="1">
+			<texture x="274" y="830" width="28" height="1" a="200">ui\ui_pda</texture>
+		</auto_static>
+		<auto_static align="l" x="8" y="6" width="30" height="20">
+			<text font="letterica18" color="grey_2">pda_btn_info</text>
+		</auto_static>
+    </right_auto>
+
+
+	<stalkers_list>
+		<item_human width="550" height="24">
+			<auto>
+				<auto_static x="0" y="0" width="578" height="1" stretch="1">
+					<texture x="274" y="830" width="28" height="1" a="136">ui\ui_pda</texture>
+				</auto_static>
+			</auto>
+			<text_1 x="10" y="4" width="30" height="19">
+				<text align="l" font="letterica18"  color="grey_2"/>
+			</text_1>
+			
+			<text_2 x="60" y="4" width="280" height="19" highlight_text="1" hA="255" hR="255" hB="255" hG="255">
+				<text align="l" font="letterica18"  color="grey_2"/>
+			</text_2>
+			
+			<text_3 x="410" y="4" width="150" height="19">
+				<text align="r" font="letterica18" color="grey_2"/>
+			</text_3>
+		</item_human>
+
+		<item_actor width="550" height="24">
+			<text_1 x="10" y="4" width="30" height="19">
+				<text align="l" font="letterica18" color="red"/>
+			</text_1>
+			
+			<text_2 x="60" y="4" width="280" height="19" highlight_text="1" hA="255" hR="255" hB="255" hG="255">
+				<text align="l" font="letterica18" color="rank_1"/>
+			</text_2>
+			
+			<text_3 x="410" y="4" width="150" height="19">
+				<text align="r" font="letterica18" color="rank_2"/>
+			</text_3>
+		</item_actor>
+		
+		<item_ellipsis width="400" height="24">
+			<auto>
+				<auto_static x="0" y="0" width="578" height="1" stretch="1">
+					<texture x="274" y="830" width="28" height="1" a="136">ui\ui_pda</texture>
+				</auto_static>
+			</auto>
+			<text_1 x="0" y="0" width="30" height="10">
+				<text align="l" x="10" y="-8" font="letterica25" color="transparent">...</text>
+			</text_1>
+			
+			<text_2/>
+			<text_3/>
+		</item_ellipsis>
+		<no_items width="400" height="24">
+			<text_1 x="60" y="0" width="300" height="40">
+				<text align="l" x="0" y="0" font="letterica18" r="192" g="192" b="192" a="160">...empty...</text>
+			</text_1>
+			
+			<text_2/>
+			<text_3/>
+		</no_items>
+	</stalkers_list>
+</window>

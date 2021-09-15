@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+	<!-- barin start -->
+	<string id="to_bunker">
+		<text>В лабораторию Х10</text>
+	</string>
+	<!-- barin end -->
+	<string id="bar_rostok">
+		<text>Дикая Территория - Росток</text>
+	</string>
+	<string id="car_character_use">
+		<text>Открыть дверь ($$ACTION_USE$$)</text>
+	</string>
+	<string id="character_use">
+		<text>Говорить ($$ACTION_USE$$)</text>
+	</string>
+	<string id="dead_character_use_or_drag">
+		<text>Обыскать труп ($$ACTION_USE$$) \n Тащить труп (SHIFT+$$ACTION_USE$$)</text>
+	</string>
+	<string id="dead_character_use">
+		<text>Обыскать тело ($$ACTION_USE$$)</text>
+	</string>
+	<string id="general_complete_task">
+		<text>Задача выполнена:</text>
+	</string>
+	<string id="general_fail_task">
+		<text>Задача провалена:</text>
+	</string>
+	<string id="general_help">
+		<text>Эй, мне нужна аптечка! Помираю, братцы!</text>
+	</string>
+	<string id="general_in_item">
+		<text>Получен предмет:</text>
+	</string>
+	<string id="general_in_money">
+		<text>Получены деньги:</text>
+	</string>
+	<string id="general_new_diary">
+		<text>Новая запись в журнале.</text>
+	</string>
+	<string id="general_new_encyclopedy">
+		<text>Новая запись в энциклопедии.</text>
+	</string>
+	<string id="general_new_task">
+		<text>Новое задание:</text>
+	</string>
+	<string id="general_out_item">
+		<text>Потерян предмет:</text>
+	</string>
+	<string id="general_out_money">
+		<text>Потеряны деньги:</text>
+	</string>
+	<string id="general_update_task">
+		<text>Задание обновлено:</text>
+	</string>
+	<string id="physic_shell_use">
+		<text>Двигать предмет ($$ACTION_USE$$)</text>
+	</string>
+	<string id="st_codelock">
+		<text>Набрать код ($$ACTION_USE$$)</text>
+	</string>
+	<string id="to_aes">
+		<text>К ЧАЭС</text>
+	</string>
+	<string id="to_agroprom">
+		<text>на Агропром</text>
+	</string>
+	<string id="to_agroprom_underground">
+		<text>В Катакомбы</text>
+	</string>
+	<string id="to_bar">
+		<text>На Росток</text>
+	</string>
+	<string id="to_darkvalley">
+		<text>В Тёмную Долину</text>
+	</string>
+	<string id="to_escape">
+		<text>На Кордон</text>
+	</string>
+	<string id="to_garbage">
+		<text>На Свалку</text>
+	</string>
+	<string id="to_military">
+		<text>На Армейские Склады</text>
+	</string>
+	<string id="to_pripyat">
+		<text>В Припять</text>
+	</string>
+	<string id="to_radar">
+		<text>К Выжигателю Мозгов</text>
+	</string>
+	<string id="to_rostok">
+		<text>На Дикую Территорию</text>
+	</string>
+	<string id="to_yantar">
+		<text>На Янтарь</text>
+	</string>
+	<string id="st_helmet_countdown">
+		<text>Отключение защиты через:</text>
+	</string>
+	<string id="st_psy_danger">
+		<text>Критическое пси-излучение. Уходите из опасной зоны или свихнётесь.</text>
+	</string>
+	<string id="st_radiation_danger">
+		<text>Опасный уровень радиации!! Необходима защита!!</text>
+	</string>
+	<string id="st_found_new_pda">
+		<text>Найдена информация:</text>
+	</string>
+</string_table>

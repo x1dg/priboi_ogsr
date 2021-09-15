@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<!-- ОКНА СПИСКА И ДЕТАЛЕЙ КОНТАКТОВ В КПК -->
+<window>
+
+	<!-- CONTACT LIST -->
+	<main_wnd x="27" y="101" width="1000" height="620"/>
+	
+	<left_frame_window x="0" y="0" width="715" height="604" a="80">
+		<texture>ui_pda_frame</texture>
+    </left_frame_window>
+	
+	<left_auto_static x="14" y="553" width="945" height="2" stretch="1">
+		<texture>ui\ui_pda_horizontal_line</texture>
+	</left_auto_static>
+	
+	<a_static x="395" y="-300" width="32" height="32" frames="16" duration="1000" columns="8" frame_width="32" frame_height="32" cyclic="1" autoplay="1">
+        <texture>ui\ui_pda_anims_03</texture>
+    </a_static>
+	
+	<list x="6" y="6" width="704" height="592" right_ident="0" bottom_indent="0" always_show_scroll="0" can_select="1" scroll_profile="pda"/>
+	
+	<!-- CONTACT INFO -->	
+	<left_frame_line x="-1591" y="29" width="363" height="27">
+        <title x="7" y="-23" width="877" height="18">
+           <text font="letterica18" color="grey_2">pda_btn_info</text>
+        </title>
+		<texture>ui_pda_line_h</texture>
+    </left_frame_line>
+	
+	<right_frame_window  x="-1590" y="0" width="365" height="604" a="80">
+		<texture>ui_pda_frame</texture>
+    </right_frame_window>
+
+    <right_frame_line x="-1001" y="160" width="363" height="21">
+		<texture>ui_pda_line_h</texture>
+    </right_frame_line>
+			
+	<right_auto_static x="-1001" y="560" width="363" height="1" stretch="1">
+		<texture x="274" y="830" width="28" height="1">ui\ui_pda</texture>
+	</right_auto_static>
+	
+	<detail_list x="-1009" y="35" width="350" height="562" always_show_scroll="1" left_ident="5" scroll_profile="pda"/>
+
+</window>

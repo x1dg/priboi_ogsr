@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ОКНО СОХРАНЕНИЯ ИГРЫ -->
+<window>
+	<background x="0" y="0" width="1024" height="768">
+		<auto_static x="127.5" y="13" width="767.6" height="742" stretch="1">
+			<texture width="1024" height="742">ui\video_mainmenu</texture>
+		</auto_static>
+		<auto_static x="127.5" y="0" width="770" height="768" stretch="1">
+			<texture>ui_menu_background</texture>
+		</auto_static>
+		<auto_static width="127.4" height="768" stretch="1">
+			<texture x="340" width="170" height="768">ui\ui_sidepanels</texture>
+		</auto_static>
+		<auto_static x="897" width="127.4" height="768" stretch="1">
+			<texture x="510" width="170" height="768">ui\ui_sidepanels</texture>
+		</auto_static>
+	</background>
+
+	<back_video/>
+	<newspaper_video/>
+
+	<form x="130" y="0" width="764" height="1024" stretch="1">
+		<texture a="128">ui\ui_crete</texture>
+		<auto_static x="-130" y="0" width="130" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="128">ui\ui_crete</texture>
+		</auto_static>
+		<auto_static x="764" y="0" width="170" height="1024" stretch="1">
+			<texture x="0" y="0" width="16" height="1024" a="128">ui\ui_crete</texture>
+		</auto_static>
+
+		<caption x="0" y="0" width="764" height="40" complex_mode="0" stretch="1">
+			<auto_static x="0" y="0" width="764" height="40" stretch="1">
+				<texture x="0" y="0" width="1024" height="40">ui\ui_static_loadgameinfo</texture>
+			</auto_static>
+			<auto_static x="228" y="-11" width="307" height="48" stretch="1">
+				<texture x="0" y="206" width="425" height="48">ui\ui_static_loadgameinfo</texture>
+			</auto_static>
+			<auto_static x="286" y="2" width="191" height="36" stretch="1" light_anim="asus_logo_01" la_cyclic="1" la_texture="1" la_alpha="1">
+				<texture x="438" y="209" width="94" height="36"color="black_1">ui\ui_static_loadgameinfo</texture>
+			</auto_static>
+			<text y="0" align="c" vert_align="c" font="graffiti32" color="grey_2">ui_mm_save_game</text>
+		</caption>
+
+		<edit x="-1" y="46" width="766" height="24">
+			<texture>ui_linetext_e</texture>
+			<text font="letterica18" color="white_1"/>
+		</edit>
+
+		<list_frame x="0" y="72" width="768" height="632">
+			<texture>ui_tablist_textbox</texture>
+		</list_frame>
+
+		<list x="4" y="77" width="758" height="619" item_height="18" active_bg="1"/>
+
+		<btn_save x="205" y="721" width="116" height="26">
+			<texture>ui_button_ordinary</texture>
+			<text font="letterica16" color="white_1" align="c">ui_mm_save</text>
+		</btn_save>
+
+		<btn_delete x="321" y="721" width="116" height="26">
+			<texture>ui_button_ordinary</texture>
+			<text font="letterica16" color="white_1" align="c">ui_mm_delete</text>
+		</btn_delete>
+
+		<btn_cancel x="437" y="721" width="116" height="26">
+			<texture>ui_button_ordinary</texture>
+			<text font="letterica16" color="white_1" align="c">ui_mm_cancel</text>
+		</btn_cancel>
+	</form>
+</window>

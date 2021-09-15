@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="windows-1251" standalone="yes" ?>
+<game_dialogs>
+    <dialog id="actor_will_need_help_abuse3">
+        <precondition>actor_need_help.i_am_friend</precondition>
+        <precondition>actor_need_help.scheme_is_not_active</precondition>
+        <precondition>actor_need_help.abuse_limit2</precondition>
+        <precondition>actor_need_help.abuse_punch</precondition>
+        <precondition>actor_need_help.actor_can_decide</precondition>
+        <phrase_list>
+            <phrase id="0">
+                <text>thans friend</text>
+                <next>11</next>
+            </phrase>
+            <phrase id="11">
+                <text>reached</text>
+                <action>actor_need_help.reset_abuse</action>
+                <action>actor_need_help.do_punch</action>
+                <action>dialogs.break_dialog</action>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="actor_will_need_help_abuse2">
+        <precondition>actor_need_help.i_am_friend</precondition>
+        <precondition>actor_need_help.scheme_is_not_active</precondition>
+        <precondition>actor_need_help.abuse_limit2</precondition>
+        <precondition>actor_need_help.abuse_no_punch</precondition>
+        <precondition>actor_need_help.actor_can_decide</precondition>
+        <phrase_list>
+            <phrase id="0">
+                <text>reached...</text>
+                <next>11a</next>
+                <next>12</next>
+            </phrase>
+            <phrase id="11a">
+                <precondition>actor_need_help.npc_have_medkit</precondition>
+                <text>Thanks you, you are a really friend</text>
+                <action>actor_need_help.activate_scheme</action>
+                <action>actor_need_help.reset_abuse</action>
+            </phrase>
+            <phrase id="12">
+                <precondition>actor_need_help.npc_havent_medkit</precondition>
+                <text>It's pretty dangerous wandering around without medkits... give me some, and i will use them to heal myself and you.</text>
+                <action>actor_need_help.inc_abuse</action>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="actor_will_need_help_abuse">
+        <precondition>actor_need_help.i_am_friend</precondition>
+        <precondition>actor_need_help.scheme_is_not_active</precondition>
+        <precondition>actor_need_help.abuse_limit</precondition>
+        <precondition>actor_need_help.actor_can_decide</precondition>
+        <phrase_list>
+            <phrase id="0">
+                <text>Friend, you will be able with...</text>
+                <next>11a</next>
+                <next>12</next>
+            </phrase>
+            <phrase id="11a">
+                <precondition>actor_need_help.npc_have_medkit</precondition>
+                <text>thanks, i owe you one, friend</text>
+                <action>actor_need_help.activate_scheme</action>
+                <action>actor_need_help.reset_abuse</action>
+            </phrase>
+            <phrase id="12">
+                <precondition>actor_need_help.npc_havent_medkit</precondition>
+                <text>Hey, do you have a medkit for me?</text>
+                <action>actor_need_help.inc_abuse</action>
+                <next>21</next>
+                <next>22</next>
+                <next>23</next>
+                <next>24</next>
+            </phrase>
+            <phrase id="21">
+                <text>Три?</text>
+                <next>31</next>
+            </phrase>
+            <phrase id="22">
+                <text>Well excuse. But soak- that you will be able?</text>
+                <next>32</next>
+            </phrase>
+            <phrase id="23">
+                <precondition>actor_need_help.actor_drunk</precondition>
+                <text>Hm? You this... You respect me</text>
+                <next>100</next>
+                <next>101</next>
+            </phrase>
+            <phrase id="24">
+                <text>All, all, understood already. But give 4 to you first-aid kit I sell?</text>
+                <next>34</next>
+            </phrase>
+            <phrase id="31">
+                <text>It is correct. You know how to count, it means the brains in the order. But that you do ask again then? Strange you some today...</text>
+            </phrase>
+            <phrase id="32">
+                <text>Ugh, pancake, well and small joke in you. Stupid</text>
+            </phrase>
+            <phrase id="33a">
+                <precondition>actor_need_help.actor_antigas</precondition>
+                <text>I respect, respect. You there see do not choke in gas mask your. But that you blevanesh' still</text>
+                <next>41</next>
+            </phrase>
+            <phrase id="33">
+                <precondition>actor_need_help.actor_no_antigas</precondition>
+                <text>You are treated it means... Go sober up...</text>
+                <next>42</next>
+            </phrase>
+            <phrase id="34">
+                <text>Kha, but you Sidorovichem not relatives, A? Although, give, it will prove useful</text>
+            </phrase>
+            <phrase id="41">
+                <text>Everything under kotr... Comte... Us it is normal, not combat</text>
+            </phrase>
+            <phrase id="42">
+                <text>But you do not indicate to me...</text>
+            </phrase>
+            <phrase id="100">
+                <precondition>actor_need_help.actor_antigas</precondition>
+                <text>I respect, respect. You there see do not choke in gas mask your. But that you blevanesh' still.</text>
+                <next>41</next>
+            </phrase>            
+            <phrase id="101">
+                <precondition>actor_need_help.actor_no_antigas</precondition>
+                <text>You are treated it means... Hold your breath..</text>
+            </phrase>            
+        </phrase_list>
+    </dialog>
+    <dialog id="actor_will_need_help">
+        <precondition>actor_need_help.i_am_friend</precondition>
+        <precondition>actor_need_help.scheme_is_not_active</precondition>
+        <precondition>actor_need_help.no_abuse_limit</precondition>
+        <precondition>actor_need_help.actor_can_decide</precondition>
+        <phrase_list>
+            <phrase id="0">
+                <text>Hi there... would you like to join me in my adventures and fights? It's too dangerous to go alone in the Zone.</text>
+                <next>11a</next>
+                <next>12</next>
+            </phrase>
+            <phrase id="11a">
+                <precondition>actor_need_help.npc_have_medkit</precondition>
+                <text>Well, of course, no one is bulletproof. I have some medkits....</text>
+                <action>actor_need_help.status_changed</action>
+                <action>actor_need_help.activate_scheme</action>
+            </phrase>
+            <phrase id="12">
+                <precondition>actor_need_help.npc_havent_medkit</precondition>
+                <text>Sorry, friend... I dont have more medkits.</text>
+                <action>actor_need_help.inc_abuse</action>
+                <next>21</next>
+                <next>22</next>
+                <next>23</next>
+                <next>24</next>
+                <next>25</next>
+            </phrase>
+            <phrase id="21">
+                <text>Understandably ...</text>
+            </phrase>
+            <phrase id="22">
+                <precondition>actor_need_help.actor_have_ge1_medkit</precondition>
+                <text>Thats okay. Here is a medkit...</text>
+                <action>actor_need_help.transfer_1_medkit</action>
+                <next>31</next>
+            </phrase>
+            <phrase id="23">
+                <precondition>actor_need_help.actor_have_ge2_medkit</precondition>
+                <text>Thats okay. Here are two medkits.</text>
+                <action>actor_need_help.transfer_2_medkit</action>
+                <next>31</next>
+            </phrase>
+            <phrase id="24">
+                <precondition>actor_need_help.actor_have_ge4_medkit</precondition>
+                <text>Thats okay. Here are four medkits.</text>
+                <action>actor_need_help.transfer_4_medkit</action>
+                <next>31</next>
+            </phrase>
+            <phrase id="25">
+                <precondition>actor_need_help.actor_have_ge8_medkit</precondition>
+                <text>Thats okay. Here you go... eight medkits .</text>
+                <action>actor_need_help.transfer_8_medkit</action>
+                <next>32</next>
+            </phrase>
+            <phrase id="31">
+                <text>Well, lets go. I will follow you from a distance.</text>
+                <action>actor_need_help.status_changed</action>
+                <action>actor_need_help.activate_scheme</action>
+            </phrase>
+            <phrase id="32">
+                <text>You know something...hehe. You can count on me!</text>
+                <action>actor_need_help.status_changed</action>
+                <action>actor_need_help.activate_scheme</action>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="actor_will_not_need_help">
+        <precondition>actor_need_help.i_am_friend</precondition>
+        <precondition>actor_need_help.scheme_is_active</precondition>
+        <precondition>actor_need_help.actor_can_decide</precondition>
+        <phrase_list>
+            <phrase id="0">
+                <text>Thank you, friend, I no longer need your assistance. Hope to see you again.</text>
+                <next>21</next>
+            </phrase>
+            <phrase id="21">
+                <text>Yes, you have helped me a lot, I owe you one.</text>
+                <action>actor_need_help.status_changed</action>
+                <action>actor_need_help.deactivate_scheme</action>
+            </phrase>
+        </phrase_list>
+    </dialog>
+    <dialog id="actor_gives_commands">
+        <precondition>actor_need_help.scheme_is_active</precondition>
+        <init_func>actor_need_help.init_commands_dialog</init_func>
+    </dialog>
+    <dialog id="actor_cannot_decide">
+        <precondition>actor_need_help.i_am_friend</precondition>
+        <precondition>actor_need_help.actor_cannot_decide</precondition>
+        <phrase_list>
+            <phrase id="0">
+                <text>I care about ...</text>
+                <next>21</next>
+                <next>22</next>
+            </phrase>
+            <phrase id="21">
+                <precondition>actor_need_help.scheme_is_not_active_npc</precondition>
+                <text>Well, okay, but first make a plan, then we can talk about assistance...</text>
+            </phrase>
+            <phrase id="22">
+                <precondition>actor_need_help.scheme_is_active_npc</precondition>
+                <text>Friend,  make your choice and i will cover you.</text>
+            </phrase>
+        </phrase_list>
+    </dialog>
+</game_dialogs>

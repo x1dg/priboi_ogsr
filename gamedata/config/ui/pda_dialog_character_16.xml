@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<!-- ИНФОРМАЦИЯ О ГГ В КПК -->
+<window>
+	
+	<!-- ICON -->
+	<icon_static x="0" y="0" width="126" height="108"stretch="1"/>
+	
+	<!-- RANK -->
+	<rank_static x="134" y="52" width="120" height="16">
+		<text x="0" y="0" font="letterica18" color="grey_5"/>
+	</rank_static>
+	<rank_caption x="134" y="40" width="120" height="15">
+		<auto_static x="0" y="-40" >
+			<text font="letterica16" color="grey_2">Name</text>
+		</auto_static>
+		<auto_static x="0" y="-26">
+			<text font="letterica18" color="grey_5">actor_name</text>
+		</auto_static>
+		<text x="0" y="0" font="letterica16" color="grey_2">ui_st_rank</text>
+	</rank_caption>
+
+	<!-- COMMUNITY -->
+	<community_static x="134" y="94" width="120" height="15">
+		<text x="0" y="0" font="letterica18" color="grey_5"></text>
+	</community_static>
+	<community_caption x="134" y="80" width="120" height="15">
+		<text x="0" y="0" font="letterica16" color="grey_2">ui_st_community</text>
+	</community_caption>
+
+</window>

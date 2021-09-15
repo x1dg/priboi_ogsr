@@ -1,0 +1,66 @@
+﻿<?xml version='1.0' encoding="UTF-8"?>
+<!-- ЖУРНАЛ -->
+<window>
+	<main_wnd x="27" y="101" width="990" height="612">
+		<left_frame x="0" y="0" width="273" height="604" a="255">
+			<texture>ui_pda_frame</texture>
+
+			<left_frame_header x="1" y="9" width="318" height="21">
+				<texture>ui_pda_blank</texture>
+
+				<anim_static x="246" y="-12" width="24" height="32" frames="16" duration="1000" columns="8" frame_width="32" frame_height="32" cyclic="1" autoplay="1" stretch="1">
+					<texture>ui\ui_pda_anims_01</texture>
+				</anim_static>
+
+				<filter_tab x="0" y="0" width = "270" height="12">
+					<button x="0" y="0" width="70" height="12"  hint="pda_btn_journal_hint">
+						<text  align="l" x="0" y="0" font="letterica18" color="white_4" complex_mode="0">pda_btn_journal</text>
+						<text_color>
+							<t color="white_4"/> <d color="grey_2"/> <e color="grey_2"/> <h color="white_2"/>
+						</text_color>
+					</button>
+
+					<button x="80" y="0" width="120" height="12" hint="pda_btn_news_hint">
+						<text  align="l" x="0" y="0" font="letterica18" color="white_4" complex_mode="0">pda_btn_news</text>
+						<text_color>
+							<t color="white_4"/> <d color="grey_2"/> <e color="grey_2"/> <h color="white_2"/>
+						</text_color>
+					</button>
+
+					<_button x="160" y="0" width="40" height="12" hint="pda_btn_info_hint">
+						<text align="l" x="0" y="0" font="letterica18" color="white_4" complex_mode="0">pda_btn_info</text>
+						<text_color>
+							<t color="white_4"/> <d color="grey_2"/> <e color="grey_2"/> <h color="white_2"/>
+						</text_color>
+					</_button>
+				</filter_tab>
+			</left_frame_header>
+
+			<work_area x="10" y="36" width="292" height="572">
+				<src_list x="10" y="0" width="247" height="560" right_ident="15" item_height="20"  always_show_scroll="0" scroll_profile="pda">
+					<text font="letterica18" color="grey_2">Encyclopedia</text>
+					<tree_root_font font="letterica18" color="grey_2">Encyclopedia</tree_root_font>
+					<tree_item_font font="letterica16" color="grey_2">Encyclopedia</tree_item_font>
+				</src_list>
+			</work_area>
+		</left_frame>
+
+		<right_frame x="282" y="0" width="433" height="604">
+			<texture>ui_pda_frame</texture>
+
+			<right_frame_header x="-281.5" y="29" width="271" height="21">
+				<texture>ui_pda_line_h</texture>
+			</right_frame_header>
+
+			<work_area x="8" y="8" width="428" height="610">
+				<scroll_view  x="6" y="-2" width="414" height="592" always_show_scroll="0" scroll_profile="pda"/>
+			</work_area>
+		</right_frame>
+
+
+	</main_wnd>
+	
+	<!-- NEW MESSAGE -->
+	<updated_section_static/>	
+	<old_section_static/>
+</window>

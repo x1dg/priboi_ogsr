@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<!-- ОКНО ДИАЛОГА -->
+<window>
+	<!-- Диалоговое окно -->
+	<top_background x="273" y="0">
+		<auto_static x="10" y="724" width="457" height="36" stretch="1">
+			<texture color="talk_pane">ui\seq\ui_dialog_pane</texture>
+		</auto_static>
+		<auto_static width="475.2" height="760" stretch="1">
+			<texture>ui_talk_dialogue</texture>
+		</auto_static>
+		<auto_static x="214" y="512" width="47" height="4" stretch="1">
+			<texture color="talk_connect">ui\seq\ui_dialog_connect</texture>
+		</auto_static>
+	</top_background>
+
+	<bottom_background/>
+	<left_character_icon x="-2000"/>	
+	<right_character_icon x="-2000"/>
+	
+	<!-- Кнопка "Торговать" -->
+	<button x="390" y="731" width="243" height="24" highlight_text="1" accel="kX">
+        <texture>ui_talk_button</texture>
+		<text align="c"	font="letterica18">ui_st_trade</text>
+        <text_color>
+			<e color="grey_3"/>
+			<t color="grey_1"/>
+			<d color="transparent"/>
+			<h color="white_1"/>
+		</text_color>
+	</button>
+	
+	<!-- Разделенное диалоговое окно (не используется, ибо frameline игнорирует stretch) -->
+	<frame_line_window x="218" y="15" width="600" height="600" vertical="1">
+		<texture>null</texture>
+		<title x="-2000"/>
+	</frame_line_window>
+	<frame_line_window x="218" y="485" width="600" height="250" vertical="1">
+		<texture>null</texture>
+		<title x="-2000"/>
+	</frame_line_window>
+	
+	<!-- Границы текста диалогов: вопросы ГГ(10) и лог диалога -->
+	<questions_list x="80" y="46" width="428" height="188" right_ident="0" always_show_scroll="0"/>
+	<answers_list	x="80" y="20" width="428" height="453" right_ident="0" always_show_scroll="0"/>
+
+	<!-- Стартовый диалог ГГ к НПС -->
+	<question_item x="0" y="0" width="418" height="30" min_height="13">
+		<num_text>
+			<text font="letterica18" color="talk_question_e"/>
+		</num_text>
+		<content_text x="20" y="0" width="418" height="20">
+			<text font="letterica18" color="talk_question_e" align="l" complex_mode="1"/>
+			<text_color>
+				<e color="talk_question_e"/>
+				<h color="talk_question_h"/>
+				<t color="talk_question_t"/>
+			</text_color>
+		</content_text>
+	</question_item>
+	
+	<!-- ГГ: имя и реплика -->
+	<actor_answer_item x="0" y="0" width="418" height="40" min_height="13" bottom_footer="10">
+		<name_caption x="0" y="0" width="410" height="10">
+			<text font="graffiti22" color="talk_log_heroname" complex_mode="0"/>
+		</name_caption>
+		<content_text x="20" y="22" width="390" height="40" complex_mode="1">
+			<text font="letterica18" color="talk_log_heroreplica"/>
+		</content_text>
+	</actor_answer_item>
+
+	<!-- ГГ: имя, реплика и значок сообщения -->
+	<iconed_answer_item x="0" y="0" width="418" height="40" min_height="30" bottom_footer="5">
+		<name_caption x="0" y="0" width="0" height="0"/>
+		<content_text x="67" y="0" width="390" height="40" complex_mode="1">
+			<text font="letterica16" color="talk_log_npcreplica"/> <!-- ! -->
+		</content_text>
+		<msg_icon x="20" y="3" width="38.2" height="29" stretch="1">
+		</msg_icon>
+	</iconed_answer_item>
+
+	<!-- НПС: имя и реплика -->
+	<other_answer_item x="0" y="0" width="418" height="40" min_height="13" bottom_footer="5">
+		<name_caption x="0" y="0" width="410" height="10">
+			<text font="graffiti22" color="talk_log_npcname" complex_mode="0"/>
+		</name_caption>		
+		<content_text x="20" y="22" width="390" height="40" complex_mode="1">
+			<text font="letterica18" color="talk_log_npcreplica"/>
+		</content_text>
+	</other_answer_item>
+
+	<!-- НПС: имя, реплика и значок сообщения -->
+	<iconed_trade_info x="0" y="0" width="418" height="0" min_height="20" bottom_footer="5">
+		<name_caption x="0" y="0" width="0" height="0"/>
+		<content_text x="55" y="2" width="390" height="20" complex_mode="1">
+			<text font="letterica18" color="talk_log_npc_iconed"/>
+		</content_text>
+		<msg_icon x="20" y="0" width="26.2" height="20" stretch="1">
+		</msg_icon>
+	</iconed_trade_info>
+	
+	<!-- НПС: имя, реплика и без значка -->
+	<simple_answer_item x="0" y="0" width="418" height="40" min_height="20" bottom_footer="5">
+		<name_caption x="0" y="0" width="0" height="0"/>		
+		<content_text x="20" y="0" width="390" height="40" complex_mode="1">
+			<text font="letterica18" color="talk_log_npc_iconed"/>
+		</content_text>
+		<msg_icon x="0" y="0" width="0" height="0">
+		</msg_icon>
+	</simple_answer_item>
+</window>

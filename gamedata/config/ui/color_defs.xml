@@ -1,0 +1,205 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<!-- ПАЛИТРА ЦВЕТОВ -->
+<colors>
+	<!-- For applying specified color insert "%cColorName" into the text -->
+	<!-- Use "%cDEFAULT" color when need to switch to default color of UI element -->
+	<color name="red"		r="255" g="0" b="0"/>
+	<color name="green"		r="0" g="192" b="204"/>
+	<color name="blue"		r="0" g="0" b="255"/>
+	<color name="gray"		r="128" g="128" b="128"/>
+	<color name="white"		r="255" g="255" b="255"/>
+	<color name="orange"	r="255" g="110" b="32"/>
+	<color name="black"     r="0"   g="0"   b="0"/>
+	<color name="UI_orange" r="244" g="244" b="244"/>
+	<color name="black"     r="0"   g="0"   b="0"/>
+	<color name="light_gray" r="115" g="114" b="112"/>
+	<color name="tut_gray"  r="100" g="100" b="100"/>
+	<color name="dark_gray"  r="80" g="80" b="80"/>
+	<color name="yellow"     r="255" g="255" b="0"/>	
+	<color name="ui_red"       r="255" g="0"   b="0"/>
+	<color name="ui_green"     r="0"   g="255" b="0"/>
+	<color name="ui_blue"      r="0"   g="0"   b="255"/>
+	<color name="ui_white"     r="255" g="255" b="255"/>
+	<color name="ui_black"     r="0"   g="0"   b="0"/>
+	<color name="ui_gray"      r="128" g="128" b="128"/>
+	<color name="ui_yellow"    r="255" g="255" b="0"/>	
+	<color name="ui_lime"   r="0" g="192" b="204"/>	
+	<color name="ui_1"      r="0" g="192" b="204"/> 
+	<color name="ui_2"      r="0" g="192" b="204"/> 
+	<color name="ui_3"      r="0" g="192" b="204"/> 
+	<color name="ui_4"      r="0" g="192" b="204"/> 
+	<color name="ui_5"      r="0" g="192" b="204"/> 
+	<color name="ui_6"      r="0" g="192" b="204"/> 
+	<color name="ui_7"      r="0" g="192" b="204"/> 
+	<color name="ui_8"      r="0" g="192" b="204"/> 
+	<color name="ui_9"      r="0" g="192" b="204"/> 
+	<color name="ui_10"     r="0" g="192" b="204"/>	
+	<color name="ui_mm_font"     r="41" g="27" b="16"/>	
+	<color name="pda_green"   r="25"  g="123" b="48"/>
+	<color name="pda_yellow"  r="248" g="148" b="29"/>
+	<color name="pda_red"     r="238" g="28"  b="36"/>
+	<color name="pda_blue"    r="11"  g="178" b="248"/>
+	<color name="edit"        r="244" g="244" b="244"/>
+	<color name="ui_clr_1"  r="244" g="244" b="244"/>
+	<color name="ui_clr_2"  r="244" g="244" b="244"/>
+	<color name="ui_clr_3"  r="244" g="244" b="244"/>
+	<color name="rank_1"  r="200" g="180" b="180"/>
+	<color name="rank_2"  r="255" g="180" b="180"/>
+
+	<color name="black_1"	r="0" g="0" b="0"/>
+	<color name="black_2"	r="16" g="16" b="16"/>
+	<color name="black_3"	r="32" g="32" b="32"/>
+	<color name="black_4"	r="48" g="48" b="48"/>
+	<color name="black_5"	r="64" g="64" b="64"/>
+	<color name="grey_1"	r="96" g="96" b="96"/>
+	<color name="grey_2"	r="128" g="128" b="128"/>
+	<color name="grey_3"	r="144" g="144" b="144"/>
+	<color name="grey_4"	r="170" g="170" b="170"/>
+	<color name="grey_5"	r="192" g="192" b="192"/>
+	<color name="white_1"	r="204" g="204" b="204"/>
+	<color name="white_2"	r="224" g="224" b="224"/>
+	<color name="white_3"	r="244" g="244" b="244"/>
+	<color name="white_4"	r="255" g="255" b="255"/>
+	<color name="transparent" r="224" g="224" b="224" a="0"/>
+
+	<color name="load_line_min"			r="204" g="204" b="204"/>			<!-- загрузка: прогресс закрузки min-->
+	<color name="load_line_mid"			r="204" g="204" b="204"/>			<!-- загрузка: прогресс закрузки mid-->
+	<color name="load_line_max"			r="204" g="204" b="204"/>			<!-- загрузка: прогресс закрузки max-->
+	<color name="load_verb"				r="096" g="096" b="096"/>			<!-- загрузка: стадия загрузки текстом -->
+	<color name="load_num"				r="204" g="204" b="204"/>			<!-- загрузка: стадия загрузки числами -->
+	<color name="menu_downlight"		r="0" g="224" b="255"/>				<!-- главное меню: подсветка курсора -->
+	
+	<color name="tutorial_gameover"		r="255" g="24" b="24" a="255"/>		<!-- обучение: игра окончена -->
+	<color name="tutorial_text"			r="214" g="214" b="214" a="255"/>	<!-- обучение: тексты на экране -->
+	<color name="tutorial_icon"			r="214" g="214" b="214" a="255"/>	<!-- обучение: значок уведомления -->
+	
+	<color name="map_enemy"				r="255" g="0" b="0"/>				<!-- метки: враг -->
+	<color name="map_neutral"			r="255" g="200" b="0"/>				<!-- метки: нейтрал -->
+	<color name="map_friend"			r="50" g="255" b="0"/>				<!-- метки: друг -->
+	<color name="map_deadbody"			r="168" g="168" b="168"/>			<!-- метки: труп -->
+	<color name="map_quest"				r="244" g="244" b="244"/>			<!-- метки: циклические задания -->
+	<color name="map_task"				r="244" g="244" b="244"/>			<!-- метки: квестовый предмет/зона/действие -->
+	<color name="map_task_npc"			r="244" g="244" b="244"/>			<!-- метки: квестовый персонаж -->
+	<color name="map_task_highlight"	r="244" g="244" b="244"/>			<!-- метки: текущее задание/нпс -->
+	<color name="map_treasure"			r="0" g="176" b="0"/>				<!-- метки: тайник -->
+	<color name="map_gps"				r="255"	g="80"	b="80"/>			<!-- метки: gps -->
+	<color name="map_grenade"			r="255"	g="96"	b="0"/>				<!-- метки: летящая граната -->
+	<color name="map_spot"				r="234" g="192" b="0"/>				<!-- метки: метка (флажок) -->
+	<color name="map_lchanger"			r="224"	g="224"	b="224"/>			<!-- метки: переходы -->
+	<color name="map_actor"				r="0" g="192" b="192"/>				<!-- метки: ГГ -->
+	<color name="map_zone"				r="255"	g="80"	b="0"/>				<!-- метки: аномалия (элитный детектор в мп) -->
+	<color name="map_add_spot"			r="204"	g="204"	b="204"/>			<!-- метки: добавить пользовательскую метку (Open X-Ray) -->
+
+	<color name="pda_task_active"		r="128" g="128" b="128"/>			<!-- кпк: активное задание -->
+	<color name="pda_task_accomplished"	r="128" g="170" b="170"/>			<!-- кпк: выполненное задание -->
+	<color name="pda_task_failed"		r="170" g="128" b="128"/>			<!-- кпк: проваленное задание -->
+	<color name="pda_task_flash"		r="0" g="192" b="192"/>				<!-- кпк: активный пункт задания -->
+	<color name="pda_tab_filter"		r="0" g="192" b="192"/>				<!-- кпк: вкладки заданий -->
+	<color name="pda_tab_flash"			r="0" g="192" b="192"/>				<!-- кпк: вкладка кпк с обновленной информацией -->
+	<color name="pda_online"			r="0" g="192" b="192"/>				<!-- кпк: контакты в сети -->
+	<color name="pda_rel_name"			r="224" g="224" b="224"/>			<!-- кпк: имя нпс/гг -->
+	<color name="pda_rel_caption"		r="96" g="96" b="96"/>				<!-- кпк: характеристика гг/нпс (левый столбец) -->
+	<color name="pda_rel_text"			r="128" g="128" b="128"/>			<!-- кпк: характеристика гг/нпс (правый столбец) -->
+	<color name="pda_error"				r="255" g="32" b="32"/>				<!-- кпк: ошибка -->
+	<color name="pda_ok"				r="0" g="192" b="192"/>				<!-- кпк: ок -->
+
+	<color name="talk_question_e"		r="192" g="192" b="192"/>			<!-- диалог: вопрос гг обычный -->
+	<color name="talk_question_h"		r="255" g="255" b="255"/>			<!-- диалог: вопрос гг подсвеченный -->
+	<color name="talk_question_t"		r="24" g="192" b="192"/>			<!-- диалог: вопрос гг активный -->
+	<color name="talk_log_heroname"		r="96" g="192" b="192"/>			<!-- диалог: имя гг -->
+	<color name="talk_log_heroreplica"	r="96" g="192" b="192"/>			<!-- диалог: реплика гг -->
+	<color name="talk_log_npcname"		r="192" g="192" b="192"/>			<!-- диалог: имя нпс-->
+	<color name="talk_log_npcreplica"	r="192" g="192" b="192"/>			<!-- диалог: реплика нпс -->
+	<color name="talk_log_npc_iconed"	r="150" g="150" b="150"/>			<!-- диалог: реплика нпс с контекстом -->
+	<color name="talk_pane"				r="192" g="192" b="192"/>			<!-- диалог: pane -->
+	<color name="talk_connect"			r="0" g="208" b="208"/>				<!-- диалог: connect -->
+
+	<color name="inv_condition_min"		r="96" g="96" b="96"/>				<!-- инвентарь: шкала минимального состояния предмета -->
+	<color name="inv_condition_mid"		r="144" g="144" b="144"/>			<!-- инвентарь: шкала среднего состояния предмета -->
+	<color name="inv_condition_max"		r="0" g="144" b="192"/>				<!-- инвентарь: шкала максимального состояния предмета -->
+	<color name="inv_condition_base"	r="144" g="144" b="144" a="80"/>	<!-- инвентарь: фон состояния предмета -->
+	<color name="inv_condition_full"	r="164" g="164" b="164"/>			<!-- инвентарь: фон состояния предмета -->
+	<color name="inv_bar_health"		r="0" g="128" b="144" a="186"/>		<!-- инвентарь: шкала здоровья -->
+	<color name="inv_bar_psy"			r="0" g="96" b="128"/>				<!-- инвентарь: шкала пси-здоровья -->
+	<color name="inv_bar_radiation"		r="160" g="128" b="0"/>				<!-- инвентарь: шкала радиации -->
+	<color name="inv_bar_rank"			r="16" g="112" b="16"/>				<!-- инвентарь: шкала опыта -->
+	<color name="inv_bar_item"			r="0" g="144" b="192"/>				<!-- инвентарь: шкала состояния предмета -->
+	<color name="inv_icons_af"			r="224" g="224" b="224"/>			<!-- инвентарь: значки свойств артефактов -->
+	<color name="inv_icons_immunity"	r="224" g="224" b="255"/>			<!-- инвентарь: значки защитных свойств брони -->
+	<color name="inv_immunity"			r="224" g="224" b="224"/>			<!-- инвентарь: параметры костюма -->
+	<color name="inv_item_-_prop"		r="224" g="48" b="48"/>				<!-- инвентарь: отрицательное значение костюма/артефакта/... -->
+	<color name="inv_item_+_prop"		r="0" g="192" b="204"/>				<!-- инвентарь: положительное значение костюма/артефакта/... -->
+	<color name="inv_item_name"			r="224" g="224" b="224"/>			<!-- инвентарь: название предмета -->
+	<color name="inv_item_weight"		r="224" g="224" b="224"/>			<!-- инвентарь: вес предмета -->
+	<color name="inv_item_cost"			r="224" g="224" b="224"/>			<!-- инвентарь: цена предмета -->
+	<color name="inv_item_line"			r="224" g="224" b="224"/>			<!-- инвентарь: разделительная линия -->
+	<color name="inv_item_descr"		r="170" g="170" b="170"/>			<!-- инвентарь: описание предмета -->
+	<color name="inv_item_lbl_prop"		r="170" g="170" b="170"/>			<!-- инвентарь: имена параметров (ожог, взрыв...)-->
+	<color name="inv_items"				r="96" g="96" b="96"/>				<!-- инвентарь: надпись "предметы" -->
+	<color name="inv_kg"				r="144" g="144" b="144"/>			<!-- инвентарь: надпись "kg." -->
+	<color name="inv_money"				r="244" g="244" b="244"/>			<!-- инвентарь: деньги гг/нпс -->
+	<color name="inv_time"				r="244" g="244" b="244"/>			<!-- инвентарь: время -->
+	<color name="inv_time_label"		r="144" g="144" b="144"/>			<!-- инвентарь: надпись "время" -->
+	<color name="inv_tr_money"			r="244" g="244" b="244"/>			<!-- инвентарь: сумма купли/продажи гг -->
+	<color name="inv_rel_name"			r="224" g="224" b="224"/>			<!-- инвентарь: имя нпс/гг -->
+	<color name="inv_rel_caption"		r="96" g="96" b="96"/>				<!-- инвентарь: характеристика гг/нпс (левый столбец) -->
+	<color name="inv_rel_text"			r="128" g="128" b="128"/>			<!-- инвентарь: характеристика гг/нпс (правый столбец) -->
+	<color name="inv_radblood_25"		r="32" g="164" b="172"/>			<!-- инвентарь: кровотечение/радиация >25% -->
+	<color name="inv_radblood_50"		r="224" g="192" b="32"/>			<!-- инвентарь: кровотечение/радиация 25-50% -->
+	<color name="inv_radblood_75"		r="255" g="128" b="32"/>			<!-- инвентарь: кровотечение/радиация 50-75% -->
+	<color name="inv_radblood_100"		r="255" g="32" b="32"/>				<!-- инвентарь: кровотечение/радиация <100% -->
+	<color name="inv_highlight"			r="128" g="128" b="128"/>			<!-- инвентарь: окон сообщений -->
+	<color name="inv_hint_pane"			r="48" g="48" b="48" a="128"/>		<!-- инвентарь: hint_pane -->
+
+	<color name="hud_scale_health"		r="0" g="64" b="74"/>				<!-- худ: шкала здоровья -->
+	<color name="hud_scale_armor"		r="255" g="255" b="255"/>			<!-- худ: шкала брони -->
+	<color name="hud_scale_stamina"		r="0" g="70" b="84"/>				<!-- худ: шкала выносливости -->
+	<color name="hud_scale_noise"		r="0" g="144" b="192"/>				<!-- худ: шкала шума -->
+	<color name="hud_scale_light"		r="24" g="255" b="8"/>				<!-- худ: шкала видимости -->
+	<color name="hud_scale_car"			r="0" g="70" b="84"/>				<!-- худ: шкала авто -->
+	<color name="hud_scale_ammo"		r="144" g="144" b="144"/>			<!-- худ: счетчик патронов -->
+	<color name="hud_scale_enemy"		r="255" g="64" b="64" a="192"/>		<!-- худ: шкала здоровья врага -->
+	<color name="hud_enemy_name"		r="180" g="180" b="180"/>			<!-- худ: имя врага на шкале -->
+	<color name="hud_weapon_name"		r="128" g="128" b="128"/>			<!-- худ: название оружия/тип патронов -->
+	<color name="hud_new_msg"			r="0" g="192" b="192"/>				<!-- худ: сообщение в кпк (задачи/журнал/справка) -->
+	<color name="hud_game_time"			r="192" g="192" b="192"/>			<!-- худ: время -->
+	<color name="hud_online"			r="150" g="150" b="150"/>			<!-- худ: контакты -->
+	<color name="hud_weapon_pane"		r="64" g="64" b="64"/>				<!-- худ: weapon_pane -->
+	<color name="hud_timer"				r="192" g="192" b="192"/>			<!-- худ: таймер -->
+	<color name="hud_timer_flash"		r="96" g="0" b="0"/>				<!-- худ: мигающий индикатор таймера -->
+	<color name="hud_timer_name"		r="144" g="144" b="144"/>			<!-- худ: заголовок таймера -->
+	<color name="hud_hazard_psi"		r="0" g="144" b="192"/>				<!-- худ: значок зоны пси-излучения -->
+	<color name="hud_hazard_radiation"	r="0" g="144" b="192"/>				<!-- худ: значок зоны радиации -->
+	<color name="hud_hazard_gun"		r="0" g="144" b="192"/>				<!-- худ: значок заклинившего оружия -->
+	<color name="hud_hazard_walk"		r="0" g="144" b="192"/>				<!-- худ: значок истощения -->
+	<color name="hud_hazard_weight"		r="255" g="32" b="32"/>				<!-- худ: значок перегруза -->
+	<color name="hud_hazard_chemical"	r="0" g="144" b="192"/>				<!-- худ: значок зоны химической зараженности (неиспользуется)-->
+	<color name="hud_hazard_thermal"	r="0" g="144" b="192"/>				<!-- худ: значок зоны повышенной t (неиспользуется)-->
+	<color name="hud_main_task"			r="204" g="204" b="204"/>			<!-- худ: главное задание -->
+	<color name="hud_saved_game"		r="244" g="244" b="244"/>			<!-- худ: игра сохранена -->
+	<color name="hud_autosave"			r="244" g="244" b="244"/>			<!-- худ: автосохранение... -->
+	<color name="hud_tutorial"			r="244" g="244" b="244"/>			<!-- худ: текст обучения -->
+	<color name="hud_used_item"			r="244" g="244" b="244"/>			<!-- худ: использовано -->
+	<color name="hud_use"				r="244" g="244" b="244"/>			<!-- худ: взаимодействие (говорить/поднять/обыскать...) -->
+	<color name="hud_see_you"			r="204" g="204" b="204"/>			<!-- худ: масхалат -->
+	<color name="hud_debug"				r="244" g="244" b="244"/>			<!-- худ: отладочная информация -->
+	<color name="hud_pda_msg"			r="244" g="244" b="244"/>			<!-- худ: сообщения кпк -->	
+	<color name="hud_slot_count"		r="192" g="192" b="192"/>			<!-- худ: быстрый слот: счетчик -->
+	<color name="hud_slot_key"			r="192" g="192" b="192"/>			<!-- худ: быстрый слот: клавиша -->
+	<color name="hud_slot_inv_key"		r="192" g="192" b="192"/>			<!-- худ: быстрый слот: клавиша в инвентаре -->
+	<color name="hud_layer_medkit"		r="192" g="192" b="192"/>			<!-- худ: эффект значка использования аптечки -->
+	<color name="hud_layer_bandage"		r="192" g="192" b="192"/>			<!-- худ: эффект значка использования бинта -->
+	<color name="hud_layer_antirad"		r="192" g="192" b="192"/>			<!-- худ: эффект значка использования антирада/водки -->
+	<color name="hud_layer_drink"		r="192" g="192" b="192"/>			<!-- худ: эффект значка использования энерегетика-->
+	<color name="hud_layer_food"		r="192" g="192" b="192"/>			<!-- худ: эффект значка приема еды -->
+	<color name="hud_layer_wound"		r="0" g="0" b="0" a="214"/>			<!-- худ: эффект значка кровотечения -->
+	<color name="hud_layer_rad"			r="0" g="0" b="0" a="186"/>			<!-- худ: эффект значка радиации -->
+	<color name="hud_layer_psyhealth"	r="0" g="0" b="0" a="214"/>			<!-- худ: эффект значка пси-здоровья -->
+	<color name="hud_layer_satiety"		r="0" g="0" b="0" a="214"/>			<!-- худ: эффект значка сытости -->
+	<color name="hud_layer_weapon"		r="0" g="0" b="0" a="214"/>			<!-- худ: эффект значка заклинившего оружия -->
+	<color name="hud_layer_godmode"		r="0" g="0" b="0" a="214"/>			<!-- худ: эффект значка бессмертия -->
+	<color name="hud_layer_artefact"	r="0" g="0" b="0" a="214"/>			<!-- худ: эффект значка артефакта (мп) -->
+	<color name="hud_layer_sleep"		r="0" g="0" b="0" a="214"/>			<!-- худ: эффект значка сна -->
+	<color name="hud_layer_weight"		r="0" g="0" b="0" a="214"/>			<!-- худ: эффект значка переносимого веса -->
+	<color name="hud_layer_thirst"		r="0" g="0" b="0" a="214"/>			<!-- худ: эффект значка жажды (OGSR опция) -->
+</colors>

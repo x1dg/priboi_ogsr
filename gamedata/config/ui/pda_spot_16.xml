@@ -1,0 +1,31 @@
+<w>
+	<!-- ÏÎËÜÇÎÂÀÒÅËÜÑÊÈÅ ÌÅÒÊÈ ÍÀ ÊÏÊ -->
+	<background x="49" y="63" width="913" height="148">
+		<!--auto_static x="-5" y="0" width="240" height="85" stretch="1">
+			<texture>ui_frame_mainDes</texture>
+		</auto_static-->
+	</background>
+
+	<spot_name_edit x="4" y="6" width="684" height="128">
+		<text font="letterica18" color="map_add_spot"/>
+		<texture>ui_stroketextbox</texture>
+	</spot_name_edit>
+
+	<btn_apply x="230" y="144" width="117" height="28">
+		<texture_e>ui_pda_button_e</texture_e>
+		<texture_t>ui_pda_button_t</texture_t>
+		<texture_h>ui_pda_button_h</texture_h>
+		<text>ui_inv_ok</text>
+		<sound_h>device\pda\pda_tap_hover</sound_h>
+		<sound_t>device\pda\pda_tap_active</sound_t>
+	</btn_apply>
+
+	<btn_cancel x="346" y="144" width="117" height="28">
+		<texture_e>ui_pda_button_e</texture_e>
+		<texture_t>ui_pda_button_t</texture_t>
+		<texture_h>ui_pda_button_h</texture_h>
+		<text>ui_inv_cancel</text>
+		<sound_h>device\pda\pda_tap_hover</sound_h>
+		<sound_t>device\pda\pda_tap_active</sound_t>
+    </btn_cancel>
+</w>

@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<!-- ЭНЦИКЛОПЕДИЯ/СПРАВКА -->
+<window>
+	<main_wnd x="46" y="85" width="990" height="612"/> 
+    <!-- INFO BACKGROUND -->
+    <left_frame_window x="263" y="16" width="433" height="604">
+		<texture>ui_pda_frame</texture>        
+    </left_frame_window>
+
+    <!-- INFO BACKGROUND HEADER -->
+    <left_frame_line x="0.5" y="29" width="432" height="21">
+        <title x="10" y="-23" width="270" height="27">
+            <text font="letterica18" color="grey_2" complex_mode="0"/>
+        </title>	
+		<texture>ui_pda_line_h</texture>       
+    </left_frame_line>
+
+    <!-- CURRENT ARTICLE HEADER -->
+	<article_header_static x="-106" y="48" width="615" height="16">
+		<text font="letterica25" align="c" color="white_2" complex_mode="1"/>
+	</article_header_static>
+
+    <!-- LIST BACKGROUND -->
+    <right_frame_window x="-19" y="16" width="273" height="604">
+		<texture>ui_pda_frame</texture>        
+    </right_frame_window>
+
+    <!-- LIST HEADER -->
+    <right_frame_line x="0.5" y="29" width="271.5" height="21">
+        <title x="6" y="-23" width="270" height="27">
+            <text font="letterica18" color="grey_2">Encyclopedia</text>
+        </title>
+        <texture>ui_pda_line_h</texture>
+    </right_frame_line>
+
+	<tree_root_font font="letterica18" color="grey_2">Encyclopedia</tree_root_font>
+	<tree_item_font font="letterica16" color="grey_2">Encyclopedia</tree_item_font>
+
+    <!-- ENCYCLOPEDIA INDEX LIST -->
+    <idx_list x="20" y="36" width="247" height="560" item_height="20" scroll_profile="pda" always_show_scroll="0">
+        <font font="letterica16" color="grey_2"/>
+    </idx_list>
+
+    <a_static x="246" y="-29" width="24" height="32" frames="16" duration="1000" columns="8" frame_width="32" frame_height="32" cyclic="1" autoplay="1" stretch="1">
+        <texture>ui\ui_pda_anims_04</texture>
+    </a_static>
+
+    <info_list x="6" y="36" width="424" height="560" item_height="15" right_ident="5" top_indent="47" scroll_profile="pda" always_show_scroll="0">
+        <font font="letterica18" color="grey_2"/>
+    </info_list>
+
+    <mask_frame_window x="0" y="0" width="500" height="500">
+		<texture>ui_pda_frame2</texture>		
+	</mask_frame_window>
+  	
+	<left_auto_static/>
+	<left_auto_static/>
+	<left_auto_static/>
+
+	<right_auto_static/>
+	<right_auto_static/>
+	<right_auto_static/>
+
+</window>

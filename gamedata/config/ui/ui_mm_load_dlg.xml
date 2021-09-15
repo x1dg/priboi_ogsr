@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ОКНО ЗАГРУЗКИ СОХРАНЕНИЙ -->
+<window>
+	<background x="0" y="0" width="1024" height="768">
+		<auto_static y="13">
+			<texture>ui\video_mainmenu</texture>
+		</auto_static>
+		<auto_static>
+			<texture>ui_menu_background</texture>
+		</auto_static>
+	</background>
+
+	<back_movie/>
+	<back_video/>	
+	<newspaper_video/>
+
+	<form x="0" y="0" width="1024" height="768">
+		<texture a="128">ui\ui_crete</texture>
+
+		<picture x="0" y="40" width="128" height="128" clipper="1">
+			<texture>ui\ui_noise</texture>
+		</picture>
+
+		<file_info x="0" y="0">
+			<texture width="1024" height="170">ui\ui_static_loadgameinfo</texture>
+		</file_info>
+
+		<caption x="0" y="4" width="1024" height="32" complex_mode="1">
+			<auto_static x="306" y="-11" width="412" height="48" stretch="1">
+				<texture x="0" y="206" width="425" height="48">ui\ui_static_loadgameinfo</texture>
+			</auto_static>
+			<auto_static x="384" y="-2" width="256" height="36" stretch="1" light_anim="asus_logo_01" la_cyclic="1" la_texture="1" la_alpha="1">
+				<texture x="438" y="209" width="94" height="36"color="black_1">ui\ui_static_loadgameinfo</texture>
+			</auto_static>
+			<text align="c" vert_align="c" font="graffiti32" color="grey_2">ui_mm_load_game</text>
+		</caption>
+
+		<file_caption x="140" y="48" width="830" height="20" complex_mode="1">
+			<text font="letterica18" color="white_2"/>
+		</file_caption>
+
+		<file_data x="140" y="84" width="830" height="50" complex_mode="1">
+			<text font="letterica18" color="grey_3"/>
+		</file_data>
+
+		<list_frame x="0" y="168" width="1028" height="536">
+			<texture>ui_tablist_textbox</texture>
+		</list_frame>
+
+		<list x="4" y="173" width="1017" height="523" item_height="18" active_bg="1"/>
+
+		<btn_load x="337" y="721" width="116" height="26">
+			<texture>ui_button_ordinary</texture>
+			<text font="letterica16" color="white_1" align="c">ui_mm_load</text>
+		</btn_load>
+
+		<btn_delete x="453" y="721" width="116" height="26">
+			<texture>ui_button_ordinary</texture>
+			<text font="letterica16" color="white_1" align="c">ui_mm_delete</text>
+		</btn_delete>
+
+		<btn_cancel x="569" y="721" width="116" height="26">
+			<texture>ui_button_ordinary</texture>
+			<text font="letterica16" color="white_1" align="c">ui_mm_cancel</text>
+		</btn_cancel>
+	</form>
+</window>

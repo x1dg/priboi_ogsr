@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+<string_table>
+
+    <string id="list_trader_repair_0">
+        <text>Стоимость починки оружия в первом слоте: </text>
+    </string>
+    <string id="list_trader_repair_1">
+        <text>Стоимость починки оружия во втором слоте: </text>
+    </string>
+    <string id="list_trader_repair_2">
+        <text>Стоимость починки брони: </text>
+    </string>
+
+<!--****************************-->
+<!-- Barist Repair dialog start -->
+<!--****************************-->
+    <string id="bar_trader_repair_0">
+        <text>Слушай, можешь починить мне кое-что из снаряжения??</text>
+    </string>
+    <string id="bar_trader_repair_1">
+        <text>Да запросто... По сходной цене, разумеется. Сам понимаешь, тут за просто так никто ничего... Ладно, что хочешь починить?\n \nСписок вещей к починке:</text>
+    </string>
+    <string id="bar_trader_repair_2">
+        <text>Почини оружие в первом слоте.</text>
+    </string>
+    <string id="bar_trader_repair_3">
+        <text>Почини оружие во втором слоте.</text>
+    </string>
+    <string id="bar_trader_repair_4">
+        <text>Почини мою броню.</text>
+    </string>
+    <string id="bar_trader_repair_5">
+        <text>Сейчас таких денег нет. Может, в другой раз...</text>
+    </string>
+    <string id="bar_trader_repair_6">
+        <text>Вот, всё готово!</text>
+    </string>
+    <string id="bar_trader_repair_7">
+        <text>Сделано, полность как новое.</text>
+    </string>
+    <string id="bar_trader_repair_8">
+        <text>Ух ты, правда как с новья, ну ты мастер!</text>
+    </string>
+    <string id="bar_trader_repair_9">
+        <text>Здорово, отличная работа!</text>
+    </string>
+    <string id="bar_trader_repair_10">
+        <text>Можешь ещё кое-что починить?</text>
+    </string>
+    <string id="bar_trader_repair_11">
+        <text>Да конечно, один фиг делать пока нечего.\n \nСписок вещей к починке:</text>
+    </string>
+
+<!--********************-->
+<!-- Repair dialogs end -->
+<!--********************-->
+
+	 <string id="list_dolg_repair_0">
+        <text>Стоимость ремонта оружия в первом слоте: </text>
+    </string>
+    <string id="list_dolg_repair_1">
+        <text>Стоимость ремонта оружия во втором слоте: </text>
+    </string>
+    <string id="list_dolg_repair_2">
+        <text>Стоимость починки брони: </text>
+    </string>
+
+<!--****************************-->
+<!-- Petrenko Repair dialog start -->
+<!--****************************-->
+
+	<string id="bar_dolg_repair_0">
+        <text>Здравия желаю, полковник! Можешь починить мне кое-что из снаряжения?</text>
+    </string>
+    <string id="bar_dolg_repair_1">
+        <text>Конечно... У "Долга" лучшие техники в зоне. Что хочешь починить, солдат?\n \nСписок вещей к починке:</text>
+    </string>
+    <string id="bar_dolg_repair_2">
+        <text>Почини оружие в первом слоте.</text>
+    </string>
+    <string id="bar_dolg_repair_3">
+        <text>Почини оружие во втором слоте.</text>
+    </string>
+    <string id="bar_dolg_repair_4">
+        <text>Почини мою броню.</text>
+    </string>
+    <string id="bar_dolg_repair_5">
+        <text>Сейчас таких денег нет. Может, в другой раз...</text>
+    </string>
+    <string id="bar_dolg_repair_6">
+        <text>Вот, мои ребята всё починили, смазали. Принимай.</text>
+    </string>
+    <string id="bar_dolg_repair_7">
+        <text>Сделано, полность как новое.</text>
+    </string>
+    <string id="bar_dolg_repair_8">
+        <text>Здорово, отличная работа!</text>
+    </string>
+    <string id="bar_dolg_repair_9">
+        <text>Твои техники отлично работают, полковник!</text>
+    </string>
+    <string id="bar_dolg_repair_10">
+        <text>Можешь ещё кое-что починить?</text>
+    </string>
+    <string id="bar_dolg_repair_11">
+        <text>Конечно, если у тебя есть деньги, у нас есть специалисты.\n \nСписок вещей к починке:</text>
+    </string>
+
+<!--********************-->
+<!-- Repair dialogs end -->
+<!--********************-->
+
+</string_table>

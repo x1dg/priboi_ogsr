@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<!-- СПИСОК КОНТАКТОВ В КПК -->
+<window>
+	<name_static x="21" y="2" width="260" height="18">
+		<text font="letterica18" color="pda_rel_name"/>
+	</name_static>
+
+	<!-- ICON -->
+	<icon_static x="822" y="7" width="96" height="64"/>
+
+	<!-- COMMUNITY -->
+	<community_caption x="2" y="19" width="240" height="15">
+		<text font="letterica16" color="pda_rel_caption">ui_st_community</text>
+	</community_caption>
+	<community_static x="87" y="19" width="240" height="15">
+		<text font="letterica16" color="pda_rel_text"/>
+	</community_static>
+
+	<!-- REPUTATION -->
+	<reputation_caption x="2" y="33" width="240" height="15">
+		<text font="letterica16" color="pda_rel_caption">ui_st_reputation</text>
+	</reputation_caption>
+	<reputation_static x="87" y="33" width="240" height="15">
+		<text font="letterica16" color="pda_rel_text"/>
+	</reputation_static>
+	
+	<!-- RELATION -->
+	<relation_caption x="2" y="47" width="240" height="15">
+		<text font="letterica16" color="pda_rel_caption">ui_st_relation</text>
+	</relation_caption>
+	<relation_static x="87" y="47" width="240" height="15">
+		<text font="letterica16" color="pda_rel_text"/>
+	</relation_static>
+
+	<!-- RANK -->
+	<rank_caption x="2" y="61" width="240" height="15">
+		<text font="letterica16" color="pda_rel_caption">ui_st_rank</text>
+	</rank_caption>
+	<rank_static x="87" y="61" width="240" height="16">
+		<text font="letterica16" color="pda_rel_text"/>
+	</rank_static>
+
+	<pda_char_auto_statics>
+		<auto_static x="7" y="6" width="10" height="10">
+			<texture color="pda_online">ui\ui_pda_contacts_online</texture>
+		</auto_static>
+
+		<auto_static x="2" y="81" width="920" height="3" stretch="1">
+			<texture>ui\ui_pda_horizontal_line</texture>
+		</auto_static>
+
+	</pda_char_auto_statics>
+</window>

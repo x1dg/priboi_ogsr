@@ -1,0 +1,16 @@
+
+[logic]
+active = mob_walker
+;--on_death = death@war_zone
+
+;--[death@war_zone]
+;--on_info = %=minus_one(war_zone_counter)%
+
+[mob_walker]
+path_walk = bar_dolg_veterans_guard_bunker_1_walk
+path_look = bar_dolg_veterans_guard_bunker_1_look
+on_info = {=npc_distance_to_waypoint(bar_dolg_veterans_guard_bunker_1_walk:60)} nil
+;--braindead = true
+
+[smart_terrains]
+none = true
