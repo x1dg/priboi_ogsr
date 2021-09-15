@@ -1,0 +1,82 @@
+--[[-----------------------------------------------------------------------------------------------
+ File			: ui_enemy_health.script
+ Description	: Шкала здоровья врага на экране
+ Source			: Call Of Chernobyl
+ Author			: Alundaio
+ Modified		: Enframed
+ Date			: 2015
+ Last edit		: 2021
+--]]-----------------------------------------------------------------------------------------------
+
+local progress = nil
+local hide = 0
+local hud = get_hud()
+local show_health = system_ini():r_bool ("mui_options","mui_show_health")
+--------------------------------------------------------------------------------------------------
+-- не используется
+function IsHelicopter(o,c)
+	if not (c) then
+		c = o and o:clsid()
+	end
+	-- нет классов clsid.helicopter / clsid.script_heli
+	return c and (c == clsid.helicopter or c == clsid.car or c == clsid.script_heli) or false
+end
+--------------------------------------------------------------------------------------------------
+-- Callback на хит
+function on_hit(obj, amount, local_direction, who, bone_index)
+	local cls = obj:clsid()
+	local hp =  obj.health or 0
+	local cs = hud:GetCustomStatic("cs_enemy_health")
+
+	if (show_health == true) and (cs == nil) then
+		hud:AddCustomStatic("cs_enemy_health", true)
+		local xml = CScriptXmlInit()
+		xml:ParseFile("ui_custom_msgs.xml")
+		cs = hud:GetCustomStatic("cs_enemy_health")
+		local w = cs:wnd()
+		progress = xml:InitProgressBar("cs_enemy_health:enemy_health", w)
+	end
+
+	if  (show_health == true) and (hp > 0.005) then
+		progress:Show(true)
+		progress:SetProgressPos(hp*100)
+		local text = ""
+		if (IsStalker(nil,cls)) or (IsMonster(nil,cls)) then
+			text = obj:character_name()
+		elseif (IsHelicopter(nil,cls)) then
+			text = "Helicopter"
+		else
+			local sid = get_object_story_id(obj:id())
+			if (sid) then
+				text = game.translate_string(sid)
+			end
+		end
+		cs:wnd():SetText(text)
+		wait()
+	end
+end
+
+-- Callback на убийство
+function on_death(victim, who)
+	if not (victim:alive()) then
+		cs_remove()
+	end
+end
+
+-- Таймер = 10 секунд
+function wait()
+	hide = time_global() + 10000
+	local function check_timer()
+		return time_global() > hide
+	end
+	level.add_call(check_timer, cs_remove)
+end
+
+--Удалить статики
+function cs_remove()
+	hide = 0
+	local cs = hud and hud:GetCustomStatic("cs_enemy_health")
+	if (cs) then
+		hud:RemoveCustomStatic("cs_enemy_health")
+	end
+end

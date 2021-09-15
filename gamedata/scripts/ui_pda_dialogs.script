@@ -1,0 +1,269 @@
+--[[-----------------------------------------------------------------------------------------------
+ File         : ui_pda_dialogs.script
+ Description  : Чат
+ Copyright    : DMX MOD
+ Authors      : Shadows & Charsi
+ Date         : 11.07.2011
+ Last edit    : 24.05.2012
+--]]-----------------------------------------------------------------------------------------------
+
+local tips_icons = {
+	default			= {83, 220},
+	pda_icon		= {83, 220},
+	common_channel	= {0, 220},
+	money			= {166, 220},
+	exe				= {166, 267},
+	radio			= {249, 220},
+ 	note			= {0, 267},
+	bulldozer		= {83, 267},
+	actor_sms		= {249, 267},
+	blowout_sms		= {332, 220},
+	saharov 		= {332, 267},
+	o_soznanie		= {332, 267},
+	military		= {0, 314},
+	stalker 		= {83, 314},
+	bandit			= {166, 314},
+	dolg			= {249, 314},
+	freedom			= {332, 314},
+	killer			= {0, 361},
+	ecolog			= {83, 361},
+	ecolog2			= {166, 361},
+	trader			= {249, 361},
+	monolith		= {332, 361},
+	military_chat	= {0, 314},
+	stalkers_chat	= {83, 314}
+}
+local pda_news = xr_sound.get_safe_sound_object([[device\pda\pda_news]])
+local pda_tips = xr_sound.get_safe_sound_object([[device\pda\pda_tip]])
+local pda_task = xr_sound.get_safe_sound_object([[device\pda\pda_objective]])
+local pda_sos = xr_sound.get_safe_sound_object([[device\pda\pda_sos]])
+
+-- Сообщения: текст, заголовок, через сколько, сколько показывать, иконка, звук
+function send_tip(news_text, header, timeout, showtime, sender, sound)
+	if news_text==nil then return end
+	if header==nil then header = translate("st_tip") end
+	if timeout == nil then timeout = 0 end
+	if showtime == nil then showtime = 5 end
+	local player
+	if sound=="news" then
+		player = pda_news
+	elseif sound=="task" then
+		player = pda_task
+	elseif sound=="questman_death" then
+		player = pda_sos
+	else
+		player = pda_tips
+	end
+	player:play_no_feedback(db.actor, sound_object.s2d, timeout, vector(), 1.0)
+	if sender == nil then
+		sender = "default"
+	end
+	local x = tips_icons[sender][1]
+	local y = tips_icons[sender][2]
+	local news_text = "%c[255,160,160,160]"..header.."\\n".."%c[default]"..news_text
+	db.actor:give_game_news(news_text, "ui\\ui_pda_options", Frect():set(x,y,83,47), timeout*1000, showtime*1000)
+	return true
+end
+
+-- Возвращает копию строки маленькими буквами (с поддержкой кириллицы)
+function string_lower(text)
+	local lower = ""
+	local a = [[йцукенгшщзхъфывапролджэячсмитьбюqwertyuiopasdfghjklzxcvbnm]]
+	local A = [[ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮQWERTYUIOPASDFGHJKLZXCVBNM]]
+	for i = 1, #text do
+		local character = string.sub(text, i, i)
+		for j = 1, #A do
+			if character == string.sub(A, j, j) then character = string.sub(a, j, j) break end
+		end
+		lower = lower..character
+	end
+	return lower
+end
+
+-- Склонение слов в зависимости от числа
+function string_declension(n, a, b, c)
+	return (n%10 == 1 and n%100 ~= 11) and (tostring(n).." "..a) or (n%10 >= 2 and n%10 <= 4 and (n%100 < 10 or n%100 >= 20) and (tostring(n).." "..b) or (tostring(n).." "..c))
+end
+
+---------------------------------------------------------------------------------------------------
+function pda_dialogs(text)
+	local name,sname = ui_pda_names.get_strings()
+	local communities = {"bandit","dolg","ecolog","ecolog2","freedom","killer","military","monolith","stalker","trader","common_channel"}
+	------------------
+	-- Разное
+	------------------
+	local general_question = {"как дела", "как ходка", "а у вас", "как жизнь"}
+	local general_answer = {"В принципе нормально...", "Хорошо.", "Да всё как обычно... А у тебя?", "Просто отлично! Сегодня аж два абсолюта нашел)))", "Нормалек :)", "Хреново. Сегодня в Трамплин влетел, ппц - до сих пор башка трещит.", "Пацан! сории есле чо, но ето, где можно артифакты наити??7 Надо срочна памаги плз",
+	"Ну как тебе сказать... Кстати, тебе снаряга нужна? Подходи на Болотах, на базу Чистого Неба. Там меня найдешь.", "Ахтунг! Был щас около Радара с дружком с одним... Так у него мозги на бекрень стали! Начал в меня палить! Увы, пришлось успокоить...", "Херово! Я вообще хз! Долбаный ПДА не хочет работать! Вырубается сам! Это сообщение еле написал... Не знаешь в чем проблема?", "Хай сталкер! С тобой говорит крутой поцан) Ты на пенек сел, должен был косарь отдать! А хера тут мало? Ы?\\nХаха... Не очкуй)"}
+	for i = 1, #general_question do
+		if string.find(text, general_question[i]) then
+			send_tip(general_answer[math.random(#general_answer)], name.." "..sname, 7, 15, communities[math.random(#communities)])
+			return
+		end
+	end
+	------------------
+	-- Приветствия
+	------------------
+	local hello_question = {"привет", "здоров", "здравия желаю", "здравствуй", "здаров", "hello", "hi"}
+	local hello_answer = {"Привет! Как жизнь?", "Привет, слушай, не знаешь, что за территории такие? Предбанник и т.п.?", "Здорово!)", "Хай :)", "Ку))", "Привет... Хреновые нынче времена...", "Привет, можешь проводником для меня поработать? Плачу наличными...", "Хаюшки", "Досведанья! Хорэ эфир засерать!1"}
+	for i = 1, #hello_question do
+		if string.find(text, hello_question[i]) then
+			send_tip(hello_answer[math.random(#hello_answer)], name.." "..sname, 7, 15, communities[math.random(#communities)])
+			return
+		end
+	end
+	------------------
+	-- Прощания
+	------------------
+	local goodbye_question = {"до свидания", "до скорой встречи", "счастливо оставаться", "всего наилучшего", "гудбай", "гуд бай", "goodbye", "bye"}
+	local goodbye_answer = {"Ну пока)", "Прощай сталкер...", "пока, пока", "Ыыы))", "И тебе не хворать.", "Хорошего хабара)", "А чё сразу пока? Ведь не поговорили же!", "Ну ладно, давай...", "Как-нибудь встретимся..."}
+	for i = 1, #goodbye_question do
+		if string.find(text, goodbye_question[i]) then
+			send_tip(goodbye_answer[math.random(#goodbye_answer)], name.." "..sname, 7, 15, communities[math.random(#communities)])
+			return
+		end
+	end
+	------------------
+	-- Маты
+	------------------
+	local curse_question = {"хуй", "хуи", "пизда", "пиздун", "пиздеть", "ебач", "еблан", "хуесос", "хуеплет", "хуита", "гандон", "гондон", "ебантяй", "хуйло", "пидарас", "пидорас", "сука", "ебло", "нахуй", "пиздюк", "хер", "ебись", "хуйня", "ебаный", "бля", "мля", "блядь", "пидор", "пидар", "пидр"}
+	local curse_answer = {"Только маты умеем в эфир посылать? За это и схлопотать можно...", "Еще один мат - тебе хана!", "Заткнись тварь!", "Закрой рот.", "Рот - офф.", "Щас я админу отстучу...", "Ну ты попал... Кончай материться!", "Сам такой! Хех...", "Вот блин, всю сеть засрали!", "Хватит маты гнуть...", "Мат - не наш формат! >8("}
+	for i = 1, #curse_question do
+		if string.find(text, curse_question[i]) then
+			-- штраф за мат в размере 10% от капитала
+			if db.actor:money() >= 100 then
+				local money = math.floor(db.actor:money()*0.1)
+				db.actor:give_money(-money)
+				-- game_stats.money_quest_update(-money)
+				send_tip("Cписание штрафа в размере " .. money .. " рублей", "Провайдер", math.random(5),10,"money")
+			end
+			-- делаем сталкеров врагами если мы ослушаемся предупреждения
+			-- if db.actor:character_reputation() <= -400 then
+				-- relation_registry.set_community_goodwill("stalker", "actor", - 800)
+			-- end
+			-- db.actor:change_character_reputation(db.actor:character_reputation() - math.random(5))
+			send_tip(curse_answer[math.random(#curse_answer)], name.." "..sname, 5, 15, communities[math.random(#communities)])
+			return
+		end
+	end
+	------------------
+	-- Вопросы о лучшем оружие
+	------------------
+	local weapon_question = {"какое оружие лучше", "какое лучшее оружие", "какой ствол лучше", "мне тут ствол нужен, какой посоветуете", "нужна валына", "какой ствол покруче", "какой ствол круче", "посоветуйте ствол"}
+	local weapon_answer = {"Незнаю", "Понятное дело, винтарь.", "Дробаш - самое то!", "Гроза наверное", "Ну даже не знаю... Мне моего кольта хватает.", "Какой ствол? Гранаты рулят :)", "Вообще на мой взгляд, нож...", "Ещё один... Укради вертолёт и бомби всех!!!", "БТР!", "Лучшее оружие - это самооборона.", "Базуку бери!", "РПГ тебе в помощь."}
+	for i = 1, #weapon_question do
+		if string.find(text, weapon_question[i]) then
+			send_tip(weapon_answer[math.random(#weapon_answer)], name.." "..sname, 7, 15, communities[math.random(#communities)])
+			return
+		end
+	end
+	------------------
+	-- Узнаем сколько времени
+	------------------
+	local current_time = string.format("%02d часов %02d минут", level.get_time_hours(), level.get_time_minutes())
+	local clock_question = {"сколько врем", "какое время сейчас", "какое сейчас время", "сколько щас врем", "сколько сейчас врем"}
+	local clock_answer = {"Сейчас "..current_time..".", "У меня на часах "..current_time..".", "Сталкер, что, часы потерял?))", "У Сидора иди спроси...", "Хех... "..current_time.."."}
+	for i = 1, #clock_question do
+		if string.find(text, clock_question[i]) then
+			send_tip(clock_answer[math.random(#clock_answer)], name.." "..sname, 7, 15, communities[math.random(#communities)])
+			return
+		end
+	end
+	------------------
+	-- Прогноз погоды
+	------------------
+	local weather = {
+		["default"] = "по-умолчанию",
+		["test"] = "ясно",
+		["indoor"] = "ппасмурно",
+		["indoor_x18"] = "пасмурно",
+		["pripyat"] = "облачно",
+		["radar"] = "облачно",
+		["rain"] = "дождь",
+		["sarkofag"] = "пасмурно",
+		["stancia"] = "гроза",
+		["stancia2"] = "пасмурно",
+		["yantar"] = "туманно",
+		["yantar_indoor"] = "пасмурно",
+		["map"] = "для аэрофотосъемки",
+
+		["mp"] = "мультиплеерная",
+		["dry"] = "ясно",
+		["grey"] = "ясно",
+		["clear"] = "ясно",
+		["surge"] = "близко к выбросу",
+		["horror"] = "ужасная",
+		["blowout"] = "близко к выбросу",
+		["cloudy_dark"] = "сильная облачность____",
+		["clear_weather"] = "ясноqqqq",
+		["storm_weather"] = "ливень____",
+		["cloudy_dark_rain"] = "сильная облачность/дождь____",
+		["clear_alt_weather"] = "безоблачно____",
+		["cloudy_dark_weather"] = "сильная облачность____",
+		["cloudy_light_weather"] = "небольшая облачность____",
+		["cloudy_light_rain_weather"] = "облачно/небольшие осадки____",
+	}
+	local weather_question = {"погода", "погоду", "прогноз погоды", "forecast"}
+	local weather_answer = {"Мне Сахаров скидывал такое:", "Слышал, что", "Судя по спутнику: ", "В лаборатории мне сказали:", "Гидрометцентр ответил, что", "Прогноз оповестил, что", "Погода", "Так-то вроде", "Думаю", "Похоже на"}
+	local weather_denial = {"Нет ответа","Хрен его знает", "Не знаю, что за погода", "Прогноз неизвестен", "Прогноз молчит", "Непонятная погода", "Гидрометцентр не отвечает", "Сам не знаю", "Самому интересно", "Ученные молчат", "Сахаров не отвечает", "Лаборатория занята"}
+	for i = 1, #weather_question do
+		if string.find(text, weather_question[i]) then
+			if weather[level.get_weather()] ~= nil then
+				send_tip(weather_answer[math.random(#weather_answer)].." "..weather[level.get_weather()] , name.." "..sname, 7, 15, communities[math.random(#communities)])
+			else
+				-- если секции погоды нет в таблице weather, то
+				send_tip(weather_denial[math.random(#weather_denial)], name.." "..sname, 7, 15, communities[math.random(#communities)])
+			return
+			end
+		end
+	end
+	------------------
+	-- Играть в "21"
+	------------------
+	local game_question = {"играть онлайн", "игра в карты", "играть в карты", "играть в блекджек", "хочу поиграть", "хочу играть", "сыграем", "сыграет","сыграешь", "двадацать одно", "игра 21", "21 очко", "кто со мной играть", "поиграем", "перекинемся", "blackjack", "21p"}
+	local game_answer = {"Я сыграю с тобой", "Я не против, давай", "Почему бы и нет!", "ОК", "Ну, давай перекинемся картишками","Можно малеха", "Неплохая мысль"}
+	for i=1,#game_question do
+		if string.find(text, game_question[i]) then
+			send_tip(game_answer[math.random(#game_answer)], name.." "..sname, 7, 15, communities[math.random(#communities)])
+			level.start_stop_menu(ui_game_blackjack.blackjack(), true)
+		end
+	end
+	------------------
+	-- Военные атакуют
+	------------------
+	local escape_army_question = {"все вояки тупые", "военные сволочи", "вояки сволочи", "военные оборзели", "вояки оборзели", "убить военных", "уничтожить военных", "атакую блокпост"}
+	local escape_army_answer = {"Сталкер, совсем оборзел??? Щас мы тебе рот закроем...", "Готовь мыло и веревку.", "Первый-первый, идем на взлет..."}
+	local escape_army_sound = xr_sound.get_safe_sound_object("helicopter\\see_enemy_"..math.random(7))
+	-- local escape_army_sound = xr_sound.get_safe_sound_object("vehicles\\helicopter\\see_enemy_"..math.random(7))
+	if level.name() == "l01_escape" then
+		for i = 1, #escape_army_question do
+			if string.find(text, escape_army_question[i]) then
+				escape_army_sound:play_no_feedback(db.actor, sound_object.s2d, 5, vector(), 1.0)
+				send_tip(escape_army_answer[math.random(#escape_army_answer)], "Военные", 5, 15, "military_chat")
+				-- db.actor:give_info_portion("esc_btr_killed")
+				return
+			end
+		end
+	end
+
+	--[[----------------
+	-- Вопрос по выбросу
+	------------------
+	local blowout_question = {"когда будет выброс", "через сколько выброс", "когда произойдет выброс", "через сколько произойдет выброс"}
+	for i = 1, #blowout_question do
+		if string.find(text, blowout_question[i]) then
+			local timers = amk.load_table("timers")
+			for i = #timers, 1, -1 do
+				if timers[i][1] == "blow_shift" then
+					local interval = (timers[i][2] - amk.game_milliseconds()) / 1000
+					local h = math.floor(interval / 3600)
+					local m = math.floor((interval - h * 3600) / 60)
+					if m > 30 then h = h + 1 end
+					local blowout_answer = {"По показаниям приборов, Выброс произойдет примерно через "..string_declension(h, "час", "часа", "часов")..".", "Здравствуйте, судя по всему, Выброс прокатится по Зоне в "..string_declension(h, "час", "часа", "часов").."."}
+					send_tip(blowout_answer[math.random(#blowout_answer)], "Профессор Сахаров", 7, 15, "saharov")
+				end
+			end
+			return
+		end
+	end]]--
+end

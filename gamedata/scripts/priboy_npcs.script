@@ -1,0 +1,59 @@
+-- Priboy tasks npcs
+-- by barin aka pepe_84
+-- last edited: 04.01.2008
+
+sar_mob_monolith = 
+{
+	{name = "sar_stalker_monolith_high", value = true},
+	{name = "sar_stalker_monolith_high_0000", value = true},
+	{name = "sar_stalker_monolith_high_0001", value = true},
+	{name = "sar_stalker_monolith_high_0002", value = true},
+	{name = "sar_stalker_monolith_high_0003", value = true},
+	{name = "sar_stalker_monolith_high_0004", value = true},
+	{name = "sar_stalker_monolith_high_0005", value = true},
+	{name = "sar_stalker_monolith_high_0006", value = true},
+	{name = "sar_stalker_monolith_high_0007", value = true},
+	{name = "sar_stalker_monolith_high_0008", value = true},
+	{name = "sar_stalker_monolith_high_0009"	, value = true},
+	{name = "sar_stalker_monolith_lest_1", value = true},
+	{name = "sar_stalker_monolith_lest_0000", value = true},
+	{name = "sar_stalker_monolith_lest_0001", value = true},
+	{name = "sar_stalker_monolith_0019", value = true}
+}
+
+sar_decoder_respawn = 
+{
+	{name = "sar_secret_room_monolith_1", value = true},
+	{name = "sar_secret_room_monolith_2", value = true},
+	{name = "sar_secret_room_monolith_3", value = true},
+	{name = "sar_secret_room_monolith_4", value = true},
+	{name = "sar_secret_room_monolith_5", value = true},
+	{name = "sar_secret_room_monolith_6", value = true},
+	{name = "sar_secret_room_monolith_7", value = true},
+	{name = "sar_secret_room_monolith_8", value = true}
+}
+
+sar_mon_control_npcs = 
+{
+	{name = "mon_stalker_walker_0001", value = true},
+	{name = "mon_stalker_walker_0002", value = true},
+	{name = "mon_stalker_walker_0003", value = true},
+	{name = "mon_stalker_walker_0004", value = true},
+	{name = "mon_stalker_walker_0005", value = true},
+	{name = "mon_stalker_walker_0006", value = true},
+	{name = "mon_stalker_walker2_0001", value = true},
+	{name = "mon_stalker_walker2_0002", value = true},
+	{name = "mon_stalker_walker2_0003", value = true},
+	{name = "mon_stalker_walker2_0004", value = true},
+	{name = "mon_stalker_walker2_0005", value = true},
+	{name = "mon_stalker_walker2_0006", value = true},
+	{name = "mon_stalker_walker3_0001", value = true},
+	{name = "mon_stalker_walker3_0002", value = true},
+	{name = "mon_stalker_walker3_0003", value = true},
+	{name = "mon_stalker_walker3_0004", value = true},
+	{name = "mon_stalker_walker4_0001", value = true},
+	{name = "mon_stalker_walker4_0002", value = true},
+	{name = "mon_stalker_walker4_0003", value = true},
+	{name = "mon_stalker_walker4_0004", value = true},
+	{name = "mon_stalker_walker4_0005", value = true}
+}

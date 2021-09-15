@@ -1,0 +1,335 @@
+--Edition By SpawnerToolKit (Author SDK: SuhininKirill | VK: UPFS)
+spawn_type = nil
+local mob_table = {
+	"bloodsucker_weak"
+}
+local item_table = {
+	"bread"
+}
+local ammo_table = {
+	"ammo_gauss"
+}
+local wpn_table = {
+	"wpn_crowbar",
+	"wpn_knif2",
+	"wpn_bat_a",
+	"wpn_bat_b",
+	"wpn_elf",
+	"wpn_fist_c1",
+	"wpn_fist_c2",
+	"wpn_fist_c3",
+	"wpn_fist_m",
+	"wpn_knif2",
+	"wpn_knif3",
+	"wpn_knif4",
+	"wpn_knifa",
+	"wpn_knife_m",
+	"wpn_knife_n",
+	"wpn_knife_new",
+	"wpn_kolbasa",
+	"wpn_kuvalda",
+	"wpn_machete",
+	"wpn_topor"
+}
+local art_table = {
+	"af_base"
+}
+local outf_table = {
+	"bandit_outfit"
+}
+
+class "spawn_item" (CUIListItemEx)
+
+--Editing by Kirill Suxinin
+
+function spawn_item:__init() super()
+	self.text					= CUIStatic()
+	self:AttachChild			(self.text)
+	self.text:SetFont			(GetFontLetterica18Russian())
+	self.text:SetTextColor		(255,216,186,140)
+end
+
+class "spawn_item_dialog" (CUIScriptWnd)
+
+--Editing by Kirill Suxinin
+
+function spawn_item_dialog:__init() super()
+
+   self:InitControls()
+   self:InitCallBacks()
+end
+
+function spawn_item_dialog:__finalize()
+end
+
+function spawn_item_dialog:InitControls()
+	self:Enable(true)
+	self:SetWndRect(Frect():set(0,0,1024,768))
+	local xml = CScriptXmlInit()
+	xml:ParseFile	("ui_si_dlg.xml")
+	xml:InitStatic	("background", self)	-- рамка
+	self.list = xml:InitList("list",self)	-- список
+	self.list:ShowSelectedItem(true)
+	self:Register(self.list, "list_window")
+	self:Register(xml:Init3tButton("btn_ammo", self),"btn_ammo")	-- верхние кнопки
+	self:Register(xml:Init3tButton("btn_wpn", self),"btn_wpn")
+	self:Register(xml:Init3tButton("btn_art", self),"btn_art")
+	self:Register(xml:Init3tButton("btn_item", self),"btn_item")
+	self:Register(xml:Init3tButton("btn_outf", self),"btn_outf")
+	self:Register(xml:Init3tButton("btn_create", self),"btn_create")	-- нижние кнопки
+	self:Register(xml:Init3tButton("btn_close", self),"btn_close")
+
+      self:Register(xml:Init3tButton("btn_stalker", self),"btn_stalker")    -- новые кнопки 
+      self:Register(xml:Init3tButton("btn_anom", self),"btn_anom")     
+      self:Register(xml:Init3tButton("btn_mob", self),"btn_mob")     
+
+end
+
+function spawn_item_dialog:TEST()
+	local console = get_console()
+	self.list.RemoveAll()
+	
+	
+	for i,v in ipairs(stalker_table) do
+		self:AddItemToList(v[0])
+    end
+end
+
+function spawn_item_dialog:InitCallBacks()
+	self:AddCallback("btn_ammo",	ui_events.BUTTON_CLICKED,	self.FillList_ammo, self)
+	self:AddCallback("btn_wpn",		ui_events.BUTTON_CLICKED,	self.FillList_wpn, self)
+	self:AddCallback("btn_art",		ui_events.BUTTON_CLICKED,	self.FillList_art, self)
+	self:AddCallback("btn_item",	ui_events.BUTTON_CLICKED,	self.FillList_item, self)
+	self:AddCallback("btn_outf",	ui_events.BUTTON_CLICKED,	self.FillList_outf, self)
+	self:AddCallback("btn_create",	ui_events.BUTTON_CLICKED,	self.OnButton_create_clicked, self)
+	self:AddCallback("btn_close",	ui_events.BUTTON_CLICKED,	self.OnButton_close_clicked, self)
+	self:AddCallback("list_window",	ui_events.WINDOW_LBUTTON_DB_CLICK,	  self.OnButton_create_clicked,	self)
+	self:AddCallback("btn_stalker",	ui_events.BUTTON_CLICKED,	self.FillList_stalker, self)
+	self:AddCallback("btn_mob",	ui_events.BUTTON_CLICKED,	self.FillList_mob, self)
+	self:AddCallback("btn_anom",	ui_events.BUTTON_CLICKED,	self.FillList_anom, self)
+
+end
+
+
+function spawn_item_dialog:FillList_stalker()
+	self.list:RemoveAll()
+      spawn_type="stalker"
+	--for i = 1, #stalker_table do
+	--	self:AddItemToList(stalker_table[i])
+	--end
+	
+	local tbl
+	tbl = stalker_table
+	for i, v in ipairs(tbl) do
+		self:AddItemToList(v)
+	end
+	
+	
+	
+end
+
+
+function spawn_item_dialog:FillList_mob()
+	self.list:RemoveAll()
+      spawn_type="stalker"
+	  
+	--for i = 1, #mob_table do
+	--	self:AddItemToList(mob_table[i])
+	--end
+	
+	local tbl
+	tbl = mob_table
+	for i, v in ipairs(tbl) do
+		
+		self:AddItemToList(v)
+	end
+	
+end
+
+
+function spawn_item_dialog:FillList_anom()
+	self.list:RemoveAll()
+      spawn_type="anom"
+	for i = 1, #anom_table do
+		self:AddItemToList(anom_table[i])
+	end
+end
+
+function spawn_item_dialog:FillList_ammo()
+	self.list:RemoveAll()
+        spawn_type="actor"
+		
+	for i = 1, #ammo_table do
+		self:AddItemToList(ammo_table[i])
+	end
+	
+	--local tbl
+	--local name
+	--tbl = ammo_table 
+	--for i, v in ipairs(tbl) do
+	--	name = game.translate_string(system_ini():r_string(v, "inv_name"))
+	--	
+	--	self:AddItemToList(name)
+	--end
+	
+end
+
+
+function spawn_item_dialog:FillList_wpn()
+	self.list:RemoveAll()
+        spawn_type="actor"
+	for i = 1, #wpn_table do
+		self:AddItemToList(wpn_table[i])
+	end
+	
+	--local tbl
+	--local name
+	--tbl = wpn_table 
+	--for i, v in ipairs(tbl) do
+	--	name = game.translate_string(system_ini():r_string(v, "inv_name"))
+	--	
+	--	local a = string.format("%s     [%s]", name,v)
+	--	
+	--	self:AddItemToList(a)
+	--end
+	
+	
+end
+
+function spawn_item_dialog:FillList_art()
+	self.list:RemoveAll()
+        spawn_type="actor"
+		
+	--for i = 1, #art_table do
+	--	self:AddItemToList(art_table[i])
+	--end
+	local tbl
+	tbl = art_table
+	
+	for i, v in ipairs(tbl) do
+
+	
+		self:AddItemToList(v)
+	end
+	
+	
+end
+function spawn_item_dialog:FillList_item()
+	self.list:RemoveAll()
+        spawn_type="actor"
+	--for i = 1, #item_table do
+	--	self:AddItemToList(item_table[i])
+	--end
+	
+	local tbl
+	tbl = item_table
+	for i, v in ipairs(tbl) do
+		
+		self:AddItemToList(v)
+	end
+	
+	
+end
+function spawn_item_dialog:FillList_outf()
+	self.list:RemoveAll()
+        spawn_type="actor"
+		
+	for i = 1, #outf_table do
+		self:AddItemToList(outf_table[i])
+	end
+	
+	--local tbl
+	--local name
+	--tbl = outf_table
+	--for i, v in ipairs(tbl) do
+	--	name = game.translate_string(system_ini():r_string(v, "inv_name"))
+	--	
+	--	local a = string.format("%s     [%s]", name,v)
+	--	
+	--	self:AddItemToList(a)
+	--end
+	
+end
+
+function spawn_item_dialog:AddItemToList(item_name)
+	local _itm				= spawn_item()
+	_itm.text:SetText		(item_name)
+	self.list:AddItem		(_itm)
+end
+
+function spawn_item_dialog:OnButton_create_clicked()	
+	if self.list:GetSize()==0 then 
+		return 
+	end
+	local index = self.list:GetSelectedItem()
+	if index == -1 then 
+		return 
+	end
+	local item = self.list:GetItem(index).text:GetText()
+	if alife() and db.actor:alive() then
+
+		local pos = db.actor:position()
+		local dir = db.actor:direction()
+
+           if spawn_type=="actor" then
+		pos = pos:add(dir:mul(3))
+		alife():create(item, pos, 0, 0, db.actor:id())
+           end
+      if spawn_type=="stalker" then
+		pos = pos:add(dir:mul(3))
+ 		alife():create(item, pos, db.actor:level_vertex_id(), db.actor:game_vertex_id())
+      end
+      if spawn_type=="anom" then
+		pos = pos:add(dir:mul(3))
+ 		spawn_anom(item,pos)
+      end
+	end
+end
+
+function spawn_item_dialog:OnButton_close_clicked()
+	self:GetHolder():start_stop_menu	(self,false)
+	self.owner:Show						(true)
+	if level.present() and db.actor and db.actor:alive() then
+		get_console():execute("main_menu off")
+	end
+end
+
+function spawn_item_dialog:OnKeyboard(dik, keyboard_action)
+	local bind = dik_to_bind(dik)
+	if bind == key_bindings.kQUIT then
+		self:OnButton_close_clicked()
+	else
+		if dik==28 then
+			self:OnButton_create_clicked()
+		end
+	end
+	return true
+end
+
+function main()
+end
+
+function spawn_anom(item,pos)
+
+
+local obj = alife():create(item,pos,db.actor:level_vertex_id(),db.actor:game_vertex_id())
+    if string.find(obj:section_name(), "zone_mine_gravitational") or
+       string.find(obj:section_name(), "field") or 
+       string.find(obj:section_name(), "teleport") or
+       string.find(obj:section_name(), "death") or  
+       string.find(obj:section_name(), "sarcofag") or  
+       string.find(obj:section_name(), "zone_radioactive") then
+     anom.create_anom(obj,3, pos, db.actor:level_vertex_id(), db.actor:game_vertex_id(),"field")
+       else
+     anom.create_anom(obj,3, pos, db.actor:level_vertex_id(), db.actor:game_vertex_id())
+end
+end
+
+
+--Edition By SpawnerToolKit (Author SDK: SuhininKirill | VK: UPFS)
+
+
+--Edition By SpawnerToolKit (Author SDK: SuhininKirill | VK: UPFS)
+
+
+--Edition By SpawnerToolKit (Author SDK: SuhininKirill | VK: UPFS)

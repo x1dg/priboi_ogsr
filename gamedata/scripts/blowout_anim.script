@@ -1,0 +1,91 @@
+-- *** 2008-07-30 ***
+-- *** barin ***
+
+-- ******************** EVALUATORS ********************* --
+
+class "evaluator_blow_state" (property_evaluator)
+
+function evaluator_blow_state:__init(evaluator_name, storage) super(nil, evaluator_name)
+end
+
+function evaluator_blow_state:evaluate()
+	local blow_phase = blowout.GetBlowout():GetPhase()
+	
+	if not blowout.GetBlowout():isNpcInsideShelter(self.object) and
+		(blow_phase == "surge" or blow_phase == "after_surge")
+	then
+		return true
+	end
+	
+	return false
+end
+
+-- ******************** ACTIONS ************************ --
+
+class "action_blow_state" (action_base)
+
+function action_blow_state:__init(action_name, storage, char_ini) super(nil, action_name)
+end
+
+function action_blow_state:initialize()
+	action_base.initialize(self)
+	self.object:set_desired_position()
+	self.object:set_desired_direction()
+	self:perform_action()	
+end
+
+function action_blow_state:perform_action()
+	self.talk_enabled = self.object:is_talk_enabled()
+	
+	if db.storage[self.object:id()].state_mgr then
+		db.storage[self.object:id()].state_mgr:set_state("psycho_pain")
+	end
+end
+
+function action_blow_state:execute()	
+	if self.object:is_talking() then
+		self.object:stop_talk()
+	end
+	if self.object:is_talk_enabled() then
+		self.object:disable_talk()
+	end
+	action_base.execute(self)
+end
+
+function action_blow_state:finalize()
+	self.object:clear_animations()
+	if self.talk_enabled then
+		self.object:enable_talk()
+	end
+	
+	action_base.finalize(self)
+end
+
+-- ******************** BINDER ************************* --
+local ENABLE_BLOW_STATE_SCHEME = true
+local BLOW_STATE_PROPERTY = 6436
+local BLOW_STATE_OPERATOR = 6437
+
+function add_to_binder(object, char_ini, scheme, section, storage)
+	local planner = object:motivation_action_manager()
+
+	planner:add_evaluator(BLOW_STATE_PROPERTY, evaluator_blow_state("evaluator_blow_state", storage))
+
+	local newAction = action_blow_state("action_blow_state", storage, char_ini)
+	newAction:add_precondition(world_property(stalker_ids.property_alive, true))
+	newAction:add_precondition(world_property(stalker_ids.property_danger, false))
+	newAction:add_precondition(world_property(stalker_ids.property_enemy, false))
+	newAction:add_precondition(world_property(xr_evaluators_id.sidor_wounded_base, false))
+	newAction:add_precondition(world_property(BLOW_STATE_PROPERTY, true))
+	newAction:add_effect(world_property(BLOW_STATE_PROPERTY, false))
+	planner:add_action(BLOW_STATE_OPERATOR, newAction)
+
+	newAction = planner:action(xr_actions_id.alife)	
+	newAction:add_precondition(world_property(BLOW_STATE_PROPERTY, false))
+end
+
+function enable_scheme(npc, ini, scheme, section)
+	if ENABLE_BLOW_STATE_SCHEME and npc:character_community() ~= "zombied" then
+		xr_logic.assign_storage_and_bind(npc, ini, scheme, section)
+	end
+end

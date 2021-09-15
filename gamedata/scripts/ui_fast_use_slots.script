@@ -1,0 +1,458 @@
+--[[-----------------------------------------------------------------------------------------------
+ File			: ui_fast_use_slots.script
+ Description	: Интерфейс слотов быстрого использования
+ Source			: DMX MOD
+ Author			: Shadows, serg101188
+ Date			: 23.11.2011
+ Last edit		: 24.10.2013
+--]]-----------------------------------------------------------------------------------------------
+
+local hud = get_hud()
+local count_item_in_fast_slot1, count_item_in_fast_slot2, count_item_in_fast_slot3, count_item_in_fast_slot4 = 0, 0, 0, 0
+local eat_items = {
+	["bread"] = true,
+	["kolbasa"] = true,
+	["conserva"] = true,
+	["energy_drink"] = true,
+	["vodka"] = true,
+	["bandage"] = true,
+	["antirad"] = true,
+	["medkit"] = true,
+	["medkit_army"] = true,
+	["medkit_scientic"] = true}
+
+local strings = {}
+local strings_1 = {[1] = {text = "", keybind = key_bindings.kUSE_ANTIRAD}}
+local strings_2 = {[1] = {text = "", keybind = key_bindings.kUSE_ENERGY_DRINK}}
+local strings_3 = {[1] = {text = "", keybind = key_bindings.kUSE_B190}}
+local strings_4 = {[1] = {text = "", keybind = key_bindings.kUSE_BIPSIZON}}
+
+--------------------
+-- Fast use slots --
+--------------------
+
+class "FastUseSlotsWnd" (CUIWindow)
+function FastUseSlotsWnd:__init(handler) super()
+	self:Init(0,0,1024,768)
+
+	self.UseSlot1 = function() level.start_stop_menu(FastUseSlotsList(self.slot1, 1), true) end
+	self.UseSlot2 = function() level.start_stop_menu(FastUseSlotsList(self.slot2, 2), true) end
+	self.UseSlot3 = function() level.start_stop_menu(FastUseSlotsList(self.slot3, 3), true) end
+	self.UseSlot4 = function() level.start_stop_menu(FastUseSlotsList(self.slot4, 4), true) end
+
+	local xml = CScriptXmlInit()
+	xml:ParseFile("ui_fast_use_slots.xml")
+
+	self.slot1 = xml:InitButton("quick_slot0", self.slot1)
+	self.slot1:SetOriginalRect(get_icon_data(GetItemInFastSlot1()))
+	handler:Register(self.slot1, "slot1")
+	self:AttachChild(self.slot1)
+	handler:AddCallback("slot1", ui_events.BUTTON_CLICKED, self.UseSlot1, self)
+
+	self.slot2 = xml:InitButton("quick_slot1", self.slot2)
+	self.slot2:SetOriginalRect(get_icon_data(GetItemInFastSlot2()))
+	handler:Register(self.slot2, "slot2")
+	self:AttachChild(self.slot2)
+	handler:AddCallback("slot2", ui_events.BUTTON_CLICKED, self.UseSlot2, self)
+
+	self.slot3 = xml:InitButton("quick_slot2", self.slot3)
+	self.slot3:SetOriginalRect(get_icon_data(GetItemInFastSlot3()))
+	handler:Register(self.slot3, "slot3")
+	self:AttachChild(self.slot3)
+	handler:AddCallback("slot3", ui_events.BUTTON_CLICKED, self.UseSlot3, self)
+
+	self.slot4 = xml:InitButton("quick_slot3", self.slot4)
+	self.slot4:SetOriginalRect(get_icon_data(GetItemInFastSlot4()))
+	handler:Register(self.slot4, "slot4")
+	self:AttachChild(self.slot4)
+	handler:AddCallback("slot4", ui_events.BUTTON_CLICKED, self.UseSlot4, self)
+	
+	-- Отображение назначенных клавиш в инвентаре
+	local strings=strings_1
+	strings=strings_1
+	local i=1
+				local dik = bind_to_dik(strings[i].keybind)
+				local key_name =
+					strings[i].keybind
+					and ( dik and dik_to_keyname(dik) or "--" )
+					or ""
+				xml:InitStatic("quick_slot1_text", self):SetText(string.sub(key_name..strings[i].text,2))
+
+	local strings=strings_2
+	strings=strings_2
+	local i=1
+				local dik = bind_to_dik(strings[i].keybind)
+				local key_name =
+					strings[i].keybind
+					and ( dik and dik_to_keyname(dik) or "--" )
+					or ""
+				xml:InitStatic("quick_slot2_text", self):SetText(string.sub(key_name..strings[i].text,2))
+
+	local strings=strings_3
+	strings=strings_3
+	local i=1
+				local dik = bind_to_dik(strings[i].keybind)
+				local key_name =
+					strings[i].keybind
+					and ( dik and dik_to_keyname(dik) or "--" )
+					or ""
+				xml:InitStatic("quick_slot3_text", self):SetText(string.sub(key_name..strings[i].text,2))
+
+	local strings=strings_4
+	strings=strings_4
+	local i=1
+				local dik = bind_to_dik(strings[i].keybind)
+				local key_name =
+					strings[i].keybind
+					and ( dik and dik_to_keyname(dik) or "--" )
+					or ""
+				xml:InitStatic("quick_slot4_text", self):SetText(string.sub(key_name..strings[i].text,2))
+
+end
+
+function FastUseSlotsWnd:Update()
+if self.slot1 then
+	if db.actor:object(GetItemInFastSlot1()) then
+		self.slot1:SetColor(GetARGB(200,255,255,255)) else
+		self.slot1:SetColor(GetARGB(100,255,255,255)) end
+	end
+if self.slot2 then
+	if db.actor:object(GetItemInFastSlot2()) then
+		self.slot2:SetColor(GetARGB(200,255,255,255)) else
+		self.slot2:SetColor(GetARGB(100,255,255,255)) end
+	end
+if self.slot3 then
+	if db.actor:object(GetItemInFastSlot3()) then
+		self.slot3:SetColor(GetARGB(200,255,255,255)) else
+		self.slot3:SetColor(GetARGB(100,255,255,255)) end
+	end
+if self.slot4 then
+	if db.actor:object(GetItemInFastSlot4()) then
+		self.slot4:SetColor(GetARGB(200,255,255,255)) else
+		self.slot4:SetColor(GetARGB(100,255,255,255)) end
+	end
+end
+
+----------------
+-- Items list --
+----------------
+
+class "FastUseSlotsItem" (CUIListItemEx)
+function FastUseSlotsItem:__init() super()
+	self.item_name = CUIStatic()
+	self.item_name:SetFont(GetFontLetterica16Russian())
+	self.item_name:SetTextColor(130,255,255,255)
+	self:AttachChild(self.item_name)
+end
+
+class "FastUseSlotsList" (CUIScriptWnd)
+function FastUseSlotsList:__init(selected_slot, active_slot) super()
+	self.selected_slot = selected_slot
+	self.active_slot = active_slot
+	self:Init(0,0,1024,768)
+
+	local xml = CScriptXmlInit()
+	self:Init(0,0,1024,768)
+	xml:ParseFile("ui_fast_use_slots.xml")
+	xml:InitFrame("List1_frame", self)
+	self.list = xml:InitList("List1", self)
+	self.list:ShowSelectedItem(true)
+	self:Register(self.list, "items_list")
+	self:AddCallback("items_list", ui_events.WINDOW_LBUTTON_DB_CLICK, self.OnListChooseItem, self)
+	self:FillList()
+
+	-- self.list = xml:InitFrame("List1:frameline", self)
+	self:Register(xml:Init3tButton("List1:button1", self), "button1")
+	self:AddCallback("button1",ui_events.BUTTON_CLICKED,self.on_exit,self)
+
+end
+
+function FastUseSlotsList:on_exit()
+	self:GetHolder():start_stop_menu(self,true)
+end
+
+function FastUseSlotsList:FillList()
+	self.list_items = self:GetListWnd("items_list")
+	self.items = {}
+	local duplicate_sections = {}
+	db.actor:iterate_inventory(function (dummy, item)
+		local section = item:section()
+		if eat_items[section] and not duplicate_sections[section] then
+			duplicate_sections[section] = true
+			table.insert(self.items, section)
+			local item_static = FastUseSlotsItem()
+			item_static.item_name:SetTextST(get_inv_name(section))
+			self.list_items:AddItem(item_static)
+		end
+	end)
+end
+
+function FastUseSlotsList:OnListChooseItem()
+	if self.list_items:GetSize() == 0 then return end
+	local index = self.list_items:GetSelectedItem()
+	if index == -1 then return end
+	local section = self.items[index + 1]
+	if self.active_slot == 1 then
+		save_variable("item_in_fast_slot1", section)
+		count_item_in_fast_slot1 = count_item_by_section(section)
+	elseif self.active_slot == 2 then
+		save_variable("item_in_fast_slot2", section)
+		count_item_in_fast_slot2 = count_item_by_section(section)
+	elseif self.active_slot == 3 then
+		save_variable("item_in_fast_slot3", section)
+		count_item_in_fast_slot3 = count_item_by_section(section)
+	elseif self.active_slot == 4 then
+		save_variable("item_in_fast_slot4", section)
+		count_item_in_fast_slot4 = count_item_by_section(section)
+	end
+	self.selected_slot:SetOriginalRect(get_icon_data(section))
+	self.selected_slot:SetColor(GetARGB(255,255,255,255))
+	level.start_stop_menu(self, true)
+end
+
+------------------
+-- Slots on HUD --
+------------------
+
+local show_fast_slots = system_ini():r_bool ("mui_options","mui_show_fast_slots")
+local last_item_in_fast_slot1, last_item_in_fast_slot2, last_item_in_fast_slot3, last_item_in_fast_slot4
+
+function FastUseSlotsHud()
+
+if (show_fast_slots == true) and (not bind_stalker.scopeUsed) then
+	local item_in_fast_slot1, item_in_fast_slot2, item_in_fast_slot3, item_in_fast_slot4 = GetItemInFastSlot1(), GetItemInFastSlot2(), GetItemInFastSlot3(), GetItemInFastSlot4()
+
+	if hud:GetCustomStatic("quick_slot0") then
+
+		local fast_slot1_static = hud:GetCustomStatic("quick_slot0")
+		local fast_slot2_static = hud:GetCustomStatic("quick_slot1")
+		local fast_slot3_static = hud:GetCustomStatic("quick_slot2")
+		local fast_slot4_static = hud:GetCustomStatic("quick_slot3")
+
+	if last_item_in_fast_slot1 ~= item_in_fast_slot1 then
+		fast_slot1_static:wnd():SetOriginalRect(get_icon_data(item_in_fast_slot1))
+			last_item_in_fast_slot1 = item_in_fast_slot1
+				end
+
+	if last_item_in_fast_slot2 ~= item_in_fast_slot2 then
+		fast_slot2_static:wnd():SetOriginalRect(get_icon_data(item_in_fast_slot2))
+			last_item_in_fast_slot2 = item_in_fast_slot2
+				end
+
+	if last_item_in_fast_slot3 ~= item_in_fast_slot3 then
+		fast_slot3_static:wnd():SetOriginalRect(get_icon_data(item_in_fast_slot3))
+			last_item_in_fast_slot3 = item_in_fast_slot3
+				end
+
+	if last_item_in_fast_slot4 ~= item_in_fast_slot4 then
+		fast_slot4_static:wnd():SetOriginalRect(get_icon_data(item_in_fast_slot4))
+			last_item_in_fast_slot4 = item_in_fast_slot4
+				end
+
+	if db.actor:object(item_in_fast_slot1) then
+		fast_slot1_static:wnd():SetColor(GetARGB(255,255,255,255)) else
+		fast_slot1_static:wnd():SetColor(GetARGB(128,255,255,255))
+			end
+
+	if db.actor:object(item_in_fast_slot2) then
+		fast_slot2_static:wnd():SetColor(GetARGB(255,255,255,255)) else
+		fast_slot2_static:wnd():SetColor(GetARGB(128,255,255,255))
+			end
+
+	if db.actor:object(item_in_fast_slot3) then
+		fast_slot3_static:wnd():SetColor(GetARGB(255,255,255,255)) else
+		fast_slot3_static:wnd():SetColor(GetARGB(128,255,255,255))
+			end
+
+	if db.actor:object(item_in_fast_slot4) then
+		fast_slot4_static:wnd():SetColor(GetARGB(255,255,255,255)) else
+		fast_slot4_static:wnd():SetColor(GetARGB(128,255,255,255))
+	end
+		counter1:SetText("x"..count_item_in_fast_slot1)
+		counter2:SetText("x"..count_item_in_fast_slot2)
+		counter3:SetText("x"..count_item_in_fast_slot3)
+		counter4:SetText("x"..count_item_in_fast_slot4)
+	else
+		hud:AddCustomStatic("quick_slot0", true):wnd():SetOriginalRect(get_icon_data(item_in_fast_slot1))
+		hud:AddCustomStatic("quick_slot0_text", true)
+
+		hud:AddCustomStatic("quick_slot1", true):wnd():SetOriginalRect(get_icon_data(item_in_fast_slot2))
+		hud:AddCustomStatic("quick_slot1_text", true)
+
+		hud:AddCustomStatic("quick_slot2", true):wnd():SetOriginalRect(get_icon_data(item_in_fast_slot3))
+		hud:AddCustomStatic("quick_slot2_text", true)
+
+		hud:AddCustomStatic("quick_slot3", true):wnd():SetOriginalRect(get_icon_data(item_in_fast_slot4))
+		hud:AddCustomStatic("quick_slot3_text", true)
+
+		local xml = CScriptXmlInit()
+			xml:ParseFile("ui_custom_msgs.xml")
+
+			local w1 = hud:GetCustomStatic("quick_slot0")
+		local f1 = w1:wnd()
+		xml:InitFrameLine("quick_slot0:auto_frameline", f1 )
+		counter1 = xml:InitStatic("quick_slot0:counter", f1 )
+
+			local w2 = hud:GetCustomStatic("quick_slot1")
+		local f2 = w2:wnd()
+		xml:InitFrameLine("quick_slot1:auto_frameline", f2 )
+		counter2 = xml:InitStatic("quick_slot1:counter", f2 )
+
+			local w3 = hud:GetCustomStatic("quick_slot2")
+		local f3 = w3:wnd()
+		xml:InitFrameLine("quick_slot2:auto_frameline", f3 )
+		counter3 = xml:InitStatic("quick_slot2:counter", f3 )
+
+			local w4 = hud:GetCustomStatic("quick_slot3")
+		local f4 = w4:wnd()
+		xml:InitFrameLine("quick_slot3:auto_frameline", f4 )
+		counter4 = xml:InitStatic("quick_slot3:counter", f4 )
+
+	end
+
+	-- Отображение назначенных клавиш на худе
+	local strings=strings_1
+	strings=strings_1
+	local i=1
+				local dik = bind_to_dik(strings[i].keybind)
+				local key_name =
+					strings[i].keybind
+					and ( dik and dik_to_keyname(dik) or "--" )
+					or ""
+				hud:AddCustomStatic("quick_slot0_text", true):wnd():SetText(string.sub(key_name..strings[i].text,2))
+
+	local strings=strings_2
+	strings=strings_2
+	local i=1
+				local dik = bind_to_dik(strings[i].keybind)
+				local key_name =
+					strings[i].keybind
+					and ( dik and dik_to_keyname(dik) or "--" )
+					or ""
+				hud:AddCustomStatic("quick_slot1_text", true):wnd():SetText(string.sub(key_name..strings[i].text,2))
+
+	local strings=strings_3
+	strings=strings_3
+	local i=1
+				local dik = bind_to_dik(strings[i].keybind)
+				local key_name =
+					strings[i].keybind
+					and ( dik and dik_to_keyname(dik) or "--" )
+					or ""
+				hud:AddCustomStatic("quick_slot2_text", true):wnd():SetText(string.sub(key_name..strings[i].text,2))
+
+	local strings=strings_4
+	strings=strings_4
+	local i=1
+				local dik = bind_to_dik(strings[i].keybind)
+				local key_name =
+					strings[i].keybind
+					and ( dik and dik_to_keyname(dik) or "--" )
+					or ""
+				hud:AddCustomStatic("quick_slot3_text", true):wnd():SetText(string.sub(key_name..strings[i].text,2))
+
+	end
+end
+
+--------------------
+-- Counting items --
+--------------------
+
+function OnItemTake(section)
+	if section == GetItemInFastSlot1() then
+		count_item_in_fast_slot1 = count_item_in_fast_slot1 + 1
+	elseif section == GetItemInFastSlot2() then
+		count_item_in_fast_slot2 = count_item_in_fast_slot2 + 1
+	elseif section == GetItemInFastSlot3() then
+		count_item_in_fast_slot3 = count_item_in_fast_slot3 + 1
+	elseif section == GetItemInFastSlot4() then
+		count_item_in_fast_slot4 = count_item_in_fast_slot4 + 1
+	end
+end
+
+function OnItemDrop(section)
+	if section == GetItemInFastSlot1() then
+		count_item_in_fast_slot1 = count_item_in_fast_slot1 - 1
+	elseif section == GetItemInFastSlot2() then
+		count_item_in_fast_slot2 = count_item_in_fast_slot2 - 1
+	elseif section == GetItemInFastSlot3() then
+		count_item_in_fast_slot3 = count_item_in_fast_slot3 - 1
+	elseif section == GetItemInFastSlot4() then
+		count_item_in_fast_slot4 = count_item_in_fast_slot4 - 1
+	end
+end
+
+---------------------------
+-- Get item in fast slot --
+---------------------------
+function GetItemInFastSlot1()
+	return load_variable("item_in_fast_slot1", "medkit") end
+
+function GetItemInFastSlot2()
+	return load_variable("item_in_fast_slot2", "bandage") end
+
+function GetItemInFastSlot3()
+	return load_variable("item_in_fast_slot3", "antirad") end
+
+function GetItemInFastSlot4()
+	return load_variable("item_in_fast_slot4", "energy_drink") end
+
+function remove_elements_2()
+local hud = get_hud()
+hud:GetCustomStatic("quick_slot0")
+	hud:RemoveCustomStatic("quick_slot0")
+		hud:RemoveCustomStatic("quick_slot1")
+			hud:RemoveCustomStatic("quick_slot2")
+				hud:RemoveCustomStatic("quick_slot3")
+					hud:RemoveCustomStatic("quick_slot0:counter")
+						hud:RemoveCustomStatic("quick_slot1:counter")
+					hud:RemoveCustomStatic("quick_slot2:counter")
+				hud:RemoveCustomStatic("quick_slot3:counter")
+			hud:RemoveCustomStatic("quick_slot0_text")
+		hud:RemoveCustomStatic("quick_slot1_text")
+	hud:RemoveCustomStatic("quick_slot2_text")
+hud:RemoveCustomStatic("quick_slot3_text")
+end
+
+-- Получение координат иконки предмета
+function get_icon_data(section)
+	local ini = system_ini()
+	local x = ini:r_u32(section, "inv_grid_x") * 50
+	local y = ini:r_u32(section, "inv_grid_y") * 50
+	local width = ini:r_u32(section, "inv_grid_width") * 50
+	local height = ini:r_u32(section, "inv_grid_height") * 50
+	return x, y, width, height
+end
+
+-- Получение количества предметов в инвентаре ГГ
+function count_item_by_section(section)
+	local count = 0
+	db.actor:iterate_inventory(function (dummy, item)
+		if item:section() == section then
+			count = count + 1
+		end
+	end)
+	return count
+end
+
+-- Получаем инвентарное название объекта
+function get_inv_name(section)
+	return system_ini():r_string(section,"inv_name")
+end
+
+-- Записываем переменную
+function save_variable(variable_name, value)
+	xr_logic.pstor_store(db.actor, variable_name, value)
+end
+
+-- Загружаем переменную
+function load_variable(variable_name, value_if_not_found)
+	return xr_logic.pstor_retrieve(db.actor, variable_name, value_if_not_found)
+end
+
+-- Удаляем переменную
+function del_variable(variable_name)
+	if db.storage[db.actor:id()].pstor[variable_name] then
+		db.storage[db.actor:id()].pstor[variable_name] = nil
+	end
+end

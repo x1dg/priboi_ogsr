@@ -1,0 +1,155 @@
+-- Priboy timer script
+-- by barin aka pepe_84
+-- last edited: 13.01.2008
+
+local priboy_timer_name = "priboy_hud_timer" -- config\ui\ui_custom_msgs.xml
+local timer_counterclockwise = nil
+
+timer_allowed = false
+
+function set_timer_on()
+	priboy_utils.send_hud_message("Warning! X-virus alert",
+		"Use the X-virus antidote immediately!", "commander", 10, nil)
+	timer_allowed = true
+end
+
+function is_timer_on()
+	return (get_hud():GetCustomStatic(priboy_timer_name) ~= nil and timer_allowed)
+end
+
+function GetTimer()
+	local hud = get_hud()
+	local timer = hud:GetCustomStatic(priboy_timer_name)
+	if not timer then
+		hud:AddCustomStatic(priboy_timer_name, true)
+		timer = hud:GetCustomStatic(priboy_timer_name)
+	end
+	return timer
+end
+
+function clear_hud_timer()
+	get_hud():RemoveCustomStatic(priboy_timer_name)
+	timer_allowed = false
+	timer_counterclockwise = nil
+	priboy_utils.update_variable("tvirus_infected", nil)
+	db.actor:disable_info_portion("priboy_t_virus_infected")
+end
+
+function FormatTime(hrs, mins, secs)
+	local hours, minutes, seconds = 0, 0, 0
+	if type(hrs) == "string" and type(mins) == "string"
+		and type(secs) == "string" then
+		if string.len(hrs) < 2 then hours = "0" .. hrs
+			else hours = hrs
+		end	
+		if string.len(mins) < 2 then minutes = "0" .. mins
+			else minutes = mins
+		end	
+		if string.len(secs) < 2 then seconds = "0" .. secs
+			else seconds = secs
+		end
+	else
+		if hrs < 10 then	hours = "0" .. tostring(hrs)
+			else hours = tostring(hrs)
+		end	
+		if mins < 10 then minutes = "0" .. tostring(mins)
+			else minutes = tostring(mins)
+		end
+		if secs < 10 then seconds = "0" .. tostring(secs)
+			else seconds = tostring(secs)
+		end
+	end
+	return (hours .. ":" .. minutes .. ":" .. seconds)
+end
+
+function GetTimeToElapse(time_to_elapse)
+	local default_time = "00:05:00"
+	
+	if type(time_to_elapse) ~= "string" then
+		return default_time
+	end
+	
+	local hours, minutes, seconds = 0, 0, 0
+	local str_len = string.len(time_to_elapse)
+	
+	if str_len == 8 then
+		hours = string.sub(time_to_elapse, 0, 2)
+		minutes = string.sub(time_to_elapse, 4, 5)
+		seconds = string.sub(time_to_elapse, 7)
+	elseif str_len == 7 then
+		hours = string.sub(time_to_elapse, 0, 1)
+		minutes = string.sub(time_to_elapse, 3, 4)
+		seconds = string.sub(time_to_elapse, 6)
+	elseif str_len == 5 then
+		hours = "00"
+		minutes = string.sub(time_to_elapse, 0, 2)
+		seconds = string.sub(time_to_elapse, 4)
+	elseif str_len == 4 then
+		hours = "00"
+		minutes = string.sub(time_to_elapse, 0, 1)
+		seconds = string.sub(time_to_elapse, 3)
+	elseif str_len == 2 or str_len == 1 then
+		hours = "00"
+		minutes = "00"
+		seconds = time_to_elapse
+	else
+		return default_time
+	end	
+	return FormatTime(hours, minutes, seconds)
+end
+
+function TimeToNumber(str_time)
+	return tonumber(string.sub(str_time, 0, 2)),
+		tonumber(string.sub(str_time, 4, 5)),
+		tonumber(string.sub(str_time, 7))
+end
+
+function half_time(str_time)
+	local h, m, s = TimeToNumber(str_time)
+	return FormatTime(math.floor(h/2), math.floor(m/2), math.floor(s/2))
+end
+
+class "CounterclockwiseTimer"
+function CounterclockwiseTimer:__init(time_to_elapse)
+	local tte = GetTimeToElapse(time_to_elapse)
+	priboy_utils.store_variable("tvirus_infected", tte)
+	GetTimer():wnd():SetText(tte)
+	self.half_life = half_time(tte)
+	self.object = self
+end
+
+function CounterclockwiseTimer:__finalize()
+end
+
+function CounterclockwiseTimer:Update()
+	local hours, minutes, seconds = TimeToNumber(GetTimer():wnd():GetText())
+	if hours == 0 and minutes == 0 and seconds == 0 then
+		clear_hud_timer()
+		db.actor:kill(db.actor)
+		return
+	end
+	if seconds == 0 then
+		if minutes == 0 then
+			hours = math.abs(hours - 1)
+			minutes = 59
+		else
+			minutes = math.abs(minutes - 1)
+		end				
+		seconds = 60
+	end	
+	seconds = seconds - 1
+	local time_now = FormatTime(hours, minutes, seconds)
+	if self.half_life == time_now then
+		priboy_utils.send_hud_message("The time is tight!",
+			"Hurry up or you'll die ...", "commander", 5, nil)
+	end
+	GetTimer():wnd():SetText(time_now)
+	priboy_utils.update_variable("tvirus_infected", time_now)
+end
+
+function get_hud_timer(time_to_elapse)
+	if timer_counterclockwise == nil then
+		timer_counterclockwise = CounterclockwiseTimer(time_to_elapse)
+	end
+	return timer_counterclockwise
+end

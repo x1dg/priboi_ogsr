@@ -1,0 +1,235 @@
+--[[-----------------------------------------------------------------------------------------------
+ File           : ui_game_saper.script
+ Description    : SAPER
+ Copyright      : 2011 © Charsi
+ Author         : Charsi
+ Last edit      : 17.06.2011-13.07.2011
+--]]-----------------------------------------------------------------------------------------------
+
+local size = 16
+local stretch_val = math.min(device().width/1024, 2.5)
+
+class "m_button"
+function m_button:__init(owner, x, y)
+	self.x = x
+	self.y = y
+	self.owner = owner
+	self.number = 0
+	self.mine = false
+	self.opened = false
+	self.clicked = false
+	self.b = CUIButton()
+	self.b:Init("ui\\ui_game_saper",((x-1)*size)/stretch_val+28,(y-1)*size+50,size/stretch_val,size)
+	self.b:SetStretchTexture(true)
+	self.b:SetOriginalRect(0,0,16,16)
+	self.owner:Register(self.b, "btn"..x.."_"..y)
+	self.owner.back_game:AttachChild(self.b)
+	self.owner:AddCallback(self.b:WindowName(), ui_events.BUTTON_CLICKED, self.btn_click, self)
+	self.owner:AddCallback(self.b:WindowName(), ui_events.WINDOW_LBUTTON_DB_CLICK, self.btn_dbclick, self)
+	self.env = {}
+end
+
+function m_button:btn_click()
+	self.owner.timer_stopped = false
+	if not self.clicked then
+		self.b:SetOriginalRect(0,16,16,16)
+		self.clicked = true
+	else
+		self.b:SetOriginalRect(0,0,16,16)
+		self.clicked = false
+	end
+end
+
+function m_button:btn_dbclick()
+	if not self.opened then
+		self.opened = true
+		self.b:Enable(false)
+		self.owner:check_finish()
+		if self.mine then
+			for k, v in pairs(self.owner.btns) do
+				v.b:Enable(false)
+				if not v.opened and v.mine then
+					v.b:SetOriginalRect(0,80,16,16)
+				end
+			end
+			self.owner:timer_stop()
+			self.owner.restart_btn:SetOriginalRect(48,48,24,24)
+			self.b:SetOriginalRect(0,48,16,16)
+			self.owner.win = false
+		elseif self.number > 0 then
+			self.b:SetOriginalRect(16,16*(self.number-1),16,16)
+		else
+			self.b:SetOriginalRect(32,48,16,16)
+			for k, v in pairs(self.env) do v:btn_dbclick() end
+		end
+	end
+end
+
+class "saper" (CUIScriptWnd)
+function saper:__init(organizer, w, h) super()
+	self:Init(0,0,1024,768)
+	self.w = w or 10
+	self.h = h or 10
+	self.mines = math.ceil(self.w*self.h/10)
+	self.btns = {}
+	self.win = false
+	self.organizer = organizer
+	self.ClosePda = function() self:OnExit() self.organizer:PdaQuit() end
+	local xml = CScriptXmlInit()
+	xml:ParseFile("pda_options.xml")
+	-- background
+	xml:InitStatic("minesweeper:minesweeper_back",self)
+	xml:InitStatic("minesweeper:minesweeper_pda",self)
+	xml:InitStatic("minesweeper:minesweeper_header",self)
+	xml:InitFrame("minesweeper:minesweeper_frame",self)
+	-- btn game exit
+	self.btn_quit = xml:InitButton("minesweeper:minesweeper_exit",self)
+	self:Register(self.btn_quit, "btn_quit")
+	self:AddCallback("btn_quit", ui_events.BUTTON_DOWN, self.OnExit, self)
+	-- btn pda exit
+	self.off = xml:Init3tButton("minesweeper:minesweeper_off",self)
+	self:Register(self.off,"btn_off")
+	self:AddCallback("btn_off", ui_events.BUTTON_DOWN, self.ClosePda, self)
+	-- background game
+	self.back_game = CUIStatic()
+	self.back_game:Init((1024-self.w*size)/2,(768-80-self.h*size)/2,(self.w*size+500),self.h*size+500)
+	self:AttachChild(self.back_game)
+	self:init_btns()
+	-- btn restart
+	self.restart_btn = CUIButton()
+	self.restart_btn:Init("ui\\ui_game_saper",(self.w*size-100)/2,0,24/stretch_val,24)
+	self.restart_btn:SetStretchTexture(true)
+	self.restart_btn:SetOriginalRect(72,24,24,24)
+	self:Register(self.restart_btn, "btn_restart")
+	self.back_game:AttachChild(self.restart_btn)
+	self:AddCallback("btn_restart", ui_events.BUTTON_CLICKED, self.restart_btn_click, self)
+	-- timer
+	self.timer = CUIStatic()
+	self.timer:Init(self.w*size/2+35,0,50,50)
+	self.timer:SetText("ρεκ")
+	self.timer:SetFont(GetFontLetterica25())
+	self.timer:SetTextColor(255,170,170,170)
+	self.back_game:AttachChild(self.timer)
+	self.time = 0
+	self.timer_stopped = true
+	self.timer = CUIStatic()
+	self.timer:Init(self.w*size/2+15,0,50,50)
+	self.timer:SetText(0)
+	self.timer:SetTextX(-40)
+	self.timer:SetTextAlign(CGameFont.alRight)
+	self.timer:SetFont(GetFontLetterica25())
+	self.timer:SetTextColor(255,170,170,170)
+	self.back_game:AttachChild(self.timer)
+end
+
+function saper:restart_btn_click()
+	if self.win and self.w < 20 and self.h < 20 then
+		level.start_stop_menu(saper(self.organizer, self.w + 1, self.h + 1), true)
+	else
+		level.start_stop_menu(saper(self.organizer), true)
+	end
+	self:OnExit()
+end
+
+function saper:init_btns()
+	for i = 1, self.w do
+		for j = 1, self.h do
+			table.insert(self.btns, m_button(self, i, j))
+		end
+	end
+	for i = 1, self.w do
+		for j = 1, self.h do
+			local b = self.btns[self.w*(j - 1) + i]
+			local b1 = self.btns[self.w*(j - 1) + i + 1]
+			if b1 and (b.x - b1.x)*(b.x - b1.x) < 2 and (b.y - b1.y)*(b.y - b1.y) < 2 then table.insert(b.env, b1) end
+			local b1 = self.btns[self.w*(j - 1) + i - 1]
+			if b1 and (b.x - b1.x)*(b.x - b1.x) < 2 and (b.y - b1.y)*(b.y - b1.y) < 2 then table.insert(b.env, b1) end
+			local b1 = self.btns[self.w*(j - 2) + i + 1]
+			if b1 and (b.x - b1.x)*(b.x - b1.x) < 2 and (b.y - b1.y)*(b.y - b1.y) < 2 then table.insert(b.env, b1) end
+			local b1 = self.btns[self.w*(j - 2) + i - 1]
+			if b1 and (b.x - b1.x)*(b.x - b1.x) < 2 and (b.y - b1.y)*(b.y - b1.y) < 2 then table.insert(b.env, b1) end
+			local b1 = self.btns[self.w*j + i + 1]
+			if b1 and (b.x - b1.x)*(b.x - b1.x) < 2 and (b.y - b1.y)*(b.y - b1.y) < 2 then table.insert(b.env, b1) end
+			local b1 = self.btns[self.w*j + i - 1]
+			if b1 and (b.x - b1.x)*(b.x - b1.x) < 2 and (b.y - b1.y)*(b.y - b1.y) < 2 then table.insert(b.env, b1) end
+			local b1 = self.btns[self.w*j + i]
+			if b1 and (b.x - b1.x)*(b.x - b1.x) < 2 and (b.y - b1.y)*(b.y - b1.y) < 2 then table.insert(b.env, b1) end
+			local b1 = self.btns[self.w*(j - 2) + i]
+			if b1 and (b.x - b1.x)*(b.x - b1.x) < 2 and (b.y - b1.y)*(b.y - b1.y) < 2 then table.insert(b.env, b1) end
+		end
+	end
+	for i = 1, self.mines do
+		local f = true
+		while(f) do
+			local b = self.btns[math.random(self.w*self.h)]
+			if not b.mine then b.mine = true f = false end
+		end
+	end
+	for k, v in pairs(self.btns) do
+		for k1, v1 in pairs(v.env) do
+			if v.mine then v1.number = v1.number + 1 end
+		end
+	end
+end
+
+function saper:timer_start()
+	self.time = time_global()
+	self.timer_stopped = false
+end
+
+function saper:timer_stop()
+	self.timer_stopped = true
+end
+
+function saper:check_finish()
+	local cnt = 0
+	for k, v in pairs(self.btns) do
+		if v.b:IsEnabled() then cnt = cnt + 1 end
+	end
+	if cnt == self.mines then
+		self:timer_stop()
+		self.restart_btn:SetOriginalRect(48,24,24,24)
+		self.win = true
+		for k, v in pairs(self.btns) do
+			v.b:Enable(false)
+			if v.mine then v.b:SetOriginalRect(0,16,16,16) end
+		end
+	else
+		return false
+	end
+end
+
+function saper:clear()
+	for k, v in pairs(self.btns) do
+		self.back_game:DetachChild(v.b)
+	end
+	clear_table(self.btns)
+end
+
+function saper:OnExit()
+	level.start_stop_menu(self, true)
+end
+
+function saper:Update()
+	CUIScriptWnd.Update(self)
+	if not self.timer_stopped then
+		if time_global() > self.time + 1000 then
+			self.time = self.timer:GetText() + 1
+			if self.time > 1000 then db.actor:kill(db.actor) self:OnExit() end
+			self.timer:SetText(self.time)
+			self.time = time_global()
+		end
+	end
+end
+
+function saper:OnKeyboard(dik, keyboard_action)
+	CUIScriptWnd.OnKeyboard(self, dik, keyboard_action)
+	if keyboard_action == ui_events.WINDOW_KEY_PRESSED then
+		if dik == DIK_keys.DIK_ESCAPE then
+			self:OnExit()
+		elseif dik == DIK_keys.DIK_SPACE then
+			self:restart_btn_click()
+		end
+	end
+	return true
+end

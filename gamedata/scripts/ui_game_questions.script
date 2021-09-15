@@ -1,0 +1,322 @@
+--[[ -----------------------------------------------------------------------------------------------
+ File           : ui_game_questions.script
+ Description    : Вопросы
+ Copyright      : 2011 © Stalk15
+ Author         : Stalk15
+ Last edit      : 26.02.2011
+--]] -----------------------------------------------------------------------------------------------
+
+local xml = CScriptXmlInit()
+local stretch_val = math.min(device().width/1024, 2.5)
+local TotalWin, NowQueFromAll = 0, 0
+local SelectQuestion = 1
+local tUsedQuestions = {}
+local CoefUpTotalWin = 1.25	-- коеффициент, увеличивающий выигрыш при каждом правильном ответе
+local tQuestions = {
+	[1] = {"question_1", "Собака", "Кровосос", "Псевдопес", "Кабан"},
+	[2] = {"question_2", "Трамплин", "Воронка", "Жгучий пух", "Электра"},
+	[3] = {"question_3", "Жгучий пух", "Трамплин", "Холодец", "Неизвестно"},
+	[4] = {"question_4", "4", "3", "2", "1"},
+	[5] = {"question_5", "Слизь", "Слюда", "Каменный цветок", "Ни какой"},
+	[6] = {"question_6", "Золотая рыбка", "Лунный свет", "Нет такого", "Колобок"},
+	[7] = {"question_7", "Бульдог", "Кабан", "Теленок", "Свинья"},
+	[8] = {"question_8", "Собак", "Свиней", "Зайцев", "Волков"},
+	[9] = {"question_9", "Оба правы", "2-ой Сталкер", "Ни кто не прав", "1-ый Сталкер"},
+	[10] = {"question_10", "Лифт", "Машина времени", "Ржавые волосы", "Гейзер"},
+	[11] = {"question_11", "Душа", "Морской еж", "Колобок", "Лунный свет"},
+	[12] = {"question_12", "Жгучий пух", "Холодец", "Карусель", "Электра"},
+	[13] = {"question_13", "1", "2", "3", "4"},
+	[14] = {"question_14", "Воронка", "Ржавые волосы", "Карусель", "Трамплин"},
+	[15] = {"question_15", "Монолит", "Экологи", "Военные", "Наемники"},
+	[16] = {"question_16", "Боров", "Клык", "Макс", "Призрак"},
+	[17] = {"question_17", "Призрак", "Швид", "Семецкий", "Клык"},
+	[18] = {"question_18", "АН-94", "HK G36", "L85A1", "ОЦ-14 'Гроза'"},
+	[19] = {"question_19", "Винторез", "СВД", "FN-F2000", "СВУ"},
+	[20] = {"question_20", "Ласточка", "Нет названия", "Крепление 'П-1'", "Планка 'Пикатини'"},
+	[21] = {"question_21", "1", "2", "3", "4"},
+	[22] = {"question_22", "МИ 28", "МИ 24", "МИ 6", "МИ 8"},
+	[23] = {"question_23", "M203", "ПСО-1", "Вопрос не верен", "ГП-25"},
+	[24] = {"question_24", "1950", "1952", "1986", "1974"},
+	[25] = {"question_25", "ПМм", "Форт-12", "Colt M1911", "Beretta 92FS"},
+	[26] = {"question_26", "Desert Eagle", "Browning HP", "Colt M1911", "Форт-12"},
+	[27] = {"question_27", "HK USP", "Colt M1911", "Beretta 92FS", "Browning HP"},
+	[28] = {"question_28", "Сталкеры-Одиночки", "Экологи", "Бандиты", "Свобода"},
+	[29] = {"question_29", "1", "4", "5", "3"},
+	[30] = {"question_30", "Трамплин", "Воронка", "Холодец", "Карусель"}
+	-- дополнение вопросов <question_></question_> в pda_options.xml
+	--[номер] = {"question_номер", "1", "2", "3", "4-верный ответ"}
+}
+
+function is_wide()
+	if stretch_val >= 1.3 then
+		x = 50
+	else
+		x = 100
+	end
+end
+
+class "game_questions" (CUIScriptWnd)
+function game_questions:__init() super()
+	self:InitControls()
+	self:InitCallBacks()
+end
+
+function game_questions:__finalize()
+end
+
+local btn_answer_1, btn_answer_2, btn_answer_3, btn_answer_4, btn_QstartG, btn_next_que, btn_quit_q
+function game_questions:InitControls()
+	self:Init(0,0,1024,768)
+	self.OnExit = function() SelectQuestion = nil tUsedQuestions = {} TotalWin, NowQueFromAll = 0, 0 level.start_stop_menu(self, true) end
+	xml:ParseFile("pda_options.xml")
+	xml:InitStatic("game_questions:back",self)
+	xml:InitStatic("game_questions:pda",self)
+	xml:InitStatic("game_questions:header",self)
+	self.wind_v = xml:InitFrame("numbers:frame",self)
+	xml:InitFrame("game_questions:field",self)
+	xml:InitFrame("game_questions:buttons",self)
+	xml:InitFrameLine("game_questions:bet_bar",self)
+	xml:InitFrameLine("game_questions:field_bar",self)
+
+	self.off = xml:Init3tButton("game_questions:off",self)
+	self:Register(self.off,"btn_off")
+
+	money = xml:InitStatic("game_questions:money",self)
+	money:SetText(db.actor:money().." RU")
+
+	self.btn_start = xml:Init3tButton("game_questions:btn_start", self)
+	self.btn_start:SetText("Начать игру")
+	self:Register(self.btn_start, "btn_start")
+	self.btn_next_que = xml:Init3tButton("game_questions:btn_next_que", self)
+	self.btn_next_que:SetText("Следующий вопрос")
+	self:Register(self.btn_next_que, "btn_next_que")
+	self.btn_quit = xml:Init3tButton("game_questions:btn_quit", self)
+	self.btn_quit:SetText("Завершить")
+	self:Register(self.btn_quit, "btn_quit")
+
+	self.btn_answer_1 = xml:Init3tButton("game_questions:btn_answer_1", self)
+	self.btn_answer_1:SetText("!!!")
+	self:Register(self.btn_answer_1, "btn_answer_1")
+	self.btn_answer_2 = xml:Init3tButton("game_questions:btn_answer_2", self)
+	self.btn_answer_2:SetText("!!!")
+	self:Register(self.btn_answer_2, "btn_answer_2")
+	self.btn_answer_3 = xml:Init3tButton("game_questions:btn_answer_3", self)
+	self.btn_answer_3:SetText("!!!")
+	self:Register(self.btn_answer_3, "btn_answer_3")
+	self.btn_answer_4 = xml:Init3tButton("game_questions:btn_answer_4", self)
+	self.btn_answer_4:SetText("!!!")
+	self:Register(self.btn_answer_4, "btn_answer_4")
+
+	btn_answer_1 = self:GetButton("btn_answer_1")
+	btn_answer_2 = self:GetButton("btn_answer_2")
+	btn_answer_3 = self:GetButton("btn_answer_3")
+	btn_answer_4 = self:GetButton("btn_answer_4")
+	btn_QstartG = self:GetButton("btn_start")
+	btn_next_que = self:GetButton("btn_next_que")
+	btn_quit_q = self:GetButton("btn_quit")
+	btn_answer_1:Show(false)
+	btn_answer_2:Show(false)
+	btn_answer_3:Show(false)
+	btn_answer_4:Show(false)
+	btn_next_que:Show(true)
+	btn_next_que:Enable(false)
+end
+
+function game_questions:InitCallBacks()
+	self:AddCallback("btn_off", ui_events.BUTTON_CLICKED, self.OnExit, self)
+	self:AddCallback("btn_start", ui_events.BUTTON_CLICKED, self.start, self)
+	self:AddCallback("btn_answer_1", ui_events.BUTTON_CLICKED, self.answer_1, self)
+	self:AddCallback("btn_answer_2", ui_events.BUTTON_CLICKED, self.answer_2, self)
+	self:AddCallback("btn_answer_3", ui_events.BUTTON_CLICKED, self.answer_3, self)
+	self:AddCallback("btn_answer_4", ui_events.BUTTON_CLICKED, self.answer_4, self)
+	self:AddCallback("btn_next_que", ui_events.BUTTON_CLICKED, self.next_que, self)
+	self:AddCallback("btn_quit", ui_events.BUTTON_CLICKED, self.stop, self)
+end
+
+function GetQuestion()
+	local win = xr_sound.get_safe_sound_object([[device\pda\pda_game_win2]])
+    SelectQuestion = math.random(#tQuestions)
+	if #tUsedQuestions ~= #tQuestions then
+		while is_not_used_question(SelectQuestion) do
+			SelectQuestion = math.random(#tQuestions)
+		end
+	end
+	if #tUsedQuestions == #tQuestions then
+		btn_quit_q:Enable(true)
+		btn_next_que:Enable(false)
+		db.actor:give_money(TotalWin)
+		level.start_stop_menu(ui_game_blackjack.GameMessage("Деньги ..............................................%c[pda_ok] +"..TotalWin.." RU", "%c[pda_ok]ВЫ ВЫИГРАЛИ"), true)
+		win:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1)
+		money:SetText(db.actor:money().." RU")
+		return false
+	end
+		if #tUsedQuestions < #tQuestions then
+			table.insert(tUsedQuestions, SelectQuestion)
+		end
+		local Question = tQuestions[SelectQuestion][1]
+		local value_1 = tQuestions[SelectQuestion][2]
+		local value_2 = tQuestions[SelectQuestion][3]
+		local value_3 = tQuestions[SelectQuestion][4]
+		local value_4 = tQuestions[SelectQuestion][5]
+		if Question and value_1 and value_2 and value_3 and value_4 then
+		return Question, value_1, value_2, value_3, value_4
+	end
+end
+
+function is_not_used_question(Q)
+local n = 0
+local TLen = #tUsedQuestions
+	for k=1, TLen do
+		if tUsedQuestions[k] == Q then
+			break
+		end
+      n = n+1
+	end
+	if n ~= TLen then
+		return true
+	end
+end
+
+function game_questions:start()
+	btn_answer_1:Show(true)
+	btn_answer_2:Show(true)
+	btn_answer_3:Show(true)
+	btn_answer_4:Show(true)
+	btn_next_que:Show(true)
+	btn_QstartG:Enable(false)
+	btn_next_que:Enable(false)
+	btn_quit_q:Enable(true)
+	self:set_question()
+end
+
+function game_questions:next_que()
+	self:set_question()
+end
+
+function game_questions:set_question()
+	local Question, value_1, value_2, value_3, value_4 = GetQuestion()
+	if NowQueFromAll > 0 then
+		self:DetachChild (self.text_q)
+		if TotalWin < 1 then
+			TotalWin = 500
+		end
+	end
+	if not Question then
+		return false
+	end
+	btn_next_que:Enable(false)
+    local tN = {value_1,value_2,value_3,value_4}
+	self.text_q = xml:InitStatic("game_questions:question_items:"..Question, self)
+
+	NowQueFromAll = NowQueFromAll + 1
+	TotalWin = math.floor(TotalWin * CoefUpTotalWin)
+	local d1 = math.random(1, 4)
+	local d2 = math.random(1, 3)
+	local d3 = math.random(1, 2)
+
+	local q1 = tN[d1]
+	table.remove(tN, d1)
+	local q2 = tN[d2]
+	table.remove(tN, d2)
+	local q3 = tN[d3]
+	table.remove(tN, d3)
+	local q4 = tN[1]
+
+	btn_answer_1:SetText(q1)
+	btn_answer_2:SetText(q2)
+	btn_answer_3:SetText(q3)
+	btn_answer_4:SetText(q4)
+	btn_answer_1:Enable(true)
+	btn_answer_2:Enable(true)
+	btn_answer_3:Enable(true)
+	btn_answer_4:Enable(true)
+	self:on_game_info()
+end
+
+function game_questions:on_game_info()
+	if NowQueFromAll > 1 then
+		self.wind_v:DetachChild (self.text_GInfo1)
+		self.wind_v:DetachChild (self.text_GInfo2)
+	end
+		is_wide()
+		self.text_GInfo1 = CUIStatic()
+		self.text_GInfo1:Init(x,230,194,30)
+		self.text_GInfo1:SetText("Выигрыш: "..TotalWin)
+		self.text_GInfo1:SetFont(GetFontLetterica18Russian())
+		self.text_GInfo1:SetTextColor(255,170,170,170)
+		self.text_GInfo1:SetTextAlign(2)
+		self.wind_v:AttachChild (self.text_GInfo1)
+
+		self.text_GInfo2 = CUIStatic()
+		self.text_GInfo2:Init(x,205,194,30)
+		self.text_GInfo2:SetText("Вопрос: "..NowQueFromAll.."/"..#tQuestions)
+		self.text_GInfo2:SetFont(GetFontLetterica18Russian())
+		self.text_GInfo2:SetTextColor(255,170,170,170)
+		self.text_GInfo2:SetTextAlign(2)
+		self.wind_v:AttachChild (self.text_GInfo2)
+end
+
+function game_questions:answer_1()
+	self:on_answer(btn_answer_1)
+end
+
+function game_questions:answer_2()
+	self:on_answer(btn_answer_2)
+end
+
+function game_questions:answer_3()
+	self:on_answer(btn_answer_3)
+end
+
+function game_questions:answer_4()
+	self:on_answer(btn_answer_4)
+end
+
+function game_questions:on_answer(Btn)
+	btn_answer_1:Enable(false)
+	btn_answer_2:Enable(false)
+	btn_answer_3:Enable(false)
+	btn_answer_4:Enable(false)
+	local text = Btn:GetText()
+	local lose = xr_sound.get_safe_sound_object([[device\pda\pda_game_over]])
+	if tostring(text) == tostring(tQuestions[SelectQuestion][5]) then
+		btn_next_que:Enable(true)
+	else
+		btn_quit_q:Enable(true)
+		level.start_stop_menu(ui_game_blackjack.GameMessage(" \\n \\nДеньги .................................................... 0 RU", "%c[pda_error]ВЫ ПРОИГРАЛИ"), true)
+		lose:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1)
+		self:DetachChild (self.text_q)
+		money:SetText(db.actor:money().." RU")
+	end
+end
+
+function game_questions:stop()
+		self.wind_v:DetachChild (self.text_GInfo1)
+		self.wind_v:DetachChild (self.text_GInfo2)
+		btn_answer_1:Show(false)
+		btn_answer_2:Show(false)
+		btn_answer_3:Show(false)
+		btn_answer_4:Show(false)
+		btn_next_que:Show(false)
+		btn_QstartG:Enable(true)
+		SelectQuestion = nil
+		tUsedQuestions = {}
+		TotalWin, NowQueFromAll = 0, 0
+		self:GetHolder():start_stop_menu(self, true)
+		level.start_stop_menu(ui_game_questions.game_questions(organizer), true)
+end
+
+function game_questions_start()
+    level.start_stop_menu(ui_game_blackjack.game_questions(), true)
+end
+
+function game_questions:OnKeyboard(dik, keyboard_action)
+	if dik ~= DIK_keys.DIK_RETURN and dik ~= DIK_keys.DIK_NUMPADENTER then
+		CUIScriptWnd.OnKeyboard(self, dik, keyboard_action)
+	end
+	if keyboard_action == ui_events.WINDOW_KEY_PRESSED then
+		if dik == DIK_keys.DIK_ESCAPE then self:stop()
+		end
+	end
+	return true
+end

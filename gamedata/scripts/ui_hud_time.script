@@ -1,0 +1,14 @@
+function update()
+	local oHud = get_hud()
+	local oCustomStatic = oHud:GetCustomStatic("hud_show_time")
+		if oCustomStatic == nil then
+	oHud:AddCustomStatic("hud_show_time", true)
+	oCustomStatic = oHud:GetCustomStatic("hud_show_time") end
+	local iTimeHourse = level.get_time_hours()
+	local iTimeMinutes = level.get_time_minutes()
+	local sMsg
+	if iTimeMinutes >= 10 then
+	sMsg = string.format(" %02d:%02d\n", iTimeHourse, iTimeMinutes) else
+	sMsg = string.format(" %02d:%02d\n", iTimeHourse, iTimeMinutes) end
+	if oCustomStatic ~= nil then oCustomStatic:wnd():SetText(sMsg) end
+end

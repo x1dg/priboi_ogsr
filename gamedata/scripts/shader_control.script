@@ -1,0 +1,458 @@
+-------------------------------------------
+-- Mod:      Dynamic Shaders
+-- File:     shader_control.script
+-- Version:  1.1 Beta, Patch 1
+-- Author:   Meltac; Copyright 2011, 2012
+-- Date:     2012-03-06 (yyyy-mm-dd)
+-------------------------------------------
+
+
+-- General variables
+local enabled = false				-- Enables/disables this script overall
+local use_zoom_dof = true			-- Enables/disables zoom DOF
+local force_zoom_dof = true			-- Forces zoom DOF for all weapon that are not explicitely excluded
+local debug_mode = false			-- Enables/disables debug console output
+
+-- Values for alternative zoom / aim mode recognition (useful for non-zooming mods)
+local alternative_zoom_recognition = false
+local alternative_zoom_accuracy = 0		-- default vanilla
+local alternative_zoom_fov = 55.0		-- some value faking zoom fov
+
+-- Zoom DOF variables
+local zoom_user_setting = "r2_aa"
+local shader_normal_value = "off"
+local shader_altern_value = "on"
+
+-- Field of View (FOV) value when NOT zooming (might be changed if running a FOV switcher mod/tool, but not required)
+local no_zoom_fov = 67.5  --83.0 	-- vanilla default is 67.5 
+
+local threshold_fov = 50
+local threshold_gl_fov = 37.5		-- vanilla GL fov (equals value 50.0 in config) - change if using mdified GL fov
+local threshold_fov_diff = 0.1 	-- use 1.0 when using very high zoom factors (i.e. weapon config zoom value less than 10.0)
+local threshold_gl_fov_diff = 2.0
+
+local fv = nil					-- current rounded FOV
+local device_fov = nil			-- current precide FOV
+local last_fov = nil			-- last stored rounded FOV
+local last_device_fov = nil		-- last stored precise FOV
+
+local orig_mblur = nil			-- original/initial motion blur config setting
+
+local icon = nil
+local scope_overlay	= true -- enables or disables the additional scope overlay; reduces NV flickering on zoom-out; however might be slower
+
+local last_state = 3 -- zoom state from previous update cycle - 0=no zoom, 1=zooming in, 2=holding zoom, 3=zooming out
+
+-- List of weapons excluded from zoom dof (if any)
+local excludes_weapons =
+{
+	"wpn_binoc",
+}
+
+-- List of NV scope colors; not listed or {1,1,1} means no NV effect; Standard R,G,B format.
+local nv_colors =
+{
+	wpn_binoc = {0.25, 0.95, 0.45}, 	-- analog green nightvision
+	wpn_g36 = {0.80, 0.95, 0.20},		-- yellow
+	wpn_svd = {0.10, 0.95, 0.20},		-- another analog green NV
+	wpn_svu = {0.10, 0.95, 0.20},
+	wpn_fn2000 = {0.30, 0.50, 0.70},	-- digital filtration nightvision
+	wpn_val = {0.25, 0.95, 0.45},
+	wpn_vintorez = {0.10, 0.95, 0.20},
+	wpn_sig550 = {0.10, 0.95, 0.20},
+	wpn_l85 = {1, 1, 1},	
+	wpn_lr300 = {0.10, 0.95, 0.20},
+	wpn_rpg7 = {0.95, 0.55, 0.25},		-- orange
+	wpn_gauss = {0.1, 0.15, 0.25},
+	wpn_p90 = {1, 1, 1},				-- not vanilla
+	wpn_dsr1 = {0.10, 0.75, 0.85},		-- not vanilla
+}
+
+
+-- Dynamic DOF variables (also used for zoom dov)
+local ddof_user_setting = "r2_aa_weight"
+local nv_user_setting = "r2_aa_break"
+local check_enabled = true
+local check_time
+local check_interal = 300
+local section = "wpn_distancemeter"
+local obj_id
+local state = 0
+local dist = 0
+
+
+function Update()
+	
+	if not enabled then return false end
+	
+	-- Store the original mblur setting prior to modifying
+	if not orig_mblur then
+		orig_mblur = get_console():get_string("r2_mblur")
+		logmsg("stored orig_mblur = '" .. orig_mblur .. "', orig shader=" .. get_console():get_string(zoom_user_setting))
+	end
+	
+	if last_device_fov == nil then last_device_fov = no_zoom_fov else last_device_fov = device_fov end	 
+	device_fov = device().fov		
+	if device_fov > no_zoom_fov then device_fov = no_zoom_fov end			-- support for FOV switcher mods/tools
+
+	if last_fov == nil then last_fov = device_fov else last_fov = fv end	
+	fv = math.ceil(device_fov)  -- "round" fiew of view to prevent fast toggling
+	
+	-- Fallback strategy to determine aim mode
+	if device_fov == no_zoom_fov and alternative_zoom_recognition then
+		if db.actor:accuracy() == alternative_zoom_accuracy then fv = alternative_zoom_fov else fv = no_zoom_fov end
+	end
+	
+	local zooming_in = device_fov < last_device_fov and math.abs(device_fov - last_device_fov) > threshold_fov_diff
+	local zooming_out = device_fov > last_device_fov and math.abs(device_fov - last_device_fov) > threshold_fov_diff
+	local holding_zoom = device_fov < no_zoom_fov and math.abs(device_fov - last_device_fov) <= threshold_fov_diff 
+	local no_zoom = math.abs(device_fov - no_zoom_fov) <= threshold_fov_diff 
+	
+	local fov_val = tostring(device().fov * 0.001)
+	--get_console():execute(fov_user_setting .. " " .. fov_val .. "," .. fov_val .. "," .. fov_val)
+		
+	local wpn_name, scope_status, grenade_launcher_status, scope_texture, scope_name, scope_zoom_factor, use_nv, scope_attached, gl_attached
+	
+	if debug_mode then 
+		wpn_name, scope_status, grenade_launcher_status, scope_texture, scope_name, scope_zoom_factor, use_nv, scope_attached, gl_attached = get_state()
+	end
+	
+	local debug_msg = tostring(wpn_name or "x") .. "  ( " .. tostring(scope_status or "x") .. "," .. tostring(grenade_launcher_status or "x") .. "," .. tostring(scope_attached or "x") .. "," .. tostring(gl_attached or "x") .. " ) ltx: " .. tostring(scope_zoom_factor or "x") .. " / fov: ".. tostring(device_fov) .. " / " .. tostring(fv) .. " / " .. tostring(math.ceil(fv)) .. " / " .. tostring(last_fov) .. " / " .. tostring(math.ceil(last_fov))
+	local zoom_val = 0;
+	
+	
+--  ZOOMING OUT
+	if zooming_out then		
+	
+		wpn_name, scope_status, grenade_launcher_status, scope_texture, scope_name, scope_zoom_factor, use_nv, scope_attached, gl_attached = get_state()
+	
+		-- Deactivate zoom shader and NV scope overlay (unless current weapon is excluded)
+		if last_state == 3 and	( not wpn_name or not table_contains(excludes_weapons, wpn_name) ) then
+			
+			get_console():execute(zoom_user_setting .. " " .. shader_normal_value)
+			get_console():execute("r2_mblur " .. orig_mblur)
+			get_console():execute(nv_user_setting .. " 0, 0, 0")
+		
+			if scope_overlay and icon then
+				get_hud():RemoveDialogToRender(icon)
+				logmsg("zooming_out: removing overlay " .. str(scope_texture))
+			end
+		
+			zoom_val = 0;
+			logmsg("zooming_out and disabling zoom DOF: " .. debug_msg .. ", mblur=" .. get_console():get_string("r2_mblur") .. ", shader=" .. get_console():get_string(zoom_user_setting))
+		else
+			logmsg("zooming_out and keeping zoom DOF: " .. debug_msg .. ", mblur=" .. get_console():get_string("r2_mblur") .. ", shader=" .. get_console():get_string(zoom_user_setting))
+		end
+		
+		last_state = 3		
+
+		
+--  ZOOMING IN		
+	elseif zooming_in then
+		
+		wpn_name, scope_status, grenade_launcher_status, scope_texture, scope_name, scope_zoom_factor, use_nv, scope_attached, gl_attached = get_state()
+		
+		-- potentially using grenade mode?
+		local gl_available = (grenade_launcher_status == 1 or grenade_launcher_status == 2 and gl_attached)  -- either built-in or attached
+		--local gl_mode = gl_available and math.abs(device_fov - scope_zoom_factor) <= threshold_gl_fov_diff
+		local gl_mode = gl_available and (device_fov >= threshold_gl_fov or math.abs(threshold_gl_fov - device_fov) <= threshold_gl_fov_diff)
+		
+		
+		-- Activate zoom shader and NV scope overlay
+		if use_zoom_dof and (use_nv or force_zoom_dof or gl_mode) then
+		
+			-- first check if scope or potentially grenade launcher zooming
+			--if not scope_zoom_factor or not gl_available or not gl_mode then			
+		
+				-- switch config  (unless current weapon is excluded)
+				if not wpn_name or not table_contains(excludes_weapons, wpn_name) then
+					get_console():execute(zoom_user_setting .. " " .. shader_altern_value)
+					get_console():execute("r2_mblur 0") -- mblur must be disabled already while zooming in to have to blur effect come up!
+					zoom_val = 1;
+					logmsg("zooming_in with scope:  " .. debug_msg .. ", mblur=" .. get_console():get_string("r2_mblur") .. ", shader=" .. get_console():get_string(zoom_user_setting))
+				elseif wpn_name then
+					logmsg("zooming_in with excluded weapon:  " .. debug_msg .. ", mblur=" .. get_console():get_string("r2_mblur") .. ", shader=" .. get_console():get_string(zoom_user_setting))
+				else
+					logmsg("zooming_in without any weapon:  " .. debug_msg .. ", mblur=" .. get_console():get_string("r2_mblur") .. ", shader=" .. get_console():get_string(zoom_user_setting))
+				end
+			
+				-- init scope texture (if existing)
+				if scope_overlay and use_nv and scope_texture and wpn_name and nv_colors[wpn_name] and last_state < 1.5 and not gl_mode then
+					if not icon then icon = CUIStatic() end
+					icon:SetWndPos(0,0)
+					icon:SetWidth(1024)
+					icon:SetHeight(768)
+					icon:InitTexture(scope_texture)
+					icon:SetStretchTexture(true)
+					--icon:SetTextureOffset(0, 0)
+					get_hud():RemoveDialogToRender(icon)
+					get_hud():AddDialogToRender(icon)
+					logmsg("adding overlay " .. str(scope_texture))
+					last_state = 1.5
+				else
+					logmsg("not adding overlay: " .. str(scope_overlay) .. ", " .. str(scope_texture) .. ", " .. str(wpn_name) .. ", " .. str(nv_colors[wpn_name]) .. ", " .. str(last_state) .. ", " .. str(gl_mode))
+				end
+				
+			--else
+			if gl_mode then
+			
+				use_nv = false 		-- no NV when potentially zoom in grenade mode
+				logmsg("zooming_in but might still be gl:  " .. debug_msg .. ", mblur=" .. get_console():get_string("r2_mblur") .. ", shader=" .. get_console():get_string(zoom_user_setting))
+			
+			end
+			
+		else
+			logmsg("zooming_in w/o scope:  " .. debug_msg .. ", mblur=" .. get_console():get_string("r2_mblur") .. ", shader=" .. get_console():get_string(zoom_user_setting))
+		end
+		-- Active nightvision shader
+		if use_nv then
+			if wpn_name and nv_colors[wpn_name] then
+				get_console():execute(nv_user_setting .. " " .. nv_colors[wpn_name][1] .. "," .. nv_colors[wpn_name][2] .. "," .. nv_colors[wpn_name][3])
+			else
+				get_console():execute(nv_user_setting .. " 1,1,1")
+			end
+		end		
+		
+		if not last_state == 1.5 then last_state = 1 end
+		
+	
+--  NO ZOOM
+	elseif no_zoom then		
+			
+		if scope_overlay and icon and last_state ~= 0 then
+			get_hud():RemoveDialogToRender(icon)
+			logmsg("no zoom 1: removing overlay " .. str(scope_texture))
+		end
+	
+		if last_state ~= 0 then -- only execute once
+			get_console():execute(zoom_user_setting .. " " .. shader_normal_value)
+			get_console():execute("r2_mblur " .. orig_mblur)
+			get_console():execute(nv_user_setting .. " 0, 0, 0")
+			last_state = 0
+		end
+		
+		zoom_val = 0
+		logmsg("no zoom 1:     " .. debug_msg .. ", mblur=" .. get_console():get_string("r2_mblur") .. ", shader=" .. get_console():get_string(zoom_user_setting))
+	
+		
+--	HOLDING ZOOM	
+	--elseif device_fov < no_zoom_fov and math.abs(device_fov - last_device_fov) <= threshold_fov_diff then
+	elseif holding_zoom then
+	
+		get_console():execute("r2_mblur 0")
+		logmsg("holding zoom:     " .. debug_msg .. ", mblur=" .. get_console():get_string("r2_mblur") .. ", shader=" .. get_console():get_string(zoom_user_setting))
+			
+	
+--  NO ZOOM 2 (this branch shouldn't ever be executed, normally)
+	elseif device_fov  >= no_zoom_fov then
+		
+		zoom_val = 0;
+		logmsg("no zoom 2:     " .. debug_msg .. ", mblur=" .. get_console():get_string("r2_mblur") .. ", shader=" .. get_console():get_string(zoom_user_setting))
+		last_state = 0
+		
+		
+--	OTHER (no condition matched)
+	else
+	
+		logmsg("none:     " .. debug_msg .. ", mblur=" .. get_console():get_string("r2_mblur") .. ", shader=" .. get_console():get_string(zoom_user_setting))
+		
+	end	
+	
+	
+	local is_valid_game_ver = tostring(type(level.get_target_dist)) == "function"
+	local dist_val = 1 -- 1000 meters
+	if is_valid_game_ver then
+		dist_val = tostring(level.get_target_dist() * 0.001)
+	end
+	
+	get_console():execute(ddof_user_setting .. " " .. dist_val .. "," .. fov_val .. "," .. zoom_val)	
+	
+end
+
+
+-- Returns the current weapon, night vision and scope state
+function get_state()
+	local wpn_name, wpn_data, scope_status, grenade_launcher_status, scope_texture, scope_name, scope_zoom_factor, use_nv, scope_attached, gl_attached
+	local cur_item = db.actor:active_item()
+	if cur_item ~= nil then
+		wpn_name = string.lower(tostring(cur_item:section()))
+		--use_zoom_dof = not table_contains(excludes_weapons, wpn_name)
+		--use_nv = use_zoom_dof and get_scope_status(cur_item) > 0
+		if use_zoom_dof then
+			wpn_data = get_current_weapon_data(cur_item)
+			--local scope_attached = wpn_data.addon_flags == 1 or wpn_data.addon_flags == 3 or wpn_data.addon_flags == 5 or wpn_data.addon_flags == 7
+			scope_attached = is_scope_attached(wpn_data)
+			gl_attached = is_gl_attached(wpn_data)
+			--use_nv = 	table_contains(scoped_weapons_builtin, wpn_name) or scope_attached
+			scope_status, grenade_launcher_status, scope_texture, scope_name, scope_zoom_factor = get_scope_status(cur_item)
+			
+			-- set scope texture if attached scope -- SHOULD NOT BE NOT REQUIRED ANYMORE
+			--[[
+			if not scope_texture and scope_name then
+				if scope_name == "wpn_addon_scope" then scope_texture = "wpn\\wpn_crosshair"
+				elseif scope_name == "wpn_addon_scope_susat" then scope_texture = "wpn\\wpn_crosshair" end					
+			end
+			]]
+			
+			use_nv = scope_status == 1 or scope_attached
+		end
+	end
+	return wpn_name, scope_status, grenade_launcher_status, scope_texture, scope_name, scope_zoom_factor, use_nv, scope_attached, gl_attached
+end
+
+
+-- Logs the specified message to the console
+function logmsg(text)
+	if debug_mode then get_console():execute("load *** shader_control " .. tostring(get_scope_status(db.actor:active_item())) .. " (" .. tostring(time_global()) .. "): " .. text) end
+end
+
+
+-- Enables or disables the update function of this script.
+function toggle()
+	enabled = not enabled
+end
+function enable(value)
+	enabled = value
+end
+
+
+-- Enables or disables the debug mode
+function toggle_debug()
+	debug_mode = not debug_mode
+end
+
+
+-- Checks whether the specified table (or array) contains the given element, and returns true or false.
+function table_contains(array_or_table, element)
+  for _, value in pairs(array_or_table) do
+	-- TODO: Replace by "real" regex-like search expression
+    if	value == element or (
+		value and element and
+		string.find(value,"*") and string.find(element, string.sub(value,1,(string.len(value)-1)))
+	)  then
+	  --console_print("table " .. str(array_or_table) .. " contains element " .. str(element))
+      return true
+	else
+	  --console_print("table " .. str(array_or_table) .. " does not contain element " .. str(element))
+    end
+  end  
+  return false
+end
+
+
+
+-- Returns the general weapon status
+function get_addon_status()
+	local sys_ini = system_ini()
+	
+end
+
+
+-- Returns the status of the scope of the specified weapon (Thanks to Nuor)
+-- 0 = no scope, 1 = built-in, 2 = attached.
+function get_scope_status(weapon)
+	local scope_status, grenade_launcher_status, scope_texture, scope_name, scope_zoom_factor
+	local sys_ini = system_ini()
+	local active_section = weapon and weapon:section() or "none"
+	if sys_ini:section_exist(active_section) and sys_ini:line_exist(active_section, "scope_status") then
+		scope_status = tonumber(sys_ini:r_string(active_section,"scope_status"))
+	end
+	if sys_ini:section_exist(active_section) and sys_ini:line_exist(active_section, "grenade_launcher_status") then
+		grenade_launcher_status = tonumber(sys_ini:r_string(active_section,"grenade_launcher_status"))
+	end	
+	if sys_ini:section_exist(active_section) and sys_ini:line_exist(active_section, "scope_texture") then
+		scope_texture = sys_ini:r_string(active_section,"scope_texture")
+	end
+	if sys_ini:section_exist(active_section) and sys_ini:line_exist(active_section, "scope_name") then
+		scope_name = sys_ini:r_string(active_section,"scope_name")		
+	end
+	if sys_ini:section_exist(active_section) and sys_ini:line_exist(active_section, "scope_zoom_factor") then
+		scope_zoom_factor = tonumber(sys_ini:r_string(active_section,"scope_zoom_factor"))
+		if scope_zoom_factor then scope_zoom_factor = scope_zoom_factor * 6 / 8 end			-- zoom factor recomputation
+	end
+	
+	-- get scope texture and zoom factor if addon scope (only if no texture has been specified so far)
+	if not scope_texture and scope_name and sys_ini:section_exist(scope_name) and sys_ini:line_exist(scope_name, "scope_texture") then
+		scope_texture = sys_ini:r_string(scope_name,"scope_texture")
+	end
+	if scope_name and sys_ini:section_exist(scope_name) and sys_ini:line_exist(scope_name, "scope_zoom_factor") then
+		scope_zoom_factor = sys_ini:r_string(scope_name,"scope_zoom_factor")
+	end
+	
+	--return nil
+	return scope_status, grenade_launcher_status, scope_texture, scope_name, scope_zoom_factor
+end
+
+
+-- Determines whether the specified weapon object has a scope attached
+function is_scope_attached(wpn_data)
+	if wpn_data then		
+		return wpn_data.addon_flags == 1 or wpn_data.addon_flags == 3 or wpn_data.addon_flags == 5 or wpn_data.addon_flags == 7
+	else
+		return nil
+	end
+end
+-- Determines whether the specified weapon object has a grenade launcher attached
+function is_gl_attached(wpn_data)
+	if wpn_data then		
+		return wpn_data.addon_flags == 2 or wpn_data.addon_flags == 3 or wpn_data.addon_flags == 6 or wpn_data.addon_flags == 7
+	else
+		return nil
+	end
+end
+
+
+-- Returns the specified weapon's active data:
+--		current ammo (no idea how to interpret this value)
+--		elapsed (remaining in magazine) ammo
+--		weapn state (0=idle, 1=firing, maybe other values for reloading or jamming (not tested))
+--		addon flags: attached items - value:
+--			1, 3, 5, 7 = Scope attached
+--			2, 3, 6, 7 = GL attached
+--			4, 5, 6, 7 = Silencer attached
+-- 		ammo type (0=default, >0=special)
+--		fire mode (0=one-shot, >0=2-shot/3-shot/burst, depending on config)
+function get_current_weapon_data(weapon)
+	local wpn = alife():object(weapon:id())
+	local np = net_packet()
+	wpn:STATE_Write(np)	
+	local data = {}
+	np:r_seek(np:w_tell() - 7)
+	data.ammo_current = np:r_u16()
+	data.ammo_elapsed = np:r_u16()	
+	data.weapon_state = np:r_u8()
+	data.addon_flags = np:r_u8()
+	data.ammo_type = np:r_u8()
+	data.ammo_in_mag = weapon:get_ammo_in_magazine()
+	data.ammo_total = weapon:get_ammo_total()
+	--data.weapon_state = packet:r_u8()
+	--data.weapon_zoom = packet:r_u8()
+	--np:r_seek(np:w_tell() - 1)
+	local at = data.ammo_type
+	--local at = np:r_u8()
+	data.attachable_item_enabled = weapon:attachable_item_enabled()
+	return data
+end
+
+
+-- Converts an object to a string, if possible (more safely than just using tostring)
+function str(value)
+	if value ~= nil then
+		local _type = type(value);
+		if _type ~= "string" then
+			local output = ""
+			local status, err = pcall(function() output = tostring(value) end)
+			if status then
+				return output
+			else  -- exception handling
+				get_console():execute("load *** util.str: EXCEPTION: " .. str(err))
+				return ""
+			end
+		else
+			--get_console():execute("load *** util.str: The value '" .. value .. "' is already of type string.")
+			return value
+		end
+	else
+		return ""
+	end		
+end

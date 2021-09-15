@@ -1,0 +1,154 @@
+-- *** 2008-04-18 ***
+-- *** barin ***
+-- last edited: 2008-07-25
+
+function swap(x, y)
+	if x <= y then
+		return x, y
+	end
+	return y, x
+end
+
+class "BarWarZone"
+
+function BarWarZone:__init()
+	self.init_done = false
+	self.attackers = nil
+	self.spawns = nil
+	
+	if level.name() ~= "l05_bar" then
+		self.enabled = false
+	else
+		self.enabled = true
+		self:LoadConfig()
+	end
+	
+	self.init_done = true
+end
+
+function BarWarZone:__finalize()
+	self.spawns = nil
+	self.attackers = nil
+	self.init_done = nil
+	self.enabled = nil
+end
+
+function BarWarZone:LoadConfig()
+	local war_zone = ini_file([[war_zone\war_zone.ltx]])
+	if not war_zone then
+		self.attackers = nil
+		self.spawns = nil
+		self.enabled = false
+		return
+	end
+
+	local variable, value, lines = nil, nil, nil
+	self.attackers = {}
+	self.spawns = {}
+	
+	if war_zone:section_exist("hostile") then
+		lines = war_zone:line_count("hostile")
+		for current_line = 0, lines - 1 do
+			result, variable, value = war_zone:r_line("hostile", current_line, "", "")
+			self.attackers[string.gsub(value, "[^%a]", "")] = {}
+		end
+	else
+		self.attackers = nil
+		self.spawns = nil
+		self.enabled = false
+		return
+	end
+	
+	for k, v in pairs(self.attackers) do
+		if war_zone:section_exist(k) then
+			variable, value, lines = "", "", war_zone:line_count(k)
+			for current_line = 0, lines - 1 do
+				result, variable, value	= war_zone:r_line(k, current_line, "", "")
+				self.attackers[k][variable] = tonumber(value)
+			end
+		else
+			self.attackers = nil
+			self.spawns = nil
+			self.enabled = false
+			return
+		end
+	end
+	
+	self.spawns = parser.read_section(war_zone, "enemy@the_gate", "parse_spawn_data")
+end
+
+function BarWarZone:Update()
+	if self.init_done and self.enabled then
+		local min, max = this.swap(math.random(1, 1000) % 24, math.random(1, 1000) % 24)
+		local current_hour = level.get_time_hours()
+		if (min < current_hour) and (current_hour < max) then
+			self:StartAttack()
+		end
+		self.enabled = false
+	end
+end
+
+function BarWarZone:StartAttack()
+	local enemy = nil
+		
+	if not utils.is_day() then
+		if math.random(111, 9999) % 2 == 0 then
+			enemy = "npcs"
+		else
+			enemy = "mutants"
+		end
+	else
+		enemy = "npcs"
+	end
+	
+	self:ShowMessage(self:SpawnAttackers(enemy), enemy)
+end
+
+function BarWarZone:SpawnAttackers(attacker_type)
+	local enemy = "mutants"
+	local spawned = 0	
+	
+	if attacker_type == "npcs" then
+		while enemy == "mutants" do
+			enemy = priboy_utils.get_subarray_name(self.attackers)
+		end
+	end
+	
+	for spawn_section, quantity in pairs(self.attackers[enemy]) do
+		for i = 1, quantity do
+			if self:SpawnEntity(spawn_section, self.spawns[priboy_utils.get_subarray_name(self.spawns)]) then
+				spawned = spawned + 1
+			end
+		end
+	end
+	
+	return spawned
+end
+
+function BarWarZone:SpawnEntity(section, spawn)
+	if not section or not spawn then
+		return false
+	end	
+	return alife():create(section, spawn.position, spawn.level_vertex, spawn.game_vertex)
+end
+
+function BarWarZone:ShowMessage(counter, enemy)
+	if counter ~= 0 then
+		if not (relation_registry.community_goodwill("dolg", db.actor:id()) < -500) then
+			if enemy == "npcs" then
+				priboy_utils.send_hud_message("Attention!", "Enemy at the gate. Help us to protect Duty territory!", "voronin", 10, nil)
+			else
+				priboy_utils.send_hud_message("Attention!", "Mutants wave attacked the Bar! Be careful ...", "voronin", 10, nil)
+			end
+		end
+	end
+end
+
+local bWarZone = nil
+
+function GetBarWarZone()
+	if bWarZone == nil then
+		bWarZone = BarWarZone()
+	end
+	return bWarZone
+end

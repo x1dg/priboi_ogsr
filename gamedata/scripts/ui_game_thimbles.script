@@ -1,0 +1,207 @@
+--[[ -----------------------------------------------------------------------------------------------
+ File           : ui_game_thimbles.script
+ Description    : Наперстки/Угадай, где шарик
+ Copyright      : 2011 © Stalk15
+ Author         : Stalk15
+ Last edit      : 26.02.2011
+--]] -----------------------------------------------------------------------------------------------
+
+local xml = CScriptXmlInit()
+local SelectedPosBall, bet_thimbles = 0, 0
+local stretch_val = math.min(device().width/1024, 2.5)
+
+function is_wide()
+	if stretch_val >= 1.3 then
+		tPosBall = {
+		[1] = {426, 378},
+		[2] = {558, 378},
+		[3] = {690, 378}}
+		stakan_x_stretch_val = 418
+		stakan_x_next = 132
+	else
+		tPosBall = {
+		[1] = {402, 378},
+		[2] = {580, 378},
+		[3] = {762, 378}}
+		stakan_x_stretch_val = 392
+		stakan_x_next = 178
+	end
+end
+
+class "thimbles" (CUIScriptWnd)
+function thimbles:__init(organizer) super()
+	self:InitControls()
+	self:InitCallBacks()
+end
+
+function thimbles:__finalize()
+end
+
+local btn_start_WB, btn_select_ball_1, btn_select_ball_2, btn_select_ball_3, btn_play_else
+function thimbles:InitControls()
+	self:Init(0,0,1024,768)
+	self.OnExit = function() level.start_stop_menu(self, true) end
+	xml:ParseFile("pda_options.xml")
+
+	xml:InitStatic("thimbles:back",self)
+	xml:InitStatic("thimbles:pda",self)
+	xml:InitStatic("thimbles:header",self)
+	xml:InitFrame("thimbles:frame",self)
+	xml:InitFrame("thimbles:field",self)
+	xml:InitFrame("thimbles:buttons",self)
+	xml:InitFrameLine("thimbles:bet_bar",self)
+	xml:InitFrameLine("thimbles:field_bar",self)
+
+	self.off = xml:Init3tButton("thimbles:off",self)
+	self:Register(self.off,"btn_off")
+	
+	local name,sname = ui_pda_names.get_strings()
+	enemy = xml:InitStatic("thimbles:enemy",self)
+	enemy:SetText(name.." "..sname)
+	money = xml:InitStatic("thimbles:money",self)
+	money:SetText(db.actor:money().." RU")
+	
+	self.bet_lbl = xml:InitStatic("thimbles:bet", self)
+	self.bet_lbl:SetText("Ставка:")
+	self.edit_bet = xml:InitEditBox("thimbles:edit_box", self)
+
+	self.btn_start = xml:Init3tButton("thimbles:btn_start", self)
+	self.btn_start:SetText("Начать игру")
+	self:Register(self.btn_start,"btn_start")
+	
+	self.btn_play_else = xml:Init3tButton("thimbles:btn_play_else", self)
+	self.btn_play_else:SetText("Сыгрыть еще раз")
+	self:Register(self.btn_play_else,"btn_play_else")
+	
+	self.btn_quit = xml:Init3tButton("thimbles:btn_quit", self)
+	self.btn_quit:SetText("Выйти из игры")
+	self:Register(self.btn_quit,"btn_quit")
+	
+	self.btn_select_ball_1 = xml:Init3tButton("thimbles:btn_select_ball_1", self)
+	self.btn_select_ball_1:SetText("^")
+	self:Register(self.btn_select_ball_1,"btn_select_ball_1")
+		
+	self.btn_select_ball_2 = xml:Init3tButton("thimbles:btn_select_ball_2", self)
+	self.btn_select_ball_2:SetText("^")
+	self:Register(self.btn_select_ball_2,"btn_select_ball_2")
+	
+	self.btn_select_ball_3 = xml:Init3tButton("thimbles:btn_select_ball_3", self)
+	self.btn_select_ball_3:SetText("^")
+	self:Register(self.btn_select_ball_3,"btn_select_ball_3")
+
+	btn_start_WB = self:GetButton("btn_start")
+	btn_select_ball_1 = self:GetButton("btn_select_ball_1")
+	btn_select_ball_2 = self:GetButton("btn_select_ball_2")
+	btn_select_ball_3 = self:GetButton("btn_select_ball_3")
+	btn_play_else = self:GetButton("btn_play_else")
+
+	btn_select_ball_1:Show(false)
+	btn_select_ball_2:Show(false)
+	btn_select_ball_3:Show(false)
+	btn_play_else:Enable(false)
+end
+
+function thimbles:InitCallBacks()
+	self:AddCallback("btn_off", ui_events.BUTTON_DOWN, self.OnExit, self)
+	self:AddCallback("btn_start", ui_events.BUTTON_CLICKED, self.ball_start, self)
+	self:AddCallback("btn_select_ball_1", ui_events.BUTTON_CLICKED, self.thimble_select_ball_1, self)
+	self:AddCallback("btn_select_ball_2", ui_events.BUTTON_CLICKED, self.thimble_select_ball_2, self)
+	self:AddCallback("btn_select_ball_3", ui_events.BUTTON_CLICKED, self.thimble_select_ball_3, self)
+	self:AddCallback("btn_play_else", ui_events.BUTTON_CLICKED, self.ball_play_else, self)
+	self:AddCallback("btn_quit", ui_events.BUTTON_CLICKED, self.ball_quit, self)
+end
+
+function thimbles:ball_start()
+	is_wide()
+	local text = self.edit_bet:GetText()
+	if tonumber(text) < 100 or tonumber(text) > 1000 or db.actor:money() < tonumber(text) then
+		self:error_bet()
+		return false
+	end
+	bet_thimbles = tonumber(text)
+	btn_select_ball_1:Show(true)
+	btn_select_ball_2:Show(true)
+	btn_select_ball_3:Show(true)
+	btn_start_WB:Enable(false)
+	SelectedPosBall = math.random(1, 3)
+	self.ball = xml:InitStatic("thimbles:ball", self)
+    self.ball:SetWndPos(unpack(tPosBall[SelectedPosBall]))
+	local stakan, stakan_x = nil, stakan_x_stretch_val
+	for a=1, 3 do
+		stakan = xml:InitStatic("thimbles:thimble", self)
+		stakan:SetWindowName("stakan")
+		stakan:SetWndPos(stakan_x, 322)
+		stakan_x = stakan_x + stakan_x_next
+	end
+end
+
+function thimbles:error_bet()
+	level.start_stop_menu(ui_game_blackjack.GameMessage("минимальная ....................................... 100 RU\\nмаксимальная .................................... 1000 RU", "СТАВКА"), true)
+end
+
+function thimbles:thimble_select_ball_1()
+	self:select_ball(1)
+end
+
+function thimbles:thimble_select_ball_2()
+	self:select_ball(2)
+end
+
+function thimbles:thimble_select_ball_3()
+	self:select_ball(3)
+end
+
+function thimbles:select_ball(n)
+	local win = xr_sound.get_safe_sound_object([[device\pda\pda_game_win2]])
+	local lose = xr_sound.get_safe_sound_object([[device\pda\pda_game_over]])
+	if SelectedPosBall == n then
+		level.start_stop_menu(ui_game_blackjack.GameMessage(" \\n \\nДеньги ..............................................%c[pda_ok] +"..bet_thimbles.." RU", "%c[pda_ok]ВЫ ВЫИГРАЛИ"), true)
+		win:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1)
+		db.actor:give_money(bet_thimbles)
+	else
+		level.start_stop_menu(ui_game_blackjack.GameMessage(" \\n \\nДеньги ..............................................%c[pda_error] -"..bet_thimbles.." RU", "%c[pda_error]ВЫ ПРОИГРАЛИ"), true)
+		lose:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1)
+		db.actor:give_money(-bet_thimbles)
+	end
+  btn_play_else:Enable(true)
+  self:clear_stakans()
+  btn_select_ball_1:Show(false)
+  btn_select_ball_2:Show(false)
+  btn_select_ball_3:Show(false)
+  money:SetText(db.actor:money().." RU")
+end
+
+function thimbles:ball_play_else()
+	btn_start_WB:Enable(true)
+	btn_play_else:Enable(false)
+	self:Reset()
+end
+
+function thimbles:Reset()
+	btn_select_ball_1:Show(false)
+	btn_select_ball_2:Show(false)
+	btn_select_ball_3:Show(false)
+	btn_start_WB:Enable(true)
+	self:clear_stakans()
+	if SelectedPosBall ~= 0 then
+		self:DetachChild(self.ball)
+	end
+	SelectedPosBall = 0
+end
+
+function thimbles:clear_stakans()
+  local st = self:GetStatic("stakan")
+    while st ~= nil do
+		st = self:GetStatic("stakan")
+		self:DetachChild(st)
+	end
+end
+
+function thimbles:ball_quit()
+	self:Reset()
+	self:GetHolder():start_stop_menu(self, true)
+end
+
+function game_where_ball_start()
+    level.start_stop_menu(ui_game_blackjack.thimbles(), true)
+end

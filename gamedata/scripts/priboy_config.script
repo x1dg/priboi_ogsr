@@ -1,0 +1,276 @@
+artefacts, mutants, spawn_data = {}, {}, {}
+war_zone_attackers, war_zone_spawns = {}, {}
+blowout_cfg, blowout_hideplaces = {}, {}
+blowout_hideplaces_mapspots = {}
+
+local show_debug_info = false
+
+function debug_print(text)
+	if show_debug_info then
+		priboy_debug.console_print(text)
+	end
+end
+
+function get_value(value)
+	local v = string.gsub(value, "[^%d]", "")
+	if v == nil or v == "" then
+		v = 0
+	end
+	return tonumber(v)
+end
+
+function parse_spawn_data(str)
+	local tab = {}
+	str = string.gsub(str, "(%a)", "")
+	for value in string.gfind(str, "([%-?%d+%.%d+]+)[%p%s]?") do
+		table.insert(tab, tonumber(value))
+	end
+	return tab
+end
+
+function get_spawn_data(value)
+	local t = parse_spawn_data(value)
+	for index = 1, #t do
+		if t[index] == nil then
+			return nil
+		end
+	end
+	return {position = vector():set(t[1], t[2], t[3]), level_vertex = t[4], game_vertex = t[5]}
+end
+
+function load_artefacts()
+	local config_file = ini_file("priboy_cfg\\artefacts.ltx")
+	if not config_file then
+		artefacts = nil
+		return false
+	end
+	
+	local level_name = level.name()
+	
+	debug_print("[cfg::artefacts]")
+	if config_file:section_exist(level_name) then
+		local variable, value, lines = "", "", config_file:line_count(level_name)
+		for current_line = 0, lines - 1 do
+			result, variable, value	= config_file:r_line(level_name, current_line, "", "")
+			artefacts[variable] = get_value(value)
+			debug_print(variable .. "=" .. tostring(artefacts[variable]))
+		end
+	end
+end
+
+function load_mutants()
+	local config_file = ini_file("priboy_cfg\\mutants.ltx")
+	if not config_file then
+		mutants = nil
+		return false
+	end
+	
+	local level_name = level.name()
+	
+	debug_print("[cfg::mutants]")
+	if config_file:section_exist(level_name) then
+		local variable, value, lines = "", "", config_file:line_count(level_name)
+		for current_line = 0, lines - 1 do
+			result, variable, value	= config_file:r_line(level_name, current_line, "", "")
+			mutants[variable] = get_value(value)
+			debug_print(variable .. "=" .. tostring(mutants[variable]))
+		end
+	end
+end
+
+function load_spawn_data()
+	local config_file = ini_file("priboy_cfg\\spawn_data.ltx")
+	if not config_file then
+		spawn_data = nil
+		return false
+	end
+	
+	local level_name = level.name()
+	local counter, ln = 0, 0
+	
+	if config_file:section_exist(level_name) then
+		local variable, value, lines = "", "", config_file:line_count(level_name)
+		ln = lines
+		for current_line = 0, lines - 1 do
+			result, variable, value	= config_file:r_line(level_name, current_line, "", "")
+			table.insert(spawn_data, get_spawn_data(value))
+			counter = counter + 1
+		end
+	end
+	
+	debug_print("[cfg::spawns]")
+	debug_print("loaded:" .. tostring(ln) .. "|" .. tostring(counter))
+end
+
+function parse_hideplaces(str)
+	local tab = {}
+	str = string.gsub(str, "(%a)", "")
+	for value in string.gfind(str, "([%-?%d+]+)[%p%s]?") do
+		table.insert(tab, tonumber(value))
+	end
+	return tab
+end
+
+function get_hideplaces(value)
+	local t = parse_hideplaces(value)
+	for index = 1, #t do
+		if t[index] == nil then
+			return nil
+		end
+	end
+	return {min_x = t[1], max_x = t[2], min_y = t[3],
+		max_y = t[4], min_z = t[5], max_z = t[6]}
+end
+
+function debug_print_table(tab)
+	if not show_debug_info then return end
+	if tab ~= nil then
+		debug_print("[" .. tostring(tab.min_x) .. "][" .. tostring(tab.max_x) .. "][" ..
+			tostring(tab.min_y) .. "][" .. tostring(tab.max_y) .. "][" ..
+			tostring(tab.min_z) .. "][" .. tostring(tab.max_z) .. "]")
+	end
+end
+
+function get_bool(value, default)
+	value = string.gsub(value, "[^%a]", "")
+	if value == "true" then
+		return true
+	elseif value == "false" then
+		return false
+	else
+		return default or false
+	end
+end
+
+function load_blowout_cfg()
+	local config_file = ini_file("priboy_cfg\\blowout.ltx")
+	if not config_file then
+		blowout_cfg = nil
+		return false
+	end
+	
+	debug_print("[cfg::blowout]")
+	if config_file:section_exist("blowout") then
+		local variable, value, lines = "", "", config_file:line_count("blowout")
+		for current_line = 0, lines - 1 do
+			result, variable, value	= config_file:r_line("blowout", current_line, "", "")
+			blowout_cfg[variable] = get_bool(value, false)
+			debug_print(variable .. "=" .. priboy_debug.toString(blowout_cfg[variable]))
+		end
+	end
+end
+
+function load_blowout_hideplaces()
+	local config_file = ini_file("priboy_cfg\\hideplaces.ltx")
+	if not config_file then
+		blowout_hideplaces = nil
+		return false
+	end
+	
+	local level_name = level.name()
+	local counter, ln, hideplace = 0, 0, 0
+	
+	if config_file:section_exist(level_name) then
+		local variable, value, lines = "", "", config_file:line_count(level_name)
+		ln = lines
+		for current_line = 0, lines - 1 do
+			result, variable, value	= config_file:r_line(level_name, current_line, "", "")
+			hideplace = get_hideplaces(value)
+			debug_print_table(hideplace)
+			table.insert(blowout_hideplaces, hideplace)
+			counter = counter + 1
+		end
+	end
+	
+	debug_print("[cfg::hideplaces]")
+	debug_print("loaded:" .. tostring(ln) .. "|" .. tostring(counter))
+end
+
+function load_hideplaces_mapspots()
+	local config_file = ini_file("priboy_cfg\\mapspots.ltx")
+	if not config_file then
+		blowout_hideplaces_mapspots = nil
+		return false
+	end
+	
+	local level_name = level.name()
+	local counter, ln = 0, 0
+	
+	if config_file:section_exist(level_name) then
+		local variable, value, lines = "", "", config_file:line_count(level_name)
+		ln = lines
+		for current_line = 0, lines - 1 do
+			result, variable, value	= config_file:r_line(level_name, current_line, "", "")
+			table.insert(blowout_hideplaces_mapspots, get_spawn_data(value))
+			counter = counter + 1
+		end
+	end
+	
+	debug_print("[cfg::mapspot]")
+	debug_print("loaded:" .. tostring(ln) .. "|" .. tostring(counter))
+end
+
+function prepare_war_zone()
+	local level_name = level.name()
+	
+	if level_name ~= "l05_bar" then
+		return false
+	end
+	
+	local config_file = ini_file("priboy_cfg\\war_zone.ltx")
+	if not config_file then
+		war_zone_attackers = nil
+		war_zone_spawns = nil
+		return false
+	end
+	
+	local variable, value, lines = nil, nil, nil
+	local counter = 0
+	
+	if config_file:section_exist("hostile") then
+		variable, value, lines = "", "", config_file:line_count("hostile")
+		for current_line = 0, lines - 1 do
+			result, variable, value	= config_file:r_line("hostile", current_line, "", "")
+			value = string.gsub(value, "[^%a]", "")
+			war_zone_attackers[value] = {}
+		end
+	end
+	
+	--debug_print("[cfg::war_zone_attackers]")
+	
+	for k, v in pairs(war_zone_attackers) do
+		if config_file:section_exist(k) then
+			variable, value, lines = "", "", config_file:line_count(k)
+			for current_line = 0, lines - 1 do
+				result, variable, value	= config_file:r_line(k, current_line, "", "")
+				war_zone_attackers[k][variable] = get_value(value)
+				--debug_print("[" .. k .. "]=>" .. variable .. "=" .. tostring(war_zone_attackers[k][variable]))
+				counter = counter + 1
+			end
+		end
+		counter = 0
+	end
+	
+	counter = 0
+	
+	if config_file:section_exist("enemy@the_gate") then
+		variable, value, lines = "", "", config_file:line_count("enemy@the_gate")
+		for current_line = 0, lines - 1 do
+			result, variable, value	= config_file:r_line("enemy@the_gate", current_line, "", "")
+			table.insert(war_zone_spawns, get_spawn_data(value))
+			counter = counter + 1
+		end
+	end
+	debug_print("[cfg::war_zone_spawns]=>loaded:" .. tostring(counter))
+end
+
+function load_config()
+	debug_print("***Loading cfg for " .. level.name() .. "***")
+	load_blowout_cfg()
+	load_blowout_hideplaces()
+	load_hideplaces_mapspots()
+	load_artefacts()
+	load_mutants()
+	load_spawn_data()
+
+end

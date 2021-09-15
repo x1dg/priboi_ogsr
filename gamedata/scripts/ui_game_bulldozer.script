@@ -1,0 +1,768 @@
+--[[-----------------------------------------------------------------------------------------------
+ File			: ui_game_bulldozer.script
+ Description	: Bulldozer
+ Copyright		: 2011 © Charsi
+ Author			: Charsi
+ Extended		: Enframed
+ Last edit		: 11.06.2011-28.06.2011
+ --------------------------------------------------------------------------------------------------
+ Level size		: 20x12
+ Icons			:
+	|b| - bulldozer
+	|c| - clear
+	|w| - wall
+	|r| - rock
+	|f| - fin
+--]]-----------------------------------------------------------------------------------------------
+
+local levels = {
+[1]={
+"cccccccccccccccccccc",
+"cccccccccccccccccccc",
+"ccccccccwwwccccccccc",
+"ccccccccwfwccccccccc",
+"ccccccccwcwwwwcccccc",
+"ccccccwwwrcrfwcccccc",
+"ccccccwfcrbwwwcccccc",
+"ccccccwwwwrwcccccccc",
+"cccccccccwfwcccccccc",
+"cccccccccwwwcccccccc",
+"cccccccccccccccccccc",
+"cccccccccccccccccccc"},
+[2]={
+"wwwwwwwwwwwwwwwwwwww",
+"wfwccccccccccccccccw",
+"wfwccccccccccccccwcw",
+"wcwcccccccccccrccwcw",
+"wcwccrcccccccccccccw",
+"wcwccccccbcccccccwcw",
+"wcwccccccccccccccwcw",
+"wcwcccccccccccrccwcw",
+"wcwccrcccccccccccwcw",
+"wccccccccccccccccwfw",
+"wccccccccccccccccwfw",
+"wwwwwwwwwwwwwwwwwwww"},
+[3]={
+"cwwwwwwwwwwwwwwwwwwc",
+"cwccccccccccccccccwc",
+"cwcccccccccwccccccwc",
+"cwcccwwwwwwwccccccwc",
+"cwcccfrccccwcrccccwc",
+"cwcccwccfcbwcrccccwc",
+"cwcccwwccccwcrccccwc",
+"cwccccwccccwccccccwc",
+"cwccccwccccwcccwwcwc",
+"cwccccwwwrwwcccwcfwc",
+"cwccccccccccccccffwc",
+"cwwwwwwwwwwwwwwwwwwc"},
+[4]={
+"cccccccccccccccccccc",
+"ccccccwwwwwwwwcccccc",
+"ccccccwccccccwcccccc",
+"cccccwwcwwwwrwcccccc",
+"cccccwccccwccwcccccc",
+"cccccwcrccrcbwcccccc",
+"cccccwcrccwffwcccccc",
+"cccccwccccwffwcccccc",
+"cccccwccccwwwwcccccc",
+"cccccwccccwccccccccc",
+"cccccwwwwwwccccccccc",
+"cccccccccccccccccccc"},
+[5]={
+"cccccccccccccccccccc",
+"ccccccwwwwwccccccccc",
+"ccccccwbccwccccccccc",
+"ccccccwcrrwcwwwccccc",
+"ccccccwcrcwcwfwccccc",
+"ccccccwwwcwwwfwccccc",
+"cccccccwwccccfwccccc",
+"cccccccwccccwcwccccc",
+"cccccccwccccwwwccccc",
+"cccccccwwwwwcccccccc",
+"cccccccccccccccccccc",
+"cccccccccccccccccccc"},
+[6]={
+"cccccccccccccccccccc",
+"cccccccccccccccccccc",
+"ccccccwwwwwwwccccccc",
+"ccccccwcccccwwwccccc",
+"cccccwwrwwwcccwccccc",
+"cccccwbccrccrcwccccc",
+"cccccwcffwcrcwwccccc",
+"cccccwwffwcccwcccccc",
+"ccccccwwwwwwwwcccccc",
+"cccccccccccccccccccc",
+"cccccccccccccccccccc",
+"cccccccccccccccccccc"},
+[7]={
+"cccccccccccccccccccc",
+"cccccccccccccccccccc",
+"cccccccwwwwccccccccc",
+"cccccccwcbwwwccccccc",
+"cccccccwcrccwccccccc",
+"ccccccwwwcwcwwcccccc",
+"ccccccwfwcwccwcccccc",
+"ccccccwfrccwcwcccccc",
+"ccccccwfcccrcwcccccc",
+"ccccccwwwwwwwwcccccc",
+"cccccccccccccccccccc",
+"cccccccccccccccccccc"},
+[8]={
+"cccccccccccccccccccc",
+"cccccccccccccccccccc",
+"cccccccccccccccccccc",
+"cccccwwwwwwwwwwccccc",
+"ccccwwcbcwccccwwcccc",
+"ccccwcrcffffrccwcccc",
+"ccccwccrwwwwcrcwcccc",
+"ccccwcccwccwccwwcccc",
+"ccccwwwwwccwwwwccccc",
+"cccccccccccccccccccc",
+"cccccccccccccccccccc",
+"cccccccccccccccccccc"},
+[9]={
+"cccccccccccccccccccc",
+"cccccccccccccccccccc",
+"ccccccccwwwwcccccccc",
+"cccccccwwccwcccccccc",
+"cccccccwbrcwcccccccc",
+"cccccccwwrcwwccccccc",
+"cccccccwwcrcwccccccc",
+"cccccccwfrccwccccccc",
+"cccccccwcfffwccccccc",
+"cccccccwwwwwwccccccc",
+"cccccccccccccccccccc",
+"cccccccccccccccccccc"},
+[10]={
+"cccccccccccccccccccc",
+"ccccccccccwwwwcccccc",
+"ccccccccccwccwcccccc",
+"cccccccccwwrcwcccccc",
+"cccccccwwwffcwcccccc",
+"cccccccwcrffcwcccccc",
+"cccccccwcrwcbwcccccc",
+"cccccccwcrcccwcccccc",
+"cccccccwcccwwwcccccc",
+"cccccccwwwwwcccccccc",
+"cccccccccccccccccccc",
+"cccccccccccccccccccc"},
+[11]={
+"cccccccccccccccccccc",
+"ccccccwwwwwwwccccccc",
+"cccwwwwcccccwccccccc",
+"cccwcccfwwwcwccccccc",
+"cccwcwcwccccwwcccccc",
+"cccwcwcrcrwfcwcccccc",
+"cccwcwcccccwcwcccccc",
+"cccwcfwrcrcwcwcccccc",
+"cccwwccccwcwcwwwcccc",
+"ccccwcwwwfcbcccwcccc",
+"ccccwcccccwwcccwcccc",
+"ccccwwwwwwwwwwwwcccc"},
+[12]={
+"wwwwwwwwwwwwwwwwwwww",
+"wccwwwwwwcccwwwcccfw",
+"wccwccccwrcccrccfffw",
+"wcrwcbcccccwwwwwfffw",
+"wccwccwwwrccwccwwwww",
+"wcrwwcwwwcrcwcrcfwcc",
+"wcccwcwwwrcccccfwccc",
+"wrcrwcwwwcrcwcfwcccc",
+"wcccccwwwrcccfwccccc",
+"wfrwccccccccwwcccccc",
+"wcfwccccccccwccccccc",
+"wwwwwwwwwwwwwccccccc"},
+[13]={
+"cccccccccccccccccccc",
+"ccccwwwwwccccccccccc",
+"ccccwcccwccccccccccc",
+"ccccwrccwccccccccccc",
+"ccwwwccrwccccccccccc",
+"ccwccrcrcwcccccccccc",
+"wwwcwcwwcwccccwwwwww",
+"wcccwcwwcwwwwwwccffw",
+"wcrccrcccccccccccffw",
+"wwwwwcwwwcwbwwcccffw",
+"ccccwcccccwwwwwwwwwc",
+"ccccwwwwwwwccccccccc"},
+[14]={
+"cccccccccccccccccccc",
+"cccccccccccccccccccc",
+"ccccccccwwwwwwwccccc",
+"cccccccwwccwccwccccc",
+"cccccccwcccwcbwccccc",
+"cccccccwrcrcrcwccccc",
+"cccccccwcrwwccwccccc",
+"cccccwwwcrcwcwwccccc",
+"cccccwfffffccwcccccc",
+"cccccwwwwwwwwwcccccc",
+"cccccccccccccccccccc",
+"cccccccccccccccccccc"},
+[15]={
+"cccccccccccccccccccc",
+"cccccccccwwwwwwwwccc",
+"cccccccccwcccccbwccc",
+"cccccccccwcrwrcwwccc",
+"cccccccccwcrccrwcccc",
+"cccccccccwwrcrcwcccc",
+"cwwwwwwwwwcrcwcwwwcc",
+"cwffffccwwcrccrccwcc",
+"cwwfffccccrccrcccwcc",
+"cwffffccwwwwwwwwwwcc",
+"cwwwwwwwwccccccccccc",
+"cccccccccccccccccccc"},
+[16]={
+"ccccwwwwwwccwwwccccc",
+"ccccwffccwcwwbwwcccc",
+"ccccwffccwwwcccwcccc",
+"ccccwffcccccrrcwcccc",
+"ccccwffccwcwcrcwcccc",
+"ccccwffwwwcwcrcwcccc",
+"ccccwwwwcrcwrccwcccc",
+"cccccccwccrwcrcwcccc",
+"cccccccwcrccrccwcccc",
+"cccccccwccwwcccwcccc",
+"cccccccwwwwwwwwwcccc",
+"cccccccccccccccccccc"},
+[17]={
+"ccccccccccwwwwwccccc",
+"ccccwwwwwwwcccwwcccc",
+"cccwwcwccwwcrrcwcccc",
+"cccwccccbccccrcwcccc",
+"cccwccrccwwwcccwcccc",
+"cccwwwcwwwwwrwwwcccc",
+"cccwcrccwwwcffwccccc",
+"cccwcrcrcrcfffwccccc",
+"cccwccccwwwfffwccccc",
+"cccwcrrcwcwfffwccccc",
+"cccwccwwwcwwwwwccccc",
+"cccwwwwccccccccccccc"},
+[18]={
+"cccccccccccccccccccc",
+"cccccccccccccccccccc",
+"cccccwwwwwwwwccccccc",
+"cccccwccccbcwccccccc",
+"cccccwcrffccwwcccccc",
+"cccccwwwffwccwcccccc",
+"cccccccwwrrrcwcccccc",
+"ccccccccwccccwcccccc",
+"ccccccccwwwwwwcccccc",
+"cccccccccccccccccccc",
+"cccccccccccccccccccc",
+"cccccccccccccccccccc"},
+[19]={
+"cccccwwwwwwwwwwccccc",
+"ccccwwfwccccccwwwwcc",
+"cccwwffwcrccrcwccwcc",
+"cccwfffwcwwcrcwccwcc",
+"cccwfffffccwrrcccwcc",
+"cccwwffffrccccwrcwcc",
+"cccwwwwcwwwwwwwccwcc",
+"cccwcccrccccccccwwcc",
+"cccwccrcwccrwcrcwwcc",
+"cccwcrwwwcrcwcrrcwcc",
+"cccwcccbwccwwccccwcc",
+"cccwwwwwwwwwwwwwwwcc"},
+[20]={
+"cccccccccccccccccccc",
+"cccccccccccccccccccc",
+"cccccwwwwccccccccccc",
+"cccccwccwwwccccccccc",
+"cccccwbcccwwwccccccc",
+"cccccwcwrccfwccccccc",
+"cccccwcrcrffwccccccc",
+"cccccwcrcfwwwccccccc",
+"cccccwccwwwccccccccc",
+"cccccwwwwccccccccccc",
+"cccccccccccccccccccc",
+"cccccccccccccccccccc"},
+[21]={
+"cccccccccccccccccccc",
+"cwwwwwwwwwwwwwwwwwwc",
+"cwwfwfwfwfwfwfwfwfwc",
+"cwfrcrcrcrcrcrccccwc",
+"cwwcwcwcwcwcwcwcwcwc",
+"cwfrcccccrcccccccrwc",
+"cwwcwcwcwcwcwcwcwcwc",
+"cwfccccccccrcccrccwc",
+"cwwcwcwcwcwcwcwcwcwc",
+"cwfccccccccccrcccbwc",
+"cwwwwwwwwwwwwwwwwwwc",
+"cccccccccccccccccccc"},
+[22]={
+"ccccwwwwwwwwwccccccc",
+"ccccwcccccccwccccccc",
+"ccccwccrcccrwccccccc",
+"ccccwwwwccccwccccccc",
+"cccccccwcrccwwcccccc",
+"ccccwwwwcccrcwcccccc",
+"ccccwffcrcwwcwwwwccc",
+"ccccwffccrwwccccwccc",
+"ccccwffccccrccccwccc",
+"ccccwfwwwrwwwcwbwccc",
+"ccccwfwcwcccccwwwccc",
+"ccccwwwcwwwwwwwccccc"},
+[23]={
+"cccccccccccccccccccc",
+"cccccwwwwwwwcccccccc",
+"cccccwcccbcwcccccccc",
+"cccccwcrcwcwwwwccccc",
+"cccccwwcrwrfffwccccc",
+"cccccwcccrcfffwccccc",
+"cccccwcwwcrcwwwccccc",
+"cccccwccccrcwccccccc",
+"cccccwwwccccwccccccc",
+"cccccccwwwwwwccccccc",
+"cccccccccccccccccccc",
+"cccccccccccccccccccc"},
+[24]={
+"wwwwwwwwwwwwwwwwwwcc",
+"wccccccccccccccccwwc",
+"wcrwcccrcwwccrccccwc",
+"wccccrwwwccccwcrrcwc",
+"wfwwwcccccrcrcwwccww",
+"wfffwccwccwccccwrccw",
+"wffwwrrwwwwcrccwcccw",
+"wfffwccccccrcwwccwww",
+"wfffrccwwwccwccccwcw",
+"wwffccrwccwwcccwwbcw",
+"cwwfwccccccccccccccw",
+"ccwwwwwwwwwwwwwwwwww"},
+[25]={
+"wwwwwwwwwwwcccwwwwww",
+"wcccccwcccwccwwccccw",
+"wwcrccwcccwwwwccrccw",
+"wwwwcrrcccwffwccwccw",
+"wccrccrccwwffwwwwcww",
+"wcrcccwwwffffcccrrcw",
+"wccwrwcccffffwcwcrcw",
+"wcwccwcrcffwwwrwcccw",
+"wcwcccrcwffwcccwwccw",
+"wcccrwccwwwwcccwcrww",
+"wcwccwccccbwccccccwc",
+"wwwwwwwwwwwwwwwwwwwc"},
+[26]={
+"wwwwwwwwwwwwwwwwwwww",
+"wcccwccccwcccwcccwbw",
+"wcrccccccrcccrcccwcw",
+"wwcwwwffwwcwwwcccccw",
+"wcccwffffwrwccrwwwcw",
+"wcrcwffffwccrccrcrcw",
+"wcccwffffwcwcwcrcrcw",
+"wcccwwffwwcccwrwcccw",
+"wwrwwccccwwccwccwrww",
+"wcccrccrcccccwccwccw",
+"wcccwccccwcccwcccccw",
+"wwwwwwwwwwwwwwwwwwww"},
+[27]={
+"cccccccccccccccccccc",
+"cccwwwwwwwwwwwwccccc",
+"cccwffccwcccccwwwccc",
+"cccwffccwcrccrccwccc",
+"cccwffccwrwwwwccwccc",
+"cccwffccccbcwwccwccc",
+"cccwffccwcwccrcwwccc",
+"cccwwwwwwcwwrcrcwccc",
+"cccccwcrccrcrcrcwccc",
+"cccccwccccwcccccwccc",
+"cccccwwwwwwwwwwwwccc",
+"cccccccccccccccccccc"},
+[28]={
+"wwwwwwwwwwwwwwwwwwww",
+"wccwccwwccccwcccbwww",
+"wwccccrccccwcrwwwccw",
+"wwrwcrcwwrwcrcrccccw",
+"wcccrwccccrccccccwww",
+"wcwwcccrcwwwccwffffw",
+"wcwcrwcwcwcwcwffffww",
+"wccccrcrcwccwffffwwc",
+"wwrcwwwccrcwffffwwcc",
+"wccwcrccccccccwwwccc",
+"wccccccwcwccccwccccc",
+"wwwwwwwwwwwwwwwccccc"},
+[29]={
+"wwwwwwwwwwwwwwwwwwww",
+"wbcccccwwwcccwccwccw",
+"wcwcwccwccrccrcccccw",
+"wwwwwcccccwcrcrwrwcw",
+"wfwffwccccwwrcrccccw",
+"wfffffccccrcccwcccww",
+"wfffffccccwwwrwwrwww",
+"wfwffwccccrccccwcccw",
+"wwwwwcccccwccwrccrcw",
+"ccccwccwccrccccrcrcw",
+"ccccwccwccwccwccwccw",
+"ccccwwwwwwwwwwwwwwww"},
+[30]={
+"wwwwwwwwwwwwwwwwwwww",
+"wwfffcccwwcwccccwccw",
+"wffffcccccccccrcwwcw",
+"wffffwcwcwrwwwrccccw",
+"wfffwccccwcccccccwcw",
+"wwfwccwrcwcccccrwwcw",
+"wccwccwcrcrcwwwccrcw",
+"wcccccrccrcwccwcwwcw",
+"wwcwcwwcwrrwcrwccwcw",
+"wccwcccrcrcwccccccww",
+"wccccwcccccwccwcccbw",
+"wwwwwwwwwwwwwwwwwwww"},
+[31]={
+"wwwwwwwwwwwwwwwwcccc",
+"wcccwccwbwcwwccwcccc",
+"wcwcwccrccccrccwwwww",
+"wcwccccwwwwwwcrccwww",
+"wcccwccwffffwccrrccw",
+"wwrwwrwwffffwccccccw",
+"wccccccwffffwwrwwrww",
+"wccrrccwffffwccccccw",
+"wcrccrccwccwccwwwccw",
+"wwwwwccrcccrccccrccw",
+"ccccwcwccccwccwcccww",
+"ccccwwwwwwwwwwwwwwww"},
+[32]={
+"wwwwwwwcwwwwcwwwwwww",
+"wcccccwcwffwcwcccccw",
+"wcrrccwwwffwwwccrbcw",
+"wccwcwwffffffwccrccw",
+"wcccccwffffffwccrccw",
+"wwwwccwwwffwwwwwwrcw",
+"wcccrrrcwffwccccwccw",
+"wcrwcccrccrccrrcwrcw",
+"wccwccwwcrccwwccwccw",
+"wcrccccrcwwcrccccrcw",
+"wccwccwwccccwwccwccw",
+"wwwwwwwwwwwwwwwwwwww"},
+[33]={
+"wwwwwwwwwwwwwwwwwwww",
+"wccccwccwcwccwccwccw",
+"wcbwcwcwwcrcccrcccww",
+"wwwwcwccccwccwcrcccw",
+"wccccwcwwcwrcwwcwwcw",
+"wccccccrcccrcccrcccw",
+"wffwwwrrwwcrwwrcwwcw",
+"wffwfwccwcrcccrcwccw",
+"wffffwcrrcccwwrcwwww",
+"wffffwccwwwwwccccccw",
+"wfffwwwccccccccccccw",
+"wwwwwcwwwwwwwwwwwwww"},
+[34]={
+"wwwwwwwwwwwwwwwwwwww",
+"wffffwcccccccwccwccw",
+"wffffwcwcrccrccccccw",
+"wffffcwwccrwcwcrwrcw",
+"wfffwcccrcccrwccrccw",
+"wffwwwwccwcrcccrrccw",
+"wccccccwwwwcwwwwcwww",
+"wccccccccwcccwcccccw",
+"wcwwcccwcccrcwcrcrcw",
+"wcwwccccrcwwcrccrccw",
+"wcccccbwcccccwcccwcw",
+"wwwwwwwwwwwwwwwwwwww"},
+[35]={
+"wwwwwwcwwwwwwwwwwwww",
+"wffffwcwcccccccccccw",
+"wffffwcwwwcwccwrwcww",
+"wffffwcwcccwrccrcccw",
+"wffffwcwccccrccwrrww",
+"wwccwwcwcrwccwrcrccw",
+"wwccwccwccrccrccwccw",
+"wbccwwwwrwwwrwwcrccw",
+"wwccccccccwccwccrccw",
+"cwcccwwwccwccrccwwww",
+"cwwwwwcwccwccwcccccw",
+"cccccccwwwwwwwwwwwww"}
+}
+
+local stretch_val = math.min(device().width/1024, 2.5)
+function is_wide()
+	offsety = 220
+	if stretch_val >= 1.3 then
+		offsetx = 364
+	else
+		offsetx = 192
+	end
+end
+
+class "m_static"
+function m_static:__init(owner, x, y)
+	is_wide()
+	self.x = x
+	self.y = y
+	self.owner = owner
+	self.st = CUIStatic()
+	self.st:Init("ui\\ui_game_bulldozer",(offsetx+(x-1)*32)/stretch_val,offsety+(y-1)*32,32/stretch_val,32)
+	self.st:SetStretchTexture(true)
+end
+
+class "bulldozer" (m_static)
+function bulldozer:__init(owner, x, y) super(owner, x, y)
+	self.st:SetOriginalRect(64,0,32,32)
+end
+
+function bulldozer:shift_down()
+	self.st:SetOriginalRect(64,0,32,32)
+	local f = 0
+	for k, v in pairs(self.owner.wall) do if self.x == v.x and self.y + 1 == v.y then return end end
+	for k, v in pairs(self.owner.rocks) do if self.x == v.x and self.y + 1== v.y then f = k break end end
+	if f > 0 then
+		if self.owner.rocks[f]:shift_down() then self.y = self.y + 1 self:set_pos() end
+	else
+		self.y = self.y + 1 self:set_pos()
+	end
+end
+
+function bulldozer:shift_up()
+	self.st:SetOriginalRect(64,32,32,32)
+	local f = 0
+	for k, v in pairs(self.owner.wall) do if self.x == v.x and self.y - 1 == v.y then return end end
+	for k, v in pairs(self.owner.rocks) do if self.x == v.x and self.y - 1 == v.y then f = k break end end
+	if f > 0 then
+		if self.owner.rocks[f]:shift_up() then self.y = self.y - 1 self:set_pos() end
+	else
+		self.y = self.y - 1 self:set_pos()
+	end
+end
+
+function bulldozer:shift_left()
+	self.st:SetOriginalRect(0,64,32,32)
+	local f = 0
+	for k, v in pairs(self.owner.wall) do if self.x - 1 == v.x and self.y == v.y then return end end
+	for k, v in pairs(self.owner.rocks) do if self.x - 1 == v.x and self.y == v.y then f = k break end end
+	if f > 0 then
+		if self.owner.rocks[f]:shift_left() then self.x = self.x - 1 self:set_pos() end
+	else
+		self.x = self.x - 1 self:set_pos()
+	end
+end
+
+function bulldozer:shift_right()
+	self.st:SetOriginalRect(32,64,32,32)
+	local f = 0
+	for k, v in pairs(self.owner.wall) do if self.x + 1 == v.x and self.y == v.y then return end end
+	for k, v in pairs(self.owner.rocks) do if self.x + 1 == v.x and self.y == v.y then f = k break end end
+	if f > 0 then
+		if self.owner.rocks[f]:shift_right() then self.x = self.x + 1 self:set_pos() end
+	else
+		self.x = self.x + 1 self:set_pos()
+	end
+end
+
+function bulldozer:set_pos()
+	self.st:SetWndPos((offsetx+(self.x-1)*32)/stretch_val,offsety+(self.y-1)*32)
+	self.owner.cntr = self.owner.cntr + 1
+	self.owner.cnt:SetText("№ ходов: "..self.owner.cntr)
+end
+
+class "rock" (m_static)
+function rock:__init(owner, x, y) super(owner, x, y)
+	self.st:SetOriginalRect(0,32,32,32)
+end
+
+function rock:shift_down()
+	for k, v in pairs(self.owner.wall) do if self.x == v.x and self.y + 1 == v.y then return false end end
+	for k, v in pairs(self.owner.rocks) do if self.x == v.x and self.y + 1 == v.y then return false end end
+	self.y = self.y + 1 self.st:SetWndPos((offsetx+(self.x-1)*32)/stretch_val,offsety+(self.y-1)*32)
+	return true
+end
+
+function rock:shift_up()
+	for k, v in pairs(self.owner.wall) do if self.x == v.x and self.y - 1 == v.y then return false end end
+	for k, v in pairs(self.owner.rocks) do if self.x == v.x and self.y - 1 == v.y then return false end end
+	self.y = self.y - 1 self.st:SetWndPos((offsetx+(self.x-1)*32)/stretch_val,offsety+(self.y-1)*32)
+	return true
+end
+
+function rock:shift_left()
+	for k, v in pairs(self.owner.wall) do if self.x - 1 == v.x and self.y == v.y then return false end end
+	for k, v in pairs(self.owner.rocks) do if self.x - 1 == v.x and self.y == v.y then return false end end
+	self.x = self.x - 1 self.st:SetWndPos((offsetx+(self.x-1)*32)/stretch_val,offsety+(self.y-1)*32)
+	return true
+end
+
+function rock:shift_right()
+	for k, v in pairs(self.owner.wall) do if self.x + 1 == v.x and self.y == v.y then return false end end
+	for k, v in pairs(self.owner.rocks) do if self.x + 1 == v.x and self.y == v.y then return false end end
+	self.x = self.x + 1 self.st:SetWndPos((offsetx+(self.x-1)*32)/stretch_val,offsety+(self.y-1)*32)
+	return true
+end
+
+class "fin" (m_static)
+function fin:__init(owner, x, y) super(owner, x, y)
+	self.st:SetOriginalRect(32,32,32,32)
+end
+
+class "wall" (m_static)
+function wall:__init(owner, x, y) super(owner, x, y)
+	self.st:SetOriginalRect(0,0,32,32)
+end
+
+class "puzzle" (CUIScriptWnd)
+function puzzle:__init(organizer, num) super()
+	self:Init(0,0,1024,768)
+	self.btns = {}
+	self.organizer = organizer
+	self.ClosePda = function() self:OnExit() self.organizer:PdaQuit() end
+	local xml = CScriptXmlInit()
+	xml:ParseFile("pda_options.xml")
+	-- background
+	xml:InitStatic("bulldozer:bulldozer_back",self)
+	xml:InitStatic("bulldozer:bulldozer_pda",self)
+	xml:InitStatic("bulldozer:bulldozer_header",self)
+	xml:InitFrame("bulldozer:bulldozer_frame",self)
+	-- btn game exit
+	self.btn_quit = xml:InitButton("bulldozer:bulldozer_exit",self)
+	self:Register(self.btn_quit, "btn_quit")
+	self:AddCallback("btn_quit", ui_events.BUTTON_DOWN, self.OnExit, self)
+	-- btn pda exit
+	self.off = xml:Init3tButton("bulldozer:bulldozer_off",self)
+	self:Register(self.off,"btn_off")
+	self:AddCallback("btn_off", ui_events.BUTTON_DOWN, self.ClosePda, self)
+	-- steps
+	self.cnt = xml:Init3tButton("bulldozer:bulldozer_count",self)
+	self.cnt:SetWindowName("btn_restart")
+	self.cnt:SetText("№ ходов: "..0)
+	self:Register(self.cnt, "count")
+	self:AddCallback(self.cnt:WindowName(), ui_events.BUTTON_CLICKED, self.Restart, self)
+	-- blocks
+	self.num = num or math.random(#levels)
+	self.cntr = 0
+	self.rocks = {}
+	self.fin = {}
+	self.wall = {}
+	self:load_level(self.num)
+	-- level
+	self.lvl = xml:Init3tButton("bulldozer:bulldozer_level",self)
+	self.lvl:SetWindowName("btn_next")
+	self.lvl:SetText("Уровень: "..self.num)
+	self:Register(self.lvl, "level")
+	self:AddCallback(self.lvl:WindowName(), ui_events.BUTTON_CLICKED, self.NextLevel, self)
+end
+
+function puzzle:Restart()
+	level.start_stop_menu(puzzle(self.organizer, self.num), true)
+	self:OnExit()
+end
+
+function puzzle:NextLevel()
+	local l = #levels
+	self.num = self.num + math.random(l)
+	if self.num > l then self.num = self.num - l end
+	self:Restart()
+end
+
+function puzzle:check_finish()
+	local res = true
+	for k, v in pairs(self.rocks) do
+		local f = false
+		for k1, v1 in pairs(self.fin) do
+			if v.x == v1.x and v.y == v1.y then f = true end
+		end
+		if not f then return false end
+	end
+	ui_pda_dialogs.send_tip("Головоломка решена за "..self.cntr.." ходов!", "Бульдозер", 0, 10, "bulldozer")
+	local win = xr_sound.get_safe_sound_object([[device\pda\pda_game_win]])
+	win:play_no_feedback(db.actor, sound_object.s2d, 0.5, vector(), 0.8)
+	self:clear()
+	self.num = math.random(#levels)
+	self:Restart()
+end
+
+function puzzle:load_level(num)
+	local lvl = levels[num]
+	if lvl then
+		self:clear()
+		local lvlw = string.len(lvl[1])
+		for posy, v in ipairs(lvl) do
+			for posx = 1, lvlw do
+				local s = string.sub(v, posx, posx)
+				if s == "w" then table.insert(self.wall, wall(self, posx,posy))
+				elseif s == "r" then table.insert(self.rocks, rock(self, posx, posy))
+				elseif s == "f" then table.insert(self.fin, fin(self, posx, posy))
+				elseif s == "b" then self.bulldozer = bulldozer(self, posx, posy)
+				end
+			end
+		end
+		for k, v in pairs(self.fin) do self:AttachChild(v.st) end
+		for k, v in pairs(self.wall) do self:AttachChild(v.st) end
+		for k, v in pairs(self.rocks) do self:AttachChild(v.st) end
+		self:AttachChild(self.bulldozer.st)
+	end
+end
+
+function puzzle:clear()
+	if self.bulldozer then
+		self:DetachChild(self.bulldozer.st)
+		for k, v in pairs(self.rocks) do self:DetachChild(v.st) end
+		for k, v in pairs(self.fin) do self:DetachChild(v.st) end
+		for k, v in pairs(self.wall) do self:DetachChild(v.st) end
+		clear_table(self.rocks) clear_table(self.fin) clear_table(self.wall)
+		self.cntr = 0
+		self.cnt:SetText("№ ходов: "..self.cntr)
+	end
+end
+
+function puzzle:OnExit()
+	level.start_stop_menu(self, true)
+end
+
+function puzzle:btn_down_clicked()
+	self.bulldozer:shift_down()
+	self:check_finish()
+end
+
+function puzzle:btn_up_clicked()
+	self.bulldozer:shift_up()
+	self:check_finish()
+end
+
+function puzzle:btn_left_clicked()
+	self.bulldozer:shift_left()
+	self:check_finish()
+end
+
+function puzzle:btn_right_clicked()
+	self.bulldozer:shift_right()
+	self:check_finish()
+end
+
+function puzzle:OnKeyboard(dik, keyboard_action)
+	CUIScriptWnd.OnKeyboard(self, dik, keyboard_action)
+	if keyboard_action == ui_events.WINDOW_KEY_PRESSED then
+		if dik == DIK_keys.DIK_ESCAPE then
+			self:OnExit()
+		end
+		if dik == DIK_keys.DIK_DOWN or dik == DIK_keys.DIK_S then
+			self:btn_down_clicked()
+		elseif dik == DIK_keys.DIK_UP or dik == DIK_keys.DIK_W then
+			self:btn_up_clicked()
+		elseif dik == DIK_keys.DIK_LEFT or dik == DIK_keys.DIK_A then
+			self:btn_left_clicked()
+		elseif dik == DIK_keys.DIK_RIGHT or dik == DIK_keys.DIK_D then
+			self:btn_right_clicked()
+		elseif dik == DIK_keys.DIK_SPACE then
+			self:Restart()
+		elseif dik == DIK_keys.DIK_RETURN then
+			self:NextLevel()
+		end
+		if dik == DIK_keys.DIK_1 or dik == DIK_keys.DIK_NUMPAD1 then
+			self:load_level(1)
+		-- elseif dik == DIK_keys.DIK_2 or dik == DIK_keys.DIK_NUMPAD2 then
+			-- self:load_level(2)
+		-- elseif dik == DIK_keys.DIK_3 or dik == DIK_keys.DIK_NUMPAD3 then
+			-- self:load_level(3)
+		-- elseif dik == DIK_keys.DIK_4 or dik == DIK_keys.DIK_NUMPAD4 then
+			-- self:load_level(4)
+		-- elseif dik == DIK_keys.DIK_5 or dik == DIK_keys.DIK_NUMPAD5 then
+			-- self:load_level(5)
+		-- elseif dik == DIK_keys.DIK_6 or dik == DIK_keys.DIK_NUMPAD6 then
+			-- self:load_level(6)
+		-- elseif dik == DIK_keys.DIK_7 or dik == DIK_keys.DIK_NUMPAD7 then
+			-- self:load_level(7)
+		-- elseif dik == DIK_keys.DIK_8 or dik == DIK_keys.DIK_NUMPAD8 then
+			-- self:load_level(8)
+		-- elseif dik == DIK_keys.DIK_9 or dik == DIK_keys.DIK_NUMPAD9 then
+			-- self:load_level(9)
+		end
+	end
+	return true
+end

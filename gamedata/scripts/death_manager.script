@@ -1,0 +1,219 @@
+local item_by_community = {}
+local item_dependence = {}
+local mul_by_level = {}
+local count_by_level = {}
+local always_keep_item = {}
+local ammo_sections = {}
+
+local death_ini = ini_file("misc\\death_generic.ltx")
+
+
+function init_drop_settings()
+	local community_list = {"stalker", "dolg", "freedom", "bandit", "military", "zombied", "ecolog", "killer", "monolith", "arena_enemy", "actor_dolg" }	
+
+	--config\misc\death_items_by_communities.ltx
+	for k,v in pairs(community_list) do
+		item_by_community[v] = {}
+		if death_ini:section_exist(v) then
+			local n = death_ini:line_count(v)
+			local id, value = "", ""
+			for i = 0, n - 1 do
+				result, id, value	= death_ini:r_line(v, i, "", "")
+				item_by_community[v][id] = 100 * tonumber(value)
+			end
+		end
+	end
+
+	--config\misc\death_generic.ltx
+	local n = death_ini:line_count("item_dependence")
+	local id, value = "", ""
+	for i = 0, n - 1 do
+		result, id, value	= death_ini:r_line("item_dependence",i,"","")
+		item_dependence[id] = {}
+		local vvv = parse_names(value)
+		for k,v in pairs(vvv) do
+			item_dependence[id][v] = true
+		end
+	end
+
+	local level_name = level.name()
+	
+	if not death_ini:section_exist(level_name) then
+		level_name = "default"
+	end
+	
+	--config\misc\death_items_by_levels.ltx
+  local n = death_ini:line_count(level_name)
+	local id, value = "", ""
+	for i = 0, n - 1 do
+		result, id, value	= death_ini:r_line(level_name,i,"","")
+		mul_by_level[id] = tonumber(value)
+	end        
+
+	--config\misc\death_items_count.ltx
+	local item_count_section = "item_count_" .. level.get_game_difficulty()
+	local n = death_ini:line_count(item_count_section)
+	for i = 0, n - 1 do
+		result, id, value	= death_ini:r_line(item_count_section,i,"","")
+		local t = parse_nums(value)
+		if t[1] == nil then
+			abort("Error on [death_ini] declaration. Section [%s], line [%s]", item_count_section, tostring(id))
+		end
+		local min = t[1]
+		local max = t[2]
+		if max == nil then
+			max = min
+		end
+        
+		if mul_by_level[id] == nil then
+			mul_by_level[id] = 0
+		end
+
+		min = tonumber(min) * mul_by_level[id]
+		max = tonumber(max) * mul_by_level[id]
+
+		count_by_level[id] = {min = min, max = max}
+	end        
+
+	--config\misc\death_generic.ltx
+	local n = death_ini:line_count("keep_items")
+	for i = 0, n - 1 do
+		result, id, value	= death_ini:r_line("keep_items",i,"","")
+			if value == "true" then
+				always_keep_item[id] = true
+			end
+	end
+
+	--config\misc\death_generic.ltx
+	ammo_sections = {}
+	local n = death_ini:line_count("ammo_sections")
+	local id, value = "", ""
+	for i=0,n-1 do
+		result, id, value	= death_ini:r_line("ammo_sections",i,"","")
+		ammo_sections[id] = true
+	end        
+end
+
+
+
+class "drop_manager"
+function drop_manager:__init(npc)
+	self.npc = npc
+end
+
+function drop_manager:create_release_item()
+	local se_obj = alife():object(self.npc:id())
+	if se_obj.death_droped == true then
+		return
+	end
+	se_obj.death_droped = true
+
+	-- remove items from npc's inventory
+	self.npc:iterate_inventory(keep_item, self.npc)
+	
+	local ini = self.npc:spawn_ini()
+	if ini and ini:section_exist("dont_spawn_loot") then
+		return
+  end
+
+  local spawn_items = item_by_community[self.npc:character_community()]    
+  for k,v in pairs(spawn_items) do	
+		if check_item_dependence(self.npc, k) == true then
+						
+			-- barin start: empty interval error fix!!!
+			local max_param = count_by_level[k].max
+			local min_param = count_by_level[k].min
+			-- if max == nil
+			if not max_param then
+				max_param = 0
+			end
+			-- swap args if max < min to avoid empty interval bug
+			if max_param < min_param then
+				local temp = max_param
+				max_param = min_param
+				min_param = temp
+			end
+			local number = math.ceil(math.random(min_param, max_param))
+			-- barin end
+
+			create_items(self.npc, k, number, v)
+		end
+	end
+end
+
+function keep_item(npc, item)
+	local section = item:section()
+	
+	if section == "bolt" then
+		return false
+	end
+
+	if section == "gar_stalker_uhsf_info" then
+		return true
+	end
+
+	if always_keep_item[section] == true then
+		return true
+	end
+
+	-- pistol slot
+	local item_id = item:id()
+	local item_in_slot = npc:item_in_slot(1)
+	if item_in_slot ~= nil and
+	   item_in_slot:id() == item_id
+	then
+		item:unload_magazine()
+		item:set_condition((math.random(15)+75)/100)
+		return true
+	end
+	
+	-- assault rifle slot
+	item_in_slot = npc:item_in_slot(2)
+	if item_in_slot ~= nil and
+	   item_in_slot:id() == item_id
+	then
+--		item:unload_magazine()
+		item:set_condition((math.random(15)+75)/100)
+		return true
+	end
+	alife():release(alife():object(item:id()), true)
+end
+
+function create_items(npc, section, number, rnd)
+	
+	-- barin start
+	if section == "priboi_pda" then
+		if npc:name() == "bar_freedom_attacker_commander" or
+			npc:name() == "rad_jaw_deputy"	then return	end
+	end
+	-- barin end
+	
+  if ammo_sections[section] == true then
+		if number > 0 then
+			se_respawn.create_ammo(section, npc:position(), npc:level_vertex_id(), npc:game_vertex_id(), npc:id(), number)
+		end
+	else
+		for i = 1, number do
+			if math.random(100) <= rnd then
+				alife():create(section, npc:position(), npc:level_vertex_id(), npc:game_vertex_id(), npc:id())
+			end
+		end
+	end    
+end
+
+function check_item_dependence(npc, section)
+	if item_dependence[section] == nil then
+		return true
+	end
+
+  local d_flag = true
+  for k,v in pairs(item_dependence[section]) do
+		local obj = npc:object(k)
+		if obj ~= nil and npc:marked_dropped(obj) ~= true then
+			return true
+		end
+		d_flag = false
+	end
+
+	return d_flag
+end

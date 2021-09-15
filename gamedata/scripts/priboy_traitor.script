@@ -1,0 +1,67 @@
+-- *** 2008-08-09 ***
+-- *** barin ***
+
+traitor_warn = nil
+local traitor_wth = "What are you doing?!"
+local traitor_warn1 = "Are you crazy?! Cease firing immediately! That's an order!!!"
+local traitor_warn2 = "Cease firing immediately! If you disobey the order, you are a dead man!!!"
+local traitor_header = "Traitor!"
+local military_traitor = "You failed obeyed direct order! You will be killed for your actions and your death will be a lesson to others! Our allies will teach you a lesson ..."
+
+function GiveInfoportion(info)
+	if not has_alife_info(info)	then
+		db.actor:give_info_portion(info)
+		return true
+	end
+	return false
+end
+
+function play_traitor_sound(snd_name)
+	if traitor_warn ~= nil then
+		if traitor_warn:playing() then
+			traitor_warn:stop()
+		end
+	end
+	traitor_warn = xr_sound.get_safe_sound_object(snd_name)
+	if traitor_warn then
+		traitor_warn:play(db.actor, 0, sound_object.s2d)
+	end
+end
+
+function traitor_punishment()
+	db.actor:set_character_community("bandit", 0, 0)
+	--db.actor:kill(db.actor)
+	relation_registry.change_community_goodwill("military", db.actor:id(), -1000)
+	relation_registry.change_community_goodwill("dolg", db.actor:id(), -1000)
+	relation_registry.change_community_goodwill("stalker", db.actor:id(), -1000)
+end
+
+function traitor(victim_community, killer_id)
+	if not db.actor then return end
+	if has_alife_info("priboy_military_traitor") then return end
+	
+	if victim_community == "military" and killer_id == db.actor:id() then
+		if GiveInfoportion("priboy_military_traitor_warn1") then
+			play_traitor_sound([[characters_voice\scenario\radio\traitor_warn1]])
+			priboy_utils.send_hud_message(traitor_wth, traitor_warn1, "commander", 10, nil)
+			return
+		end
+		if not has_alife_info("priboy_military_traitor_warn2") and
+			has_alife_info("priboy_military_traitor_warn1")
+		then
+			db.actor:give_info_portion("priboy_military_traitor_warn2")
+			play_traitor_sound([[characters_voice\scenario\radio\traitor_warn2]])
+			priboy_utils.send_hud_message(traitor_wth, traitor_warn2, "commander", 10, nil)
+			return
+		end
+		if has_alife_info("priboy_military_traitor_warn1") and
+			has_alife_info("priboy_military_traitor_warn2")
+		then
+			if GiveInfoportion("priboy_military_traitor") then
+				traitor_punishment()				
+				play_traitor_sound([[characters_voice\scenario\radio\military_traitor]])
+				priboy_utils.send_hud_message(traitor_header, military_traitor, "commander", 10, nil)
+			end
+		end
+	end
+end

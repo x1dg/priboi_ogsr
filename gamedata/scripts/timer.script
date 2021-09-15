@@ -1,0 +1,162 @@
+-- *** 2008-07-23 *** --
+-- *** barin ***
+
+local def_expiration_time = {h = 0, m = 5, s = 0}
+local def_timer_type = "counterclockwise"
+local def_timer_hud = "hud_timer_text" -- hud_timer
+local def_action = "no_action"
+
+class "Timer"
+ 
+function Timer:__init(timer_type, timer_hud, expiration_time, action)
+	if timer_type ~= "counterclockwise" and
+		timer_type ~= "silent"
+	then
+		timer_type = def_timer_type
+	end
+	
+	if not timer_hud then
+		timer_hud = def_timer_hud
+	end
+
+	self.timer_type = timer_type
+	self.timer_hud = timer_hud
+	self.timer_wnd = nil
+	self.expiration_time = self:normalize_expiration_time(expiration_time)
+	self.activation_time = time_global()
+	self.timer_expired = false
+
+	if not action or not _G[script_name()][action] then
+		self.action = def_action
+	else
+		self.action = action
+	end
+
+	self:SetHudTimerWnd(self.timer_hud, self.timer_type)
+end
+
+function Timer:__finalize()
+	--self:RemoveHudTimer()
+	self.timer_type = nil
+	self.activation_time = nil
+	self.expiration_time = nil
+	self.timer_wnd = nil
+	self.action = nil
+	self.timer_expired = nil
+	self.timer_hud = nil
+end
+
+function Timer:Update()
+	if self.timer_expired then
+		return
+	end
+
+	local new_time = self.expiration_time - (time_global() - self.activation_time)
+	if new_time <= 0 then
+		self.timer_expired = true
+		new_time = 0
+	end
+
+	if self.timer_wnd ~= nil and self.timer_type ~= "silent" then
+		local hours = math.floor(new_time / 3600000)
+		local minutes = math.floor(new_time / 60000 - hours * 60)
+		local seconds = math.floor(new_time / 1000 - hours * 3600 - minutes * 60)
+		self.timer_wnd:SetTextST(self:TimeToString(hours) .. ":" .. self:TimeToString(minutes) .. ":" .. self:TimeToString(seconds))
+	end
+
+	if self.timer_expired then
+		self:Expired()
+	end
+end
+
+function Timer:Expired()
+	self:RemoveHudTimer()
+	_G[script_name()][self.action]()
+end
+
+function Timer:Suspend()
+	self.timer_expired = true
+end
+
+function Timer:isSuspended()
+	return self.timer_expired
+end
+ 
+function Timer:Resume()
+	self:SetHudTimerWnd(nil, nil)
+	self.activation_time = time_global()
+	self.timer_expired = false
+end
+
+function Timer:Resume(timer_type, timer_hud, expiration_time)
+	if timer_type ~= "counterclockwise" and
+		timer_type ~= "silent"
+	then
+		timer_type = def_timer_type
+	end
+	
+	self:SetHudTimerWnd(timer_hud, timer_type)
+	self.timer_type = timer_type
+	self.expiration_time = self:normalize_expiration_time(expiration_time)
+	self.activation_time = time_global()
+	self.timer_expired = false
+end
+
+function Timer:RemoveHudTimer()
+	if self.timer_wnd then
+		get_hud():RemoveCustomStatic(self.timer_hud)
+		self.timer_wnd = nil
+	end
+end
+
+function Timer:SetHudTimerWnd(timer_hud, timer_type)
+	self:RemoveHudTimer()
+	
+	if timer_hud ~= nil then
+		self.timer_hud = timer_hud
+	end
+	
+	if self.timer_wnd == nil and timer_type ~= "silent" then
+		get_hud():AddCustomStatic(self.timer_hud, true)
+		self.timer_wnd = get_hud():GetCustomStatic(self.timer_hud):wnd()
+	end
+end
+
+function Timer:TimeToString(t)
+	if t >= 10 then
+		return tostring(t)
+	else
+		return "0" .. tostring(t)
+	end
+end
+
+function Timer:normalize_expiration_time(exp_time)
+	if exp_time == nil then
+		exp_time = ""
+	end
+
+	local t = {}
+	for word in string.gmatch(exp_time, "[%d]+") do
+		table.insert(t, word)
+	end
+
+	local hours = tonumber(t[1] or def_expiration_time.h) * 3600000
+	local minutes = tonumber(t[2] or def_expiration_time.m) * 60000
+	local seconds = tonumber(t[3] or def_expiration_time.s) * 1000
+
+	return hours + minutes + seconds
+end
+
+-- **************************************************************** --
+
+local pTimer = nil
+
+function get_timer(timer_type, timer_hud, expiration_time, action)
+	if pTimer == nil then
+		pTimer = Timer(timer_type, timer_hud, expiration_time, action)
+	end
+	return pTimer
+end
+
+function no_action()
+end

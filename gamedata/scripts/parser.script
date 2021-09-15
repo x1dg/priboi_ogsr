@@ -1,0 +1,213 @@
+-- *** 2008-07-23 ***
+-- *** barin ***
+
+function get_parser(str)
+	local dot = string.find(str, "%.")
+	if dot then
+		return string.sub(str, 0, dot - 1), string.sub(str, dot + 1)
+	end
+	return nil, str
+end
+
+function read_section(ltx_path, section_name, parser)
+	local string_table = {}	
+	local ltx = nil
+	
+	if type(ltx_path) == "string" then
+		ltx = ini_file(ltx_path)
+	else
+		ltx = ltx_path
+	end
+	
+	if not ltx then
+		return string_table
+	end
+
+	if ltx:section_exist(section_name) then
+		local variable, value, lines = "", "", ltx:line_count(section_name)
+		for current_line = 0, lines - 1 do
+			result, variable, value = ltx:r_line(section_name, current_line, "", "")
+			string_table[variable] = value
+		end
+	end
+	
+	if not parser then
+		return string_table
+	end
+	
+	local scriptName, parserName = get_parser(parser)
+	if not scriptName then
+		scriptName = script_name()
+	end	
+	if not _G[scriptName][parserName] then
+		return string_table
+	end
+	
+	return _G[scriptName][parserName](string_table)
+end
+
+function parse_num(tbl)
+	local temp = nil
+	local data = {}
+	
+	if tbl == nil then
+		return data
+	end
+	
+	for index, value in pairs(tbl) do
+		temp = string.gsub(value, "[^%d]", "")
+		if temp == nil or temp == "" then
+			temp = 0
+		end
+		data[index] = tonumber(temp)
+	end
+	
+	return data
+end
+
+function parse_bool(tbl)
+	local temp = nil
+	local data = {}
+	
+	if tbl == nil then
+		return data
+	end
+	
+	for index, value in pairs(tbl) do
+		temp = string.gsub(value, "[^%a]", "")
+		if value == "true" then
+			value = true
+		else
+			value = false
+		end
+		data[index] = value
+	end
+	
+	return data
+end
+
+function parse_spawn_data(tbl)
+	local temp = nil
+	local data, t = {}, {}
+
+	if tbl == nil then
+		return data
+	end
+
+	for index, str in pairs(tbl) do
+		temp = string.gsub(str, "(%a)", "")
+		
+		for value in string.gfind(temp, "([%-?%d+%.%d+]+)[%p%s]?") do
+			table.insert(t, tonumber(value))
+		end
+
+		data[index] = {}
+		data[index].position = vector():set(t[1], t[2], t[3])
+		data[index].level_vertex = t[4]
+		data[index].game_vertex = t[5]
+
+		t = {}
+	end
+	
+	return data
+end
+
+function parse_hideplaces(tbl)
+	local temp = nil
+	local data, t = {}, {}
+
+	if tbl == nil then
+		return data
+	end
+	
+	for index, str in pairs(tbl) do
+		temp = string.gsub(str, "(%a)", "")
+		
+		for value in string.gfind(temp, "([%-?%d+]+)[%p%s]?") do
+			table.insert(t, tonumber(value))
+		end
+		
+		data[index] =
+		{
+			min_x = t[1], max_x = t[2],
+			min_y = t[3], max_y = t[4],
+			min_z = t[5], max_z = t[6]
+		}
+		t = {}
+	end
+	
+	return data
+end
+
+function load_waypoints(name, quantity)
+	local wp_data = {}
+	local ptr = nil
+	
+	if not quantity then
+		quantity = 1
+	end
+	
+	for index = 1, quantity do
+		if level.patrol_path_exists(name .. index) then
+			ptr = patrol(name .. index)
+			wp_data[index] =
+			{
+				position = ptr:point(0),
+				level_vertex_id = ptr:level_vertex_id(0),
+				game_vertex_id = ptr:game_vertex_id(0),
+			}
+		end
+	end
+	
+	return wp_data
+end
+
+-- **************************************************************** --
+
+local show_debug_info = true
+
+function ToString(arg)
+	local t = type(arg)
+	if t == "string" then
+		return arg
+	elseif t == "number" or t == "boolean" then
+		return tostring(arg)
+	elseif t == "nil" then
+		return "<nil>"
+	elseif t == "table" then
+		return "<table>"
+	else
+		return "<user_data>"
+	end
+end
+
+function debug_print(...)
+	if not show_debug_info then
+		return
+	end
+	
+	local args = {...}
+	if args[1] ~= nil then
+		local con, str = get_console(), ""
+		for k, v in pairs(args) do
+			str = str .. ToString(v) .. " "
+			if string.len(str) >= 190 then
+				con:execute("load *** " .. str)
+				str = ""
+			end
+		end
+		if str ~= "" then
+			con:execute("load *** " .. str)
+		end
+	end
+end
+
+function debug_table(tbl)
+	for k, v in pairs(tbl) do
+		if type(v) == "table" then
+			debug_table(v)
+		else
+			debug_print(k, "=", v)
+		end
+	end
+end

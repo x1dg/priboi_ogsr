@@ -1,0 +1,46 @@
+-- Priboy T-virus script :)
+-- by barin aka pepe_84
+-- last edited: 13.01.2008
+
+-- "hours:minutes:seconds"
+local x18_time = "15:00:00" -- timer in X18
+local warehouses_time = "30:00:00" -- timer in Army Warehouses
+local time_to_elapse = "0"
+
+function infect(tte)
+	if not has_alife_info("priboy_t_virus_infected") then
+		db.actor:give_info_portion("priboy_t_virus_infected")
+		time_to_elapse = tte
+	end
+end
+
+function x18_infect()
+	infect(x18_time)
+end
+
+function on_item_take(obj)
+	if obj:section() == "sid_doc_last" then
+		if not has_alife_info("warehouses_infected") then
+			db.actor:give_info_portion("warehouses_infected")
+			infect(warehouses_time)
+		end
+	end
+end
+
+function on_item_drop(obj)
+	if obj:section() == "antidote" and priboy_timer.is_timer_on() then
+		priboy_timer.clear_hud_timer()
+	end
+end
+
+function run_timer()
+	if priboy_timer.timer_allowed == true then
+		priboy_timer.get_hud_timer(time_to_elapse):Update()
+	else
+		local timer_val = priboy_utils.retrieve_variable("tvirus_infected", false)
+		if timer_val then
+			priboy_timer.set_timer_on()
+			priboy_timer.get_hud_timer(timer_val):Update()
+		end
+	end
+end

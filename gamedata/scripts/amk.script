@@ -1,0 +1,186 @@
+--/amk_rel_1/
+----------------
+local timers={}
+local g_timers={}
+local timer_trigger=nil
+
+function save_variable(variable_name, value)
+	xr_logic.pstor_store(db.actor, variable_name, value)
+end
+
+function load_variable(variable_name, value_if_not_found)
+	return xr_logic.pstor_retrieve(db.actor, variable_name, value_if_not_found)
+end
+
+function del_variable(variable_name)
+	if db.storage[db.actor:id()].pstor[variable_name] then
+		db.storage[db.actor:id()].pstor[variable_name] = nil
+	end
+end
+
+function start_timer(name,delay,action)
+	if not delay then
+		return false
+	end
+	
+	if not action then
+		action = ""
+	end
+
+  local time = game.time() --time in seconds since 1970
+	local a=1
+	while db.storage[db.actor:id()].pstor["x_timer_"..a] do
+		a=a+1
+		if a>100 then 
+			return false 
+		end
+	end
+
+	save_variable("x_timer_"..a, name)
+	save_variable("x_timer_"..a.."_delay", time+delay*10000)
+	save_variable("x_timer_"..a.."_params", action)
+	
+	return true
+end
+
+function g_start_timer(name,delay_d,delay_h,delay_m,action)
+  local time = level.get_time_days()*60*24+level.get_time_hours()*60+level.get_time_minutes()  --time in game minutes
+	if delay_d==nil or delay_h==nil or delay_m==nil then
+		return false
+	end
+	
+	if action==nil then
+		action = ""
+	end
+
+	local a=1
+	while db.storage[db.actor:id()].pstor["x_gtimer_"..a] do
+		a=a+1
+		if a>100 then 
+			return false 
+		end
+	end
+
+	save_variable("x_gtimer_"..a, name)
+	save_variable("x_gtimer_"..a.."_delay", time+delay_d*60*24+delay_h*60+delay_m)
+	save_variable("x_gtimer_"..a.."_params", action)
+
+	return true
+end
+
+function check_timers()
+	local tmp
+	for a=1,100,1 do
+		tmp=load_variable("x_timer_"..a,nil)
+		if tmp~=nil then
+			__timer_found(a)	
+		end
+	end
+	
+	for a=1,100,1 do
+		tmp=load_variable("x_gtimer_"..a,nil)
+		if tmp~=nil then
+			__g_timer_found(a)	
+		end
+	end
+end
+
+function __do_timer_action(select_string,params_string)
+	if select_string=="gg_need_sleep" then
+		amk_mod.test_for_need_sleep()
+	end
+	if select_string=="sleep_nrg" then
+		amk_mod.test_for_need_sleep_nrg(params_string)
+	end
+	if select_string=="sleep_med" then
+		amk_mod.test_for_need_sleep_med(params_string)
+	end
+	if select_string=="sleep_matras" then
+		amk_mod.test_for_need_sleep_matras(params_string)
+	end
+end
+
+function __timer_found(idx)
+    local time = game.time() --time in seconds since 1970
+	local name,params
+	if load_variable("x_timer_"..idx.."_delay", nil)<=time then
+		name=load_variable("x_timer_"..idx, nil)
+		params=load_variable("x_timer_"..idx.."_params", nil)
+		del_variable("x_timer_"..idx)
+		del_variable("x_timer_"..idx.."_delay")
+		del_variable("x_timer_"..idx.."_params")
+		__do_timer_action(name,params)
+		return true
+	end
+	return false
+end
+
+function __g_timer_found(idx)
+    local gtime = level.get_time_days()*60*24+level.get_time_hours()*60+level.get_time_minutes()  --time in game minutes
+	local name,params
+	if load_variable("x_gtimer_"..idx.."_delay", nil)<=gtime then
+		name=load_variable("x_gtimer_"..idx, nil)
+		params=load_variable("x_gtimer_"..idx.."_params", nil)
+		del_variable("x_gtimer_"..idx)
+		del_variable("x_gtimer_"..idx.."_delay")
+		del_variable("x_gtimer_"..idx.."_params")
+		__do_timer_action(name,params)
+		return true
+	end
+	return false
+end
+
+--------------------------------------------------------------------------------------------------------------------
+function spawn_item_in_inv(spawn_item,npc)
+	if npc==nil then 
+		npc=db.actor 
+	end
+	return alife():create(spawn_item,	
+			npc:position(),
+			npc:level_vertex_id(),	
+			npc:game_vertex_id(),
+			npc:id())
+end
+
+---------------------------------------------
+--callback section
+---------------------------------------------
+function on_item_drop(obj)
+	amk_mod.check_sleep_item(obj)
+end
+
+function on_actor_upade()
+	if not timer_trigger then 
+		timer_trigger=game.time() 
+	end
+	if timer_trigger<=game.time() then
+		timer_trigger=game.time()+5000
+		check_timers()
+	end
+end
+
+function on_game_load()
+	if db.storage[db.actor:id()].pstor == nil then
+		db.storage[db.actor:id()].pstor = {}
+	end
+	if load_variable("x_first_run",true) then
+		amk_mod.first_run()
+		save_variable("x_first_run",false)
+	end
+	amk_mod.test_sleep_pp()
+end
+
+--[[
+copiright © xStream
+
+MMMMMMM    MMMMM    MMMMMM  MMMMMMMMMMMMM  MMMMMMMMMMM     MMMMMMMMMMM    MMMMMM    MMMMMMM     MMMMMM
+ MMMMMMM MMMMMM  MMMMMMMMMM MMMMMMMMMMMMMM MMMMMMMMMMMMMM  MMMMMMMMMMM   MMMMMMMM   MMMMMMMM   MMMMMMM
+  MMMMMMMMMMMM  MMMMMMMMMMMM MMMMMMMMMMMMM  MMMMMMMMMMMMMM MMMMMMMMMMM   MMMMMMMM    MMMMMMMM MMMMMMMM
+   MMMMMMMMM     MMMMMMMM MMM   MMMMMMM     MMMMMMMMMMMMMM MMMMMMM      MMMMMMMMMM   MMMMMMMMMMMMMMMMM
+    MMMMMMM       MMMMMMM       MMMMMM      MMMMMMM  MMMMM MMMMMMM      MMMMMMMMMM   MMMMMMMMMMMMMMMMM
+    MMMMMMMM       MMMMMMM      MMMMMM      MMMMMMM MMMM   MMMMMMMMMM  MMMM MMMMMMM  MMMMMMMMMMMMMMMMM
+   MMMMMMMMMM        MMMMM      MMMMMM      MMMMMMMMMMM    MMMMMMM     MMMM  MMMMMM  MMMMMMMMMMMMMMMMM
+  MMMMM  MMMMM    MMMMMMMM      MMMMMM      MMMMMMMMMMMMMM MMMMMMMMMMM MMMMMMMMMMMMM MMMMM MMMMM MMMMM
+ MMMMM   MMMMMM    MMMMMM       MMMMMM      MMMMMMM MMMMM  MMMMMMMMMM MMMMMMM MMMMMM MMMM   MM   MMMM 
+ 
+]]

@@ -1,0 +1,187 @@
+class "evaluator_anomaly" (property_evaluator)
+
+function evaluator_anomaly:__init(storage, npc, name) super(nil, name)
+    self.st = storage
+    self.npc=npc
+    self.called=false
+end
+
+local holdtime={}
+local stucktime={}
+local laststate={}
+
+function vec2str(v)
+  if v.x and v.y and v.z then
+    return v.x .. ";" .. v.y .. ";" .. v.z
+  else
+    return "not a vector"
+  end
+end
+
+local error_prob={
+  novice={[clsid.zone_bfuzz_s]=10,
+          [clsid.zone_galant_s]=10,
+          [clsid.zone_mbald_s]=1, -- это электра. 1% на слишком любопытных новичков
+          [clsid.zone_mincer_s]=10},
+  experienced={[clsid.zone_bfuzz_s]=4,
+          [clsid.zone_galant_s]=4,
+          [clsid.zone_mbald_s]=0, -- это электра
+          [clsid.zone_mincer_s]=4},
+  veteran={[clsid.zone_bfuzz_s]=1,
+          [clsid.zone_galant_s]=1,
+          [clsid.zone_mbald_s]=0, -- это электра
+          [clsid.zone_mincer_s]=1},
+  master={[clsid.zone_bfuzz_s]=0,
+          [clsid.zone_galant_s]=0,
+          [clsid.zone_mbald_s]=0, -- это электра
+          [clsid.zone_mincer_s]=0}}
+
+function evaluator_anomaly:evaluate()
+  local nid=self.npc:id()
+  if laststate[nid]==nil then
+    laststate[nid]=false
+  end
+  if stucktime[nid]==nil then 
+    stucktime[nid]={} 
+  end
+--  mylog("enter evaluator")
+--' Теперь список аномалий заполняется по-другому
+--  anomaly_holder.enumerate_anoms() 
+--  mylog("after enum anom")
+  if holdtime[nid]==nil or time_global()>holdtime[nid] then
+    holdtime[nid]=time_global()+1000
+    local hasanom,anomid,pos,cls=anomaly_holder.get_nearest_anomaly(self.npc)
+--    if self.npc:name()=="mil_freedom_barier_respawn_121636" then
+--    if pos and self.npc:position():distance_to(pos)<20 and anomid>20000 then
+--      if pos then mylog(self.npc:name() .. " at " .. vec2str(self.npc:position()) .. " near " .. anomid .. " at ".. vec2str(pos) ) end
+--    end
+    if hasanom and self.npc:position():distance_to(pos)<10 then
+--' Проверим не болтается ли NPC рядом с аномалией слишком долго.
+      if stucktime[nid][anomid]==nil or stucktime[nid][anomid]<time_global()-120000 then
+  --' даем чуваку 30 секунд чтобы выбраться из аномалии
+        stucktime[nid][anomid]=time_global()+30000
+      end
+      if stucktime[nid][anomid]<time_global() then
+  --' Всё чувак. Твое время истекло. Выбирайся как хочешь
+        laststate[nid]=false
+      else
+        laststate[nid]=true
+  --' Проверим увидел ли сталкер аномалию
+        local errortbl=error_prob[ranks.get_obj_rank_name(self.npc)]
+        if errortbl then
+          local errorrate=errortbl[cls]
+          if errorrate and math.random(0,100)<errorrate then
+  --' Сталкер облажался. Ставим ему аномалию в игнор
+            stucktime[nid][anomid]=time_global()-1
+            laststate[nid]=false
+          end
+        end
+      end
+    else
+      laststate[nid]=false
+    end
+  end
+  return laststate[nid]
+end
+
+
+class "action_evade_anomaly" (action_base)
+function action_evade_anomaly:__init (npc_name,action_name, storage, char_ini) super (nil, action_name)
+--  mylog("action init")
+  self.a = storage
+end
+
+local can_rethink={}
+local reverse={}
+
+function action_evade_anomaly:initialize()
+--  mylog("action initialize "..self.object:name())
+  action_base.initialize(self)
+--  self.object:set_node_evaluator()
+--  self.object:set_path_evaluator()
+  self.object:set_desired_position()
+  self.object:set_desired_direction()
+  self.object:set_detail_path_type    ( move.line )
+  self.object:set_path_type           ( game_object.level_path )
+  self.object:movement_enabled(true)
+  self.object:set_movement_type(move.walk)
+
+  state_mgr.set_state( self.object, "raid" )
+end
+
+function action_evade_anomaly:execute ()
+--  mylog("action execute")
+  action_base.execute(self)
+-- Объект почему-то пересоздается на каждый чих, следовательно члены использовать нельзя
+   if can_rethink[self.object:id()]==nil or can_rethink[self.object:id()]<time_global() then
+    local flag,anomid,anpos=anomaly_holder.get_nearest_anomaly(self.object)
+    if flag then
+  --    mylog("chk2")
+      local anvec=vector():set(anpos):sub(self.object:position())
+      local mydir=self.object:direction()
+-- проверим куда надо поворачивать
+      local newdir
+      local angle
+      if reverse[nid] then
+        angle=-95
+      else
+        angle=95
+      end
+      if mydir.x*anvec.z-mydir.z*anvec.x<0 then
+        newdir=vector_rotate_y(anvec,angle)
+      else
+        newdir=vector_rotate_y(anvec,-angle)
+      end
+      mylog("old dir " .. vec2str(mydir) .. " new dir " .. vec2str(newdir))
+  --    mylog("chk3")
+      local vertex_id=level.vertex_in_direction(self.object:level_vertex_id(),newdir,4)
+  --    mylog("chk4")
+--      mylog("rethink "..self.object:name() .. " " .. vertex_id .. " " .. anomid)
+      can_rethink[self.object:id()]=time_global()+1000
+--    mylog("chk5")
+--    if self.object:level_vertex_id()==vertex_id then
+--' Так, чувак застрял... Включаем реверс... Так не работает. нужно ставить задержку
+--      if reverse[nid] then
+--        reverse[nid]=false
+--      else
+--        reverse[nid]=true
+--      end
+--    end
+    utils.send_to_nearest_accessible_vertex(self.object,vertex_id)
+--    mylog("chk6")
+    end
+--    xr_sound.set_sound_play(self.object, "reac_story")
+  end
+end
+
+function action_evade_anomaly:finalize ()
+  action_base.finalize(self)
+end
+
+function add_to_binder(object, char_ini, scheme, section, st)
+  local manager = object:motivation_action_manager()
+  local properties={}
+  properties["wounded"] = xr_evaluators_id.sidor_wounded_base
+
+  -- Evaluators
+  manager:add_evaluator   (1099, evaluator_anomaly(st,object,"evaluator_amonaly"))
+  
+  -- Actions
+  local action = action_evade_anomaly(object:name(),"action_evade_anomaly", st, char_ini)
+  action:add_precondition   (world_property(stalker_ids.property_alive, true))
+  action:add_precondition   (world_property(stalker_ids.property_enemy, false))
+  action:add_precondition   (world_property(properties["wounded"],    false))
+  action:add_precondition   (world_property(1099,    true))
+  action:add_effect (world_property(1099, false))
+  manager:add_action (10032, action)
+
+  action = manager:action (xr_actions_id.alife) 
+  action:add_precondition   (world_property(1099,    false))  
+end
+
+function set_evade(npc, ini, scheme, section)
+  local st = xr_logic.assign_storage_and_bind(npc, ini, scheme, section)
+end
+-- Вызывается при переключении на новую секцию. Производит вычитывание настроек из текущей секции.
+function reset_evade(npc, scheme, st, section)
+end

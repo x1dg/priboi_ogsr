@@ -1,0 +1,137 @@
+--[[-----------------------------------------------------------------------------------------------
+ File			: ui_hud_medicines.script
+ Description	: Эффект приема лекарств и еды
+ Source			: LURK Mod
+ Author			: LURK Team, Enframed
+ Date			: 20.07.2010
+ Last edit		: 06.08.2020
+--]]-----------------------------------------------------------------------------------------------
+
+local objectused=0
+local objectinuse=0
+local hud = get_hud()
+local use_enable = system_ini():r_bool("mui_options","mui_use_enable")
+local eat_items = {
+	["bread"] = {
+		sound = [[interface\inv_bread]],
+		static = "eat_static",
+		duration = 8870
+	},
+	["kolbasa"] = {
+		sound = [[interface\inv_kolbasa]],
+		static = "eat_static",
+		duration = 8400
+	},
+	["conserva"] = {
+		sound = [[interface\inv_food]],
+		static = "eat_static",
+		duration = 5000
+	},
+	["energy_drink"] = {
+		sound = [[interface\inv_drinking]],
+		static = "energy_static",
+		duration = 3060
+	},
+	["vodka"] = {
+		sound = [[interface\inv_vodka]],
+		static = "antirad_static",
+		duration = 3650
+	},
+	["bandage"] = {
+		sound = [[interface\inv_bandage]],
+		static = "bandage_static",
+		duration = 2760
+	},
+	["antirad"] = {
+		sound = [[interface\inv_pills]],
+		static = "antirad_static",
+		duration = 2880
+	},
+	["medkit"] = {
+		sound = [[interface\inv_medic]],
+		static = "medkit_static",
+		duration = 2960
+	},
+	["medkit_army"] = {
+		sound = [[interface\inv_medic]],
+		static = "medkit_static",
+		duration = 2960
+	},
+	["medkit_scientic"] = {
+		sound = [[interface\inv_medic]],
+		static = "medkit_static",
+		duration = 2960
+	}
+}
+
+function update()
+	if use_enable == false then return end
+	hide_weapon_time()
+end
+
+-- Ожидание использования предмета
+function use(obj)
+	if use_enable == false then return end
+	if (db.actor~=nil) and (obj~=nil) then
+	slotinuse=db.actor:active_slot()
+	slot_div=1
+		if obj:section() == "medkit" or obj:section() == "medkit_army" or obj:section() == "medkit_scientic" then
+			level.add_pp_effector ("bloody.ppe", 512, false)
+		end
+		use_sound(obj)
+		hud:AddCustomStatic(eat_items[obj:section()].static, true)
+		holster_time=time_global()+eat_items[obj:section()].duration
+		if (objectinuse==1) then
+			holster_time=holster_time+eat_items[obj:section()].duration
+		end
+		use_animation()
+	end
+end
+
+ -- Проигрывание звука при использовании предмета
+function use_sound(obj)
+local snd_obj
+	snd = eat_items[obj:section()].sound
+    if snd then
+        if snd_obj and snd_obj:playing() then snd_obj:stop() end
+        snd_obj = xr_sound.get_safe_sound_object(snd)
+        snd_obj:play_at_pos(db.actor, vector(), 0, sound_object.s2d)
+    end
+end
+
+-- Анимация камеры
+function use_animation()
+	if db.actor:alive() then
+		if (objectinuse==0) then
+			db.actor:hide_weapon()
+			local action_time = holster_time-time_global()
+			if action_time > 7000 then
+				level.add_cam_effector("camera_effects\\item_use_slow.anm", 514, false, "")
+			elseif action_time > 3500 and action_time < 7000 then
+				level.add_cam_effector("camera_effects\\item_use.anm", 513, false, "")
+			elseif action_time > 2000 and action_time < 3500 then
+				level.add_cam_effector("camera_effects\\item_use_fast.anm", 515, false, "")
+			end
+			objectinuse=1
+		end
+	objectused=objectused+1
+	hide_weapon_time()
+	end
+end
+
+-- ГГ убирает оружие; отключаются статики; убираются эффекты
+function hide_weapon_time()
+	if (holster_time~=nil) and (time_global()>(holster_time-slot_div)) and level.present() then
+	objectused=objectused-1
+		if (objectused==0) then
+		db.actor:restore_weapon()
+		objectinuse=0
+		holster_time=nil
+		hud:RemoveCustomStatic("medkit_static")
+		hud:RemoveCustomStatic("bandage_static")
+		hud:RemoveCustomStatic("antirad_static")
+		hud:RemoveCustomStatic("energy_static")
+		hud:RemoveCustomStatic("eat_static")
+		end
+	end
+end

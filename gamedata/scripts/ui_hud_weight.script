@@ -1,0 +1,75 @@
+--[[-----------------------------------------------------------------------------------------------
+ File			: ui_hud_weight.script
+ Description 	: Вывод индикатора переносимого веса
+ Copyright		: DMX MOD
+ Author			: Shadows
+ Date			: 16.03.2011
+ Last edit		: 24.05.2012
+--]]-----------------------------------------------------------------------------------------------
+
+local inv_weight, outfit_weight, remaining_weight, last_outfit_id = 0.2, 0, 0, 0
+local inv_max_weight = rx_utils.read_from_ini(nil, "actor_condition", "max_walk_weight", 0)
+function update()
+if not bind_stalker.scopeUsed then
+	local outfit = db.actor:get_current_outfit()
+	if outfit then
+		if last_outfit_id ~= outfit:id() then
+			outfit_weight = rx_utils.read_from_ini(nil, outfit:section(), "additional_inventory_weight", 0)
+			last_outfit_id = outfit:id()
+		end
+		remaining_weight = (inv_max_weight + outfit_weight) - inv_weight
+	else
+		remaining_weight = inv_max_weight - inv_weight
+	end
+	if remaining_weight <= 10 and remaining_weight > 5 then
+		add_weight_static("green")
+	elseif remaining_weight <= 5 and remaining_weight > 0.05 then
+		add_weight_static("yellow")
+	elseif remaining_weight < 0.05 then
+		add_weight_static("red")
+	elseif remaining_weight > 10 then
+		remove_weight_static()
+	end
+else
+	remove_weight_static()
+end
+end
+
+local hud = get_hud()
+function add_weight_static(color)
+	if color == "green" then
+		hud:AddCustomStatic("inv_weight_static", true):wnd():SetColor(GetARGB(255,76,255,0))
+	elseif color == "yellow" then
+		hud:AddCustomStatic("inv_weight_static", true):wnd():SetColor(GetARGB(255,255,216,0))
+	elseif color == "red" then
+		hud:AddCustomStatic("inv_weight_static", true):wnd():SetColor(GetARGB(255,255,0,0))
+	end
+end
+
+function remove_weight_static()
+	if hud:GetCustomStatic("inv_weight_static") then
+		hud:RemoveCustomStatic("inv_weight_static")
+	end
+end
+
+function item_take(obj)
+	local sect = obj:section()
+	if sect ~= "separator" and sect ~= "arc_ballast" then
+		inv_weight = inv_weight + rx_utils.read_from_ini(nil, sect, "inv_weight", 0)
+	end
+end
+
+function on_item_drop(obj)
+	local sect = obj:section()
+	if sect ~= "separator" and sect ~= "arc_ballast" then
+		inv_weight = inv_weight - rx_utils.read_from_ini(nil, sect, "inv_weight", 0)
+	end
+end
+
+function get_inventory_weight()
+	return inv_weight
+end
+function remove_elements_3()
+	local hud = get_hud()
+		hud:RemoveCustomStatic("inv_weight_static")
+end

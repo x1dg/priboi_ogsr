@@ -1,0 +1,423 @@
+--[[-----------------------------------------------------------------------------------------------
+ File			: ui_loader_inventory.script
+ Description	: Функции для инвентаря
+ Copyright		: Shadows Addon
+ Authors		: Shadows and Charsi
+ Date			: 02.08.2011-13.08.2011
+--]]-----------------------------------------------------------------------------------------------
+
+local rec_wnd = nil
+local initial = false
+local reg_callbacks = {
+	cell_item_clicked = "on_item_select",
+	item_drop = "on_item_drop",
+	item_take = "on_item_take",
+	drag_drop = "on_drag_drop",
+	update = "on_update"
+}
+
+class "InventoryWindow" (CUIScriptWnd)
+function InventoryWindow:__init(owner) super()
+	self.owner = owner
+	self:Init(0,0,1024,768)
+	self:InitControls()
+end
+
+function InventoryWindow:__finalize() end
+function InventoryWindow:InitControls()
+	self.stat = CUIStatic()
+	self.stat:Init(0,0,1024,768)
+	self.owner:AttachChild(self.stat)
+	local xml = CScriptXmlInit()
+	xml:ParseFile("inventory_new.xml")
+
+	-- [INVENTORY] init --------------------------------------------------
+
+	-- Подсветка слотов
+	self:Register(xml:Init3tButton("highlights:highlight_knife", self.stat), "knife")
+	self:Register(xml:Init3tButton("highlights:highlight_weapon1", self.stat), "pistol")
+	self:Register(xml:Init3tButton("highlights:highlight_weapon2", self.stat), "rifle")
+	self:Register(xml:Init3tButton("highlights:highlight_binoc", self.stat), "binocular")
+	self:Register(xml:Init3tButton("highlights:highlight_outfit", self.stat), "outfit")
+	self:Register(xml:Init3tButton("highlights:highlight_detector", self.stat), "detector")
+	self:Register(xml:Init3tButton("highlights:highlight_torch", self.stat), "torch")
+	self:Register(xml:Init3tButton("highlights:highlight_helmet", self.stat), "helmet")
+	self:Register(xml:Init3tButton("highlights:highlight_bio", self.stat), "bio")
+	self:Register(xml:Init3tButton("highlights:highlight_nv", self.stat), "nv")
+	self:Register(xml:Init3tButton("highlights:highlight_f1", self.stat), "f1")
+	self:Register(xml:Init3tButton("highlights:highlight_f2", self.stat), "f2")
+	self:Register(xml:Init3tButton("highlights:highlight_f3", self.stat), "f3")
+	self:Register(xml:Init3tButton("highlights:highlight_f4", self.stat), "f4")
+
+	-- Характеристики ГГ
+	icon_s = xml:InitStatic("actor_chars:icon_static", self.stat)
+	name_s = xml:InitStatic("actor_chars:name_static", self.stat)
+	name_s:SetText(game.translate_string("actor_name"))
+
+	rank_c = xml:InitStatic("actor_chars:rank_caption", self.stat)
+	rank_s = xml:InitStatic("actor_chars:rank_static", self.stat)
+	rank_c:SetText(game.translate_string("ui_st_rank"))
+	rank_s:SetText(game.translate_string(ranks.get_obj_rank_name(db.actor)))
+
+	community_c = xml:InitStatic("actor_chars:community_caption", self.stat)
+	community_s = xml:InitStatic("actor_chars:community_static", self.stat)
+	community_c:SetText(game.translate_string("ui_st_community"))
+	community_s:SetText(game.translate_string(db.actor:character_community()))
+
+	reputation_c = xml:InitStatic("actor_chars:reputation_caption", self.stat)
+	reputation_s = xml:InitStatic("actor_chars:reputation_static", self.stat)
+	reputation_c:SetText(game.translate_string("ui_st_reputation"))
+		if db.actor:character_reputation() > 0 then
+			reputation_s:SetText("+"..db.actor:character_reputation())
+			else
+			reputation_s:SetText(db.actor:character_reputation())
+		end
+
+	-- Шкалы состояния
+	outfit = xml:InitProgressBar("condition_outfit_progress", self.stat)
+	wpn1 = xml:InitProgressBar("condition_weapon1_progress", self.stat)
+	wpn2 = xml:InitProgressBar("condition_weapon2_progress", self.stat)
+	outfit:Show(false)
+	wpn1:Show(false)
+	wpn2:Show(false)
+	
+	-- Отображение отключенных слотов
+	local slot_exist = system_ini():r_bool("features","ogse_new_slots")
+	if slot_exist == false then 
+		slots_cover = xml:InitStatic("slots_cover", self.stat)
+	end
+
+	-- Быстрые слоты
+	self.fast_use_slots_wnd = ui_fast_use_slots.FastUseSlotsWnd(self)
+	self.stat:AttachChild(self.fast_use_slots_wnd)
+
+	-- Всплывающее окно описания
+	self.DescrWnd = ui_item_hint.CUIDescriptionWnd(self.stat)
+
+	initial = true
+end
+
+function InventoryWindow:ShowWnd()
+	if initial and rec_wnd.stat~= nil then rec_wnd.stat:Show(true) end
+end
+function InventoryWindow:HideWnd()
+	if initial and rec_wnd.stat~= nil then rec_wnd.stat:Show(false) end
+end
+function InventoryWindow:DetachWnd()
+	self.DescrWnd:Remove()
+	self.DescrWnd = nil
+	self.owner:DetachChild(self.stat)
+	initial = false
+end
+
+local inventory_window
+function on_info(info_id)
+	if info_id=="ui_inventory" then
+	    inventory_window = level.main_input_receiver()
+		if not initial then	rec_wnd = InventoryWindow(level.main_input_receiver()) end
+		if not rec_wnd.stat:IsShown() then rec_wnd:ShowWnd() end
+	elseif info_id=="ui_inventory_hide" then
+		if rec_wnd then rec_wnd:DetachWnd() end
+	end
+end
+
+function update()
+	if db.actor:has_info("ui_inventory") then
+		local condition_weapon1_progress = 0
+		local wpn_1 = db.actor:item_in_slot(1)
+		if wpn_1 then
+			condition_weapon1_progress = wpn_1:condition()*101
+			wpn1:Show(true)
+			wpn1:SetProgressPos(condition_weapon1_progress) else
+			wpn1:Show(false)
+		end
+
+		local condition_weapon2_progress = 0
+		local wpn_2 = db.actor:item_in_slot(2)
+		if wpn_2 then
+			condition_weapon2_progress = wpn_2:condition()*101
+			wpn2:Show(true)
+			wpn2:SetProgressPos(condition_weapon2_progress) else
+			wpn2:Show(false)
+		end
+
+		local condition_outfit_progress = 0
+		local armor = db.actor:item_in_slot(6)
+		if armor then
+			condition_outfit_progress = armor:condition()*100
+			outfit:Show(true)
+			outfit:SetProgressPos(condition_outfit_progress) else
+			outfit:Show(false)
+		end
+
+		if initial then rec_wnd.fast_use_slots_wnd:Update() end
+
+		add_rad_green()	add_blood_green()
+		add_rad_yellow() add_blood_yellow()
+		add_rad_orange() add_blood_orange()
+		add_rad_red() add_blood_red()
+	else
+		remove_rad_green() remove_blood_green()
+		remove_rad_yellow() remove_blood_yellow()
+		remove_rad_orange() remove_blood_orange()
+		remove_rad_red() remove_blood_red()
+	end
+end
+
+-- Иконки "Кровотечение"/"Радиация"
+-----------------------------------------
+class "ui_bleeding_green" (CUIScriptWnd)
+function ui_bleeding_green:__init() super()
+self:InitControls() end
+function ui_bleeding_green:InitControls()
+self:Init(0, 0, device().width, device().height)
+local xml = CScriptXmlInit()
+xml:ParseFile("inventory_new.xml")
+self.blood_green = xml:InitStatic("bleeding_state:icon1", self)
+self.blood_pulse = xml:InitStatic("bleeding_state:pulse_anim", self)
+self.blood_green:Show(false)
+self.blood_pulse:Show(false) end
+function ui_bleeding_green:Update()
+CUIScriptWnd.Update(self)
+local bleeding = db.actor:get_bleeding()
+if bleeding > 0 and bleeding < 0.25 then
+self.blood_green:Show(true)
+self.blood_pulse:Show(true) else
+self.blood_green:Show(false)
+self.blood_pulse:Show(false) end
+end
+  local HUD = nil
+function add_blood_green()
+   if HUD == nil then
+     HUD = ui_bleeding_green()
+    get_hud():AddDialogToRender(HUD) end
+end
+function remove_blood_green()
+    if HUD ~= nil then
+      get_hud():RemoveDialogToRender(HUD)
+    HUD = nil end
+end
+------------------------------------------
+class "ui_bleeding_yellow" (CUIScriptWnd)
+function ui_bleeding_yellow:__init() super()
+self:InitControls() end
+function ui_bleeding_yellow:InitControls()
+self:Init(0, 0, device().width, device().height)
+local xml = CScriptXmlInit()
+xml:ParseFile("inventory_new.xml")
+self.blood_yellow = xml:InitStatic("bleeding_state:icon2", self)
+self.blood_pulse = xml:InitStatic("bleeding_state:pulse_anim", self)
+self.blood_yellow:Show(false)
+self.blood_pulse:Show(false) end
+function ui_bleeding_yellow:Update()
+CUIScriptWnd.Update(self)
+local bleeding = db.actor:get_bleeding()
+if bleeding > 0.25 and bleeding < 0.50 then
+self.blood_yellow:Show(true)
+self.blood_pulse:Show(true) else
+self.blood_yellow:Show(false)
+self.blood_pulse:Show(false) end
+end
+  local HUD = nil
+function add_blood_yellow()
+   if HUD == nil then
+     HUD = ui_bleeding_yellow()
+    get_hud():AddDialogToRender(HUD) end
+end
+function remove_blood_yellow()
+    if HUD ~= nil then
+      get_hud():RemoveDialogToRender(HUD)
+      HUD = nil end
+end
+------------------------------------------
+class "ui_bleeding_orange" (CUIScriptWnd)
+function ui_bleeding_orange:__init() super()
+self:InitControls() end
+function ui_bleeding_orange:InitControls()
+self:Init(0, 0, device().width, device().height)
+local xml = CScriptXmlInit()
+xml:ParseFile("inventory_new.xml")
+self.blood_orange = xml:InitStatic("bleeding_state:icon3", self)
+self.blood_pulse = xml:InitStatic("bleeding_state:pulse_anim", self)
+self.blood_orange:Show(false)
+self.blood_pulse:Show(false) end
+function ui_bleeding_orange:Update()
+CUIScriptWnd.Update(self)
+local bleeding = db.actor:get_bleeding()
+if bleeding > 0.50 and bleeding < 0.75 then
+self.blood_orange:Show(true)
+self.blood_pulse:Show(true) else
+self.blood_orange:Show(false)
+self.blood_pulse:Show(false) end
+end
+  local HUD = nil
+function add_blood_orange()
+   if HUD == nil then
+     HUD = ui_bleeding_orange()
+    get_hud():AddDialogToRender(HUD) end
+end
+function remove_blood_orange()
+    if HUD ~= nil then
+      get_hud():RemoveDialogToRender(HUD)
+      HUD = nil end
+end
+---------------------------------------
+class "ui_bleeding_red" (CUIScriptWnd)
+function ui_bleeding_red:__init() super()
+self:InitControls() end
+function ui_bleeding_red:InitControls()
+self:Init(0, 0, device().width, device().height)
+local xml = CScriptXmlInit()
+xml:ParseFile("inventory_new.xml")
+self.blood_red = xml:InitStatic("bleeding_state:icon4", self)
+self.blood_pulse = xml:InitStatic("bleeding_state:pulse_anim", self)
+self.blood_red:Show(false)
+self.blood_pulse:Show(false) end
+function ui_bleeding_red:Update()
+CUIScriptWnd.Update(self)
+local bleeding = db.actor:get_bleeding()
+if bleeding > 0.75 then
+self.blood_red:Show(true)
+self.blood_pulse:Show(true) else
+self.blood_red:Show(false)
+self.blood_pulse:Show(false) end
+end
+  local HUD = nil
+function add_blood_red()
+   if HUD == nil then
+     HUD = ui_bleeding_red()
+    get_hud():AddDialogToRender(HUD) end
+end
+function remove_blood_red()
+    if HUD ~= nil then
+      get_hud():RemoveDialogToRender(HUD)
+      HUD = nil end
+end
+---------------------------------------
+class "ui_radiation_green" (CUIScriptWnd)
+function ui_radiation_green:__init() super()
+self:InitControls() end
+function ui_radiation_green:InitControls()
+self:Init(0, 0, device().width, device().height)
+local xml = CScriptXmlInit()
+xml:ParseFile("inventory_new.xml")
+self.rad_green = xml:InitStatic("radiation_state:icon1", self)
+self.rad_absorb = xml:InitStatic("radiation_state:absorb_anim", self)
+self.rad_green:Show(false)
+self.rad_absorb:Show(false) end
+function ui_radiation_green:Update()
+CUIScriptWnd.Update(self)
+local rad = db.actor.radiation * 100
+if rad > 0 and rad < 25 then
+self.rad_green:Show(true)
+self.rad_absorb:Show(true) else
+self.rad_green:Show(false)
+self.rad_absorb:Show(false) end
+end
+local HUD = nil
+function add_rad_green()
+   if HUD == nil then
+     HUD = ui_radiation_green()
+    get_hud():AddDialogToRender(HUD) end
+end
+function remove_rad_green()
+    if HUD ~= nil then
+      get_hud():RemoveDialogToRender(HUD)
+      HUD = nil end
+end
+----------------------------------------
+class "ui_radiation_yellow" (CUIScriptWnd)
+function ui_radiation_yellow:__init() super()
+self:InitControls() end
+function ui_radiation_yellow:InitControls()
+self:Init(0, 0, device().width, device().height)
+local xml = CScriptXmlInit()
+xml:ParseFile("inventory_new.xml")
+self.rad_yellow = xml:InitStatic("radiation_state:icon2", self)
+self.rad_absorb = xml:InitStatic("radiation_state:absorb_anim", self)
+self.rad_yellow:Show(false)
+self.rad_absorb:Show(false) end
+function ui_radiation_yellow:Update()
+CUIScriptWnd.Update(self)
+local rad = db.actor.radiation * 100
+if rad > 25 and rad < 50 then
+self.rad_yellow:Show(true)
+self.rad_absorb:Show(true) else
+self.rad_yellow:Show(false)
+self.rad_absorb:Show(false) end
+end
+local HUD = nil
+function add_rad_yellow()
+   if HUD == nil then
+     HUD = ui_radiation_yellow()
+    get_hud():AddDialogToRender(HUD) end
+end
+function remove_rad_yellow()
+    if HUD ~= nil then
+      get_hud():RemoveDialogToRender(HUD)
+HUD = nil end
+end
+----------------------------------------
+class "ui_radiation_orange" (CUIScriptWnd)
+function ui_radiation_orange:__init() super()
+self:InitControls() end
+function ui_radiation_orange:InitControls()
+self:Init(0, 0, device().width, device().height)
+local xml = CScriptXmlInit()
+xml:ParseFile("inventory_new.xml")
+self.rad_orange = xml:InitStatic("radiation_state:icon3", self)
+self.rad_absorb = xml:InitStatic("radiation_state:absorb_anim", self)
+self.rad_orange:Show(false)
+self.rad_absorb:Show(false) end
+function ui_radiation_orange:Update()
+CUIScriptWnd.Update(self)
+local rad = db.actor.radiation * 100
+if rad > 50 and rad < 75 then
+self.rad_orange:Show(true)
+self.rad_absorb:Show(true) else
+self.rad_orange:Show(false)
+self.rad_absorb:Show(false) end
+end
+  local HUD = nil
+function add_rad_orange()
+   if HUD == nil then
+     HUD = ui_radiation_orange()
+    get_hud():AddDialogToRender(HUD)end
+end
+function remove_rad_orange()
+    if HUD ~= nil then
+      get_hud():RemoveDialogToRender(HUD)
+    HUD = nil end
+end
+-------------------------------------
+class "ui_radiation_red" (CUIScriptWnd)
+function ui_radiation_red:__init() super()
+self:InitControls() end
+function ui_radiation_red:InitControls()
+self:Init(0, 0, device().width, device().height)
+local xml = CScriptXmlInit()
+xml:ParseFile("inventory_new.xml")
+self.rad_red = xml:InitStatic("radiation_state:icon4", self)
+self.rad_absorb = xml:InitStatic("radiation_state:absorb_anim", self)
+self.rad_red:Show(false)
+self.rad_absorb:Show(false) end
+function ui_radiation_red:Update()
+CUIScriptWnd.Update(self)
+local rad = db.actor.radiation * 100
+if rad > 75 then
+self.rad_red:Show(true)
+self.rad_absorb:Show(true) else
+self.rad_red:Show(false)
+self.rad_absorb:Show(false) end
+end
+  local HUD = nil
+function add_rad_red()
+   if HUD == nil then
+     HUD = ui_radiation_red()
+    get_hud():AddDialogToRender(HUD)end
+end
+function remove_rad_red()
+    if HUD ~= nil then
+      get_hud():RemoveDialogToRender(HUD)
+    HUD = nil end
+end

@@ -1,0 +1,73 @@
+-- Priboy floating objects fix
+-- by barin aka pepe_84
+-- last edited: 13.01.2008
+
+local vehicle_names_by_level = 
+{
+	l01_escape =
+	{
+		objects =
+		{
+			"ven_niva_00", "ven_niva_01", "ven_niva_02", "ven_niva_03", "ven_tr13_00",
+			"ven_uaz_00000", "ven_uaz_00001", "ven_uaz_00002", "pri_wave3_btr_esc",
+			"pri_wave3_btr_esc2", "ven_moskvich_00000", "ven_niva_white_00", "ven_niva_white_01"
+		},
+		on_the_ground =
+		{
+			false, false, false, false, false, false, false,
+			false, false, false, false,	false, false
+		}
+	},
+	
+	l02_garbage =
+	{
+		objects = {"ven_tr13_00", "ven_niva_white_00", "kamaz_001", "kamaz_0012"},
+		on_the_ground = {false, false, false, false}
+	},
+	
+	l03_agroprom =
+	{
+		objects = {"pri_wave3_btr_agr", "ven_moskvich_00000"},
+		on_the_ground = {false, false}
+	},
+	
+	l04_darkvalley =
+	{
+		objects = {"kamaz_001", "ven_tr13_00", "ven_niva_white_00", "ven_uaz_00000"},
+		on_the_ground = {false, false, false, false}
+	},
+	
+	l07_military =
+	{
+		objects = {"ven_niva_00", "ven_tr13_00", "ven_zaz_00000", "pri_wave3_btr_mil"},
+		on_the_ground = {false, false, false, false}
+	},
+	
+	l12_stancia =
+	{
+		objects = {"ven_niva_white_00", "ven_moskvich_00000"},
+		on_the_ground = {false, false}
+	},
+	
+	l12_stancia_2 =
+	{
+		objects = {"pri_wave3_btr_st2", "ven_niva_white_00"},
+		on_the_ground = {false, false}
+	}
+}
+
+function floating_vehicles_fix(level_name)
+	local object, condition = nil, nil	
+	if vehicle_names_by_level[level_name] ~= nil then
+		for index = 1, #vehicle_names_by_level[level_name].objects do
+			if vehicle_names_by_level[level_name].on_the_ground[index] == false then
+				object = priboy_utils.get_game_object(vehicle_names_by_level[level_name].objects[index])
+				if object then
+					condition = object:condition()
+					vehicle_names_by_level[level_name].on_the_ground[index] = priboy_utils.hit_object(object, db.actor)
+					object:set_condition(condition)
+				end
+			end
+		end
+	end
+end

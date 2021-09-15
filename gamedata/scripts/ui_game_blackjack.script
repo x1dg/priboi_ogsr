@@ -1,0 +1,409 @@
+--[[ -----------------------------------------------------------------------------------------------
+ File           : ui_game_blackjack.script
+ Description    : Блэкджек
+ Copyright      : 2011 © Stalk15
+ Author         : Stalk15
+ Last edit      : 26.02.2011
+--]] -----------------------------------------------------------------------------------------------
+
+local tCards = {
+	[6.001]="card_six_с",
+	[6.002]="card_six_p",
+	[6.003]="card_six_b",
+	[6.004]="card_six_k",
+
+	[7.001]="card_seven_с",
+	[7.002]="card_seven_p",
+	[7.003]="card_seven_b",
+	[7.004]="card_seven_k",
+
+	[8.001]="card_eight_с",
+	[8.002]="card_eight_p",
+	[8.003]="card_eight_b",
+	[8.004]="card_eight_k",
+
+	[9.001]="card_nine_с",
+	[9.002]="card_nine_p",
+	[9.003]="card_nine_b",
+	[9.004]="card_nine_k",
+
+	[10.001]="card_ten_с",
+	[10.002]="card_ten_p",
+	[10.003]="card_ten_b",
+	[10.004]="card_ten_k",
+
+	[2.001]="card_valet_с",
+	[2.002]="card_valet_p",
+	[2.003]="card_valet_b",
+	[2.004]="card_valet_k",
+
+	[3.001]="card_dama_с",
+	[3.002]="card_dama_p",
+	[3.003]="card_dama_b",
+	[3.004]="card_dama_k",
+
+	[4.001]="card_king_с",
+	[4.002]="card_king_p",
+	[4.003]="card_king_b",
+	[4.004]="card_king_k",
+
+	[11.001]="card_tuz_с",
+	[11.002]="card_tuz_p",
+	[11.003]="card_tuz_b",
+	[11.004]="card_tuz_k"
+}
+local Btn1, Btn2, Btn3, Btn4, Btn5
+local ActorPoints, NpcPoints = 0, 0
+local tNpcCards = {}
+local bet = 100
+local xml = CScriptXmlInit()
+local stretch_val = math.min(device().width/1024, 2.5)
+
+function is_wide()
+	if stretch_val >= 1.3 then
+		x1 = 423
+		x2 = 490.2
+		x3 = 557
+		x4 = 624.7
+		x5 = 691.5
+	else
+		x1 = 392
+		x2 = 482
+		x3 = 572
+		x4 = 662
+		x5 = 752
+	end
+end
+
+class "blackjack" (CUIScriptWnd)
+function blackjack:__init(organizer) super()
+	self:Init(0,0,1024,768)
+	self.OnExit = function() level.start_stop_menu(self, true) end
+	xml:ParseFile("pda_options.xml")
+	-- background
+	xml:InitStatic("blackjack:back",self)
+	xml:InitStatic("blackjack:pda",self)
+	xml:InitStatic("blackjack:header",self)
+	xml:InitFrame("blackjack:frame",self)
+	xml:InitFrame("blackjack:buttons",self)
+	xml:InitFrame("blackjack:field1",self)
+	xml:InitFrame("blackjack:field2",self)
+	xml:InitFrameLine("blackjack:bet_bar",self)
+	xml:InitFrameLine("blackjack:field1_bar",self)
+	xml:InitFrameLine("blackjack:field2_bar",self)
+
+	local name,sname = ui_pda_names.get_strings()
+	enemy = xml:InitStatic("blackjack:enemy",self)
+	enemy:SetText(name.." "..sname)
+	you = xml:InitStatic("blackjack:you",self)
+	you:SetText("Ваша колода")
+	money = xml:InitStatic("blackjack:money",self)
+	money:SetText(db.actor:money().." RU")
+
+	-- game exit
+	self.off = xml:Init3tButton("blackjack:off",self)
+	self:Register(self.off,"btn_off")
+	-- bet
+	self.bet_lbl = xml:InitStatic("blackjack:bet", self)
+	self.bet_lbl:SetText("Ставка:")
+	self.edit_bet = xml:InitEditBox("blackjack:edit_box", self)
+
+	-- play buttons
+	self.start_game = xml:Init3tButton("blackjack:start_game", self)
+	self.start_game:SetText("Начать игру")
+	self:Register(self.start_game,"start_game")
+
+	self.take_card = xml:Init3tButton("blackjack:take_card", self)
+	self.take_card:SetText("Взять карту")
+	self:Register(self.take_card,"take_card")
+
+	self.turn = xml:Init3tButton("blackjack:turn", self)
+	self.turn:SetText("Перевод хода")
+	self:Register(self.turn,"turn")
+
+	self.repeat_game = xml:Init3tButton("blackjack:repeat_game", self)
+	self.repeat_game:SetText("Сыграть еще раз")
+	self:Register(self.repeat_game,"repeat_game")
+
+	self.escape = xml:Init3tButton("blackjack:escape", self)
+	self.escape:SetText("Выйти из игры")
+	self:Register(self.escape,"escape")
+
+	Btn1 = self:GetButton("start_game")
+	Btn2 = self:GetButton("take_card")
+	Btn3 = self:GetButton("turn")
+	Btn4 = self:GetButton("escape")
+	Btn5 = self:GetButton("repeat_game")
+	Btn2:Enable(false)
+	Btn3:Enable(false)
+	Btn5:Enable(false)
+
+	self:AddCallback("btn_off", ui_events.BUTTON_DOWN, self.OnExit, self)
+	self:AddCallback("btn_quit", ui_events.BUTTON_DOWN, self.OnExit, self)
+	self:AddCallback("start_game", ui_events.BUTTON_CLICKED, self.blackjack_start, self)
+	self:AddCallback("take_card", ui_events.BUTTON_CLICKED, self.take_one_card, self)
+	self:AddCallback("turn", ui_events.BUTTON_CLICKED, self.turn_player, self)
+	self:AddCallback("repeat_game", ui_events.BUTTON_CLICKED, self.play_again, self)
+	self:AddCallback("escape", ui_events.BUTTON_CLICKED, self.on_quit, self)
+end
+
+function blackjack:blackjack_start()
+  local text = self.edit_bet:GetText()
+	if tonumber(text) > 1000 or tonumber(text) < 100 or db.actor:money() < tonumber(text) then
+		level.start_stop_menu(ui_game_blackjack.GameMessage("минимальная ....................................... 100 RU\\nмаксимальная .................................... 1000 RU", "СТАВКА"), true)
+		return false
+	end
+	is_wide()
+	bet = tonumber(text)
+    local NpcCard1, NpcCard2 = 0, 0
+	local ActorCard1 = GetRndItemFromTable(tCards)
+	local ActorCard2 = GetRndItemFromTable(tCards)
+    local card = xml:InitStatic("blackjack:"..ActorCard1, self)
+	card:SetWindowName("ActorCards")
+	card:SetWndPos(x1, 447)
+    card = xml:InitStatic("blackjack:"..ActorCard2, self)
+	card:SetWindowName("ActorCards")
+	card:SetWndPos(x2, 447)
+    card = xml:InitStatic("blackjack:card_back", self)
+	card:SetWindowName("ActorNilCard1")
+	card:SetWndPos(x3, 447)
+    card = xml:InitStatic("blackjack:card_back", self)
+	card:SetWindowName("ActorNilCard2")
+	card:SetWndPos(x4, 447)
+    card = xml:InitStatic("blackjack:card_back", self)
+	card:SetWindowName("ActorNilCard3")
+	card:SetWndPos(x5, 447)
+		NpcCard1 = GetRndItemFromTable(tCards)
+		NpcCard2 = GetRndItemFromTable(tCards)
+		table.insert(tNpcCards, NpcCard1)
+		table.insert(tNpcCards, NpcCard2)
+	card = xml:InitStatic("blackjack:card_back", self)
+	card:SetWindowName("NpcNilCard1")
+	card:SetWndPos(x1, 245)
+	card = xml:InitStatic("blackjack:card_back", self)
+	card:SetWindowName("NpcNilCard2")
+	card:SetWndPos(x2, 245)
+	card = xml:InitStatic("blackjack:card_back", self)
+	card:SetWindowName("NpcNilCard3")
+	card:SetWndPos(x3, 245)
+	card = xml:InitStatic("blackjack:card_back", self)
+	card:SetWindowName("NpcNilCard4")
+	card:SetWndPos(x4, 245)
+	card = xml:InitStatic("blackjack:card_back", self)
+	card:SetWindowName("NpcNilCard5")
+	card:SetWndPos(x5, 245)
+	ActorPoints = math.floor(CardToNum(ActorCard1) + CardToNum(ActorCard2))
+	NpcPoints = math.floor(CardToNum(NpcCard1) + CardToNum(NpcCard2))
+	Btn2:Enable(true)
+	Btn3:Enable(true)
+	Btn4:Enable(false)
+	Btn1:Enable(false)
+	Btn5:Enable(false)
+end
+
+function blackjack:take_one_card()
+	is_wide()
+	local ActorCard = GetRndItemFromTable(tCards)
+	ActorPoints = math.floor(ActorPoints + CardToNum(ActorCard))
+	local static1, static2, static3 = self:GetStatic("ActorNilCard1"), self:GetStatic("ActorNilCard2"), self:GetStatic("ActorNilCard3")
+	if static1 ~= nil then
+		self:DetachChild(static1)
+		card = xml:InitStatic("blackjack:"..ActorCard, self)
+		card:SetWindowName("ActorCards")
+		card:SetWndPos(x3, 447)
+	elseif static2 ~= nil then
+		self:DetachChild(static2)
+		card = xml:InitStatic("blackjack:"..ActorCard, self)
+		card:SetWindowName("ActorCards")
+		card:SetWndPos(x4, 447)
+	elseif static3 ~= nil then
+		self:DetachChild(static3)
+		card = xml:InitStatic("blackjack:"..ActorCard, self)
+		card:SetWindowName("ActorCards")
+		card:SetWndPos(x5, 447)
+	end
+end
+
+function blackjack:play_again()
+	self:Reset21()
+	Btn1:Enable(true)
+	Btn5:Enable(false)
+end
+
+function blackjack:add_npc_card(NpcCard)
+	is_wide()
+	local static1, static2, static3, static4, static5 = self:GetStatic("NpcNilCard1"), self:GetStatic("NpcNilCard2"), self:GetStatic("NpcNilCard3"), self:GetStatic("NpcNilCard4"), self:GetStatic("NpcNilCard5")
+	if static1 ~= nil then
+		self:DetachChild(static1)
+		self.NpcCard1 = xml:InitStatic("blackjack:"..NpcCard, self)
+		self.NpcCard1:SetWindowName("ActorCards")
+		self.NpcCard1:SetWndPos(x1, 245)
+	elseif static2 ~= nil then
+		self:DetachChild(static2)
+		NpcCard2 = xml:InitStatic("blackjack:"..NpcCard, self)
+		NpcCard2:SetWindowName("ActorCards")
+		NpcCard2:SetWndPos(x2, 245)
+	elseif static3 ~= nil then
+		self:DetachChild(static3)
+		NpcCard3 = xml:InitStatic("blackjack:"..NpcCard, self)
+		NpcCard3:SetWindowName("ActorCards")
+		NpcCard3:SetWndPos(x3, 245)
+	elseif static4 ~= nil then
+		self:DetachChild(static4)
+		NpcCard4 = xml:InitStatic("blackjack:"..NpcCard, self)
+		NpcCard4:SetWindowName("ActorCards")
+		NpcCard4:SetWndPos(x4, 245)
+	elseif static5 ~= nil then
+		self:DetachChild(static5)
+		NpcCard5 = xml:InitStatic("blackjack:"..NpcCard, self)
+		NpcCard5:SetWindowName("ActorCards")
+		NpcCard5:SetWndPos(x5, 245)
+	end
+end
+
+function blackjack:turn_player()
+	local win = xr_sound.get_safe_sound_object([[device\pda\pda_game_win2]])
+	local lose = xr_sound.get_safe_sound_object([[device\pda\pda_game_over]])
+	local tie = xr_sound.get_safe_sound_object([[device\pda\pda_tip]])
+	local NpcCard2
+	if NpcPoints < 10 then
+		NpcCard2 = GetRndItemFromTable(tCards)
+		NpcPoints = math.floor(NpcPoints + CardToNum(NpcCard2))
+		table.insert(tNpcCards, NpcCard2)
+	end
+	if NpcPoints <= 13 and math.random() > 0.9 then
+		NpcCard2 = GetRndItemFromTable(tCards)
+		NpcPoints = math.floor(NpcPoints + CardToNum(NpcCard2))
+		table.insert(tNpcCards, NpcCard2)
+	end
+	if NpcPoints <= 15 and math.random() > 0.2 then
+		NpcCard2 = GetRndItemFromTable(tCards)
+		NpcPoints = math.floor(NpcPoints + CardToNum(NpcCard2))
+		table.insert(tNpcCards, NpcCard2)
+	end
+	if NpcPoints <= 17 and math.random() > 0.1 then
+		NpcCard2 = GetRndItemFromTable(tCards)
+		NpcPoints = math.floor(NpcPoints + CardToNum(NpcCard2))
+		table.insert(tNpcCards, NpcCard2)
+	end
+	for i = 1, #tNpcCards do
+		self:add_npc_card(tNpcCards[i])
+	end
+	if ActorPoints == NpcPoints or ActorPoints > 21 and NpcPoints > 21 then
+		tie:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1)
+		level.start_stop_menu(ui_game_blackjack.GameMessage("Ваши очки .................................................. " ..math.floor(ActorPoints).. "\\nОчки соперника .......................................... ".. math.floor(NpcPoints), "НИЧЬЯ"), true)
+	elseif ActorPoints > NpcPoints and ActorPoints < 22 or NpcPoints > 21 and ActorPoints < 22 then
+		level.start_stop_menu(ui_game_blackjack.GameMessage("Ваши очки .................................................. " ..math.floor(ActorPoints).. "\\nОчки соперника .......................................... ".. math.floor(NpcPoints).. "\\nДеньги ..............................................%c[pda_ok] +"..bet.." RU", "%c[pda_ok]ВЫ ВЫИГРАЛИ"), true)
+		win:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1)
+		db.actor:give_money(bet)
+	elseif ActorPoints < NpcPoints and NpcPoints < 22 or ActorPoints > 21 and NpcPoints < 22 then
+		level.start_stop_menu(ui_game_blackjack.GameMessage("Ваши очки .................................................. " ..math.floor(ActorPoints).. "\\nОчки соперника .......................................... ".. math.floor(NpcPoints).. "\\nДеньги ..............................................%c[pda_error] -"..bet.." RU", "%c[pda_error]ВЫ ПРОИГРАЛИ"), true)
+		lose:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1)
+		db.actor:give_money(-bet)
+	end
+  Btn4:Enable(true)
+  Btn5:Enable(true)
+  Btn2:Enable(false)
+  Btn3:Enable(false)
+  money:SetText(db.actor:money().." RU")
+end
+
+function blackjack:on_quit()
+	self:Reset21()
+	self:GetHolder():start_stop_menu(self, true)
+end
+
+function blackjack:Reset21()
+	local stati = 9
+	while stati ~= nil do
+		stati = self:GetStatic("ActorCards")
+		self:DetachChild(stati)
+	end
+		stati = self:GetStatic("NpcNilCard1")
+		self:DetachChild(stati)
+		stati = self:GetStatic("NpcNilCard2")
+		self:DetachChild(stati)
+		stati = self:GetStatic("NpcNilCard3")
+		self:DetachChild(stati)
+		stati = self:GetStatic("NpcNilCard4")
+		self:DetachChild(stati)
+		stati = self:GetStatic("NpcNilCard5")
+		self:DetachChild(stati)
+		stati = self:GetStatic("ActorNilCard1")
+		self:DetachChild(stati)
+		stati = self:GetStatic("ActorNilCard2")
+		self:DetachChild(stati)
+		stati = self:GetStatic("ActorNilCard3")
+		self:DetachChild(stati)
+	ActorPoints, NpcPoints = 0, 0
+	this.ttInit()
+	tNpcCards = {}
+end
+
+function CardToNum(Card)
+	for k, v in pairs(tCards) do
+		if v == Card then
+			return k
+		end
+	end
+end
+
+local tt = {}
+function ttInit()
+tt = {}
+    local j = 1
+    for k,v in pairs(tCards) do
+        tt[j]  = v
+        j=j+1
+    end
+end
+this.ttInit()
+
+function GetRndItemFromTable()
+    if next(tt) then
+        local rnd = math.random(#tt)
+        local rem = tt[rnd]
+        table.remove(tt, rnd)
+        return rem
+    end
+end
+
+function game_21p_start()
+    level.start_stop_menu(ui_game_blackjack.blackjack(), true)
+end
+
+--[[ -----------------------------------------------------------------------------------------------
+ Description    : Сообщения результатов игр (текст, заголовок)
+--]] -----------------------------------------------------------------------------------------------
+
+class "GameMessage" (CUIScriptWnd)
+function GameMessage:__init(game_text, game_title) super()
+	self:Init(0,0,1024,768)
+	xml:ParseFile("pda_options.xml")
+	self.back = xml:InitStatic("message_box:back", self)
+
+	self.header = xml:InitStatic("message_box:header", self)
+	self.header:SetText(game_title)
+	self.content = xml:InitStatic("message_box:content", self)
+	self.content:SetText(game_text)
+
+	self.btn = xml:Init3tButton("message_box:button_ok", self)
+	self:Register(self.btn,"btn")
+	self:AddCallback("btn", ui_events.BUTTON_CLICKED, self.Btn_OK_GameMessage, self)
+end
+
+function GameMessage:Btn_OK_GameMessage()
+    self:GetHolder():start_stop_menu(self, true)
+end
+
+function GameMessage:OnKeyboard(dik, keyboard_action)
+	if dik ~= DIK_keys.DIK_RETURN and dik ~= DIK_keys.DIK_NUMPADENTER then
+		CUIScriptWnd.OnKeyboard(self, dik, keyboard_action)
+	end
+	if keyboard_action == ui_events.WINDOW_KEY_PRESSED then
+		if dik == DIK_keys.DIK_ESCAPE or dik == DIK_keys.DIK_SPACE
+		or dik == DIK_keys.DIK_RETURN then self:Btn_OK_GameMessage()
+		end
+	end
+	return true
+end

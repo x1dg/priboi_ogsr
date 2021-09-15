@@ -1,0 +1,44 @@
+-----------------------------------------------------------------------------------------------------------------------------------
+-- Схема смены рук при смене костюма
+-- Автор: Kondr48 (Вампир35).
+-- Последнее редактирование: 25.02.2016 12:00
+-- За метод замены текстуры спасибо Alpet'у
+-----------------------------------------------------------------------------------------------------------------------------------
+local hands_enable = system_ini():r_bool("mui_options","mui_hands_enable")
+function update() -- тут у нас вызывается смена текстуры.
+	if hands_enable == false then return end
+	if last_outfit == nil then last_outfit = "hello"
+	end
+
+	if db.actor:item_in_slot(6) == nil then
+		outfit = "sviter"
+	else
+		outfit = db.actor:item_in_slot(6):section()
+	end
+
+	if last_outfit ~= outfit then
+		perchatka = system_ini():r_string(outfit,"texture_arm")
+		exo = system_ini():r_string(outfit,"texture_exo")
+
+	local t = texture_find("hands\\act_arm_0")
+	if t and t["hands\\act_arm_0"] then
+		t["hands\\act_arm_0"]:load("hands\\"..perchatka)
+	end
+
+	local t_b = texture_find("hands\\act_arm_0_bump")
+	if t_b and t_b["hands\\act_arm_0_bump"] then
+	end
+
+	local te = texture_find("hands\\act_arm_exo")
+	if te and te["hands\\act_arm_exo"] then
+	te["hands\\act_arm_exo"]:load("hands\\"..exo)
+	end
+
+	local te_b = texture_find("hands\\act_arm_exo_bump")
+	if te_b and te_b["hands\\act_arm_exo_bump"] then
+	te_b["hands\\act_arm_exo_bump"]:load("hands\\"..exo.."_bump")
+	end
+	last_outfit = outfit
+	end
+
+end

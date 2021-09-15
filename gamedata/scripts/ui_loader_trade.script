@@ -1,0 +1,76 @@
+--[[-----------------------------------------------------------------------------------------------
+ File			: ui_loader_trade.script
+ Description	: Функции для окна торговли
+ Copyright		: Shadows Addon
+ Authors		: Shadows and Charsi
+ Date			: 02.08.2011-13.08.2011
+--]]-----------------------------------------------------------------------------------------------
+
+local rec_wnd = nil
+local initial = false
+
+class "TradeWindow" (CUIScriptWnd)
+function TradeWindow:__init(owner) super()
+	self.owner = owner
+	self:Init(0,0,1024,768)
+	self:InitControls()
+end
+
+function TradeWindow:__finalize() end
+function TradeWindow:InitControls()
+	self.stat = CUIStatic()
+	self.stat:Init(0,0,1024,768)
+	local xml = CScriptXmlInit()
+	xml:ParseFile("trade.xml")
+
+	-- [TRADE] init --------------------------------------------------
+	
+	-- Характеристики ГГ
+	reputation_c = xml:InitStatic("actor_chars:reputation_caption", self.stat)
+	reputation_s = xml:InitStatic("actor_chars:reputation_static", self.stat)
+	reputation_c:SetText(game.translate_string("ui_st_reputation"))
+		if db.actor:character_reputation() > 0 then
+			reputation_s:SetText("+"..db.actor:character_reputation())
+			else
+			reputation_s:SetText(db.actor:character_reputation())
+		end
+	
+	-- Всплывающее окно описания
+	get_hud():AddDialogToRender(self.stat)
+	self.DescrWnd = ui_item_hint.CUIDescriptionWnd(self.stat)
+	
+	initial = true
+end
+
+function TradeWindow:ShowWnd()
+	if initial and rec_wnd.stat~= nil then rec_wnd.stat:Show(true) end
+end
+function TradeWindow:HideWnd()
+	if initial and rec_wnd.stat~= nil then rec_wnd.stat:Show(false) end
+end
+function TradeWindow:DetachWnd()
+	self.DescrWnd:Remove()
+	self.DescrWnd = nil
+	get_hud():RemoveDialogToRender(self.stat)
+	initial = false
+end
+function TradeWindow:TradeClose()
+	if trade_window and trade_window:IsShown() then level.start_stop_menu(trade_window,true) end
+end
+
+local trade_window
+function on_info(info_id)
+	if info_id=="ui_trade" then
+	    trade_window = level.main_input_receiver()
+		if not initial then	rec_wnd = TradeWindow(level.main_input_receiver()) end
+		if not rec_wnd.stat:IsShown() then rec_wnd:ShowWnd() end
+	elseif info_id=="ui_trade_hide" then
+		if rec_wnd then rec_wnd:DetachWnd() end
+	end
+end
+
+function update()
+	if db.actor:has_info("ui_trade") then
+	-- <YOUR CODE>
+	end
+end

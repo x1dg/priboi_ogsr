@@ -1,0 +1,129 @@
+--[[-----------------------------------------------------------------------------------------------
+ File			: ui_loader.script
+ Description	: Общие функции
+ Source			: ABC Inferno
+ Author			: serg101188
+ Date			: 23.11.2011
+ Last edit		: 25.11.2020
+--]]-----------------------------------------------------------------------------------------------
+
+local kShifts = {
+	[DIK_keys.DIK_RSHIFT] = true,
+	[DIK_keys.DIK_LSHIFT] = true
+}
+
+-- Нажатие клавиши
+function on_key(dik)
+	if kShifts[dik] then _G.ShiftPressed = true end
+	local bind = dik_to_bind(dik)
+	hotkeys.on_key(dik, bind)
+	xr_signals.on_event( "key_press", key, bind )
+end
+
+-- Отпускание клавиши
+function on_key_free(dik)
+	if kShifts[dik] then _G.ShiftPressed = nil end
+	xr_signals.on_event("key_release", key, bind)
+end
+
+-- Использование предмета
+function on_use(obj)
+	ui_hud_medicines.use(obj)
+end
+
+-- Перемещение предмета в рюкзак
+function item_to_backpack(obj)
+	ui_hud_hands.update()
+end
+
+-- Перемещение предмета в слот
+function item_to_slot(obj)
+	ui_hud_hands.update()
+end
+
+-- Фокус на ячейке инвентаря
+function on_cell_item_focus(obj)
+	xr_signals.on_event("cell_item_focus", obj)
+end
+
+-- Потеря фокуса ячейки инвентаря
+function on_cell_item_focus_lost(obj)
+	xr_signals.on_event("cell_item_focus_lost", obj)
+end
+
+-- Вращение колесиком мыши
+function on_wheel_rotation(vol)
+	xr_signals.on_event("mouse_wheel", vol)
+end
+
+-- Перезарядка оружия
+function weapon_reload(obj)
+	ui_loader_hud.reload()
+end
+
+-- Урон по НПС (bind_monster|xr_motivator.scripts)
+function on_hit(obj, amount, local_direction, who, bone_index)
+	ui_enemy_health.on_hit(obj, amount, local_direction, who, bone_index)
+end
+
+-- Смерть НПС (bind_monster|xr_motivator.scripts)
+function on_death(victim, who)
+	ui_enemy_health.on_death(victim, who)
+end
+
+-- net_spawn
+function net_spawn(data)
+	ui_hud_hands.update()
+	xr_signals.on_event("net_spawn")
+end
+
+-- net_destroy
+function net_destroy()
+	xr_signals.on_event("net_destroy")
+end
+
+-- __finalize()
+function init()
+	xr_signals.init()
+end
+
+-- Получение инфопоршена
+function on_info(npc, info_id)
+	xr_signals.on_event("info", info_id)
+	ui_loader_pda.on_info(info_id)
+	ui_loader_trade.on_info(info_id)
+	ui_loader_carbody.on_info(info_id)
+	ui_loader_inventory.on_info(info_id)
+end
+
+-- Взятие предмета в инвентарь
+function on_item_take(obj)
+	ui_fast_use_slots.OnItemTake(obj:section())
+	ui_hud_weight.item_take(obj)
+	ui_hud_hands.update()
+	xr_signals.on_event("item_take", obj)
+end
+
+-- Сброс предмета из инвентаря
+function on_item_drop(obj)
+	ui_fast_use_slots.OnItemDrop(obj:section())
+	ui_hud_weight.on_item_drop(obj)
+	ui_hud_hands.update()
+	xr_signals.on_event("item_drop", obj)
+end
+
+-- Обновление биндера
+function update()
+	rx_shoot_enable.shoot_effect()
+	xr_signals.on_update(delta)
+	ui_fast_use_slots.FastUseSlotsHud()
+	ui_hud_medicines.update()
+	ui_hud_weight.update()
+	ui_hud_time.update()
+	ui_hud_mask.update()
+	ui_loader_inventory.update()
+	ui_loader_carbody.update()
+	ui_loader_trade.update()
+	ui_loader_hud.update()
+	ui_loader_pda.update()
+end

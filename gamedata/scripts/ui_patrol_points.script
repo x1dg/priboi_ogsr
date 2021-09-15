@@ -1,0 +1,206 @@
+
+-- *************************************** --
+class "ListItem" (CUIListItemEx)
+
+function ListItem:__init(str) super()
+	self:SetWndRect	(0, 0, 430, 22)
+	
+	self.item = CUIStatic()
+	self.item:SetAutoDelete(true)
+	self:AttachChild(self.item)
+	
+	self.item:SetWndRect(0, 0, 230, 20)
+	self.item:SetText(str)
+end
+-- *************************************** --
+function isGameOn()
+	if level.present() and db.actor ~= nil and db.actor:alive() then
+		return true
+	end
+	return false
+end
+-- *************************************** --
+
+class "PatrolPoints" (CUIScriptWnd)
+
+function PatrolPoints:__init(action) super()
+	self.position = nil
+	self.game_vertex_id = nil
+	self.level_vertex_id = nil
+	self.action = action
+	
+	self:InitControls()
+	self:InitCallBacks()
+	
+	self:GetActorData()
+end
+
+function PatrolPoints:__finalize()
+end
+
+function PatrolPoints:InitControls()
+	self:Init(0, 0, 1024, 768)
+	
+	local xml = CScriptXmlInit()
+	xml:ParseFile("ui_patrol_point_dlg.xml")
+	xml:InitStatic("background", self)
+	
+	self.form = xml:InitStatic("form", self)
+	xml:InitStatic("form:label_patrol_name", self.form)
+	xml:InitStatic("form:label_anim_name", self.form)
+	xml:InitStatic("form:label_sig_name", self.form)
+	xml:InitFrame("form:frame", self.form)
+	
+	local dlg = nil
+	
+	dlg = xml:InitStatic("form:caption", self.form)
+	self:Register(dlg, "wnd_caption")
+	
+	dlg = xml:InitEditBox("form:patrol_name", self.form)
+	self:Register(dlg, "patrol_name")
+	
+	dlg = xml:InitEditBox("form:anim_name", self.form)
+	self:Register(dlg, "anim_name")
+	
+	dlg = xml:InitEditBox("form:sig_name", self.form)
+	self:Register(dlg, "sig_name")
+	
+	dlg = xml:InitList("form:list_view", self.form)
+	--dlg:ShowSelectedItem(true)
+	self:Register(dlg, "list_window")
+	
+	dlg = xml:Init3tButton("form:btn_save", self.form)
+	self:Register(dlg, "button_save")
+	
+	dlg = xml:Init3tButton("form:btn_cancel", self.form)
+	self:Register(dlg, "button_cancel")
+	
+	self.message_box = CUIMessageBoxEx()
+	self:Register(self.message_box, "message_box")
+	
+	if self.action == "position_only" then
+		self:GetEditBox("anim_name"):Enable(false)
+		self:GetEditBox("sig_name"):Enable(false)
+		self:GetStatic("wnd_caption"):SetText("Save position")
+	end
+end
+
+function PatrolPoints:InitCallBacks()
+	self:AddCallback("button_save", ui_events.BUTTON_CLICKED, self.OnSave, self)
+	self:AddCallback("button_cancel", ui_events.BUTTON_CLICKED, self.OnWindowClose, self)
+	self:AddCallback("message_box", ui_events.MESSAGE_BOX_OK_CLICKED, self.OnMessageBoxOkClicked, self)
+end
+
+function PatrolPoints:ConsolePrint(text)
+	local console = get_console()
+	console:execute(string.gsub(string.format(text), "%s", "_"))
+	console:execute("flush")
+end
+
+function PatrolPoints:GetActorData()
+	if isGameOn() then
+		self.position = tostring(db.actor:position().x) .. "," ..
+			tostring(db.actor:position().y) .. "," .. tostring(db.actor:position().z)
+		self.game_vertex_id = tostring(db.actor:game_vertex_id())
+		self.level_vertex_id = tostring(db.actor:level_vertex_id())
+
+		self:AddItemToList("position = " .. self.position)
+		self:AddItemToList("game_vertex_id = " .. self.game_vertex_id)
+		self:AddItemToList("level_vertex_id = " .. self.level_vertex_id)
+	end
+end
+
+function PatrolPoints:bound(num, min, max)
+	if num >= min and num <= max then
+		return true
+	else
+		return false
+	end
+end
+
+function PatrolPoints:check_bound(num)
+	if self:bound(num, 33, 47) or self:bound(num, 58, 64) or
+		(num ~= 95 and self:bound(num, 91, 96)) or num == 126
+	then
+		return true
+	end
+	return false
+end
+
+function PatrolPoints:ValidatePatrolName(str)
+	if str == "" or not str then
+		return false
+	end
+	
+	-- remove spaces
+	str = string.gsub(str, "(%s)", "")
+	
+	-- check if str contains only [a-z A-Z 0-9 _]
+	for index = 1, string.len(str) do
+		if self:check_bound(string.byte(str, index)) then
+			return false
+		end
+	end
+	return str	
+end
+
+function PatrolPoints:OnSave()
+	local pName = self:ValidatePatrolName(self:GetEditBox("patrol_name"):GetText())
+	local aName = self:GetEditBox("anim_name"):GetText()
+	local sName = self:GetEditBox("sig_name"):GetText()
+	local txt = ""
+	
+	if not pName then
+		self.message_box_id = 0
+		self.message_box:Init("message_box_patrol_name")
+		self:GetHolder():start_stop_menu(self.message_box, true)
+		return
+	end
+	
+	if self.action == "position_only" then
+		txt = pName
+	end
+	
+	if self.action == "patrol" then
+		txt = "patrolName=" .. pName
+		if aName ~= "" then
+			txt = txt .. "|anim=" .. aName
+		end
+	
+		if sName ~= "" then
+			txt = txt .. "|sig=" .. sName
+		end
+	end
+	
+	txt = txt .. "|pos=" .. self.position
+	txt = txt .. "|game=" .. self.game_vertex_id
+	txt = txt .. "|level=" .. self.level_vertex_id
+	
+	self:ConsolePrint(txt)
+	self:OnWindowClose()
+end
+
+function PatrolPoints:OnMessageBoxOkClicked()
+	self:GetEditBox("patrol_name"):SetText("Type patrol name here ...")
+end
+
+function PatrolPoints:AddItemToList(str)
+	self:GetListWnd("list_window"):AddItem(ListItem(str))
+end
+
+function PatrolPoints:OnKeyboard(key, action)
+	ui_base_dialog.base_dialog.OnKeyboard(self, key, action)
+	
+	if action == ui_events.WINDOW_KEY_PRESSED then
+		--[[if key == DIK_keys.DIK_ESCAPE then
+			self:OnWindowClose()
+		end--]]
+	end
+	return true
+end
+
+function PatrolPoints:OnWindowClose()
+	self:GetHolder():start_stop_menu(self.owner, true)
+	self:GetHolder():start_stop_menu(self, true)
+	self.owner:Show(true)
+end

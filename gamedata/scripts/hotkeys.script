@@ -1,0 +1,146 @@
+--[[-----------------------------------------------------------------------------------------------
+ File			: hotkey.script
+ Description 	: Горячие клавиши
+--]]-----------------------------------------------------------------------------------------------
+
+local get_wnd = level.main_input_receiver
+local binds_actions = {}
+local dik_actions = {}
+local keys = {
+	[1] = 'ESCAPE', [2] = '1', [3] = '2', [4] = '3', [5] = '4', [6] = '5', [7] = '6', [8] = '7',
+	[9] = '8', [10] = '9', [11] = '0', [12] = 'MINUS', [13] = 'EQUALS', [14] = 'BACK', [15] = 'TAB', [16] = 'Q',
+	[17] = 'W', [18] = 'E', [19] = 'R', [20] = 'T', [21] = 'Y', [22] = 'U', [23] = 'I', [24] = 'O', [25] = 'P',
+	[26] = 'LBRACKET', [27] = 'RBRACKET', [28] = 'RETURN', [29] = 'LCONTROL', [30] = 'A', [31] = 'S', [32] = 'D',
+	[33] = 'F', [34] = 'G', [35] = 'H', [36] = 'J', [37] = 'K', [38] = 'L', [39] = 'SEMICOLON', [40] = 'APOSTROPHE',
+	[41] = 'GRAVE', [42] = 'LSHIFT', [43] = 'BACKSLASH', [44] = 'Z', [45] = 'X', [46] = 'C', [47] = 'V', [48] = 'B',
+	[49] = 'N', [50] = 'M', [51] = 'COMMA', [52] = 'PERIOD', [53] = 'SLASH', [54] = 'RSHIFT', [55] = 'MULTIPLY',
+	[56] = 'LMENU', [57] = 'SPACE', [58] = 'CAPITAL', [59] = 'F1', [60] = 'F2', [61] = 'F3', [62] = 'F4', [63] = 'F5',
+	[64] = 'F6', [65] = 'F7', [66] = 'F8', [67] = 'F9', [68] = 'F10', [69] = 'NUMLOCK', [70] = 'SCROLL', [71] = 'NUMPAD7',
+	[72] = 'NUMPAD8', [73] = 'NUMPAD9', [74] = 'SUBTRACT', [75] = 'NUMPAD4', [76] = 'NUMPAD5', [77] = 'NUMPAD6',
+	[78] = 'ADD', [79] = 'NUMPAD1', [80] = 'NUMPAD2', [81] = 'NUMPAD3', [82] = 'NUMPAD0', [83] = 'DECIMAL', [87] = 'F11',
+	[88] = 'F12', [100] = 'F13', [101] = 'F14', [102] = 'F15', [112] = 'KANA', [121] = 'CONVERT', [123] = 'NOCONVERT',
+	[125] = 'YEN', [141] = 'NUMPADEQUALS', [144] = 'CIRCUMFLEX', [145] = 'AT', [146] = 'COLON', [147] = 'UNDERLINE',
+	[148] = 'KANJI', [149] = 'STOP', [150] = 'AX', [151] = 'UNLABELED', [156] = 'NUMPADENTER', [157] = 'RCONTROL',
+	[179] = 'NUMPADCOMMA', [181] = 'DIVIDE', [183] = 'SYSRQ', [184] = 'RMENU', [197] = 'PAUSE', [199] = 'HOME',
+	[200] = 'UP', [201] = 'PRIOR', [203] = 'LEFT', [205] = 'RIGHT', [207] = 'END', [208] = 'DOWN', [209] = 'NEXT',
+	[210] = 'INSERT', [211] = 'DELETE', [219] = 'LWIN', [220] = 'RWIN', [221] = 'APPS', [337] = 'MOUSE1', [338] = 'MOUSE2'
+	}
+
+function bind2key(bind)
+	return keys[bind_to_dik(bind)]
+end
+function dik2key(dik)
+	return keys[dik]
+end
+
+function on_key(dik, bind)
+	if not db.actor:alive() then return end
+	if get_wnd()~=nil then return end
+
+	if binds_actions[bind] then
+		binds_actions[bind]()
+	elseif dik_actions[dik] then
+		dik_actions[dik]()
+	end
+end
+
+function hud_msg(xml, txt)
+	local hud = get_hud()
+	hud:AddCustomStatic(xml, true)
+	local wnd = hud:GetCustomStatic(xml):wnd()
+	wnd:SetText(txt)
+end
+
+----------------------------------------
+
+-- 'F1' - Слот быстрого использования F1
+binds_actions[key_bindings.kUSE_ANTIRAD] = function()
+	local section = ui_fast_use_slots.GetItemInFastSlot1()
+	if section then
+		local item = db.actor:object(section)
+		if item and item ~= nil then
+			this.hud_msg("slot_used", "использовано: "..game.translate_string(system_ini():r_string(item:section(), "inv_name")))
+			db.actor:eat(item)
+		end
+	end
+	return true
+	end
+
+-- 'F2' - Слот быстрого использования F2
+binds_actions[key_bindings.kUSE_ENERGY_DRINK] = function()
+	local section = ui_fast_use_slots.GetItemInFastSlot2()
+	if section then
+		local item = db.actor:object(section)
+		if item and item ~= nil then
+			this.hud_msg("slot_used", "использовано: "..game.translate_string(system_ini():r_string(item:section(), "inv_name")))
+			db.actor:eat(item)
+		end
+	end
+	return true
+end
+
+-- 'F3' - Слот быстрого использования F3
+binds_actions[key_bindings.kUSE_B190] = function()
+	local section = ui_fast_use_slots.GetItemInFastSlot3()
+	if section then
+		local item = db.actor:object(section)
+		if item and item ~= nil then
+			this.hud_msg("slot_used", "использовано: "..game.translate_string(system_ini():r_string(item:section(), "inv_name")))
+			db.actor:eat(item)
+		end
+	end
+	return true
+end
+
+-- 'F4' - Слот быстрого использования F4
+binds_actions[key_bindings.kUSE_BIPSIZON] = function()
+	local section = ui_fast_use_slots.GetItemInFastSlot4()
+	if section then
+		local item = db.actor:object(section)
+		if item and item ~= nil then
+			this.hud_msg("slot_used", "использовано: "..game.translate_string(system_ini():r_string(item:section(), "inv_name")))
+			db.actor:eat(item)
+		end
+	end
+	return true
+end
+
+-- 'Numpad 0' - Худ-маска вкл./выкл
+binds_actions[key_bindings.kMASK] = function()
+	ui_hud_mask.on_off_mask()
+	return true
+end
+
+-- 'Numpad 1' - Бессмертие вкл./выкл
+binds_actions[key_bindings.kGOD_MODE] = function()
+	local value = get_console():get_string("g_god")
+	local note = xr_sound.get_safe_sound_object([[intro\godmode]])
+	local note2 = xr_sound.get_safe_sound_object([[device\pda\pda_tip]])
+	if value == "off" then
+		get_console():execute("g_god on")
+		this.hud_msg("func_task", game.translate_string("st_ui_godmode_on"))
+		note:play(db.actor, 0, sound_object.s2d)
+	elseif value == "on" then
+		get_console():execute("g_god off")
+		this.hud_msg("func_task", game.translate_string("st_ui_godmode_off"))
+		note2:play(db.actor, 0, sound_object.s2d)
+	end
+	return true
+end
+
+-- 'Numpad 2' - Бесконечные патроны вкл./выкл
+binds_actions[key_bindings.kUN_AMMO] = function()
+	local value = get_console():get_string("g_unlimitedammo")
+	local note = xr_sound.get_safe_sound_object([[intro\unlimited_ammo]])
+	local note2 = xr_sound.get_safe_sound_object([[device\pda\pda_tip]])
+	if value == "off" then
+		get_console():execute("g_unlimitedammo on")
+		this.hud_msg("func_task", game.translate_string("st_ui_un_ammo_on"))
+		note:play(db.actor, 0, sound_object.s2d)
+	elseif value == "on" then
+		get_console():execute("g_unlimitedammo off")
+		this.hud_msg("func_task", game.translate_string("st_ui_un_ammo_off"))
+		note2:play(db.actor, 0, sound_object.s2d)
+	end
+	return true
+end

@@ -1,0 +1,140 @@
+--[[-----------------------------------------------------------------------------------------------
+ File           : ui_game_arcanoid.script
+ Description    : Arcanoid
+ Copyright      : 2011 © Charsi
+ Author         : Charsi
+ Last edit      : 01.07.2011
+--]]-----------------------------------------------------------------------------------------------
+
+local stretch_val = math.min(device().width/1024, 2.5)
+local artefacts = {"af_soul", "af_night_star", "af_fireball", "af_electra_flash", "af_electra_moonlight", "af_electra_sparkler"}
+
+function is_wide()
+	if stretch_val >= 1.3 then
+		offsetx = 364
+	else
+		offsetx = 192
+	end
+end
+
+class "arcanoid" (CUIScriptWnd)
+function arcanoid:__init(organizer) super()
+	self:Init(0,0,1024,768)
+	self.OnExit = function() level.start_stop_menu(self, true) end
+	self.ClosePda = function() self:OnExit() organizer:PdaQuit() end
+	self.start_time_y = time_global()
+	self.start_time_x = time_global()
+	self.step_x = math.random(-10,10) + 0.6
+	self.step_y = math.random(10) + 0.6
+	if stretch_val >= 1.3 then
+		self.cur_pos_x = 158 + math.random(748-158-158)
+		pos_x_l = 158
+		pos_x_r = 833.5
+		self.st1x = 374 - 37.4
+		st1x_l = 158
+		st1x_r = 768
+	else
+		self.cur_pos_x = 37 + math.random(999-37-37)
+		pos_x_l = 37
+		pos_x_r = 999 - 37
+		self.st1x = 499 - 50
+		st1x_l = 37
+		st1x_r = 999 - 110
+	end
+	self.cur_pos_y = 102
+	self.st1y = 698 - 10
+	self.start = false
+	self.delta_r = 0
+	self.delta_l = 0
+	self.win = 0
+	self.lose = 0
+	local xml = CScriptXmlInit()
+	xml:ParseFile("pda_options.xml")
+	-- background
+	xml:InitStatic("arcanoid:arcanoid_back",self)
+	xml:InitStatic("arcanoid:arcanoid_pda",self)
+	xml:InitStatic("arcanoid:arcanoid_header",self)
+	xml:InitFrame("arcanoid:arcanoid_frame",self)
+	-- btn exit game
+	self.btn_quit = xml:InitButton("arcanoid:arcanoid_exit",self)
+	self:Register(self.btn_quit, "btn_quit")
+	self:AddCallback("btn_quit", ui_events.BUTTON_DOWN, self.OnExit, self)
+	-- btn exit pda
+	self.off = xml:Init3tButton("arcanoid:arcanoid_off",self)
+	self:Register(self.off,"btn_off")
+	self:AddCallback("btn_off", ui_events.BUTTON_DOWN, self.ClosePda, self)
+	-- ball
+	self.ball = xml:InitStatic("arcanoid:arcanoid_ball",self)
+	self:Register(self.ball, "btn_ball")
+	self.ball:Init("ui\\ui_icon_equipment",self.cur_pos_x,self.cur_pos_y,40/stretch_val,40)
+	self.ball:SetStretchTexture(true)
+	self:random_artefact()
+	-- area
+	self.area = xml:InitButton("arcanoid:arcanoid_area",self)
+	self:Register(self.area, "arcanoid_area")
+	self.area:Init("ui\\ui_pda_options",self.st1x,self.st1y,100,10)
+	-- self.ball:SetStretchTexture(true)
+	-- statistics
+	self.statistics = xml:InitStatic("arcanoid:arcanoid_stats",self)
+	self.statistics:SetText("Отбито: 0     Пропущено: 0")
+end
+
+function arcanoid:Update()
+	if self.start then
+		CUIScriptWnd.Update(self)
+		self.cur_pos_y = self.cur_pos_y + self.step_y
+		self.cur_pos_x = self.cur_pos_x + self.step_x
+		if self.cur_pos_y > self.st1y - 33 then
+			if (self.cur_pos_x < self.st1x or self.cur_pos_x > self.st1x + 100) then
+				self.cur_pos_y = 102 self:random_artefact()
+				self.step_y = math.random(8,12) self.step_x = math.random(5,10)
+				self.lose = self.lose + 1
+			else
+				self.win = self.win + 1
+				local min = -15
+				local max = (self.st1x+50-self.cur_pos_x) / 50
+				if max > 0 then max = min + 5 * max else max = min - 5 * max end
+				self.step_y = math.random(min,max)
+			end
+			self.statistics:SetText("Отбито: "..self.win.."     Пропущено: "..self.lose)
+		end
+		if self.cur_pos_y < 101 then self.step_y = math.random(5,10) end
+		if self.cur_pos_x > pos_x_r then self.step_x = -1 * math.random(5,10) end
+		if self.cur_pos_x < pos_x_l then self.step_x = math.random(5,10) end
+		self.ball:SetWndPos(self.cur_pos_x, self.cur_pos_y)
+		if self.delta_l == 0 and self.delta_r > 0 then
+			self.delta_r = self.delta_r - 1.3 self.st1x = self.st1x + self.delta_r
+			if self.st1x > st1x_r then self.st1x = st1x_r self.delta_r = 0 end
+			self.area:SetWndPos(self.st1x, self.st1y)
+		elseif self.delta_r == 0 and self.delta_l > 0 then
+			self.delta_l = self.delta_l - 1.3 self.st1x = self.st1x - self.delta_l
+			if self.st1x < st1x_l then self.st1x = st1x_l self.delta_l = 0 end
+			self.area:SetWndPos(self.st1x, self.st1y)
+		end
+	end
+end
+
+function arcanoid:random_artefact()
+	local sect = artefacts[math.random(#artefacts)]
+	local ini = system_ini()
+	local x = ini:r_u32(sect, "inv_grid_x") * 50
+	local y = ini:r_u32(sect, "inv_grid_y") * 50
+	local width = ini:r_u32(sect, "inv_grid_width") * 50
+	local height = ini:r_u32(sect, "inv_grid_height") * 50
+	self.ball:SetOriginalRect(x,y,width,height)
+end
+
+function arcanoid:OnKeyboard(dik, keyboard_action)
+	CUIScriptWnd.OnKeyboard(self, dik, keyboard_action)
+	if keyboard_action == ui_events.WINDOW_KEY_PRESSED then
+		self.start = true
+		if dik == DIK_keys.DIK_ESCAPE then
+			self:OnExit()
+		elseif dik == DIK_keys.DIK_LEFT or dik == DIK_keys.DIK_A then
+			self.delta_r = 0 self.delta_l = 17
+		elseif dik == DIK_keys.DIK_RIGHT or dik == DIK_keys.DIK_D then
+			self.delta_l = 0 self.delta_r = 17
+		end
+	end
+	return true
+end

@@ -1,0 +1,774 @@
+--[[-----------------------------------------------------------------------------------------------
+ File         : ui_pda_options.script
+ Description  : Записная книжка, чат, радио, мини-игры, таймер напоминаний и установка меток в ПДА
+ Copyright    : DMX MOD
+ Authors      : Charsi (блокнот, основные функции) & Shadows (меню установки типов меток, меню мини-игр, меню таймера напоминаний, радио)
+ Date         : 04.05.2011
+ Last edit    : 04.06.2012
+--]]-----------------------------------------------------------------------------------------------
+
+local debug = false
+local max_string_len, snd_radio = 64
+local stretch_val = math.min(device().width/1024, 2.5)
+
+function is_wide()
+	if stretch_val >= 1.3 then
+		x = 310
+	else
+		x = 236
+	end
+end
+
+class "OrganizerWnd" (CUIScriptWnd)
+function OrganizerWnd:__init(owner) super()
+	self.owner = owner
+	self:Init(0,0,1024,768)
+	self.rus_lat = true
+	self.num_rec = 1
+	self.ClickBtn = {}
+	self.records = {}
+	for i = 1, 100 do
+		self.records[i] = load_variable("r"..i, "")
+	end
+	self.back = CUIStatic()
+	self.back:Init(0,0,1024,768)
+	self:AttachChild(self.back)
+	local lat = [[qwertyuiop[]asdfghjkl;'zxcvbnm,./QWERTYUIOP{}ASDFGHJKL:"ZXCVBNM<>?!@#$%^&*()-_+=\| 0123456789]]
+	local rus = [[йцукенгшщзхъфывапролджэячсмитьбю.ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭЯЧСМИТЬБЮ,!"№;%:?*()-_+=\/ 0123456789]]
+	self.translit = {}
+	for i = 1, string.len(rus) do
+		self.translit[string.sub(lat, i, i)] = string.sub(rus, i, i)
+	end
+	self.strings = {}
+	self.text = {}
+	self.pos = 0
+	self.sound_radio_volume = 1
+	self.ClickBtn[1] = function() self:RusLat() end
+	self.ClickBtn[4] = function() if self.pos > 1 then self.pos = self.pos - 1 self:ShowTextPage() end end
+	self.ClickBtn[5] = function() if self.pos > 10 then self.pos = self.pos - 10 self:ShowTextPage() end end
+	self.ClickBtn[6] = function() if self.pos + 10 < #self.text then self.pos = self.pos + 10 self:ShowTextPage() end end
+	self.ClickBtn[7] = function() if self.pos ~= #self.text then self.pos = self.pos + 1 self:ShowTextPage() end end
+	local xml = CScriptXmlInit()
+	xml:ParseFile("pda_options.xml")
+	--------------------
+	-- NAVIGATION BAR --
+	--------------------
+	xml:InitStatic("options:pda_noise",self.back)
+	xml:InitStatic("options:pda_back",self.back)
+	xml:InitStatic("options:pda_frame",self.back)
+	xml:InitStatic("options:pda_frame_line",self.back)
+
+	-- money
+	money = xml:InitStatic("options:pda_money",self)
+	money:SetText(db.actor:money().." RU")
+
+	-- "-10"
+	self.btn_minus10 = xml:Init3tButton("options:pda_bar_minus10",self.back)
+	self:Register(self.btn_minus10, "btn_minus10")
+	self:AddCallback("btn_minus10", ui_events.BUTTON_DOWN, self.ClickBtnMinus10, self)
+	-- "-1"
+	self.btn_minus1 = xml:Init3tButton("options:pda_bar_minus1", self.back)
+	self:Register(self.btn_minus1, "btn_minus1")
+	self:AddCallback("btn_minus1", ui_events.BUTTON_DOWN, self.ClickBtnMinus1, self)
+	-- "+1"
+	self.btn_plus1 = xml:Init3tButton("options:pda_bar_plus1", self.back)
+	self:Register(self.btn_plus1, "btn_plus1")
+	self:AddCallback("btn_plus1", ui_events.BUTTON_DOWN, self.ClickBtnPlus1, self)
+	-- "+10"
+	self.btn_plus10 = xml:Init3tButton("options:pda_bar_plus10", self.back)
+	self:Register(self.btn_plus10, "btn_plus10")
+	self:AddCallback("btn_plus10", ui_events.BUTTON_DOWN, self.ClickBtnPlus10, self)
+	-- раскладка
+	self.btn_ruslat = xml:Init3tButton("options:pda_bar_ruslat", self.back)
+	self.btn_ruslat:SetText(self:Layout())
+	self:Register(self.btn_ruslat, "btn_ruslat")
+	self:AddCallback("btn_ruslat", ui_events.BUTTON_DOWN, self.RusLat, self)
+	-- уменьшить громкость
+	self.btn_volume_down = xml:Init3tButton("options:pda_bar_volume_down", self.back)
+	self.btn_volume_down:Show(snd_radio)
+	self:Register(self.btn_volume_down, "btn_volume_down")
+	self:AddCallback("btn_volume_down", ui_events.BUTTON_DOWN, self.ClickBtnVolumeDown, self)
+	-- увеличить громкость
+	self.btn_volume_up = xml:Init3tButton("options:pda_bar_volume_up", self.back)
+	self.btn_volume_up:Show(snd_radio)
+	self:Register(self.btn_volume_up, "btn_volume_up")
+	self:AddCallback("btn_volume_up", ui_events.BUTTON_DOWN, self.ClickBtnVolumeUp, self)
+	-- визуализация радио
+	self.eq = xml:InitAnimStatic("options:pda_radio_eq",self)
+	self.eq:Show(snd_radio)	
+	-- текущая запись
+	self.record_number = xml:InitButton("options:pda_bar_record_number", self.back)
+	self.record_number:SetText(self.num_rec)
+	self.record_number:Enable(false)
+	------------------
+	-- MAIN BUTTONS --
+	------------------
+	xml:InitFrame("options:pda_btn_box1", self.back)
+	xml:InitFrame("options:pda_btn_box2", self.back)
+	xml:InitFrame("options:pda_btn_box3", self.back)
+
+	-- начало ввода текста
+	is_wide()
+	xml:InitFrame("options:pda_text_box", self.back)
+	self.edit_box = CUIEditBox()
+	self.edit_box:Init(x,101,755,605)
+	self.edit_box:SetTextColor(0,0,0,0)
+	self.back:AttachChild(self.edit_box)
+
+	-- сохранение текста
+	self.btn_save = xml:Init3tButton("options:pda_save",self.back)
+	self:Register(self.btn_save, "btn_save")
+	self.btn_save:SetText("Сохранить")
+	self:AddCallback("btn_save", ui_events.BUTTON_DOWN, self.ClickBtnSave, self)
+
+	-- очистить поле
+	self.btn_clear = xml:Init3tButton("options:pda_clear",self.back)
+	self:Register(self.btn_clear, "btn_clear")
+	self.btn_clear:SetText("Очистить")
+	self:AddCallback("btn_clear", ui_events.BUTTON_DOWN, self.ClickBtnClear, self)
+
+	-- отправить текст
+	self.btn_send = xml:Init3tButton("options:pda_send",self.back)
+	self:Register(self.btn_send, "btn_send")
+	self.btn_send:SetText("Отправить")
+	self:AddCallback("btn_send", ui_events.BUTTON_DOWN, self.ClickBtnSend, self)
+
+	-- напоминание
+	self.btn_reminder = xml:Init3tButton("options:pda_reminder",self.back)
+	self:Register(self.btn_reminder, "btn_reminder")
+	self.btn_reminder:SetText("Напомнить")
+	self:AddCallback("btn_reminder", ui_events.BUTTON_DOWN, self.ClickBtnReminder, self)
+
+	-- выполнить текст как функцию
+	self.btn_exe = xml:Init3tButton("options:pda_exe",self.back)
+	self:Register(self.btn_exe, "btn_exe")
+	self.btn_exe:SetText("Выполнить")
+	self:AddCallback("btn_exe", ui_events.BUTTON_DOWN, self.ClickBtnExe, self)
+
+	-- задействовать радио
+	self.btn_radio = xml:Init3tButton("options:pda_radio",self.back)
+	self:Register(self.btn_radio, "btn_radio")
+	self.btn_radio:SetText("Радио")
+	self:AddCallback("btn_radio", ui_events.BUTTON_DOWN, self.ClickBtnRadio, self)
+
+	-- открыть подменю мини-игр
+	self.btn_games = xml:Init3tButton("options:pda_games",self.back)
+	self:Register(self.btn_games, "btn_games")
+	self.btn_games:SetText("Игры")
+	self:AddCallback("btn_games", ui_events.BUTTON_DOWN, self.ClickBtnMinigames, self)
+
+	-- закрыть блокнот
+	self.btn_hide = xml:Init3tButton("options:pda_hide",self.back)
+	self:Register(self.btn_hide, "btn_hide")
+	self:AddCallback("btn_hide", ui_events.BUTTON_DOWN, self.OrganizerQuit, self)
+
+	-- выйти из кпк
+	self.off = xml:Init3tButton("options:btn_pda_exit",self.back)
+	self:Register(self.off,"btn_pda_exit")
+	self.ClickBtnExit = function()
+	level.start_stop_menu(self.owner, true)
+	level.start_stop_menu(self, true)
+	ui_loader_pda.OrganizerMenu = nil end
+	self:AddCallback("btn_pda_exit",ui_events.BUTTON_CLICKED, self.ClickBtnExit,self)
+
+end
+
+function OrganizerWnd:ClickBtnMinus1()
+	if self.num_rec > 1 then self.num_rec = self.num_rec - 1 end
+	self.record_number:SetText(self.num_rec)
+	self.pos = 0
+	self:SetTextPage(self.records[self.num_rec] or "")
+end
+
+function OrganizerWnd:ClickBtnMinus10()
+	if self.num_rec > 10 then self.num_rec = self.num_rec - 10 end
+	self.record_number:SetText(self.num_rec)
+	self.pos = 0
+	self:SetTextPage(self.records[self.num_rec] or "")
+end
+
+function OrganizerWnd:ClickBtnPlus1()
+	if self.num_rec < 100 then self.num_rec = self.num_rec + 1 end
+	self.record_number:SetText(self.num_rec)
+	self.pos = 0
+	self:SetTextPage(self.records[self.num_rec] or "")
+end
+
+function OrganizerWnd:ClickBtnPlus10()
+	if self.num_rec < 91 then self.num_rec = self.num_rec + 10 end
+	self.record_number:SetText(self.num_rec)
+	self.pos = 0
+	self:SetTextPage(self.records[self.num_rec] or "")
+end
+
+function OrganizerWnd:ClickBtnSave()
+	local text = self:GetTextPage()
+	self.records[self.num_rec] = text
+	save_variable("r"..self.num_rec, text)
+end
+
+function OrganizerWnd:ClickBtnClear()
+	self:SetTextPage("")
+	max_string_len = 64
+end
+
+function OrganizerWnd:ClickBtnSend()
+	local text = self:GetTextPage()
+	if text ~= "" then
+		local cost = 20 + string.len(text)
+		if db.actor:money() >= cost then
+			-- if not has_alife_info("actor_ban_chat_info") then
+				-- if not amk_mod.blowout() then
+					db.actor:give_money(-cost)
+					game_stats.money_quest_update(-cost)
+					ui_pda_dialogs.send_tip(text, "Игрок", nil, 20, "actor_sms")
+					ui_pda_dialogs.pda_dialogs(ui_pda_dialogs.string_lower(text))
+				-- else
+					-- ui_pda_dialogs.send_tip("Во время Выброса локальная сеть не работает!", "Сообщение", nil, 15, "pda_icon")
+				-- end
+			-- else
+				-- ui_pda_dialogs.send_tip("У вас нет прав для отправки сообщений!", "Сообщение", nil, 15, "pda_icon")
+			-- end
+		else
+			ui_pda_dialogs.send_tip("Не хватает денег для отправки сообщения!", "Сообщение", nil, 15, "money")
+		end
+		money:SetText(db.actor:money().." RU")
+	end
+end
+
+function OrganizerWnd:ClickBtnExe()
+	if debug then
+		local s = [[]]
+		for k, v in pairs(self.text) do
+			s = s..v:GetCharacter()
+			if v:GetEndString() then
+				s = s..[[ ]]
+			end
+		end
+		local f = loadstring(s)
+		local res, err = pcall(f)
+	else
+		ui_pda_dialogs.send_tip("Невозможно выполнить команду!", "Команда", nil, 10, "exe")
+	end
+end
+
+function OrganizerWnd:ClickBtnRadio()
+	if not snd_radio then
+		-- if not amk_mod.blowout() then
+			-- snd_radio = sound_object("script_replics\\megafon\\music\\megafon_music_"..math.random(15)) -- default
+			snd_radio = sound_object("music\\pda\\pda_radio_"..math.random(5))
+			snd_radio:play_at_pos(db.actor, vector(), 0, sound_object.s2d + sound_object.looped)
+			self.btn_volume_up:Show(true)
+			self.btn_volume_down:Show(true)
+			self.eq:Show(true)
+			-- pda_radio_stop()
+		-- else
+			-- ui_pda_dialogs.send_tip("Во время Выброса радио не работает!", "Радио" nil, 10, "radio")
+		-- end
+	else
+		self.btn_volume_up:Show(false)
+		self.btn_volume_down:Show(false)
+		self.eq:Show(false)
+		pda_radio_stop()
+	end
+end
+
+function pda_radio_stop()
+	if snd_radio and snd_radio:playing() then
+		snd_radio:stop() snd_radio = nil
+	end
+end
+
+function OrganizerWnd:ClickBtnVolumeUp()
+	self.sound_radio_volume = self.sound_radio_volume + 0.1
+	if self.sound_radio_volume > 1 then self.sound_radio_volume = 1 end
+	if snd_radio then snd_radio.volume = self.sound_radio_volume end
+end
+
+function OrganizerWnd:ClickBtnVolumeDown()
+	self.sound_radio_volume = self.sound_radio_volume - 0.1
+	if self.sound_radio_volume < 0 then self.sound_radio_volume = 0 end
+	if snd_radio then snd_radio.volume = self.sound_radio_volume end
+end
+
+function OrganizerWnd:ClickBtnMinigames()
+	level.start_stop_menu(MinigamesWnd(self), true)
+	-- запись в энциклопедию
+	-- if not has_alife_info("zone_minigames_info") then
+		-- db.actor:give_info_portion("zone_minigames_info")
+	-- end
+end
+
+function OrganizerWnd:ClickBtnReminder()
+	local text = self:GetTextPage()
+	if text ~= "" then
+		level.start_stop_menu(ReminderWnd(text), true)
+	else
+		ui_pda_dialogs.send_tip("Поле с тектом пустое!", "Напоминание", nil, 10, "note")
+	end
+end
+
+function OrganizerWnd:OrganizerQuit()
+	level.start_stop_menu(self, true)
+	ui_loader_pda.OrganizerMenu = nil
+end
+
+function OrganizerWnd:PdaQuit()
+	level.start_stop_menu(self.owner, true)
+	self:OrganizerQuit()
+end
+
+function OrganizerWnd:ShowHelp()
+	max_string_len = 115
+	self:SetTextPage(" Справка по разделу «Функции»\\n\\n 1. Быстрое переключение раскладки клавиатуры осуществляется левой кнопкой «CTRL».\\n\\n 2. Быстрая отправка сообщений осуществляется правой кнопкой «CTRL».\\n\\n 3. Для сохранения набранного текста необходимо нажать кнопку «Сохранить».\\n\\n 4. Для просмотра сохраненных записей, используйте кнопки навигации:\\n\\n   Кнопки < и > переключают записи на один шаг назад и вперед.\\n\\n   Кнопки << и >> переключают записи на десять шагов назад и вперед.\\n\\n 5. Введите текст, нажмите «Напопнить»,чтобы использовать текст как напоминание и установите таймер.\\n\\n 6. Стоимость отправки сообщения в сеть зависит от длины самого сообщения.\\n\\n 7. Для регулировки громкости радио, используйте кнопки «+» и «-».\\n\\n 8. Чтобы выключить радио, в разделе «Функции» нажмите еще раз кнопку «Радио», либо кнопку «F3».\\n\\n\\n Для выключения «Справки», нажмите кнопку «F2».")
+end
+
+-----------------------
+-- Utility functions --
+-----------------------
+
+function OrganizerWnd:GetTextPage()
+	local s = [[]]
+	local c = 0
+	for k, v in pairs(self.text) do
+		s = s..v:GetCharacter()
+		c = c + 1
+		if v:GetEndString() or c == max_string_len then
+			s = s..[[\n]]
+			c = 0
+		end
+	end
+	return s
+end
+
+function OrganizerWnd:SetTextPage(text)
+	local k = 0
+	clear_table(self.text)
+	for i = 0, string.len(text) do
+		local s = Symbol()
+		s:__init(string.sub(text, i + k, i + k))
+		if (string.sub(text, i + k, i + k + 1) == [[\n]]) then s:SetCharacter("") s:SetEndString(true) k = k + 1
+		elseif (string.sub(text, i + k + 1, i + k + 2) == [[\n]]) then s:SetEndString(true) k = k + 2 end
+		table.insert(self.text, s)
+	end
+	self:ShowTextPage()
+end
+
+function OrganizerWnd:ShowTextPage()
+	for k, v in pairs(self.strings) do
+		self.back:DetachChild(v)
+	end
+	while next(self.strings) do
+		table.remove(self.strings)
+	end
+	local s = ""
+	local c = 0
+	for k, v in pairs(self.text) do
+		s = s..v:GetCharacter()
+		c = c + 1
+		if k == self.pos then s = s.."_" c = c + 1 end
+		if v:GetEndString() or c >= max_string_len then
+			self:AddInStatic(s)
+			s = "" c = 0
+		end
+	end
+	if s ~= "" then self:AddInStatic(s) end
+end
+
+function OrganizerWnd:AddInStatic(text)
+	is_wide()
+	local xml = CScriptXmlInit()
+	xml:ParseFile("pda_options.xml")
+	self.text_area = xml:InitStatic("options:pda_edit_box", self.back)
+	self.text_area:Init(x,106+10*table.getn(self.strings),14,14)
+	self.text_area:SetText(text)
+	table.insert(self.strings, self.text_area)
+end
+
+function OrganizerWnd:AddCharacter(text)
+	text = text and (self.rus_lat and self.translit[text] or text) or ""
+	self.pos = self.pos + 1
+	local s = Symbol()
+	s:__init(text)
+	table.insert(self.text, self.pos, s)
+	self:ShowTextPage()
+end
+
+function OrganizerWnd:NewLine()
+	if self.pos == 0 then self:AddCharacter() end
+	if self.text[self.pos]:GetEndString() then self:AddCharacter() end
+	self.text[self.pos]:SetEndString(true)
+	self:ShowTextPage()
+end
+
+function OrganizerWnd:Backspace()
+	if self.pos > 0 then
+		if self.pos > 1 then
+			local es = self.text[self.pos] and self.text[self.pos]:GetEndString() or false
+			table.remove(self.text, self.pos)
+			self.pos = self.pos - 1
+			if self.text[self.pos] then self.text[self.pos]:SetEndString(es) end
+		elseif self.text[self.pos]:GetCharacter() ~= "" then
+			self.text[self.pos]:SetCharacter("")
+		end
+		self:ShowTextPage()
+	end
+end
+
+function OrganizerWnd:Delete()
+	if self.text[self.pos + 1] then
+		table.remove(self.text, self.pos + 1)
+		self:ShowTextPage()
+	end
+end
+
+function OrganizerWnd:RusLat()
+	self.rus_lat = not self.rus_lat
+	self.btn_ruslat:SetText(self:Layout())
+end
+
+function OrganizerWnd:Layout()
+	return self.rus_lat and "RU" or "EN"
+end
+
+class "Symbol"
+function Symbol:__init(character)
+	self.character = character or ""
+	self.end_string = false
+end
+
+function Symbol:SetCharacter(character)
+	self.character = character
+end
+
+function Symbol:GetCharacter()
+	return self.character
+end
+
+function Symbol:SetEndString(f)
+	self.end_string = f
+end
+
+function Symbol:GetEndString()
+	return self.end_string
+end
+
+--------------
+-- Keyboard --
+--------------
+
+function OrganizerWnd:OnKeyboard(dik, keyboard_action)
+	if dik ~= DIK_keys.DIK_RETURN and dik ~= DIK_keys.DIK_NUMPADENTER then
+		CUIScriptWnd.OnKeyboard(self, dik, keyboard_action)
+	end
+	if keyboard_action == ui_events.WINDOW_KEY_PRESSED then
+		if dik == DIK_keys.DIK_ESCAPE then self:PdaQuit()
+		elseif dik == DIK_keys.DIK_BACK then self:Backspace()
+		elseif dik == DIK_keys.DIK_DELETE then self:Delete()
+		elseif dik == DIK_keys.DIK_RETURN or dik == DIK_keys.DIK_NUMPADENTER then self:NewLine()
+		elseif dik == DIK_keys.DIK_LEFT then self.ClickBtn[4]()
+		elseif dik == DIK_keys.DIK_RIGHT then self.ClickBtn[7]()
+		elseif dik == DIK_keys.DIK_UP then self.ClickBtn[5]()
+		elseif dik == DIK_keys.DIK_DOWN then self.ClickBtn[6]()
+		elseif dik == DIK_keys.DIK_HOME then self.pos = 1 self:ShowTextPage()
+		elseif dik == DIK_keys.DIK_END then self.pos = #self.text self:ShowTextPage()
+		elseif dik == DIK_keys.DIK_NUMPAD0 then self:AddCharacter(0)
+		elseif dik == DIK_keys.DIK_NUMPAD1 then self:AddCharacter(1)
+		elseif dik == DIK_keys.DIK_NUMPAD2 then self:AddCharacter(2)
+		elseif dik == DIK_keys.DIK_NUMPAD3 then self:AddCharacter(3)
+		elseif dik == DIK_keys.DIK_NUMPAD4 then self:AddCharacter(4)
+		elseif dik == DIK_keys.DIK_NUMPAD5 then self:AddCharacter(5)
+		elseif dik == DIK_keys.DIK_NUMPAD6 then self:AddCharacter(6)
+		elseif dik == DIK_keys.DIK_NUMPAD7 then self:AddCharacter(7)
+		elseif dik == DIK_keys.DIK_NUMPAD8 then self:AddCharacter(8)
+		elseif dik == DIK_keys.DIK_NUMPAD9 then self:AddCharacter(9)
+		elseif dik == DIK_keys.DIK_DIVIDE then self:AddCharacter("/")
+		elseif dik == DIK_keys.DIK_MULTIPLY then self:AddCharacter("*")
+		elseif dik == DIK_keys.DIK_ADD then self:AddCharacter("+")
+		elseif dik == DIK_keys.DIK_NUMPADCOMMA then self:AddCharacter(".")
+		elseif dik == DIK_keys.DIK_F1 then self:ShowHelp()
+		elseif dik == DIK_keys.DIK_F2 then self:ClickBtnClear()
+		elseif dik == DIK_keys.DIK_F3 then self:ClickBtnRadio()
+		elseif dik == DIK_keys.DIK_F4 then self:ClickBtnMinigames()
+		elseif dik == DIK_keys.DIK_LCONTROL then self.ClickBtn[1]()
+		elseif dik == DIK_keys.DIK_RCONTROL then self:ClickBtnSend()
+		else
+			local text = string.sub(self.edit_box:GetText(), -1)
+			if text and text ~= "" then
+				self:AddCharacter(text)
+				self.edit_box:SetText("")
+			end
+		end
+	end
+	return true
+end
+
+--------------------
+-- Minigames menu --
+--------------------
+
+class "MinigamesWnd" (CUIScriptWnd)
+function MinigamesWnd:__init(organizer) super()
+	local xml = CScriptXmlInit()
+	xml:ParseFile("pda_options.xml")
+	self:Init(0,0,1024,768)
+	self.ClickBtnExit = function() level.start_stop_menu(self, true) end
+	self.ClickBtnBulldozer =
+		function() level.start_stop_menu(ui_game_bulldozer.puzzle(organizer), true)
+			local start = xr_sound.get_safe_sound_object([[device\pda\pda_game_bulldozer_start]])
+			start:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+			self:ClickBtnExit() end
+	self.ClickBtnArcanoid =
+		function() level.start_stop_menu(ui_game_arcanoid.arcanoid(organizer), true)
+			local start = xr_sound.get_safe_sound_object([[device\pda\pda_game_arcanoid_start]])
+			start:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+			self:ClickBtnExit() end
+	self.ClickBtnSaper =
+		function() level.start_stop_menu(ui_game_saper.saper(organizer), true)
+			local start = xr_sound.get_safe_sound_object([[device\pda\pda_game_minesweeper_start]])
+			start:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+			self:ClickBtnExit() end
+	self.ClickBtn21p =
+		function() level.start_stop_menu(ui_game_blackjack.blackjack(organizer), true)
+			local start = xr_sound.get_safe_sound_object([[device\pda\pda_game_cards_start]])
+			start:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+			self:ClickBtnExit() end
+	self.ClickBtnThimbles =
+		function() level.start_stop_menu(ui_game_thimbles.thimbles(organizer), true)
+			local start = xr_sound.get_safe_sound_object([[device\pda\pda_game_thimbles_start]])
+			start:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+			self:ClickBtnExit() end
+	self.ClickBtnNumbers =
+		function() level.start_stop_menu(ui_game_numbers.numbers(organizer), true)
+			self:ClickBtnExit() end
+	self.ClickBtnZoneQ =
+		function() level.start_stop_menu(ui_game_questions.game_questions(organizer), true)
+			self:ClickBtnExit() end
+	-- окно с ярлыками
+	self.subwnd = xml:InitStatic("options:pda_sub_wnd",self)
+	-- кнопка закрыть
+	self.btn_exit = xml:Init3tButton("options:pda_sub_exit",self)
+	self:Register(self.btn_exit, "btn_exit")
+	self:AddCallback("btn_exit", ui_events.BUTTON_DOWN, self.ClickBtnExit, self)
+	-- ярлык бульдозера
+	self.btn_bulldozer = xml:InitButton("options:pda_game_bulldozer",self)
+	self.btn_bulldozer:SetText("Бульдозер")
+	self:Register(self.btn_bulldozer, "btn_bulldozer")
+	self:AddCallback("btn_bulldozer", ui_events.BUTTON_DOWN, self.ClickBtnBulldozer, self)
+	-- ярлык сапера
+	self.btn_saper = xml:InitButton("options:pda_game_minesweeper",self)
+	self.btn_saper:SetText("Сапер")
+	self:Register(self.btn_saper, "btn_saper")
+	self:AddCallback("btn_saper", ui_events.BUTTON_DOWN, self.ClickBtnSaper, self)
+	-- ярлык арканоида
+	self.btn_arcanoid = xml:InitButton("options:pda_game_arcanoid",self)
+	self.btn_arcanoid:SetText("Арканоид")
+	self:Register(self.btn_arcanoid, "btn_arcanoid")
+	self:AddCallback("btn_arcanoid", ui_events.BUTTON_DOWN, self.ClickBtnArcanoid, self)
+	-- ярлык "блэкджек"
+	self.btn_21p = xml:InitButton("options:pda_game_blackjack",self)
+	self.btn_21p:SetText("Блэкджек")
+	self:Register(self.btn_21p, "btn_21p")
+	self:AddCallback("btn_21p", ui_events.BUTTON_DOWN, self.ClickBtn21p, self)
+	-- ярлык угадай, где шарик
+	self.btn_thimbles = xml:InitButton("options:pda_game_thimbles",self)
+	self.btn_thimbles:SetText("Наперстки")
+	self:Register(self.btn_thimbles, "btn_thimbles")
+	self:AddCallback("btn_thimbles", ui_events.BUTTON_DOWN, self.ClickBtnThimbles, self)
+	-- ярлык угадай число
+	self.btn_numbers = xml:InitButton("options:pda_game_numbers",self)
+	self.btn_numbers:SetText("Числа")
+	self:Register(self.btn_numbers, "btn_numbers")
+	self:AddCallback("btn_numbers", ui_events.BUTTON_DOWN, self.ClickBtnNumbers, self)
+	-- ярлык вопросов знаний о Зоне
+	self.btn_zoneq = xml:InitButton("options:pda_game_questions",self)
+	self.btn_zoneq:SetText("Вопросы")
+	self:Register(self.btn_zoneq, "btn_zoneq")
+	self:AddCallback("btn_zoneq", ui_events.BUTTON_DOWN, self.ClickBtnZoneQ, self)
+end
+
+-------------------
+-- Reminder menu --
+-------------------
+
+class "ReminderWnd" (CUIScriptWnd)
+function ReminderWnd:__init(text) super()
+	self:Init(0,0,1024,768)
+	local xml = CScriptXmlInit()
+	xml:ParseFile("pda_options.xml")
+	self.ClickBtnExit = function() level.start_stop_menu(self, true) end
+	self.ClickBtnCreate = function()
+		local time = self:GetEditBox("edit_box"):GetText()
+		local hour = string.sub(time, 1, 2)
+		local min = string.sub(time, 4, 5)
+		local separator = string.sub(time, 3, 3)
+		if string.len(time) == 5 and type(tonumber(hour)) == "number" and type(tonumber(min)) == "number" and separator == ":" then
+			this.g_start_timer("pda_reminder_timer", 0, hour, min, text)
+			ui_pda_dialogs.send_tip("Установлен таймер со следующим временем - "..time, "Напоминание", nil, 10, "note")
+			self:ClickBtnExit()
+		else
+			ui_pda_dialogs.send_tip("Неправильный формат времени!", "Напоминание", nil, 10, "note")
+		end
+	end
+	-- всплывающее окно
+	self.subwnd = xml:InitStatic("options:pda_reminder_wnd",self)
+	self.subwnd:SetText("Введите время таймера по шаблону \"00:00\"")
+	-- начало ввода текста
+	xml:InitFrame("options:pda_remind_box", self)
+	self.edit_box = xml:InitEditBox("options:pda_remind_edit", self)
+	self:Register(self.edit_box, "edit_box")
+	-- старт таймера
+	self.btn_start = xml:Init3tButton("options:pda_start",self)
+	self:Register(self.btn_start, "btn_start")
+	self.btn_start:SetText("Запустить таймер")
+	self:AddCallback("btn_start", ui_events.BUTTON_DOWN, self.ClickBtnCreate, self)
+	-- кнопка закрыть
+	self.btn_exit = xml:Init3tButton("options:pda_sub_exit",self)
+	self:Register(self.btn_exit, "btn_exit")
+	self:AddCallback("btn_exit", ui_events.BUTTON_DOWN, self.ClickBtnExit, self)
+end
+
+local func_by_string = {}
+func_by_string["pda_reminder_timer"] = function (params) -- таймер напоминания ПДА
+	ui_pda_dialogs.send_tip(params, "Напоминание", nil, 15, "note")
+end
+
+-- Получаем инвентарное название объекта
+function get_inv_name(section)
+	return system_ini():r_string(section,"inv_name")
+end
+
+-- Записываем переменную
+function save_variable(variable_name, value)
+	xr_logic.pstor_store(db.actor, variable_name, value)
+end
+
+-- Загружаем переменную
+function load_variable(variable_name, value_if_not_found)
+	return xr_logic.pstor_retrieve(db.actor, variable_name, value_if_not_found)
+end
+
+-- Удаляем переменную
+function del_variable(variable_name)
+	if db.storage[db.actor:id()].pstor[variable_name] then
+		db.storage[db.actor:id()].pstor[variable_name] = nil
+	end
+end
+
+local timers={}
+local g_timers={}
+local timer_trigger=nil
+
+function timer_update(delta)
+  if not timer_trigger then
+    timer_trigger=game.time()
+  end
+  if timer_trigger<=game.time() then
+    timer_trigger=game.time()+1000
+    check_timers()
+  end
+end
+
+function start_timer(name,delay,action)
+  if not delay then
+    return false
+  end
+
+  if not action then
+    action = ""
+  end
+
+    local time = game.time() --time in seconds since 1970
+  local a=1
+  while db.storage[db.actor:id()].pstor["xt"..a] do
+    a=a+1
+    if a>100 then
+      return false
+    end
+  end
+  save_variable("xt"..a, name)
+  save_variable("xd"..a, time+delay*1000*system_ini():r_float("alife","time_factor"))
+  save_variable("xp"..a, action)
+
+  return true
+end
+
+function g_start_timer(name,delay_d,delay_h,delay_m,action)
+    local time = level.get_time_days()*60*24+level.get_time_hours()*60+level.get_time_minutes()  --time in game minutes
+  if delay_d==nil or delay_h==nil or delay_m==nil then
+    return false
+  end
+
+  if action==nil then
+    action = ""
+  end
+
+  local a=1
+  while db.storage[db.actor:id()].pstor["gt"..a] do
+    a=a+1
+    if a>100 then
+      return false
+    end
+  end
+
+  save_variable("gt"..a, name)
+  save_variable("gd"..a, time+delay_d*60*24+delay_h*60+delay_m)
+  save_variable("gp"..a, action)
+
+  return true
+end
+
+function check_timers()
+  local tmp
+  for a=1,100,1 do
+    tmp=load_variable("xt"..a,nil)
+    if tmp~=nil then
+      __timer_found(a)
+    end
+  end
+
+  for a=1,100,1 do
+    tmp=load_variable("gt"..a,nil)
+    if tmp~=nil then
+      __g_timer_found(a)
+    end
+  end
+end
+
+function __timer_found(idx)
+    local time = game.time() --time in seconds since 1970
+  local name,params
+  if load_variable("xd"..idx, nil)<=time then
+    name=load_variable("xt"..idx, nil)
+    params=load_variable("xp"..idx, nil)
+    del_variable("xt"..idx)
+    del_variable("xd"..idx)
+    del_variable("xp"..idx)
+      oau_reason=name.." "..params
+    __do_timer_action(name,params)
+    return true
+  end
+  return false
+end
+
+function __g_timer_found(idx)
+    local gtime = level.get_time_days()*60*24+level.get_time_hours()*60+level.get_time_minutes()  --time in game minutes
+  local name,params
+  if load_variable("gd"..idx, nil)<=gtime then
+    name=load_variable("gt"..idx, nil)
+    params=load_variable("gp"..idx, nil)
+    del_variable("gt"..idx)
+    del_variable("gd"..idx)
+    del_variable("gp"..idx)
+      oau_reason=name.." "..params
+    __do_timer_action(name,params)
+    return true
+  end
+  return false
+end
+
+function __do_timer_action(name,params)
+  if func_by_string[name] then
+    func_by_string[name](params)
+  end
+end

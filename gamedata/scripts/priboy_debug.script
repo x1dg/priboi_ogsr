@@ -1,0 +1,136 @@
+-- Priboy debug functions
+-- by barin aka pepe_84
+-- last edited: 04.01.2008
+
+function console_print(text)
+	local console = get_console()
+	console:execute(string.gsub(string.format(text), "%s", "_"))
+	--console:execute("flush")
+end
+
+function toString(item)
+	local item_type = type(item)
+	if item_type == "string" then
+		return item
+	elseif item_type == "number" then
+		return tostring(item)
+	elseif item_type == "boolean" then
+		if item then
+			return "true"
+		else
+			return "false"
+		end
+	elseif item_type == "nil" then
+		return "nil"
+	else
+		return item_type
+	end
+end
+
+function print_table(array)
+	for key, value in pairs(array) do
+		console_print("key=" .. toString(key) .. "::value=" .. toString(value))
+	end
+end
+
+function print_tab(array)
+	for outer_index = 1, #array do
+		for inner_index = 1, #array[outer_index] do
+			console_print("name=" .. array[outer_index][inner_index].name ..
+			"::alive=" .. toString(array[outer_index][inner_index].value))
+		end
+	end
+end
+
+function print_simple_tab(array)
+	for index = 1, #array do
+		console_print(">>>" .. array[index])
+	end
+end
+
+function dump_vertex_info()
+	console_print("************")
+	console_print("pos_x=" .. toString(db.actor:position().x))
+	console_print("pos_y=" .. toString(db.actor:position().y))
+	console_print("pos_z=" .. toString(db.actor:position().z))
+	console_print("level=" .. toString(db.actor:level_vertex_id()))
+	console_print("game=" .. toString(db.actor:game_vertex_id()))
+end
+
+local rank = 
+{
+	novice = 0,
+	stalker = 300,
+	veteran = 600,
+	master = 900
+}
+
+function get_npc_rank(npc_rank)
+	if npc_rank >= rank.novice and npc_rank <= rank.stalker then
+		return "novice"
+	elseif npc_rank >= rank.stalker and npc_rank <= rank.veteran then
+		return "stalker"
+	elseif npc_rank >= rank.veteran and npc_rank <= rank.master then
+		return "veteran"
+	else
+		return "master"
+	end
+end
+
+function debug_npc_object(section_name)
+	local stalker = priboy_utils.get_game_object(section_name)
+	if not stalker then
+		console_print(section_name .. "::npc not exist or is offline")
+		return
+	end
+	
+	console_print("****************")
+	console_print("section_name=" .. toString(stalker:name()))
+	console_print("name=" .. toString(stalker:character_name()))
+	console_print("id=" .. toString(stalker:id()))
+	console_print("community=" .. toString(stalker:character_community()))
+	console_print("rank=" .. get_npc_rank(stalker:character_rank()) .. "(" .. toString(stalker:character_rank()) .. ")")
+	console_print("money=" .. toString(stalker:money()))
+	console_print("is_alive=" .. toString(stalker:alive())) -- corpse if false
+	
+	local smart_terrain = xr_gulag.get_npc_gulag(stalker)
+	if smart_terrain then
+		console_print("smart_terrain=" .. toString(smart_terrain.name))
+	else
+		console_print("smart_terrain=none")
+	end
+	level.map_add_object_spot(stalker:id(), "green_location", stalker:character_name())
+end
+
+function debug_smart_terrain(smart_terrain_name)
+	if smart_terrain_name == nil then
+		return		
+	end
+	
+	local capacity = xr_gulag.getGulagPopulation(smart_terrain_name)
+	local pop_comed = xr_gulag.getGulagPopulationComed(smart_terrain_name)
+	local casualities = xr_gulag.getCasualities(smart_terrain_name)
+	local state = xr_gulag.getGulagState(smart_terrain_name)
+	local empty = xr_conditions.gulag_empty(nil, nil, {smart_terrain_name})
+	
+	console_print("*****::" .. smart_terrain_name .. "::*****")
+	console_print("capacity=" .. toString(capacity) .. "::comed=" .. toString(pop_comed))
+	console_print("casualities=" .. toString(casualities))
+	console_print("state=" .. toString(state))
+	console_print("is_empty=" .. toString(empty))
+	
+	--return capacity, pop_comed, casualities, state, empty
+end
+
+function debug_task_status(task_name, objective)
+	console_print("task=" .. task_name .. "::objective=" .. objective ..
+	"::status=" .. priboy_utils.get_task_state(task_name, objective))
+end
+
+function check_variables(array)
+	local value = nil
+	for index = 1, #array do
+		value = priboy_utils.retrieve_variable(array[index].name, nil)
+		console_print("variable=" .. array[index].name .. "::value=" .. toString(value))
+	end
+end

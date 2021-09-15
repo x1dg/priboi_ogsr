@@ -1,0 +1,111 @@
+local anom_list=nil
+local cur_level=nil
+
+function add_anomaly(id,clsid)
+  if anom_list==nil then
+    anom_list={}
+  end
+  if cur_level~=level.name() then
+    anom_list={}
+    cur_level=level.name()
+    mylog("switching to level " .. tostring(cur_level) )
+  end
+--[[
+  if cls==clsid.zone_bfuzz_s or
+      cls==clsid.zone_galant_s or
+      cls==clsid.zone_mbald_s or
+      cls==clsid.zone_mincer_s then ]]
+  anom_list[id]={pos=0,clsid=clsid}
+end
+
+function remove_anomaly(id)
+  if anom_list then
+    anom_list[id]=nil
+  end
+end
+
+
+function enumerate_anoms()
+  if cur_level~=level.name() then
+    anom_list=nil
+    cur_level=level.name()
+  end
+  if not anom_list then
+    anom_list={}
+    local cnt=0
+    mylog(clsid.zone_bfuzz_s .. " " .. 
+          clsid.zone_galant_s .. " " ..
+          clsid.zone_mbald_s .. " " ..
+          clsid.zone_mincer_s)
+    for id=1,40000,1 do
+      local obj=level.object_by_id(id)
+      if obj then
+        if obj:clsid()==clsid.zone_bfuzz_s or
+            obj:clsid()==clsid.zone_galant_s or
+            obj:clsid()==clsid.zone_mbald_s or
+            obj:clsid()==clsid.zone_mincer_s then
+          anom_list[id]={object=obj,pos=obj:position(),clsid=obj:clsid()}
+          local pos=anom_list[id].pos
+--          mylog("found " .. id .. " " .. obj:clsid() .. " at " .. pos.x .. ";" .. pos.y .. ";" .. pos.z )
+          cnt=cnt+1
+        else
+--        mylog(obj:clsid())
+        end
+      end
+    end
+--    mylog("total " .. cnt)
+    if cnt==0 then
+      anom_list=nil
+    end
+  end
+end
+
+
+function get_nearest_anomaly(npc)
+  local posn=npc:position()
+  local dir=npc:direction()
+  local anomid=nil
+  local mindist=10000000
+  local pos1=nil
+  local cls=0
+  local cnt=0
+  -- barin start
+  if anom_list == nil then
+		return nil, nil, nil, nil
+  end
+  -- barin end
+  for id,o in pairs(anom_list) do
+    if o then
+      if o.pos==0 then
+        local obj=level.object_by_id(id)
+        if obj then
+          o.pos=obj:position()
+--          mylog("reposition " .. id .. " clsid " .. obj:clsid() ..  " at " .. o.pos.x .. ";" .. o.pos.y .. ";" .. o.pos.z )
+        end
+      end
+      if o.pos~=0 then
+        cnt=cnt+1
+        local delta=vector():set(o.pos):sub(posn)
+        local scalarmul=(delta.x*dir.x+delta.z*dir.z)/math.sqrt(delta.x*delta.x+delta.z*delta.z) 
+    -- если скалярное произведения текущего направления движения NPC
+    -- и относительного радиус вектора аномалии меньше 0, то NPC удаляется от аномалии
+        if scalarmul>-0.2 then
+          local dist=posn:distance_to(o.pos)
+--    if id>20000 then
+--      mylog("get nearest " .. npc:name() .. " dist " .. dist)
+--    end
+          if dist<mindist then
+            mindist=dist
+            anomid=id
+            pos1=o.pos
+            cls=o.clsid
+          end
+        end
+      end
+    end
+  end
+--  if anomid then
+--    mylog("get nearest " .. anomid .. " dist " .. mindist)
+--  end
+  return anomid~=nil,anomid,pos1,cls
+end

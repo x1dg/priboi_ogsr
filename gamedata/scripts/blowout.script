@@ -1,0 +1,545 @@
+-- *** 2008-07-23 ***
+-- *** barin ***
+-- last edited: 11.08.2009
+
+-- underground:
+-- 1. preblow_phase
+-- 2. end_phase
+
+-- outdoor:
+-- 1. preblow_phase
+-- 2. surge_phase
+-- 3. after_surge_phase
+-- 4. postblow_phase
+-- 5. end_phase
+
+function get_current_time()
+	return (level.get_time_days() * 1440 + level.get_time_hours() * 60 + level.get_time_minutes())
+end
+
+local start_msg = "I should use my map now to find a shelter, and wait there until the blowout ends ..."
+local end_msg = "I guess the blowout ended, I can go outside, it's safe now ..."
+local shelter_msg = "blowout shelter"
+
+local blowout_sounds = 
+{
+	preblow = xr_sound.get_safe_sound_object([[anomaly\vibros]]),
+	surge = xr_sound.get_safe_sound_object([[anomaly\dezodor]]),
+	earthquake = xr_sound.get_safe_sound_object([[ambient\earthquake]]),
+	underblow = xr_sound.get_safe_sound_object([[anomaly\underblow]]),
+	rat_panic = xr_sound.get_safe_sound_object([[ambient\rats_panic_2]]),
+	rock_slide = xr_sound.get_safe_sound_object([[ambient\rnd_outdoor\rnd_rock3]]),
+	strong_hit = xr_sound.get_safe_sound_object([[ambient\x18\h_tal5]]),
+}
+
+class "blowout"
+
+function blowout:__init()
+	self.init_done = false
+	self.is_blowout_on = false
+	
+	self.config = parser.read_section([[blowout\blowout.ltx]], "blowout", "parse_bool")
+	self.config.radiation_strength = ini_file([[blowout\blowout.ltx]]):r_float("radiation_strength", level.name())
+	
+	self.artefacts = parser.read_section([[blowout\artefacts.ltx]], level.name(), "parse_num")
+	self.mutants = parser.read_section([[blowout\mutants.ltx]], level.name(), "parse_num")
+	
+	self.spawn_data = parser.read_section([[blowout\spawn_data.ltx]], level.name(), "parse_spawn_data")
+	self.mapspots = parser.read_section([[blowout\mapspots.ltx]], level.name(), "parse_spawn_data")
+	self.hideplaces = parser.read_section([[blowout\hideplaces.ltx]], level.name(), "parse_hideplaces")
+	
+	if xr_logic.pstor_retrieve(db.actor, "blowout", nil) == nil then
+		xr_logic.pstor_store(db.actor, "blowout", false)
+	end
+	
+	if xr_logic.pstor_retrieve(db.actor, "prev_blowout_time", nil) == nil then
+		xr_logic.pstor_store(db.actor, "prev_blowout_time", get_current_time())
+	end
+	
+	self.blowout_phase = "idle"
+	self.blowout_timer = nil
+	self.rad_hit_time = nil
+	self.objects = 
+	{
+		marked_shelters = {},
+		artefacts = {},
+		crows = {}
+	}
+	
+	self.init_done = true
+end
+
+function blowout:__finalize()
+	self.blowout_timer = nil
+	self.spawn_data = nil
+	self.hideplaces = nil
+	self.mapspots = nil
+	self.artefacts = nil
+	self.mutants = nil
+	self.objects = nil
+	self.config = nil
+	self.rad_hit_time = nil
+	self.blowout_phase = nil
+end
+
+function blowout:PreblowPhase()	
+	self.is_blowout_on = true
+	self.blowout_phase = "preblow"
+	
+	self:SetWeather("preblow_we")
+	self:AddEffector("postprocess", "vibros_p", 2121, false)
+	self:MarkShelters()
+	
+	local sound, expiration_time = nil, nil
+	local timer_type = "silent"
+	
+	if self:GetBlowoutType() == "outdoor" then
+		if self.config.show_blowout_warning and not self:isNpcInsideShelter(db.actor) then
+			priboy_utils.send_hud_message("Blowout!", start_msg, nil, 20, nil)
+		end
+		if self.config.show_blowout_timer then
+			timer_type = "counterclockwise"
+		end
+		expiration_time = "00:02:00"
+		sound = "preblow"
+	else
+		expiration_time = "00:00:20"
+		sound = "underblow"
+	end
+	
+	self:PlaySound(sound, "play")
+	self.blowout_timer = timer.Timer(timer_type, "timer_hud", expiration_time)
+end
+
+function blowout:SurgePhase()
+	self:PlaySound("earthquake", "play")
+	self:AddEffector("camera", "earthquake", 1974, false)
+	self:SetWeather("surge_day")	
+	self:AddEffector("postprocess", "vibros", 2122, false)
+	
+	local sound, expiration_time = nil, nil
+	
+	if self:GetBlowoutType() == "outdoor" then
+		expiration_time = "00:00:35"
+		sound = "surge"
+		self:SurgeEffects()
+	else
+		expiration_time = "00:00:20"
+		local rnd = math.random(1234, 147683) % 3
+		if rnd == 0 then
+			sound = "rat_panic"
+		elseif rnd == 1 then
+			sound = "rock_slide"
+		else
+			sound = "strong_hit"
+		end		
+		for index = 1, 10 do
+			self:SpawnPhantoms()
+		end
+	end
+	
+	self:PlaySound(sound, "play")
+	self.blowout_timer:Resume("silent", "timer_hud", expiration_time)
+	self.blowout_phase = "surge"
+end
+
+function blowout:AfterSurgePhase()
+	self:SetWeather("aftersurge_we")
+	self:AddEffector("postprocess", "dead_zone", 2123, true)
+	self.blowout_timer:Resume("silent", "timer_hud", "00:01:00")
+	self.blowout_phase = "after_surge"
+	self.rad_hit_time = time_global()
+end
+
+function blowout:PostblowPhase()
+	self:AddEffector("postprocess", "agr_u_fade", 2124, false)
+	self:RemoveMarkedShelters()
+	self:PostblowEffects()
+	level.remove_pp_effector(2123)
+	self.blowout_timer:Resume("silent", "timer_hud", "00:00:05")
+	self.blowout_phase = "posteffects"
+end
+
+function blowout:EndPhase()
+	xr_logic.pstor_store(db.actor, "prev_blowout_time", get_current_time())
+	xr_logic.pstor_store(db.actor, "blowout", false)
+	
+	self.is_blowout_on = false
+	self:SetWeather("default")
+	--self:StopAllSounds()
+	
+	if self:GetBlowoutType() == "outdoor" then
+		xr_sound.set_actor_sound("")
+		if self:isNpcInsideShelter(db.actor) then
+			priboy_utils.send_hud_message("hmm ...", end_msg, nil, 15, nil)
+		end
+	else
+		self:PostblowEffects()
+	end
+	
+	self.blowout_timer = nil
+	self.blowout_phase = "idle"
+end
+
+function blowout:SwitchPhase()
+	if self.blowout_phase == "preblow" then
+		self:SurgePhase()
+	elseif self.blowout_phase == "surge" then
+		if self:GetBlowoutType() == "indoor" then
+			self:EndPhase()
+		else
+			self:AfterSurgePhase()
+		end
+	elseif self.blowout_phase == "after_surge" then
+		self:PostblowPhase()
+	elseif self.blowout_phase == "posteffects" then
+		self:EndPhase()
+	end
+end
+
+function blowout:Update()
+	if not self.config or not self.config.enabled or not self.init_done then
+		return
+	end
+	
+	if xr_logic.pstor_retrieve(db.actor, "blowout", false) == true then
+		if not self.is_blowout_on then
+			self:PreblowPhase()
+		else
+			if self.blowout_timer:isSuspended() then
+				self:SwitchPhase()
+			else
+				self.blowout_timer:Update()
+				if self.blowout_phase == "after_surge" then
+					self:Radiation(db.actor)
+				end
+			end
+		end
+	else
+		self:CheckConditions()
+	end
+end
+
+function blowout:CheckConditions()
+	if sleep_manager.is_sleep_active() then
+		xr_logic.pstor_store(db.actor, "prev_blowout_time", get_current_time())
+		return
+	end
+	
+	local elapsed = get_current_time() - xr_logic.pstor_retrieve(db.actor, "prev_blowout_time", get_current_time())
+	
+	if math.floor(elapsed / 60) >= 8 then
+		if math.random() > 0.56 then
+			xr_logic.pstor_store(db.actor, "blowout", true)
+		else
+			xr_logic.pstor_store(db.actor, "prev_blowout_time", get_current_time())
+		end
+	end
+end
+
+function blowout:SurgeEffects()	
+	local object, class_id = nil, nil
+	
+	for object_id = 1, 65534 do
+		object = level.object_by_id(object_id)
+		if object then
+			class_id = object:clsid()
+			if priboy_utils.isCrow(object:section()) and self.config.kill_birds then
+				table.insert(self.objects.crows, object)
+			elseif priboy_utils.isArtefact(class_id) and self.config.remove_artefacts then
+				table.insert(self.objects.artefacts, object)
+			elseif priboy_utils.isMutant(class_id) and self.config.kill_mutants then
+				if object:alive() then
+					object:kill(object)
+				end
+			end
+		end
+	end
+	
+	if self.config.kill_birds then
+		self:KillCrows()
+	end
+	
+	if self.config.remove_artefacts then
+		self:RemoveArtefacts()
+	end
+end
+
+function blowout:KillCrows()
+	if #self.objects.crows == 0 then
+		return
+	end
+	
+	local h = hit()
+	h.type = hit.strike
+	h.power = 1000
+	h.impulse = 1000
+	
+	for index, crow in pairs(self.objects.crows) do
+		--if index % 3 == 0 then
+			h.direction = crow:direction()
+			h.draftsman = crow
+			crow:hit(h)
+		--end
+	end
+	
+	self.objects.crows = {}
+end
+
+function blowout:RemoveArtefacts()
+	if #self.objects.artefacts == 0 then
+		return
+	end
+
+	local inv_item = nil
+	
+	for index = 0, db.actor:object_count() - 1 do
+		inv_item = db.actor:object(index)
+		for k, v in pairs(self.objects.artefacts) do
+			if inv_item:name() == v:name() then
+				self.objects.artefacts[k] = nil
+			end
+		end
+	end
+	
+	for k, v in pairs(self.objects.artefacts) do
+		alife():release(alife():object(v:id()), true)
+	end
+	
+	self.objects.artefacts = {}
+end
+
+function blowout:Radiation(npc)
+	if not npc then
+		return
+	end
+
+	if not npc:alive() then
+		return
+	end
+	
+	if self:isNpcInsideShelter(npc) then
+		return
+	end
+	
+	if time_global() - self.rad_hit_time > 1000 then
+		local outfit, cond = nil, nil
+		if npc:id() == db.actor:id() then
+			xr_sound.set_actor_sound("level_border_detector")
+			xr_sound.set_actor_sound_factor(0.0001)
+			outfit = db.actor:item_in_slot(6)
+			if outfit then
+				cond = outfit:condition()
+			end
+		end
+
+		local h = hit()
+		h.power = self.config.radiation_strength or 0
+		h.impulse = 0
+		h.draftsman = npc
+		h.direction = vector():set(0, 0, 0)
+		h.type = hit.telepatic
+		npc:hit(h)
+
+		if outfit and cond then
+			outfit:set_condition(cond)
+		end
+
+		if math.random() > 0.5 then
+			self:SpawnPhantoms()
+		end
+		
+		self.rad_hit_time = time_global()
+	end
+end
+
+function blowout:SpawnPhantoms()
+	if self.config.spawn_phantoms then
+		if phantom_manager:phantom_count() <= 5 then
+			local radius = 30.0 * (math.random() / 2.0 + 0.5)
+			local angle = 45 * math.random() - 22.5
+			local direction = vector_rotate_y(db.actor:direction(), angle)
+			phantom_manager.spawn_phantom(db.actor:position():add(direction:mul(radius)))
+		end
+	end
+end
+
+function blowout:Shelter(npc, shelter)
+	local pos = npc:position()
+	local pos_x = (pos.x >= shelter.min_x) and (pos.x <= shelter.max_x)
+	local pos_y = (pos.y >= shelter.min_y) and (pos.y <= shelter.max_y)
+	local pos_z = (pos.z >= shelter.min_z) and (pos.z <= shelter.max_z)
+	
+	return (pos_x and pos_y and pos_z)
+end
+
+function blowout:isNpcInsideShelter(npc)
+	local inside_shelter = false
+
+	if self.hideplaces == nil then
+		return inside_shelter
+	end
+	
+	for index, shelter in pairs(self.hideplaces) do
+		inside_shelter = self:Shelter(npc, shelter) or inside_shelter
+	end
+
+	return inside_shelter
+end
+
+function blowout:MarkShelters()
+	if not self.config.show_hideplaces or
+		self:GetBlowoutType() == "indoor"
+	then
+		return
+	end
+	
+	local obj = nil
+	
+	for index, mapspot in pairs(self.mapspots) do
+		obj = self:SpawnEntity("bolt", mapspot)
+		if obj ~= nil then
+			level.map_add_object_spot(obj.id, "blowout_hideplace_location", shelter_msg)
+			table.insert(self.objects.marked_shelters, obj.id)
+		end
+	end
+end
+
+function blowout:RemoveMarkedShelters()
+	if #self.objects.marked_shelters ~= 0 then
+		for k, v in pairs(self.objects.marked_shelters) do
+			level.map_remove_object_spot(v, "blowout_hideplace_location")
+			alife():release(alife():object(v), true)
+		end
+	end
+	self.objects.marked_shelters = {}
+end
+
+function blowout:SpawnEntity(section, spawn)
+	if not section or not spawn then
+		return false
+	end	
+	return alife():create(section, spawn.position, spawn.level_vertex, spawn.game_vertex)
+end
+
+function blowout:PostblowEffects()
+	if self.spawn_data == nil then
+		return
+	end
+	
+	local t = nil
+	
+	if self.artefacts ~= nil and self.config.spawn_artefacts then
+		for af_name, quantity in pairs(self.artefacts) do
+			for index = 1, quantity do
+				t = priboy_utils.get_subarray_name(self.spawn_data)
+				if t then
+					self:SpawnEntity(af_name, self.spawn_data[t])
+				end
+			end
+		end
+	end
+	
+	if self.mutants ~= nil and self.config.spawn_mutants then
+		for m_name, quantity in pairs(self.mutants) do
+			for index = 1, quantity do
+				t = priboy_utils.get_subarray_name(self.spawn_data)
+				if t then
+					self:SpawnEntity(m_name, self.spawn_data[t])
+				end
+			end
+		end
+	end
+end
+
+function blowout:PlaySound(snd_type, action)
+	local snd = blowout_sounds[snd_type]
+	if snd ~= nil then
+		if action == "play" then
+			if snd:playing() then
+				snd:stop()
+			end
+			snd:play(db.actor, 0, sound_object.s2d)
+		elseif action == "stop" then
+			if snd:playing() then
+				snd:stop()
+			end
+		end
+	end
+end
+
+function blowout:StopAllSounds()
+	for k, v in pairs(blowout_sounds) do
+		self:PlaySound(k, "stop")
+	end
+end
+
+function blowout:GetBlowoutType()
+	local lname = level.name()
+	
+	if lname == "l03u_agr_underground" or
+		lname == "l08u_brainlab" or
+		lname == "l10u_bunker" or
+		lname == "l04u_labx18" or
+		lname == "l12u_sarcofag" or
+		lname == "l12u_control_monolith"
+	then
+		return "indoor"
+	end
+	
+	return "outdoor"
+end
+
+function blowout:SetWeather(weather_type)
+	if self:GetBlowoutType() == "outdoor" then
+		if weather_type == "surge_day" or
+			weather_type == "preblow_we" or
+			weather_type == "aftersurge_we"
+		then
+			level.set_weather_fx(weather_type)
+		else
+			level.set_weather("default")
+		end
+	end
+end
+
+function blowout:AddEffector(effector_type, name, id, loop)
+	if type(loop) ~= "boolean" then
+		loop = false
+	end
+	
+	if type(id) ~= "number" then
+		id = 0
+	end
+	
+	if effector_type == "postprocess" then
+		if id == 0 then
+			id = 2000 + math.random(100)
+		end
+		level.add_pp_effector(name .. ".ppe", id, loop)
+	elseif effector_type == "camera" then
+		if id == 0 then
+			id = 1000 + math.random(100)
+		end
+		level.add_cam_effector("camera_effects\\" .. name .. ".anm", id, loop, "")
+	end
+end
+
+function blowout:GetPhase()
+	return self.blowout_phase
+end
+
+function blowout:isBlowoutOn()
+	return self.is_blowout_on
+end
+
+-- ******************************************************************** --
+
+local pBlowout = nil
+
+function GetBlowout()
+	if pBlowout == nil then
+		pBlowout = blowout()
+	end
+	return pBlowout
+end

@@ -1,0 +1,487 @@
+-- Priboy general functions
+-- by barin aka pepe_84
+-- last edited: 11.08.2009
+
+local show_debug_info = true
+
+function get_patch_version()
+	-- system.ltx -> current_server_entity_version
+	local version = script_server_object_version()
+	if version == 6 then
+		return "1.0004"
+	elseif version == 7 then
+		return "1.0005"
+	else
+		abort("ERROR: Incompatible patch version")
+		return "unknown"
+	end
+end
+
+function get_patch_version_from_menu()
+	local main_menu = _G.main_menu.get_main_menu()
+	if not main_menu then
+		abort("ERROR: Incompatible patch version")
+		return "unknown"
+	end
+	return (main_menu:GetGSVer())
+end
+
+function AddDialogPhrase(dialog, phrase_name, param1, param2, param3)
+	local patch_version = get_patch_version() -- get_patch_version_from_menu()
+	if patch_version == "1.0004" then
+		return dialog:AddPhrase(phrase_name, param1, param2, param3)
+	elseif patch_version == "1.0005" then
+		if param2 == -1 then
+			return dialog:AddPhrase(phrase_name, tostring(param1), "", param3)
+		else
+			return dialog:AddPhrase(phrase_name, tostring(param1), tostring(param2), param3)
+		end
+	else
+		abort("ERROR: for 1.0004/1.0005 patch only! [task_manager.script]")
+	end
+end
+
+function isPriboiTask(task_title)
+	if string.find(task_title, "priboy") then
+		return true
+	else
+		return false
+	end
+end
+
+function get_task_state(task_name, objective)
+	local state = "unknown"
+	if not task_name or not objective then
+		return (state)
+	end
+	local task_state = db.actor:get_task_state(task_name, objective)
+	if task_state == task.completed then
+		state = "completed" -- task completed
+	elseif task_state == task.fail then
+		state = "failed" -- task failed
+	elseif task_state == task.in_progress then
+		state = "in_progress" -- task in progress
+	elseif task_state == task.task_dummy then
+		state = "task_dummy" -- task not given yet
+	end
+	return (state)
+end
+
+function distance_between_objects(source_object, destination_object)
+	if source_object and destination_object then
+		return source_object:position():distance_to(destination_object:position())
+	end
+	return (-1) -- error signal
+end
+
+function get_game_object(section_name)
+	if section_name == nil or type(section_name) ~= "string" then
+		return nil
+	end	
+	local game_object = alife():object(section_name)
+	if game_object == nil then
+		return nil
+	end	
+	return (level.object_by_id(game_object.id))
+end
+
+function isCommanderDead(commander)
+	cmd = alife():story_object(commander)
+	if cmd == nil or (cmd.alive ~= nil and not cmd:alive()) then
+		return true
+	else
+		return false
+	end
+end
+
+function areStalkersDead(npcs_array)
+	if db.actor == nil then
+		return false
+	end
+	
+	local actor_id = db.actor:id()
+	local counter = 0
+	
+	if npcs_array == nil or type(npcs_array) ~= "table" or
+		db.storage[actor_id].pstor == nil
+	then
+		return false
+	end		
+	for index = 1, #npcs_array do
+		if db.storage[actor_id].pstor[npcs_array[index].name] == false then
+			counter = counter + 1
+		end
+	end
+	return (counter == #npcs_array)
+end
+
+function isGulagEmpty(gulag_name)
+	if not gulag_name then
+		return nil
+	end
+	return (xr_conditions.gulag_empty(nil, nil, {gulag_name}))
+end
+
+function on_item_lost(item_name, num_of_items_lost)
+	local num_of_items = 1
+	if num_of_items_lost ~= nil and num_of_items_lost ~= 0 then
+		num_of_items = num_of_items_lost
+	end
+	
+	local task_texture, task_rect = _g.get_texture_info("ui_iconsTotal_lost_thing")
+	local news_text = "%c[255,160,160,160]" .. game.translate_string("general_out_item") .. "\\n" ..
+	"%c[default]" .. tostring(num_of_items) .. "x " .. game.translate_string(news_manager.get_inv_name(item_name))		
+	
+	if db.actor:is_talking() then
+		db.actor:give_talk_message(news_text, task_texture, task_rect, "iconed_answer_item")
+	else
+		db.actor:give_game_news(news_text, task_texture, task_rect, 0, 10000)
+	end		
+end
+
+function send_hud_message(header, text, sender, showtime, sound_type)
+	if not header then header = game.translate_string("st_tip") end
+	if not text then return end
+	if not sender then sender = "priboi" end
+	if not showtime then showtime = 5 end
+	
+	local sound_obj = nil
+	
+	if sound_type == "news" then
+		sound_obj = news_manager.pda_news
+	elseif sound_type == "sos" then
+		sound_obj = xr_sound.get_safe_sound_object([[device\pda\pda_sos]])
+	else
+		sound_obj = news_manager.pda_tips
+	end
+	
+	if sound_obj then
+		sound_obj:play(db.actor, 0, sound_object.s2d)
+	end
+	
+	local message = "%c[255,160,160,160]" .. header .. "\\n" .. "%c[default]" .. text
+	local time_to_display = showtime * 1000	
+	local task_texture, task_rect = nil, nil
+
+	
+	if sender == "rookie" then
+		task_texture, task_rect = _g.get_texture_info("ui_iconsTotal_priboy_help_wounded")
+	elseif sender == "voronin" then
+		task_texture, task_rect = "ui\\ui_iconsTotal", Frect():set(332, 423, 83, 47)
+	elseif sender == "commander" then
+		task_texture, task_rect =  _g.get_texture_info("ui_iconsTotal_priboy_talk_to_esc_commanders")
+	else
+		task_texture, task_rect = "ui\\ui_icon_equipment", Frect():set(300, 650, 50, 51)
+	end
+	
+	if db.actor:is_talking() then
+		db.actor:give_talk_message(message, task_texture, task_rect, "iconed_answer_item")
+	else
+		db.actor:give_game_news(message, task_texture, task_rect, 0, time_to_display)
+	end
+end
+
+function give_object(giver, receiver, object_name, num_of_objects)
+	if giver and receiver and object_name then
+		
+		local num_of_objects_to_transfer = 1
+		if num_of_objects ~= nil and num_of_objects ~= 0 then
+			num_of_objects_to_transfer = num_of_objects
+		end
+		
+		counter = 0
+		signal = false
+		
+		local relocate_object = 
+		function(inventory_object)
+			if inventory_object:section() == object_name and not signal then
+				giver:transfer_item(inventory_object, receiver)
+				counter = counter + 1
+				if counter == num_of_objects_to_transfer then
+					signal = true
+					--break
+					--return
+				end
+			end
+		end
+	
+		giver:inventory_for_each(relocate_object)
+		
+		if signal then
+			--on_item_lost(object_name, counter)
+			on_item_lost(object_name, num_of_objects_to_transfer)
+		end
+		return signal
+	end
+	return false
+end
+
+function get_object_number(npc, object_name)
+	object_num = 0
+	
+	if not npc then
+		return object_num
+	end
+	
+	local count_object = 
+		function(inventory_object)
+			if inventory_object:section() == object_name then
+				object_num = object_num + 1
+			end
+		end
+	
+	npc:inventory_for_each(count_object)
+	return object_num	
+end
+
+function contain(array, varname, array_type)
+	if array == nil or type(array_type) ~= "string" then
+		return false
+	end
+	for index = 1, #array do
+		if array_type == "complex" then
+			if array[index].name == varname then
+				return true
+			end
+		elseif array_type == "simple" then
+			if array[index] == varname then
+				return true
+			end
+		end
+	end
+	return false
+end
+
+local map_spots_types =
+{
+	"green_location", "blue_location", "crlc_mdl", "crlc_small",
+	"crlc_big", "eliminate_lager_location", "defend_lager_location",
+	"kill_stalker_location", "find_item_location", "blowout_hideplace_location"
+}
+
+function get_object_by_id(object_id)
+	local object = nil
+	if type(object_id) == "number" then
+		object = alife():story_object(object_id)
+	elseif type(object_id) == "string" then
+		object = get_game_object(object_id)
+	end
+	return object
+end
+
+function add_map_spot(object_id, map_spot_type, map_hint)
+	if not map_hint then map_hint = " " end
+	if not contain(map_spots_types, map_spot_type, "simple") then
+		map_spot_type = "green_location"
+	end
+	local object = get_object_by_id(object_id)
+	if object then
+		--level.map_add_object_spot(object.id, map_spot_type, map_hint)
+		level.map_add_object_spot(object.id or object:id(), map_spot_type, map_hint)
+	end
+end
+
+function is_map_spot_present(object_id, map_spot_type)
+	local object = get_object_by_id(object_id)
+	if object then
+		--if level.map_has_object_spot(object.id, map_spot_type) ~= 0 then
+		if level.map_has_object_spot(object.id or object:id(), map_spot_type) ~= 0 then
+			return true, object
+		end
+	end
+	return false, nil
+end
+
+function remove_map_spot(object_id, map_spot_type)
+	local map_spot, object = is_map_spot_present(object_id, map_spot_type)
+	if map_spot then
+		--level.map_remove_object_spot(object.id, map_spot_type)
+		level.map_remove_object_spot(object.id or object:id(), map_spot_type)
+	end
+end
+
+function spawn_entity(spawn_section, spawn_data, mapspot, maphint)
+	if not spawn_section or not spawn_data then
+		return false
+	end
+	
+	local obj = alife():create(spawn_section, spawn_data.position, spawn_data.level_vertex, spawn_data.game_vertex)
+	if obj then
+		if mapspot and show_debug_info then
+			if not contain(map_spots_types, mapspot, "simple") then
+				mapspot = "green_location"
+			end
+			if maphint then
+				level.map_add_object_spot(obj.id, mapspot, maphint)
+			else
+				level.map_add_object_spot(obj.id, mapspot, "Object spawned")
+			end
+		end
+		--return true
+	end
+	--return false
+	return obj
+end
+
+function hit_object(object, hit_by)
+	if not object then
+		return false
+	end
+	
+	local hit_me = hit()
+	hit_me.power = 0.03
+	hit_me.direction = vector():set(1, 0, 0)
+	if hit_by then
+		hit_me.draftsman = hit_by
+	else
+		hit_me.draftsman = db.actor
+	end
+	hit_me.impulse = 1
+	hit_me.type = hit.strike
+	
+	object:hit(hit_me)
+	return true
+end
+
+function store_variable(variable_name, value)
+	if variable_name == nil then
+		return
+	end
+	local actor_id = db.actor:id()	
+	if db.storage[actor_id].pstor == nil then
+		db.storage[actor_id].pstor = {}
+	end	
+	if type(variable_name) == "table" then
+		for index = 1, #variable_name do
+			if xr_logic.pstor_is_registered_type(type(variable_name[index].value)) then
+				db.storage[actor_id].pstor[variable_name[index].name] = variable_name[index].value
+			end
+		end
+	else
+		if xr_logic.pstor_is_registered_type(type(value)) then
+			db.storage[actor_id].pstor[variable_name] = value
+		end
+	end
+end
+
+function retrieve_variable(variable_name, default_value)
+	if variable_name == nil then
+		return nil
+	end
+	local actor_id = db.actor:id()
+	if db.storage[actor_id].pstor ~= nil then
+		local value = db.storage[actor_id].pstor[variable_name]
+		if value ~= nil then
+			return value
+		end
+	end
+	if default_value ~= nil then
+		return default_value
+	end
+	return nil
+end
+
+-- to remove variable: new_value <-- nil
+function update_variable(section_name, new_value)
+	if not section_name then
+		return
+	end
+	local actor_id = db.actor:id()
+	if db.storage[actor_id].pstor ~= nil then
+		local var_type = type(section_name)
+		if var_type == "string" then
+			if db.storage[actor_id].pstor[section_name] ~= nil then
+				db.storage[actor_id].pstor[section_name] = new_value
+			end
+		elseif var_type == "table" then
+			for index = 1, #section_name do
+				if db.storage[actor_id].pstor[section_name[index].name] ~= nil then
+					db.storage[actor_id].pstor[section_name[index].name] = new_value
+				end
+			end
+		end
+	end
+end
+
+function get_relation(relation)
+	if relation == game_object.enemy then
+		return "enemy"
+	elseif relation == game_object.friend then
+		return "friend"
+	elseif relation == game_object.neutral then
+		return "neutral"
+	else
+		return "dummy"
+	end
+end
+
+function display_hud_icon(icon, action)
+    local hud_icon = get_hud():GetCustomStatic(icon)
+    if action == "show" then
+        if not hud_icon then
+            get_hud():AddCustomStatic(icon, true)
+        end
+    elseif action == "remove" then
+        if hud_icon then
+            get_hud():RemoveCustomStatic(icon)
+        end
+    end
+end
+
+function get_subarray_name(tab)
+	if not tab then
+		return nil
+	end
+	local subarray_names = {}
+	for k, v in pairs(tab) do
+		table.insert(subarray_names, k)
+	end
+	if #subarray_names == 0 then
+		return nil
+	end
+	return subarray_names[math.random(1, #subarray_names)]
+end
+
+function isMutant(class_id)
+	if not class_id then
+		return false
+	end
+	
+	if class_id == clsid.boar_s or class_id == clsid.bloodsucker_s or
+		class_id == clsid.dog_s or class_id == clsid.flesh_s or
+		class_id == clsid.pseudodog_s or class_id == clsid.cat_s or
+		class_id == clsid.psy_dog_s or class_id == clsid.burer_s or
+		class_id == clsid.chimera_s or class_id == clsid.controller_s or
+		class_id == clsid.fracture_s or class_id == clsid.poltergeist_s or
+		class_id == clsid.gigant_s or class_id == clsid.zombie_s or
+		class_id == clsid.tushkano_s or class_id == clsid.snork_s
+	then
+		return true
+	end
+	
+	return false
+end
+
+function isStalker(class_id)
+	if not class_id then
+		return false
+	end
+	
+	return class_id == clsid.script_stalker
+end
+
+function isArtefact(class_id)
+	if not class_id then
+		return false
+	end
+
+	return class_id == clsid.artefact or class_id == clsid.artefact_s
+end
+
+function isCrow(section)
+	if not section then
+		return false
+	end
+	
+	return section == "m_crow"
+end

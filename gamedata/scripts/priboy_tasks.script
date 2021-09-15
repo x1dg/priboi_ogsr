@@ -1,0 +1,311 @@
+-- Priboy tasks functions
+-- by barin aka pepe_84
+-- last edited: 23.08.2008
+
+local cmd_story_ids = {blockpost_commander = 195999, kuznetsov_commander = 32, buddy = 22}
+
+function remove_lukash_mapspot()
+	if priboy_utils.get_task_state("mil_kill_lukash", 0) == "completed" then
+			priboy_utils.remove_map_spot(707, "blue_location")
+	end
+end
+
+function infoportion_proceed(level_name)
+	if level_name == "l11_pripyat" and not has_alife_info("priboy_uadz32_squad_start") then
+		db.actor:give_info_portion("priboy_uadz32_squad_start")
+		this.mark_lost_squad()
+	elseif level_name == "l02_garbage" and not has_alife_info("priboy_gar_tunnel_stalker") then
+		db.actor:give_info_portion("priboy_gar_tunnel_stalker")
+	elseif level_name == "l03_agroprom" and not has_alife_info("priboy_spawn_agro_mercs") then
+		db.actor:give_info_portion("priboy_spawn_agro_mercs")
+	--elseif level_name == "l03_agroprom" and not has_alife_info("agr_krot_dead") then
+		--db.actor:give_info_portion("agr_krot_dead")
+		-- "agr_help_krot_done"
+	else
+		remove_lukash_mapspot()
+	end
+--	docs.spawn()
+end
+
+function mark_lost_squad()
+	level_tasks.add_location(666666666, "crlc_mdl", "UADZ32 Squad")
+end
+
+function priboy_assault_agro_mercs_action()
+	priboy_utils.store_variable(priboy_npcs.agr_factory_killers, nil)
+	priboy_utils.store_variable("agr_nii_commander", true)
+end
+
+function priboy_eliminate_sarcophagus_action()
+	priboy_utils.store_variable(priboy_npcs.sar_mob_monolith, nil)
+	priboy_utils.store_variable(priboy_npcs.sar_decoder_respawn, nil)
+end
+
+function priboy_assault_monolith_control_action()
+	priboy_utils.store_variable(priboy_npcs.sar_mon_control_npcs, nil)
+end
+
+function remove_variables(task_name, task_objective)
+	if task_name == "priboy_eliminate_sarcophagus" then
+		if task_objective == 1 then
+			priboy_utils.update_variable(priboy_npcs.sar_mob_monolith, nil)
+		elseif task_objective == 2 then
+			priboy_utils.update_variable(priboy_npcs.sar_decoder_respawn, nil)
+		end
+	elseif task_name == "priboy_assault_monolith_control" then
+		priboy_utils.update_variable(priboy_npcs.sar_mon_control_npcs, nil)
+	end
+end
+
+function mark_priboi_supplies()
+	level_tasks.add_location(501501, "crlc_mdl", "Your house and supplies")
+end
+
+function new_enc_entry()
+	priboy_utils.send_hud_message("New encyclopedy entry", "Check the PDA ...", nil, 10, nil)
+end
+
+function close_case()
+	priboy_utils.send_hud_message("New orders", "Our chopper is waiting for you outside the NPP. Hurry up ...", "commander", 10, nil)
+end
+
+--[[ ************************ Find uhsf stuff ************************ --]]
+
+local task_info = 
+{
+	priboy_find_cnpp_blueprints = {target = "npp_build_doc", infoportion = "npp_build_doc_infoportion"},
+	priboy_find_uhsf_docs_2 = {target = "quest_case_02", infoportion = "quest_case_02_infoportion"},
+	priboy_find_deadcity_docs_2 = {target = "dar_document4", infoportion = "dar_document4_infoportion"},
+	priboy_find_uhsf_docs_1 = {target = "esc_doc_secret", infoportion = "esc_doc_secret_infoportion"},
+	priboy_find_mutations_report_1 = {target = "che_mutat1_doc", infoportion = "che_mutat1_doc_infoportion"},
+	priboy_find_crazy_flash = {target = "crazy_flash", infoportion = "crazy_flash_infoportion"},
+	priboy_find_cnpp_accident_report_1 = {target = "npp_crash1_doc", infoportion = "npp_crash1_doc_infoportion"},	
+	priboy_find_kgb_docs = {target = "kgb_secret_doc", infoportion = "kgb_secret_doc_infoportion"},
+	priboy_find_cnpp_accident_report_3 = {target = "npp_crash3_doc", infoportion = "npp_crash3_doc_infoportion"},
+	priboy_find_dezik_pda = {target = "mil_svoboda_leader_pda", infoportion = "mil_svoboda_leader_pda_infoportion"},
+	priboy_find_cnpp_accident_report_2 = {target = "npp_crash2_doc", infoportion = "npp_crash2_doc_infoportion"},
+	priboy_find_x18_code_1 = {target = "x18_code_lost", infoportion = "x18_code_lost_infoportion"},
+	priboy_find_deadcity_docs_1 = {target = "cit_documents", infoportion = "cit_documents_infoportion"},
+	priboy_find_dezik_key = {target = "cit_doctors_key", infoportion = "cit_doctors_key_infoportion"},
+	priboy_find_kruglov_pendrive = {target = "kruglov_flash", infoportion = "kruglov_flash_infoportion"},
+	priboy_find_uhsf_accident_report = {target = "gar_uhsf_doc", infoportion = "gar_uhsf_doc_infoportion"},
+	priboy_find_docs_pendrive = {target = "bar_ecolog_flash", infoportion = "bar_ecolog_flash_infoportion"},
+	priboy_find_strelok_pendrive = {target = "gunslinger_flash", infoportion = "gunslinger_flash_infoportion"},
+	priboy_find_genetic_book = {target = "doc_uhsf_secrets", infoportion = "doc_uhsf_secrets_infoportion"},
+	priboy_find_x18_code_2 = {target = "x18_lab_second_code", infoportion = "x18_lab_second_code_infoportion"},
+	priboy_find_ghost_memo = {target = "ghost_doc_uhsf", infoportion = "ghost_doc_uhsf_infoportion"},
+	priboy_find_mutations_report_2 = {target = "che_mutat2_doc", infoportion = "che_mutat2_doc_infoportion"},
+	priboy_find_sid_memo = {target = "sid_doc_last", infoportion = "sid_doc_last_infoportion"},	
+	priboy_find_x18_code_3 = {target = "x18_code_found", infoportion = "x18_code_found_infoportion"},
+	priboy_find_x16_docs = {target = "lab_x16_documents", infoportion = "lab_x16_documents_infoportion"},
+	priboy_find_mutations_report_3 = {target = "che_mutat3_doc", infoportion = "che_mutat3_doc_infoportion"},
+	priboy_find_decoder = {target = "decoder", infoportion = "decoder_infoportion"},
+	priboy_find_pripyat_docs = {target = "pri_decoder_documents", infoportion = "pri_decoder_documents_infoportion"},	
+	priboy_heli_crash = {target = "mil_convoy_report", infoportion = "priboy_heli_crash_done"},
+	priboy_help_wounded_stalker = {target = "gar_stalker_uhsf_info", infoportion = "priboy_gar_tunnel_stalker_done"}
+}
+
+function has_task_target(task_name, objective)
+	if not task_info[task_name] or not db.actor then
+		return false
+	end
+	
+	local document = db.actor:object(task_info[task_name].target)
+	
+	if document ~= nil then
+		db.actor:give_info_portion(task_info[task_name].infoportion)
+		if document:section() ~= "priboy_kruglov_flash" and document:section() ~= "decoder" then
+			alife():release(alife():object(document:id()), true)
+		end
+		return true
+	else
+		return false
+	end
+end
+
+--[[ ************** Radar crash site ************* --]]
+
+function rad_heli_crash(task_name, task_objective)
+	local space_restrictor = nil
+	
+	if not has_alife_info("rad_heli_crash_site_done") then
+		space_restrictor = priboy_utils.get_game_object("rad_heli_crash_site")
+		if space_restrictor ~= nil then
+			if priboy_utils.distance_between_objects(db.actor, space_restrictor) <= 23 then
+				db.actor:give_info_portion("rad_heli_crash_site_done")
+				db.actor:set_task_state(task.completed, task_name, 1)
+			end
+		end
+	end
+	
+	if not has_alife_info("rad_heli_crash_chief_done") then
+		space_restrictor = priboy_utils.get_game_object("rad_last_scientist_sos")
+		if space_restrictor ~= nil then
+			if priboy_utils.distance_between_objects(db.actor, space_restrictor) <= 2 then
+				db.actor:give_info_portion("rad_heli_crash_chief_done")
+			end
+		end
+	end
+	
+	return (has_alife_info("rad_heli_crash_site_done") and has_alife_info("rad_heli_crash_chief_done"))
+end
+
+--[[ ************************ UA-DZ32 squad ************************ --]]
+
+function lost_military_squad_done()	
+	return (has_alife_info("priboy_uadz32_squad_found") and
+	has_alife_info("priboy_uadz32_squad_situation") and
+	has_alife_info("priboy_uadz32_new_orders"))
+end
+
+--[[ ************************ Help wounded ************************ --]]
+
+function send_sos_message()
+	priboy_utils.send_hud_message("S.O.S. Message", "Help, anyone. I'm dying ...", nil, 10, "sos")
+end
+
+--[[ ************************ Vodka task ************************ --]]
+
+function can_finish_vodka_task()
+	return (priboy_utils.get_object_number(db.actor, "vodka") >= 20)
+end
+
+function check_vodka_infoportions()
+	if has_alife_info("priboy_vodka_start") then
+		return false
+	else
+		return true
+	end
+end
+
+function vodka_task_done(task_name, objective)
+	if priboy_utils.isCommanderDead(cmd_story_ids.blockpost_commander) then
+		if not has_alife_info("blockpost_commander_dead") then
+			db.actor:give_info_portion("blockpost_commander_dead")
+		end
+		db.actor:set_task_state(task.fail, task_name, 0)
+		return false
+	end
+	
+	if can_finish_vodka_task() and not has_alife_info("priboy_vodka_found") then
+		db.actor:give_info_portion("priboy_vodka_found")
+	end
+	
+	if (has_alife_info("priboy_vodka_found") and has_alife_info("priboy_vodka_brought")
+		and not has_alife_info("priboy_vodka_task_done"))
+	then
+		db.actor:give_info_portion("priboy_vodka_task_done")
+		zlc.add_fp_level_changers()
+	end
+	
+	return has_alife_info("priboy_vodka_task_done")
+end
+
+function transfer_vodka(priboy, commander)
+	priboy_utils.give_object(priboy, commander, "vodka", 20)
+end
+
+function give_money()
+	dialogs.relocate_money(db.actor, 1000, "in")
+end
+
+--[[**********************************************************************************************--]]
+
+--[[ ************************ Assault Agroprom ************************ --]]
+
+function priboy_assault_agro_mercs()
+	return (has_alife_info("priboy_agro_factory_mercs_dead") and has_alife_info("priboy_agro_hq_mercs_done"))
+end
+function agro_factory()
+	return priboy_utils.isGulagEmpty("agr_factory_assault")
+end
+
+--[[ ************** Eliminate resistance in Sarcophagus ************* --]]
+
+function priboy_eliminate_sarcophagus_done()
+	if db.actor == nil then
+		return false
+	end
+	local sar_monolith_general_gulag = priboy_utils.isGulagEmpty("sar_monolith_general")
+	local sar_monolith_sklad_gulag = priboy_utils.isGulagEmpty("sar_monolith_sklad")
+	
+	local sar_mob_monolithians = priboy_utils.areStalkersDead(priboy_npcs.sar_mob_monolith)
+	local sar_secret_room = priboy_utils.areStalkersDead(priboy_npcs.sar_decoder_respawn)
+	
+	if not has_alife_info("priboy_eliminate_sarcophagus_done")
+		and sar_monolith_general_gulag and sar_monolith_sklad_gulag and sar_mob_monolithians
+	then
+		db.actor:give_info_portion("priboy_eliminate_sarcophagus_done")
+	end
+	
+	if not has_alife_info("priboy_eliminate_sarcophagus_doors")
+		and has_alife_info("sar_finish_decoding") and sar_secret_room
+	then
+		db.actor:give_info_portion("priboy_eliminate_sarcophagus_doors")
+	end
+	
+	return (has_alife_info("priboy_eliminate_sarcophagus_done")
+		and has_alife_info("priboy_eliminate_sarcophagus_doors"))
+end
+
+--[[ ************** Assault Monolith Control Bunker ************* --]]
+
+function priboy_assault_monolith_control()
+	local sar_monolith_guard_gulag = priboy_utils.isGulagEmpty("sar_monolith_guard")
+	local sar_mob_monolithians = priboy_utils.areStalkersDead(priboy_npcs.sar_mon_control_npcs)
+	
+	if not has_alife_info("priboy_assault_monolith_control_done") and sar_mob_monolithians then
+		db.actor:give_info_portion("priboy_assault_monolith_control_done")
+	end
+	return has_alife_info("priboy_assault_monolith_control_done")
+end
+
+--[[ ************************ Cordon's commanders ************************ --]]
+
+function remove_commander_map_spot(task, objective)
+	if task == "priboy_bring_vodka" then
+		level_tasks.remove_location(cmd_story_ids.blockpost_commander, "green_location")
+	elseif task == "priboy_talk_to_esc_commanders" then
+		if objective == 1 then
+			level_tasks.remove_location(cmd_story_ids.blockpost_commander, "green_location")
+		elseif objective == 2 then
+			level_tasks.remove_location(cmd_story_ids.buddy, "green_location")
+		elseif objective == 3 then
+			level_tasks.remove_location(cmd_story_ids.kuznetsov_commander, "green_location")
+		end
+	end
+end
+
+function need_infoportion(task_name, task_objective, story_id, info_dead, info_done)
+	if priboy_utils.isCommanderDead(story_id) and not has_alife_info(info_dead)
+		and not has_alife_info(info_done)
+	then
+		db.actor:give_info_portion(info_dead)
+		db.actor:set_task_state(task.fail, task_name, task_objective)
+	end
+end
+
+function can_finish_commanders_task()
+	local buddy = (has_alife_info("buddy_dead") or has_alife_info("buddy_talk_done"))
+	local kuznetsov = (has_alife_info("kuznetsov_dead") or has_alife_info("kuznetsov_talk_done"))
+	local blockpost = (has_alife_info("blockpost_commander_dead") or has_alife_info("commander_talk_done"))
+	return (buddy and kuznetsov and blockpost)
+end
+
+function commanders_talk_complete(task_name, objective)
+	need_infoportion(task_name, 1, cmd_story_ids.blockpost_commander, "blockpost_commander_dead", "commander_talk_done")
+	need_infoportion(task_name, 2, cmd_story_ids.buddy, "buddy_dead", "buddy_talk_done")
+	need_infoportion(task_name, 3, cmd_story_ids.kuznetsov_commander, "kuznetsov_dead", "kuznetsov_talk_done")
+	
+	local buddy_dead = (has_alife_info("buddy_dead") and not has_alife_info("buddy_talk_done"))
+	local blockpost_dead = (has_alife_info("blockpost_commander_dead") and not has_alife_info("commander_talk_done"))
+	local kuznetsov_dead = (has_alife_info("kuznetsov_dead") and not has_alife_info("kuznetsov_talk_done"))
+	local all_dead = (buddy_dead and blockpost_dead and kuznetsov_dead)
+	
+	if (all_dead and not has_alife_info("priboy_commanders_dead")) then
+		db.actor:give_info_portion("priboy_commanders_dead")
+		return false
+	end
+	
+	return can_finish_commanders_task()
+end

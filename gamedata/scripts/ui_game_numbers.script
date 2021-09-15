@@ -1,0 +1,225 @@
+--[[ -----------------------------------------------------------------------------------------------
+ File           : ui_game_numbers.script
+ Description    : Числа/Угадай число
+ Copyright      : 2011 © Stalk15
+ Author         : Stalk15
+ Last edit      : 26.02.2011
+--]] -----------------------------------------------------------------------------------------------
+
+local xml = CScriptXmlInit()
+local GuessedNum, MessGuessedNum, PGuessNum, CPUPGuessNum, betWN = 0, false, 0, 0, 0
+local stretch_val = math.min(device().width/1024, 2.5)
+
+function is_wide()
+	if stretch_val >= 1.3 then
+		xh, xn, xt  = 235, 173, 173
+	else
+		xh, xn, xt  = 316, 322, 322
+	end
+end
+
+class "numbers" (CUIScriptWnd)
+function numbers:__init(organizer) super()
+	self:InitControls()
+	self:InitCallBacks()
+end
+
+function numbers:__finalize()
+end
+
+local btn_start_WN, btn_guess_num, btn_play_else_WN, btn_on_guess_num
+function numbers:InitControls()
+	self:Init(0,0,1024,768)
+	self.OnExit = function() level.start_stop_menu(self, true) end
+	xml:ParseFile("pda_options.xml")
+
+	xml:InitStatic("numbers:back",self)
+	xml:InitStatic("numbers:pda",self)
+	xml:InitStatic("numbers:header",self)
+	self.Wind_WhatNum = xml:InitFrame("numbers:frame",self)
+	xml:InitFrame("numbers:field",self)
+	xml:InitFrame("numbers:buttons",self)
+	xml:InitFrameLine("numbers:bet_bar",self)
+	xml:InitFrameLine("numbers:field_bar",self)
+
+	self.off = xml:Init3tButton("numbers:off",self)
+	self:Register(self.off,"btn_off")
+
+	money = xml:InitStatic("numbers:money",self)
+	money:SetText(db.actor:money().." RU")
+
+	self.bet_lbl = xml:InitStatic("numbers:bet", self)
+	self.bet_lbl:SetText("Ставка:")
+	self.edit_bet = xml:InitEditBox("numbers:edit_box_bet", self)
+
+	self.GuessNumEB = xml:InitEditBox("numbers:edit_box", self)
+	self.GuessNumEB:Show(false)
+
+	self.start = xml:Init3tButton("numbers:btn_start", self)
+	self.start:SetText("Начать игру")
+	self:Register(self.start, "start")
+
+	self.play_else = xml:Init3tButton("numbers:btn_play_else", self)
+	self.play_else:SetText("Сыгрыть еще раз")
+	self:Register(self.play_else,"play_else")
+
+	self.quit = xml:Init3tButton("numbers:btn_quit", self)
+	self.quit:SetText("Выйти из игры")
+	self:Register(self.quit,"quit")
+
+	self.guess_num = xml:Init3tButton("numbers:btn_guess_num", self)
+	self.guess_num:SetText("Угадать число")
+	self:Register(self.guess_num, "guess_num")
+
+	self.on_guess_num = xml:Init3tButton("numbers:btn_on_guess_num", self)
+	self.on_guess_num:SetText("Загадать число")
+	self:Register(self.on_guess_num, "on_guess_num")
+
+	btn_start_WN = self:GetButton("start")
+	btn_guess_num = self:GetButton("guess_num")
+	btn_play_else_WN = self:GetButton("play_else")
+	btn_on_guess_num = self:GetButton("on_guess_num")
+	btn_guess_num:Enable(false)
+	btn_play_else_WN:Enable(false)
+	btn_on_guess_num:Enable(false)
+end
+
+function numbers:InitCallBacks()
+	self:AddCallback("btn_off", ui_events.BUTTON_DOWN, self.OnExit, self)
+	self:AddCallback("start", ui_events.BUTTON_CLICKED, self.btn_start, self)
+	self:AddCallback("guess_num", ui_events.BUTTON_CLICKED, self.btn_guess_num, self)
+	self:AddCallback("on_guess_num", ui_events.BUTTON_CLICKED, self.btn_on_guess_num, self)
+	self:AddCallback("play_else", ui_events.BUTTON_CLICKED, self.btn_play_else, self)
+	self:AddCallback("quit", ui_events.BUTTON_CLICKED, self.btn_quit, self)
+end
+
+function numbers:btn_start()
+	local GNum = tonumber(self.edit_bet:GetText())
+	if GNum > 1000 or GNum < 100 or db.actor:money() < GNum then
+		level.start_stop_menu(ui_game_blackjack.GameMessage("минимальная ....................................... 100 RU\\nмаксимальная .................................... 1000 RU", "СТАВКА"), true)
+		return false
+	else
+		betWN = GNum
+	end
+	GuessedNum = math.random(1, 100)
+	btn_start_WN:Enable(false)
+	self:on_game_info()
+	self.GuessNumEB:Show(true)
+	btn_guess_num:Enable(true)
+	answer = xml:InitStatic("numbers:answer",self)
+	answer:SetText(GuessedNum)
+end
+
+function numbers:btn_guess_num()
+	PGuessNum = PGuessNum + 1
+	self:on_game_info()
+	is_wide()
+	local GNum = tonumber(self.GuessNumEB:GetText())
+	if GNum == GuessedNum then
+		btn_guess_num:Enable(false)
+		btn_on_guess_num:Enable(true)
+		self.Wind_WhatNum:DetachChild (self.Help)
+		self.Help = CUIStatic()
+		self.Help:Init(xh,185,512,30)
+		self.Help:SetText("Введите число и нажмите 'Загадать'")
+		self.Help:SetTextColor(255,170,170,170)
+		self.Help:SetFont(GetFontLetterica16Russian())
+		self.Help:SetTextAlign(CGameFont.alLeft)
+		self.Wind_WhatNum:AttachChild (self.Help)
+		return false
+	end
+	if GNum < GuessedNum then
+		level.start_stop_menu(ui_game_blackjack.GameMessage("            Нужно число %c[pda_ok]побольше", "НЕПРАВИЛЬНО"), true)
+	else
+		level.start_stop_menu(ui_game_blackjack.GameMessage("            Нужно число %c[pda_error]поменьше", "НЕПРАВИЛЬНО"), true)
+	end
+end
+
+function numbers:btn_on_guess_num()
+	CPUPGuessNum = math.random(math.random(2, 5), math.random(6, 9))
+	local win = xr_sound.get_safe_sound_object([[device\pda\pda_game_win2]])
+	local lose = xr_sound.get_safe_sound_object([[device\pda\pda_game_over]])
+	local tie = xr_sound.get_safe_sound_object([[device\pda\pda_tip]])
+	local Txt = "Ваши попытки .............................................. "..PGuessNum.."\\nПопытки соперника ...................................... "..CPUPGuessNum
+	if CPUPGuessNum < PGuessNum then
+		level.start_stop_menu(ui_game_blackjack.GameMessage(Txt.."\\nДеньги ..............................................%c[pda_error] -"..betWN.." RU", "%c[pda_error]ВЫ ПРОИГРАЛИ"), true)
+		lose:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1)
+		db.actor:give_money(-betWN)
+	elseif CPUPGuessNum > PGuessNum then
+		level.start_stop_menu(ui_game_blackjack.GameMessage(Txt.."\\nДеньги ..............................................%c[pda_ok] +"..betWN.." RU", "%c[pda_ok]ВЫ ВЫИГРАЛИ"), true)
+		win:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1)
+		db.actor:give_money(betWN)
+	else
+		level.start_stop_menu(ui_game_blackjack.GameMessage(Txt, "НИЧЬЯ"), true)
+		tie:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1)
+	end
+	btn_on_guess_num:Enable(false)
+	btn_play_else_WN:Enable(true)
+	money:SetText(db.actor:money().." RU")
+end
+
+
+function numbers:btn_play_else()
+	self:Reset()
+	btn_start_WN:Enable(true)
+	btn_play_else_WN:Enable(false)
+end
+
+function numbers:btn_quit()
+	self:Reset()
+	self:GetHolder():start_stop_menu(self, true)
+end
+
+function numbers:Reset()
+	if MessGuessedNum then
+		self.Wind_WhatNum:DetachChild (self.NumGuessed)
+		self.Wind_WhatNum:DetachChild (self.Help)
+	end
+	if PGuessNum > 0 then
+		self.Wind_WhatNum:DetachChild (self.text_GInfo2)
+	end
+	btn_guess_num:Enable(false)
+	btn_start_WN:Enable(true)
+	self.GuessNumEB:Show(false)
+	btn_on_guess_num:Enable(false)
+	GuessedNum, MessGuessedNum, PGuessNum, CPUPGuessNum = 0, false, 0, 0
+end
+
+function numbers:on_game_info()
+	is_wide()
+	if MessGuessedNum then
+		self.Wind_WhatNum:DetachChild (self.NumGuessed)
+	end
+	if not MessGuessedNum then
+		self.NumGuessed = CUIStatic()
+		self.NumGuessed:Init(xn,334,512,30)
+		self.NumGuessed:SetText("ЧИСЛО ЗАГАДАНО")
+		self.NumGuessed:SetTextColor(255,170,170,170)
+		self.NumGuessed:SetFont(GetFontLetterica18Russian())
+		self.NumGuessed:SetTextAlign(CGameFont.alCenter)
+		self.Wind_WhatNum:AttachChild (self.NumGuessed)
+
+		self.Help = CUIStatic()
+		self.Help:Init(xh,185,512,30)
+		self.Help:SetText("Введите число и нажмите 'Угадать'")
+		self.Help:SetTextColor(255,170,170,170)
+		self.Help:SetFont(GetFontLetterica16Russian())
+		self.Help:SetTextAlign(CGameFont.alLeft)
+		self.Wind_WhatNum:AttachChild (self.Help)
+
+		MessGuessedNum = true
+	else
+		self.Wind_WhatNum:DetachChild (self.text_GInfo2)
+		self.text_GInfo2 = CUIStatic()
+		self.text_GInfo2:Init(xt,336,512,30)
+		self.text_GInfo2:SetText("Использовано попыток: "..PGuessNum)
+		self.text_GInfo2:SetTextColor(255,170,170,170)
+		self.text_GInfo2:SetFont(GetFontLetterica18Russian())
+		self.text_GInfo2:SetTextAlign(CGameFont.alCenter)
+		self.Wind_WhatNum:AttachChild (self.text_GInfo2)
+	end
+end
+
+function game_what_num_start()
+    level.start_stop_menu(ui_game_blackjack.numbers(), true)
+end
