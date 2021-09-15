@@ -1,0 +1,7 @@
+xrspawner:
+
+poziciok ha az y=0
+
+alja=0
+kozep=12
+felso=22
