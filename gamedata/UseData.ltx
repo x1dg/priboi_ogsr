@@ -1,0 +1,7 @@
+[Function]:Script
+Script = ui_main_menu.script
+Body = function main_menu:OnButton_spawns_clicked()\r\n\tif self.spawn_dlg == nil then\r\n\t\tself.spawn_dlg = ui_si.spawn_item_dialog()\r\n\t\tself.spawn_dlg.owner = self\r\n\tend\r\n\tself:GetHolder():start_stop_menu(self.spawn_dlg, true)\r\n\tself:Show(false)\r\nend
+
+[OnKeyboard]:Script
+Script = ui_main_menu.script
+Body = \tif dik == DIK_keys.DIK_F1 then\r\n\t\tself:OnButton_spawns_clicked()\r\n\tend

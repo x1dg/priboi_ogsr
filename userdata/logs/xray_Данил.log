@@ -1,0 +1,297 @@
+
+[15.09.21 14:17:47.734] * Detected CPU: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz [GenuineIntel], F6/M158/S10
+[15.09.21 14:17:47.735] * CPU features: RDTSC, MMX, SSE, SSE2, SSE3, MONITOR/MWAIT, SSSE3, SSE4.1, SSE4.2, AVX, AVX2
+[15.09.21 14:17:47.735] * CPU cores: [6], threads: [6]
+[15.09.21 14:17:47.735] * CPU0 current freq: 2808 MHz, max freq: 2808 MHz
+[15.09.21 14:17:47.735] * CPU1 current freq: 2808 MHz, max freq: 2808 MHz
+[15.09.21 14:17:47.735] * CPU2 current freq: 2808 MHz, max freq: 2808 MHz
+[15.09.21 14:17:47.735] * CPU3 current freq: 2808 MHz, max freq: 2808 MHz
+[15.09.21 14:17:47.735] * CPU4 current freq: 2808 MHz, max freq: 2808 MHz
+[15.09.21 14:17:47.735] * CPU5 current freq: 2808 MHz, max freq: 2808 MHz
+[15.09.21 14:17:47.735] Initializing File System...
+[15.09.21 14:17:47.736] --Found base arch: [z:\programs\priboi ogsr\gamedata.db0], size: [678577379]
+[15.09.21 14:17:47.772] --Found base arch: [z:\programs\priboi ogsr\gamedata.db1], size: [708434331]
+[15.09.21 14:17:47.776] --Found base arch: [z:\programs\priboi ogsr\gamedata.db2], size: [671169415]
+[15.09.21 14:17:47.777] --Found base arch: [z:\programs\priboi ogsr\gamedata.db3], size: [684792231]
+[15.09.21 14:17:47.780] --Found base arch: [z:\programs\priboi ogsr\gamedata.db4], size: [671392842]
+[15.09.21 14:17:48.094] --Found base arch: [z:\programs\priboi ogsr\gamedata.db5], size: [697475082]
+[15.09.21 14:17:48.124] --Found base arch: [z:\programs\priboi ogsr\gamedata.db6], size: [672288151]
+[15.09.21 14:17:48.125] --Found base arch: [z:\programs\priboi ogsr\gamedata.db7], size: [672462598]
+[15.09.21 14:17:48.142] --Found base arch: [z:\programs\priboi ogsr\gamedata.db8], size: [293378144]
+[15.09.21 14:17:48.155] --Found base arch: [z:\programs\priboi ogsr\gamedata.db9], size: [79312307]
+[15.09.21 14:17:48.179] --Found base arch: [z:\programs\priboi ogsr\gamedata.dba], size: [22884835]
+[15.09.21 14:17:48.185] --Found base arch: [z:\programs\priboi ogsr\gamedata.dbb], size: [55194918]
+[15.09.21 14:17:48.189] --Found base arch: [z:\programs\priboi ogsr\gamedata.dbc], size: [160948]
+[15.09.21 14:17:48.189] --Found base arch: [z:\programs\priboi ogsr\gamedata.dbd], size: [101014]
+[15.09.21 14:17:48.190] using fs-ltx fsgame.ltx
+[15.09.21 14:17:48.190] --Found FS dir: [z:\programs\priboi ogsr\userdata\]
+[15.09.21 14:17:48.190]   files: [6]
+[15.09.21 14:17:48.191] --Found FS dir: [z:\programs\priboi ogsr\gamedata\]
+[15.09.21 14:17:48.191]   files: [16]
+[15.09.21 14:17:48.191] --Found FS dir: [z:\programs\priboi ogsr\gamedata\spawns\]
+[15.09.21 14:17:48.191]   files: [3]
+[15.09.21 14:17:48.191] --Found FS dir: [z:\programs\priboi ogsr\gamedata\anims\]
+[15.09.21 14:17:48.192]   files: [23]
+[15.09.21 14:17:48.193] --Found FS dir: [z:\programs\priboi ogsr\gamedata\levels\]
+[15.09.21 14:17:48.193]   files: [12]
+[15.09.21 14:17:48.195] --Found FS dir: [z:\programs\priboi ogsr\gamedata\meshes\]
+[15.09.21 14:17:48.195]   files: [11]
+[15.09.21 14:17:48.218] --Found FS dir: [z:\programs\priboi ogsr\gamedata\meshes\]
+[15.09.21 14:17:48.218]   files: [11]
+[15.09.21 14:17:48.231] --Found FS dir: [z:\programs\priboi ogsr\gamedata\shaders\]
+[15.09.21 14:17:48.231]   files: [7]
+[15.09.21 14:17:48.240] --Found FS dir: [z:\programs\priboi ogsr\gamedata\sounds\]
+[15.09.21 14:17:48.240]   files: [22]
+[15.09.21 14:17:48.261] --Found FS dir: [z:\programs\priboi ogsr\gamedata\textures\]
+[15.09.21 14:17:48.261]   files: [59]
+[15.09.21 14:17:48.414] --Found FS dir: [z:\programs\priboi ogsr\gamedata\scripts\]
+[15.09.21 14:17:48.415]   files: [127]
+[15.09.21 14:17:48.416] --Found FS dir: [z:\programs\priboi ogsr\gamedata\config\]
+[15.09.21 14:17:48.416]   files: [30]
+[15.09.21 14:17:48.430] --Found FS dir: [z:\programs\priboi ogsr\gamedata\levels\]
+[15.09.21 14:17:48.430]   files: [12]
+[15.09.21 14:17:48.430] --Found FS dir: [z:\programs\priboi ogsr\userdata\savedgames\]
+[15.09.21 14:17:48.430]   files: [7]
+[15.09.21 14:17:48.430] --Found FS dir: [z:\programs\priboi ogsr\userdata\logs\]
+[15.09.21 14:17:48.430]   files: [15]
+[15.09.21 14:17:48.430] --Found FS dir: [z:\programs\priboi ogsr\userdata\screenshots\]
+[15.09.21 14:17:48.430]   files: [3]
+[15.09.21 14:17:48.430] --Found FS dir: [z:\programs\priboi ogsr\mods\]
+[15.09.21 14:17:48.430]   files: [3]
+[15.09.21 14:17:48.430] --Found external arch: [mp_military_2.xdb0], size: [50350518]
+[15.09.21 14:17:48.437] FS: 34507 files cached, 6110Kb memory used.
+[15.09.21 14:17:48.438] Init FileSystem 0.702352 sec
+[15.09.21 14:17:48.439] [OGSR Engine (x64)] build date: [Jul 12 2021 17:26:24]
+[15.09.21 14:17:48.439] [AppVeyor] build version: [2.1.247], repo: [OGSR/OGSR-Engine]
+[15.09.21 14:17:48.439] [_MSC_FULL_VER]: [192930038], [_MSVC_LANG]: [201703L]
+[15.09.21 14:17:48.439] Working Directory: [Z:\Programs\Priboi OGSR\bin_x64]
+[15.09.21 14:17:48.439] CommandLine: ["Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe" ]
+[15.09.21 14:17:48.638] Initializing Engine...
+[15.09.21 14:17:48.640] Starting INPUT device...
+[15.09.21 14:17:48.693] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[15.09.21 14:17:48.693] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[15.09.21 14:17:48.702] refCount:m_pAdapter 1
+[15.09.21 14:17:48.702] refCount:pFactory 1
+[15.09.21 14:17:48.702] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[15.09.21 14:17:48.702] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[15.09.21 14:17:48.813] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[15.09.21 14:17:48.813] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[15.09.21 14:17:48.814] --[CEngineAPI::CreateRendererList] Available render modes [5]:
+[15.09.21 14:17:48.814] --  [renderer_r2a]
+[15.09.21 14:17:48.814] --  [renderer_r2]
+[15.09.21 14:17:48.814] --  [renderer_r2.5]
+[15.09.21 14:17:48.814] --  [renderer_r3]
+[15.09.21 14:17:48.814] --  [renderer_r4]
+[15.09.21 14:17:48.814] Executing config-script "user.ltx"...
+[15.09.21 14:17:48.814] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
+[15.09.21 14:17:48.814] [z:\programs\priboi ogsr\userdata\user.ltx] successfully loaded.
+[15.09.21 14:17:48.814] --Loading DLL: [xrRender_R2.dll]
+[15.09.21 14:17:48.816] --Loading DLL: [xrGame.dll]
+[15.09.21 14:17:48.830] --------------------------------------------------------------------------------
+[15.09.21 14:17:48.830] [8143MB] physical memory installed, [3988MB] available, [51] percent of memory in use
+[15.09.21 14:17:48.830] PageFile usage: [42MB], Peak PageFile usage: [88MB]
+[15.09.21 14:17:48.830] --------------------------------------------------------------------------------
+[15.09.21 14:17:48.830] * [ D3D ]: textures[0 K]
+[15.09.21 14:17:48.830] * [x-ray]: process heap[21206 K], render[0 K]
+[15.09.21 14:17:48.830] * [x-ray]: economy: strings[4822 K], smem[0 K]
+[15.09.21 14:17:48.830] SOUND: OpenAL: enumerate devices...
+[15.09.21 14:17:48.830] SOUND: OpenAL: EnumerationExtension Present
+[15.09.21 14:17:48.929] devices Generic Software
+[15.09.21 14:17:48.929] SOUND: OpenAL: system  default SndDevice name is Generic Software
+[15.09.21 14:17:49.213] SOUND: OpenAL: All available devices:
+[15.09.21 14:17:49.213] 1. Generic Software, Spec Version 1.1 (default) eax[2] efx[no] xram[no]
+[15.09.21 14:17:49.213] 2. OpenAL Soft, Spec Version 1.1  eax[0] efx[yes] xram[no]
+[15.09.21 14:17:49.214] Executing config-script "z:\programs\priboi ogsr\gamedata\config\default_controls.ltx"...
+[15.09.21 14:17:49.219] [z:\programs\priboi ogsr\gamedata\config\default_controls.ltx] successfully loaded.
+[15.09.21 14:17:49.219] Executing config-script "user.ltx"...
+[15.09.21 14:17:49.220] Executing config-script "z:\programs\priboi ogsr\gamedata\config\rspec_extreme.ltx"...
+[15.09.21 14:17:49.222] ! Unknown command:  r2_sun_shafts
+[15.09.21 14:17:49.222] ! Unknown command:  r__supersample
+[15.09.21 14:17:49.222] [z:\programs\priboi ogsr\gamedata\config\rspec_extreme.ltx] successfully loaded.
+[15.09.21 14:17:49.222] Executing config-script "z:\programs\priboi ogsr\gamedata\config\default_controls.ltx"...
+[15.09.21 14:17:49.223] [z:\programs\priboi ogsr\gamedata\config\default_controls.ltx] successfully loaded.
+[15.09.21 14:17:49.225] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
+[15.09.21 14:17:49.225] [z:\programs\priboi ogsr\userdata\user.ltx] successfully loaded.
+[15.09.21 14:17:49.225] SOUND: Selected device is Generic Software
+[15.09.21 14:17:49.266] [OpenAL] EAX 2.0 extension: present
+[15.09.21 14:17:49.266] [OpenAL] EAX 2.0 deferred: present
+[15.09.21 14:17:49.267] * sound : cache: 65537 kb, 4856 lines, 13820 bpl
+[15.09.21 14:17:49.298] Starting RENDER device...
+[15.09.21 14:17:49.331] * GPU [vendor:10DE]-[device:1C81]: NVIDIA GeForce GTX 1050
+[15.09.21 14:17:49.331] * GPU driver: 30.0.14.7196
+[15.09.21 14:17:49.431] * CREATE: DeviceREF: 1
+[15.09.21 14:17:49.431] * Vertex Processor: PURE HARDWARE
+[15.09.21 14:17:49.432] *     Texture memory: 4072 M
+[15.09.21 14:17:49.432] *          DDI-level: 9.0
+[15.09.21 14:17:49.434] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+[15.09.21 14:17:49.435] * GPU vertex cache: unrecognized, 16
+[15.09.21 14:17:49.439] * DVB created: 16384K
+[15.09.21 14:17:49.439] * DIB created: 512K
+[15.09.21 14:17:49.476] ! Version conflict in shader 'models\lightplanes_00'
+[15.09.21 14:17:49.476] ! Version conflict in shader 'models\lightplanesself'
+[15.09.21 14:17:49.476] ! Version conflict in shader 'models\model_puh'
+[15.09.21 14:17:49.476] ! Version conflict in shader 'models\model_refl'
+[15.09.21 14:17:49.476] ! Version conflict in shader 'models\xbrainglass'
+[15.09.21 14:17:49.476] ! Version conflict in shader 'models\xdistortcolorlinv'
+[15.09.21 14:17:49.476] ! Version conflict in shader 'models\xglass'
+[15.09.21 14:17:49.476] ! Version conflict in shader 'models\xglass2'
+[15.09.21 14:17:49.476] ! Version conflict in shader 'models\xlens'
+[15.09.21 14:17:49.476] ! Version conflict in shader 'selflight_static'
+[15.09.21 14:17:49.478] [CTextureDescrMngr::LoadLTX] count of *textures*.ltx files: [1]
+[15.09.21 14:17:49.611] * NULLRT supported
+[15.09.21 14:17:49.612] * ...and used
+[15.09.21 14:17:49.612] * HWDST/PCF supported and used
+[15.09.21 14:17:49.612] * NV-DBT supported and used
+[15.09.21 14:17:50.876] --LUA version: [LuaJIT 2.1.0-beta3]
+[15.09.21 14:17:50.929] Starting engine...
+[15.09.21 14:17:53.638] * phase time: 12 ms
+[15.09.21 14:17:53.664] * phase cmem: 135455 K
+[15.09.21 14:17:53.718] --LUA version: [LuaJIT 2.1.0-beta3]
+[15.09.21 14:17:53.744] * phase time: 105 ms
+[15.09.21 14:17:53.770] * phase cmem: 141677 K
+[15.09.21 14:17:53.771] * phase time: 26 ms
+[15.09.21 14:17:53.797] * phase cmem: 141677 K
+[15.09.21 14:17:53.797] * Creating new game...
+[15.09.21 14:17:53.803] * Loading spawn registry...
+[15.09.21 14:17:54.266] * 8976 spawn points are successfully loaded
+[15.09.21 14:17:56.486] * Saving spawns...
+[15.09.21 14:17:56.486] * Saving objects...
+[15.09.21 14:17:56.512] * 17266 objects are successfully saved
+[15.09.21 14:17:56.518] * Game all.sav is successfully saved to file 'z:\programs\priboi ogsr\userdata\savedgames\all.sav'
+[15.09.21 14:17:56.518] * New game is successfully created!
+[15.09.21 14:17:56.518] * phase time: 2747 ms
+[15.09.21 14:17:56.564] * phase cmem: 192845 K
+[15.09.21 14:17:56.607] # Player not found. New player created.
+[15.09.21 14:17:56.608] !!xrServer::Check_GameSpy_CDKey_Success - 1
+[15.09.21 14:17:56.608] * client : connection accepted - <>
+[15.09.21 14:17:56.609] * phase time: 91 ms
+[15.09.21 14:17:56.656] * phase cmem: 192905 K
+[15.09.21 14:17:56.656] * phase time: 47 ms
+[15.09.21 14:17:56.703] * phase cmem: 192905 K
+[15.09.21 14:17:58.151] --[ISpatial_DB::initialize] bbc is [43.8, 37.6, 88.9], bbd is [722.7, 76.3, 722.7]
+[15.09.21 14:17:58.151] --[ISpatial_DB::initialize] bbc is [43.8, 37.6, 88.9], bbd is [722.7, 76.3, 722.7]
+[15.09.21 14:17:58.156] * phase time: 1499 ms
+[15.09.21 14:17:58.202] * phase cmem: 287080 K
+[15.09.21 14:17:58.396] * phase time: 239 ms
+[15.09.21 14:17:58.443] * phase cmem: 290365 K
+[15.09.21 14:17:58.444] * [Loading VB] 65532 verts, 2047 Kb
+[15.09.21 14:17:58.457] * [Loading VB] 65525 verts, 2047 Kb
+[15.09.21 14:17:58.466] * [Loading VB] 65535 verts, 2047 Kb
+[15.09.21 14:17:58.474] * [Loading VB] 65466 verts, 2045 Kb
+[15.09.21 14:17:58.482] * [Loading VB] 17208 verts, 537 Kb
+[15.09.21 14:17:58.484] * [Loading VB] 65533 verts, 2047 Kb
+[15.09.21 14:17:58.492] * [Loading VB] 65534 verts, 2047 Kb
+[15.09.21 14:17:58.501] * [Loading VB] 65534 verts, 2047 Kb
+[15.09.21 14:17:58.509] * [Loading VB] 65531 verts, 2047 Kb
+[15.09.21 14:17:58.517] * [Loading VB] 65535 verts, 2047 Kb
+[15.09.21 14:17:58.526] * [Loading VB] 65535 verts, 2047 Kb
+[15.09.21 14:17:58.534] * [Loading VB] 46595 verts, 1456 Kb
+[15.09.21 14:17:58.540] * [Loading VB] 65534 verts, 2047 Kb
+[15.09.21 14:17:58.549] * [Loading VB] 65533 verts, 2047 Kb
+[15.09.21 14:17:58.557] * [Loading VB] 65535 verts, 2047 Kb
+[15.09.21 14:17:58.566] * [Loading VB] 65532 verts, 2047 Kb
+[15.09.21 14:17:58.574] * [Loading VB] 65533 verts, 2047 Kb
+[15.09.21 14:17:58.582] * [Loading VB] 65533 verts, 2047 Kb
+[15.09.21 14:17:58.590] * [Loading VB] 53181 verts, 1661 Kb
+[15.09.21 14:17:58.597] * [Loading IB] 1048575 indices, 2047 Kb
+[15.09.21 14:17:58.608] * [Loading IB] 1048572 indices, 2047 Kb
+[15.09.21 14:17:58.616] * [Loading IB] 1048572 indices, 2047 Kb
+[15.09.21 14:17:58.639] * [Loading IB] 1048572 indices, 2047 Kb
+[15.09.21 14:17:58.648] * [Loading IB] 1048572 indices, 2047 Kb
+[15.09.21 14:17:58.655] * [Loading IB] 1048572 indices, 2047 Kb
+[15.09.21 14:17:58.663] * [Loading IB] 1048575 indices, 2047 Kb
+[15.09.21 14:17:58.671] * [Loading IB] 1048572 indices, 2047 Kb
+[15.09.21 14:17:58.679] * [Loading IB] 1048575 indices, 2047 Kb
+[15.09.21 14:17:58.687] * [Loading IB] 228285 indices, 445 Kb
+[15.09.21 14:17:58.689] * [Loading VB] 65533 verts, 767 Kb
+[15.09.21 14:17:58.693] * [Loading VB] 65534 verts, 767 Kb
+[15.09.21 14:17:58.695] * [Loading VB] 65534 verts, 767 Kb
+[15.09.21 14:17:58.699] * [Loading VB] 65535 verts, 767 Kb
+[15.09.21 14:17:58.702] * [Loading VB] 65535 verts, 767 Kb
+[15.09.21 14:17:58.706] * [Loading VB] 65534 verts, 767 Kb
+[15.09.21 14:17:58.709] * [Loading VB] 65535 verts, 767 Kb
+[15.09.21 14:17:58.712] * [Loading VB] 14030 verts, 164 Kb
+[15.09.21 14:17:58.713] * [Loading IB] 1048575 indices, 2047 Kb
+[15.09.21 14:17:58.723] * [Loading IB] 1048575 indices, 2047 Kb
+[15.09.21 14:17:58.730] * [Loading IB] 1048575 indices, 2047 Kb
+[15.09.21 14:17:58.740] * [Loading IB] 718302 indices, 1402 Kb
+[15.09.21 14:17:58.746] * phase time: 349 ms
+[15.09.21 14:17:58.793] * phase cmem: 359250 K
+[15.09.21 14:17:59.383] * phase time: 637 ms
+[15.09.21 14:17:59.431] * phase cmem: 364471 K
+[15.09.21 14:17:59.462] * [DETAILS] VertexConsts(256), Batch(61)
+[15.09.21 14:17:59.462] * [DETAILS] 14640 v(20), 9455 p
+[15.09.21 14:17:59.462] * [DETAILS] Batch(61), VB(285K), IB(55K)
+[15.09.21 14:17:59.462] * phase time: 78 ms
+[15.09.21 14:17:59.511] * phase cmem: 364867 K
+[15.09.21 14:17:59.512] * Loading HOM: z:\programs\priboi ogsr\gamedata\levels\l01_escape\level.hom
+[15.09.21 14:17:59.515] * phase time: 52 ms
+[15.09.21 14:17:59.564] * phase cmem: 365091 K
+[15.09.21 14:17:59.565] * phase time: 50 ms
+[15.09.21 14:17:59.614] * phase cmem: 365091 K
+[15.09.21 14:17:59.633] - Game configuring : Started 
+[15.09.21 14:17:59.647] - Game configuring : Finished 
+[15.09.21 14:17:59.787] * phase time: 221 ms
+[15.09.21 14:17:59.836] * phase cmem: 375380 K
+[15.09.21 14:18:06.408] * t-report - base: 1194, 1084163 K
+[15.09.21 14:18:06.408] * t-report - lmap: 7, 7168 K
+[15.09.21 14:18:06.408] * phase time: 6621 ms
+[15.09.21 14:18:06.467] * phase cmem: 1515922 K
+[15.09.21 14:18:06.477] * phase time: 69 ms
+[15.09.21 14:18:06.535] * phase cmem: 1515926 K
+[15.09.21 14:18:06.603] --------------------------------------------------------------------------------
+[15.09.21 14:18:06.603] [8143MB] physical memory installed, [2638MB] available, [67] percent of memory in use
+[15.09.21 14:18:06.603] PageFile usage: [1809MB], Peak PageFile usage: [1811MB]
+[15.09.21 14:18:06.603] --------------------------------------------------------------------------------
+[15.09.21 14:18:06.603] * [ D3D ]: textures[1091332 K]
+[15.09.21 14:18:06.603] * [x-ray]: process heap[1515195 K], render[0 K]
+[15.09.21 14:18:06.603] * [x-ray]: economy: strings[7308 K], smem[0 K]
+[15.09.21 14:18:07.182] ! Can't find texture 'wpn\crosshairs\binoc'
+[15.09.21 14:18:07.190] ! Can't find texture 'wpn\crosshairs\binoc'
+[15.09.21 14:18:07.230] ! Can't find sound [weapons\knife_2.ogg]
+[15.09.21 14:18:07.230] ! Can't find sound [weapons\knife_3.ogg]
+[15.09.21 14:18:10.352] ! auto-generated bump map: wpn\ots_33\wpn_ots33_gps_bump#
+[15.09.21 14:18:10.372] ! auto-generated bump map: wpn\ots_33\wpn_ots33_frame_bump#
+[15.09.21 14:18:10.383] ! auto-generated bump map: wpn\ots_33\wpn_ots33_mag_bump#
+[15.09.21 14:18:11.178] ! auto-generated bump map: wpn\tec-9\wpn_tec_kg9_gun_bump#
+[15.09.21 14:18:11.189] ! auto-generated bump map: wpn\tec-9\wpn_tec_kg9_mag_bump#
+[15.09.21 14:18:12.246] * Saving spawns...
+[15.09.21 14:18:12.246] * Saving objects...
+[15.09.21 14:18:12.270] * 17266 objects are successfully saved
+[15.09.21 14:18:12.276] * Game Поговорить с командиром блокпоста.sav is successfully saved to file 'z:\programs\priboi ogsr\userdata\savedgames\Поговорить с командиром блокпоста.sav'
+[15.09.21 14:18:13.709] * [CPatrolPathStorage::safe_path]: path[heli_sleep] pp[wp00|sig=heli_sig] level_vertex_id[4294967295] -> 160718
+[15.09.21 14:18:13.757] ! auto-generated bump map: hands\act_arm_0_bump#
+[15.09.21 14:18:13.961] * [CPatrolPathStorage::safe_path]: path[heli_idle_move] pp[wp00] level_vertex_id[4294967295] -> 3499
+[15.09.21 14:18:15.018] * MEMORY USAGE: 1972740 K
+[15.09.21 14:18:15.018] * End of synchronization A[1] R[1]
+[15.09.21 14:18:15.018] * phase time: 8610 ms
+[15.09.21 14:18:15.108] * phase cmem: 1972740 K
+[15.09.21 14:18:15.608] Intro start 199
+[15.09.21 14:18:23.988] - Disconnect
+[15.09.21 14:18:25.669] - Destroying level
+[15.09.21 14:18:25.839] DestroySingleton::RefCounter: 0
+[15.09.21 14:18:25.841] DestroySingleton::RefCounter: 0
+[15.09.21 14:18:25.845] DestroySingleton::RefCounter: 0
+[15.09.21 14:18:25.845] DestroySingleton::RefCounter: 0
+[15.09.21 14:18:25.854] Input:  1
+[15.09.21 14:18:25.861] Config-file [z:\programs\priboi ogsr\userdata\user.ltx] saved successfully
+[15.09.21 14:18:26.074] Destroying Direct3D...
+[15.09.21 14:18:26.075] * [R_occlusion::occq_destroy]: fids[14] used[14] pool[14]
+[15.09.21 14:18:26.075] * [R_occlusion::occq_destroy]: released [0] used and [14] pool queries
+[15.09.21 14:18:26.133] * RM_Dump: textures  : 0
+[15.09.21 14:18:26.133] * RM_Dump: rtargets  : 0
+[15.09.21 14:18:26.133] * RM_Dump: vs        : 0
+[15.09.21 14:18:26.133] * RM_Dump: ps        : 0
+[15.09.21 14:18:26.133] * RM_Dump: dcl       : 0
+[15.09.21 14:18:26.133] * RM_Dump: states    : 0
+[15.09.21 14:18:26.133] * RM_Dump: tex_list  : 0
+[15.09.21 14:18:26.133] * RM_Dump: matrices  : 0
+[15.09.21 14:18:26.133] * RM_Dump: lst_constants: 0
+[15.09.21 14:18:26.133] * RM_Dump: v_passes  : 0
+[15.09.21 14:18:26.133] * RM_Dump: v_elements: 0
+[15.09.21 14:18:26.133] * RM_Dump: v_shaders : 0
+[15.09.21 14:18:26.133] refCount:pBaseZB 1
+[15.09.21 14:18:26.133] refCount:pBaseRT 1
+[15.09.21 14:18:26.133] DeviceREF: 1
+[15.09.21 14:18:26.198] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[15.09.21 14:18:26.198] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries

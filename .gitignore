@@ -1,0 +1,21 @@
+# Precompiled Headers
+*.ipch
+
+# Всякий ненужный мусор:
+*.VC.*
+*.suo
+*.user
+*.exp
+*.aps
+*.TMP
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+*.db*
+*/*.db*
+ArenaExtension/
+gamedata_monolith/
+gamedata_priboi/
+bin*/
