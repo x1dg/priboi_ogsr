@@ -2,7 +2,7 @@
 
 ## Изменения
 - ### [Движок OGSR](https://github.com/OGSR/OGSR-Engine/)
-- ### [Monilith UI](https://ap-pro.ru/forums/topic/2626-ui-monolith-dlya-ogsr-engine/)
+- ### [Monolith UI](https://ap-pro.ru/forums/topic/2626-ui-monolith-dlya-ogsr-engine/)
 - ### [HD Models Addon](https://ap-pro.ru/forums/topic/1410-shadow-of-chernobyl-hd-models-addon/)
 - ### [HQ NPC Pack](https://ap-pro.ru/forums/topic/2376-hq-npc-pack/)
 - ### [Original Icons Rebuild](https://gamebanana.com/mods/27322/)
