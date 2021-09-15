@@ -26,6 +26,10 @@ function actor_binder:__init (obj) super(obj)
 	self.actor_detector = xr_detector.actor_detector()
 end
 ----------------------------------------------------------------------------------------------------------------------
+function actor_binder:__finalize()
+ui_loader.init() -- MonolithUI
+end
+----------------------------------------------------------------------------------------------------------------------
 function actor_binder:net_spawn(data)
 	printf("actor net spawn")		
 
@@ -46,6 +50,7 @@ function actor_binder:net_spawn(data)
 	end
 
 	self.weather_manager:reset()
+	ui_loader.net_spawn(data) -- MonolithUI
 --	game_stats.initialize ()
 
 	if(actor_stats.add_to_ranking~=nil)then
@@ -67,6 +72,7 @@ function actor_binder:net_destroy()
 		actor_stats.remove_from_ranking(self.object:id())
 	end
 --	game_stats.shutdown ()
+	ui_loader.net_destroy() -- MonolithUI
 	db.del_actor(self.object)
 
     sr_light.clean_up ()
@@ -80,6 +86,15 @@ function actor_binder:net_destroy()
 	self.object:set_callback(callback.level_border_enter, nil)
 	self.object:set_callback(callback.level_border_exit, nil)
 	self.object:set_callback(callback.take_item_from_box, nil)
+	self.object:set_callback(callback.use_object, nil) -- использование предмета (MonolithUI)
+	self.object:set_callback(callback.on_key_press, nil) -- нажатие клавиши (MonolithUI)
+	self.object:set_callback(callback.on_key_release, nil) -- отпускание клавиши (MonolithUI)
+	self.object:set_callback(callback.on_ruck, nil) -- перемещение предмета в рюкзак (MonolithUI)
+	self.object:set_callback(callback.on_slot, nil) -- перемещение предмета в слот (MonolithUI)
+	self.object:set_callback(callback.on_actor_weapon_reload, nil) -- перезарядка оружия (MonolithUI)
+	self.object:set_callback(callback.on_cell_item_focus, nil) -- фокус на ячейке (MonolithUI)
+	self.object:set_callback(callback.on_cell_item_focus_lost, nil) -- потеря фокуса на ячейке (MonolithUI)
+	self.object:set_callback(callback.on_mouse_wheel, nil) -- прокрутка колесиком (MonolithUI)
 
 	if sr_psy_antenna.psy_antenna then
 		sr_psy_antenna.psy_antenna:destroy()
@@ -114,6 +129,44 @@ function actor_binder:reinit()
 	self.object:set_callback(callback.level_border_enter, self.level_border_enter, self)
 	self.object:set_callback(callback.level_border_exit, self.level_border_exit, self)
 	self.object:set_callback(callback.take_item_from_box, self.take_item_from_box, self)
+
+	self.object:set_callback(callback.use_object, self.on_use, self) -- MonolithUI
+	self.object:set_callback(callback.on_key_press, self.on_key, self) -- MonolithUI
+	self.object:set_callback(callback.on_key_release, self.on_key_free, self) -- MonolithUI
+	self.object:set_callback(callback.on_ruck, self.item_to_backpack, self) -- MonolithUI
+	self.object:set_callback(callback.on_slot, self.item_to_slot, self) -- MonolithUI
+	self.object:set_callback(callback.on_actor_weapon_reload, self.weapon_reload, self) -- MonolithUI
+	self.object:set_callback(callback.on_cell_item_focus, self.on_cell_item_focus, self) -- MonolithUI
+	self.object:set_callback(callback.on_cell_item_focus_lost, self.on_cell_item_focus_lost, self) --MonolithUI
+	self.object:set_callback(callback.on_mouse_wheel, self.on_wheel_rotation, self) -- MonolithUI
+end
+----------------------------------------------------------------------------------------------------------------------
+function actor_binder:on_use(obj) -- MonolithUI
+	ui_loader.on_use(obj)
+end
+function actor_binder:on_key(dik) -- MonolithUI
+	ui_loader.on_key(dik)
+end
+function actor_binder:on_key_free(dik) -- MonolithUI
+	ui_loader.on_key_free(dik)
+end
+function actor_binder:item_to_backpack(obj) -- MonolithUI
+	ui_loader.item_to_backpack(obj)
+end
+function actor_binder:item_to_slot(obj) -- MonolithUI
+	ui_loader.item_to_slot(obj)
+end
+function actor_binder:weapon_reload(obj) -- MonolithUI
+	ui_loader.weapon_reload(obj)
+end
+function actor_binder:on_cell_item_focus(obj) -- MonolithUI
+	ui_loader.on_cell_item_focus(obj)
+end
+function actor_binder:on_cell_item_focus_lost(obj) -- MonolithUI
+	ui_loader.on_cell_item_focus_lost(obj)
+end
+function actor_binder:on_wheel_rotation( vol ) -- MonolithUI
+	ui_loader.on_wheel_rotation(vol)
 end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:take_item_from_box(box, item)
@@ -157,6 +210,7 @@ function actor_binder:info_callback(npc, info_id)
 	printf("*INFO*: npc='%s' id='%s'", npc:name(), info_id)
 	--' Сюжет
 	level_tasks.proceed(self.object)
+	ui_loader.on_info(npc,info_id) -- MonolithUI
 	-- Отметки на карте
 	level_tasks.process_info_portion(info_id)
 end
@@ -183,11 +237,13 @@ end
 function actor_binder:on_item_take (obj)
     level_tasks.proceed(self.object)
     --game_stats.update_take_item (obj, self.object)
+	ui_loader.on_item_take(obj) -- MonolithUI
 end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:on_item_drop (obj)
     level_tasks.proceed(self.object)
     --game_stats.update_drop_item (obj, self.object)
+	ui_loader.on_item_drop(obj) -- MonolithUI
 end
 ----------------------------------------------------------------------------------------------------------------------
 
@@ -338,7 +394,8 @@ function actor_binder:update(delta)
 		level_tasks.add_lchanger_location()
 
 		self.bCheckStart = false		
-	end		
+	end
+	ui_loader.update() -- MonolithUI	
 end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:save(packet)
