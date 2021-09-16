@@ -1,11 +1,9 @@
 <?xml version='1.0' encoding="windows-1251"?>
 
 <xml>
-	
-
 	<specific_character id="actor" no_random = "1">
 		<name>actor_name</name>
-		<icon>ui_npc_u_soldier_spetsnaz</icon>
+		<icon>ui_npc_u_actor</icon>
 		<map_icon x="2" y="0"></map_icon>
 
 		<team>Actor</team>
