@@ -1,879 +1,474 @@
 
-[23.09.21 20:52:35.736] * Detected CPU: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz [GenuineIntel], F6/M158/S10
-[23.09.21 20:52:35.736] * CPU features: RDTSC, MMX, SSE, SSE2, SSE3, MONITOR/MWAIT, SSSE3, SSE4.1, SSE4.2, AVX, AVX2
-[23.09.21 20:52:35.736] * CPU cores: [6], threads: [6]
-[23.09.21 20:52:35.736] * CPU0 current freq: 2808 MHz, max freq: 2808 MHz
-[23.09.21 20:52:35.736] * CPU1 current freq: 2808 MHz, max freq: 2808 MHz
-[23.09.21 20:52:35.736] * CPU2 current freq: 2808 MHz, max freq: 2808 MHz
-[23.09.21 20:52:35.736] * CPU3 current freq: 2808 MHz, max freq: 2808 MHz
-[23.09.21 20:52:35.736] * CPU4 current freq: 2808 MHz, max freq: 2808 MHz
-[23.09.21 20:52:35.736] * CPU5 current freq: 2808 MHz, max freq: 2808 MHz
-[23.09.21 20:52:35.736] Initializing File System...
-[23.09.21 20:52:35.737] --Found base arch: [z:\programs\priboi ogsr\gamedata.db0], size: [678577379]
-[23.09.21 20:52:35.771] --Found base arch: [z:\programs\priboi ogsr\gamedata.db1], size: [708434331]
-[23.09.21 20:52:35.774] --Found base arch: [z:\programs\priboi ogsr\gamedata.db2], size: [671169415]
-[23.09.21 20:52:35.778] --Found base arch: [z:\programs\priboi ogsr\gamedata.db3], size: [684792231]
-[23.09.21 20:52:35.781] --Found base arch: [z:\programs\priboi ogsr\gamedata.db4], size: [671392842]
-[23.09.21 20:52:36.139] --Found base arch: [z:\programs\priboi ogsr\gamedata.db5], size: [697475082]
-[23.09.21 20:52:36.186] --Found base arch: [z:\programs\priboi ogsr\gamedata.db6], size: [672288151]
-[23.09.21 20:52:36.187] --Found base arch: [z:\programs\priboi ogsr\gamedata.db7], size: [672462598]
-[23.09.21 20:52:36.204] --Found base arch: [z:\programs\priboi ogsr\gamedata.db8], size: [293378144]
-[23.09.21 20:52:36.211] --Found base arch: [z:\programs\priboi ogsr\gamedata.db9], size: [79312307]
-[23.09.21 20:52:36.227] --Found base arch: [z:\programs\priboi ogsr\gamedata.dba], size: [22884835]
-[23.09.21 20:52:36.230] --Found base arch: [z:\programs\priboi ogsr\gamedata.dbb], size: [55194918]
-[23.09.21 20:52:36.234] --Found base arch: [z:\programs\priboi ogsr\gamedata.dbc], size: [160948]
-[23.09.21 20:52:36.235] --Found base arch: [z:\programs\priboi ogsr\gamedata.dbd], size: [101014]
-[23.09.21 20:52:36.235] using fs-ltx fsgame.ltx
-[23.09.21 20:52:36.235] --Found FS dir: [z:\programs\priboi ogsr\userdata\]
-[23.09.21 20:52:36.235]   files: [6]
-[23.09.21 20:52:36.239] --Found FS dir: [z:\programs\priboi ogsr\gamedata\]
-[23.09.21 20:52:36.239]   files: [16]
-[23.09.21 20:52:36.239] --Found FS dir: [z:\programs\priboi ogsr\gamedata\spawns\]
-[23.09.21 20:52:36.239]   files: [4]
-[23.09.21 20:52:36.240] --Found FS dir: [z:\programs\priboi ogsr\gamedata\anims\]
-[23.09.21 20:52:36.240]   files: [23]
-[23.09.21 20:52:36.243] --Found FS dir: [z:\programs\priboi ogsr\gamedata\levels\]
-[23.09.21 20:52:36.243]   files: [12]
-[23.09.21 20:52:36.248] --Found FS dir: [z:\programs\priboi ogsr\gamedata\meshes\]
-[23.09.21 20:52:36.248]   files: [12]
-[23.09.21 20:52:36.317] --Found FS dir: [z:\programs\priboi ogsr\gamedata\meshes\]
-[23.09.21 20:52:36.317]   files: [12]
-[23.09.21 20:52:36.325] --Found FS dir: [z:\programs\priboi ogsr\gamedata\shaders\]
-[23.09.21 20:52:36.325]   files: [7]
-[23.09.21 20:52:36.348] --Found FS dir: [z:\programs\priboi ogsr\gamedata\sounds\]
-[23.09.21 20:52:36.348]   files: [22]
-[23.09.21 20:52:36.429] --Found FS dir: [z:\programs\priboi ogsr\gamedata\textures\]
-[23.09.21 20:52:36.430]   files: [60]
-[23.09.21 20:52:36.669] --Found FS dir: [z:\programs\priboi ogsr\gamedata\scripts\]
-[23.09.21 20:52:36.671]   files: [125]
-[23.09.21 20:52:36.672] --Found FS dir: [z:\programs\priboi ogsr\gamedata\config\]
-[23.09.21 20:52:36.673]   files: [30]
-[23.09.21 20:52:36.688] --Found FS dir: [z:\programs\priboi ogsr\gamedata\levels\]
-[23.09.21 20:52:36.688]   files: [12]
-[23.09.21 20:52:36.688] --Found FS dir: [z:\programs\priboi ogsr\userdata\savedgames\]
-[23.09.21 20:52:36.688]   files: [8]
-[23.09.21 20:52:36.688] --Found FS dir: [z:\programs\priboi ogsr\userdata\logs\]
-[23.09.21 20:52:36.688]   files: [17]
-[23.09.21 20:52:36.688] --Found FS dir: [z:\programs\priboi ogsr\userdata\screenshots\]
-[23.09.21 20:52:36.688]   files: [5]
-[23.09.21 20:52:36.688] --Found FS dir: [z:\programs\priboi ogsr\mods\]
-[23.09.21 20:52:36.688]   files: [3]
-[23.09.21 20:52:36.688] --Found external arch: [mp_military_2.xdb0], size: [50350518]
-[23.09.21 20:52:36.693] FS: 34528 files cached, 6113Kb memory used.
-[23.09.21 20:52:36.693] Init FileSystem 0.956305 sec
-[23.09.21 20:52:36.693] [OGSR Engine (x64)] build date: [Sep  6 2021 14:25:13]
-[23.09.21 20:52:36.693] [AppVeyor] build version: [2.1.292], repo: [OGSR/OGSR-Engine]
-[23.09.21 20:52:36.693] [_MSC_FULL_VER]: [191627045], [_MSVC_LANG]: [201703L]
-[23.09.21 20:52:36.693] Working Directory: [Z:\Programs\Priboi OGSR\bin_x64]
-[23.09.21 20:52:36.693] CommandLine: ["Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe" ]
-[23.09.21 20:52:36.783] Initializing Engine...
-[23.09.21 20:52:36.784] Starting INPUT device...
-[23.09.21 20:52:36.852] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[23.09.21 20:52:36.852] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
-[23.09.21 20:52:36.859] refCount:m_pAdapter 1
-[23.09.21 20:52:36.859] refCount:pFactory 1
-[23.09.21 20:52:36.859] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[23.09.21 20:52:36.859] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
-[23.09.21 20:52:36.956] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[23.09.21 20:52:36.957] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
-[23.09.21 20:52:36.957] --[CEngineAPI::CreateRendererList] Available render modes [5]:
-[23.09.21 20:52:36.957] --  [renderer_r2a]
-[23.09.21 20:52:36.957] --  [renderer_r2]
-[23.09.21 20:52:36.957] --  [renderer_r2.5]
-[23.09.21 20:52:36.957] --  [renderer_r3]
-[23.09.21 20:52:36.957] --  [renderer_r4]
-[23.09.21 20:52:36.957] Executing config-script "user.ltx"...
-[23.09.21 20:52:36.957] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
-[23.09.21 20:52:36.957] [z:\programs\priboi ogsr\userdata\user.ltx] successfully loaded.
-[23.09.21 20:52:36.957] --Loading DLL: [xrRender_R2.dll]
-[23.09.21 20:52:36.958] --Loading DLL: [xrGame.dll]
-[23.09.21 20:52:36.972] --------------------------------------------------------------------------------
-[23.09.21 20:52:36.972] [8143MB] physical memory installed, [4317MB] available, [46] percent of memory in use
-[23.09.21 20:52:36.972] PageFile usage: [41MB], Peak PageFile usage: [89MB]
-[23.09.21 20:52:36.972] --------------------------------------------------------------------------------
-[23.09.21 20:52:36.972] * [ D3D ]: textures[0 K]
-[23.09.21 20:52:36.972] * [x-ray]: process heap[21227 K], render[0 K]
-[23.09.21 20:52:36.972] * [x-ray]: economy: strings[4832 K], smem[0 K]
-[23.09.21 20:52:36.972] SOUND: OpenAL: enumerate devices...
-[23.09.21 20:52:36.972] SOUND: OpenAL: EnumerationExtension Present
-[23.09.21 20:52:37.067] devices Generic Software
-[23.09.21 20:52:37.067] SOUND: OpenAL: system  default SndDevice name is Generic Software
-[23.09.21 20:52:37.350] SOUND: OpenAL: All available devices:
-[23.09.21 20:52:37.350] 1. Generic Software, Spec Version 1.1 (default) eax[2] efx[no] xram[no]
-[23.09.21 20:52:37.350] 2. OpenAL Soft, Spec Version 1.1  eax[0] efx[yes] xram[no]
-[23.09.21 20:52:37.350] Executing config-script "z:\programs\priboi ogsr\gamedata\config\default_controls.ltx"...
-[23.09.21 20:52:37.354] [z:\programs\priboi ogsr\gamedata\config\default_controls.ltx] successfully loaded.
-[23.09.21 20:52:37.354] Executing config-script "user.ltx"...
-[23.09.21 20:52:37.355] Executing config-script "z:\programs\priboi ogsr\gamedata\config\rspec_high.ltx"...
-[23.09.21 20:52:37.357] ! Unknown command:  r2_sun_shafts
-[23.09.21 20:52:37.357] ! Unknown command:  r__supersample
-[23.09.21 20:52:37.357] [z:\programs\priboi ogsr\gamedata\config\rspec_high.ltx] successfully loaded.
-[23.09.21 20:52:37.357] Executing config-script "z:\programs\priboi ogsr\gamedata\config\default_controls.ltx"...
-[23.09.21 20:52:37.357] [z:\programs\priboi ogsr\gamedata\config\default_controls.ltx] successfully loaded.
-[23.09.21 20:52:37.359] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
-[23.09.21 20:52:37.359] [z:\programs\priboi ogsr\userdata\user.ltx] successfully loaded.
-[23.09.21 20:52:37.359] SOUND: Selected device is Generic Software
-[23.09.21 20:52:37.393] [OpenAL] EAX 2.0 extension: present
-[23.09.21 20:52:37.393] [OpenAL] EAX 2.0 deferred: present
-[23.09.21 20:52:37.394] * sound : cache: 65537 kb, 4856 lines, 13820 bpl
-[23.09.21 20:52:37.425] Starting RENDER device...
-[23.09.21 20:52:37.457] * GPU [vendor:10DE]-[device:1C81]: NVIDIA GeForce GTX 1050
-[23.09.21 20:52:37.457] * GPU driver: 30.0.14.7196
-[23.09.21 20:52:37.614] * CREATE: DeviceREF: 1
-[23.09.21 20:52:37.614] * Vertex Processor: PURE HARDWARE
-[23.09.21 20:52:37.614] *     Texture memory: 4072 M
-[23.09.21 20:52:37.614] *          DDI-level: 9.0
-[23.09.21 20:52:37.619] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
-[23.09.21 20:52:37.619] * GPU vertex cache: unrecognized, 16
-[23.09.21 20:52:37.622] * DVB created: 16384K
-[23.09.21 20:52:37.622] * DIB created: 512K
-[23.09.21 20:52:37.663] ! Version conflict in shader 'models\lightplanes_00'
-[23.09.21 20:52:37.663] ! Version conflict in shader 'models\lightplanesself'
-[23.09.21 20:52:37.663] ! Version conflict in shader 'models\model_puh'
-[23.09.21 20:52:37.663] ! Version conflict in shader 'models\model_refl'
-[23.09.21 20:52:37.664] ! Version conflict in shader 'models\xbrainglass'
-[23.09.21 20:52:37.664] ! Version conflict in shader 'models\xdistortcolorlinv'
-[23.09.21 20:52:37.664] ! Version conflict in shader 'models\xglass'
-[23.09.21 20:52:37.664] ! Version conflict in shader 'models\xglass2'
-[23.09.21 20:52:37.664] ! Version conflict in shader 'models\xlens'
-[23.09.21 20:52:37.664] ! Version conflict in shader 'selflight_static'
-[23.09.21 20:52:37.665] [CTextureDescrMngr::LoadLTX] count of *textures*.ltx files: [1]
-[23.09.21 20:52:37.897] * NULLRT supported
-[23.09.21 20:52:37.897] * ...and used
-[23.09.21 20:52:37.897] * HWDST/PCF supported and used
-[23.09.21 20:52:37.897] * NV-DBT supported and used
-[23.09.21 20:52:39.075] --LUA version: [LuaJIT 2.1.0-beta3]
-[23.09.21 20:52:39.125] Starting engine...
-[23.09.21 20:53:00.654] * phase time: 11 ms
-[23.09.21 20:53:00.680] * phase cmem: 176362 K
-[23.09.21 20:53:00.734] --LUA version: [LuaJIT 2.1.0-beta3]
-[23.09.21 20:53:00.762] * phase time: 108 ms
-[23.09.21 20:53:00.786] * phase cmem: 145179 K
-[23.09.21 20:53:00.793] * Loading spawn registry...
-[23.09.21 20:53:01.358] * 8976 spawn points are successfully loaded
-[23.09.21 20:53:01.358] * Loading objects...
-[23.09.21 20:53:01.680] * 17493 objects are successfully loaded
-[23.09.21 20:53:02.323] * Game Данил_quicksave is successfully loaded from file 'z:\programs\priboi ogsr\userdata\savedgames\Данил_quicksave.sav' (1.537s)
-[23.09.21 20:53:02.324] * phase time: 1561 ms
-[23.09.21 20:53:02.367] * phase cmem: 198017 K
-[23.09.21 20:53:02.418] # Player not found. New player created.
-[23.09.21 20:53:02.418] !!xrServer::Check_GameSpy_CDKey_Success - 1
-[23.09.21 20:53:02.418] * client : connection accepted - <>
-[23.09.21 20:53:02.436] * phase time: 112 ms
-[23.09.21 20:53:02.480] * phase cmem: 198047 K
-[23.09.21 20:53:02.481] * phase time: 45 ms
-[23.09.21 20:53:02.525] * phase cmem: 198048 K
-[23.09.21 20:53:03.702] --[ISpatial_DB::initialize] bbc is [43.8, 37.6, 88.9], bbd is [722.7, 76.3, 722.7]
-[23.09.21 20:53:03.702] --[ISpatial_DB::initialize] bbc is [43.8, 37.6, 88.9], bbd is [722.7, 76.3, 722.7]
-[23.09.21 20:53:03.703] * phase time: 1222 ms
-[23.09.21 20:53:03.747] * phase cmem: 292223 K
-[23.09.21 20:53:03.940] * phase time: 236 ms
-[23.09.21 20:53:03.984] * phase cmem: 295506 K
-[23.09.21 20:53:03.985] * [Loading VB] 65532 verts, 2047 Kb
-[23.09.21 20:53:03.996] * [Loading VB] 65525 verts, 2047 Kb
-[23.09.21 20:53:04.005] * [Loading VB] 65535 verts, 2047 Kb
-[23.09.21 20:53:04.013] * [Loading VB] 65466 verts, 2045 Kb
-[23.09.21 20:53:04.021] * [Loading VB] 17208 verts, 537 Kb
-[23.09.21 20:53:04.023] * [Loading VB] 65533 verts, 2047 Kb
-[23.09.21 20:53:04.031] * [Loading VB] 65534 verts, 2047 Kb
-[23.09.21 20:53:04.039] * [Loading VB] 65534 verts, 2047 Kb
-[23.09.21 20:53:04.047] * [Loading VB] 65531 verts, 2047 Kb
-[23.09.21 20:53:04.056] * [Loading VB] 65535 verts, 2047 Kb
-[23.09.21 20:53:04.065] * [Loading VB] 65535 verts, 2047 Kb
-[23.09.21 20:53:04.074] * [Loading VB] 46595 verts, 1456 Kb
-[23.09.21 20:53:04.080] * [Loading VB] 65534 verts, 2047 Kb
-[23.09.21 20:53:04.088] * [Loading VB] 65533 verts, 2047 Kb
-[23.09.21 20:53:04.096] * [Loading VB] 65535 verts, 2047 Kb
-[23.09.21 20:53:04.104] * [Loading VB] 65532 verts, 2047 Kb
-[23.09.21 20:53:04.112] * [Loading VB] 65533 verts, 2047 Kb
-[23.09.21 20:53:04.120] * [Loading VB] 65533 verts, 2047 Kb
-[23.09.21 20:53:04.127] * [Loading VB] 53181 verts, 1661 Kb
-[23.09.21 20:53:04.134] * [Loading IB] 1048575 indices, 2047 Kb
-[23.09.21 20:53:04.146] * [Loading IB] 1048572 indices, 2047 Kb
-[23.09.21 20:53:04.154] * [Loading IB] 1048572 indices, 2047 Kb
-[23.09.21 20:53:04.161] * [Loading IB] 1048572 indices, 2047 Kb
-[23.09.21 20:53:04.169] * [Loading IB] 1048572 indices, 2047 Kb
-[23.09.21 20:53:04.177] * [Loading IB] 1048572 indices, 2047 Kb
-[23.09.21 20:53:04.184] * [Loading IB] 1048575 indices, 2047 Kb
-[23.09.21 20:53:04.192] * [Loading IB] 1048572 indices, 2047 Kb
-[23.09.21 20:53:04.199] * [Loading IB] 1048575 indices, 2047 Kb
-[23.09.21 20:53:04.207] * [Loading IB] 228285 indices, 445 Kb
-[23.09.21 20:53:04.209] * [Loading VB] 65533 verts, 767 Kb
-[23.09.21 20:53:04.213] * [Loading VB] 65534 verts, 767 Kb
-[23.09.21 20:53:04.216] * [Loading VB] 65534 verts, 767 Kb
-[23.09.21 20:53:04.219] * [Loading VB] 65535 verts, 767 Kb
-[23.09.21 20:53:04.222] * [Loading VB] 65535 verts, 767 Kb
-[23.09.21 20:53:04.227] * [Loading VB] 65534 verts, 767 Kb
-[23.09.21 20:53:04.229] * [Loading VB] 65535 verts, 767 Kb
-[23.09.21 20:53:04.233] * [Loading VB] 14030 verts, 164 Kb
-[23.09.21 20:53:04.234] * [Loading IB] 1048575 indices, 2047 Kb
-[23.09.21 20:53:04.244] * [Loading IB] 1048575 indices, 2047 Kb
-[23.09.21 20:53:04.252] * [Loading IB] 1048575 indices, 2047 Kb
-[23.09.21 20:53:04.260] * [Loading IB] 718302 indices, 1402 Kb
-[23.09.21 20:53:04.266] * phase time: 325 ms
-[23.09.21 20:53:04.310] * phase cmem: 364383 K
-[23.09.21 20:53:04.994] * phase time: 727 ms
-[23.09.21 20:53:05.040] * phase cmem: 369632 K
-[23.09.21 20:53:05.068] * [DETAILS] VertexConsts(256), Batch(61)
-[23.09.21 20:53:05.068] * [DETAILS] 14640 v(20), 9455 p
-[23.09.21 20:53:05.068] * [DETAILS] Batch(61), VB(285K), IB(55K)
-[23.09.21 20:53:05.068] * phase time: 74 ms
-[23.09.21 20:53:05.115] * phase cmem: 370028 K
-[23.09.21 20:53:05.115] * Loading HOM: z:\programs\priboi ogsr\gamedata\levels\l01_escape\level.hom
-[23.09.21 20:53:05.118] * phase time: 49 ms
-[23.09.21 20:53:05.166] * phase cmem: 370252 K
-[23.09.21 20:53:05.167] * phase time: 49 ms
-[23.09.21 20:53:05.213] * phase cmem: 370252 K
-[23.09.21 20:53:05.229] - Game configuring : Started 
-[23.09.21 20:53:05.240] - Game configuring : Finished 
-[23.09.21 20:53:05.373] * phase time: 206 ms
-[23.09.21 20:53:05.422] * phase cmem: 382620 K
-[23.09.21 20:53:12.430] * t-report - base: 1194, 1084163 K
-[23.09.21 20:53:12.430] * t-report - lmap: 7, 7168 K
-[23.09.21 20:53:12.430] * phase time: 7056 ms
-[23.09.21 20:53:12.486] * phase cmem: 1519486 K
-[23.09.21 20:53:12.510] * phase time: 79 ms
-[23.09.21 20:53:12.564] * phase cmem: 1519490 K
-[23.09.21 20:53:12.625] --------------------------------------------------------------------------------
-[23.09.21 20:53:12.625] [8143MB] physical memory installed, [2912MB] available, [64] percent of memory in use
-[23.09.21 20:53:12.625] PageFile usage: [1814MB], Peak PageFile usage: [1817MB]
-[23.09.21 20:53:12.625] --------------------------------------------------------------------------------
-[23.09.21 20:53:12.625] * [ D3D ]: textures[1091332 K]
-[23.09.21 20:53:12.625] * [x-ray]: process heap[1518868 K], render[0 K]
-[23.09.21 20:53:12.625] * [x-ray]: economy: strings[7215 K], smem[0 K]
-[23.09.21 20:53:16.799] ! auto-generated bump map: wpn\ots_33\wpn_ots33_gps_bump#
-[23.09.21 20:53:16.818] ! auto-generated bump map: wpn\ots_33\wpn_ots33_frame_bump#
-[23.09.21 20:53:16.830] ! auto-generated bump map: wpn\ots_33\wpn_ots33_mag_bump#
-[23.09.21 20:53:17.642] ! auto-generated bump map: wpn\tec-9\wpn_tec_kg9_gun_bump#
-[23.09.21 20:53:17.654] ! auto-generated bump map: wpn\tec-9\wpn_tec_kg9_mag_bump#
-[23.09.21 20:53:21.252] * MEMORY USAGE: 2008943 K
-[23.09.21 20:53:21.252] * End of synchronization A[1] R[1]
-[23.09.21 20:53:21.252] * phase time: 8821 ms
-[23.09.21 20:53:21.359] * phase cmem: 2008943 K
-[23.09.21 20:53:23.029] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:23.670] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:26.975] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:27.007] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:27.573] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:29.825] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:30.358] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:32.574] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:35.431] * Saving spawns...
-[23.09.21 20:53:35.431] * Saving objects...
-[23.09.21 20:53:35.456] * 17496 objects are successfully saved
-[23.09.21 20:53:35.462] * Game Данил_quicksave.sav is successfully saved to file 'z:\programs\priboi ogsr\userdata\savedgames\Данил_quicksave.sav'
-[23.09.21 20:53:36.039] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:37.489] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:37.957] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:41.289] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:43.407] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:43.473] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:43.774] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:43.868] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:47.205] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:49.449] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:51.424] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:51.724] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:55.057] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:56.892] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:57.190] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:58.724] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:53:59.091] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:00.578] * Saving spawns...
-[23.09.21 20:54:00.578] * Saving objects...
-[23.09.21 20:54:00.602] * 17496 objects are successfully saved
-[23.09.21 20:54:00.610] * Game Данил_quicksave.sav is successfully saved to file 'z:\programs\priboi ogsr\userdata\savedgames\Данил_quicksave.sav'
-[23.09.21 20:54:02.441] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:02.873] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:09.461] * [R_occlusion::occq_destroy]: fids[58] used[58] pool[58]
-[23.09.21 20:54:09.461] * [R_occlusion::occq_destroy]: released [0] used and [58] pool queries
-[23.09.21 20:54:09.651] * DVB created: 16384K
-[23.09.21 20:54:09.651] * DIB created: 512K
-[23.09.21 20:54:10.509] * RM_Dump: textures  : 1650
-[23.09.21 20:54:10.509] * RM_Dump: rtargets  : 22
-[23.09.21 20:54:10.509] * RM_Dump: vs        : 70
-[23.09.21 20:54:10.509] * RM_Dump: ps        : 83
-[23.09.21 20:54:10.509] * RM_Dump: dcl       : 19
-[23.09.21 20:54:10.509] * RM_Dump: states    : 77
-[23.09.21 20:54:10.509] * RM_Dump: tex_list  : 1316
-[23.09.21 20:54:10.509] * RM_Dump: matrices  : 0
-[23.09.21 20:54:10.509] * RM_Dump: lst_constants: 0
-[23.09.21 20:54:10.509] * RM_Dump: v_passes  : 1913
-[23.09.21 20:54:10.509] * RM_Dump: v_elements: 1919
-[23.09.21 20:54:10.509] * RM_Dump: v_shaders : 1135
-[23.09.21 20:54:10.509] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
-[23.09.21 20:54:10.509] * GPU vertex cache: recognized, 24
-[23.09.21 20:54:10.509] *** RESET [1048 ms]
-[23.09.21 20:54:10.909] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:11.103] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:11.174] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:11.391] * MEMORY USAGE: 2013907 K
-[23.09.21 20:54:11.391] * End of synchronization A[1] R[1]
-[23.09.21 20:54:11.395] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:11.593] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:11.593] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:13.257] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:17.075] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:17.273] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:17.273] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:17.392] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:17.592] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:18.924] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:20.492] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:20.726] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:20.942] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:23.825] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:24.792] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:32.815] * [R_occlusion::occq_destroy]: fids[55] used[55] pool[55]
-[23.09.21 20:54:32.815] * [R_occlusion::occq_destroy]: released [0] used and [55] pool queries
-[23.09.21 20:54:33.006] * DVB created: 16384K
-[23.09.21 20:54:33.006] * DIB created: 512K
-[23.09.21 20:54:33.866] * RM_Dump: textures  : 1650
-[23.09.21 20:54:33.866] * RM_Dump: rtargets  : 22
-[23.09.21 20:54:33.866] * RM_Dump: vs        : 70
-[23.09.21 20:54:33.866] * RM_Dump: ps        : 83
-[23.09.21 20:54:33.866] * RM_Dump: dcl       : 19
-[23.09.21 20:54:33.866] * RM_Dump: states    : 77
-[23.09.21 20:54:33.866] * RM_Dump: tex_list  : 1316
-[23.09.21 20:54:33.866] * RM_Dump: matrices  : 0
-[23.09.21 20:54:33.866] * RM_Dump: lst_constants: 0
-[23.09.21 20:54:33.866] * RM_Dump: v_passes  : 1913
-[23.09.21 20:54:33.866] * RM_Dump: v_elements: 1919
-[23.09.21 20:54:33.866] * RM_Dump: v_shaders : 1135
-[23.09.21 20:54:33.866] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
-[23.09.21 20:54:33.866] * GPU vertex cache: recognized, 24
-[23.09.21 20:54:33.866] *** RESET [1051 ms]
-[23.09.21 20:54:34.476] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:34.542] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:34.743] * MEMORY USAGE: 2005625 K
-[23.09.21 20:54:34.743] * End of synchronization A[1] R[1]
-[23.09.21 20:54:35.242] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:37.875] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:40.625] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:40.859] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:41.710] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:41.711] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:42.047] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:42.410] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:42.614] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:42.893] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:42.942] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:43.307] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:43.376] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:43.698] ! auto-generated bump map: wpn\benelli\wpn_short_body_bump#
-[23.09.21 20:54:43.713] ! auto-generated bump map: wpn\benelli\wpn_short_barrel_bump#
-[23.09.21 20:54:43.763] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:44.160] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:47.160] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:47.509] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:47.858] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:48.025] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:48.708] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:48.758] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:49.192] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:49.209] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:49.241] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:50.012] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:50.060] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:50.611] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:51.011] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:52.544] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:52.577] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:52.761] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:52.927] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:53.026] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:53.260] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:53.359] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:53.960] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:54.176] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:54.227] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:55.892] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:56.025] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:56.259] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:57.510] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:57.560] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:57.777] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:58.275] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:58.443] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:54:59.360] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:00.326] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:01.267] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:01.777] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:01.927] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:03.143] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:03.360] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:04.594] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:04.828] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:05.495] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:05.994] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:06.694] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:06.944] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:07.194] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:07.927] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:08.177] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:08.826] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:09.426] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:09.826] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:10.144] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:10.510] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:10.526] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:11.281] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:11.545] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:11.946] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:12.545] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:13.496] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:14.828] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:14.894] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:15.096] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:15.229] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:15.898] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:16.160] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:16.945] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:17.444] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:17.980] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:18.247] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:20.894] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:21.079] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:21.329] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:21.795] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:21.829] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:22.445] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:23.929] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:24.428] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:25.144] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:25.495] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:26.063] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:27.229] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:35.149] * [R_occlusion::occq_destroy]: fids[55] used[55] pool[55]
-[23.09.21 20:55:35.149] * [R_occlusion::occq_destroy]: released [0] used and [55] pool queries
-[23.09.21 20:55:35.336] * DVB created: 16384K
-[23.09.21 20:55:35.336] * DIB created: 512K
-[23.09.21 20:55:36.194] * RM_Dump: textures  : 1695
-[23.09.21 20:55:36.194] * RM_Dump: rtargets  : 22
-[23.09.21 20:55:36.194] * RM_Dump: vs        : 71
-[23.09.21 20:55:36.194] * RM_Dump: ps        : 85
-[23.09.21 20:55:36.194] * RM_Dump: dcl       : 19
-[23.09.21 20:55:36.195] * RM_Dump: states    : 77
-[23.09.21 20:55:36.195] * RM_Dump: tex_list  : 1348
-[23.09.21 20:55:36.195] * RM_Dump: matrices  : 0
-[23.09.21 20:55:36.195] * RM_Dump: lst_constants: 0
-[23.09.21 20:55:36.195] * RM_Dump: v_passes  : 1971
-[23.09.21 20:55:36.195] * RM_Dump: v_elements: 1977
-[23.09.21 20:55:36.195] * RM_Dump: v_shaders : 1175
-[23.09.21 20:55:36.195] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
-[23.09.21 20:55:36.195] * GPU vertex cache: recognized, 24
-[23.09.21 20:55:36.195] *** RESET [1046 ms]
-[23.09.21 20:55:36.621] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:37.080] * MEMORY USAGE: 2053091 K
-[23.09.21 20:55:37.080] * End of synchronization A[1] R[1]
-[23.09.21 20:55:37.084] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:37.161] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:37.880] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:37.880] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:37.880] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:38.179] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:38.979] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:39.046] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:39.363] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:39.479] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:40.430] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:40.513] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:41.129] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:41.212] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:42.328] > demo_record 1
-[23.09.21 20:55:42.697] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:42.880] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:43.846] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:44.062] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:44.478] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:44.846] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:46.114] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:46.130] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:47.261] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:47.578] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:47.629] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:49.067] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:49.280] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:49.446] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:50.613] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:52.081] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:52.463] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:53.246] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:53.296] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:53.748] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:54.678] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:54.961] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:55.296] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:55.430] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:56.497] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:59.213] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:59.428] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:59.464] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:55:59.679] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:56:00.782] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:56:00.962] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:56:01.395] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:56:01.511] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:56:02.445] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:56:02.662] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:56:03.795] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:56:04.213] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:56:06.363] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:56:08.846] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:56:08.846] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:56:09.062] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:56:10.229] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:56:10.629] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:56:10.980] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:56:11.131] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:26.487] * [R_occlusion::occq_destroy]: fids[40] used[40] pool[40]
-[23.09.21 20:59:26.487] * [R_occlusion::occq_destroy]: released [0] used and [40] pool queries
-[23.09.21 20:59:26.679] * DVB created: 16384K
-[23.09.21 20:59:26.679] * DIB created: 512K
-[23.09.21 20:59:27.526] * RM_Dump: textures  : 1696
-[23.09.21 20:59:27.526] * RM_Dump: rtargets  : 22
-[23.09.21 20:59:27.526] * RM_Dump: vs        : 71
-[23.09.21 20:59:27.526] * RM_Dump: ps        : 85
-[23.09.21 20:59:27.526] * RM_Dump: dcl       : 19
-[23.09.21 20:59:27.526] * RM_Dump: states    : 77
-[23.09.21 20:59:27.526] * RM_Dump: tex_list  : 1349
-[23.09.21 20:59:27.526] * RM_Dump: matrices  : 0
-[23.09.21 20:59:27.526] * RM_Dump: lst_constants: 0
-[23.09.21 20:59:27.526] * RM_Dump: v_passes  : 1972
-[23.09.21 20:59:27.526] * RM_Dump: v_elements: 1978
-[23.09.21 20:59:27.526] * RM_Dump: v_shaders : 1176
-[23.09.21 20:59:27.526] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
-[23.09.21 20:59:27.526] * GPU vertex cache: recognized, 24
-[23.09.21 20:59:27.526] *** RESET [1040 ms]
-[23.09.21 20:59:27.807] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:28.427] * MEMORY USAGE: 2051303 K
-[23.09.21 20:59:28.427] * End of synchronization A[1] R[1]
-[23.09.21 20:59:28.555] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:29.824] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:30.688] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:30.854] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:33.556] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:33.655] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:34.188] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:34.838] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:35.488] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:35.574] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:35.956] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:36.122] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:36.206] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:36.338] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:36.688] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:36.840] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:36.857] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:36.938] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:37.073] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:37.435] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:38.703] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:39.204] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:39.302] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:39.336] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:39.687] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:39.853] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:40.036] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:40.187] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:40.286] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:40.419] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:40.737] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:40.969] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:40.986] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:44.086] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:44.270] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:44.812] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:45.286] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:45.922] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:46.341] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:47.090] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:47.309] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:47.457] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:48.225] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:48.260] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:48.517] * Saving spawns...
-[23.09.21 20:59:48.517] * Saving objects...
-[23.09.21 20:59:48.565] * 17581 objects are successfully saved
-[23.09.21 20:59:48.571] * Game Данил_quicksave.sav is successfully saved to file 'z:\programs\priboi ogsr\userdata\savedgames\Данил_quicksave.sav'
-[23.09.21 20:59:48.571] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:48.843] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:50.892] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:50.943] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:51.308] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:52.167] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:52.192] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:52.340] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:52.759] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:52.988] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:53.156] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:53.692] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:54.208] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:54.674] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:55.377] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:55.525] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:55.525] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:56.320] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:56.647] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:57.028] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:57.226] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:58.328] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:58.426] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:58.861] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 20:59:58.974] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 21:00:01.809] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 21:00:02.324] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[23.09.21 21:00:02.480] 
-FATAL ERROR
-
-[error]Expression    : SG
-[error]Function      : CRender::model_CreateParticles
-[error]File          : d:\a\ogsr-engine\ogsr-engine\ogsr_engine\layers\xrrenderpc_r2\r2.cpp
-[error]Line          : 431
-[error]Description   : Particle effect or group doesn't exist
-[error]Arguments     : _ecp\group_items\mutant_zombie_idle
-
-[23.09.21 21:00:02.480] ***************************[ScriptCrashHandler]**********************************
-[23.09.21 21:00:02.480] stack traceback:
-	[C]: in function 'particles_object'
-	...rograms\priboi ogsr\gamedata\scripts\amk_particle.script:23: in function <...rograms\priboi ogsr\gamedata\scripts\amk_particle.script:2>
-	[C]: in function 'amk_particle'
-	...rograms\priboi ogsr\gamedata\scripts\bind_monster.script:49: in function <...rograms\priboi ogsr\gamedata\scripts\bind_monster.script:45>
-[23.09.21 21:00:02.480] 	Locals: 
-[23.09.21 21:00:02.480] 	 Userdata: (*temporary)
-[23.09.21 21:00:02.480] 	 string (*temporary) : _ecp\group_items\mutant_zombie_idle
-[23.09.21 21:00:02.480] 	 Userdata: (*temporary)
-[23.09.21 21:00:02.480] 	End
-[23.09.21 21:00:02.480] 	Locals: 
-[23.09.21 21:00:02.480] 	 Userdata: self
-[23.09.21 21:00:02.480] 			 userdata self.snd : (sound_object): 000001F06FF70060
-[23.09.21 21:00:02.480] 			 userdata self.cgravity : (___VECTOR): 000001F06FF6FCA0
-[23.09.21 21:00:02.480] 			 string self.snd_looped : false
-[23.09.21 21:00:02.480] 			 string self.bone : bip01_head
-[23.09.21 21:00:02.480] 			 number self.len : 1.000000
-[23.09.21 21:00:02.480] 			 boolean self.give_dmg : false
-[23.09.21 21:00:02.480] 			 string self.stop_on_death : 
-[23.09.21 21:00:02.480] 			 boolean self.looped : false
-[23.09.21 21:00:02.480] 			 userdata self.dir : (___VECTOR): 000001F06FF6F700
-[23.09.21 21:00:02.480] 			 string self.type : absolute
-[23.09.21 21:00:02.480] 			 userdata self.obj : (game_object): 000001F06FF6B200
-[23.09.21 21:00:02.480] 			 number self.life_time : -1.000000
-[23.09.21 21:00:02.480] 			 userdata self.gravity : (___VECTOR): 000001F06FF6F8E0
-[23.09.21 21:00:02.480] 	 Table: params
-[23.09.21 21:00:02.480] 			 string params.particle : _ecp\group_items\mutant_zombie_idle
-[23.09.21 21:00:02.480] 			 string params.stop_on_death : 
-[23.09.21 21:00:02.480] 			 string params.sound : 
-[23.09.21 21:00:02.480] 			 string params.bone : bip01_head
-[23.09.21 21:00:02.480] 			 string params.sound_looped : false
-[23.09.21 21:00:02.480] 			 string params.blowout_light : off
-[23.09.21 21:00:02.480] 	End
-[23.09.21 21:00:02.480] 	Locals: 
-[23.09.21 21:00:02.480] 	 Userdata: (*temporary)
-[23.09.21 21:00:02.480] 			 userdata (*temporary).snd : (sound_object): 000001F06FF70060
-[23.09.21 21:00:02.480] 			 userdata (*temporary).cgravity : (___VECTOR): 000001F06FF6FCA0
-[23.09.21 21:00:02.480] 			 string (*temporary).snd_looped : false
-[23.09.21 21:00:02.480] 			 string (*temporary).bone : bip01_head
-[23.09.21 21:00:02.480] 			 number (*temporary).len : 1.000000
-[23.09.21 21:00:02.480] 			 boolean (*temporary).give_dmg : false
-[23.09.21 21:00:02.480] 			 string (*temporary).stop_on_death : 
-[23.09.21 21:00:02.480] 			 boolean (*temporary).looped : false
-[23.09.21 21:00:02.480] 			 userdata (*temporary).dir : (___VECTOR): 000001F06FF6F700
-[23.09.21 21:00:02.480] 			 string (*temporary).type : absolute
-[23.09.21 21:00:02.480] 			 userdata (*temporary).obj : (game_object): 000001F06FF6B200
-[23.09.21 21:00:02.480] 			 number (*temporary).life_time : -1.000000
-[23.09.21 21:00:02.480] 			 userdata (*temporary).gravity : (___VECTOR): 000001F06FF6F8E0
-[23.09.21 21:00:02.480] 	End
-[23.09.21 21:00:02.480] 	Locals: 
-[23.09.21 21:00:02.480] 	 Userdata: self
-[23.09.21 21:00:02.480] 			 boolean self.loaded : false
-[23.09.21 21:00:02.480] 			 Table: self.st
-[23.09.21 21:00:02.480] 					 userdata self.st.activation_game_time : (CTime): 000001F0D4A5ADB0
-[23.09.21 21:00:02.480] 					 string self.st.section_logic : logic
-[23.09.21 21:00:02.480] 					 string self.st.ini_filename : <customdata>
-[23.09.21 21:00:02.480] 					 userdata self.st.ini : (ini_file): 000001F0D4BB7660
-[23.09.21 21:00:02.480] 					 number self.st.stype : 1.000000
-[23.09.21 21:00:02.480] 					 table self.st.mob_death : [...]
-[23.09.21 21:00:02.480] 					 number self.st.activation_time : 220058.000000
-[23.09.21 21:00:02.480] 					 table self.st.mob_panic : [...]
-[23.09.21 21:00:02.480] 					 string self.st.gulag_name : 
-[23.09.21 21:00:02.480] 			 Table: self.particles
-[23.09.21 21:00:02.480] 	 number delta : 18.000000
-[23.09.21 21:00:02.480] 	 function (for generator) : [[function]]
-[23.09.21 21:00:02.480] 	 Table: (for state)
-[23.09.21 21:00:02.480] 			 Table: (for state).1
-[23.09.21 21:00:02.480] 					 string (for state).1.particle : _ecp\group_items\mutant_zombie_idle
-[23.09.21 21:00:02.480] 					 string (for state).1.stop_on_death : 
-[23.09.21 21:00:02.480] 					 userdata (for state).1.obj : (game_object): 000001F06FF6B200
-[23.09.21 21:00:02.480] 					 string (for state).1.sound : 
-[23.09.21 21:00:02.480] 					 string (for state).1.bone : bip01_head
-[23.09.21 21:00:02.480] 					 string (for state).1.sound_looped : false
-[23.09.21 21:00:02.480] 					 string (for state).1.blowout_light : off
-[23.09.21 21:00:02.480] *********************************************************************************
-[23.09.21 21:00:02.480] [print_output([CScriptEngine::lua_pcall_failed])] SCRIPT RUNTIME ERROR:
-invalid key to 'next'
-stack traceback:
-	[C]: at 0x7ff9d1fcb794
-	[C]: in function 'particles_object'
-	...rograms\priboi ogsr\gamedata\scripts\amk_particle.script:23: in function <...rograms\priboi ogsr\gamedata\scripts\amk_particle.script:2>
-	[C]: in function 'amk_particle'
-	...rograms\priboi ogsr\gamedata\scripts\bind_monster.script:49: in function <...rograms\priboi ogsr\gamedata\scripts\bind_monster.script:45>
-[23.09.21 21:00:02.480] *********************************************************************************
-[23.09.21 21:00:02.480] 
-FATAL ERROR
-
-[error]Expression    : FATAL ERROR
-[error]Function      : CScriptEngine::lua_pcall_failed
-[error]File          : d:\a\ogsr-engine\ogsr-engine\ogsr_engine\common_ai\script_engine.cpp
-[error]Line          : 52
-[error]Description   : [CScriptEngine::lua_pcall_failed]: invalid key to 'next'
-
-[23.09.21 21:00:02.481] ***************************[ScriptCrashHandler]**********************************
-[23.09.21 21:00:02.481] stack traceback:
-	[C]: at 0x7ff9d1fcb794
-	[C]: in function 'particles_object'
-	...rograms\priboi ogsr\gamedata\scripts\amk_particle.script:23: in function <...rograms\priboi ogsr\gamedata\scripts\amk_particle.script:2>
-	[C]: in function 'amk_particle'
-	...rograms\priboi ogsr\gamedata\scripts\bind_monster.script:49: in function <...rograms\priboi ogsr\gamedata\scripts\bind_monster.script:45>
-[23.09.21 21:00:02.481] *********************************************************************************
-[23.09.21 21:00:02.481] ********************************************************************************
-[23.09.21 21:00:02.481] !![LogStackTrace] Thread: [X-RAY Primary thread]
-[23.09.21 21:00:03.841] !!stack trace:
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFA125A3E58], Fun: [BuildStackTrace()] + [48 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\stacktrace_collector.cpp-->152]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFA125CA7E1], Fun: [LogStackTrace()] + [73 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->58] + [13 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFA125CA626], Fun: [xrDebug::backend()] + [174 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->172]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFA125CA563], Fun: [xrDebug::fatal()] + [131 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->252]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1FCB80C], Fun: [CScriptEngine::lua_pcall_failed()] + [120 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\common_ai\script_engine.cpp-->53]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FF9D9385490], Fun: [lj_BC_FUNCC()] + [66 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FF9D93C3E47], Fun: [lj_err_run()] + [327 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_err.c-->851]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FF9D93C2F19], Fun: [err_msgv()] + [121 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_err.c-->874] + [8 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FF9D93C3B69], Fun: [lj_err_msg()] + [9 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_err.c-->880] + [5 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FF9D940386C], Fun: [lj_tab_next()] + [332 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_tab.c-->605] + [13 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FF9D938EED2], Fun: [lua_next()] + [50 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_api.c-->896] + [32 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1FD0F59], Fun: [CScriptStorage::LogTable()] + [173 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\common_ai\script_storage.cpp-->92] + [13 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1FD119D], Fun: [CScriptStorage::LogVariable()] + [545 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\common_ai\script_storage.cpp-->141]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1FD0E2D], Fun: [CScriptStorage::dump_state()] + [129 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\common_ai\script_storage.cpp-->78]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1FD133E], Fun: [ScriptCrashHandler()] + [130 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\common_ai\script_storage.cpp-->194]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFA125CA7B4], Fun: [LogStackTrace()] + [28 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->56]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFA125CA626], Fun: [xrDebug::backend()] + [174 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->172]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFA125CA3F6], Fun: [xrDebug::fail()] + [46 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->236]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrRender_R2.dll], AddrPC.Offset: [00007FF9DB0EA95B], Fun: [CRender::model_CreateParticles()] + [139 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\layers\xrrenderpc_r2\r2.cpp-->432]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D20FA05A], Fun: [CParticlesObject::Init()] + [66 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\particlesobject.cpp-->30]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D20FA362], Fun: [CParticlesObject::CParticlesObject()] + [82 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\particlesobject.cpp-->18]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1FC9995], Fun: [CScriptParticlesCustom::CScriptParticlesCustom()] + [33 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\script_particles.cpp-->17]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1FC9BEA], Fun: [CScriptParticles::CScriptParticles()] + [42 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\script_particles.cpp-->76] + [23 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\Luabind.dll], AddrPC.Offset: [000000018000A907], Fun: [luabind::detail::class_rep::constructor_dispatcher()] + [259 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\src\class_rep.cpp-->491] + [30 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FF9D9385490], Fun: [lj_BC_FUNCC()] + [66 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\Luabind.dll], AddrPC.Offset: [000000018000B4DB], Fun: [luabind::detail::class_rep::construct_lua_class_callback()] + [395 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\src\class_rep.cpp-->1050]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FF9D9385490], Fun: [lj_BC_FUNCC()] + [66 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FF9D938F0BB], Fun: [lua_pcall()] + [171 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_api.c-->1144]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\Luabind.dll], AddrPC.Offset: [000000018000EB84], Fun: [luabind::detail::pcall()] + [100 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\src\pcall.cpp-->40] + [16 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1F21DFD], Fun: [luabind::detail::proxy_member_void_caller<unsigned int const *>::~proxy_member_void_caller<unsigned int const *>()] + [73 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\luabind\detail\call_member.hpp-->269] + [16 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1F21A29], Fun: [CScriptBinderObjectWrapper::shedule_Update()] + [53 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\script_binder_object_wrapper.cpp-->67]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1E3CCE3], Fun: [CScriptBinder::shedule_Update()] + [19 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\script_binder.cpp-->119]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D202BC57], Fun: [CEntity::shedule_Update()] + [27 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\entity.cpp-->325]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D202CC46], Fun: [CEntityAlive::shedule_Update()] + [18 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\entity_alive.cpp-->197]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1E394CF], Fun: [CCustomMonster::shedule_Update()] + [411 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\custommonster.cpp-->294]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1E426F0], Fun: [CBaseMonster::shedule_Update()] + [20 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\ai\monsters\basemonster\base_monster.cpp-->339]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1EA9616], Fun: [CZombie::shedule_Update()] + [14 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\ai\monsters\zombie\zombie.cpp-->175]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF6A741A133], Fun: [CSheduler::ProcessStep()] + [467 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\xrsheduler.cpp-->356]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF6A741A4E5], Fun: [CSheduler::Update()] + [389 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\xrsheduler.cpp-->462]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1FDE852], Fun: [CGamePersistent::OnFrame()] + [638 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\gamepersistent.cpp-->582]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF6A744CD48], Fun: [CRegistrator<pureFrame>::Process()] + [84 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\pure.h-->86]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF6A744BE28], Fun: [CRenderDevice::FrameMove()] + [292 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->443]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF6A744C197], Fun: [CRenderDevice::on_idle()] + [223 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->214]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF6A744C97E], Fun: [CRenderDevice::message_loop()] + [98 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->316]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF6A744BFFB], Fun: [CRenderDevice::Run()] + [411 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->389]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF6A740EDA8], Fun: [Startup()] + [296 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\x_ray.cpp-->218]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF6A740F11E], Fun: [WinMain_impl()] + [478 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\x_ray.cpp-->418]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF6A740C7F8], Fun: [WinMain()] + [72 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\x_ray.cpp-->439]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF6A746E12A], Fun: [__scrt_common_main_seh()] + [262 byte(s)], File-->Line: [d:\agent\_work\3\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl-->288] + [33 byte(s)]
-! Module: [C:\WINDOWS\System32\KERNEL32.DLL], AddrPC.Offset: [00007FFA3BD87034], Fun: [BaseThreadInitThunk()] + [20 byte(s)]
-! Module: [C:\WINDOWS\SYSTEM32\ntdll.dll], AddrPC.Offset: [00007FFA3BF22651], Fun: [RtlUserThreadStart()] + [33 byte(s)]
-[23.09.21 21:00:03.842] ********************************************************************************
-[23.09.21 21:00:17.383] * [R_occlusion::occq_destroy]: fids[43] used[43] pool[43]
-[23.09.21 21:00:17.385] * [R_occlusion::occq_destroy]: released [0] used and [43] pool queries
-[23.09.21 21:00:17.389] 
-FATAL ERROR
-
-[error]Expression    : ExitFromWinMain
-[error]Function      : xrDebug::_initialize::<lambda_c6715271fb6c8a51385a964c2e1e361c>::operator ()
-[error]File          : d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp
-[error]Line          : 541
-[error]Description   : Unexpected application exit!
-
-[23.09.21 21:00:17.390] ***************************[ScriptCrashHandler]**********************************
-[23.09.21 21:00:17.390] stack traceback:
-	[C]: at 0x7ff9d1fcb794
-	[C]: in function 'particles_object'
-	...rograms\priboi ogsr\gamedata\scripts\amk_particle.script:23: in function <...rograms\priboi ogsr\gamedata\scripts\amk_particle.script:2>
-	[C]: in function 'amk_particle'
-	...rograms\priboi ogsr\gamedata\scripts\bind_monster.script:49: in function <...rograms\priboi ogsr\gamedata\scripts\bind_monster.script:45>
-[23.09.21 21:00:17.390] *********************************************************************************
-[23.09.21 21:00:17.390] ********************************************************************************
-[23.09.21 21:00:17.390] !![LogStackTrace] Thread: [X-RAY Primary thread]
-[23.09.21 21:00:17.568] !!stack trace:
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFA125A3E58], Fun: [BuildStackTrace()] + [48 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\stacktrace_collector.cpp-->152]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFA125CA7E1], Fun: [LogStackTrace()] + [73 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->58] + [13 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFA125CA626], Fun: [xrDebug::backend()] + [174 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->172]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFA125CB03C], Fun: [<lambda_c6715271fb6c8a51385a964c2e1e361c>::<lambda_invoker_cdecl>()] + [80 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->541] + [80 byte(s)]
-! Module: [C:\WINDOWS\System32\ucrtbase.dll], AddrPC.Offset: [00007FFA398442D6], Fun: [execute_onexit_table()] + [342 byte(s)]
-! Module: [C:\WINDOWS\System32\ucrtbase.dll], AddrPC.Offset: [00007FFA398441FB], Fun: [execute_onexit_table()] + [123 byte(s)]
-! Module: [C:\WINDOWS\System32\ucrtbase.dll], AddrPC.Offset: [00007FFA398441B4], Fun: [execute_onexit_table()] + [52 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFA125CE96E], Fun: [dllmain_crt_process_detach()] + [82 byte(s)], File-->Line: [d:\agent\_work\3\s\src\vctools\crt\vcstartup\src\startup\dll_dllmain.cpp-->108]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFA125CEA94], Fun: [dllmain_dispatch()] + [232 byte(s)], File-->Line: [d:\agent\_work\3\s\src\vctools\crt\vcstartup\src\startup\dll_dllmain.cpp-->212] + [13 byte(s)]
-! Module: [C:\WINDOWS\SYSTEM32\ntdll.dll], AddrPC.Offset: [00007FFA3BEE9A1D], Fun: [RtlActivateActivationContextUnsafeFast()] + [285 byte(s)]
-! Module: [C:\WINDOWS\SYSTEM32\ntdll.dll], AddrPC.Offset: [00007FFA3BF2DB91], Fun: [LdrShutdownProcess()] + [321 byte(s)]
-! Module: [C:\WINDOWS\SYSTEM32\ntdll.dll], AddrPC.Offset: [00007FFA3BF2DA2D], Fun: [RtlExitUserProcess()] + [173 byte(s)]
-! Module: [C:\WINDOWS\System32\KERNEL32.DLL], AddrPC.Offset: [00007FFA3BD8E0AB], Fun: [FatalExit()] + [11 byte(s)]
-! Module: [C:\WINDOWS\System32\ucrtbase.dll], AddrPC.Offset: [00007FFA398505BC], Fun: [exit()] + [476 byte(s)]
-! Module: [C:\WINDOWS\System32\ucrtbase.dll], AddrPC.Offset: [00007FFA3985045F], Fun: [exit()] + [127 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFA125CA6AA], Fun: [xrDebug::backend()] + [306 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->191] + [8 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFA125CA563], Fun: [xrDebug::fatal()] + [131 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->252]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1FCB80C], Fun: [CScriptEngine::lua_pcall_failed()] + [120 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\common_ai\script_engine.cpp-->53]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FF9D9385490], Fun: [lj_BC_FUNCC()] + [66 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FF9D93C3E47], Fun: [lj_err_run()] + [327 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_err.c-->851]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FF9D93C2F19], Fun: [err_msgv()] + [121 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_err.c-->874] + [8 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FF9D93C3B69], Fun: [lj_err_msg()] + [9 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_err.c-->880] + [5 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FF9D940386C], Fun: [lj_tab_next()] + [332 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_tab.c-->605] + [13 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FF9D938EED2], Fun: [lua_next()] + [50 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_api.c-->896] + [32 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1FD0F59], Fun: [CScriptStorage::LogTable()] + [173 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\common_ai\script_storage.cpp-->92] + [13 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1FD119D], Fun: [CScriptStorage::LogVariable()] + [545 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\common_ai\script_storage.cpp-->141]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1FD0E2D], Fun: [CScriptStorage::dump_state()] + [129 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\common_ai\script_storage.cpp-->78]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1FD133E], Fun: [ScriptCrashHandler()] + [130 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\common_ai\script_storage.cpp-->194]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFA125CA7B4], Fun: [LogStackTrace()] + [28 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->56]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFA125CA626], Fun: [xrDebug::backend()] + [174 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->172]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFA125CA3F6], Fun: [xrDebug::fail()] + [46 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->236]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrRender_R2.dll], AddrPC.Offset: [00007FF9DB0EA95B], Fun: [CRender::model_CreateParticles()] + [139 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\layers\xrrenderpc_r2\r2.cpp-->432]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D20FA05A], Fun: [CParticlesObject::Init()] + [66 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\particlesobject.cpp-->30]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D20FA362], Fun: [CParticlesObject::CParticlesObject()] + [82 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\particlesobject.cpp-->18]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1FC9995], Fun: [CScriptParticlesCustom::CScriptParticlesCustom()] + [33 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\script_particles.cpp-->17]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1FC9BEA], Fun: [CScriptParticles::CScriptParticles()] + [42 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\script_particles.cpp-->76] + [23 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\Luabind.dll], AddrPC.Offset: [000000018000A907], Fun: [luabind::detail::class_rep::constructor_dispatcher()] + [259 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\src\class_rep.cpp-->491] + [30 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FF9D9385490], Fun: [lj_BC_FUNCC()] + [66 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\Luabind.dll], AddrPC.Offset: [000000018000B4DB], Fun: [luabind::detail::class_rep::construct_lua_class_callback()] + [395 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\src\class_rep.cpp-->1050]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FF9D9385490], Fun: [lj_BC_FUNCC()] + [66 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FF9D938F0BB], Fun: [lua_pcall()] + [171 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_api.c-->1144]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\Luabind.dll], AddrPC.Offset: [000000018000EB84], Fun: [luabind::detail::pcall()] + [100 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\src\pcall.cpp-->40] + [16 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1F21DFD], Fun: [luabind::detail::proxy_member_void_caller<unsigned int const *>::~proxy_member_void_caller<unsigned int const *>()] + [73 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\luabind\detail\call_member.hpp-->269] + [16 byte(s)]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1F21A29], Fun: [CScriptBinderObjectWrapper::shedule_Update()] + [53 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\script_binder_object_wrapper.cpp-->67]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1E3CCE3], Fun: [CScriptBinder::shedule_Update()] + [19 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\script_binder.cpp-->119]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D202BC57], Fun: [CEntity::shedule_Update()] + [27 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\entity.cpp-->325]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D202CC46], Fun: [CEntityAlive::shedule_Update()] + [18 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\entity_alive.cpp-->197]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1E394CF], Fun: [CCustomMonster::shedule_Update()] + [411 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\custommonster.cpp-->294]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1E426F0], Fun: [CBaseMonster::shedule_Update()] + [20 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\ai\monsters\basemonster\base_monster.cpp-->339]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1EA9616], Fun: [CZombie::shedule_Update()] + [14 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\ai\monsters\zombie\zombie.cpp-->175]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF6A741A133], Fun: [CSheduler::ProcessStep()] + [467 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\xrsheduler.cpp-->356]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF6A741A4E5], Fun: [CSheduler::Update()] + [389 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\xrsheduler.cpp-->462]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrGame.dll], AddrPC.Offset: [00007FF9D1FDE852], Fun: [CGamePersistent::OnFrame()] + [638 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\gamepersistent.cpp-->582]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF6A744CD48], Fun: [CRegistrator<pureFrame>::Process()] + [84 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\pure.h-->86]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF6A744BE28], Fun: [CRenderDevice::FrameMove()] + [292 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->443]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF6A744C197], Fun: [CRenderDevice::on_idle()] + [223 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->214]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF6A744C97E], Fun: [CRenderDevice::message_loop()] + [98 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->316]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF6A744BFFB], Fun: [CRenderDevice::Run()] + [411 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->389]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF6A740EDA8], Fun: [Startup()] + [296 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\x_ray.cpp-->218]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF6A740F11E], Fun: [WinMain_impl()] + [478 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\x_ray.cpp-->418]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF6A740C7F8], Fun: [WinMain()] + [72 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\x_ray.cpp-->439]
-! Module: [Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF6A746E12A], Fun: [__scrt_common_main_seh()] + [262 byte(s)], File-->Line: [d:\agent\_work\3\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl-->288] + [33 byte(s)]
-! Module: [C:\WINDOWS\System32\KERNEL32.DLL], AddrPC.Offset: [00007FFA3BD87034], Fun: [BaseThreadInitThunk()] + [20 byte(s)]
-! Module: [C:\WINDOWS\SYSTEM32\ntdll.dll], AddrPC.Offset: [00007FFA3BF22651], Fun: [RtlUserThreadStart()] + [33 byte(s)]
-[23.09.21 21:00:17.569] ********************************************************************************
+[23.09.21 21:38:56.424] * Detected CPU: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz [GenuineIntel], F6/M158/S10
+[23.09.21 21:38:56.425] * CPU features: RDTSC, MMX, SSE, SSE2, SSE3, MONITOR/MWAIT, SSSE3, SSE4.1, SSE4.2, AVX, AVX2
+[23.09.21 21:38:56.425] * CPU cores: [6], threads: [6]
+[23.09.21 21:38:56.425] * CPU0 current freq: 2808 MHz, max freq: 2808 MHz
+[23.09.21 21:38:56.425] * CPU1 current freq: 2808 MHz, max freq: 2808 MHz
+[23.09.21 21:38:56.425] * CPU2 current freq: 2808 MHz, max freq: 2808 MHz
+[23.09.21 21:38:56.425] * CPU3 current freq: 2808 MHz, max freq: 2808 MHz
+[23.09.21 21:38:56.425] * CPU4 current freq: 2808 MHz, max freq: 2808 MHz
+[23.09.21 21:38:56.425] * CPU5 current freq: 2808 MHz, max freq: 2808 MHz
+[23.09.21 21:38:56.425] Initializing File System...
+[23.09.21 21:38:56.425] --Found base arch: [z:\programs\priboi ogsr\gamedata.db0], size: [678577379]
+[23.09.21 21:38:56.460] --Found base arch: [z:\programs\priboi ogsr\gamedata.db1], size: [708434331]
+[23.09.21 21:38:56.463] --Found base arch: [z:\programs\priboi ogsr\gamedata.db2], size: [671169415]
+[23.09.21 21:38:56.465] --Found base arch: [z:\programs\priboi ogsr\gamedata.db3], size: [684792231]
+[23.09.21 21:38:56.467] --Found base arch: [z:\programs\priboi ogsr\gamedata.db4], size: [671392842]
+[23.09.21 21:38:56.712] --Found base arch: [z:\programs\priboi ogsr\gamedata.db5], size: [697475082]
+[23.09.21 21:38:56.744] --Found base arch: [z:\programs\priboi ogsr\gamedata.db6], size: [672288151]
+[23.09.21 21:38:56.745] --Found base arch: [z:\programs\priboi ogsr\gamedata.db7], size: [672462598]
+[23.09.21 21:38:56.763] --Found base arch: [z:\programs\priboi ogsr\gamedata.db8], size: [293378144]
+[23.09.21 21:38:56.769] --Found base arch: [z:\programs\priboi ogsr\gamedata.db9], size: [79312307]
+[23.09.21 21:38:56.796] --Found base arch: [z:\programs\priboi ogsr\gamedata.dba], size: [22884835]
+[23.09.21 21:38:56.800] --Found base arch: [z:\programs\priboi ogsr\gamedata.dbb], size: [55194918]
+[23.09.21 21:38:56.806] --Found base arch: [z:\programs\priboi ogsr\gamedata.dbc], size: [160948]
+[23.09.21 21:38:56.806] --Found base arch: [z:\programs\priboi ogsr\gamedata.dbd], size: [101014]
+[23.09.21 21:38:56.806] using fs-ltx fsgame.ltx
+[23.09.21 21:38:56.806] --Found FS dir: [z:\programs\priboi ogsr\userdata\]
+[23.09.21 21:38:56.806]   files: [6]
+[23.09.21 21:38:56.807] --Found FS dir: [z:\programs\priboi ogsr\gamedata\]
+[23.09.21 21:38:56.807]   files: [16]
+[23.09.21 21:38:56.807] --Found FS dir: [z:\programs\priboi ogsr\gamedata\spawns\]
+[23.09.21 21:38:56.807]   files: [4]
+[23.09.21 21:38:56.807] --Found FS dir: [z:\programs\priboi ogsr\gamedata\anims\]
+[23.09.21 21:38:56.807]   files: [23]
+[23.09.21 21:38:56.808] --Found FS dir: [z:\programs\priboi ogsr\gamedata\levels\]
+[23.09.21 21:38:56.808]   files: [12]
+[23.09.21 21:38:56.809] --Found FS dir: [z:\programs\priboi ogsr\gamedata\meshes\]
+[23.09.21 21:38:56.809]   files: [12]
+[23.09.21 21:38:56.828] --Found FS dir: [z:\programs\priboi ogsr\gamedata\meshes\]
+[23.09.21 21:38:56.828]   files: [12]
+[23.09.21 21:38:56.841] --Found FS dir: [z:\programs\priboi ogsr\gamedata\shaders\]
+[23.09.21 21:38:56.841]   files: [7]
+[23.09.21 21:38:56.847] --Found FS dir: [z:\programs\priboi ogsr\gamedata\sounds\]
+[23.09.21 21:38:56.847]   files: [22]
+[23.09.21 21:38:56.874] --Found FS dir: [z:\programs\priboi ogsr\gamedata\textures\]
+[23.09.21 21:38:56.874]   files: [60]
+[23.09.21 21:38:56.990] --Found FS dir: [z:\programs\priboi ogsr\gamedata\scripts\]
+[23.09.21 21:38:56.991]   files: [125]
+[23.09.21 21:38:56.992] --Found FS dir: [z:\programs\priboi ogsr\gamedata\config\]
+[23.09.21 21:38:56.993]   files: [30]
+[23.09.21 21:38:57.002] --Found FS dir: [z:\programs\priboi ogsr\gamedata\levels\]
+[23.09.21 21:38:57.002]   files: [12]
+[23.09.21 21:38:57.002] --Found FS dir: [z:\programs\priboi ogsr\userdata\savedgames\]
+[23.09.21 21:38:57.002]   files: [8]
+[23.09.21 21:38:57.002] --Found FS dir: [z:\programs\priboi ogsr\userdata\logs\]
+[23.09.21 21:38:57.003]   files: [17]
+[23.09.21 21:38:57.003] --Found FS dir: [z:\programs\priboi ogsr\userdata\screenshots\]
+[23.09.21 21:38:57.003]   files: [9]
+[23.09.21 21:38:57.003] --Found FS dir: [z:\programs\priboi ogsr\mods\]
+[23.09.21 21:38:57.003]   files: [3]
+[23.09.21 21:38:57.003] --Found external arch: [mp_military_2.xdb0], size: [50350518]
+[23.09.21 21:38:57.013] FS: 34533 files cached, 6114Kb memory used.
+[23.09.21 21:38:57.013] Init FileSystem 0.588183 sec
+[23.09.21 21:38:57.016] [OGSR Engine (x64)] build date: [Sep 22 2021 10:23:51]
+[23.09.21 21:38:57.016] [AppVeyor] build version: [2.1.293], repo: [OGSR/OGSR-Engine]
+[23.09.21 21:38:57.016] [_MSC_FULL_VER]: [191627045], [_MSVC_LANG]: [201703L]
+[23.09.21 21:38:57.016] Working Directory: [Z:\Programs\Priboi OGSR\bin_x64]
+[23.09.21 21:38:57.016] CommandLine: ["Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe" ]
+[23.09.21 21:38:57.149] Initializing Engine...
+[23.09.21 21:38:57.150] Starting INPUT device...
+[23.09.21 21:38:57.196] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[23.09.21 21:38:57.196] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[23.09.21 21:38:57.203] refCount:m_pAdapter 1
+[23.09.21 21:38:57.203] refCount:pFactory 1
+[23.09.21 21:38:57.203] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[23.09.21 21:38:57.203] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[23.09.21 21:38:57.298] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[23.09.21 21:38:57.298] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[23.09.21 21:38:57.299] --[CEngineAPI::CreateRendererList] Available render modes [5]:
+[23.09.21 21:38:57.299] --  [renderer_r2a]
+[23.09.21 21:38:57.299] --  [renderer_r2]
+[23.09.21 21:38:57.299] --  [renderer_r2.5]
+[23.09.21 21:38:57.299] --  [renderer_r3]
+[23.09.21 21:38:57.299] --  [renderer_r4]
+[23.09.21 21:38:57.299] Executing config-script "user.ltx"...
+[23.09.21 21:38:57.299] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
+[23.09.21 21:38:57.299] [z:\programs\priboi ogsr\userdata\user.ltx] successfully loaded.
+[23.09.21 21:38:57.299] --Loading DLL: [xrRender_R2.dll]
+[23.09.21 21:38:57.300] --Loading DLL: [xrGame.dll]
+[23.09.21 21:38:57.314] --------------------------------------------------------------------------------
+[23.09.21 21:38:57.314] [8143MB] physical memory installed, [3800MB] available, [53] percent of memory in use
+[23.09.21 21:38:57.314] PageFile usage: [41MB], Peak PageFile usage: [88MB]
+[23.09.21 21:38:57.314] --------------------------------------------------------------------------------
+[23.09.21 21:38:57.314] * [ D3D ]: textures[0 K]
+[23.09.21 21:38:57.314] * [x-ray]: process heap[21241 K], render[0 K]
+[23.09.21 21:38:57.314] * [x-ray]: economy: strings[4832 K], smem[0 K]
+[23.09.21 21:38:57.314] SOUND: OpenAL: enumerate devices...
+[23.09.21 21:38:57.314] SOUND: OpenAL: EnumerationExtension Present
+[23.09.21 21:38:57.411] devices Generic Software
+[23.09.21 21:38:57.411] SOUND: OpenAL: system  default SndDevice name is Generic Software
+[23.09.21 21:38:57.689] SOUND: OpenAL: All available devices:
+[23.09.21 21:38:57.689] 1. Generic Software, Spec Version 1.1 (default) eax[2] efx[no] xram[no]
+[23.09.21 21:38:57.689] 2. OpenAL Soft, Spec Version 1.1  eax[0] efx[yes] xram[no]
+[23.09.21 21:38:57.689] Executing config-script "z:\programs\priboi ogsr\gamedata\config\default_controls.ltx"...
+[23.09.21 21:38:57.691] [z:\programs\priboi ogsr\gamedata\config\default_controls.ltx] successfully loaded.
+[23.09.21 21:38:57.691] Executing config-script "user.ltx"...
+[23.09.21 21:38:57.691] Executing config-script "z:\programs\priboi ogsr\gamedata\config\rspec_high.ltx"...
+[23.09.21 21:38:57.691] ! Unknown command:  r2_sun_shafts
+[23.09.21 21:38:57.691] ! Unknown command:  r__supersample
+[23.09.21 21:38:57.691] [z:\programs\priboi ogsr\gamedata\config\rspec_high.ltx] successfully loaded.
+[23.09.21 21:38:57.691] Executing config-script "z:\programs\priboi ogsr\gamedata\config\default_controls.ltx"...
+[23.09.21 21:38:57.692] [z:\programs\priboi ogsr\gamedata\config\default_controls.ltx] successfully loaded.
+[23.09.21 21:38:57.692] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
+[23.09.21 21:38:57.692] [z:\programs\priboi ogsr\userdata\user.ltx] successfully loaded.
+[23.09.21 21:38:57.692] SOUND: Selected device is Generic Software
+[23.09.21 21:38:57.732] [OpenAL] EAX 2.0 extension: present
+[23.09.21 21:38:57.732] [OpenAL] EAX 2.0 deferred: present
+[23.09.21 21:38:57.732] * sound : cache: 65537 kb, 4856 lines, 13820 bpl
+[23.09.21 21:38:57.762] Starting RENDER device...
+[23.09.21 21:38:57.791] * GPU [vendor:10DE]-[device:1C81]: NVIDIA GeForce GTX 1050
+[23.09.21 21:38:57.791] * GPU driver: 30.0.14.7196
+[23.09.21 21:38:57.882] * CREATE: DeviceREF: 1
+[23.09.21 21:38:57.882] * Vertex Processor: PURE HARDWARE
+[23.09.21 21:38:57.882] *     Texture memory: 4072 M
+[23.09.21 21:38:57.882] *          DDI-level: 9.0
+[23.09.21 21:38:57.883] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+[23.09.21 21:38:57.884] * GPU vertex cache: unrecognized, 16
+[23.09.21 21:38:57.884] * DVB created: 16384K
+[23.09.21 21:38:57.884] * DIB created: 512K
+[23.09.21 21:38:57.908] ! Version conflict in shader 'models\lightplanes_00'
+[23.09.21 21:38:57.908] ! Version conflict in shader 'models\lightplanesself'
+[23.09.21 21:38:57.908] ! Version conflict in shader 'models\model_puh'
+[23.09.21 21:38:57.908] ! Version conflict in shader 'models\model_refl'
+[23.09.21 21:38:57.908] ! Version conflict in shader 'models\xbrainglass'
+[23.09.21 21:38:57.908] ! Version conflict in shader 'models\xdistortcolorlinv'
+[23.09.21 21:38:57.908] ! Version conflict in shader 'models\xglass'
+[23.09.21 21:38:57.908] ! Version conflict in shader 'models\xglass2'
+[23.09.21 21:38:57.908] ! Version conflict in shader 'models\xlens'
+[23.09.21 21:38:57.908] ! Version conflict in shader 'selflight_static'
+[23.09.21 21:38:57.908] [CTextureDescrMngr::LoadLTX] count of *textures*.ltx files: [1]
+[23.09.21 21:38:58.043] * NULLRT supported
+[23.09.21 21:38:58.043] * ...and used
+[23.09.21 21:38:58.043] * HWDST/PCF supported and used
+[23.09.21 21:38:58.043] * NV-DBT supported and used
+[23.09.21 21:38:59.075] --LUA version: [LuaJIT 2.1.0-beta3]
+[23.09.21 21:38:59.120] Starting engine...
+[23.09.21 21:39:03.407] * phase time: 12 ms
+[23.09.21 21:39:03.431] * phase cmem: 135686 K
+[23.09.21 21:39:03.480] --LUA version: [LuaJIT 2.1.0-beta3]
+[23.09.21 21:39:03.502] * phase time: 95 ms
+[23.09.21 21:39:03.527] * phase cmem: 141915 K
+[23.09.21 21:39:03.527] * phase time: 24 ms
+[23.09.21 21:39:03.551] * phase cmem: 141909 K
+[23.09.21 21:39:03.551] * Creating new game...
+[23.09.21 21:39:03.552] * Loading spawn registry...
+[23.09.21 21:39:04.104] * 8976 spawn points are successfully loaded
+[23.09.21 21:39:06.190] * Saving spawns...
+[23.09.21 21:39:06.190] * Saving objects...
+[23.09.21 21:39:06.223] * 17269 objects are successfully saved
+[23.09.21 21:39:06.232] * Game all.sav is successfully saved to file 'z:\programs\priboi ogsr\userdata\savedgames\all.sav'
+[23.09.21 21:39:06.232] * New game is successfully created!
+[23.09.21 21:39:06.232] * phase time: 2704 ms
+[23.09.21 21:39:06.275] * phase cmem: 193080 K
+[23.09.21 21:39:06.320] # Player not found. New player created.
+[23.09.21 21:39:06.320] !!xrServer::Check_GameSpy_CDKey_Success - 1
+[23.09.21 21:39:06.320] * client : connection accepted - <>
+[23.09.21 21:39:06.337] * phase time: 105 ms
+[23.09.21 21:39:06.380] * phase cmem: 193155 K
+[23.09.21 21:39:06.381] * phase time: 43 ms
+[23.09.21 21:39:06.424] * phase cmem: 193155 K
+[23.09.21 21:39:07.613] --[ISpatial_DB::initialize] bbc is [43.8, 37.6, 88.9], bbd is [722.7, 76.3, 722.7]
+[23.09.21 21:39:07.613] --[ISpatial_DB::initialize] bbc is [43.8, 37.6, 88.9], bbd is [722.7, 76.3, 722.7]
+[23.09.21 21:39:07.615] * phase time: 1233 ms
+[23.09.21 21:39:07.658] * phase cmem: 287330 K
+[23.09.21 21:39:07.841] * phase time: 226 ms
+[23.09.21 21:39:07.885] * phase cmem: 290612 K
+[23.09.21 21:39:07.889] * [Loading VB] 65532 verts, 2047 Kb
+[23.09.21 21:39:07.902] * [Loading VB] 65525 verts, 2047 Kb
+[23.09.21 21:39:07.910] * [Loading VB] 65535 verts, 2047 Kb
+[23.09.21 21:39:07.918] * [Loading VB] 65466 verts, 2045 Kb
+[23.09.21 21:39:07.926] * [Loading VB] 17208 verts, 537 Kb
+[23.09.21 21:39:07.928] * [Loading VB] 65533 verts, 2047 Kb
+[23.09.21 21:39:07.937] * [Loading VB] 65534 verts, 2047 Kb
+[23.09.21 21:39:07.948] * [Loading VB] 65534 verts, 2047 Kb
+[23.09.21 21:39:07.956] * [Loading VB] 65531 verts, 2047 Kb
+[23.09.21 21:39:07.965] * [Loading VB] 65535 verts, 2047 Kb
+[23.09.21 21:39:07.974] * [Loading VB] 65535 verts, 2047 Kb
+[23.09.21 21:39:07.983] * [Loading VB] 46595 verts, 1456 Kb
+[23.09.21 21:39:07.989] * [Loading VB] 65534 verts, 2047 Kb
+[23.09.21 21:39:07.998] * [Loading VB] 65533 verts, 2047 Kb
+[23.09.21 21:39:08.007] * [Loading VB] 65535 verts, 2047 Kb
+[23.09.21 21:39:08.016] * [Loading VB] 65532 verts, 2047 Kb
+[23.09.21 21:39:08.026] * [Loading VB] 65533 verts, 2047 Kb
+[23.09.21 21:39:08.034] * [Loading VB] 65533 verts, 2047 Kb
+[23.09.21 21:39:08.043] * [Loading VB] 53181 verts, 1661 Kb
+[23.09.21 21:39:08.048] * [Loading IB] 1048575 indices, 2047 Kb
+[23.09.21 21:39:08.060] * [Loading IB] 1048572 indices, 2047 Kb
+[23.09.21 21:39:08.068] * [Loading IB] 1048572 indices, 2047 Kb
+[23.09.21 21:39:08.076] * [Loading IB] 1048572 indices, 2047 Kb
+[23.09.21 21:39:08.083] * [Loading IB] 1048572 indices, 2047 Kb
+[23.09.21 21:39:08.091] * [Loading IB] 1048572 indices, 2047 Kb
+[23.09.21 21:39:08.099] * [Loading IB] 1048575 indices, 2047 Kb
+[23.09.21 21:39:08.106] * [Loading IB] 1048572 indices, 2047 Kb
+[23.09.21 21:39:08.114] * [Loading IB] 1048575 indices, 2047 Kb
+[23.09.21 21:39:08.121] * [Loading IB] 228285 indices, 445 Kb
+[23.09.21 21:39:08.124] * [Loading VB] 65533 verts, 767 Kb
+[23.09.21 21:39:08.127] * [Loading VB] 65534 verts, 767 Kb
+[23.09.21 21:39:08.131] * [Loading VB] 65534 verts, 767 Kb
+[23.09.21 21:39:08.133] * [Loading VB] 65535 verts, 767 Kb
+[23.09.21 21:39:08.136] * [Loading VB] 65535 verts, 767 Kb
+[23.09.21 21:39:08.141] * [Loading VB] 65534 verts, 767 Kb
+[23.09.21 21:39:08.143] * [Loading VB] 65535 verts, 767 Kb
+[23.09.21 21:39:08.146] * [Loading VB] 14030 verts, 164 Kb
+[23.09.21 21:39:08.147] * [Loading IB] 1048575 indices, 2047 Kb
+[23.09.21 21:39:08.157] * [Loading IB] 1048575 indices, 2047 Kb
+[23.09.21 21:39:08.165] * [Loading IB] 1048575 indices, 2047 Kb
+[23.09.21 21:39:08.173] * [Loading IB] 718302 indices, 1402 Kb
+[23.09.21 21:39:08.178] * phase time: 336 ms
+[23.09.21 21:39:08.222] * phase cmem: 359497 K
+[23.09.21 21:39:08.914] * phase time: 735 ms
+[23.09.21 21:39:08.958] * phase cmem: 364717 K
+[23.09.21 21:39:08.974] * [DETAILS] VertexConsts(256), Batch(61)
+[23.09.21 21:39:08.974] * [DETAILS] 14640 v(20), 9455 p
+[23.09.21 21:39:08.974] * [DETAILS] Batch(61), VB(285K), IB(55K)
+[23.09.21 21:39:08.975] * phase time: 60 ms
+[23.09.21 21:39:09.020] * phase cmem: 365113 K
+[23.09.21 21:39:09.020] * Loading HOM: z:\programs\priboi ogsr\gamedata\levels\l01_escape\level.hom
+[23.09.21 21:39:09.025] * phase time: 50 ms
+[23.09.21 21:39:09.071] * phase cmem: 365337 K
+[23.09.21 21:39:09.074] * phase time: 49 ms
+[23.09.21 21:39:09.120] * phase cmem: 365337 K
+[23.09.21 21:39:09.132] - Game configuring : Started 
+[23.09.21 21:39:09.142] - Game configuring : Finished 
+[23.09.21 21:39:09.261] * phase time: 186 ms
+[23.09.21 21:39:09.307] * phase cmem: 375634 K
+[23.09.21 21:39:13.972] * t-report - base: 1198, 1084819 K
+[23.09.21 21:39:13.972] * t-report - lmap: 7, 7168 K
+[23.09.21 21:39:13.972] * phase time: 4711 ms
+[23.09.21 21:39:14.028] * phase cmem: 1516856 K
+[23.09.21 21:39:14.071] * phase time: 99 ms
+[23.09.21 21:39:14.124] * phase cmem: 1516860 K
+[23.09.21 21:39:14.185] --------------------------------------------------------------------------------
+[23.09.21 21:39:14.185] [8143MB] physical memory installed, [2292MB] available, [71] percent of memory in use
+[23.09.21 21:39:14.185] PageFile usage: [1818MB], Peak PageFile usage: [1820MB]
+[23.09.21 21:39:14.185] --------------------------------------------------------------------------------
+[23.09.21 21:39:14.185] * [ D3D ]: textures[1091988 K]
+[23.09.21 21:39:14.185] * [x-ray]: process heap[1516129 K], render[0 K]
+[23.09.21 21:39:14.185] * [x-ray]: economy: strings[7319 K], smem[0 K]
+[23.09.21 21:39:17.654] ! auto-generated bump map: wpn\ots_33\wpn_ots33_gps_bump#
+[23.09.21 21:39:17.671] ! auto-generated bump map: wpn\ots_33\wpn_ots33_frame_bump#
+[23.09.21 21:39:17.682] ! auto-generated bump map: wpn\ots_33\wpn_ots33_mag_bump#
+[23.09.21 21:39:18.282] ! auto-generated bump map: wpn\tec-9\wpn_tec_kg9_gun_bump#
+[23.09.21 21:39:18.293] ! auto-generated bump map: wpn\tec-9\wpn_tec_kg9_mag_bump#
+[23.09.21 21:39:19.337] * Saving spawns...
+[23.09.21 21:39:19.337] * Saving objects...
+[23.09.21 21:39:19.373] * 17269 objects are successfully saved
+[23.09.21 21:39:19.380] * Game Поговорить с командиром блокпоста.sav is successfully saved to file 'z:\programs\priboi ogsr\userdata\savedgames\Поговорить с командиром блокпоста.sav'
+[23.09.21 21:39:20.842] * [CPatrolPathStorage::safe_path]: path[heli_sleep] pp[wp00|sig=heli_sig] level_vertex_id[4294967295] -> 160718
+[23.09.21 21:39:21.044] * [CPatrolPathStorage::safe_path]: path[heli_idle_move] pp[wp00] level_vertex_id[4294967295] -> 3499
+[23.09.21 21:39:22.030] * MEMORY USAGE: 1941116 K
+[23.09.21 21:39:22.030] * End of synchronization A[1] R[1]
+[23.09.21 21:39:22.030] * phase time: 8058 ms
+[23.09.21 21:39:22.113] * phase cmem: 1941116 K
+[23.09.21 21:39:22.636] Intro start 304
+[23.09.21 21:39:39.273] * [CPatrolPathStorage::safe_path]: path[heli_sleep2] pp[wp00] level_vertex_id[4294967295] -> 188056
+[23.09.21 21:39:41.608] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:39:41.941] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:39:42.475] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:39:42.841] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:39:45.474] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:39:48.038] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:39:48.407] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:39:48.807] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:39:50.980] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:39:51.543] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:39:52.143] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:39:52.842] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:39:53.359] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:39:53.642] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:39:54.209] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:39:54.842] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:39:56.544] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:39:57.212] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:39:57.811] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:39:59.028] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:39:59.211] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:00.512] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:01.155] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:02.328] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:02.862] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:06.209] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:08.109] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:13.109] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:15.028] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:16.033] * Saving spawns...
+[23.09.21 21:40:16.033] * Saving objects...
+[23.09.21 21:40:16.096] * 17505 objects are successfully saved
+[23.09.21 21:40:16.104] * Game Данил_quicksave.sav is successfully saved to file 'z:\programs\priboi ogsr\userdata\savedgames\Данил_quicksave.sav'
+[23.09.21 21:40:17.243] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:17.578] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:19.543] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:19.943] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:20.927] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:21.299] * Saving spawns...
+[23.09.21 21:40:21.299] * Saving objects...
+[23.09.21 21:40:21.337] * 17507 objects are successfully saved
+[23.09.21 21:40:21.346] * Game Данил_quicksave.sav is successfully saved to file 'z:\programs\priboi ogsr\userdata\savedgames\Данил_quicksave.sav'
+[23.09.21 21:40:24.846] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:25.095] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:25.611] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:25.952] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:25.952] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:26.094] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:26.278] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:26.478] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:27.112] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:27.112] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:27.533] ! auto-generated bump map: wpn\silencer\wpn_9mm_silencer_bump#
+[23.09.21 21:40:27.672] ! auto-generated bump map: wpn\benelli\wpn_short_body_bump#
+[23.09.21 21:40:27.686] ! auto-generated bump map: wpn\benelli\wpn_short_barrel_bump#
+[23.09.21 21:40:27.766] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:27.782] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:28.546] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:29.246] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:30.046] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:30.761] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:31.896] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:32.081] * Saving spawns...
+[23.09.21 21:40:32.081] * Saving objects...
+[23.09.21 21:40:32.120] * 17591 objects are successfully saved
+[23.09.21 21:40:32.126] * Game Данил_quicksave.sav is successfully saved to file 'z:\programs\priboi ogsr\userdata\savedgames\Данил_quicksave.sav'
+[23.09.21 21:40:32.248] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:32.430] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:32.678] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:33.544] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:33.845] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:34.128] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:34.962] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:35.062] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:35.213] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:35.478] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:36.012] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:37.475] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:38.462] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:38.561] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:38.861] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:39.711] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:39.745] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:40.153] * Saving spawns...
+[23.09.21 21:40:40.153] * Saving objects...
+[23.09.21 21:40:40.204] * 17591 objects are successfully saved
+[23.09.21 21:40:40.212] * Game Данил_quicksave.sav is successfully saved to file 'z:\programs\priboi ogsr\userdata\savedgames\Данил_quicksave.sav'
+[23.09.21 21:40:40.427] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:41.160] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:41.344] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:41.635] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:41.699] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:41.961] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:42.448] * Saving spawns...
+[23.09.21 21:40:42.448] * Saving objects...
+[23.09.21 21:40:42.483] * 17591 objects are successfully saved
+[23.09.21 21:40:42.488] * Game Данил_quicksave.sav is successfully saved to file 'z:\programs\priboi ogsr\userdata\savedgames\Данил_quicksave.sav'
+[23.09.21 21:40:43.060] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:43.134] * Saving spawns...
+[23.09.21 21:40:43.134] * Saving objects...
+[23.09.21 21:40:43.158] * 17591 objects are successfully saved
+[23.09.21 21:40:43.167] * Game Данил_quicksave.sav is successfully saved to file 'z:\programs\priboi ogsr\userdata\savedgames\Данил_quicksave.sav'
+[23.09.21 21:40:43.434] * Saving spawns...
+[23.09.21 21:40:43.434] * Saving objects...
+[23.09.21 21:40:43.458] * 17591 objects are successfully saved
+[23.09.21 21:40:43.464] * Game Данил_quicksave.sav is successfully saved to file 'z:\programs\priboi ogsr\userdata\savedgames\Данил_quicksave.sav'
+[23.09.21 21:40:45.044] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:45.310] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:45.427] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:46.061] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:46.277] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:47.014] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:47.329] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:47.878] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:48.128] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:49.361] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:51.944] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:52.178] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:52.294] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:52.328] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:53.190] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:54.162] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:54.327] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:54.391] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:55.425] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:55.543] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:55.609] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:57.262] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:57.943] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:57.994] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:58.762] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:58.795] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:40:59.842] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:41:00.059] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:41:00.178] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:41:00.393] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:41:00.609] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:41:01.267] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:41:01.281] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:41:02.944] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:41:03.394] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:41:03.510] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:41:03.511] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:41:03.726] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:41:03.830] * Saving spawns...
+[23.09.21 21:41:03.830] * Saving objects...
+[23.09.21 21:41:03.882] * 17594 objects are successfully saved
+[23.09.21 21:41:03.888] * Game Данил_quicksave.sav is successfully saved to file 'z:\programs\priboi ogsr\userdata\savedgames\Данил_quicksave.sav'
+[23.09.21 21:41:04.530] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:41:05.011] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:41:05.767] * Saving spawns...
+[23.09.21 21:41:05.767] * Saving objects...
+[23.09.21 21:41:05.805] * 17594 objects are successfully saved
+[23.09.21 21:41:05.811] * Game Данил_quicksave.sav is successfully saved to file 'z:\programs\priboi ogsr\userdata\savedgames\Данил_quicksave.sav'
+[23.09.21 21:41:05.824] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:41:06.296] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:41:06.364] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:49:13.534] * [R_occlusion::occq_destroy]: fids[58] used[58] pool[58]
+[23.09.21 21:49:13.534] * [R_occlusion::occq_destroy]: released [0] used and [58] pool queries
+[23.09.21 21:49:13.760] * DVB created: 16384K
+[23.09.21 21:49:13.760] * DIB created: 512K
+[23.09.21 21:49:14.683] * RM_Dump: textures  : 1708
+[23.09.21 21:49:14.683] * RM_Dump: rtargets  : 22
+[23.09.21 21:49:14.683] * RM_Dump: vs        : 71
+[23.09.21 21:49:14.683] * RM_Dump: ps        : 85
+[23.09.21 21:49:14.683] * RM_Dump: dcl       : 19
+[23.09.21 21:49:14.683] * RM_Dump: states    : 77
+[23.09.21 21:49:14.683] * RM_Dump: tex_list  : 1365
+[23.09.21 21:49:14.683] * RM_Dump: matrices  : 0
+[23.09.21 21:49:14.683] * RM_Dump: lst_constants: 0
+[23.09.21 21:49:14.683] * RM_Dump: v_passes  : 1990
+[23.09.21 21:49:14.683] * RM_Dump: v_elements: 1996
+[23.09.21 21:49:14.683] * RM_Dump: v_shaders : 1192
+[23.09.21 21:49:14.683] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+[23.09.21 21:49:14.683] * GPU vertex cache: recognized, 24
+[23.09.21 21:49:14.683] *** RESET [1150 ms]
+[23.09.21 21:49:15.602] * MEMORY USAGE: 2036581 K
+[23.09.21 21:49:15.602] * End of synchronization A[1] R[1]
+[23.09.21 21:49:16.350] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:49:16.900] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[23.09.21 21:49:20.262] - Disconnect
+[23.09.21 21:49:22.265] - Destroying level
+[23.09.21 21:49:22.470] DestroySingleton::RefCounter: 0
+[23.09.21 21:49:22.471] DestroySingleton::RefCounter: 0
+[23.09.21 21:49:22.474] DestroySingleton::RefCounter: 0
+[23.09.21 21:49:22.476] DestroySingleton::RefCounter: 0
+[23.09.21 21:49:22.477] DestroySingleton::RefCounter: 0
+[23.09.21 21:49:22.487] Input:  1
+[23.09.21 21:49:22.495] Config-file [z:\programs\priboi ogsr\userdata\user.ltx] saved successfully
+[23.09.21 21:49:22.708] Destroying Direct3D...
+[23.09.21 21:49:22.708] * [R_occlusion::occq_destroy]: fids[32] used[32] pool[32]
+[23.09.21 21:49:22.708] * [R_occlusion::occq_destroy]: released [0] used and [32] pool queries
+[23.09.21 21:49:22.765] * RM_Dump: textures  : 0
+[23.09.21 21:49:22.765] * RM_Dump: rtargets  : 0
+[23.09.21 21:49:22.765] * RM_Dump: vs        : 0
+[23.09.21 21:49:22.765] * RM_Dump: ps        : 0
+[23.09.21 21:49:22.765] * RM_Dump: dcl       : 0
+[23.09.21 21:49:22.765] * RM_Dump: states    : 0
+[23.09.21 21:49:22.765] * RM_Dump: tex_list  : 0
+[23.09.21 21:49:22.765] * RM_Dump: matrices  : 0
+[23.09.21 21:49:22.765] * RM_Dump: lst_constants: 0
+[23.09.21 21:49:22.765] * RM_Dump: v_passes  : 0
+[23.09.21 21:49:22.765] * RM_Dump: v_elements: 0
+[23.09.21 21:49:22.765] * RM_Dump: v_shaders : 0
+[23.09.21 21:49:22.765] refCount:pBaseZB 1
+[23.09.21 21:49:22.765] refCount:pBaseRT 1
+[23.09.21 21:49:22.765] DeviceREF: 1
+[23.09.21 21:49:22.815] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[23.09.21 21:49:22.815] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries

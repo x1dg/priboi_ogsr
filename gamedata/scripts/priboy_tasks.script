@@ -221,15 +221,23 @@ function start_vasyanka()
 end
 
 function start_toilet()
-	local a = vector()
-	a.x = -111.17
-	a.y = -29.81 
-	a.z = -394.89
+	local first = vector()
+	first.x = -163.77
+	first.y = -15.74 
+	first.z = -129.51
+	local second = vector()
+	second.x = 62.607
+	second.y = 29.23
+	second.z = 154.405
+	local third = vector()
+	third.x = 58.73
+	third.y = 22.28
+	third.z = 155.89
 	local level_vertex = 145881  
 	local game_vertex_id= 22
-	alife():create("tualet_bumaga", a, level_vertex,game_vertex_id)
-	alife():create("tualet_bumaga", a, level_vertex,game_vertex_id)  
-	alife():create("tualet_bumaga", a, level_vertex,game_vertex_id)  
+	alife():create("tualet_bumaga", first, 72797, 56)
+	alife():create("tualet_bumaga", second, 359827, 97)  
+	alife():create("tualet_bumaga", third, 359827, 97)  
 end
 
 function can_finish_toilet_task()
