@@ -102,6 +102,13 @@
     <string id="enc_cigarette_descr">
         <text>Они, конечно, не угробят тебя так быстро, как это сделает аномалия, но тем не менее - будь осторожен...</text>
     </string>
+	
+	<string id="enc_toilet_name">
+        <text>Туалетная Бумага</text>
+    </string>
+	<string id="enc_toilet_descr">
+        <text>Довольно ходовой товар в зоне. Люди любят какать.</text>
+    </string>
 
     <string id="enc_guitar_name">
         <text>Гитара</text>

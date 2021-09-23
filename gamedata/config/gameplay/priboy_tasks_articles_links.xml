@@ -39,6 +39,16 @@
 	<text>priboy_bring_vodka_article</text>
 </article>
 
+<article id="priboy_vasyanka_article_id" name="priboy_vasyanka" article_type="task" group="priboy_vasyanka">
+	<texture x="0" y="0" width="220" height="120">ui\ui_shram</texture>
+	<text>priboy_vasyanka_article</text>
+</article>
+
+<article id="priboy_toilet_article_id" name="priboy_toilet" article_type="task" group="priboy_toilet">
+	<texture x="0" y="0" width="220" height="150">ui\ui_toilet</texture>
+	<text>priboy_toilet_article</text>
+</article>
+
 <article id="priboy_talk_to_esc_commanders_article_id" name="priboy_talk_to_esc_commanders" article_type="task" group="priboy_talk_to_esc_commanders">
 	<texture x="200" y="549" width="150" height="101">ui\ui_icon_photo</texture>
 	<text>priboy_talk_to_esc_commanders_article</text>

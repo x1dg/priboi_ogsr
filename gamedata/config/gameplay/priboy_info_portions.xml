@@ -16,6 +16,16 @@
 	
 	<info_portion id="dar_door_3_opened"></info_portion>
 	<info_portion id="commander_talk_done"></info_portion>
+	<info_portion id="priboy_vasyanka_done"></info_portion>
+<info_portion id="priboy_vasyanka_start">
+		<task>priboy_vasyanka</task>
+	</info_portion>
+	<info_portion id="priboy_toilet_start">
+		<task>priboy_toilet</task>
+	</info_portion>
+	<info_portion id="priboy_toilet_found"></info_portion>
+	<info_portion id="priboy_toilet_brought"></info_portion>
+	<info_portion id="priboy_toilet_task_done"></info_portion>
 	<info_portion id="blockpost_commander_dead"></info_portion>
 	<info_portion id="buddy_talk_done"></info_portion>
 	<info_portion id="buddy_dead"></info_portion>

@@ -68,6 +68,37 @@
 	</objective>
 </game_task>
 
+<game_task id="priboy_vasyanka">
+	<title>priboy_vasyanka_title</title>
+	<objective>
+		<icon>ui_iconsTotal_priboy_bring_vodka</icon>
+		<text>priboy_vasyanka_title</text>
+		<article>priboy_vasyanka_article_id</article>
+		<infoportion_complete>priboy_vasyanka_done</infoportion_complete>
+	</objective>
+</game_task>
+
+<game_task id="priboy_toilet">
+	<title>priboy_toilet_title</title>
+	<objective>
+		<icon>ui_iconsTotal_priboy_bring_vodka</icon>
+		<text>priboy_toilet_title</text>
+		<article>priboy_toilet_article_id</article>
+		<infoportion_complete>priboy_toilet_task_done</infoportion_complete>
+		<function_complete>priboy_tasks.toilet_task_done</function_complete>
+	</objective>
+	<objective>
+		<text>priboy_find_toilet_title</text>
+		<infoportion_complete>priboy_toilet_found</infoportion_complete>
+	</objective>
+	<objective>
+		<text>priboy_bring_toilet_to_wolf_title</text>
+		<map_location_type hint="esc_blokpost_commander_mapspot">green_location</map_location_type>
+		<object_story_id>esc_blokpost_commander</object_story_id>
+		<infoportion_complete>priboy_toilet_brought</infoportion_complete>
+	</objective>
+</game_task>
+
 <game_task id="priboy_heli_crash">
 	<title>priboy_heli_crash_title</title>
 	<objective>

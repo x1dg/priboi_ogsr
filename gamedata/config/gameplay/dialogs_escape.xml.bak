@@ -108,41 +108,42 @@
             </phrase>
         </phrase_list>
     </dialog>
-    <dialog id="esc_stalker_talk_level" priority="2">
-        <phrase_list>
-            <phrase id="1">
-			<!-- barin start -->
-			<give_info>commander_talk_done</give_info>
-			<!-- barin start -->
-                <text>esc_stalker_talk_level_1</text>
-			 <action>priboy_tasks.mark_priboi_supplies</action>
-                <next>2</next>
-                <next>10</next>
-            </phrase>
-            <phrase id="2">
-                <text>esc_stalker_talk_level_2</text>
-                <next>21</next>
-            </phrase>
-            <phrase id="21">
-                <text>esc_stalker_talk_level_21</text>
-            </phrase>
-            <phrase id="10">
-                <text>esc_stalker_talk_level_10</text>
-                <give_info>esc_bridge_soldiers</give_info>
-                <next>11</next>
-            </phrase>
-            <phrase id="11">
-                <text>esc_stalker_talk_level_11</text>
-            </phrase>
-            <phrase id="0">
-                <text>esc_stalker_talk_level_0</text>
-                <next>1</next>
-            </phrase>
-        </phrase_list>
-    </dialog>
-	<!-- barin start -->
+    <dialog id="esc_stalker_talk_level">
+		<dont_has_info>commander_talk_done</dont_has_info>
+		<phrase_list>
+			<phrase id="0">
+				<text>esc_stalker_talk_level_0</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1">
+				<text>esc_stalker_talk_level_1</text>
+				<give_info>commander_talk_done</give_info>
+				<action>priboy_tasks.mark_priboi_supplies</action>
+				<next>2</next>
+				<next>10</next>
+			</phrase>
+			<phrase id="2">
+				<text>esc_stalker_talk_level_2</text>
+				<give_info>commander_talk_done</give_info>
+				<next>21</next>
+			</phrase>
+			<phrase id="21">
+				<text>esc_stalker_talk_level_21</text>
+			</phrase>
+			<phrase id="10">
+				<text>esc_stalker_talk_level_10</text>
+				<give_info>esc_bridge_soldiers</give_info>
+				<give_info>commander_talk_done</give_info>
+				<next>11</next>
+			</phrase>
+			<phrase id="11">
+				<text>esc_stalker_talk_level_11</text>
+			</phrase>
+		</phrase_list>
+	</dialog>	<!-- barin start -->
 	<!-- vodka task -->
 	<dialog id="priboy_vodka_task_dialog_level">
+		<dont_has_info>priboy_vodka_start</dont_has_info>
 		<phrase_list>
 			<phrase id="0">
 				<text>priboy_vodka_task_dialog_level_0</text>
@@ -185,12 +186,12 @@
 			</phrase>
 			<phrase id="13">
 				<text>priboy_vodka_task_dialog_level_13</text>
-				<action>priboy_tasks.give_money</action>
 				<give_info>priboy_vodka_brought</give_info>
+				<action>priboy_tasks.give_money</action>
 			</phrase>
 			<phrase id="22">
-				<has_info>priboy_vodka_start</has_info>
 				<dont_has_info>priboy_vodka_found</dont_has_info>
+				<has_info>priboy_vodka_start</has_info>
 				<text>priboy_vodka_task_dialog_level_22</text>
 			</phrase>
 			<phrase id="33">
@@ -198,8 +199,7 @@
 				<text>priboy_vodka_task_dialog_level_33</text>
 			</phrase>
 		</phrase_list>
-	</dialog>
-	<!-- barin end -->
+	</dialog>	<!-- barin end -->
     <dialog id="escape_trader_talk_level" priority="2">
             <phrase_list>
             <phrase id="2">
@@ -1376,223 +1376,177 @@
         </phrase_list>
     </dialog>
     <dialog id="escape_lager_volk_talk">
-        <phrase_list>
-            <phrase id="111111121">
-                <text>escape_lager_volk_talk_111111121</text>
-            </phrase>
-            <phrase id="111111112">
-                <text>escape_lager_volk_talk_111111112</text>
-                <next>111111121</next>
-            </phrase>
-            <phrase id="1111">
-                <text>escape_lager_volk_talk_1111</text>
-                <next>11111</next>
-            </phrase>
-            <phrase id="1111111">
-                <text>escape_lager_volk_talk_1111111</text>
-                <next>11111111</next>
-            </phrase>
-            <phrase id="11111111">
-                <text>escape_lager_volk_talk_11111111</text>
-                <next>111111111</next>
-                <next>111111112</next>
-            </phrase>
-            <phrase id="111111111">
-                <text>escape_lager_volk_talk_111111111</text>
-                <give_info>esc_kill_bandits_quest_have</give_info>
-                <next>1111111111</next>
-            </phrase>
-            <phrase id="1111111111">
-                <text>escape_lager_volk_talk_1111111111</text>
-                <action>escape_dialog.give_weapon_to_actor</action>
-            </phrase>
-            <phrase id="21211">
-                <text>escape_lager_volk_talk_21211</text>
-            </phrase>
-            <phrase id="511">
-                <text>escape_lager_volk_talk_511</text>
-                <next>5111</next>
-            </phrase>
-            <phrase id="5111">
-                <text>escape_lager_volk_talk_5111</text>
-                <action>escape_dialog.wolf_additional_reward</action>
-                <give_info>esc_kill_bandits_quest_done</give_info>
-            </phrase>
-            <phrase id="51">
-                <text>escape_lager_volk_talk_51</text>
-                <next>511</next>
-            </phrase>
-            <phrase id="0">
-                <text></text>
-                <next>1</next>
-                <next>2</next>
-                <next>3</next>
-                <next>4</next>
-                <next>5</next>
-            </phrase>
-            <phrase id="11">
-                <text>escape_lager_volk_talk_11</text>
-                <next>111</next>
-            </phrase>
-            <phrase id="111">
-                <text>escape_lager_volk_talk_111</text>
-                <next>1111</next>
-            </phrase>
-            <phrase id="111111">
-                <text>escape_lager_volk_talk_111111</text>
-                <next>1111111</next>
-            </phrase>
-            <phrase id="11111">
-                <text>escape_lager_volk_talk_11111</text>
-                <next>111111</next>
-            </phrase>
-            <phrase id="3">
-                <text></text>
-                <dont_has_info>tutorial_wounded_start</dont_has_info>
-                <next>31</next>
-            </phrase>
-            <phrase id="31">
-                <text>escape_lager_volk_talk_31</text>
-			 <!-- barin start -->
-			 <give_info>buddy_talk_done</give_info>
-			 <!-- barin end -->
-                <next>311</next>
-                <next>312</next>
-            </phrase>
-            <phrase id="311">
-                <text>escape_lager_volk_talk_311</text>
-            </phrase>
-            <phrase id="312">
-                <text>escape_lager_volk_talk_312</text>
-                <next>32</next>
-            </phrase>
-            <phrase id="32">
-                <text>escape_lager_volk_talk_32</text>
-                <next>321</next>
-                <next>322</next>
-                <next>323</next>
-                <next>324</next>
-                <next>325</next>
-                <next>326</next>
-            </phrase>
-            <phrase id="321">
-                <text>escape_lager_volk_talk_321</text>
-                <next>3211</next>
-            </phrase>
-            <phrase id="3211">
-                <text>escape_lager_volk_talk_3211</text>
-                <next>312</next>
-            </phrase>
-            <phrase id="322">
-                <text>escape_lager_volk_talk_322</text>
-                <next>3221</next>
-            </phrase>
-            <phrase id="3221">
-                <text>escape_lager_volk_talk_3221</text>
-                <next>312</next>
-            </phrase>
-            <phrase id="323">
-                <text>escape_lager_volk_talk_323</text>
-                <next>3231</next>
-            </phrase>
-            <phrase id="3231">
-                <text>escape_lager_volk_talk_3231</text>
-                <next>312</next>
-            </phrase>
-            <phrase id="324">
-                <text>escape_lager_volk_talk_324</text>
-                <next>3241</next>
-            </phrase>
-            <phrase id="3241">
-                <text>escape_lager_volk_talk_3241</text>
-                <next>312</next>
-            </phrase>
-            <phrase id="325">
-                <text>escape_lager_volk_talk_325</text>
-                <next>3251</next>
-            </phrase>
-            <phrase id="3251">
-                <text>escape_lager_volk_talk_3251</text>
-                <next>312</next>
-            </phrase>
-            <phrase id="326">
-                <text>escape_lager_volk_talk_326</text>
-                <next>3261</next>
-            </phrase>
-            <phrase id="3261">
-                <text>escape_lager_volk_talk_3261</text>
-                <next>312</next>
-            </phrase>
-            
-            <phrase id="5">
-                <text></text>
-                <precondition>escape_dialog.bandits_die</precondition>
-                <dont_has_info>esc_kill_bandits_quest_done</dont_has_info>
-                <dont_has_info>esc_bandits_start</dont_has_info>
-                <next>51</next>
-            </phrase>
-            <phrase id="21">
-                <text>escape_lager_volk_talk_21</text>
-                <next>211</next>
-                <next>212</next>
-                <next>213</next>
-            </phrase>
-            <phrase id="2111">
-                <text>escape_lager_volk_talk_2111</text>
-                <action>escape_dialog.transfer_wolf_reward</action>
-                <give_info>esc_kill_bandits_quest_done</give_info>
-                <give_info>esc_petruha_great</give_info>
-            </phrase>
-            <phrase id="2121">
-                <text>escape_lager_volk_talk_2121</text>
-                <action>escape_dialog.transfer_wolf_reward</action>
-                <action>escape_dialog.wolf_additional_reward</action>
-                <give_info>esc_kill_bandits_quest_done</give_info>
-                <give_info>esc_petruha_great</give_info>
-                <next>21211</next>
-            </phrase>
-            <phrase id="2131">
-                <text>escape_lager_volk_talk_2131</text>
-            </phrase>
-            <phrase id="213">
-                <text>escape_lager_volk_talk_213</text>
-                <dont_has_info>esc_kill_bandits_quest_kill</dont_has_info>
-                <next>2131</next>
-            </phrase>
-            <phrase id="211">
-                <text>escape_lager_volk_talk_211</text>
-                <has_info>esc_bandits_start</has_info>
-                <has_info>esc_kill_bandits_quest_kill</has_info>
-                <next>2111</next>
-            </phrase>
-            <phrase id="212">
-                <text>escape_lager_volk_talk_212</text>
-                <dont_has_info>esc_bandits_start</dont_has_info>
-                <has_info>esc_kill_bandits_quest_kill</has_info>
-                <next>2121</next>
-            </phrase>
-            <phrase id="41">
-                <text>escape_lager_volk_talk_41</text>
-            </phrase>
-            <phrase id="1">
-                <text></text>
-                <dont_has_info>esc_kill_bandits_quest_have</dont_has_info>
-                <dont_has_info>tutorial_wounded_give_info</dont_has_info>
-                <has_info>tutorial_wounded_start</has_info>
-                <next>11</next>
-            </phrase>
-            <phrase id="2">
-                <text></text>
-                <dont_has_info>esc_kill_bandits_quest_done</dont_has_info>
-                <has_info>tutorial_wounded_start</has_info>
-                <has_info>esc_kill_bandits_quest_have</has_info>
-                <next>21</next>
-            </phrase>
-            <phrase id="4">
-                <text></text>
-                <precondition>escape_dialog.wolf_precond_univ</precondition>
-                <next>41</next>
-            </phrase>
-        </phrase_list>
-    </dialog>
-</game_dialogs>
+		<phrase_list>
+			<phrase id="0">
+				<text />
+				<next>3</next>
+				<next>4</next>
+				<next>5</next>
+			</phrase>
+			<phrase id="511">
+				<text>escape_lager_volk_talk_511</text>
+				<next>5111</next>
+			</phrase>
+			<phrase id="5111">
+				<text>escape_lager_volk_talk_5111</text>
+				<give_info>esc_kill_bandits_quest_done</give_info>
+				<action>escape_dialog.wolf_additional_reward</action>
+			</phrase>
+			<phrase id="51">
+				<text>escape_lager_volk_talk_51</text>
+				<next>511</next>
+			</phrase>
+			<phrase id="3">
+				<dont_has_info>tutorial_wounded_start</dont_has_info>
+				<text />
+				<next>31</next>
+			</phrase>
+			<phrase id="31">
+				<text>escape_lager_volk_talk_31</text>
+				<give_info>buddy_talk_done</give_info>
+				<next>311</next>
+				<next>312</next>
+			</phrase>
+			<phrase id="311">
+				<text>escape_lager_volk_talk_311</text>
+				<give_info>buddy_talk_done</give_info>
+			</phrase>
+			<phrase id="312">
+				<text>escape_lager_volk_talk_312</text>
+				<next>32</next>
+			</phrase>
+			<phrase id="32">
+				<text>escape_lager_volk_talk_32</text>
+				<next>321</next>
+				<next>322</next>
+				<next>323</next>
+				<next>324</next>
+				<next>325</next>
+				<next>326</next>
+			</phrase>
+			<phrase id="321">
+				<text>escape_lager_volk_talk_321</text>
+				<next>3211</next>
+			</phrase>
+			<phrase id="3211">
+				<text>escape_lager_volk_talk_3211</text>
+				<next>312</next>
+			</phrase>
+			<phrase id="322">
+				<text>escape_lager_volk_talk_322</text>
+				<next>3221</next>
+			</phrase>
+			<phrase id="3221">
+				<text>escape_lager_volk_talk_3221</text>
+				<next>312</next>
+			</phrase>
+			<phrase id="323">
+				<text>escape_lager_volk_talk_323</text>
+				<next>3231</next>
+			</phrase>
+			<phrase id="3231">
+				<text>escape_lager_volk_talk_3231</text>
+				<next>312</next>
+			</phrase>
+			<phrase id="324">
+				<text>escape_lager_volk_talk_324</text>
+				<next>3241</next>
+			</phrase>
+			<phrase id="3241">
+				<text>escape_lager_volk_talk_3241</text>
+				<next>312</next>
+			</phrase>
+			<phrase id="325">
+				<text>escape_lager_volk_talk_325</text>
+				<next>3251</next>
+			</phrase>
+			<phrase id="3251">
+				<text>escape_lager_volk_talk_3251</text>
+				<next>312</next>
+			</phrase>
+			<phrase id="326">
+				<text>escape_lager_volk_talk_326</text>
+				<next>3261</next>
+			</phrase>
+			<phrase id="3261">
+				<text>escape_lager_volk_talk_3261</text>
+				<next>312</next>
+			</phrase>
+			<phrase id="5">
+				<dont_has_info>esc_kill_bandits_quest_done</dont_has_info>
+				<dont_has_info>esc_bandits_start</dont_has_info>
+				<precondition>escape_dialog.bandits_die</precondition>
+				<text />
+				<next>51</next>
+			</phrase>
+			<phrase id="41">
+				<text>escape_lager_volk_talk_41</text>
+			</phrase>
+			<phrase id="4">
+				<precondition>escape_dialog.wolf_precond_univ</precondition>
+				<text />
+				<next>41</next>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	<dialog id="esc_fake_wolf_start_dialog">
+		<phrase_list>
+			<phrase id="0">
+				<text>esc_fake_wolf_start_dialog_0</text>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	<dialog id="esc_fakewolf_start">
+		<has_info>priboy_vasyanka_start</has_info>
+		<dont_has_info>priboy_toilet_start</dont_has_info>
+		<phrase_list>
+			<phrase id="0">
+				<text>esc_fakewolf_start_0</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1">
+				<text>esc_fakewolf_start_1</text>
+				<next>10</next>
+			</phrase>
+			<phrase id="2">
+				<text>esc_fakewolf_start_2</text>
+				<give_info>commander_talk_done</give_info>
+				<next>21</next>
+			</phrase>
+			<phrase id="21">
+				<text>esc_fakewolf_start_21</text>
+				<next>211</next>
+			</phrase>
+			<phrase id="10">
+				<text>esc_fakewolf_start_10</text>
+				<give_info>esc_bridge_soldiers</give_info>
+				<give_info>commander_talk_done</give_info>
+				<next>11</next>
+			</phrase>
+			<phrase id="11">
+				<text>esc_fakewolf_start_11</text>
+				<next>2</next>
+			</phrase>
+			<phrase id="211">
+				<text>esc_fakewolf_start_211</text>
+				<next>2111</next>
+			</phrase>
+			<phrase id="2111">
+				<text>esc_fakewolf_start_2111</text>
+				<next>21111</next>
+			</phrase>
+			<phrase id="21111">
+				<text>esc_fakewolf_start_21111</text>
+				<next>211111</next>
+			</phrase>
+			<phrase id="211111">
+				<text>esc_fakewolf_start_211111</text>
+				<next>2111111</next>
+			</phrase>
+			<phrase id="2111111">
+				<text>esc_fakewolf_start_2111111</text>
+				<give_info>priboy_toilet_start</give_info>
+				<action>priboy_tasks.start_toilet</action>
+			</phrase>
+		</phrase_list>
+	</dialog>	</game_dialogs>

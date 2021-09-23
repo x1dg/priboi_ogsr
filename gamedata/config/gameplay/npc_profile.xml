@@ -102,6 +102,10 @@
 		<class>esc_provodnik</class>
 	</character>
 	
+	<character id="esc_fake_wolf">
+		<class>esc_fake_wolf</class>
+	</character>
+	
 <!-- Garbage -->
 	<character id="gar_seriy">
 		<class>gar_seriy</class>

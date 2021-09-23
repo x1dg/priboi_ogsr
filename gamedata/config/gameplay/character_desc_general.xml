@@ -10,6 +10,7 @@
 		<supplies>
 			[spawn] \n
 			device_torch \n
+			wpn_kolbasa \n
         </supplies>
 		
 		<class>actor</class>

@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding="windows-1251"?>
+
+<!-- Priboy 1.1 infoportions -->
+<!-- by barin aka pepe_84 -->
+<!-- last edited: 10.08.2008 -->
+
+<game_information_portions>
+
+	<info_portion id="priboy_military_traitor_warn1" />
+    <info_portion id="priboy_military_traitor_warn2" />
+    <info_portion id="priboy_military_traitor" />
+	<info_portion id="warehouses_infected"></info_portion>
+	<info_portion id="priboy_t_virus_infected">
+		<action>priboy_timer.set_timer_on</action>
+	</info_portion>
+	
+	<info_portion id="dar_door_3_opened"></info_portion>
+	<info_portion id="commander_talk_done"></info_portion>
+	<info_portion id="priboy_vasyanka_start">
+		<task>priboy_vasyanka</task>
+	</info_portion>
+	<info_portion id="priboy_toilet_start">
+		<task>priboy_toilet</task>
+	</info_portion>
+	<info_portion id="priboy_toilet_found"></info_portion>
+	<info_portion id="priboy_toilet_brought"></info_portion>
+	<info_portion id="priboy_toilet_task_done"></info_portion>
+	<info_portion id="blockpost_commander_dead"></info_portion>
+	<info_portion id="buddy_talk_done"></info_portion>
+	<info_portion id="buddy_dead"></info_portion>
+	<info_portion id="kuznetsov_talk_done"></info_portion>	
+	<info_portion id="kuznetsov_dead"></info_portion>
+	<info_portion id="priboy_commanders_dead"></info_portion>
+	
+	<info_portion id="priboy_agro_factory_mercs_dead"></info_portion>
+	<info_portion id="priboy_agro_hq_mercs_done"></info_portion>
+	<info_portion id="priboy_spawn_agro_mercs"></info_portion>
+	
+	<info_portion id="priboy_heli_crash_start">
+		<task>priboy_heli_crash</task>
+	</info_portion>
+	<info_portion id="priboy_heli_crash_done">
+		<article>enc_mil_convoy_report</article>
+		<action>priboy_tasks.new_enc_entry</action>
+		<task>priboy_rad_heli_crash</task>
+	</info_portion>
+	
+	<info_portion id="rad_heli_crash_site_done"></info_portion>
+	<info_portion id="rad_heli_crash_chief_done"></info_portion>
+	<info_portion id="rad_heli_crash_done"></info_portion>
+
+	<info_portion id="priboy_uadz32_squad_start">
+		<task>priboy_find_uadz32_squad</task>
+	</info_portion>
+	<info_portion id="priboy_uadz32_squad_found"></info_portion>
+	<info_portion id="priboy_uadz32_squad_situation"></info_portion>
+	<info_portion id="priboy_uadz32_new_orders">
+		<!--<action>priboy_tasks.priboy_eliminate_sarcophagus_action</action>-->
+		<!--<task>priboy_eliminate_sarcophagus</task>-->
+	</info_portion>
+	
+	<info_portion id="priboy_eliminate_sarcophagus_done"></info_portion>
+	<info_portion id="priboy_eliminate_sarcophagus_doors"></info_portion>
+	<info_portion id="priboy_assault_monolith_control_done">
+		<action>priboy_tasks.close_case</action>
+	</info_portion>
+	
+	<info_portion id="priboy_vodka_start">
+		<task>priboy_bring_vodka</task>
+	</info_portion>
+	<info_portion id="priboy_vodka_found"></info_portion>
+	<info_portion id="priboy_vodka_brought"></info_portion>
+	<info_portion id="priboy_vodka_task_done"></info_portion>
+	
+	<info_portion id="priboy_gar_tunnel_stalker_done">
+	<article>enc_gar_stalker_uhsf_info</article>
+	<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="priboy_gar_tunnel_stalker">
+		<task>priboy_help_wounded_stalker</task>
+	</info_portion>
+	
+	<info_portion id="bun_priboi_codedoor"></info_portion>
+		
+	<info_portion id="priboy_find_cnpp_blueprints_infoportion">
+		<task>priboy_find_cnpp_blueprints</task>
+	</info_portion>
+	
+	<info_portion id="npp_build_doc_infoportion">
+		<task>priboy_find_uhsf_docs_2</task>
+		<article>enc_npp_build_doc</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="quest_case_02_infoportion">
+		<task>priboy_find_deadcity_docs_2</task>
+		<article>enc_quest_case_02</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="dar_document4_infoportion">
+		<task>priboy_find_uhsf_docs_1</task>
+		<article>enc_dar_document4</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+		
+	<info_portion id="esc_doc_secret_infoportion">
+		<task>priboy_find_mutations_report_1</task>
+		<article>enc_esc_doc_secret</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="che_mutat1_doc_infoportion">
+		<task>priboy_find_crazy_flash</task>
+		<article>enc_che_mutat1_doc</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="crazy_flash_infoportion">
+		<task>priboy_find_cnpp_accident_report_1</task>
+		<article>enc_crazy_flash</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="npp_crash1_doc_infoportion">
+		<task>priboy_find_kgb_docs</task>
+		<article>enc_npp_crash1_doc</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="che_mutat2_doc_infoportion">
+		<task>priboy_find_sid_memo</task>
+		<article>enc_che_mutat2_doc</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="npp_crash3_doc_infoportion">
+		<task>priboy_find_dezik_pda</task>
+		<article>enc_npp_crash3_doc</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+		
+	<info_portion id="gar_uhsf_doc_infoportion">
+		<task>priboy_find_docs_pendrive</task>
+		<article>enc_gar_uhsf_doc</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="x18_code_lost_infoportion">
+		<task>priboy_find_deadcity_docs_1</task>
+		<article>enc_x18_code_lost</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="doc_uhsf_secrets_infoportion">
+		<task>priboy_find_x18_code_2</task>
+		<article>enc_radar_doors</article>
+		<article>enc_doc_uhsf_secrets</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="cit_documents_infoportion">
+		<task>priboy_find_dezik_key</task>
+		<article>enc_cit_documents</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="bar_ecolog_flash_infoportion">
+		<task>priboy_find_strelok_pendrive</task>
+		<article>enc_bar_ecolog_flash</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="kruglov_flash_infoportion">
+		<task>priboy_find_uhsf_accident_report</task>
+		<article>enc_bunker_second_doors</article>
+		<article>enc_kruglov_flash</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="ghost_doc_uhsf_infoportion">
+		<task>priboy_find_mutations_report_2</task>
+		<article>enc_ghost_doc_uhsf</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="kgb_secret_doc_infoportion">
+		<task>priboy_find_cnpp_accident_report_3</task>
+		<article>enc_kgb_secret_doc</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="x18_lab_second_code_infoportion">
+		<task>priboy_find_ghost_memo</task>
+		<article>enc_x18_second_doors</article>
+		<article>enc_x18_lab_second_code</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="cit_doctors_key_infoportion">
+		<task>priboy_find_kruglov_pendrive</task>
+		<article>enc_cit_doctors_key</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="mil_svoboda_leader_pda_infoportion">
+		<task>priboy_find_cnpp_accident_report_2</task>
+		<article>enc_bunker_first_doors</article>
+		<article>enc_mil_svoboda_leader_pda</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="gunslinger_flash_infoportion">
+		<task>priboy_find_genetic_book</task>
+		<article>enc_gunslinger_flash</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="sid_doc_last_infoportion">
+		<task>priboy_find_x18_code_3</task>
+		<article>enc_sid_doc_last</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="x18_code_found_infoportion">
+		<task>priboy_find_x16_docs</task>
+		<article>enc_x18_first_doors</article>
+		<article>enc_x18_code_found</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="lab_x16_documents_infoportion">
+		<task>priboy_find_mutations_report_3</task>
+		<article>enc_lab_x16_documents</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="npp_crash2_doc_infoportion">
+		<task>priboy_find_x18_code_1</task>
+		<article>enc_npp_crash2_doc</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="che_mutat3_doc_infoportion">
+		<task>priboy_find_decoder</task>
+		<article>enc_che_mutat3_doc</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="decoder_infoportion">
+		<task>priboy_find_pripyat_docs</task>
+		<article>enc_decoder</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="pri_decoder_documents_infoportion">
+		<article>enc_pri_decoder_documents</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="dar_pass_document_infoportion">
+		<article>enc_dar_pass_document</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="sid_letter_ltp_infoportion">
+		<article>enc_sid_letter_ltp</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="quest_case_01_infoportion">
+		<article>enc_quest_case_01</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+	<info_portion id="mil_scientist_flash_infoportion">
+		<article>enc_mil_scientist_flash</article>
+		<action>priboy_tasks.new_enc_entry</action>
+	</info_portion>
+	
+</game_information_portions>

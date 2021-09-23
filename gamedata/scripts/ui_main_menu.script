@@ -192,6 +192,9 @@ function main_menu:OnKeyboard(dik, keyboard_action)
 		if dik == DIK_keys.DIK_F1 then
 			self:OnButton_spawns_clicked()
 		end
+		if dik == DIK_keys.DIK_F11 then
+			self:OnButton_coordinats_clicked()
+		end
 	end
 
 	return true
@@ -212,3 +215,17 @@ function main_menu:close_and_delete_menu()
 	--
 	cmd("main_menu off")
 end
+
+function main_menu:OnButton_coordinats_clicked() 
+local text 
+local vid 
+local gvid 
+local a = vector()  
+local text 
+a = db.actor:position()  
+vid = db.actor:level_vertex_id()  
+gvid = db.actor:game_vertex_id()  
+text = "Pozition: \\nX= "..a.x.."\\nY= "..a.y.."\\nZ= "..a.z.."\\nlevel_vertex= "..vid.."\\ngame_vertex_id= "..gvid 
+news_manager.send_tip(db.actor, text, nil, nil, 30000) 
+end 
+ 

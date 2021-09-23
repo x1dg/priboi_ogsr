@@ -94,6 +94,22 @@
 	<text>Принести 20 бутылок водки</text>
 </string>
 
+<string id="priboy_vasyanka_title">
+	<text>Колбаса?!</text>
+</string>
+
+<string id="priboy_toilet_title">
+	<text>Добыть туалетку для Вульфа</text>
+</string>
+
+<string id="priboy_find_toilet_title">
+	<text>Найти 3 рулона туалетки</text>
+</string>
+
+<string id="priboy_bring_toilet_to_wolf_title">
+	<text>Отнести туалетку Вульфу</text>
+</string>
+
 <string id="priboy_bring_vodka_to_commander_title">
 	<text>Принести водку командиру</text>
 </string>

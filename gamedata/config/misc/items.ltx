@@ -1507,3 +1507,42 @@ anim_play					= vodka_5
 anim_prepare				= vodka_5
 anim_eat					= vodka_3
 
+[tualet_bumaga]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency =
+$spawn 				= "food and drugs\tualet_bumaga"
+$prefetch 			= 8
+class				= II_BANDG
+cform				= skeleton
+visual				= equipments\item_bandage.ogf
+description			= enc_toilet_descr
+
+inv_name			= enc_toilet_name
+inv_name_short		= enc_toilet_name
+inv_weight			= 0.1	;0.2
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 12
+inv_grid_y			= 37
+cost				= 20000
+
+; eatable item
+eat_health = 	0.1
+eat_satiety = 	0
+eat_power = 	0.0
+eat_radiation = 0.0
+wounds_heal_perc = 1.0
+eat_portions_num = 1	;100
+
+; food item
+animation_slot		= 4
+
+;hud item
+hud = wpn_vodka_hud
+
+; attach parameters
+auto_attach			= false
+attach_angle_offset		= 1.57, 3.14, -1.7
+attach_position_offset		= 0.11, 0.06, 0.05
+attach_bone_name		= bip01_r_hand
