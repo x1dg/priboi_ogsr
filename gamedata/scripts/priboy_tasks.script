@@ -226,18 +226,18 @@ function start_toilet()
 	first.y = -15.74 
 	first.z = -129.51
 	local second = vector()
-	second.x = 62.607
-	second.y = 29.23
-	second.z = 154.405
+	second.x = 58.73
+	second.y = 22.28
+	second.z = 155.89
 	local third = vector()
-	third.x = 58.73
-	third.y = 22.28
-	third.z = 155.89
+	third.x = -124.32
+	third.y = -26.25
+	third.z = -374.43
 	local level_vertex = 145881  
 	local game_vertex_id= 22
 	alife():create("tualet_bumaga", first, 72797, 56)
 	alife():create("tualet_bumaga", second, 359827, 97)  
-	alife():create("tualet_bumaga", third, 359827, 97)  
+	alife():create("tualet_bumaga", third, 129283, 26)  
 end
 
 function can_finish_toilet_task()

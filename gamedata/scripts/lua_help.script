@@ -186,7 +186,7 @@ C++ class spawn_story_ids {
 
 C++ class story_ids {
     const esc_blokpost_commander = 195999;
-		const mil_freedom_member0002 = 123456;
+	const mil_freedom_member0002 = 123456;
     const Escape_Trader = 3;
     const Escape_Tutorial_Artefact = 2;
     const Escape_anomaly_field = 8;

@@ -10,7 +10,7 @@
 
 		<class>bar_barman</class>
 		<community>trader</community>
-		<money min="100000" max="150000" infinitive="0"></money>
+		<money min="100000" max="150000" infinitive="1"></money>
 		
 		<rank>700</rank>
 		<reputation>50</reputation>

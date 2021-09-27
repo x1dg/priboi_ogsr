@@ -485,3 +485,20 @@ function isCrow(section)
 	
 	return section == "m_crow"
 end
+
+
+function pizdanut(npc, value)
+	set_inactivate_input_time(30)
+	local snd_obj = xr_sound.get_safe_sound_object([[affects\hit_fist]])
+	snd_obj:play_no_feedback(db.actor, sound_object.s2d, 0, vector(), 1.0)
+
+	level.add_cam_effector("camera_effects\\fusker.anm", 999, false, "")		
+end
+
+
+function add_abuse(npc)
+	local t = db.storage[npc:id()].abuse
+	if t then
+		t.abuse_manager:addAbuse(10)
+	end
+end

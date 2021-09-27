@@ -923,4 +923,25 @@
 	<string id="esc_fakewolf_start_2111111">
 		<text>Ок жди, Вульф Сталкер. Засранец ты, а не сталкер.</text>
 	</string>
+	<string id="esc_fakewolf_start_3">
+		<text>Ну что, Прибой? Принес? Я уже тут 3 дня сижу..</text>
+	</string>
+	<string id="esc_fakewolf_start_31">
+		<text>Да, 3 рулона, как ты и просил. Трехслойная со вкусом яблока!</text>
+	</string>
+	<string id="esc_fakewolf_start_311">
+		<text>Со вкусом яблока xD? \nТы, прекращай, лейтенант, кушать всякую пакость!\nА за бумагу - спасибо.\nК сожелению, твой нож сломался при вскрытии двери.\nНо я дам тебе кое-что намного лучше и убойнее!</text>
+	</string>
+	<string id="esc_fake_wolf_toilet_dialog_0">
+		<text>Заждался?</text>
+	</string>
+	<string id="esc_fake_wolf_toilet_dialog_1">
+		<text>Ну что, Прибой? Принес? Я уже тут 3 дня сижу..</text>
+	</string>
+	<string id="esc_fake_wolf_toilet_dialog_11">
+		<text>Да, 3 рулона, как ты и просил. Трехслойная со вкусом яблока!</text>
+	</string>
+	<string id="esc_fake_wolf_toilet_dialog_111">
+		<text>Со вкусом яблока xD? \nТы, прекращай, лейтенант, кушать всякую пакость!\nА за бумагу - спасибо.\nК сожелению, твой нож сломался при вскрытии двери,\nно я дам тебе кое-что намного лучше и убойнее!</text>
+	</string>
 </string_table>
