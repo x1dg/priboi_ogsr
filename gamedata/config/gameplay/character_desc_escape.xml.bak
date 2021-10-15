@@ -1150,5 +1150,5 @@
 
 		<start_dialog>esc_fake_wolf_start_dialog</start_dialog>
 		<actor_dialog>esc_fakewolf_start</actor_dialog>
-	</specific_character>
+		<actor_dialog>esc_fake_wolf_toilet_dialog</actor_dialog>	</specific_character>
 </xml>

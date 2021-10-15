@@ -1489,6 +1489,30 @@
 			</phrase>
 		</phrase_list>
 	</dialog>
+	<dialog id="esc_fake_wolf_toilet_dialog">
+		<has_info>priboy_toilet_found</has_info>
+		<dont_has_info>priboy_toilet_brought</dont_has_info>
+		<precondition>priboy_tasks.can_finish_toilet_task</precondition>
+		<phrase_list>
+			<phrase id="0">
+				<text>esc_fake_wolf_toilet_dialog_0</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1">
+				<text>esc_fake_wolf_toilet_dialog_1</text>
+				<next>11</next>
+			</phrase>
+			<phrase id="11">
+				<text>esc_fake_wolf_toilet_dialog_11</text>
+				<next>111</next>
+			</phrase>
+			<phrase id="111">
+				<text>esc_fake_wolf_toilet_dialog_111</text>
+				<give_info>priboy_toilet_brought</give_info>
+				<action>priboy_tasks.give_hammer</action>
+			</phrase>
+		</phrase_list>
+	</dialog>
 	<dialog id="esc_fake_wolf_start_dialog">
 		<phrase_list>
 			<phrase id="0">
@@ -1498,9 +1522,10 @@
 	</dialog>
 	<dialog id="esc_fakewolf_start">
 		<has_info>priboy_vasyanka_start</has_info>
-		<dont_has_info>priboy_toilet_start</dont_has_info>
+		<dont_has_info>priboy_vasyanka_done</dont_has_info>
 		<phrase_list>
 			<phrase id="0">
+				<has_info>priboy_vasyanka_start</has_info>
 				<text>esc_fakewolf_start_0</text>
 				<next>1</next>
 			</phrase>
@@ -1510,7 +1535,6 @@
 			</phrase>
 			<phrase id="2">
 				<text>esc_fakewolf_start_2</text>
-				<give_info>commander_talk_done</give_info>
 				<next>21</next>
 			</phrase>
 			<phrase id="21">
@@ -1519,8 +1543,6 @@
 			</phrase>
 			<phrase id="10">
 				<text>esc_fakewolf_start_10</text>
-				<give_info>esc_bridge_soldiers</give_info>
-				<give_info>commander_talk_done</give_info>
 				<next>11</next>
 			</phrase>
 			<phrase id="11">
@@ -1546,7 +1568,9 @@
 			<phrase id="2111111">
 				<text>esc_fakewolf_start_2111111</text>
 				<give_info>priboy_toilet_start</give_info>
+				<give_info>priboy_vasyanka_done</give_info>
 				<action>priboy_tasks.start_toilet</action>
 			</phrase>
 		</phrase_list>
-	</dialog>	</game_dialogs>
+	</dialog>
+</game_dialogs>

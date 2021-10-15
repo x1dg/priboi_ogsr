@@ -94,6 +94,15 @@ function isCommanderDead(commander)
 	end
 end
 
+function isWolfDead(wolf)
+	cmd = alife():story_object(wolf)
+	if cmd == nil or (cmd.alive ~= nil and not cmd:alive()) then
+		return true
+	else
+		return false
+	end
+end
+
 function areStalkersDead(npcs_array)
 	if db.actor == nil then
 		return false
@@ -128,7 +137,7 @@ function on_item_lost(item_name, num_of_items_lost)
 		num_of_items = num_of_items_lost
 	end
 	
-	local task_texture, task_rect = _g.get_texture_info("ui_iconsTotal_lost_thing")
+	local task_texture, task_rect = _G.get_texture_info("ui_iconsTotal_lost_thing")
 	local news_text = "%c[255,160,160,160]" .. game.translate_string("general_out_item") .. "\\n" ..
 	"%c[default]" .. tostring(num_of_items) .. "x " .. game.translate_string(news_manager.get_inv_name(item_name))		
 	
@@ -165,11 +174,11 @@ function send_hud_message(header, text, sender, showtime, sound_type)
 
 	
 	if sender == "rookie" then
-		task_texture, task_rect = _g.get_texture_info("ui_iconsTotal_priboy_help_wounded")
+		task_texture, task_rect = _G.get_texture_info("ui_iconsTotal_priboy_help_wounded")
 	elseif sender == "voronin" then
 		task_texture, task_rect = "ui\\ui_iconsTotal", Frect():set(332, 423, 83, 47)
 	elseif sender == "commander" then
-		task_texture, task_rect =  _g.get_texture_info("ui_iconsTotal_priboy_talk_to_esc_commanders")
+		task_texture, task_rect =  _G.get_texture_info("ui_iconsTotal_priboy_talk_to_esc_commanders")
 	else
 		task_texture, task_rect = "ui\\ui_icon_equipment", Frect():set(300, 650, 50, 51)
 	end

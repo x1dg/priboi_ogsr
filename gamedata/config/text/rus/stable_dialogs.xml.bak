@@ -36,4 +36,10 @@
     <string id="hello_dialog_3">
         <text>Эй, не поможешь мне, а?</text>
     </string>
+	<string id="vasyanka_dialog_0">
+		<text>Капитан, что за Васянка? Почему у меня колбаса вместо ножа?</text>
+	</string>
+	<string id="vasyanka_dialog_1">
+		<text>А ведь и вправду, Прибой, Васня какая-то..</text>
+	</string>
 </string_table>

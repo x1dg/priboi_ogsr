@@ -185,7 +185,21 @@
 	<!-- Dialogue AES Soldier end -->
 	
 	<!-- FINAL DIALOGS -->
-    <dialog id="hello_dialog">
+    <dialog id="vasyanka_dialog">
+		<dont_has_info>priboy_vasyanka_start</dont_has_info>
+		<phrase_list>
+			<phrase id="0">
+				<text>vasyanka_dialog_0</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1">
+				<text>vasyanka_dialog_1</text>
+				<give_info>priboy_vasyanka_start</give_info>
+				<action>priboy_tasks.start_vasyanka</action>
+			</phrase>
+		</phrase_list>
+	</dialog>
+	<dialog id="hello_dialog">
         <phrase_list>
             <phrase id="1">
                 <next>2</next>

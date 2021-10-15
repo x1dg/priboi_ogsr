@@ -5,8 +5,11 @@
 	<string id="esc_blokpost_commander_mapspot">
 		<text>Командир Блокпоста</text>
 	</string>
-	<string id="esc_buddy_mapspot">
-		<text>Чувак</text>
+	<string id="esc_blokpost_commander_mapspot">
+		<text>Командир Блокпоста</text>
+	</string>
+	<string id="fakewolf_mapspot">
+		<text>Вульф</text>
 	</string>
 <!-- barin end -->
 

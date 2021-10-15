@@ -146,6 +146,7 @@
 		<dont_has_info>priboy_vodka_start</dont_has_info>
 		<phrase_list>
 			<phrase id="0">
+				<dont_has_info>priboy_vodka_start</dont_has_info>
 				<text>priboy_vodka_task_dialog_level_0</text>
 				<next>1</next>
 				<next>11</next>
@@ -199,7 +200,7 @@
 				<text>priboy_vodka_task_dialog_level_33</text>
 			</phrase>
 		</phrase_list>
-	</dialog>	<!-- barin end -->
+	</dialog><!-- barin end -->
     <dialog id="escape_trader_talk_level" priority="2">
             <phrase_list>
             <phrase id="2">

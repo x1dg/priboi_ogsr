@@ -199,6 +199,31 @@
 			</phrase>
 		</phrase_list>
 	</dialog>
+	<dialog id="vodka_done">
+		<has_info>priboy_vodka_found</has_info>
+		<dont_has_info>priboy_vodka_brought</dont_has_info>
+		<precondition>priboy_tasks.can_finish_vodka_task</precondition>
+		<phrase_list>
+			<phrase id="0">
+				<text>vodka_done_0</text>
+				<next>1</next>
+			</phrase>
+			<phrase id="1">
+				<text>vodka_done_1</text>
+				<next>11</next>
+			</phrase>
+			<phrase id="11">
+				<text>vodka_done_11</text>
+				<action>priboy_tasks.transfer_vodka</action>
+				<next>111</next>
+			</phrase>
+			<phrase id="111">
+				<text>vodka_done_111</text>
+				<give_info>priboy_vodka_brought</give_info>
+				<action>priboy_tasks.give_money</action>
+			</phrase>
+		</phrase_list>
+	</dialog>
 	<dialog id="hello_dialog">
         <phrase_list>
             <phrase id="1">

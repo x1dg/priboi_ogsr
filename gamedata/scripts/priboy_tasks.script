@@ -2,7 +2,8 @@
 -- by barin aka pepe_84
 -- last edited: 23.08.2008
 
-local cmd_story_ids = {blockpost_commander = 195999, kuznetsov_commander = 32, buddy = 22}
+local cmd_story_ids = {blockpost_commander = 195999, fakewolf = 133742, kuznetsov_commander = 32, buddy = 22}
+local wolf_id = 0
 
 function remove_lukash_mapspot()
 	if priboy_utils.get_task_state("mil_kill_lukash", 0) == "completed" then
@@ -167,7 +168,7 @@ end
 --[[ ************************ Vodka task ************************ --]]
 
 function can_finish_vodka_task()
-	return (priboy_utils.get_object_number(db.actor, "vodka") >= 20)
+	return true
 end
 
 function check_vodka_infoportions()
@@ -206,7 +207,7 @@ function transfer_vodka(priboy, commander)
 end
 
 function give_money()
-	dialogs.relocate_money(db.actor, 1000, "in")
+	dialogs.relocate_money(db.actor, 4000, "in")
 end
 
 --[[ ************************ VASYANKA ************************ --]]
@@ -216,8 +217,26 @@ function start_vasyanka()
 	a.y = -29.81 
 	a.z = -394.89
 	local level_vertex = 145881  
-	local game_vertex_id= 22
-	alife():create("esc_fake_wolf", a, level_vertex,game_vertex_id)  
+	local game_vertex_id = 22
+	local wolf = alife():create("esc_fake_wolf", a, level_vertex, game_vertex_id) 
+	wolfid = wolf.id
+end
+
+function release_wolf()
+	if wolfid == nil or wolfid == 0 then
+		for a=10,65634,1 do
+			local obj=alife():object(a)
+			if obj and string.find(obj:name(),"esc_fake_wolf") then		---имя секции обьекта
+				wolfid = obj.id
+			end
+		end
+	end
+	log1("WOLFID: "..wolfid)
+	local obj1=alife():object(wolfid)
+	if (obj1.m_level_vertex_id ~= 145881) and (obj1.m_game_vertex_id ~= 22) and (obj1.position.x ~= -111.17) and (obj1.position.y ~= -29.81) then
+		alife():release(obj1,true)
+		start_vasyanka()
+	end
 end
 
 function start_toilet()
@@ -245,6 +264,7 @@ function can_finish_toilet_task()
 end
 
 function toilet_task_done(task_name, objective)
+	release_wolf()
 	if can_finish_toilet_task() and not has_alife_info("priboy_toilet_found") then
 		db.actor:give_info_portion("priboy_toilet_found")
 	end
@@ -261,6 +281,7 @@ end
 
 function transfer_toilet(priboy, wolf)
 	priboy_utils.give_object(priboy, wolf, "tualet_bumaga", 3)
+	alife().release("esc_fake_wolf", true)
 end
 
 function give_hammer()
