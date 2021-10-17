@@ -86,6 +86,7 @@ function check_timers()
 end
 
 function __do_timer_action(select_string,params_string)
+	log1("DO TIMER ACTION: "..select_string)
 	if select_string=="gg_need_sleep" then
 		amk_mod.test_for_need_sleep()
 	end

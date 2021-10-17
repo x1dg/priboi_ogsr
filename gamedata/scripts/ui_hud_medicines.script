@@ -17,7 +17,17 @@ local eat_items = {
 		static = "eat_static",
 		duration = 8870
 	},
+	["bread_a"] = {
+		sound = [[interface\inv_bread]],
+		static = "eat_static",
+		duration = 8870
+	},
 	["kolbasa"] = {
+		sound = [[interface\inv_kolbasa]],
+		static = "eat_static",
+		duration = 8400
+	},
+	["kolbasa_a"] = {
 		sound = [[interface\inv_kolbasa]],
 		static = "eat_static",
 		duration = 8400
@@ -27,7 +37,42 @@ local eat_items = {
 		static = "eat_static",
 		duration = 5000
 	},
+	["korn_conserva"] = {
+		sound = [[interface\inv_food]],
+		static = "eat_static",
+		duration = 5000
+	},
+	["olives_conserva"] = {
+		sound = [[interface\inv_food]],
+		static = "eat_static",
+		duration = 5000
+	},
+	["sardinia_conserva"] = {
+		sound = [[interface\inv_food]],
+		static = "eat_static",
+		duration = 5000
+	},
+	["yantar_food"] = {
+		sound = [[interface\inv_food]],
+		static = "eat_static",
+		duration = 5000
+	},
+	["peanut_conserva"] = {
+		sound = [[interface\inv_food]],
+		static = "eat_static",
+		duration = 5000
+	},
+	["tushkano_conserva"] = {
+		sound = [[interface\inv_food]],
+		static = "eat_static",
+		duration = 5000
+	},
 	["energy_drink"] = {
+		sound = [[interface\inv_drinking]],
+		static = "energy_static",
+		duration = 3060
+	},
+	["energy_drink_2"] = {
 		sound = [[interface\inv_drinking]],
 		static = "energy_static",
 		duration = 3060
@@ -37,7 +82,37 @@ local eat_items = {
 		static = "antirad_static",
 		duration = 3650
 	},
+	["absolut_vodka"] = {
+		sound = [[interface\inv_vodka]],
+		static = "antirad_static",
+		duration = 3650
+	},
+	["nemiroff_vodka"] = {
+		sound = [[interface\inv_vodka]],
+		static = "antirad_static",
+		duration = 3650
+	},
+	["smirnoff_vodka"] = {
+		sound = [[interface\inv_vodka]],
+		static = "antirad_static",
+		duration = 3650
+	},
+	["mineral_water"] = {
+		sound = [[interface\inv_vodka]],
+		static = "antirad_static",
+		duration = 3650
+	},
+	["cigarette"] = {
+		sound = [[interface\inv_vodka]],
+		static = "antirad_static",
+		duration = 3650
+	},
 	["bandage"] = {
+		sound = [[interface\inv_bandage]],
+		static = "bandage_static",
+		duration = 2760
+	},
+	["tualet_bumaga"] = {
 		sound = [[interface\inv_bandage]],
 		static = "bandage_static",
 		duration = 2760
@@ -72,7 +147,8 @@ end
 -- ќжидание использовани€ предмета
 function use(obj)
 	if use_enable == false then return end
-	if (db.actor~=nil) and (obj~=nil) then
+	local eatable = eat_items[obj:section()]
+	if (db.actor~=nil) and (obj~=nil) and (eatable~=nil) then
 	slotinuse=db.actor:active_slot()
 	slot_div=1
 		if obj:section() == "medkit" or obj:section() == "medkit_army" or obj:section() == "medkit_scientic" then

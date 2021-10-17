@@ -168,7 +168,7 @@ end
 --[[ ************************ Vodka task ************************ --]]
 
 function can_finish_vodka_task()
-	return true
+	return (priboy_utils.get_object_number(db.actor, "vodka") >= 20)
 end
 
 function check_vodka_infoportions()
@@ -280,8 +280,7 @@ function toilet_task_done(task_name, objective)
 end
 
 function transfer_toilet(priboy, wolf)
-	priboy_utils.give_object(priboy, wolf, "tualet_bumaga", 3)
-	alife().release("esc_fake_wolf", true)
+	alife():release(alife():object(db.actor:object("tualet_bumaga"):id()), true)
 end
 
 function give_hammer()

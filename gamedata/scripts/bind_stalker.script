@@ -243,6 +243,12 @@ end
 function actor_binder:on_item_drop (obj)
     level_tasks.proceed(self.object)
     --game_stats.update_drop_item (obj, self.object)
+	
+	-- barin start
+	tvirus.on_item_drop(obj)
+	-- barin end
+	
+	amk.on_item_drop(obj)
 	ui_loader.on_item_drop(obj) -- MonolithUI
 end
 ----------------------------------------------------------------------------------------------------------------------
@@ -395,6 +401,7 @@ function actor_binder:update(delta)
 
 		self.bCheckStart = false		
 	end
+	amk.on_actor_upade()
 	ui_loader.update() -- MonolithUI	
 end
 ----------------------------------------------------------------------------------------------------------------------

@@ -1,1804 +1,307 @@
 
-[16.10.21 01:18:51.071] * Detected CPU: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz [GenuineIntel], F6/M158/S10
-[16.10.21 01:18:51.072] * CPU features: RDTSC, MMX, SSE, SSE2, SSE3, MONITOR/MWAIT, SSSE3, SSE4.1, SSE4.2, AVX, AVX2
-[16.10.21 01:18:51.072] * CPU cores: [6], threads: [6]
-[16.10.21 01:18:51.072] * CPU0 current freq: 2808 MHz, max freq: 2808 MHz
-[16.10.21 01:18:51.072] * CPU1 current freq: 2808 MHz, max freq: 2808 MHz
-[16.10.21 01:18:51.072] * CPU2 current freq: 2808 MHz, max freq: 2808 MHz
-[16.10.21 01:18:51.072] * CPU3 current freq: 2808 MHz, max freq: 2808 MHz
-[16.10.21 01:18:51.072] * CPU4 current freq: 2808 MHz, max freq: 2808 MHz
-[16.10.21 01:18:51.072] * CPU5 current freq: 2808 MHz, max freq: 2808 MHz
-[16.10.21 01:18:51.072] Initializing File System...
-[16.10.21 01:18:51.073] --Found base arch: [z:\programs\priboi ogsr\gamedata.db0], size: [678577379]
-[16.10.21 01:18:51.108] --Found base arch: [z:\programs\priboi ogsr\gamedata.db1], size: [708434331]
-[16.10.21 01:18:51.111] --Found base arch: [z:\programs\priboi ogsr\gamedata.db2], size: [671169415]
-[16.10.21 01:18:51.114] --Found base arch: [z:\programs\priboi ogsr\gamedata.db3], size: [684792231]
-[16.10.21 01:18:51.119] --Found base arch: [z:\programs\priboi ogsr\gamedata.db4], size: [671392842]
-[16.10.21 01:18:51.370] --Found base arch: [z:\programs\priboi ogsr\gamedata.db5], size: [697475082]
-[16.10.21 01:18:51.400] --Found base arch: [z:\programs\priboi ogsr\gamedata.db6], size: [672288151]
-[16.10.21 01:18:51.401] --Found base arch: [z:\programs\priboi ogsr\gamedata.db7], size: [672462598]
-[16.10.21 01:18:51.420] --Found base arch: [z:\programs\priboi ogsr\gamedata.db8], size: [293378144]
-[16.10.21 01:18:51.427] --Found base arch: [z:\programs\priboi ogsr\gamedata.db9], size: [79312307]
-[16.10.21 01:18:51.448] --Found base arch: [z:\programs\priboi ogsr\gamedata.dba], size: [22884835]
-[16.10.21 01:18:51.452] --Found base arch: [z:\programs\priboi ogsr\gamedata.dbb], size: [55194918]
-[16.10.21 01:18:51.455] --Found base arch: [z:\programs\priboi ogsr\gamedata.dbc], size: [160948]
-[16.10.21 01:18:51.456] --Found base arch: [z:\programs\priboi ogsr\gamedata.dbd], size: [101014]
-[16.10.21 01:18:51.456] using fs-ltx fsgame.ltx
-[16.10.21 01:18:51.456] --Found FS dir: [z:\programs\priboi ogsr\userdata\]
-[16.10.21 01:18:51.456]   files: [6]
-[16.10.21 01:18:51.456] --Found FS dir: [z:\programs\priboi ogsr\gamedata\]
-[16.10.21 01:18:51.456]   files: [16]
-[16.10.21 01:18:51.456] --Found FS dir: [z:\programs\priboi ogsr\gamedata\spawns\]
-[16.10.21 01:18:51.456]   files: [4]
-[16.10.21 01:18:51.457] --Found FS dir: [z:\programs\priboi ogsr\gamedata\anims\]
-[16.10.21 01:18:51.457]   files: [23]
-[16.10.21 01:18:51.458] --Found FS dir: [z:\programs\priboi ogsr\gamedata\levels\]
-[16.10.21 01:18:51.458]   files: [12]
-[16.10.21 01:18:51.459] --Found FS dir: [z:\programs\priboi ogsr\gamedata\meshes\]
-[16.10.21 01:18:51.459]   files: [12]
-[16.10.21 01:18:51.474] --Found FS dir: [z:\programs\priboi ogsr\gamedata\meshes\]
-[16.10.21 01:18:51.474]   files: [12]
-[16.10.21 01:18:51.483] --Found FS dir: [z:\programs\priboi ogsr\gamedata\shaders\]
-[16.10.21 01:18:51.483]   files: [7]
-[16.10.21 01:18:51.490] --Found FS dir: [z:\programs\priboi ogsr\gamedata\sounds\]
-[16.10.21 01:18:51.490]   files: [22]
-[16.10.21 01:18:51.522] --Found FS dir: [z:\programs\priboi ogsr\gamedata\textures\]
-[16.10.21 01:18:51.522]   files: [60]
-[16.10.21 01:18:51.630] --Found FS dir: [z:\programs\priboi ogsr\gamedata\scripts\]
-[16.10.21 01:18:51.631]   files: [125]
-[16.10.21 01:18:51.632] --Found FS dir: [z:\programs\priboi ogsr\gamedata\config\]
-[16.10.21 01:18:51.634]   files: [30]
-[16.10.21 01:18:51.644] --Found FS dir: [z:\programs\priboi ogsr\gamedata\levels\]
-[16.10.21 01:18:51.644]   files: [12]
-[16.10.21 01:18:51.644] --Found FS dir: [z:\programs\priboi ogsr\userdata\savedgames\]
-[16.10.21 01:18:51.644]   files: [11]
-[16.10.21 01:18:51.644] --Found FS dir: [z:\programs\priboi ogsr\userdata\logs\]
-[16.10.21 01:18:51.645]   files: [17]
-[16.10.21 01:18:51.645] --Found FS dir: [z:\programs\priboi ogsr\userdata\screenshots\]
-[16.10.21 01:18:51.645]   files: [6]
-[16.10.21 01:18:51.645] --Found FS dir: [z:\programs\priboi ogsr\mods\]
-[16.10.21 01:18:51.645]   files: [3]
-[16.10.21 01:18:51.646] --Found external arch: [mp_military_2.xdb0], size: [50350518]
-[16.10.21 01:18:51.650] FS: 34537 files cached, 6115Kb memory used.
-[16.10.21 01:18:51.650] Init FileSystem 0.578071 sec
-[16.10.21 01:18:51.651] [OGSR Engine (x64)] build date: [Sep 22 2021 10:23:51]
-[16.10.21 01:18:51.651] [AppVeyor] build version: [2.1.293], repo: [OGSR/OGSR-Engine]
-[16.10.21 01:18:51.651] [_MSC_FULL_VER]: [191627045], [_MSVC_LANG]: [201703L]
-[16.10.21 01:18:51.651] Working Directory: [Z:\Programs\Priboi OGSR\bin_x64]
-[16.10.21 01:18:51.651] CommandLine: ["Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe" ]
-[16.10.21 01:18:51.796] Initializing Engine...
-[16.10.21 01:18:51.797] Starting INPUT device...
-[16.10.21 01:18:51.848] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[16.10.21 01:18:51.848] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
-[16.10.21 01:18:51.854] refCount:m_pAdapter 1
-[16.10.21 01:18:51.854] refCount:pFactory 1
-[16.10.21 01:18:51.854] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[16.10.21 01:18:51.854] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
-[16.10.21 01:18:51.953] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[16.10.21 01:18:51.953] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
-[16.10.21 01:18:51.954] --[CEngineAPI::CreateRendererList] Available render modes [5]:
-[16.10.21 01:18:51.954] --  [renderer_r2a]
-[16.10.21 01:18:51.954] --  [renderer_r2]
-[16.10.21 01:18:51.954] --  [renderer_r2.5]
-[16.10.21 01:18:51.954] --  [renderer_r3]
-[16.10.21 01:18:51.954] --  [renderer_r4]
-[16.10.21 01:18:51.954] Executing config-script "user.ltx"...
-[16.10.21 01:18:51.954] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
-[16.10.21 01:18:51.954] [z:\programs\priboi ogsr\userdata\user.ltx] successfully loaded.
-[16.10.21 01:18:51.954] --Loading DLL: [xrRender_R2.dll]
-[16.10.21 01:18:51.955] --Loading DLL: [xrGame.dll]
-[16.10.21 01:18:51.969] --------------------------------------------------------------------------------
-[16.10.21 01:18:51.969] [8143MB] physical memory installed, [3374MB] available, [58] percent of memory in use
-[16.10.21 01:18:51.969] PageFile usage: [42MB], Peak PageFile usage: [88MB]
-[16.10.21 01:18:51.969] --------------------------------------------------------------------------------
-[16.10.21 01:18:51.969] * [ D3D ]: textures[0 K]
-[16.10.21 01:18:51.969] * [x-ray]: process heap[21235 K], render[0 K]
-[16.10.21 01:18:51.969] * [x-ray]: economy: strings[4833 K], smem[0 K]
-[16.10.21 01:18:51.969] SOUND: OpenAL: enumerate devices...
-[16.10.21 01:18:51.969] SOUND: OpenAL: EnumerationExtension Present
-[16.10.21 01:18:52.061] devices Generic Software
-[16.10.21 01:18:52.061] SOUND: OpenAL: system  default SndDevice name is Generic Software
-[16.10.21 01:18:52.330] SOUND: OpenAL: All available devices:
-[16.10.21 01:18:52.330] 1. Generic Software, Spec Version 1.1 (default) eax[2] efx[no] xram[no]
-[16.10.21 01:18:52.330] 2. OpenAL Soft, Spec Version 1.1  eax[0] efx[yes] xram[no]
-[16.10.21 01:18:52.330] Executing config-script "z:\programs\priboi ogsr\gamedata\config\default_controls.ltx"...
-[16.10.21 01:18:52.331] [z:\programs\priboi ogsr\gamedata\config\default_controls.ltx] successfully loaded.
-[16.10.21 01:18:52.331] Executing config-script "user.ltx"...
-[16.10.21 01:18:52.331] Executing config-script "z:\programs\priboi ogsr\gamedata\config\rspec_high.ltx"...
-[16.10.21 01:18:52.331] ! Unknown command:  r2_sun_shafts
-[16.10.21 01:18:52.331] ! Unknown command:  r__supersample
-[16.10.21 01:18:52.331] [z:\programs\priboi ogsr\gamedata\config\rspec_high.ltx] successfully loaded.
-[16.10.21 01:18:52.331] Executing config-script "z:\programs\priboi ogsr\gamedata\config\default_controls.ltx"...
-[16.10.21 01:18:52.332] [z:\programs\priboi ogsr\gamedata\config\default_controls.ltx] successfully loaded.
-[16.10.21 01:18:52.332] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
-[16.10.21 01:18:52.332] [z:\programs\priboi ogsr\userdata\user.ltx] successfully loaded.
-[16.10.21 01:18:52.332] SOUND: Selected device is Generic Software
-[16.10.21 01:18:52.364] [OpenAL] EAX 2.0 extension: present
-[16.10.21 01:18:52.364] [OpenAL] EAX 2.0 deferred: present
-[16.10.21 01:18:52.367] * sound : cache: 65537 kb, 4856 lines, 13820 bpl
-[16.10.21 01:18:52.396] Starting RENDER device...
-[16.10.21 01:18:52.426] * GPU [vendor:10DE]-[device:1C81]: NVIDIA GeForce GTX 1050
-[16.10.21 01:18:52.426] * GPU driver: 30.0.14.7196
-[16.10.21 01:18:52.518] * CREATE: DeviceREF: 1
-[16.10.21 01:18:52.518] * Vertex Processor: PURE HARDWARE
-[16.10.21 01:18:52.518] *     Texture memory: 4072 M
-[16.10.21 01:18:52.518] *          DDI-level: 9.0
-[16.10.21 01:18:52.519] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
-[16.10.21 01:18:52.520] * GPU vertex cache: unrecognized, 16
-[16.10.21 01:18:52.520] * DVB created: 16384K
-[16.10.21 01:18:52.521] * DIB created: 512K
-[16.10.21 01:18:52.530] ! Version conflict in shader 'models\lightplanes_00'
-[16.10.21 01:18:52.530] ! Version conflict in shader 'models\lightplanesself'
-[16.10.21 01:18:52.530] ! Version conflict in shader 'models\model_puh'
-[16.10.21 01:18:52.530] ! Version conflict in shader 'models\model_refl'
-[16.10.21 01:18:52.530] ! Version conflict in shader 'models\xbrainglass'
-[16.10.21 01:18:52.530] ! Version conflict in shader 'models\xdistortcolorlinv'
-[16.10.21 01:18:52.530] ! Version conflict in shader 'models\xglass'
-[16.10.21 01:18:52.530] ! Version conflict in shader 'models\xglass2'
-[16.10.21 01:18:52.530] ! Version conflict in shader 'models\xlens'
-[16.10.21 01:18:52.530] ! Version conflict in shader 'selflight_static'
-[16.10.21 01:18:52.531] [CTextureDescrMngr::LoadLTX] count of *textures*.ltx files: [1]
-[16.10.21 01:18:52.632] * NULLRT supported
-[16.10.21 01:18:52.632] * ...and used
-[16.10.21 01:18:52.632] * HWDST/PCF supported and used
-[16.10.21 01:18:52.632] * NV-DBT supported and used
-[16.10.21 01:18:53.667] --LUA version: [LuaJIT 2.1.0-beta3]
-[16.10.21 01:18:53.701] Starting engine...
-[16.10.21 01:18:58.060] * phase time: 14 ms
-[16.10.21 01:18:58.089] * phase cmem: 176463 K
-[16.10.21 01:18:58.150] --LUA version: [LuaJIT 2.1.0-beta3]
-[16.10.21 01:18:58.166] * phase time: 105 ms
-[16.10.21 01:18:58.191] * phase cmem: 145274 K
-[16.10.21 01:18:58.196] * Loading spawn registry...
-[16.10.21 01:18:58.709] * 8976 spawn points are successfully loaded
-[16.10.21 01:18:58.709] * Loading objects...
-[16.10.21 01:18:59.022] * 17812 objects are successfully loaded
-[16.10.21 01:18:59.618] * Game 3 is successfully loaded from file 'z:\programs\priboi ogsr\userdata\savedgames\3.sav' (1.426s)
-[16.10.21 01:18:59.618] * phase time: 1451 ms
-[16.10.21 01:18:59.662] * phase cmem: 198359 K
-[16.10.21 01:18:59.711] # Player not found. New player created.
-[16.10.21 01:18:59.711] !!xrServer::Check_GameSpy_CDKey_Success - 1
-[16.10.21 01:18:59.711] * client : connection accepted - <>
-[16.10.21 01:18:59.728] * phase time: 110 ms
-[16.10.21 01:18:59.773] * phase cmem: 198363 K
-[16.10.21 01:18:59.773] * phase time: 44 ms
-[16.10.21 01:18:59.817] * phase cmem: 198363 K
-[16.10.21 01:19:00.916] --[ISpatial_DB::initialize] bbc is [43.8, 37.6, 88.9], bbd is [722.7, 76.3, 722.7]
-[16.10.21 01:19:00.916] --[ISpatial_DB::initialize] bbc is [43.8, 37.6, 88.9], bbd is [722.7, 76.3, 722.7]
-[16.10.21 01:19:00.918] * phase time: 1145 ms
-[16.10.21 01:19:00.963] * phase cmem: 292538 K
-[16.10.21 01:19:01.138] * phase time: 220 ms
-[16.10.21 01:19:01.183] * phase cmem: 295820 K
-[16.10.21 01:19:01.184] * [Loading VB] 65532 verts, 2047 Kb
-[16.10.21 01:19:01.186] * [Loading VB] 65525 verts, 2047 Kb
-[16.10.21 01:19:01.188] * [Loading VB] 65535 verts, 2047 Kb
-[16.10.21 01:19:01.189] * [Loading VB] 65466 verts, 2045 Kb
-[16.10.21 01:19:01.190] * [Loading VB] 17208 verts, 537 Kb
-[16.10.21 01:19:01.191] * [Loading VB] 65533 verts, 2047 Kb
-[16.10.21 01:19:01.192] * [Loading VB] 65534 verts, 2047 Kb
-[16.10.21 01:19:01.194] * [Loading VB] 65534 verts, 2047 Kb
-[16.10.21 01:19:01.195] * [Loading VB] 65531 verts, 2047 Kb
-[16.10.21 01:19:01.197] * [Loading VB] 65535 verts, 2047 Kb
-[16.10.21 01:19:01.198] * [Loading VB] 65535 verts, 2047 Kb
-[16.10.21 01:19:01.199] * [Loading VB] 46595 verts, 1456 Kb
-[16.10.21 01:19:01.200] * [Loading VB] 65534 verts, 2047 Kb
-[16.10.21 01:19:01.201] * [Loading VB] 65533 verts, 2047 Kb
-[16.10.21 01:19:01.203] * [Loading VB] 65535 verts, 2047 Kb
-[16.10.21 01:19:01.204] * [Loading VB] 65532 verts, 2047 Kb
-[16.10.21 01:19:01.205] * [Loading VB] 65533 verts, 2047 Kb
-[16.10.21 01:19:01.207] * [Loading VB] 65533 verts, 2047 Kb
-[16.10.21 01:19:01.208] * [Loading VB] 53181 verts, 1661 Kb
-[16.10.21 01:19:01.209] * [Loading IB] 1048575 indices, 2047 Kb
-[16.10.21 01:19:01.211] * [Loading IB] 1048572 indices, 2047 Kb
-[16.10.21 01:19:01.213] * [Loading IB] 1048572 indices, 2047 Kb
-[16.10.21 01:19:01.214] * [Loading IB] 1048572 indices, 2047 Kb
-[16.10.21 01:19:01.216] * [Loading IB] 1048572 indices, 2047 Kb
-[16.10.21 01:19:01.218] * [Loading IB] 1048572 indices, 2047 Kb
-[16.10.21 01:19:01.220] * [Loading IB] 1048575 indices, 2047 Kb
-[16.10.21 01:19:01.221] * [Loading IB] 1048572 indices, 2047 Kb
-[16.10.21 01:19:01.222] * [Loading IB] 1048575 indices, 2047 Kb
-[16.10.21 01:19:01.224] * [Loading IB] 228285 indices, 445 Kb
-[16.10.21 01:19:01.225] * [Loading VB] 65533 verts, 767 Kb
-[16.10.21 01:19:01.225] * [Loading VB] 65534 verts, 767 Kb
-[16.10.21 01:19:01.226] * [Loading VB] 65534 verts, 767 Kb
-[16.10.21 01:19:01.226] * [Loading VB] 65535 verts, 767 Kb
-[16.10.21 01:19:01.227] * [Loading VB] 65535 verts, 767 Kb
-[16.10.21 01:19:01.228] * [Loading VB] 65534 verts, 767 Kb
-[16.10.21 01:19:01.229] * [Loading VB] 65535 verts, 767 Kb
-[16.10.21 01:19:01.229] * [Loading VB] 14030 verts, 164 Kb
-[16.10.21 01:19:01.230] * [Loading IB] 1048575 indices, 2047 Kb
-[16.10.21 01:19:01.231] * [Loading IB] 1048575 indices, 2047 Kb
-[16.10.21 01:19:01.233] * [Loading IB] 1048575 indices, 2047 Kb
-[16.10.21 01:19:01.234] * [Loading IB] 718302 indices, 1402 Kb
-[16.10.21 01:19:01.235] * phase time: 96 ms
-[16.10.21 01:19:01.280] * phase cmem: 364696 K
-[16.10.21 01:19:01.934] * phase time: 699 ms
-[16.10.21 01:19:01.980] * phase cmem: 369955 K
-[16.10.21 01:19:02.002] * [DETAILS] VertexConsts(256), Batch(61)
-[16.10.21 01:19:02.002] * [DETAILS] 14640 v(20), 9455 p
-[16.10.21 01:19:02.003] * [DETAILS] Batch(61), VB(285K), IB(55K)
-[16.10.21 01:19:02.003] * phase time: 68 ms
-[16.10.21 01:19:02.049] * phase cmem: 370351 K
-[16.10.21 01:19:02.049] * Loading HOM: z:\programs\priboi ogsr\gamedata\levels\l01_escape\level.hom
-[16.10.21 01:19:02.051] * phase time: 47 ms
-[16.10.21 01:19:02.097] * phase cmem: 370575 K
-[16.10.21 01:19:02.098] * phase time: 47 ms
-[16.10.21 01:19:02.144] * phase cmem: 370575 K
-[16.10.21 01:19:02.154] - Game configuring : Started 
-[16.10.21 01:19:02.165] - Game configuring : Finished 
-[16.10.21 01:19:02.269] * phase time: 170 ms
-[16.10.21 01:19:02.315] * phase cmem: 380887 K
-[16.10.21 01:19:08.215] * t-report - base: 1198, 1084819 K
-[16.10.21 01:19:08.215] * t-report - lmap: 7, 7168 K
-[16.10.21 01:19:08.215] * phase time: 5945 ms
-[16.10.21 01:19:08.277] * phase cmem: 1518762 K
-[16.10.21 01:19:08.302] * phase time: 86 ms
-[16.10.21 01:19:08.357] * phase cmem: 1518767 K
-[16.10.21 01:19:08.419] --------------------------------------------------------------------------------
-[16.10.21 01:19:08.419] [8143MB] physical memory installed, [1936MB] available, [76] percent of memory in use
-[16.10.21 01:19:08.419] PageFile usage: [1804MB], Peak PageFile usage: [1806MB]
-[16.10.21 01:19:08.419] --------------------------------------------------------------------------------
-[16.10.21 01:19:08.419] * [ D3D ]: textures[1091988 K]
-[16.10.21 01:19:08.419] * [x-ray]: process heap[1518143 K], render[0 K]
-[16.10.21 01:19:08.419] * [x-ray]: economy: strings[7249 K], smem[0 K]
-[16.10.21 01:19:09.645] ! auto-generated bump map: wpn\tec-9\wpn_tec_kg9_gun_bump#
-[16.10.21 01:19:09.657] ! auto-generated bump map: wpn\tec-9\wpn_tec_kg9_mag_bump#
-[16.10.21 01:19:13.543] ! auto-generated bump map: wpn\ots_33\wpn_ots33_gps_bump#
-[16.10.21 01:19:13.560] ! auto-generated bump map: wpn\ots_33\wpn_ots33_frame_bump#
-[16.10.21 01:19:13.572] ! auto-generated bump map: wpn\ots_33\wpn_ots33_mag_bump#
-[16.10.21 01:19:14.939] WOLFID: 18211
-[16.10.21 01:19:15.137] WOLFID: 19226
-[16.10.21 01:19:15.206] WOLFID: 19226
-[16.10.21 01:19:15.281] WOLFID: 19226
-[16.10.21 01:19:15.547] WOLFID: 19226
-[16.10.21 01:19:15.582] WOLFID: 19226
-[16.10.21 01:19:15.625] WOLFID: 19226
-[16.10.21 01:19:15.663] WOLFID: 19226
-[16.10.21 01:19:15.712] WOLFID: 19226
-[16.10.21 01:19:15.746] WOLFID: 19226
-[16.10.21 01:19:15.784] WOLFID: 19226
-[16.10.21 01:19:15.815] WOLFID: 19226
-[16.10.21 01:19:15.847] WOLFID: 19226
-[16.10.21 01:19:15.879] WOLFID: 19226
-[16.10.21 01:19:15.912] WOLFID: 19226
-[16.10.21 01:19:15.946] WOLFID: 19226
-[16.10.21 01:19:15.979] WOLFID: 19226
-[16.10.21 01:19:16.012] WOLFID: 19226
-[16.10.21 01:19:16.045] WOLFID: 19226
-[16.10.21 01:19:16.079] WOLFID: 19226
-[16.10.21 01:19:16.113] WOLFID: 19226
-[16.10.21 01:19:16.171] WOLFID: 19226
-[16.10.21 01:19:16.180] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:16.206] WOLFID: 19226
-[16.10.21 01:19:16.238] WOLFID: 19226
-[16.10.21 01:19:16.274] WOLFID: 19226
-[16.10.21 01:19:16.305] WOLFID: 19226
-[16.10.21 01:19:16.454] * MEMORY USAGE: 2020793 K
-[16.10.21 01:19:16.454] * End of synchronization A[1] R[1]
-[16.10.21 01:19:16.454] * phase time: 8239 ms
-[16.10.21 01:19:16.558] * phase cmem: 2020794 K
-[16.10.21 01:19:17.813] WOLFID: 19226
-[16.10.21 01:19:17.821] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:17.847] WOLFID: 19226
-[16.10.21 01:19:17.881] WOLFID: 19226
-[16.10.21 01:19:17.914] WOLFID: 19226
-[16.10.21 01:19:17.947] WOLFID: 19226
-[16.10.21 01:19:17.980] WOLFID: 19226
-[16.10.21 01:19:18.014] WOLFID: 19226
-[16.10.21 01:19:18.047] WOLFID: 19226
-[16.10.21 01:19:18.081] WOLFID: 19226
-[16.10.21 01:19:18.114] WOLFID: 19226
-[16.10.21 01:19:18.147] WOLFID: 19226
-[16.10.21 01:19:18.180] WOLFID: 19226
-[16.10.21 01:19:18.217] WOLFID: 19226
-[16.10.21 01:19:18.250] WOLFID: 19226
-[16.10.21 01:19:18.282] WOLFID: 19226
-[16.10.21 01:19:18.315] WOLFID: 19226
-[16.10.21 01:19:18.348] WOLFID: 19226
-[16.10.21 01:19:18.382] WOLFID: 19226
-[16.10.21 01:19:18.415] WOLFID: 19226
-[16.10.21 01:19:18.448] WOLFID: 19226
-[16.10.21 01:19:18.482] WOLFID: 19226
-[16.10.21 01:19:18.515] WOLFID: 19226
-[16.10.21 01:19:18.548] WOLFID: 19226
-[16.10.21 01:19:18.582] WOLFID: 19226
-[16.10.21 01:19:18.615] WOLFID: 19226
-[16.10.21 01:19:18.649] WOLFID: 19226
-[16.10.21 01:19:18.682] WOLFID: 19226
-[16.10.21 01:19:18.715] WOLFID: 19226
-[16.10.21 01:19:18.748] WOLFID: 19226
-[16.10.21 01:19:18.782] WOLFID: 19226
-[16.10.21 01:19:18.815] WOLFID: 19226
-[16.10.21 01:19:18.848] WOLFID: 19226
-[16.10.21 01:19:18.882] WOLFID: 19226
-[16.10.21 01:19:18.915] WOLFID: 19226
-[16.10.21 01:19:18.948] WOLFID: 19226
-[16.10.21 01:19:18.982] WOLFID: 19226
-[16.10.21 01:19:19.015] WOLFID: 19226
-[16.10.21 01:19:19.048] WOLFID: 19226
-[16.10.21 01:19:19.082] WOLFID: 19226
-[16.10.21 01:19:19.115] WOLFID: 19226
-[16.10.21 01:19:19.148] WOLFID: 19226
-[16.10.21 01:19:19.182] WOLFID: 19226
-[16.10.21 01:19:19.215] WOLFID: 19226
-[16.10.21 01:19:19.249] WOLFID: 19226
-[16.10.21 01:19:19.282] WOLFID: 19226
-[16.10.21 01:19:19.315] WOLFID: 19226
-[16.10.21 01:19:19.348] WOLFID: 19226
-[16.10.21 01:19:19.381] WOLFID: 19226
-[16.10.21 01:19:19.415] WOLFID: 19226
-[16.10.21 01:19:19.448] WOLFID: 19226
-[16.10.21 01:19:19.482] WOLFID: 19226
-[16.10.21 01:19:19.515] WOLFID: 19226
-[16.10.21 01:19:19.548] WOLFID: 19226
-[16.10.21 01:19:19.582] WOLFID: 19226
-[16.10.21 01:19:19.615] WOLFID: 19226
-[16.10.21 01:19:19.649] WOLFID: 19226
-[16.10.21 01:19:19.681] WOLFID: 19226
-[16.10.21 01:19:19.724] WOLFID: 19226
-[16.10.21 01:19:19.755] WOLFID: 19226
-[16.10.21 01:19:19.786] WOLFID: 19226
-[16.10.21 01:19:19.819] WOLFID: 19226
-[16.10.21 01:19:19.850] WOLFID: 19226
-[16.10.21 01:19:19.882] WOLFID: 19226
-[16.10.21 01:19:19.915] WOLFID: 19226
-[16.10.21 01:19:19.948] WOLFID: 19226
-[16.10.21 01:19:19.982] WOLFID: 19226
-[16.10.21 01:19:20.015] WOLFID: 19226
-[16.10.21 01:19:20.048] WOLFID: 19226
-[16.10.21 01:19:20.082] WOLFID: 19226
-[16.10.21 01:19:20.115] WOLFID: 19226
-[16.10.21 01:19:20.148] WOLFID: 19226
-[16.10.21 01:19:20.182] WOLFID: 19226
-[16.10.21 01:19:20.215] WOLFID: 19226
-[16.10.21 01:19:20.248] WOLFID: 19226
-[16.10.21 01:19:20.282] WOLFID: 19226
-[16.10.21 01:19:20.315] WOLFID: 19226
-[16.10.21 01:19:20.348] WOLFID: 19226
-[16.10.21 01:19:20.382] WOLFID: 19226
-[16.10.21 01:19:20.415] WOLFID: 19226
-[16.10.21 01:19:20.448] WOLFID: 19226
-[16.10.21 01:19:20.482] WOLFID: 19226
-[16.10.21 01:19:20.515] WOLFID: 19226
-[16.10.21 01:19:20.548] WOLFID: 19226
-[16.10.21 01:19:20.582] WOLFID: 19226
-[16.10.21 01:19:20.615] WOLFID: 19226
-[16.10.21 01:19:20.649] WOLFID: 19226
-[16.10.21 01:19:20.682] WOLFID: 19226
-[16.10.21 01:19:20.715] WOLFID: 19226
-[16.10.21 01:19:20.749] WOLFID: 19226
-[16.10.21 01:19:20.782] WOLFID: 19226
-[16.10.21 01:19:20.815] WOLFID: 19226
-[16.10.21 01:19:20.848] WOLFID: 19226
-[16.10.21 01:19:20.882] WOLFID: 19226
-[16.10.21 01:19:20.915] WOLFID: 19226
-[16.10.21 01:19:20.949] WOLFID: 19226
-[16.10.21 01:19:20.982] WOLFID: 19226
-[16.10.21 01:19:21.015] WOLFID: 19226
-[16.10.21 01:19:21.048] WOLFID: 19226
-[16.10.21 01:19:21.082] WOLFID: 19226
-[16.10.21 01:19:21.115] WOLFID: 19226
-[16.10.21 01:19:21.148] WOLFID: 19226
-[16.10.21 01:19:21.182] WOLFID: 19226
-[16.10.21 01:19:21.215] WOLFID: 19226
-[16.10.21 01:19:21.248] WOLFID: 19226
-[16.10.21 01:19:21.282] WOLFID: 19226
-[16.10.21 01:19:21.315] WOLFID: 19226
-[16.10.21 01:19:21.348] WOLFID: 19226
-[16.10.21 01:19:21.382] WOLFID: 19226
-[16.10.21 01:19:21.415] WOLFID: 19226
-[16.10.21 01:19:21.448] WOLFID: 19226
-[16.10.21 01:19:21.482] WOLFID: 19226
-[16.10.21 01:19:21.515] WOLFID: 19226
-[16.10.21 01:19:21.548] WOLFID: 19226
-[16.10.21 01:19:21.582] WOLFID: 19226
-[16.10.21 01:19:21.615] WOLFID: 19226
-[16.10.21 01:19:21.649] WOLFID: 19226
-[16.10.21 01:19:21.682] WOLFID: 19226
-[16.10.21 01:19:21.715] WOLFID: 19226
-[16.10.21 01:19:21.749] WOLFID: 19226
-[16.10.21 01:19:21.782] WOLFID: 19226
-[16.10.21 01:19:21.799] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:21.815] WOLFID: 19226
-[16.10.21 01:19:21.849] WOLFID: 19226
-[16.10.21 01:19:21.882] WOLFID: 19226
-[16.10.21 01:19:21.915] WOLFID: 19226
-[16.10.21 01:19:21.949] WOLFID: 19226
-[16.10.21 01:19:21.982] WOLFID: 19226
-[16.10.21 01:19:22.015] WOLFID: 19226
-[16.10.21 01:19:22.048] WOLFID: 19226
-[16.10.21 01:19:22.082] WOLFID: 19226
-[16.10.21 01:19:22.115] WOLFID: 19226
-[16.10.21 01:19:22.134] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:22.149] WOLFID: 19226
-[16.10.21 01:19:22.182] WOLFID: 19226
-[16.10.21 01:19:22.215] WOLFID: 19226
-[16.10.21 01:19:22.249] WOLFID: 19226
-[16.10.21 01:19:22.282] WOLFID: 19226
-[16.10.21 01:19:22.315] WOLFID: 19226
-[16.10.21 01:19:22.349] WOLFID: 19226
-[16.10.21 01:19:22.382] WOLFID: 19226
-[16.10.21 01:19:22.415] WOLFID: 19226
-[16.10.21 01:19:22.448] WOLFID: 19226
-[16.10.21 01:19:22.482] WOLFID: 19226
-[16.10.21 01:19:22.515] WOLFID: 19226
-[16.10.21 01:19:22.549] WOLFID: 19226
-[16.10.21 01:19:22.582] WOLFID: 19226
-[16.10.21 01:19:22.615] WOLFID: 19226
-[16.10.21 01:19:22.649] WOLFID: 19226
-[16.10.21 01:19:22.682] WOLFID: 19226
-[16.10.21 01:19:22.715] WOLFID: 19226
-[16.10.21 01:19:22.749] WOLFID: 19226
-[16.10.21 01:19:22.782] WOLFID: 19226
-[16.10.21 01:19:22.815] WOLFID: 19226
-[16.10.21 01:19:22.834] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:22.849] WOLFID: 19226
-[16.10.21 01:19:22.882] WOLFID: 19226
-[16.10.21 01:19:22.915] WOLFID: 19226
-[16.10.21 01:19:22.949] WOLFID: 19226
-[16.10.21 01:19:22.982] WOLFID: 19226
-[16.10.21 01:19:23.015] WOLFID: 19226
-[16.10.21 01:19:23.049] WOLFID: 19226
-[16.10.21 01:19:23.082] WOLFID: 19226
-[16.10.21 01:19:23.115] WOLFID: 19226
-[16.10.21 01:19:23.150] WOLFID: 19226
-[16.10.21 01:19:23.170] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:23.182] WOLFID: 19226
-[16.10.21 01:19:23.216] WOLFID: 19226
-[16.10.21 01:19:23.249] WOLFID: 19226
-[16.10.21 01:19:23.282] WOLFID: 19226
-[16.10.21 01:19:23.315] WOLFID: 19226
-[16.10.21 01:19:23.349] WOLFID: 19226
-[16.10.21 01:19:23.382] WOLFID: 19226
-[16.10.21 01:19:23.415] WOLFID: 19226
-[16.10.21 01:19:23.449] WOLFID: 19226
-[16.10.21 01:19:23.482] WOLFID: 19226
-[16.10.21 01:19:23.484] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:23.515] WOLFID: 19226
-[16.10.21 01:19:23.549] WOLFID: 19226
-[16.10.21 01:19:23.582] WOLFID: 19226
-[16.10.21 01:19:23.615] WOLFID: 19226
-[16.10.21 01:19:23.649] WOLFID: 19226
-[16.10.21 01:19:23.682] WOLFID: 19226
-[16.10.21 01:19:23.715] WOLFID: 19226
-[16.10.21 01:19:23.749] WOLFID: 19226
-[16.10.21 01:19:23.782] WOLFID: 19226
-[16.10.21 01:19:23.820] WOLFID: 19226
-[16.10.21 01:19:23.822] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:23.852] WOLFID: 19226
-[16.10.21 01:19:23.884] WOLFID: 19226
-[16.10.21 01:19:23.915] WOLFID: 19226
-[16.10.21 01:19:23.949] WOLFID: 19226
-[16.10.21 01:19:23.982] WOLFID: 19226
-[16.10.21 01:19:24.000] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:24.015] WOLFID: 19226
-[16.10.21 01:19:24.047] WOLFID: 19226
-[16.10.21 01:19:24.081] WOLFID: 19226
-[16.10.21 01:19:24.114] WOLFID: 19226
-[16.10.21 01:19:24.116] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:24.148] WOLFID: 19226
-[16.10.21 01:19:24.181] WOLFID: 19226
-[16.10.21 01:19:24.214] WOLFID: 19226
-[16.10.21 01:19:24.247] WOLFID: 19226
-[16.10.21 01:19:24.281] WOLFID: 19226
-[16.10.21 01:19:24.314] WOLFID: 19226
-[16.10.21 01:19:24.333] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:24.348] WOLFID: 19226
-[16.10.21 01:19:24.381] WOLFID: 19226
-[16.10.21 01:19:24.414] WOLFID: 19226
-[16.10.21 01:19:24.447] WOLFID: 19226
-[16.10.21 01:19:24.481] WOLFID: 19226
-[16.10.21 01:19:24.482] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:24.514] WOLFID: 19226
-[16.10.21 01:19:24.548] WOLFID: 19226
-[16.10.21 01:19:24.581] WOLFID: 19226
-[16.10.21 01:19:24.614] WOLFID: 19226
-[16.10.21 01:19:24.648] WOLFID: 19226
-[16.10.21 01:19:24.681] WOLFID: 19226
-[16.10.21 01:19:24.714] WOLFID: 19226
-[16.10.21 01:19:24.748] WOLFID: 19226
-[16.10.21 01:19:24.780] WOLFID: 19226
-[16.10.21 01:19:24.818] WOLFID: 19226
-[16.10.21 01:19:24.851] WOLFID: 19226
-[16.10.21 01:19:24.883] WOLFID: 19226
-[16.10.21 01:19:24.915] WOLFID: 19226
-[16.10.21 01:19:24.947] WOLFID: 19226
-[16.10.21 01:19:24.980] WOLFID: 19226
-[16.10.21 01:19:25.014] WOLFID: 19226
-[16.10.21 01:19:25.047] WOLFID: 19226
-[16.10.21 01:19:25.080] WOLFID: 19226
-[16.10.21 01:19:25.113] WOLFID: 19226
-[16.10.21 01:19:25.147] WOLFID: 19226
-[16.10.21 01:19:25.180] WOLFID: 19226
-[16.10.21 01:19:25.214] WOLFID: 19226
-[16.10.21 01:19:25.247] WOLFID: 19226
-[16.10.21 01:19:25.280] WOLFID: 19226
-[16.10.21 01:19:25.313] WOLFID: 19226
-[16.10.21 01:19:25.347] WOLFID: 19226
-[16.10.21 01:19:25.380] WOLFID: 19226
-[16.10.21 01:19:25.414] WOLFID: 19226
-[16.10.21 01:19:25.447] WOLFID: 19226
-[16.10.21 01:19:25.480] WOLFID: 19226
-[16.10.21 01:19:25.482] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:25.513] WOLFID: 19226
-[16.10.21 01:19:25.547] WOLFID: 19226
-[16.10.21 01:19:25.580] WOLFID: 19226
-[16.10.21 01:19:25.614] WOLFID: 19226
-[16.10.21 01:19:25.647] WOLFID: 19226
-[16.10.21 01:19:25.680] WOLFID: 19226
-[16.10.21 01:19:25.714] WOLFID: 19226
-[16.10.21 01:19:25.751] WOLFID: 19226
-[16.10.21 01:19:25.783] WOLFID: 19226
-[16.10.21 01:19:25.815] WOLFID: 19226
-[16.10.21 01:19:25.847] WOLFID: 19226
-[16.10.21 01:19:25.880] WOLFID: 19226
-[16.10.21 01:19:25.913] WOLFID: 19226
-[16.10.21 01:19:25.947] WOLFID: 19226
-[16.10.21 01:19:25.980] WOLFID: 19226
-[16.10.21 01:19:26.014] WOLFID: 19226
-[16.10.21 01:19:26.047] WOLFID: 19226
-[16.10.21 01:19:26.081] WOLFID: 19226
-[16.10.21 01:19:26.113] WOLFID: 19226
-[16.10.21 01:19:26.147] WOLFID: 19226
-[16.10.21 01:19:26.180] WOLFID: 19226
-[16.10.21 01:19:26.214] WOLFID: 19226
-[16.10.21 01:19:26.247] WOLFID: 19226
-[16.10.21 01:19:26.280] WOLFID: 19226
-[16.10.21 01:19:26.313] WOLFID: 19226
-[16.10.21 01:19:26.347] WOLFID: 19226
-[16.10.21 01:19:26.380] WOLFID: 19226
-[16.10.21 01:19:26.497] WOLFID: 22076
-[16.10.21 01:19:26.539] WOLFID: 22076
-[16.10.21 01:19:26.573] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:26.597] WOLFID: 22076
-[16.10.21 01:19:26.630] WOLFID: 22076
-[16.10.21 01:19:26.664] WOLFID: 22076
-[16.10.21 01:19:26.697] WOLFID: 22076
-[16.10.21 01:19:26.730] WOLFID: 22076
-[16.10.21 01:19:26.764] WOLFID: 22076
-[16.10.21 01:19:26.797] WOLFID: 22076
-[16.10.21 01:19:26.830] WOLFID: 22076
-[16.10.21 01:19:26.864] WOLFID: 22076
-[16.10.21 01:19:26.897] WOLFID: 22076
-[16.10.21 01:19:26.930] WOLFID: 22076
-[16.10.21 01:19:26.964] WOLFID: 22076
-[16.10.21 01:19:26.997] WOLFID: 22076
-[16.10.21 01:19:27.030] WOLFID: 22076
-[16.10.21 01:19:27.064] WOLFID: 22076
-[16.10.21 01:19:27.097] WOLFID: 22076
-[16.10.21 01:19:27.130] WOLFID: 22076
-[16.10.21 01:19:27.164] WOLFID: 22076
-[16.10.21 01:19:27.197] WOLFID: 22076
-[16.10.21 01:19:27.198] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:27.230] WOLFID: 22076
-[16.10.21 01:19:27.264] WOLFID: 22076
-[16.10.21 01:19:27.297] WOLFID: 22076
-[16.10.21 01:19:27.330] WOLFID: 22076
-[16.10.21 01:19:27.365] WOLFID: 22076
-[16.10.21 01:19:27.398] WOLFID: 22076
-[16.10.21 01:19:27.432] WOLFID: 22076
-[16.10.21 01:19:27.465] WOLFID: 22076
-[16.10.21 01:19:27.498] WOLFID: 22076
-[16.10.21 01:19:27.532] WOLFID: 22076
-[16.10.21 01:19:27.565] WOLFID: 22076
-[16.10.21 01:19:27.598] WOLFID: 22076
-[16.10.21 01:19:27.632] WOLFID: 22076
-[16.10.21 01:19:27.665] WOLFID: 22076
-[16.10.21 01:19:27.698] WOLFID: 22076
-[16.10.21 01:19:27.732] WOLFID: 22076
-[16.10.21 01:19:27.765] WOLFID: 22076
-[16.10.21 01:19:27.798] WOLFID: 22076
-[16.10.21 01:19:27.832] WOLFID: 22076
-[16.10.21 01:19:27.851] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:27.865] WOLFID: 22076
-[16.10.21 01:19:27.883] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:27.898] WOLFID: 22076
-[16.10.21 01:19:27.932] WOLFID: 22076
-[16.10.21 01:19:27.965] WOLFID: 22076
-[16.10.21 01:19:27.998] WOLFID: 22076
-[16.10.21 01:19:28.032] WOLFID: 22076
-[16.10.21 01:19:28.065] WOLFID: 22076
-[16.10.21 01:19:28.098] WOLFID: 22076
-[16.10.21 01:19:28.132] WOLFID: 22076
-[16.10.21 01:19:28.165] WOLFID: 22076
-[16.10.21 01:19:28.198] WOLFID: 22076
-[16.10.21 01:19:28.232] WOLFID: 22076
-[16.10.21 01:19:28.265] WOLFID: 22076
-[16.10.21 01:19:28.298] WOLFID: 22076
-[16.10.21 01:19:28.332] WOLFID: 22076
-[16.10.21 01:19:28.364] WOLFID: 22076
-[16.10.21 01:19:28.397] WOLFID: 22076
-[16.10.21 01:19:28.431] WOLFID: 22076
-[16.10.21 01:19:28.464] WOLFID: 22076
-[16.10.21 01:19:28.497] WOLFID: 22076
-[16.10.21 01:19:28.530] WOLFID: 22076
-[16.10.21 01:19:28.564] WOLFID: 22076
-[16.10.21 01:19:28.597] WOLFID: 22076
-[16.10.21 01:19:28.630] WOLFID: 22076
-[16.10.21 01:19:28.664] WOLFID: 22076
-[16.10.21 01:19:28.697] WOLFID: 22076
-[16.10.21 01:19:28.730] WOLFID: 22076
-[16.10.21 01:19:28.764] WOLFID: 22076
-[16.10.21 01:19:28.797] WOLFID: 22076
-[16.10.21 01:19:28.830] WOLFID: 22076
-[16.10.21 01:19:28.864] WOLFID: 22076
-[16.10.21 01:19:28.897] WOLFID: 22076
-[16.10.21 01:19:28.930] WOLFID: 22076
-[16.10.21 01:19:28.964] WOLFID: 22076
-[16.10.21 01:19:28.997] WOLFID: 22076
-[16.10.21 01:19:29.031] WOLFID: 22076
-[16.10.21 01:19:29.064] WOLFID: 22076
-[16.10.21 01:19:29.097] WOLFID: 22076
-[16.10.21 01:19:29.130] WOLFID: 22076
-[16.10.21 01:19:29.164] WOLFID: 22076
-[16.10.21 01:19:29.197] WOLFID: 22076
-[16.10.21 01:19:29.231] WOLFID: 22076
-[16.10.21 01:19:29.264] WOLFID: 22076
-[16.10.21 01:19:29.297] WOLFID: 22076
-[16.10.21 01:19:29.330] WOLFID: 22076
-[16.10.21 01:19:37.230] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:37.297] WOLFID: 22076
-[16.10.21 01:19:37.331] WOLFID: 22076
-[16.10.21 01:19:37.364] WOLFID: 22076
-[16.10.21 01:19:37.397] WOLFID: 22076
-[16.10.21 01:19:37.431] WOLFID: 22076
-[16.10.21 01:19:37.464] WOLFID: 22076
-[16.10.21 01:19:37.499] WOLFID: 22076
-[16.10.21 01:19:37.531] WOLFID: 22076
-[16.10.21 01:19:37.564] WOLFID: 22076
-[16.10.21 01:19:37.597] WOLFID: 22076
-[16.10.21 01:19:37.631] WOLFID: 22076
-[16.10.21 01:19:37.664] WOLFID: 22076
-[16.10.21 01:19:37.698] WOLFID: 22076
-[16.10.21 01:19:37.730] WOLFID: 22076
-[16.10.21 01:19:37.764] WOLFID: 22076
-[16.10.21 01:19:37.797] WOLFID: 22076
-[16.10.21 01:19:37.830] WOLFID: 22076
-[16.10.21 01:19:37.863] WOLFID: 22076
-[16.10.21 01:19:37.896] WOLFID: 22076
-[16.10.21 01:19:37.930] WOLFID: 22076
-[16.10.21 01:19:37.963] WOLFID: 22076
-[16.10.21 01:19:37.996] WOLFID: 22076
-[16.10.21 01:19:38.030] WOLFID: 22076
-[16.10.21 01:19:38.063] WOLFID: 22076
-[16.10.21 01:19:38.096] WOLFID: 22076
-[16.10.21 01:19:38.130] WOLFID: 22076
-[16.10.21 01:19:38.163] WOLFID: 22076
-[16.10.21 01:19:38.196] WOLFID: 22076
-[16.10.21 01:19:38.230] WOLFID: 22076
-[16.10.21 01:19:38.263] WOLFID: 22076
-[16.10.21 01:19:38.296] WOLFID: 22076
-[16.10.21 01:19:38.330] WOLFID: 22076
-[16.10.21 01:19:38.363] WOLFID: 22076
-[16.10.21 01:19:38.396] WOLFID: 22076
-[16.10.21 01:19:38.430] WOLFID: 22076
-[16.10.21 01:19:38.463] WOLFID: 22076
-[16.10.21 01:19:38.496] WOLFID: 22076
-[16.10.21 01:19:38.530] WOLFID: 22076
-[16.10.21 01:19:38.563] WOLFID: 22076
-[16.10.21 01:19:38.596] WOLFID: 22076
-[16.10.21 01:19:38.630] WOLFID: 22076
-[16.10.21 01:19:38.664] WOLFID: 22076
-[16.10.21 01:19:38.696] WOLFID: 22076
-[16.10.21 01:19:38.730] WOLFID: 22076
-[16.10.21 01:19:38.763] WOLFID: 22076
-[16.10.21 01:19:38.797] WOLFID: 22076
-[16.10.21 01:19:38.830] WOLFID: 22076
-[16.10.21 01:19:38.864] WOLFID: 22076
-[16.10.21 01:19:38.896] WOLFID: 22076
-[16.10.21 01:19:38.930] WOLFID: 22076
-[16.10.21 01:19:38.963] WOLFID: 22076
-[16.10.21 01:19:38.966] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:38.996] WOLFID: 22076
-[16.10.21 01:19:39.030] WOLFID: 22076
-[16.10.21 01:19:39.063] WOLFID: 22076
-[16.10.21 01:19:39.081] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:39.097] WOLFID: 22076
-[16.10.21 01:19:39.130] WOLFID: 22076
-[16.10.21 01:19:39.163] WOLFID: 22076
-[16.10.21 01:19:39.196] WOLFID: 22076
-[16.10.21 01:19:39.230] WOLFID: 22076
-[16.10.21 01:19:39.264] WOLFID: 22076
-[16.10.21 01:19:39.297] WOLFID: 22076
-[16.10.21 01:19:39.330] WOLFID: 22076
-[16.10.21 01:19:39.363] WOLFID: 22076
-[16.10.21 01:19:39.396] WOLFID: 22076
-[16.10.21 01:19:39.430] WOLFID: 22076
-[16.10.21 01:19:39.463] WOLFID: 22076
-[16.10.21 01:19:39.496] WOLFID: 22076
-[16.10.21 01:19:39.530] WOLFID: 22076
-[16.10.21 01:19:39.563] WOLFID: 22076
-[16.10.21 01:19:39.597] WOLFID: 22076
-[16.10.21 01:19:39.630] WOLFID: 22076
-[16.10.21 01:19:39.663] WOLFID: 22076
-[16.10.21 01:19:39.696] WOLFID: 22076
-[16.10.21 01:19:39.730] WOLFID: 22076
-[16.10.21 01:19:39.763] WOLFID: 22076
-[16.10.21 01:19:39.796] WOLFID: 22076
-[16.10.21 01:19:39.830] WOLFID: 22076
-[16.10.21 01:19:39.863] WOLFID: 22076
-[16.10.21 01:19:39.897] WOLFID: 22076
-[16.10.21 01:19:39.930] WOLFID: 22076
-[16.10.21 01:19:39.964] WOLFID: 22076
-[16.10.21 01:19:39.997] WOLFID: 22076
-[16.10.21 01:19:40.049] WOLFID: 22076
-[16.10.21 01:19:40.080] WOLFID: 22076
-[16.10.21 01:19:40.111] WOLFID: 22076
-[16.10.21 01:19:40.142] WOLFID: 22076
-[16.10.21 01:19:40.173] WOLFID: 22076
-[16.10.21 01:19:40.204] WOLFID: 22076
-[16.10.21 01:19:40.236] WOLFID: 22076
-[16.10.21 01:19:40.268] WOLFID: 22076
-[16.10.21 01:19:40.299] WOLFID: 22076
-[16.10.21 01:19:40.330] WOLFID: 22076
-[16.10.21 01:19:40.364] WOLFID: 22076
-[16.10.21 01:19:40.397] WOLFID: 22076
-[16.10.21 01:19:40.430] WOLFID: 22076
-[16.10.21 01:19:40.464] WOLFID: 22076
-[16.10.21 01:19:40.497] WOLFID: 22076
-[16.10.21 01:19:40.530] WOLFID: 22076
-[16.10.21 01:19:40.564] WOLFID: 22076
-[16.10.21 01:19:40.597] WOLFID: 22076
-[16.10.21 01:19:40.630] WOLFID: 22076
-[16.10.21 01:19:40.664] WOLFID: 22076
-[16.10.21 01:19:40.697] WOLFID: 22076
-[16.10.21 01:19:40.731] WOLFID: 22076
-[16.10.21 01:19:40.764] WOLFID: 22076
-[16.10.21 01:19:40.797] WOLFID: 22076
-[16.10.21 01:19:40.831] WOLFID: 22076
-[16.10.21 01:19:40.864] WOLFID: 22076
-[16.10.21 01:19:40.897] WOLFID: 22076
-[16.10.21 01:19:40.930] WOLFID: 22076
-[16.10.21 01:19:40.964] WOLFID: 22076
-[16.10.21 01:19:40.997] WOLFID: 22076
-[16.10.21 01:19:41.030] WOLFID: 22076
-[16.10.21 01:19:41.064] WOLFID: 22076
-[16.10.21 01:19:41.097] WOLFID: 22076
-[16.10.21 01:19:41.130] WOLFID: 22076
-[16.10.21 01:19:41.164] WOLFID: 22076
-[16.10.21 01:19:41.197] WOLFID: 22076
-[16.10.21 01:19:41.230] WOLFID: 22076
-[16.10.21 01:19:41.264] WOLFID: 22076
-[16.10.21 01:19:41.297] WOLFID: 22076
-[16.10.21 01:19:41.330] WOLFID: 22076
-[16.10.21 01:19:41.364] WOLFID: 22076
-[16.10.21 01:19:41.397] WOLFID: 22076
-[16.10.21 01:19:41.430] WOLFID: 22076
-[16.10.21 01:19:41.464] WOLFID: 22076
-[16.10.21 01:19:41.498] WOLFID: 22076
-[16.10.21 01:19:41.530] WOLFID: 22076
-[16.10.21 01:19:41.564] WOLFID: 22076
-[16.10.21 01:19:41.597] WOLFID: 22076
-[16.10.21 01:19:41.630] WOLFID: 22076
-[16.10.21 01:19:41.664] WOLFID: 22076
-[16.10.21 01:19:41.697] WOLFID: 22076
-[16.10.21 01:19:41.730] WOLFID: 22076
-[16.10.21 01:19:41.764] WOLFID: 22076
-[16.10.21 01:19:41.797] WOLFID: 22076
-[16.10.21 01:19:41.831] WOLFID: 22076
-[16.10.21 01:19:41.864] WOLFID: 22076
-[16.10.21 01:19:41.897] WOLFID: 22076
-[16.10.21 01:19:41.930] WOLFID: 22076
-[16.10.21 01:19:41.964] WOLFID: 22076
-[16.10.21 01:19:41.997] WOLFID: 22076
-[16.10.21 01:19:42.030] WOLFID: 22076
-[16.10.21 01:19:42.064] WOLFID: 22076
-[16.10.21 01:19:42.097] WOLFID: 22076
-[16.10.21 01:19:42.130] WOLFID: 22076
-[16.10.21 01:19:42.164] WOLFID: 22076
-[16.10.21 01:19:42.197] WOLFID: 22076
-[16.10.21 01:19:42.230] WOLFID: 22076
-[16.10.21 01:19:42.264] WOLFID: 22076
-[16.10.21 01:19:42.297] WOLFID: 22076
-[16.10.21 01:19:42.316] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:42.330] WOLFID: 22076
-[16.10.21 01:19:42.364] WOLFID: 22076
-[16.10.21 01:19:42.397] WOLFID: 22076
-[16.10.21 01:19:42.431] WOLFID: 22076
-[16.10.21 01:19:42.464] WOLFID: 22076
-[16.10.21 01:19:42.497] WOLFID: 22076
-[16.10.21 01:19:42.530] WOLFID: 22076
-[16.10.21 01:19:42.564] WOLFID: 22076
-[16.10.21 01:19:42.597] WOLFID: 22076
-[16.10.21 01:19:42.630] WOLFID: 22076
-[16.10.21 01:19:42.664] WOLFID: 22076
-[16.10.21 01:19:42.697] WOLFID: 22076
-[16.10.21 01:19:42.731] WOLFID: 22076
-[16.10.21 01:19:42.764] WOLFID: 22076
-[16.10.21 01:19:42.782] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:42.797] WOLFID: 22076
-[16.10.21 01:19:42.829] WOLFID: 22076
-[16.10.21 01:19:42.860] WOLFID: 22076
-[16.10.21 01:19:42.891] WOLFID: 22076
-[16.10.21 01:19:42.922] WOLFID: 22076
-[16.10.21 01:19:42.954] WOLFID: 22076
-[16.10.21 01:19:42.997] WOLFID: 22076
-[16.10.21 01:19:43.031] WOLFID: 22076
-[16.10.21 01:19:43.064] WOLFID: 22076
-[16.10.21 01:19:43.082] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:43.097] WOLFID: 22076
-[16.10.21 01:19:43.130] WOLFID: 22076
-[16.10.21 01:19:43.164] WOLFID: 22076
-[16.10.21 01:19:43.197] WOLFID: 22076
-[16.10.21 01:19:43.230] WOLFID: 22076
-[16.10.21 01:19:43.248] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:43.264] WOLFID: 22076
-[16.10.21 01:19:43.298] WOLFID: 22076
-[16.10.21 01:19:43.330] WOLFID: 22076
-[16.10.21 01:19:43.364] WOLFID: 22076
-[16.10.21 01:19:43.397] WOLFID: 22076
-[16.10.21 01:19:43.430] WOLFID: 22076
-[16.10.21 01:19:43.463] WOLFID: 22076
-[16.10.21 01:19:43.497] WOLFID: 22076
-[16.10.21 01:19:43.515] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:43.530] WOLFID: 22076
-[16.10.21 01:19:43.563] WOLFID: 22076
-[16.10.21 01:19:43.597] WOLFID: 22076
-[16.10.21 01:19:43.630] WOLFID: 22076
-[16.10.21 01:19:43.663] WOLFID: 22076
-[16.10.21 01:19:43.697] WOLFID: 22076
-[16.10.21 01:19:43.730] WOLFID: 22076
-[16.10.21 01:19:43.764] WOLFID: 22076
-[16.10.21 01:19:43.797] WOLFID: 22076
-[16.10.21 01:19:43.830] WOLFID: 22076
-[16.10.21 01:19:43.864] WOLFID: 22076
-[16.10.21 01:19:43.897] WOLFID: 22076
-[16.10.21 01:19:43.930] WOLFID: 22076
-[16.10.21 01:19:43.964] WOLFID: 22076
-[16.10.21 01:19:43.997] WOLFID: 22076
-[16.10.21 01:19:44.030] WOLFID: 22076
-[16.10.21 01:19:44.064] WOLFID: 22076
-[16.10.21 01:19:44.097] WOLFID: 22076
-[16.10.21 01:19:44.130] WOLFID: 22076
-[16.10.21 01:19:44.163] WOLFID: 22076
-[16.10.21 01:19:44.197] WOLFID: 22076
-[16.10.21 01:19:44.230] WOLFID: 22076
-[16.10.21 01:19:44.263] WOLFID: 22076
-[16.10.21 01:19:44.297] WOLFID: 22076
-[16.10.21 01:19:44.330] WOLFID: 22076
-[16.10.21 01:19:44.364] WOLFID: 22076
-[16.10.21 01:19:44.397] WOLFID: 22076
-[16.10.21 01:19:44.431] WOLFID: 22076
-[16.10.21 01:19:44.464] WOLFID: 22076
-[16.10.21 01:19:44.498] WOLFID: 22076
-[16.10.21 01:19:44.531] WOLFID: 22076
-[16.10.21 01:19:44.564] WOLFID: 22076
-[16.10.21 01:19:44.597] WOLFID: 22076
-[16.10.21 01:19:44.631] WOLFID: 22076
-[16.10.21 01:19:44.664] WOLFID: 22076
-[16.10.21 01:19:44.697] WOLFID: 22076
-[16.10.21 01:19:44.731] WOLFID: 22076
-[16.10.21 01:19:44.764] WOLFID: 22076
-[16.10.21 01:19:44.797] WOLFID: 22076
-[16.10.21 01:19:44.831] WOLFID: 22076
-[16.10.21 01:19:44.864] WOLFID: 22076
-[16.10.21 01:19:44.897] WOLFID: 22076
-[16.10.21 01:19:44.931] WOLFID: 22076
-[16.10.21 01:19:44.964] WOLFID: 22076
-[16.10.21 01:19:44.997] WOLFID: 22076
-[16.10.21 01:19:45.031] WOLFID: 22076
-[16.10.21 01:19:45.064] WOLFID: 22076
-[16.10.21 01:19:45.097] WOLFID: 22076
-[16.10.21 01:19:45.128] WOLFID: 22076
-[16.10.21 01:19:45.160] WOLFID: 22076
-[16.10.21 01:19:45.192] WOLFID: 22076
-[16.10.21 01:19:45.224] WOLFID: 22076
-[16.10.21 01:19:45.256] WOLFID: 22076
-[16.10.21 01:19:45.288] WOLFID: 22076
-[16.10.21 01:19:45.320] WOLFID: 22076
-[16.10.21 01:19:45.351] WOLFID: 22076
-[16.10.21 01:19:45.382] WOLFID: 22076
-[16.10.21 01:19:45.431] WOLFID: 22076
-[16.10.21 01:19:45.464] WOLFID: 22076
-[16.10.21 01:19:45.497] WOLFID: 22076
-[16.10.21 01:19:45.531] WOLFID: 22076
-[16.10.21 01:19:45.564] WOLFID: 22076
-[16.10.21 01:19:45.598] WOLFID: 22076
-[16.10.21 01:19:45.631] WOLFID: 22076
-[16.10.21 01:19:45.664] WOLFID: 22076
-[16.10.21 01:19:45.699] WOLFID: 22076
-[16.10.21 01:19:45.731] WOLFID: 22076
-[16.10.21 01:19:45.765] WOLFID: 22076
-[16.10.21 01:19:45.798] WOLFID: 22076
-[16.10.21 01:19:45.831] WOLFID: 22076
-[16.10.21 01:19:45.865] WOLFID: 22076
-[16.10.21 01:19:45.898] WOLFID: 22076
-[16.10.21 01:19:45.931] WOLFID: 22076
-[16.10.21 01:19:45.964] WOLFID: 22076
-[16.10.21 01:19:45.997] WOLFID: 22076
-[16.10.21 01:19:46.031] WOLFID: 22076
-[16.10.21 01:19:46.064] WOLFID: 22076
-[16.10.21 01:19:46.096] WOLFID: 22076
-[16.10.21 01:19:46.128] WOLFID: 22076
-[16.10.21 01:19:46.160] WOLFID: 22076
-[16.10.21 01:19:46.191] WOLFID: 22076
-[16.10.21 01:19:46.223] WOLFID: 22076
-[16.10.21 01:19:46.254] WOLFID: 22076
-[16.10.21 01:19:46.285] WOLFID: 22076
-[16.10.21 01:19:46.332] WOLFID: 22076
-[16.10.21 01:19:46.365] WOLFID: 22076
-[16.10.21 01:19:46.397] WOLFID: 22076
-[16.10.21 01:19:46.430] WOLFID: 22076
-[16.10.21 01:19:46.464] WOLFID: 22076
-[16.10.21 01:19:46.497] WOLFID: 22076
-[16.10.21 01:19:46.530] WOLFID: 22076
-[16.10.21 01:19:46.564] WOLFID: 22076
-[16.10.21 01:19:46.582] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:46.597] WOLFID: 22076
-[16.10.21 01:19:46.631] WOLFID: 22076
-[16.10.21 01:19:46.664] WOLFID: 22076
-[16.10.21 01:19:46.697] WOLFID: 22076
-[16.10.21 01:19:46.730] WOLFID: 22076
-[16.10.21 01:19:46.764] WOLFID: 22076
-[16.10.21 01:19:46.797] WOLFID: 22076
-[16.10.21 01:19:46.830] WOLFID: 22076
-[16.10.21 01:19:46.864] WOLFID: 22076
-[16.10.21 01:19:46.897] WOLFID: 22076
-[16.10.21 01:19:46.930] WOLFID: 22076
-[16.10.21 01:19:46.964] WOLFID: 22076
-[16.10.21 01:19:46.997] WOLFID: 22076
-[16.10.21 01:19:47.031] WOLFID: 22076
-[16.10.21 01:19:47.064] WOLFID: 22076
-[16.10.21 01:19:47.097] WOLFID: 22076
-[16.10.21 01:19:47.130] WOLFID: 22076
-[16.10.21 01:19:47.164] WOLFID: 22076
-[16.10.21 01:19:47.197] WOLFID: 22076
-[16.10.21 01:19:47.230] WOLFID: 22076
-[16.10.21 01:19:47.264] WOLFID: 22076
-[16.10.21 01:19:47.297] WOLFID: 22076
-[16.10.21 01:19:47.330] WOLFID: 22076
-[16.10.21 01:19:47.364] WOLFID: 22076
-[16.10.21 01:19:47.382] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:47.397] WOLFID: 22076
-[16.10.21 01:19:47.430] WOLFID: 22076
-[16.10.21 01:19:47.464] WOLFID: 22076
-[16.10.21 01:19:47.497] WOLFID: 22076
-[16.10.21 01:19:47.530] WOLFID: 22076
-[16.10.21 01:19:47.574] WOLFID: 22076
-[16.10.21 01:19:47.605] WOLFID: 22076
-[16.10.21 01:19:47.636] WOLFID: 22076
-[16.10.21 01:19:47.668] WOLFID: 22076
-[16.10.21 01:19:47.699] WOLFID: 22076
-[16.10.21 01:19:47.730] WOLFID: 22076
-[16.10.21 01:19:47.764] WOLFID: 22076
-[16.10.21 01:19:47.797] WOLFID: 22076
-[16.10.21 01:19:47.830] WOLFID: 22076
-[16.10.21 01:19:47.864] WOLFID: 22076
-[16.10.21 01:19:47.897] WOLFID: 22076
-[16.10.21 01:19:47.930] WOLFID: 22076
-[16.10.21 01:19:47.964] WOLFID: 22076
-[16.10.21 01:19:47.997] WOLFID: 22076
-[16.10.21 01:19:48.030] WOLFID: 22076
-[16.10.21 01:19:48.064] WOLFID: 22076
-[16.10.21 01:19:48.097] WOLFID: 22076
-[16.10.21 01:19:48.130] WOLFID: 22076
-[16.10.21 01:19:48.164] WOLFID: 22076
-[16.10.21 01:19:48.197] WOLFID: 22076
-[16.10.21 01:19:48.230] WOLFID: 22076
-[16.10.21 01:19:48.264] WOLFID: 22076
-[16.10.21 01:19:48.297] WOLFID: 22076
-[16.10.21 01:19:48.330] WOLFID: 22076
-[16.10.21 01:19:48.364] WOLFID: 22076
-[16.10.21 01:19:48.397] WOLFID: 22076
-[16.10.21 01:19:48.430] WOLFID: 22076
-[16.10.21 01:19:48.464] WOLFID: 22076
-[16.10.21 01:19:48.497] WOLFID: 22076
-[16.10.21 01:19:48.515] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:48.530] WOLFID: 22076
-[16.10.21 01:19:48.564] WOLFID: 22076
-[16.10.21 01:19:48.597] WOLFID: 22076
-[16.10.21 01:19:48.630] WOLFID: 22076
-[16.10.21 01:19:48.664] WOLFID: 22076
-[16.10.21 01:19:48.697] WOLFID: 22076
-[16.10.21 01:19:48.731] WOLFID: 22076
-[16.10.21 01:19:48.764] WOLFID: 22076
-[16.10.21 01:19:48.797] WOLFID: 22076
-[16.10.21 01:19:48.831] WOLFID: 22076
-[16.10.21 01:19:48.864] WOLFID: 22076
-[16.10.21 01:19:48.897] WOLFID: 22076
-[16.10.21 01:19:48.930] WOLFID: 22076
-[16.10.21 01:19:48.964] WOLFID: 22076
-[16.10.21 01:19:48.965] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:48.997] WOLFID: 22076
-[16.10.21 01:19:49.030] WOLFID: 22076
-[16.10.21 01:19:49.064] WOLFID: 22076
-[16.10.21 01:19:49.097] WOLFID: 22076
-[16.10.21 01:19:49.130] WOLFID: 22076
-[16.10.21 01:19:49.164] WOLFID: 22076
-[16.10.21 01:19:49.197] WOLFID: 22076
-[16.10.21 01:19:49.230] WOLFID: 22076
-[16.10.21 01:19:49.264] WOLFID: 22076
-[16.10.21 01:19:49.297] WOLFID: 22076
-[16.10.21 01:19:49.330] WOLFID: 22076
-[16.10.21 01:19:49.364] WOLFID: 22076
-[16.10.21 01:19:49.397] WOLFID: 22076
-[16.10.21 01:19:49.430] WOLFID: 22076
-[16.10.21 01:19:49.464] WOLFID: 22076
-[16.10.21 01:19:49.497] WOLFID: 22076
-[16.10.21 01:19:49.530] WOLFID: 22076
-[16.10.21 01:19:49.564] WOLFID: 22076
-[16.10.21 01:19:49.597] WOLFID: 22076
-[16.10.21 01:19:49.630] WOLFID: 22076
-[16.10.21 01:19:49.664] WOLFID: 22076
-[16.10.21 01:19:49.697] WOLFID: 22076
-[16.10.21 01:19:49.730] WOLFID: 22076
-[16.10.21 01:19:49.764] WOLFID: 22076
-[16.10.21 01:19:49.797] WOLFID: 22076
-[16.10.21 01:19:49.830] WOLFID: 22076
-[16.10.21 01:19:49.864] WOLFID: 22076
-[16.10.21 01:19:49.897] WOLFID: 22076
-[16.10.21 01:19:49.930] WOLFID: 22076
-[16.10.21 01:19:49.964] WOLFID: 22076
-[16.10.21 01:19:49.997] WOLFID: 22076
-[16.10.21 01:19:50.030] WOLFID: 22076
-[16.10.21 01:19:50.064] WOLFID: 22076
-[16.10.21 01:19:50.097] WOLFID: 22076
-[16.10.21 01:19:50.130] WOLFID: 22076
-[16.10.21 01:19:50.164] WOLFID: 22076
-[16.10.21 01:19:50.197] WOLFID: 22076
-[16.10.21 01:19:50.231] WOLFID: 22076
-[16.10.21 01:19:50.264] WOLFID: 22076
-[16.10.21 01:19:50.297] WOLFID: 22076
-[16.10.21 01:19:50.330] WOLFID: 22076
-[16.10.21 01:19:50.364] WOLFID: 22076
-[16.10.21 01:19:50.397] WOLFID: 22076
-[16.10.21 01:19:50.431] WOLFID: 22076
-[16.10.21 01:19:50.464] WOLFID: 22076
-[16.10.21 01:19:50.497] WOLFID: 22076
-[16.10.21 01:19:50.530] WOLFID: 22076
-[16.10.21 01:19:50.564] WOLFID: 22076
-[16.10.21 01:19:50.597] WOLFID: 22076
-[16.10.21 01:19:50.630] WOLFID: 22076
-[16.10.21 01:19:50.664] WOLFID: 22076
-[16.10.21 01:19:50.697] WOLFID: 22076
-[16.10.21 01:19:50.730] WOLFID: 22076
-[16.10.21 01:19:50.732] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:50.764] WOLFID: 22076
-[16.10.21 01:19:50.797] WOLFID: 22076
-[16.10.21 01:19:50.830] WOLFID: 22076
-[16.10.21 01:19:50.864] WOLFID: 22076
-[16.10.21 01:19:50.897] WOLFID: 22076
-[16.10.21 01:19:50.930] WOLFID: 22076
-[16.10.21 01:19:50.964] WOLFID: 22076
-[16.10.21 01:19:50.997] WOLFID: 22076
-[16.10.21 01:19:51.031] WOLFID: 22076
-[16.10.21 01:19:51.064] WOLFID: 22076
-[16.10.21 01:19:51.097] WOLFID: 22076
-[16.10.21 01:19:51.130] WOLFID: 22076
-[16.10.21 01:19:51.164] WOLFID: 22076
-[16.10.21 01:19:51.197] WOLFID: 22076
-[16.10.21 01:19:51.230] WOLFID: 22076
-[16.10.21 01:19:51.264] WOLFID: 22076
-[16.10.21 01:19:51.297] WOLFID: 22076
-[16.10.21 01:19:51.330] WOLFID: 22076
-[16.10.21 01:19:51.364] WOLFID: 22076
-[16.10.21 01:19:51.397] WOLFID: 22076
-[16.10.21 01:19:51.430] WOLFID: 22076
-[16.10.21 01:19:51.464] WOLFID: 22076
-[16.10.21 01:19:51.497] WOLFID: 22076
-[16.10.21 01:19:51.530] WOLFID: 22076
-[16.10.21 01:19:51.564] WOLFID: 22076
-[16.10.21 01:19:51.597] WOLFID: 22076
-[16.10.21 01:19:51.630] WOLFID: 22076
-[16.10.21 01:19:51.664] WOLFID: 22076
-[16.10.21 01:19:51.697] WOLFID: 22076
-[16.10.21 01:19:51.730] WOLFID: 22076
-[16.10.21 01:19:51.764] WOLFID: 22076
-[16.10.21 01:19:51.797] WOLFID: 22076
-[16.10.21 01:19:51.830] WOLFID: 22076
-[16.10.21 01:19:51.864] WOLFID: 22076
-[16.10.21 01:19:51.897] WOLFID: 22076
-[16.10.21 01:19:51.931] WOLFID: 22076
-[16.10.21 01:19:51.964] WOLFID: 22076
-[16.10.21 01:19:51.997] WOLFID: 22076
-[16.10.21 01:19:52.030] WOLFID: 22076
-[16.10.21 01:19:52.064] WOLFID: 22076
-[16.10.21 01:19:52.097] WOLFID: 22076
-[16.10.21 01:19:52.130] WOLFID: 22076
-[16.10.21 01:19:52.164] WOLFID: 22076
-[16.10.21 01:19:52.197] WOLFID: 22076
-[16.10.21 01:19:52.230] WOLFID: 22076
-[16.10.21 01:19:52.264] WOLFID: 22076
-[16.10.21 01:19:52.297] WOLFID: 22076
-[16.10.21 01:19:52.298] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:52.330] WOLFID: 22076
-[16.10.21 01:19:52.364] WOLFID: 22076
-[16.10.21 01:19:52.397] WOLFID: 22076
-[16.10.21 01:19:52.430] WOLFID: 22076
-[16.10.21 01:19:52.464] WOLFID: 22076
-[16.10.21 01:19:52.497] WOLFID: 22076
-[16.10.21 01:19:52.530] WOLFID: 22076
-[16.10.21 01:19:52.564] WOLFID: 22076
-[16.10.21 01:19:52.597] WOLFID: 22076
-[16.10.21 01:19:52.630] WOLFID: 22076
-[16.10.21 01:19:52.664] WOLFID: 22076
-[16.10.21 01:19:52.697] WOLFID: 22076
-[16.10.21 01:19:52.730] WOLFID: 22076
-[16.10.21 01:19:52.764] WOLFID: 22076
-[16.10.21 01:19:52.797] WOLFID: 22076
-[16.10.21 01:19:52.831] WOLFID: 22076
-[16.10.21 01:19:52.864] WOLFID: 22076
-[16.10.21 01:19:52.897] WOLFID: 22076
-[16.10.21 01:19:52.930] WOLFID: 22076
-[16.10.21 01:19:52.964] WOLFID: 22076
-[16.10.21 01:19:52.997] WOLFID: 22076
-[16.10.21 01:19:53.031] WOLFID: 22076
-[16.10.21 01:19:53.064] WOLFID: 22076
-[16.10.21 01:19:53.097] WOLFID: 22076
-[16.10.21 01:19:53.130] WOLFID: 22076
-[16.10.21 01:19:53.164] WOLFID: 22076
-[16.10.21 01:19:53.197] WOLFID: 22076
-[16.10.21 01:19:53.230] WOLFID: 22076
-[16.10.21 01:19:53.264] WOLFID: 22076
-[16.10.21 01:19:53.297] WOLFID: 22076
-[16.10.21 01:19:53.330] WOLFID: 22076
-[16.10.21 01:19:53.364] WOLFID: 22076
-[16.10.21 01:19:53.397] WOLFID: 22076
-[16.10.21 01:19:53.430] WOLFID: 22076
-[16.10.21 01:19:53.464] WOLFID: 22076
-[16.10.21 01:19:53.497] WOLFID: 22076
-[16.10.21 01:19:53.531] WOLFID: 22076
-[16.10.21 01:19:53.564] WOLFID: 22076
-[16.10.21 01:19:53.597] WOLFID: 22076
-[16.10.21 01:19:53.631] WOLFID: 22076
-[16.10.21 01:19:53.664] WOLFID: 22076
-[16.10.21 01:19:53.697] WOLFID: 22076
-[16.10.21 01:19:53.731] WOLFID: 22076
-[16.10.21 01:19:53.764] WOLFID: 22076
-[16.10.21 01:19:53.797] WOLFID: 22076
-[16.10.21 01:19:53.830] WOLFID: 22076
-[16.10.21 01:19:53.864] WOLFID: 22076
-[16.10.21 01:19:53.897] WOLFID: 22076
-[16.10.21 01:19:53.931] WOLFID: 22076
-[16.10.21 01:19:53.964] WOLFID: 22076
-[16.10.21 01:19:53.997] WOLFID: 22076
-[16.10.21 01:19:54.031] WOLFID: 22076
-[16.10.21 01:19:54.064] WOLFID: 22076
-[16.10.21 01:19:54.097] WOLFID: 22076
-[16.10.21 01:19:54.130] WOLFID: 22076
-[16.10.21 01:19:54.164] WOLFID: 22076
-[16.10.21 01:19:54.197] WOLFID: 22076
-[16.10.21 01:19:54.231] WOLFID: 22076
-[16.10.21 01:19:54.264] WOLFID: 22076
-[16.10.21 01:19:54.297] WOLFID: 22076
-[16.10.21 01:19:54.330] WOLFID: 22076
-[16.10.21 01:19:54.364] WOLFID: 22076
-[16.10.21 01:19:54.397] WOLFID: 22076
-[16.10.21 01:19:54.431] WOLFID: 22076
-[16.10.21 01:19:54.464] WOLFID: 22076
-[16.10.21 01:19:54.497] WOLFID: 22076
-[16.10.21 01:19:54.531] WOLFID: 22076
-[16.10.21 01:19:54.564] WOLFID: 22076
-[16.10.21 01:19:54.597] WOLFID: 22076
-[16.10.21 01:19:54.630] WOLFID: 22076
-[16.10.21 01:19:54.664] WOLFID: 22076
-[16.10.21 01:19:54.697] WOLFID: 22076
-[16.10.21 01:19:54.731] WOLFID: 22076
-[16.10.21 01:19:54.764] WOLFID: 22076
-[16.10.21 01:19:54.797] WOLFID: 22076
-[16.10.21 01:19:54.831] WOLFID: 22076
-[16.10.21 01:19:54.864] WOLFID: 22076
-[16.10.21 01:19:54.897] WOLFID: 22076
-[16.10.21 01:19:54.931] WOLFID: 22076
-[16.10.21 01:19:54.964] WOLFID: 22076
-[16.10.21 01:19:54.997] WOLFID: 22076
-[16.10.21 01:19:55.031] WOLFID: 22076
-[16.10.21 01:19:55.064] WOLFID: 22076
-[16.10.21 01:19:55.097] WOLFID: 22076
-[16.10.21 01:19:55.131] WOLFID: 22076
-[16.10.21 01:19:55.173] WOLFID: 22076
-[16.10.21 01:19:55.204] WOLFID: 22076
-[16.10.21 01:19:55.238] WOLFID: 22076
-[16.10.21 01:19:55.269] WOLFID: 22076
-[16.10.21 01:19:55.300] WOLFID: 22076
-[16.10.21 01:19:55.332] WOLFID: 22076
-[16.10.21 01:19:55.364] WOLFID: 22076
-[16.10.21 01:19:55.397] WOLFID: 22076
-[16.10.21 01:19:55.431] WOLFID: 22076
-[16.10.21 01:19:55.464] WOLFID: 22076
-[16.10.21 01:19:55.497] WOLFID: 22076
-[16.10.21 01:19:55.531] WOLFID: 22076
-[16.10.21 01:19:55.564] WOLFID: 22076
-[16.10.21 01:19:55.597] WOLFID: 22076
-[16.10.21 01:19:55.631] WOLFID: 22076
-[16.10.21 01:19:55.664] WOLFID: 22076
-[16.10.21 01:19:55.697] WOLFID: 22076
-[16.10.21 01:19:55.731] WOLFID: 22076
-[16.10.21 01:19:55.764] WOLFID: 22076
-[16.10.21 01:19:55.797] WOLFID: 22076
-[16.10.21 01:19:55.831] WOLFID: 22076
-[16.10.21 01:19:55.864] WOLFID: 22076
-[16.10.21 01:19:55.897] WOLFID: 22076
-[16.10.21 01:19:55.899] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:55.931] WOLFID: 22076
-[16.10.21 01:19:55.964] WOLFID: 22076
-[16.10.21 01:19:55.997] WOLFID: 22076
-[16.10.21 01:19:56.031] WOLFID: 22076
-[16.10.21 01:19:56.064] WOLFID: 22076
-[16.10.21 01:19:56.097] WOLFID: 22076
-[16.10.21 01:19:56.131] WOLFID: 22076
-[16.10.21 01:19:56.164] WOLFID: 22076
-[16.10.21 01:19:56.197] WOLFID: 22076
-[16.10.21 01:19:56.231] WOLFID: 22076
-[16.10.21 01:19:56.264] WOLFID: 22076
-[16.10.21 01:19:56.297] WOLFID: 22076
-[16.10.21 01:19:56.331] WOLFID: 22076
-[16.10.21 01:19:56.364] WOLFID: 22076
-[16.10.21 01:19:56.397] WOLFID: 22076
-[16.10.21 01:19:56.431] WOLFID: 22076
-[16.10.21 01:19:56.432] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:19:56.464] WOLFID: 22076
-[16.10.21 01:19:56.497] WOLFID: 22076
-[16.10.21 01:19:56.531] WOLFID: 22076
-[16.10.21 01:19:56.564] WOLFID: 22076
-[16.10.21 01:19:56.597] WOLFID: 22076
-[16.10.21 01:19:56.631] WOLFID: 22076
-[16.10.21 01:19:56.664] WOLFID: 22076
-[16.10.21 01:19:56.697] WOLFID: 22076
-[16.10.21 01:19:56.731] WOLFID: 22076
-[16.10.21 01:19:56.764] WOLFID: 22076
-[16.10.21 01:19:56.797] WOLFID: 22076
-[16.10.21 01:19:56.831] WOLFID: 22076
-[16.10.21 01:19:56.864] WOLFID: 22076
-[16.10.21 01:19:56.897] WOLFID: 22076
-[16.10.21 01:19:56.931] WOLFID: 22076
-[16.10.21 01:19:56.964] WOLFID: 22076
-[16.10.21 01:19:56.997] WOLFID: 22076
-[16.10.21 01:19:57.031] WOLFID: 22076
-[16.10.21 01:19:57.064] WOLFID: 22076
-[16.10.21 01:19:57.097] WOLFID: 22076
-[16.10.21 01:19:57.131] WOLFID: 22076
-[16.10.21 01:19:57.164] WOLFID: 22076
-[16.10.21 01:19:57.197] WOLFID: 22076
-[16.10.21 01:19:57.231] WOLFID: 22076
-[16.10.21 01:19:57.264] WOLFID: 22076
-[16.10.21 01:19:57.297] WOLFID: 22076
-[16.10.21 01:19:57.331] WOLFID: 22076
-[16.10.21 01:19:57.364] WOLFID: 22076
-[16.10.21 01:19:57.397] WOLFID: 22076
-[16.10.21 01:19:57.431] WOLFID: 22076
-[16.10.21 01:19:57.464] WOLFID: 22076
-[16.10.21 01:19:57.497] WOLFID: 22076
-[16.10.21 01:19:57.531] WOLFID: 22076
-[16.10.21 01:19:57.564] WOLFID: 22076
-[16.10.21 01:19:57.597] WOLFID: 22076
-[16.10.21 01:19:57.631] WOLFID: 22076
-[16.10.21 01:19:57.664] WOLFID: 22076
-[16.10.21 01:19:57.697] WOLFID: 22076
-[16.10.21 01:19:57.731] WOLFID: 22076
-[16.10.21 01:19:57.764] WOLFID: 22076
-[16.10.21 01:19:57.797] WOLFID: 22076
-[16.10.21 01:19:57.831] WOLFID: 22076
-[16.10.21 01:19:57.864] WOLFID: 22076
-[16.10.21 01:19:57.897] WOLFID: 22076
-[16.10.21 01:19:57.931] WOLFID: 22076
-[16.10.21 01:19:57.964] WOLFID: 22076
-[16.10.21 01:19:57.997] WOLFID: 22076
-[16.10.21 01:19:58.031] WOLFID: 22076
-[16.10.21 01:19:58.064] WOLFID: 22076
-[16.10.21 01:19:58.097] WOLFID: 22076
-[16.10.21 01:19:58.131] WOLFID: 22076
-[16.10.21 01:19:58.164] WOLFID: 22076
-[16.10.21 01:19:58.197] WOLFID: 22076
-[16.10.21 01:19:58.231] WOLFID: 22076
-[16.10.21 01:19:58.264] WOLFID: 22076
-[16.10.21 01:19:58.297] WOLFID: 22076
-[16.10.21 01:19:58.331] WOLFID: 22076
-[16.10.21 01:19:58.364] WOLFID: 22076
-[16.10.21 01:19:58.397] WOLFID: 22076
-[16.10.21 01:19:58.431] WOLFID: 22076
-[16.10.21 01:19:58.464] WOLFID: 22076
-[16.10.21 01:19:58.497] WOLFID: 22076
-[16.10.21 01:19:58.531] WOLFID: 22076
-[16.10.21 01:19:58.564] WOLFID: 22076
-[16.10.21 01:19:58.597] WOLFID: 22076
-[16.10.21 01:19:58.631] WOLFID: 22076
-[16.10.21 01:19:58.664] WOLFID: 22076
-[16.10.21 01:19:58.697] WOLFID: 22076
-[16.10.21 01:19:58.731] WOLFID: 22076
-[16.10.21 01:19:58.764] WOLFID: 22076
-[16.10.21 01:19:58.797] WOLFID: 22076
-[16.10.21 01:19:58.831] WOLFID: 22076
-[16.10.21 01:19:58.864] WOLFID: 22076
-[16.10.21 01:19:58.897] WOLFID: 22076
-[16.10.21 01:19:58.931] WOLFID: 22076
-[16.10.21 01:19:58.964] WOLFID: 22076
-[16.10.21 01:19:58.998] WOLFID: 22076
-[16.10.21 01:19:59.031] WOLFID: 22076
-[16.10.21 01:19:59.064] WOLFID: 22076
-[16.10.21 01:19:59.097] WOLFID: 22076
-[16.10.21 01:19:59.131] WOLFID: 22076
-[16.10.21 01:19:59.164] WOLFID: 22076
-[16.10.21 01:19:59.197] WOLFID: 22076
-[16.10.21 01:19:59.231] WOLFID: 22076
-[16.10.21 01:19:59.264] WOLFID: 22076
-[16.10.21 01:19:59.297] WOLFID: 22076
-[16.10.21 01:19:59.331] WOLFID: 22076
-[16.10.21 01:19:59.364] WOLFID: 22076
-[16.10.21 01:19:59.397] WOLFID: 22076
-[16.10.21 01:19:59.431] WOLFID: 22076
-[16.10.21 01:19:59.464] WOLFID: 22076
-[16.10.21 01:19:59.497] WOLFID: 22076
-[16.10.21 01:19:59.531] WOLFID: 22076
-[16.10.21 01:19:59.564] WOLFID: 22076
-[16.10.21 01:19:59.597] WOLFID: 22076
-[16.10.21 01:19:59.631] WOLFID: 22076
-[16.10.21 01:19:59.664] WOLFID: 22076
-[16.10.21 01:19:59.697] WOLFID: 22076
-[16.10.21 01:19:59.731] WOLFID: 22076
-[16.10.21 01:19:59.764] WOLFID: 22076
-[16.10.21 01:19:59.797] WOLFID: 22076
-[16.10.21 01:19:59.831] WOLFID: 22076
-[16.10.21 01:19:59.864] WOLFID: 22076
-[16.10.21 01:19:59.898] WOLFID: 22076
-[16.10.21 01:19:59.931] WOLFID: 22076
-[16.10.21 01:19:59.964] WOLFID: 22076
-[16.10.21 01:19:59.997] WOLFID: 22076
-[16.10.21 01:20:00.031] WOLFID: 22076
-[16.10.21 01:20:00.064] WOLFID: 22076
-[16.10.21 01:20:00.097] WOLFID: 22076
-[16.10.21 01:20:00.131] WOLFID: 22076
-[16.10.21 01:20:00.164] WOLFID: 22076
-[16.10.21 01:20:00.197] WOLFID: 22076
-[16.10.21 01:20:00.231] WOLFID: 22076
-[16.10.21 01:20:00.264] WOLFID: 22076
-[16.10.21 01:20:00.297] WOLFID: 22076
-[16.10.21 01:20:00.331] WOLFID: 22076
-[16.10.21 01:20:00.364] WOLFID: 22076
-[16.10.21 01:20:00.397] WOLFID: 22076
-[16.10.21 01:20:00.431] WOLFID: 22076
-[16.10.21 01:20:00.464] WOLFID: 22076
-[16.10.21 01:20:00.497] WOLFID: 22076
-[16.10.21 01:20:00.531] WOLFID: 22076
-[16.10.21 01:20:00.564] WOLFID: 22076
-[16.10.21 01:20:00.597] WOLFID: 22076
-[16.10.21 01:20:00.631] WOLFID: 22076
-[16.10.21 01:20:00.664] WOLFID: 22076
-[16.10.21 01:20:00.697] WOLFID: 22076
-[16.10.21 01:20:00.731] WOLFID: 22076
-[16.10.21 01:20:00.765] WOLFID: 22076
-[16.10.21 01:20:00.797] WOLFID: 22076
-[16.10.21 01:20:00.831] WOLFID: 22076
-[16.10.21 01:20:00.864] WOLFID: 22076
-[16.10.21 01:20:00.897] WOLFID: 22076
-[16.10.21 01:20:00.931] WOLFID: 22076
-[16.10.21 01:20:00.964] WOLFID: 22076
-[16.10.21 01:20:00.998] WOLFID: 22076
-[16.10.21 01:20:01.031] WOLFID: 22076
-[16.10.21 01:20:01.064] WOLFID: 22076
-[16.10.21 01:20:01.097] WOLFID: 22076
-[16.10.21 01:20:01.131] WOLFID: 22076
-[16.10.21 01:20:01.164] WOLFID: 22076
-[16.10.21 01:20:01.197] WOLFID: 22076
-[16.10.21 01:20:01.231] WOLFID: 22076
-[16.10.21 01:20:01.264] WOLFID: 22076
-[16.10.21 01:20:01.297] WOLFID: 22076
-[16.10.21 01:20:01.331] WOLFID: 22076
-[16.10.21 01:20:01.364] WOLFID: 22076
-[16.10.21 01:20:01.397] WOLFID: 22076
-[16.10.21 01:20:01.431] WOLFID: 22076
-[16.10.21 01:20:01.464] WOLFID: 22076
-[16.10.21 01:20:01.497] WOLFID: 22076
-[16.10.21 01:20:01.531] WOLFID: 22076
-[16.10.21 01:20:01.564] WOLFID: 22076
-[16.10.21 01:20:01.597] WOLFID: 22076
-[16.10.21 01:20:01.631] WOLFID: 22076
-[16.10.21 01:20:01.664] WOLFID: 22076
-[16.10.21 01:20:01.697] WOLFID: 22076
-[16.10.21 01:20:01.731] WOLFID: 22076
-[16.10.21 01:20:01.764] WOLFID: 22076
-[16.10.21 01:20:01.798] WOLFID: 22076
-[16.10.21 01:20:01.831] WOLFID: 22076
-[16.10.21 01:20:01.864] WOLFID: 22076
-[16.10.21 01:20:01.898] WOLFID: 22076
-[16.10.21 01:20:01.931] WOLFID: 22076
-[16.10.21 01:20:01.964] WOLFID: 22076
-[16.10.21 01:20:01.997] WOLFID: 22076
-[16.10.21 01:20:02.031] WOLFID: 22076
-[16.10.21 01:20:02.064] WOLFID: 22076
-[16.10.21 01:20:02.097] WOLFID: 22076
-[16.10.21 01:20:02.099] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:20:02.131] WOLFID: 22076
-[16.10.21 01:20:02.164] WOLFID: 22076
-[16.10.21 01:20:02.197] WOLFID: 22076
-[16.10.21 01:20:02.231] WOLFID: 22076
-[16.10.21 01:20:02.264] WOLFID: 22076
-[16.10.21 01:20:02.298] WOLFID: 22076
-[16.10.21 01:20:02.331] WOLFID: 22076
-[16.10.21 01:20:02.364] WOLFID: 22076
-[16.10.21 01:20:02.397] WOLFID: 22076
-[16.10.21 01:20:02.431] WOLFID: 22076
-[16.10.21 01:20:02.464] WOLFID: 22076
-[16.10.21 01:20:02.498] WOLFID: 22076
-[16.10.21 01:20:02.531] WOLFID: 22076
-[16.10.21 01:20:02.564] WOLFID: 22076
-[16.10.21 01:20:02.597] WOLFID: 22076
-[16.10.21 01:20:02.631] WOLFID: 22076
-[16.10.21 01:20:02.664] WOLFID: 22076
-[16.10.21 01:20:02.697] WOLFID: 22076
-[16.10.21 01:20:02.731] WOLFID: 22076
-[16.10.21 01:20:02.764] WOLFID: 22076
-[16.10.21 01:20:02.797] WOLFID: 22076
-[16.10.21 01:20:02.831] WOLFID: 22076
-[16.10.21 01:20:02.864] WOLFID: 22076
-[16.10.21 01:20:02.897] WOLFID: 22076
-[16.10.21 01:20:02.931] WOLFID: 22076
-[16.10.21 01:20:02.964] WOLFID: 22076
-[16.10.21 01:20:02.997] WOLFID: 22076
-[16.10.21 01:20:03.031] WOLFID: 22076
-[16.10.21 01:20:03.064] WOLFID: 22076
-[16.10.21 01:20:03.097] WOLFID: 22076
-[16.10.21 01:20:03.131] WOLFID: 22076
-[16.10.21 01:20:03.164] WOLFID: 22076
-[16.10.21 01:20:03.197] WOLFID: 22076
-[16.10.21 01:20:03.231] WOLFID: 22076
-[16.10.21 01:20:03.264] WOLFID: 22076
-[16.10.21 01:20:03.298] WOLFID: 22076
-[16.10.21 01:20:03.331] WOLFID: 22076
-[16.10.21 01:20:03.364] WOLFID: 22076
-[16.10.21 01:20:03.397] WOLFID: 22076
-[16.10.21 01:20:03.431] WOLFID: 22076
-[16.10.21 01:20:03.464] WOLFID: 22076
-[16.10.21 01:20:03.497] WOLFID: 22076
-[16.10.21 01:20:03.531] WOLFID: 22076
-[16.10.21 01:20:03.564] WOLFID: 22076
-[16.10.21 01:20:03.597] WOLFID: 22076
-[16.10.21 01:20:03.633] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:20:03.648] WOLFID: 22076
-[16.10.21 01:20:03.680] WOLFID: 22076
-[16.10.21 01:20:03.711] WOLFID: 22076
-[16.10.21 01:20:03.742] WOLFID: 22076
-[16.10.21 01:20:03.774] WOLFID: 22076
-[16.10.21 01:20:03.805] WOLFID: 22076
-[16.10.21 01:20:03.836] WOLFID: 22076
-[16.10.21 01:20:03.868] WOLFID: 22076
-[16.10.21 01:20:03.899] WOLFID: 22076
-[16.10.21 01:20:03.931] WOLFID: 22076
-[16.10.21 01:20:03.964] WOLFID: 22076
-[16.10.21 01:20:03.998] WOLFID: 22076
-[16.10.21 01:20:04.031] WOLFID: 22076
-[16.10.21 01:20:04.064] WOLFID: 22076
-[16.10.21 01:20:04.098] WOLFID: 22076
-[16.10.21 01:20:04.131] WOLFID: 22076
-[16.10.21 01:20:04.164] WOLFID: 22076
-[16.10.21 01:20:04.167] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:20:04.198] WOLFID: 22076
-[16.10.21 01:20:04.231] WOLFID: 22076
-[16.10.21 01:20:04.264] WOLFID: 22076
-[16.10.21 01:20:04.298] WOLFID: 22076
-[16.10.21 01:20:04.331] WOLFID: 22076
-[16.10.21 01:20:04.364] WOLFID: 22076
-[16.10.21 01:20:04.398] WOLFID: 22076
-[16.10.21 01:20:04.431] WOLFID: 22076
-[16.10.21 01:20:04.464] WOLFID: 22076
-[16.10.21 01:20:04.498] WOLFID: 22076
-[16.10.21 01:20:04.531] WOLFID: 22076
-[16.10.21 01:20:04.564] WOLFID: 22076
-[16.10.21 01:20:04.598] WOLFID: 22076
-[16.10.21 01:20:04.631] WOLFID: 22076
-[16.10.21 01:20:04.664] WOLFID: 22076
-[16.10.21 01:20:04.698] WOLFID: 22076
-[16.10.21 01:20:04.731] WOLFID: 22076
-[16.10.21 01:20:04.764] WOLFID: 22076
-[16.10.21 01:20:04.797] WOLFID: 22076
-[16.10.21 01:20:04.831] WOLFID: 22076
-[16.10.21 01:20:04.864] WOLFID: 22076
-[16.10.21 01:20:04.898] WOLFID: 22076
-[16.10.21 01:20:04.931] WOLFID: 22076
-[16.10.21 01:20:04.964] WOLFID: 22076
-[16.10.21 01:20:04.998] WOLFID: 22076
-[16.10.21 01:20:05.031] WOLFID: 22076
-[16.10.21 01:20:05.064] WOLFID: 22076
-[16.10.21 01:20:05.098] WOLFID: 22076
-[16.10.21 01:20:05.131] WOLFID: 22076
-[16.10.21 01:20:05.164] WOLFID: 22076
-[16.10.21 01:20:05.198] WOLFID: 22076
-[16.10.21 01:20:05.231] WOLFID: 22076
-[16.10.21 01:20:05.264] WOLFID: 22076
-[16.10.21 01:20:05.298] WOLFID: 22076
-[16.10.21 01:20:05.331] WOLFID: 22076
-[16.10.21 01:20:05.364] WOLFID: 22076
-[16.10.21 01:20:05.397] WOLFID: 22076
-[16.10.21 01:20:05.431] WOLFID: 22076
-[16.10.21 01:20:05.464] WOLFID: 22076
-[16.10.21 01:20:05.498] WOLFID: 22076
-[16.10.21 01:20:05.531] WOLFID: 22076
-[16.10.21 01:20:05.564] WOLFID: 22076
-[16.10.21 01:20:05.598] WOLFID: 22076
-[16.10.21 01:20:05.631] WOLFID: 22076
-[16.10.21 01:20:05.664] WOLFID: 22076
-[16.10.21 01:20:05.698] WOLFID: 22076
-[16.10.21 01:20:05.731] WOLFID: 22076
-[16.10.21 01:20:05.764] WOLFID: 22076
-[16.10.21 01:20:05.798] WOLFID: 22076
-[16.10.21 01:20:05.831] WOLFID: 22076
-[16.10.21 01:20:05.864] WOLFID: 22076
-[16.10.21 01:20:05.898] WOLFID: 22076
-[16.10.21 01:20:05.931] WOLFID: 22076
-[16.10.21 01:20:05.965] WOLFID: 22076
-[16.10.21 01:20:05.998] WOLFID: 22076
-[16.10.21 01:20:06.031] WOLFID: 22076
-[16.10.21 01:20:06.064] WOLFID: 22076
-[16.10.21 01:20:06.098] WOLFID: 22076
-[16.10.21 01:20:06.131] WOLFID: 22076
-[16.10.21 01:20:06.164] WOLFID: 22076
-[16.10.21 01:20:06.198] WOLFID: 22076
-[16.10.21 01:20:06.231] WOLFID: 22076
-[16.10.21 01:20:06.264] WOLFID: 22076
-[16.10.21 01:20:06.266] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:20:06.298] WOLFID: 22076
-[16.10.21 01:20:06.331] WOLFID: 22076
-[16.10.21 01:20:06.364] WOLFID: 22076
-[16.10.21 01:20:06.398] WOLFID: 22076
-[16.10.21 01:20:06.431] WOLFID: 22076
-[16.10.21 01:20:06.464] WOLFID: 22076
-[16.10.21 01:20:06.498] WOLFID: 22076
-[16.10.21 01:20:06.531] WOLFID: 22076
-[16.10.21 01:20:06.564] WOLFID: 22076
-[16.10.21 01:20:06.598] WOLFID: 22076
-[16.10.21 01:20:06.631] WOLFID: 22076
-[16.10.21 01:20:06.664] WOLFID: 22076
-[16.10.21 01:20:06.698] WOLFID: 22076
-[16.10.21 01:20:06.731] WOLFID: 22076
-[16.10.21 01:20:06.764] WOLFID: 22076
-[16.10.21 01:20:06.798] WOLFID: 22076
-[16.10.21 01:20:06.831] WOLFID: 22076
-[16.10.21 01:20:06.864] WOLFID: 22076
-[16.10.21 01:20:06.866] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:20:06.898] WOLFID: 22076
-[16.10.21 01:20:06.931] WOLFID: 22076
-[16.10.21 01:20:06.965] WOLFID: 22076
-[16.10.21 01:20:06.998] WOLFID: 22076
-[16.10.21 01:20:07.031] WOLFID: 22076
-[16.10.21 01:20:07.064] WOLFID: 22076
-[16.10.21 01:20:07.098] WOLFID: 22076
-[16.10.21 01:20:07.131] WOLFID: 22076
-[16.10.21 01:20:07.164] WOLFID: 22076
-[16.10.21 01:20:07.198] WOLFID: 22076
-[16.10.21 01:20:07.231] WOLFID: 22076
-[16.10.21 01:20:07.264] WOLFID: 22076
-[16.10.21 01:20:07.298] WOLFID: 22076
-[16.10.21 01:20:07.331] WOLFID: 22076
-[16.10.21 01:20:07.364] WOLFID: 22076
-[16.10.21 01:20:07.398] WOLFID: 22076
-[16.10.21 01:20:07.431] WOLFID: 22076
-[16.10.21 01:20:07.465] WOLFID: 22076
-[16.10.21 01:20:07.498] WOLFID: 22076
-[16.10.21 01:20:07.531] WOLFID: 22076
-[16.10.21 01:20:07.564] WOLFID: 22076
-[16.10.21 01:20:07.598] WOLFID: 22076
-[16.10.21 01:20:07.631] WOLFID: 22076
-[16.10.21 01:20:07.664] WOLFID: 22076
-[16.10.21 01:20:07.698] WOLFID: 22076
-[16.10.21 01:20:07.731] WOLFID: 22076
-[16.10.21 01:20:07.765] WOLFID: 22076
-[16.10.21 01:20:07.798] WOLFID: 22076
-[16.10.21 01:20:07.831] WOLFID: 22076
-[16.10.21 01:20:07.864] WOLFID: 22076
-[16.10.21 01:20:07.898] WOLFID: 22076
-[16.10.21 01:20:07.931] WOLFID: 22076
-[16.10.21 01:20:07.965] WOLFID: 22076
-[16.10.21 01:20:07.998] WOLFID: 22076
-[16.10.21 01:20:08.031] WOLFID: 22076
-[16.10.21 01:20:08.064] WOLFID: 22076
-[16.10.21 01:20:08.098] WOLFID: 22076
-[16.10.21 01:20:08.131] WOLFID: 22076
-[16.10.21 01:20:08.164] WOLFID: 22076
-[16.10.21 01:20:08.198] WOLFID: 22076
-[16.10.21 01:20:08.231] WOLFID: 22076
-[16.10.21 01:20:08.265] WOLFID: 22076
-[16.10.21 01:20:08.298] WOLFID: 22076
-[16.10.21 01:20:08.331] WOLFID: 22076
-[16.10.21 01:20:08.364] WOLFID: 22076
-[16.10.21 01:20:08.398] WOLFID: 22076
-[16.10.21 01:20:08.431] WOLFID: 22076
-[16.10.21 01:20:08.464] WOLFID: 22076
-[16.10.21 01:20:08.498] WOLFID: 22076
-[16.10.21 01:20:08.531] WOLFID: 22076
-[16.10.21 01:20:08.565] WOLFID: 22076
-[16.10.21 01:20:08.598] WOLFID: 22076
-[16.10.21 01:20:08.631] WOLFID: 22076
-[16.10.21 01:20:08.665] WOLFID: 22076
-[16.10.21 01:20:08.699] WOLFID: 22076
-[16.10.21 01:20:08.731] WOLFID: 22076
-[16.10.21 01:20:08.765] WOLFID: 22076
-[16.10.21 01:20:08.798] WOLFID: 22076
-[16.10.21 01:20:08.831] WOLFID: 22076
-[16.10.21 01:20:08.865] WOLFID: 22076
-[16.10.21 01:20:08.898] WOLFID: 22076
-[16.10.21 01:20:08.931] WOLFID: 22076
-[16.10.21 01:20:08.965] WOLFID: 22076
-[16.10.21 01:20:08.998] WOLFID: 22076
-[16.10.21 01:20:09.031] WOLFID: 22076
-[16.10.21 01:20:09.065] WOLFID: 22076
-[16.10.21 01:20:09.098] WOLFID: 22076
-[16.10.21 01:20:09.131] WOLFID: 22076
-[16.10.21 01:20:09.164] WOLFID: 22076
-[16.10.21 01:20:09.165] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:20:09.198] WOLFID: 22076
-[16.10.21 01:20:09.231] WOLFID: 22076
-[16.10.21 01:20:09.265] WOLFID: 22076
-[16.10.21 01:20:09.298] WOLFID: 22076
-[16.10.21 01:20:09.331] WOLFID: 22076
-[16.10.21 01:20:09.365] WOLFID: 22076
-[16.10.21 01:20:09.398] WOLFID: 22076
-[16.10.21 01:20:09.431] WOLFID: 22076
-[16.10.21 01:20:09.465] WOLFID: 22076
-[16.10.21 01:20:09.498] WOLFID: 22076
-[16.10.21 01:20:09.531] WOLFID: 22076
-[16.10.21 01:20:09.565] WOLFID: 22076
-[16.10.21 01:20:09.598] WOLFID: 22076
-[16.10.21 01:20:09.631] WOLFID: 22076
-[16.10.21 01:20:09.665] WOLFID: 22076
-[16.10.21 01:20:09.698] WOLFID: 22076
-[16.10.21 01:20:09.731] WOLFID: 22076
-[16.10.21 01:20:09.765] WOLFID: 22076
-[16.10.21 01:20:09.798] WOLFID: 22076
-[16.10.21 01:20:09.831] WOLFID: 22076
-[16.10.21 01:20:09.865] WOLFID: 22076
-[16.10.21 01:20:09.898] WOLFID: 22076
-[16.10.21 01:20:09.931] WOLFID: 22076
-[16.10.21 01:20:09.964] WOLFID: 22076
-[16.10.21 01:20:09.998] WOLFID: 22076
-[16.10.21 01:20:10.031] WOLFID: 22076
-[16.10.21 01:20:10.065] WOLFID: 22076
-[16.10.21 01:20:10.098] WOLFID: 22076
-[16.10.21 01:20:10.131] WOLFID: 22076
-[16.10.21 01:20:10.165] WOLFID: 22076
-[16.10.21 01:20:10.198] WOLFID: 22076
-[16.10.21 01:20:10.216] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:20:10.232] WOLFID: 22076
-[16.10.21 01:20:10.265] WOLFID: 22076
-[16.10.21 01:20:10.298] WOLFID: 22076
-[16.10.21 01:20:10.331] WOLFID: 22076
-[16.10.21 01:20:10.365] WOLFID: 22076
-[16.10.21 01:20:10.398] WOLFID: 22076
-[16.10.21 01:20:10.431] WOLFID: 22076
-[16.10.21 01:20:10.465] WOLFID: 22076
-[16.10.21 01:20:10.498] WOLFID: 22076
-[16.10.21 01:20:10.531] WOLFID: 22076
-[16.10.21 01:20:10.564] WOLFID: 22076
-[16.10.21 01:20:10.582] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:20:10.598] WOLFID: 22076
-[16.10.21 01:20:10.631] WOLFID: 22076
-[16.10.21 01:20:10.665] WOLFID: 22076
-[16.10.21 01:20:10.698] WOLFID: 22076
-[16.10.21 01:20:10.731] WOLFID: 22076
-[16.10.21 01:20:10.765] WOLFID: 22076
-[16.10.21 01:20:10.798] WOLFID: 22076
-[16.10.21 01:20:10.831] WOLFID: 22076
-[16.10.21 01:20:10.865] WOLFID: 22076
-[16.10.21 01:20:10.898] WOLFID: 22076
-[16.10.21 01:20:10.931] WOLFID: 22076
-[16.10.21 01:20:10.965] WOLFID: 22076
-[16.10.21 01:20:10.998] WOLFID: 22076
-[16.10.21 01:20:11.031] WOLFID: 22076
-[16.10.21 01:20:11.065] WOLFID: 22076
-[16.10.21 01:20:11.098] WOLFID: 22076
-[16.10.21 01:20:11.116] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_0], animation set: [actors\fat_npc_animation.omf]
-[16.10.21 01:20:11.131] WOLFID: 22076
-[16.10.21 01:20:11.165] WOLFID: 22076
-[16.10.21 01:20:11.198] WOLFID: 22076
-[16.10.21 01:20:11.231] WOLFID: 22076
-[16.10.21 01:20:11.265] WOLFID: 22076
-[16.10.21 01:20:11.298] WOLFID: 22076
-[16.10.21 01:20:11.331] WOLFID: 22076
-[16.10.21 01:20:11.364] WOLFID: 22076
-[16.10.21 01:20:11.398] WOLFID: 22076
-[16.10.21 01:20:11.431] WOLFID: 22076
-[16.10.21 01:20:11.465] WOLFID: 22076
-[16.10.21 01:20:11.498] WOLFID: 22076
-[16.10.21 01:20:11.531] WOLFID: 22076
-[16.10.21 01:20:11.565] WOLFID: 22076
-[16.10.21 01:20:11.598] WOLFID: 22076
-[16.10.21 01:20:11.631] WOLFID: 22076
-[16.10.21 01:20:11.665] WOLFID: 22076
-[16.10.21 01:20:11.698] WOLFID: 22076
-[16.10.21 01:20:11.731] WOLFID: 22076
-[16.10.21 01:20:11.765] WOLFID: 22076
-[16.10.21 01:20:11.798] WOLFID: 22076
-[16.10.21 01:20:11.831] WOLFID: 22076
-[16.10.21 01:20:11.865] WOLFID: 22076
-[16.10.21 01:20:11.898] WOLFID: 22076
-[16.10.21 01:20:11.931] WOLFID: 22076
-[16.10.21 01:20:11.965] WOLFID: 22076
-[16.10.21 01:20:11.998] WOLFID: 22076
-[16.10.21 01:20:12.031] WOLFID: 22076
-[16.10.21 01:20:12.065] WOLFID: 22076
-[16.10.21 01:20:12.098] WOLFID: 22076
-[16.10.21 01:20:12.132] WOLFID: 22076
-[16.10.21 01:20:12.165] WOLFID: 22076
-[16.10.21 01:20:12.198] WOLFID: 22076
-[16.10.21 01:20:12.231] WOLFID: 22076
-[16.10.21 01:20:12.265] WOLFID: 22076
-[16.10.21 01:20:12.298] WOLFID: 22076
-[16.10.21 01:20:12.331] WOLFID: 22076
-[16.10.21 01:20:12.365] WOLFID: 22076
-[16.10.21 01:20:12.398] WOLFID: 22076
-[16.10.21 01:20:12.431] WOLFID: 22076
-[16.10.21 01:20:12.465] WOLFID: 22076
-[16.10.21 01:20:12.498] WOLFID: 22076
-[16.10.21 01:20:12.531] WOLFID: 22076
-[16.10.21 01:20:12.565] WOLFID: 22076
-[16.10.21 01:20:12.598] WOLFID: 22076
-[16.10.21 01:20:12.631] WOLFID: 22076
-[16.10.21 01:20:12.665] WOLFID: 22076
-[16.10.21 01:20:12.698] WOLFID: 22076
-[16.10.21 01:20:12.731] WOLFID: 22076
-[16.10.21 01:20:12.765] WOLFID: 22076
-[16.10.21 01:20:12.798] WOLFID: 22076
-[16.10.21 01:20:12.831] WOLFID: 22076
-[16.10.21 01:20:12.865] WOLFID: 22076
-[16.10.21 01:20:12.898] WOLFID: 22076
-[16.10.21 01:20:12.931] WOLFID: 22076
-[16.10.21 01:20:12.965] WOLFID: 22076
-[16.10.21 01:20:12.998] WOLFID: 22076
-[16.10.21 01:20:13.031] WOLFID: 22076
-[16.10.21 01:20:13.065] WOLFID: 22076
-[16.10.21 01:20:13.098] WOLFID: 22076
-[16.10.21 01:20:13.131] WOLFID: 22076
-[16.10.21 01:20:13.165] WOLFID: 22076
-[16.10.21 01:20:13.198] WOLFID: 22076
-[16.10.21 01:20:13.231] WOLFID: 22076
-[16.10.21 01:20:13.265] WOLFID: 22076
-[16.10.21 01:20:13.298] WOLFID: 22076
-[16.10.21 01:20:13.331] WOLFID: 22076
-[16.10.21 01:20:13.365] WOLFID: 22076
-[16.10.21 01:20:13.398] WOLFID: 22076
-[16.10.21 01:20:13.432] WOLFID: 22076
-[16.10.21 01:20:13.465] WOLFID: 22076
-[16.10.21 01:20:13.498] WOLFID: 22076
-[16.10.21 01:20:13.531] WOLFID: 22076
-[16.10.21 01:20:13.565] WOLFID: 22076
-[16.10.21 01:20:13.598] WOLFID: 22076
-[16.10.21 01:20:13.632] WOLFID: 22076
-[16.10.21 01:20:13.665] WOLFID: 22076
-[16.10.21 01:20:13.698] WOLFID: 22076
-[16.10.21 01:20:13.731] WOLFID: 22076
-[16.10.21 01:20:13.765] WOLFID: 22076
-[16.10.21 01:20:13.798] WOLFID: 22076
-[16.10.21 01:20:13.831] WOLFID: 22076
-[16.10.21 01:20:13.865] WOLFID: 22076
-[16.10.21 01:20:13.898] WOLFID: 22076
-[16.10.21 01:20:13.931] WOLFID: 22076
-[16.10.21 01:20:13.965] WOLFID: 22076
-[16.10.21 01:20:13.998] WOLFID: 22076
-[16.10.21 01:20:14.031] WOLFID: 22076
-[16.10.21 01:20:14.065] WOLFID: 22076
-[16.10.21 01:20:14.098] WOLFID: 22076
-[16.10.21 01:20:14.131] WOLFID: 22076
-[16.10.21 01:20:14.165] WOLFID: 22076
-[16.10.21 01:20:14.198] WOLFID: 22076
-[16.10.21 01:20:14.231] WOLFID: 22076
-[16.10.21 01:20:16.514] - Disconnect
-[16.10.21 01:20:18.413] - Destroying level
-[16.10.21 01:20:18.616] DestroySingleton::RefCounter: 0
-[16.10.21 01:20:18.617] DestroySingleton::RefCounter: -646
-[16.10.21 01:20:18.618] DestroySingleton::RefCounter: 0
-[16.10.21 01:20:18.622] DestroySingleton::RefCounter: 0
-[16.10.21 01:20:18.622] DestroySingleton::RefCounter: 0
-[16.10.21 01:20:18.629] Input:  1
-[16.10.21 01:20:18.637] Config-file [z:\programs\priboi ogsr\userdata\user.ltx] saved successfully
-[16.10.21 01:20:18.850] Destroying Direct3D...
-[16.10.21 01:20:18.851] * [R_occlusion::occq_destroy]: fids[58] used[58] pool[58]
-[16.10.21 01:20:18.851] * [R_occlusion::occq_destroy]: released [0] used and [58] pool queries
-[16.10.21 01:20:18.904] * RM_Dump: textures  : 1
-[16.10.21 01:20:18.904] *        :   1: ui\ui_pda
-[16.10.21 01:20:18.904] * RM_Dump: rtargets  : 0
-[16.10.21 01:20:18.904] * RM_Dump: vs        : 1
-[16.10.21 01:20:18.904] *        :   1: null
-[16.10.21 01:20:18.904] * RM_Dump: ps        : 1
-[16.10.21 01:20:18.904] *        :   1: null
-[16.10.21 01:20:18.904] * RM_Dump: dcl       : 0
-[16.10.21 01:20:18.904] * RM_Dump: states    : 1
-[16.10.21 01:20:18.904] * RM_Dump: tex_list  : 1
-[16.10.21 01:20:18.904] * RM_Dump: matrices  : 0
-[16.10.21 01:20:18.904] * RM_Dump: lst_constants: 0
-[16.10.21 01:20:18.904] * RM_Dump: v_passes  : 1
-[16.10.21 01:20:18.904] * RM_Dump: v_elements: 1
-[16.10.21 01:20:18.904] * RM_Dump: v_shaders : 1
-[16.10.21 01:20:18.905] refCount:pBaseZB 1
-[16.10.21 01:20:18.905] refCount:pBaseRT 1
-[16.10.21 01:20:18.905] DeviceREF: 3
-[16.10.21 01:20:18.916] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[16.10.21 01:20:18.916] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[17.10.21 10:04:21.967] * Detected CPU: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz [GenuineIntel], F6/M158/S10
+[17.10.21 10:04:21.968] * CPU features: RDTSC, MMX, SSE, SSE2, SSE3, MONITOR/MWAIT, SSSE3, SSE4.1, SSE4.2, AVX, AVX2
+[17.10.21 10:04:21.968] * CPU cores: [6], threads: [6]
+[17.10.21 10:04:21.968] * CPU0 current freq: 2808 MHz, max freq: 2808 MHz
+[17.10.21 10:04:21.968] * CPU1 current freq: 2808 MHz, max freq: 2808 MHz
+[17.10.21 10:04:21.968] * CPU2 current freq: 2808 MHz, max freq: 2808 MHz
+[17.10.21 10:04:21.968] * CPU3 current freq: 2808 MHz, max freq: 2808 MHz
+[17.10.21 10:04:21.968] * CPU4 current freq: 2808 MHz, max freq: 2808 MHz
+[17.10.21 10:04:21.968] * CPU5 current freq: 2808 MHz, max freq: 2808 MHz
+[17.10.21 10:04:21.968] Initializing File System...
+[17.10.21 10:04:21.969] --Found base arch: [z:\programs\priboi ogsr\gamedata.db0], size: [678577379]
+[17.10.21 10:04:22.008] --Found base arch: [z:\programs\priboi ogsr\gamedata.db1], size: [708434331]
+[17.10.21 10:04:22.014] --Found base arch: [z:\programs\priboi ogsr\gamedata.db2], size: [671169415]
+[17.10.21 10:04:22.016] --Found base arch: [z:\programs\priboi ogsr\gamedata.db3], size: [684792231]
+[17.10.21 10:04:22.019] --Found base arch: [z:\programs\priboi ogsr\gamedata.db4], size: [671392842]
+[17.10.21 10:04:22.333] --Found base arch: [z:\programs\priboi ogsr\gamedata.db5], size: [697475082]
+[17.10.21 10:04:22.380] --Found base arch: [z:\programs\priboi ogsr\gamedata.db6], size: [672288151]
+[17.10.21 10:04:22.382] --Found base arch: [z:\programs\priboi ogsr\gamedata.db7], size: [672462598]
+[17.10.21 10:04:22.415] --Found base arch: [z:\programs\priboi ogsr\gamedata.db8], size: [293378144]
+[17.10.21 10:04:22.425] --Found base arch: [z:\programs\priboi ogsr\gamedata.db9], size: [79312307]
+[17.10.21 10:04:22.448] --Found base arch: [z:\programs\priboi ogsr\gamedata.dba], size: [22884835]
+[17.10.21 10:04:22.452] --Found base arch: [z:\programs\priboi ogsr\gamedata.dbb], size: [55194918]
+[17.10.21 10:04:22.457] --Found base arch: [z:\programs\priboi ogsr\gamedata.dbc], size: [160948]
+[17.10.21 10:04:22.457] --Found base arch: [z:\programs\priboi ogsr\gamedata.dbd], size: [101014]
+[17.10.21 10:04:22.457] using fs-ltx fsgame.ltx
+[17.10.21 10:04:22.457] --Found FS dir: [z:\programs\priboi ogsr\userdata\]
+[17.10.21 10:04:22.457]   files: [6]
+[17.10.21 10:04:22.458] --Found FS dir: [z:\programs\priboi ogsr\gamedata\]
+[17.10.21 10:04:22.458]   files: [16]
+[17.10.21 10:04:22.458] --Found FS dir: [z:\programs\priboi ogsr\gamedata\spawns\]
+[17.10.21 10:04:22.458]   files: [4]
+[17.10.21 10:04:22.458] --Found FS dir: [z:\programs\priboi ogsr\gamedata\anims\]
+[17.10.21 10:04:22.458]   files: [23]
+[17.10.21 10:04:22.459] --Found FS dir: [z:\programs\priboi ogsr\gamedata\levels\]
+[17.10.21 10:04:22.459]   files: [12]
+[17.10.21 10:04:22.460] --Found FS dir: [z:\programs\priboi ogsr\gamedata\meshes\]
+[17.10.21 10:04:22.460]   files: [12]
+[17.10.21 10:04:22.477] --Found FS dir: [z:\programs\priboi ogsr\gamedata\meshes\]
+[17.10.21 10:04:22.478]   files: [12]
+[17.10.21 10:04:22.493] --Found FS dir: [z:\programs\priboi ogsr\gamedata\shaders\]
+[17.10.21 10:04:22.493]   files: [7]
+[17.10.21 10:04:22.500] --Found FS dir: [z:\programs\priboi ogsr\gamedata\sounds\]
+[17.10.21 10:04:22.500]   files: [22]
+[17.10.21 10:04:22.527] --Found FS dir: [z:\programs\priboi ogsr\gamedata\textures\]
+[17.10.21 10:04:22.527]   files: [60]
+[17.10.21 10:04:22.616] --Found FS dir: [z:\programs\priboi ogsr\gamedata\scripts\]
+[17.10.21 10:04:22.617]   files: [125]
+[17.10.21 10:04:22.618] --Found FS dir: [z:\programs\priboi ogsr\gamedata\config\]
+[17.10.21 10:04:22.618]   files: [30]
+[17.10.21 10:04:22.625] --Found FS dir: [z:\programs\priboi ogsr\gamedata\levels\]
+[17.10.21 10:04:22.625]   files: [12]
+[17.10.21 10:04:22.625] --Found FS dir: [z:\programs\priboi ogsr\userdata\savedgames\]
+[17.10.21 10:04:22.625]   files: [11]
+[17.10.21 10:04:22.625] --Found FS dir: [z:\programs\priboi ogsr\userdata\logs\]
+[17.10.21 10:04:22.625]   files: [18]
+[17.10.21 10:04:22.625] --Found FS dir: [z:\programs\priboi ogsr\userdata\screenshots\]
+[17.10.21 10:04:22.625]   files: [6]
+[17.10.21 10:04:22.625] --Found FS dir: [z:\programs\priboi ogsr\mods\]
+[17.10.21 10:04:22.625]   files: [3]
+[17.10.21 10:04:22.625] --Found external arch: [mp_military_2.xdb0], size: [50350518]
+[17.10.21 10:04:22.631] FS: 34540 files cached, 6115Kb memory used.
+[17.10.21 10:04:22.631] Init FileSystem 0.662617 sec
+[17.10.21 10:04:22.631] [OGSR Engine (x64)] build date: [Sep 22 2021 10:23:51]
+[17.10.21 10:04:22.631] [AppVeyor] build version: [2.1.293], repo: [OGSR/OGSR-Engine]
+[17.10.21 10:04:22.631] [_MSC_FULL_VER]: [191627045], [_MSVC_LANG]: [201703L]
+[17.10.21 10:04:22.631] Working Directory: [Z:\Programs\Priboi OGSR\bin_x64]
+[17.10.21 10:04:22.631] CommandLine: ["Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe" ]
+[17.10.21 10:04:22.733] Initializing Engine...
+[17.10.21 10:04:22.734] Starting INPUT device...
+[17.10.21 10:04:22.782] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[17.10.21 10:04:22.782] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[17.10.21 10:04:22.787] refCount:m_pAdapter 1
+[17.10.21 10:04:22.787] refCount:pFactory 1
+[17.10.21 10:04:22.788] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[17.10.21 10:04:22.788] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[17.10.21 10:04:22.886] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[17.10.21 10:04:22.886] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[17.10.21 10:04:22.886] --[CEngineAPI::CreateRendererList] Available render modes [5]:
+[17.10.21 10:04:22.886] --  [renderer_r2a]
+[17.10.21 10:04:22.886] --  [renderer_r2]
+[17.10.21 10:04:22.886] --  [renderer_r2.5]
+[17.10.21 10:04:22.886] --  [renderer_r3]
+[17.10.21 10:04:22.886] --  [renderer_r4]
+[17.10.21 10:04:22.886] Executing config-script "user.ltx"...
+[17.10.21 10:04:22.886] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
+[17.10.21 10:04:22.886] [z:\programs\priboi ogsr\userdata\user.ltx] successfully loaded.
+[17.10.21 10:04:22.886] --Loading DLL: [xrRender_R2.dll]
+[17.10.21 10:04:22.887] --Loading DLL: [xrGame.dll]
+[17.10.21 10:04:22.900] --------------------------------------------------------------------------------
+[17.10.21 10:04:22.900] [8143MB] physical memory installed, [3052MB] available, [62] percent of memory in use
+[17.10.21 10:04:22.900] PageFile usage: [41MB], Peak PageFile usage: [89MB]
+[17.10.21 10:04:22.900] --------------------------------------------------------------------------------
+[17.10.21 10:04:22.900] * [ D3D ]: textures[0 K]
+[17.10.21 10:04:22.900] * [x-ray]: process heap[21235 K], render[0 K]
+[17.10.21 10:04:22.900] * [x-ray]: economy: strings[4834 K], smem[0 K]
+[17.10.21 10:04:22.900] SOUND: OpenAL: enumerate devices...
+[17.10.21 10:04:22.900] SOUND: OpenAL: EnumerationExtension Present
+[17.10.21 10:04:22.989] devices Generic Software
+[17.10.21 10:04:22.989] SOUND: OpenAL: system  default SndDevice name is Generic Software
+[17.10.21 10:04:23.298] SOUND: OpenAL: All available devices:
+[17.10.21 10:04:23.299] 1. Generic Software, Spec Version 1.1 (default) eax[2] efx[no] xram[no]
+[17.10.21 10:04:23.299] 2. OpenAL Soft, Spec Version 1.1  eax[0] efx[yes] xram[no]
+[17.10.21 10:04:23.299] Executing config-script "z:\programs\priboi ogsr\gamedata\config\default_controls.ltx"...
+[17.10.21 10:04:23.300] [z:\programs\priboi ogsr\gamedata\config\default_controls.ltx] successfully loaded.
+[17.10.21 10:04:23.300] Executing config-script "user.ltx"...
+[17.10.21 10:04:23.300] Executing config-script "z:\programs\priboi ogsr\gamedata\config\rspec_high.ltx"...
+[17.10.21 10:04:23.300] ! Unknown command:  r2_sun_shafts
+[17.10.21 10:04:23.300] ! Unknown command:  r__supersample
+[17.10.21 10:04:23.300] [z:\programs\priboi ogsr\gamedata\config\rspec_high.ltx] successfully loaded.
+[17.10.21 10:04:23.300] Executing config-script "z:\programs\priboi ogsr\gamedata\config\default_controls.ltx"...
+[17.10.21 10:04:23.301] [z:\programs\priboi ogsr\gamedata\config\default_controls.ltx] successfully loaded.
+[17.10.21 10:04:23.301] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
+[17.10.21 10:04:23.301] [z:\programs\priboi ogsr\userdata\user.ltx] successfully loaded.
+[17.10.21 10:04:23.301] SOUND: Selected device is Generic Software
+[17.10.21 10:04:23.351] [OpenAL] EAX 2.0 extension: present
+[17.10.21 10:04:23.351] [OpenAL] EAX 2.0 deferred: present
+[17.10.21 10:04:23.352] * sound : cache: 65537 kb, 4856 lines, 13820 bpl
+[17.10.21 10:04:23.379] Starting RENDER device...
+[17.10.21 10:04:23.407] * GPU [vendor:10DE]-[device:1C81]: NVIDIA GeForce GTX 1050
+[17.10.21 10:04:23.407] * GPU driver: 30.0.14.7196
+[17.10.21 10:04:23.499] * CREATE: DeviceREF: 1
+[17.10.21 10:04:23.499] * Vertex Processor: PURE HARDWARE
+[17.10.21 10:04:23.499] *     Texture memory: 4072 M
+[17.10.21 10:04:23.499] *          DDI-level: 9.0
+[17.10.21 10:04:23.501] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+[17.10.21 10:04:23.501] * GPU vertex cache: unrecognized, 16
+[17.10.21 10:04:23.502] * DVB created: 16384K
+[17.10.21 10:04:23.502] * DIB created: 512K
+[17.10.21 10:04:23.522] ! Version conflict in shader 'models\lightplanes_00'
+[17.10.21 10:04:23.522] ! Version conflict in shader 'models\lightplanesself'
+[17.10.21 10:04:23.522] ! Version conflict in shader 'models\model_puh'
+[17.10.21 10:04:23.522] ! Version conflict in shader 'models\model_refl'
+[17.10.21 10:04:23.522] ! Version conflict in shader 'models\xbrainglass'
+[17.10.21 10:04:23.522] ! Version conflict in shader 'models\xdistortcolorlinv'
+[17.10.21 10:04:23.522] ! Version conflict in shader 'models\xglass'
+[17.10.21 10:04:23.522] ! Version conflict in shader 'models\xglass2'
+[17.10.21 10:04:23.522] ! Version conflict in shader 'models\xlens'
+[17.10.21 10:04:23.522] ! Version conflict in shader 'selflight_static'
+[17.10.21 10:04:23.523] [CTextureDescrMngr::LoadLTX] count of *textures*.ltx files: [1]
+[17.10.21 10:04:23.636] * NULLRT supported
+[17.10.21 10:04:23.636] * ...and used
+[17.10.21 10:04:23.636] * HWDST/PCF supported and used
+[17.10.21 10:04:23.636] * NV-DBT supported and used
+[17.10.21 10:04:24.653] --LUA version: [LuaJIT 2.1.0-beta3]
+[17.10.21 10:04:24.694] Starting engine...
+[17.10.21 10:04:28.146] * phase time: 11 ms
+[17.10.21 10:04:28.175] * phase cmem: 176470 K
+[17.10.21 10:04:28.231] --LUA version: [LuaJIT 2.1.0-beta3]
+[17.10.21 10:04:28.253] * phase time: 107 ms
+[17.10.21 10:04:28.278] * phase cmem: 145278 K
+[17.10.21 10:04:28.283] * Loading spawn registry...
+[17.10.21 10:04:28.821] * 8976 spawn points are successfully loaded
+[17.10.21 10:04:28.821] * Loading objects...
+[17.10.21 10:04:29.134] * 17811 objects are successfully loaded
+[17.10.21 10:04:29.253] * [CPatrolPathStorage::safe_path]: path[gar_seryi_bandits_search] pp[wp02] level_vertex_id[4294967295] -> 131021
+[17.10.21 10:04:29.730] * Game Данил_quicksave is successfully loaded from file 'z:\programs\priboi ogsr\userdata\savedgames\Данил_quicksave.sav' (1.452s)
+[17.10.21 10:04:29.730] * phase time: 1477 ms
+[17.10.21 10:04:29.776] * phase cmem: 195810 K
+[17.10.21 10:04:29.813] # Player not found. New player created.
+[17.10.21 10:04:29.813] !!xrServer::Check_GameSpy_CDKey_Success - 1
+[17.10.21 10:04:29.813] * client : connection accepted - <>
+[17.10.21 10:04:29.833] * phase time: 103 ms
+[17.10.21 10:04:29.876] * phase cmem: 195797 K
+[17.10.21 10:04:29.877] * phase time: 43 ms
+[17.10.21 10:04:29.920] * phase cmem: 195797 K
+[17.10.21 10:04:30.961] --[ISpatial_DB::initialize] bbc is [-0.3, 25.8, -14.6], bbd is [322.0, 61.1, 332.6]
+[17.10.21 10:04:30.961] --[ISpatial_DB::initialize] bbc is [-0.3, 25.8, -14.6], bbd is [322.0, 61.1, 332.6]
+[17.10.21 10:04:30.963] * phase time: 1085 ms
+[17.10.21 10:04:31.005] * phase cmem: 279947 K
+[17.10.21 10:04:31.179] * phase time: 216 ms
+[17.10.21 10:04:31.222] * phase cmem: 283154 K
+[17.10.21 10:04:31.226] * [Loading VB] 65531 verts, 2047 Kb
+[17.10.21 10:04:31.238] * [Loading VB] 65532 verts, 2047 Kb
+[17.10.21 10:04:31.246] * [Loading VB] 65530 verts, 2047 Kb
+[17.10.21 10:04:31.254] * [Loading VB] 24512 verts, 766 Kb
+[17.10.21 10:04:31.257] * [Loading VB] 65535 verts, 2047 Kb
+[17.10.21 10:04:31.264] * [Loading VB] 65534 verts, 2047 Kb
+[17.10.21 10:04:31.271] * [Loading VB] 65533 verts, 2047 Kb
+[17.10.21 10:04:31.278] * [Loading VB] 65534 verts, 2047 Kb
+[17.10.21 10:04:31.286] * [Loading VB] 65502 verts, 2046 Kb
+[17.10.21 10:04:31.294] * [Loading VB] 65535 verts, 2047 Kb
+[17.10.21 10:04:31.301] * [Loading VB] 65533 verts, 2047 Kb
+[17.10.21 10:04:31.309] * [Loading VB] 65534 verts, 2047 Kb
+[17.10.21 10:04:31.317] * [Loading VB] 51552 verts, 1611 Kb
+[17.10.21 10:04:31.323] * [Loading VB] 65530 verts, 2047 Kb
+[17.10.21 10:04:31.331] * [Loading VB] 62255 verts, 1945 Kb
+[17.10.21 10:04:31.339] * [Loading IB] 1048572 indices, 2047 Kb
+[17.10.21 10:04:31.353] * [Loading IB] 1048572 indices, 2047 Kb
+[17.10.21 10:04:31.360] * [Loading IB] 1048575 indices, 2047 Kb
+[17.10.21 10:04:31.368] * [Loading IB] 1048575 indices, 2047 Kb
+[17.10.21 10:04:31.375] * [Loading IB] 1048575 indices, 2047 Kb
+[17.10.21 10:04:31.382] * [Loading IB] 1048572 indices, 2047 Kb
+[17.10.21 10:04:31.390] * [Loading IB] 1048572 indices, 2047 Kb
+[17.10.21 10:04:31.397] * [Loading IB] 438036 indices, 855 Kb
+[17.10.21 10:04:31.400] * [Loading VB] 65535 verts, 767 Kb
+[17.10.21 10:04:31.405] * [Loading VB] 65533 verts, 767 Kb
+[17.10.21 10:04:31.408] * [Loading VB] 65533 verts, 767 Kb
+[17.10.21 10:04:31.411] * [Loading VB] 65534 verts, 767 Kb
+[17.10.21 10:04:31.417] * [Loading VB] 65530 verts, 767 Kb
+[17.10.21 10:04:31.420] * [Loading VB] 42643 verts, 499 Kb
+[17.10.21 10:04:31.420] * [Loading IB] 1048572 indices, 2047 Kb
+[17.10.21 10:04:31.430] * [Loading IB] 1048575 indices, 2047 Kb
+[17.10.21 10:04:31.438] * [Loading IB] 615231 indices, 1201 Kb
+[17.10.21 10:04:31.443] * phase time: 264 ms
+[17.10.21 10:04:31.487] * phase cmem: 337259 K
+[17.10.21 10:04:31.799] * phase time: 356 ms
+[17.10.21 10:04:31.843] * phase cmem: 340983 K
+[17.10.21 10:04:31.861] * [DETAILS] VertexConsts(256), Batch(61)
+[17.10.21 10:04:31.861] * [DETAILS] 40687 v(20), 26352 p
+[17.10.21 10:04:31.861] * [DETAILS] Batch(61), VB(794K), IB(154K)
+[17.10.21 10:04:31.862] * phase time: 62 ms
+[17.10.21 10:04:31.906] * phase cmem: 341999 K
+[17.10.21 10:04:31.906] * Loading HOM: z:\programs\priboi ogsr\gamedata\levels\l02_garbage\level.hom
+[17.10.21 10:04:31.910] * phase time: 48 ms
+[17.10.21 10:04:31.954] * phase cmem: 342096 K
+[17.10.21 10:04:31.955] * phase time: 45 ms
+[17.10.21 10:04:32.000] * phase cmem: 342096 K
+[17.10.21 10:04:32.009] - Game configuring : Started 
+[17.10.21 10:04:32.010] - Game configuring : Finished 
+[17.10.21 10:04:32.123] * phase time: 167 ms
+[17.10.21 10:04:32.169] * phase cmem: 349569 K
+[17.10.21 10:04:37.289] * t-report - base: 1150, 1019453 K
+[17.10.21 10:04:37.289] * t-report - lmap: 6, 6144 K
+[17.10.21 10:04:37.289] * phase time: 5166 ms
+[17.10.21 10:04:37.341] * phase cmem: 1421236 K
+[17.10.21 10:04:37.353] * phase time: 63 ms
+[17.10.21 10:04:37.405] * phase cmem: 1421239 K
+[17.10.21 10:04:37.465] --------------------------------------------------------------------------------
+[17.10.21 10:04:37.465] [8143MB] physical memory installed, [1730MB] available, [78] percent of memory in use
+[17.10.21 10:04:37.465] PageFile usage: [1701MB], Peak PageFile usage: [1703MB]
+[17.10.21 10:04:37.465] --------------------------------------------------------------------------------
+[17.10.21 10:04:37.465] * [ D3D ]: textures[1025597 K]
+[17.10.21 10:04:37.465] * [x-ray]: process heap[1420615 K], render[0 K]
+[17.10.21 10:04:37.465] * [x-ray]: economy: strings[7252 K], smem[0 K]
+[17.10.21 10:04:39.071] ! auto-generated bump map: wpn\mac10\wpn_mac10_grip_bump#
+[17.10.21 10:04:39.072] ! auto-generated bump map: wpn\mac10\wpn_mac10_upper_bump#
+[17.10.21 10:04:39.074] ! auto-generated bump map: wpn\mac10\wpn_mac10_mag_bump#
+[17.10.21 10:04:39.075] ! auto-generated bump map: wpn\mac10\wpn_mac10_lower_bump#
+[17.10.21 10:04:39.077] ! auto-generated bump map: wpn\silencer\wpn_9mm_silencer_bump#
+[17.10.21 10:04:40.997] ~ [CPHSkeleton::RestoreNetState]: [gar_wounded_bandit] has different state in saved_bones[0] PHGetSyncItemsNumber[1] Visual[actors\neytral\stalker_neytral_hood_2] alive[no]
+[17.10.21 10:04:41.007] ! auto-generated bump map: wpn\benelli\wpn_short_body_bump#
+[17.10.21 10:04:41.019] ! auto-generated bump map: wpn\benelli\wpn_short_barrel_bump#
+[17.10.21 10:04:44.253] * MEMORY USAGE: 1889336 K
+[17.10.21 10:04:44.253] * End of synchronization A[1] R[1]
+[17.10.21 10:04:44.253] * phase time: 6963 ms
+[17.10.21 10:04:44.350] * phase cmem: 1889336 K
+[17.10.21 10:04:44.725] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[17.10.21 10:04:44.766] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[17.10.21 10:04:44.784] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[17.10.21 10:04:44.949] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
+[17.10.21 10:04:45.099] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[17.10.21 10:04:45.150] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[17.10.21 10:04:45.333] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[17.10.21 10:04:45.516] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[17.10.21 10:04:45.804] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_3], animation set: [actors\fat_npc_animation.omf]
+[17.10.21 10:05:20.617] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[17.10.21 10:05:20.867] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[17.10.21 10:05:21.718] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[17.10.21 10:05:21.868] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[17.10.21 10:05:21.951] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[17.10.21 10:05:22.068] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[17.10.21 10:05:22.251] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_2], animation set: [actors\fat_npc_animation.omf]
+[17.10.21 10:05:26.958] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[17.10.21 10:05:27.751] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[17.10.21 10:05:27.918] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_1], animation set: [actors\fat_npc_animation.omf]
+[17.10.21 10:05:29.118] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[17.10.21 10:05:29.385] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_8_idle_4], animation set: [actors\fat_npc_animation.omf]
+[17.10.21 10:05:32.815] - Disconnect
+[17.10.21 10:05:33.929] - Destroying level
+[17.10.21 10:05:34.112] DestroySingleton::RefCounter: 0
+[17.10.21 10:05:34.114] DestroySingleton::RefCounter: -646
+[17.10.21 10:05:34.116] DestroySingleton::RefCounter: 0
+[17.10.21 10:05:34.116] DestroySingleton::RefCounter: 0
+[17.10.21 10:05:34.123] Input:  1
+[17.10.21 10:05:34.131] Config-file [z:\programs\priboi ogsr\userdata\user.ltx] saved successfully
+[17.10.21 10:05:34.350] Destroying Direct3D...
+[17.10.21 10:05:34.350] * [R_occlusion::occq_destroy]: fids[38] used[38] pool[38]
+[17.10.21 10:05:34.350] * [R_occlusion::occq_destroy]: released [0] used and [38] pool queries
+[17.10.21 10:05:34.392] * RM_Dump: textures  : 9
+[17.10.21 10:05:34.392] *        :   1: ui\seq\ui_hint_pane
+[17.10.21 10:05:34.392] *        :   1: ui\ui_common
+[17.10.21 10:05:34.392] *        :   1: ui\ui_hud
+[17.10.21 10:05:34.392] *        :   1: ui\ui_icon_equipment
+[17.10.21 10:05:34.392] *        :   1: ui\ui_icons_outfit
+[17.10.21 10:05:34.392] *        :   1: ui\ui_iconstotal
+[17.10.21 10:05:34.392] *        :   1: ui\ui_inventory
+[17.10.21 10:05:34.392] *        :   1: ui\ui_inventory2
+[17.10.21 10:05:34.392] *        :   1: ui\ui_numpad
+[17.10.21 10:05:34.392] * RM_Dump: rtargets  : 0
+[17.10.21 10:05:34.392] * RM_Dump: vs        : 1
+[17.10.21 10:05:34.392] *        :   9: null
+[17.10.21 10:05:34.392] * RM_Dump: ps        : 1
+[17.10.21 10:05:34.392] *        :   9: null
+[17.10.21 10:05:34.392] * RM_Dump: dcl       : 0
+[17.10.21 10:05:34.392] * RM_Dump: states    : 1
+[17.10.21 10:05:34.392] * RM_Dump: tex_list  : 9
+[17.10.21 10:05:34.392] * RM_Dump: matrices  : 0
+[17.10.21 10:05:34.392] * RM_Dump: lst_constants: 0
+[17.10.21 10:05:34.392] * RM_Dump: v_passes  : 9
+[17.10.21 10:05:34.392] * RM_Dump: v_elements: 9
+[17.10.21 10:05:34.392] * RM_Dump: v_shaders : 9
+[17.10.21 10:05:34.392] refCount:pBaseZB 1
+[17.10.21 10:05:34.393] refCount:pBaseRT 1
+[17.10.21 10:05:34.393] DeviceREF: 30
+[17.10.21 10:05:34.399] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[17.10.21 10:05:34.399] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries

@@ -1,8 +1,4 @@
--- -*- mode: lua; coding: windows-1251-dos -*-
-
--- за счёт отложенной загрузки звуков экономится примерно 4.5 Мб памяти.
-local news_showtime = 5000 -- стандартное время показа сообщения
-local snds = {
+news = {
 	tips_esc_trader_about_anomalies	= xr_sound.get_safe_sound_object([[characters_voice\scenario\trader\trader_tutorial_anomalies_1]]),
 	gar_dolg_warning				= xr_sound.get_safe_sound_object([[characters_voice\scenario\duty\duty_warning1]]),
 	esc_return_dv					= xr_sound.get_safe_sound_object([[characters_voice\scenario\trader\return_from_dv]]),
@@ -95,25 +91,6 @@ local snds = {
     pri_followers_leader_phrase1_3  = xr_sound.get_safe_sound_object([[characters_voice\scenario\pri\followers_leader_phrase1_3_p]]),
 }
 
-local news = {}
-local function get_snd(t, k)
-	--log3("getting sound: %s", tostring(k))
-	if snds[k] ~= nil then
-		return xr_sound.get_safe_sound_object(snds[k])
-	else
-		return nil
-	end
-end
-
-local function set_snd(t, k, v)
-	--log1("error! we don't do this!")
-end
-
-local mt = {}
-mt.__index = get_snd
-mt.__newindex = set_snd
-setmetatable(news, mt)
---
 pda_news = xr_sound.get_safe_sound_object([[device\pda\pda_news]])
 pda_tips = xr_sound.get_safe_sound_object([[device\pda\pda_tip]])
 pda_task = xr_sound.get_safe_sound_object([[device\pda\pda_objective]])
@@ -180,6 +157,7 @@ function send_tip(actor, news_id, timeout, sender, showtime, sender_id)
 		pda_tips:play(db.actor, timeout, sound_object.s2d)
 --	end
 
+log1("NEWSID: "..news_id)
 	local news_snd = news[news_id]
 	if news_snd ~= nil then
 		--' Играем звук забитый
