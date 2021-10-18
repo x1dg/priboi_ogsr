@@ -1,0 +1,11 @@
+function bind_flash()
+    if db.actor:object("uv_light_torch") == nil then
+		alife():create("uv_light_torch", db.actor:position(), 1, db.actor:game_vertex_id(), db.actor:id())
+    end
+	local obj = db.actor:item_in_slot(3)
+	if not (obj and obj:section() == "uv_light_torch") then
+		--db.actor:object("device_torch"):switch_torch(false)
+	else
+		--db.actor:object("device_torch"):switch_torch(true)
+	end
+end
