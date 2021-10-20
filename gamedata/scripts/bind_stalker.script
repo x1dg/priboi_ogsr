@@ -86,7 +86,7 @@ function actor_binder:net_destroy()
 	self.object:set_callback(callback.level_border_enter, nil)
 	self.object:set_callback(callback.level_border_exit, nil)
 	self.object:set_callback(callback.take_item_from_box, nil)
-	self.object:set_callback(callback.use_object, nil) -- использование предмета (MonolithUI)
+	self.object:set_callback(callback.use_object, nil)
 	self.object:set_callback(callback.on_key_press, nil) -- нажатие клавиши (MonolithUI)
 	self.object:set_callback(callback.on_key_release, nil) -- отпускание клавиши (MonolithUI)
 	self.object:set_callback(callback.on_ruck, nil) -- перемещение предмета в рюкзак (MonolithUI)
@@ -129,8 +129,7 @@ function actor_binder:reinit()
 	self.object:set_callback(callback.level_border_enter, self.level_border_enter, self)
 	self.object:set_callback(callback.level_border_exit, self.level_border_exit, self)
 	self.object:set_callback(callback.take_item_from_box, self.take_item_from_box, self)
-
-	self.object:set_callback(callback.use_object, self.on_use, self) -- MonolithUI
+	self.object:set_callback(callback.use_object, self.on_use, self)
 	self.object:set_callback(callback.on_key_press, self.on_key, self) -- MonolithUI
 	self.object:set_callback(callback.on_key_release, self.on_key_free, self) -- MonolithUI
 	self.object:set_callback(callback.on_ruck, self.item_to_backpack, self) -- MonolithUI
@@ -142,7 +141,7 @@ function actor_binder:reinit()
 end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:on_use(obj) -- MonolithUI
-	ui_loader.on_use(obj)
+	synchro_item.on_use(obj)
 end
 function actor_binder:on_key(dik) -- MonolithUI
 	ui_loader.on_key(dik)
@@ -396,7 +395,7 @@ function actor_binder:update(delta)
 		if not has_alife_info("level_changer_icons") then
 			self.object:give_info_portion("level_changer_icons")
 		end
-
+		synchro_item.on_spawn()
 		level_tasks.add_lchanger_location()
 
 		self.bCheckStart = false		

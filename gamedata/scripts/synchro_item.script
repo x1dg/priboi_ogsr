@@ -1,0 +1,212 @@
+------------ ПРЕДУСЛОВИЯ ------------
+function allways()
+	return true
+end
+
+
+-- *ПОДСКАЗКА: в прекондишнах можно вывести сообщение в ПДА герою
+function need_knife()
+	-- можем использовать только при наличии ножа
+	if db.actor:object("wpn_knife") then
+		return true
+	end
+	tip("Для использования этого предмета необходимо наличие ножа") -- наше сообщение
+	return false
+end
+--------- КОНЕЦ ПРЕДУСЛОВИЙ ---------
+
+local available_sections = {
+	-- [секциия ориг. предмета]* = {
+	-- 1. секциия худ предмета (см. файлы config/misc/huds) - МОЖНО БЕЗ НЕГО (nil), ТОГДА ИГРОК БУДЕТ ИСПОЛЬЗОВАТЬ ПРЕДМЕТ БЕЗ АНИМАЦИИ, НО С ОПУЩЕННЫМ ОРУЖИЕМ (не рекомендуется: про сохранении во время использования и последующей загрузки прдмет утратится (и не применится, и не вернётся назад))
+	-- 2. звук использования (обычно из папки sounds/interface) - МОЖНО БЕЗ НЕГО (nil), ТОГДА ИГРОК ИСПОЛЬЗУЕТ ПРЕДМЕТ БЕЗЗВУЧНО
+	-- 3*. время использования в миллисекундах. следите, чтоб за введённое время успела проиграться анимация и звук - ОБЯЗАТЕЛЬНЫЙ ПАРАМЕТР
+	-- 4. предусловие для использования ДОЛЖНЫ БЫТЬ ПЕРЕД ЭТОЙ ТАБЛИЦЕЙ, РЕКОМЕНДУЕТСЯ СОЗДАНИЕ ПРЕДУСЛОВИЙ В ЭТОМ ФАЙЛЕ, если вернёт true - предмет используется - МОЖНО БЕЗ НЕГО (nil), ТОГДА ПРЕДМЕТ ИСПОЛЬЗУЕТСЯ ВСЕГДА
+	-- 5*. секция предмета с реальным действием на персонажа (применяется по окончании таймера) - ОБЯЗАТЕЛЬНЫЙ ПАРАМЕТР
+	-- }
+	
+	-- продукты питания
+	["bread"] 				= {"bread_hud", "interface\\inv_food", 5000, allways, "bread_use"},
+	["kolbasa"] 			= {"kolbasa_hud", "interface\\inv_food", 5000, allways, "kolbasa_use"},
+	["conserva"] 			= {"conserva_hud", "interface\\inv_conserva", 7000, need_knife, "conserva_use"}, -- чтобы открыть консерву, нужен нож
+	["vodka"] 				= {"vodka_hud", "interface\\inv_vodka", 5000, allways, "vodka_use"},
+	["absolut_vodka"] 				= {"vodka_hud", "interface\\inv_vodka", 5000, allways, "vodka_use"},
+	["nemiroff_vodka"] 				= {"vodka_hud", "interface\\inv_vodka", 5000, allways, "vodka_use"},
+	["smirnoff_vodka"] 				= {"vodka_hud", "interface\\inv_vodka", 5000, allways, "vodka_use"},
+	["energy_drink"] 		= {"energy_drink_hud", "interface\\inv_energy_drink", 3000, allways, "energy_drink_use"},
+	["energy_drink_2"] 		= {"energy_drink_hud", "interface\\inv_energy_drink", 3000, allways, "energy_drink_use"},
+	-- медикаменты
+	["antirad"] 			= {"antirad_hud", "interface\\inv_antirad", 3500, allways, "antirad_use"},
+	["bandage"] 			= {"bandage_hud", "interface\\inv_bandage", 4000, allways, "bandage_use"},
+	["medkit"] 				= {"medkit_hud", "interface\\inv_medkit", 4500, allways, "medkit_use"},
+	["medkit_army"] 		= {"medkit_army_hud", "interface\\inv_medkit", 4500, allways, "medkit_army_use"},
+	["medkit_scientic"] 	= {"medkit_scientic_hud", "interface\\inv_medkit", 4500, allways, "medkit_scientic_use"}
+}
+
+-- слот, в который спавним предметы с анимацией (имхо, бинокль - самое оптимальное, с болтом не получилось)
+local hud_item_slot = 4 -- номер
+local hud_item_slot_default = "wpn_binoc" -- дефолтный предмет
+
+-- вспомогательные переменные, не трогать
+local use_timer = 0
+local sounds_tbl = { }
+
+function on_spawn()
+	-- инициализируем звуковые объекты
+	for k,v in pairs(available_sections) do
+		local snd = v[2]
+		if sounds_tbl[snd] == nil then
+			sounds_tbl[snd] = sound_object(snd)
+		end
+	end
+	
+	-- сбрасываем использование, если при сохранении находились в процессе
+	for k,v in pairs(available_sections) do
+		local hud_section = v[1]
+		local item_in_slot = db.actor:item_in_slot(hud_item_slot)
+		
+		if item_in_slot and item_in_slot:section() == hud_section then
+			destroy_actor_item(item_in_slot:section())
+			spawn(hud_item_slot_default)
+			spawn(k)
+		end
+	end
+end
+
+function on_use(obj)
+	log1("HAVAEM S ANIMATSIEY")
+	local section = obj:section()
+	
+	if available_sections[section] == nil then
+		return
+	end
+	
+	local section_params = available_sections[section]
+	local hud_obj_section = section_params[1]
+	local sound = section_params[2]
+	local time = section_params[3]
+	local precond = section_params[4]
+	local use_obj_section = section_params[5]
+	
+	local item_in_slot = db.actor:item_in_slot(hud_item_slot)
+	local using_item_timer = 0
+	
+	-- проверка занятости рук
+	if use_timer > time_global() then
+		tip("Невозможно использовать предмет: у Вас заняты руки")
+		spawn(section) -- возвращаем предмет игроку и выходим из функции
+		return
+	end
+	
+	-- проверка возможности использования
+	if precond and precond() == false then
+		-- tip("Невозможно использовать предмет: не соблюдены условия использования")
+		spawn(section) -- возвращаем предмет игроку и выходим из функции
+		return
+	end
+	
+	-- начинаем ритуал съедания еды
+	
+	-- закрываем инвентарь, если он открыт
+	local inventory_wnd = level.main_input_receiver()
+	if inventory_wnd then
+		level.start_stop_menu(inventory_wnd, true)
+	end
+	
+	-- удаляем дефолтный предмет из слота, спавним предмет с анимацией / запрещаем пользоваться оружием
+	if hud_obj_section ~= nil then
+		destroy_actor_item(hud_item_slot_default)
+		spawn(hud_obj_section)
+		db.actor:restore_weapon()
+	else
+		db.actor:hide_weapon()
+	end
+	
+	-- объявляем звук при наличии
+	local sound_obj = sounds_tbl[sound]
+	
+	-- взводим таймер
+	use_timer = time_global() + time
+	
+	-- события поедания предмета, влияющего на героя
+	local eating_start = function()
+		if using_item_timer < time_global() then
+			return true
+		end
+	end
+	local eating_end = function()
+		db.actor:eat(db.actor:object(use_obj_section))
+	end
+	
+	-- события дожидания конца таймера
+	local effect_start = function()
+		-- не даём переключиться на другой слот
+		if hud_obj_section ~= nil then
+			if db.actor:active_slot() ~= hud_item_slot then
+				db.actor:activate_slot(hud_item_slot)
+			end
+		end
+		
+		-- ждёмс
+		if use_timer < time_global() then
+			return true
+		end
+	end
+	local effect_stop = function()
+	
+		-- останавливаем звук при наличии
+		if sound_obj then
+			if sound_obj:playing () then
+				sound_obj:stop ()
+			end
+		end
+		
+		-- отбираем предмет с анимацией и спауним бинокль или что там вы поставили
+		-- возвращаем оружие
+		if hud_obj_section ~= nil then
+			destroy_actor_item(hud_obj_section)
+			spawn(hud_item_slot_default)
+			db.actor:hide_weapon()
+		else	
+			db.actor:restore_weapon()
+		end
+		
+		
+		using_item_timer = time_global() + 10 -- взводим таймер на применение предмета use_obj_section (заспаунить и сразу съесть - невозможно)
+		spawn(use_obj_section) -- спауним предмет, который влияет на персонажа
+		level.add_call(eating_start, eating_end) -- запускаем операцию "съедания" предмета, который влияет на персонажа
+	end
+	
+	-- ждём убирания оружия
+	local wait_start = function()
+		if db.actor:active_slot() == hud_item_slot or hud_obj_section == nil then
+			return true
+		end
+	end
+	
+	local wait_stop = function()
+		-- играем звук при наличии
+		if sound_obj then
+			sound_obj:play_at_pos(db.actor, vector():set(0,0,0), 0, sound_object.s2d)
+		end
+		
+		level.add_call(effect_start, effect_stop) -- запускаем операцию "поедания" предмета
+	end
+	
+	db.actor:activate_slot(hud_item_slot) -- активируем слот
+	level.add_call(wait_start, wait_stop) -- запускаем всю эту систему
+end
+
+-- спавн предмета в рюкзак герою
+function spawn(section)
+	return alife():create(section, vector(), 0, 0, db.actor:id())
+end
+
+-- удалить предмет из рюкзака героя
+function destroy_actor_item(section)
+	alife():release(alife():object(db.actor:object(section):id()), true)
+end
+
+-- выдать сообщение на 5 секунд
+function tip(text)
+	db.actor:give_game_news(text, "ui\\ui_iconsTotal", Frect():set(83,470,83,47), 0, 5000)
+end

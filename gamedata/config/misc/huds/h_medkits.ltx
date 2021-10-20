@@ -1,0 +1,30 @@
+[medkit_hud]:medkit,hud_base
+hud = medkit_hud_hud
+
+[medkit_hud_hud]
+shell_point					= 0.0, 0.0, 0.0
+fire_point              	= 0.05, 0.0, 0.1
+fire_bone               	= bip01
+
+orientation             	= 0, 0, 0
+position                	= 0, 0, 0
+visual                  	= huds\medkit_hud.ogf
+
+anim_idle					= using
+anim_reload					= using
+anim_draw					= using
+anim_holster				= using
+anim_shoot					= using
+anim_idle_aim				= using
+
+[medkit_army_hud]:medkit_army,hud_base
+hud = medkit_army_hud_hud
+
+[medkit_army_hud_hud]:medkit_hud_hud
+visual						= huds\medkit_army_hud.ogf
+
+[medkit_scientic_hud]:medkit_scientic,hud_base
+hud = medkit_scientic_hud_hud
+
+[medkit_scientic_hud_hud]:medkit_hud_hud
+visual						= huds\medkit_scientic_hud.ogf

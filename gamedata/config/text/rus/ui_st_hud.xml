@@ -24,6 +24,9 @@
 	<string id="kb_set_unlimitedammo">
 		<text>Бесконечные патроны</text>
 	</string>
+	<string id="kb_turn_engine">
+		<text>Завести двигатель</text>
+	</string>
 	<string id="st_ui_hudmask_off">
 		<text>Шлем/противогаз снят</text>
 	</string>
