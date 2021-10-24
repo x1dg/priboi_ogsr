@@ -2,6 +2,14 @@
 <!-- ГЛАВНОЕ МЕНЮ -->
 <window>
 	<background width="1024" height="768">
+		<auto_static x="0" y="0" width="1024" height="768" stretch="1">
+			<texture width="1920" height="1080">ui\video_mainmenu</texture>
+		</auto_static>
+		<auto_static x="104" y="24" width="191.9" height="256" stretch="1" light_anim="asus_logo_01" la_cyclic="0" la_texture="1" la_alpha="1">
+			<texture>ui\ui_mod_logo</texture>
+		</auto_static>
+  </background>
+	<background width="1024" height="768">
 		<auto_static x="45000" y="45000" width="45000" height="45000" stretch="1">
 			<texture width="45000" height="45000">ui\video_voroni_crop</texture>
 		</auto_static>

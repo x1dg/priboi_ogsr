@@ -157,7 +157,6 @@ function send_tip(actor, news_id, timeout, sender, showtime, sender_id)
 		pda_tips:play(db.actor, timeout, sound_object.s2d)
 --	end
 
-log1("NEWSID: "..news_id)
 	local news_snd = news[news_id]
 	if news_snd ~= nil then
 		--' Играем звук забитый

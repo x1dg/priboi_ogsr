@@ -74,7 +74,9 @@
 	<actor_chars>
 		<!-- иконка -->
 	<!-- Иконка ГГ -->
-	<static_icon x="848" y="11" width="165" height="108"/>
+		<icon_static x="190.5" y="11" width="165.6" height="108" stretch="1">
+			<texture>ui_npc_u_actor</texture>
+		</icon_static>
 
 		<!-- имя -->
 		<name_static x="15" y="15">

@@ -13,6 +13,96 @@
 #include "ui\map_spots_relations.xml"
 #include "ui\map_spots_lchangers.xml"
 
+<!-- barin start -->
+	<barin_smart_on>
+		<level_map spot="barin_smart_on_spot"/>
+	</barin_smart_on>
+	<barin_smart_on_spot x="0" y="0" width="10" height="10" alignment="c" stretch="1" scale="1">
+		<texture x="668" y="791" width="26" height="26">ui\ui_common</texture>
+	</barin_smart_on_spot>
+	
+	<barin_smart_not_working>
+		<level_map spot="barin_smart_not_working_spot"/>
+	</barin_smart_not_working>
+	<barin_smart_not_working_spot x="0" y="0" width="10" height="10" alignment="c" stretch="1" scale="1">
+		<texture x="667" y="823" width="28" height="28">ui\ui_common</texture>
+	</barin_smart_not_working_spot>
+	
+	<barin_smart_not_available>
+		<level_map spot="barin_smart_not_available_spot"/>
+	</barin_smart_not_available>
+	<barin_smart_not_available_spot x="0" y="0" width="10" height="10" alignment="c" stretch="1" scale="1">
+		<texture x="667" y="729" width="27" height="23">ui\ui_common</texture>
+	</barin_smart_not_available_spot>
+
+	<barin_smart_off>
+		<level_map spot="barin_smart_off_spot"/>
+	</barin_smart_off>
+	<barin_smart_off_spot x="0" y="0" width="10" height="10" alignment="c" stretch="1" scale="1">
+		<texture x="667" y="760" width="28" height="28">ui\ui_common</texture>
+	</barin_smart_off_spot>
+
+<blowout_hideplace_location>
+	<level_map spot="blowout_hideplace_spot" pointer="quest_pointer"/>
+	<mini_map spot="blowout_hideplace_mini_spot" pointer="quest_pointer"/>
+</blowout_hideplace_location>
+
+<blowout_hideplace_spot  x="0" y="0" width="32" height="32" stretch="1" alignment="c" xform_anim="map_spot_new_xform" xform_anim_cyclic="0">
+	<texture>ui_mapQuest_artefact</texture>
+</blowout_hideplace_spot>
+
+<blowout_hideplace_mini_spot  x="0" y="0" width="11" height="11" stretch="1" alignment="c" xform_anim="map_spot_new_xform" xform_anim_cyclic="0">
+	<texture>ui_sm_mapQuest_artefact</texture>
+	<texture_below r="0" g="255" b="0">ui_mini_sn_spot_below</texture_below>
+	<texture_above r="0" g="255" b="0">ui_mini_sn_spot_above</texture_above>
+</blowout_hideplace_mini_spot>
+
+<waypoint1>
+	<level_map spot="waypoint1_spot" pointer="quest_pointer"/>
+	<mini_map spot="waypoint1_mini_spot" pointer="quest_pointer"/>
+</waypoint1>
+
+<waypoint1_spot  x="0" y="0" width="32" height="32" stretch="1" alignment="c" xform_anim="map_spot_new_xform" xform_anim_cyclic="0">
+	 <texture x="392" y="997" width="25" height="22">ui\ui_common</texture>
+</waypoint1_spot>
+
+<waypoint1_mini_spot  x="0" y="0" width="11" height="11" stretch="1" alignment="c" xform_anim="map_spot_new_xform" xform_anim_cyclic="0">
+	<texture x="392" y="997" width="25" height="22">ui\ui_common</texture>
+	<texture_below r="0" g="255" b="0">ui_mini_sn_spot_below</texture_below>
+	<texture_above r="0" g="255" b="0">ui_mini_sn_spot_above</texture_above>
+</waypoint1_mini_spot>
+
+<waypoint2>
+	<level_map spot="waypoint1_spot" pointer="quest_pointer"/>
+	<mini_map spot="waypoint1_mini_spot" pointer="quest_pointer"/>
+</waypoint2>
+
+<waypoint2_spot  x="0" y="0" width="32" height="32" stretch="1" alignment="c" xform_anim="map_spot_new_xform" xform_anim_cyclic="0">
+	 <texture x="425" y="937" width="22" height="20">ui\ui_common</texture>
+</waypoint2_spot>
+
+<waypoint2_mini_spot  x="0" y="0" width="11" height="11" stretch="1" alignment="c" xform_anim="map_spot_new_xform" xform_anim_cyclic="0">
+	<texture x="425" y="937" width="22" height="20">ui\ui_common</texture>
+	<texture_below r="0" g="255" b="0">ui_mini_sn_spot_below</texture_below>
+	<texture_above r="0" g="255" b="0">ui_mini_sn_spot_above</texture_above>
+</waypoint2_mini_spot>
+
+<waypoint3>
+	<level_map spot="waypoint1_spot" pointer="quest_pointer"/>
+	<mini_map spot="waypoint1_mini_spot" pointer="quest_pointer"/>
+</waypoint3>
+
+<waypoint3_spot  x="0" y="0" width="32" height="32" stretch="1" alignment="c" xform_anim="map_spot_new_xform" xform_anim_cyclic="0">
+	<texture x="459" y="936" width="20" height="21">ui\ui_common</texture>
+</waypoint3_spot>
+
+<waypoint3_mini_spot  x="0" y="0" width="11" height="11" stretch="1" alignment="c" xform_anim="map_spot_new_xform" xform_anim_cyclic="0">
+	<texture x="459" y="936" width="20" height="21">ui\ui_common</texture>
+	<texture_below r="0" g="255" b="0">ui_mini_sn_spot_below</texture_below>
+	<texture_above r="0" g="255" b="0">ui_mini_sn_spot_above</texture_above>
+</waypoint3_mini_spot>
+<!-- barin end -->
+
 	<!-- OGSM-метки -->
     <ogsm_hide_spot_max>
 		<level_map spot="ogsm_crlc_small_max" pointer="quest_pointer"/>

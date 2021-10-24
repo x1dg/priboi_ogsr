@@ -7,7 +7,7 @@ end
 -- *ѕќƒ— ј« ј: в прекондишнах можно вывести сообщение в ѕƒј герою
 function need_knife()
 	-- можем использовать только при наличии ножа
-	if db.actor:object("wpn_knife") then
+	if db.actor:item_in_slot(1) then
 		return true
 	end
 	tip("ƒл€ использовани€ этого предмета необходимо наличие ножа") -- наше сообщение
@@ -73,7 +73,131 @@ function on_spawn()
 end
 
 function on_use(obj)
-	log1("HAVAEM S ANIMATSIEY")
+	local section = obj:section()
+	
+	if available_sections[section] == nil then
+		return
+	end
+	
+	local section_params = available_sections[section]
+	local hud_obj_section = section_params[1]
+	local sound = section_params[2]
+	local time = section_params[3]
+	local precond = section_params[4]
+	local use_obj_section = section_params[5]
+	
+	local item_in_slot = db.actor:item_in_slot(hud_item_slot)
+	local using_item_timer = 0
+	
+	-- проверка занятости рук
+	if use_timer > time_global() then
+		tip("Невозможно использовать предмет: у Вас заняты руки")
+		spawn(section) -- возвращаем предмет игроку и выходим из функции
+		return
+	end
+	
+	-- проверка возможности использования
+	if precond and precond() == false then
+		-- tip("Невозможно использовать предмет: не соблюдены условия использования")
+		spawn(section) -- возвращаем предмет игроку и выходим из функции
+		return
+	end
+	
+	-- начинаем ритуал съедания еды
+	
+	-- закрываем инвентарь, если он открыт
+	local inventory_wnd = level.main_input_receiver()
+	if inventory_wnd then
+		level.start_stop_menu(inventory_wnd, true)
+	end
+	
+	-- удаляем дефолтный предмет из слота, спавним предмет с анимацией / запрещаем пользоваться оружием
+	if hud_obj_section ~= nil then
+		if db.actor:item_in_slot(hud_item_slot) then
+			destroy_actor_item(hud_item_slot_default)
+		end
+		spawn(hud_obj_section)
+		db.actor:restore_weapon()
+	else
+		db.actor:hide_weapon()
+	end
+	
+	-- объявляем звук при наличии
+	local sound_obj = sounds_tbl[sound]
+	
+	-- взводим таймер
+	use_timer = time_global() + time
+	
+	-- события поедания предмета, влияющего на героя
+	local eating_start = function()
+		if using_item_timer < time_global() then
+			return true
+		end
+	end
+	local eating_end = function()
+		db.actor:eat(db.actor:object(use_obj_section))
+	end
+	
+	-- события дожидания конца таймера
+	local effect_start = function()
+		-- не даём переключиться на другой слот
+		if hud_obj_section ~= nil then
+			if db.actor:active_slot() ~= hud_item_slot then
+				db.actor:activate_slot(hud_item_slot)
+			end
+		end
+		
+		-- ждёмс
+		if use_timer < time_global() then
+			return true
+		end
+	end
+	local effect_stop = function()
+	
+		-- останавливаем звук при наличии
+		if sound_obj then
+			if sound_obj:playing () then
+				sound_obj:stop ()
+			end
+		end
+		
+		-- отбираем предмет с анимацией и спауним бинокль или что там вы поставили
+		-- возвращаем оружие
+		if hud_obj_section ~= nil then
+			destroy_actor_item(hud_obj_section)
+			spawn(hud_item_slot_default)
+			db.actor:hide_weapon()
+		else	
+			db.actor:restore_weapon()
+		end
+		
+		
+		using_item_timer = time_global() + 10 -- взводим таймер на применение предмета use_obj_section (заспаунить и сразу съесть - невозможно)
+		spawn(use_obj_section) -- спауним предмет, который влияет на персонажа
+		level.add_call(eating_start, eating_end) -- запускаем операцию "съедания" предмета, который влияет на персонажа
+	end
+	
+	-- ждём убирания оружия
+	local wait_start = function()
+		if db.actor:active_slot() == hud_item_slot or hud_obj_section == nil then
+			return true
+		end
+	end
+	
+	local wait_stop = function()
+		-- играем звук при наличии
+		if sound_obj then
+			sound_obj:play_at_pos(db.actor, vector():set(0,0,0), 0, sound_object.s2d)
+		end
+		
+		level.add_call(effect_start, effect_stop) -- запускаем операцию "поедания" предмета
+	end
+	
+	db.actor:activate_slot(hud_item_slot) -- активируем слот
+	level.add_call(wait_start, wait_stop) -- запускаем всю эту систему
+end
+
+function on_use1(obj)
 	local section = obj:section()
 	
 	if available_sections[section] == nil then
@@ -114,7 +238,9 @@ function on_use(obj)
 	
 	-- удал€ем дефолтный предмет из слота, спавним предмет с анимацией / запрещаем пользоватьс€ оружием
 	if hud_obj_section ~= nil then
-		destroy_actor_item(hud_item_slot_default)
+		if db.actor:item_in_slot(hud_item_slot) then
+			destroy_actor_item(db.actor:item_in_slot(hud_item_slot):section())
+		end
 		spawn(hud_obj_section)
 		db.actor:restore_weapon()
 	else
@@ -164,7 +290,6 @@ function on_use(obj)
 		-- возвращаем оружие
 		if hud_obj_section ~= nil then
 			destroy_actor_item(hud_obj_section)
-			spawn(hud_item_slot_default)
 			db.actor:hide_weapon()
 		else	
 			db.actor:restore_weapon()

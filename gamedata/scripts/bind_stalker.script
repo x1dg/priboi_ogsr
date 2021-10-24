@@ -175,6 +175,7 @@ function actor_binder:take_item_from_box(box, item)
 	end
 
 	treasure_manager.take_item_from_box(box, story_id)
+	tvirus.on_item_take(item)
 --[[	
 	local respawner = se_respawn.get_respawner_by_parent(story_id)
 	if respawner == nil then
@@ -262,6 +263,11 @@ function actor_binder:task_callback(_task, _objective, _state)
 			news_manager.send_task(db.actor, "complete", _task, _objective)
 		else
 			news_manager.send_task(db.actor, "new", _task, _objective)
+			-- barin start
+			if priboy_utils.isPriboiTask(_task:get_id()) then
+				priboy_utils.send_hud_message("Новое задание!", "Проверьте ПДА...", nil, 10, nil)
+			end
+			-- barin end
 		end
 	else
 		if _task:get_objective(0):get_state() == task.in_progress then
@@ -281,6 +287,19 @@ function actor_binder:update(delta)
 
 	-- DEBUG slowdown
 --	slowdown.update()
+
+	if not db.actor:object("wpn_binoc") and not db.actor:item_in_slot(4) then
+		alife():create("wpn_binoc", db.actor:position(), 1, db.actor:game_vertex_id(), db.actor:id())
+		db.actor:restore_weapon()
+	end
+	
+	-- barin start
+	priboy_tasks.infoportion_proceed(level.name())
+	floating_objects_fix.floating_vehicles_fix(level.name())
+	tvirus.run_timer()
+	-- blowout.GetBlowout():Update()
+	priboy_war_zone.GetBarWarZone():Update()
+	-- barin end
 
 	local time = time_global()
 	
@@ -371,7 +390,10 @@ function actor_binder:update(delta)
 		end
 	end
 
-
+	-- barin start
+	-- Bardak's treasure manager fix
+	treasure_manager.get_treasure_manager():loss_workaround()
+	-- barin end
 
  	if self.bCheckStart then
 		printf("SET DEFAULT INFOS")		
@@ -405,7 +427,6 @@ function actor_binder:update(delta)
 end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:save(packet)
-	
 	local save_treasure_manager = true
 	
 	printf("actor_binder:save(): self.object:name()='%s'", self.object:name())

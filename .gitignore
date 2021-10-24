@@ -19,3 +19,8 @@ ArenaExtension/
 gamedata_monolith/
 gamedata_priboi/
 bin*/
+_appdata_/screenshots/steam_autocloud.vdf
+_appdata_/savedgames/steam_autocloud.vdf
+_appdata_/steam_autocloud.vdf
+*.log
+*.mdmp

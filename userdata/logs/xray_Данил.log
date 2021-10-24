@@ -1,321 +1,868 @@
 
-[20.10.21 20:26:44.210] * Detected CPU: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz [GenuineIntel], F6/M158/S10
-[20.10.21 20:26:44.211] * CPU features: RDTSC, MMX, SSE, SSE2, SSE3, MONITOR/MWAIT, SSSE3, SSE4.1, SSE4.2, AVX, AVX2
-[20.10.21 20:26:44.211] * CPU cores: [6], threads: [6]
-[20.10.21 20:26:44.211] * CPU0 current freq: 2808 MHz, max freq: 2808 MHz
-[20.10.21 20:26:44.211] * CPU1 current freq: 2808 MHz, max freq: 2808 MHz
-[20.10.21 20:26:44.211] * CPU2 current freq: 2808 MHz, max freq: 2808 MHz
-[20.10.21 20:26:44.211] * CPU3 current freq: 2808 MHz, max freq: 2808 MHz
-[20.10.21 20:26:44.211] * CPU4 current freq: 2808 MHz, max freq: 2808 MHz
-[20.10.21 20:26:44.211] * CPU5 current freq: 2808 MHz, max freq: 2808 MHz
-[20.10.21 20:26:44.211] Initializing File System...
-[20.10.21 20:26:44.212] --Found base arch: [z:\programs\priboi ogsr\gamedata.db0], size: [678577379]
-[20.10.21 20:26:44.250] --Found base arch: [z:\programs\priboi ogsr\gamedata.db1], size: [708434331]
-[20.10.21 20:26:44.253] --Found base arch: [z:\programs\priboi ogsr\gamedata.db2], size: [671169415]
-[20.10.21 20:26:44.258] --Found base arch: [z:\programs\priboi ogsr\gamedata.db3], size: [684792231]
-[20.10.21 20:26:44.260] --Found base arch: [z:\programs\priboi ogsr\gamedata.db4], size: [671392842]
-[20.10.21 20:26:44.447] --Found base arch: [z:\programs\priboi ogsr\gamedata.db5], size: [697475082]
-[20.10.21 20:26:44.475] --Found base arch: [z:\programs\priboi ogsr\gamedata.db6], size: [672288151]
-[20.10.21 20:26:44.477] --Found base arch: [z:\programs\priboi ogsr\gamedata.db7], size: [672462598]
-[20.10.21 20:26:44.493] --Found base arch: [z:\programs\priboi ogsr\gamedata.db8], size: [293378144]
-[20.10.21 20:26:44.500] --Found base arch: [z:\programs\priboi ogsr\gamedata.db9], size: [79312307]
-[20.10.21 20:26:44.517] --Found base arch: [z:\programs\priboi ogsr\gamedata.dba], size: [22884835]
-[20.10.21 20:26:44.520] --Found base arch: [z:\programs\priboi ogsr\gamedata.dbb], size: [55194918]
-[20.10.21 20:26:44.523] --Found base arch: [z:\programs\priboi ogsr\gamedata.dbc], size: [160948]
-[20.10.21 20:26:44.524] --Found base arch: [z:\programs\priboi ogsr\gamedata.dbd], size: [101014]
-[20.10.21 20:26:44.524] using fs-ltx fsgame.ltx
-[20.10.21 20:26:44.524] --Found FS dir: [z:\programs\priboi ogsr\userdata\]
-[20.10.21 20:26:44.524]   files: [6]
-[20.10.21 20:26:44.524] --Found FS dir: [z:\programs\priboi ogsr\gamedata\]
-[20.10.21 20:26:44.524]   files: [16]
-[20.10.21 20:26:44.524] --Found FS dir: [z:\programs\priboi ogsr\gamedata\spawns\]
-[20.10.21 20:26:44.524]   files: [4]
-[20.10.21 20:26:44.524] --Found FS dir: [z:\programs\priboi ogsr\gamedata\anims\]
-[20.10.21 20:26:44.525]   files: [23]
-[20.10.21 20:26:44.525] --Found FS dir: [z:\programs\priboi ogsr\gamedata\levels\]
-[20.10.21 20:26:44.526]   files: [12]
-[20.10.21 20:26:44.526] --Found FS dir: [z:\programs\priboi ogsr\gamedata\meshes\]
-[20.10.21 20:26:44.526]   files: [13]
-[20.10.21 20:26:44.537] --Found FS dir: [z:\programs\priboi ogsr\gamedata\meshes\]
-[20.10.21 20:26:44.537]   files: [13]
-[20.10.21 20:26:44.545] --Found FS dir: [z:\programs\priboi ogsr\gamedata\shaders\]
-[20.10.21 20:26:44.545]   files: [7]
-[20.10.21 20:26:44.551] --Found FS dir: [z:\programs\priboi ogsr\gamedata\sounds\]
-[20.10.21 20:26:44.551]   files: [22]
-[20.10.21 20:26:44.568] --Found FS dir: [z:\programs\priboi ogsr\gamedata\textures\]
-[20.10.21 20:26:44.569]   files: [62]
-[20.10.21 20:26:44.629] --Found FS dir: [z:\programs\priboi ogsr\gamedata\scripts\]
-[20.10.21 20:26:44.630]   files: [127]
-[20.10.21 20:26:44.631] --Found FS dir: [z:\programs\priboi ogsr\gamedata\config\]
-[20.10.21 20:26:44.631]   files: [30]
-[20.10.21 20:26:44.638] --Found FS dir: [z:\programs\priboi ogsr\gamedata\levels\]
-[20.10.21 20:26:44.638]   files: [12]
-[20.10.21 20:26:44.638] --Found FS dir: [z:\programs\priboi ogsr\userdata\savedgames\]
-[20.10.21 20:26:44.638]   files: [11]
-[20.10.21 20:26:44.638] --Found FS dir: [z:\programs\priboi ogsr\userdata\logs\]
-[20.10.21 20:26:44.638]   files: [19]
-[20.10.21 20:26:44.638] --Found FS dir: [z:\programs\priboi ogsr\userdata\screenshots\]
-[20.10.21 20:26:44.638]   files: [8]
-[20.10.21 20:26:44.638] --Found FS dir: [z:\programs\priboi ogsr\mods\]
-[20.10.21 20:26:44.638]   files: [3]
-[20.10.21 20:26:44.638] --Found external arch: [mp_military_2.xdb0], size: [50350518]
-[20.10.21 20:26:44.642] FS: 34601 files cached, 6125Kb memory used.
-[20.10.21 20:26:44.642] Init FileSystem 0.431013 sec
-[20.10.21 20:26:44.643] [OGSR Engine (x64)] build date: [Sep 22 2021 10:23:51]
-[20.10.21 20:26:44.643] [AppVeyor] build version: [2.1.293], repo: [OGSR/OGSR-Engine]
-[20.10.21 20:26:44.643] [_MSC_FULL_VER]: [191627045], [_MSVC_LANG]: [201703L]
-[20.10.21 20:26:44.643] Working Directory: [Z:\Programs\Priboi OGSR\bin_x64]
-[20.10.21 20:26:44.643] CommandLine: ["Z:\Programs\Priboi OGSR\bin_x64\xrEngine.exe" ]
-[20.10.21 20:26:44.727] Initializing Engine...
-[20.10.21 20:26:44.728] Starting INPUT device...
-[20.10.21 20:26:44.773] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[20.10.21 20:26:44.773] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
-[20.10.21 20:26:44.779] refCount:m_pAdapter 1
-[20.10.21 20:26:44.779] refCount:pFactory 1
-[20.10.21 20:26:44.779] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[20.10.21 20:26:44.779] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
-[20.10.21 20:26:44.866] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[20.10.21 20:26:44.866] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
-[20.10.21 20:26:44.866] --[CEngineAPI::CreateRendererList] Available render modes [5]:
-[20.10.21 20:26:44.866] --  [renderer_r2a]
-[20.10.21 20:26:44.866] --  [renderer_r2]
-[20.10.21 20:26:44.866] --  [renderer_r2.5]
-[20.10.21 20:26:44.866] --  [renderer_r3]
-[20.10.21 20:26:44.866] --  [renderer_r4]
-[20.10.21 20:26:44.866] Executing config-script "user.ltx"...
-[20.10.21 20:26:44.866] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
-[20.10.21 20:26:44.866] [z:\programs\priboi ogsr\userdata\user.ltx] successfully loaded.
-[20.10.21 20:26:44.866] --Loading DLL: [xrRender_R2.dll]
-[20.10.21 20:26:44.867] --Loading DLL: [xrGame.dll]
-[20.10.21 20:26:44.881] --------------------------------------------------------------------------------
-[20.10.21 20:26:44.881] [8143MB] physical memory installed, [3442MB] available, [57] percent of memory in use
-[20.10.21 20:26:44.881] PageFile usage: [43MB], Peak PageFile usage: [89MB]
-[20.10.21 20:26:44.881] --------------------------------------------------------------------------------
-[20.10.21 20:26:44.881] * [ D3D ]: textures[0 K]
-[20.10.21 20:26:44.881] * [x-ray]: process heap[21610 K], render[0 K]
-[20.10.21 20:26:44.881] * [x-ray]: economy: strings[4940 K], smem[0 K]
-[20.10.21 20:26:44.881] SOUND: OpenAL: enumerate devices...
-[20.10.21 20:26:44.881] SOUND: OpenAL: EnumerationExtension Present
-[20.10.21 20:26:44.969] devices Generic Software
-[20.10.21 20:26:44.969] SOUND: OpenAL: system  default SndDevice name is Generic Software
-[20.10.21 20:26:45.234] SOUND: OpenAL: All available devices:
-[20.10.21 20:26:45.234] 1. Generic Software, Spec Version 1.1 (default) eax[2] efx[no] xram[no]
-[20.10.21 20:26:45.234] 2. OpenAL Soft, Spec Version 1.1  eax[0] efx[yes] xram[no]
-[20.10.21 20:26:45.234] Executing config-script "z:\programs\priboi ogsr\gamedata\config\default_controls.ltx"...
-[20.10.21 20:26:45.235] [z:\programs\priboi ogsr\gamedata\config\default_controls.ltx] successfully loaded.
-[20.10.21 20:26:45.235] Executing config-script "user.ltx"...
-[20.10.21 20:26:45.235] Executing config-script "z:\programs\priboi ogsr\gamedata\config\rspec_high.ltx"...
-[20.10.21 20:26:45.235] ! Unknown command:  r2_sun_shafts
-[20.10.21 20:26:45.235] ! Unknown command:  r__supersample
-[20.10.21 20:26:45.235] [z:\programs\priboi ogsr\gamedata\config\rspec_high.ltx] successfully loaded.
-[20.10.21 20:26:45.235] Executing config-script "z:\programs\priboi ogsr\gamedata\config\default_controls.ltx"...
-[20.10.21 20:26:45.236] [z:\programs\priboi ogsr\gamedata\config\default_controls.ltx] successfully loaded.
-[20.10.21 20:26:45.236] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
-[20.10.21 20:26:45.236] [z:\programs\priboi ogsr\userdata\user.ltx] successfully loaded.
-[20.10.21 20:26:45.236] SOUND: Selected device is Generic Software
-[20.10.21 20:26:45.266] [OpenAL] EAX 2.0 extension: present
-[20.10.21 20:26:45.266] [OpenAL] EAX 2.0 deferred: present
-[20.10.21 20:26:45.267] * sound : cache: 65537 kb, 4856 lines, 13820 bpl
-[20.10.21 20:26:45.296] Starting RENDER device...
-[20.10.21 20:26:45.324] * GPU [vendor:10DE]-[device:1C81]: NVIDIA GeForce GTX 1050
-[20.10.21 20:26:45.324] * GPU driver: 30.0.14.7196
-[20.10.21 20:26:45.414] * CREATE: DeviceREF: 1
-[20.10.21 20:26:45.414] * Vertex Processor: PURE HARDWARE
-[20.10.21 20:26:45.415] *     Texture memory: 4072 M
-[20.10.21 20:26:45.415] *          DDI-level: 9.0
-[20.10.21 20:26:45.416] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
-[20.10.21 20:26:45.416] * GPU vertex cache: unrecognized, 16
-[20.10.21 20:26:45.417] * DVB created: 16384K
-[20.10.21 20:26:45.417] * DIB created: 512K
-[20.10.21 20:26:45.432] ! Version conflict in shader 'models\lightplanes_00'
-[20.10.21 20:26:45.433] ! Version conflict in shader 'models\lightplanesself'
-[20.10.21 20:26:45.433] ! Version conflict in shader 'models\model_puh'
-[20.10.21 20:26:45.433] ! Version conflict in shader 'models\model_refl'
-[20.10.21 20:26:45.433] ! Version conflict in shader 'models\xbrainglass'
-[20.10.21 20:26:45.433] ! Version conflict in shader 'models\xdistortcolorlinv'
-[20.10.21 20:26:45.433] ! Version conflict in shader 'models\xglass'
-[20.10.21 20:26:45.433] ! Version conflict in shader 'models\xglass2'
-[20.10.21 20:26:45.433] ! Version conflict in shader 'models\xlens'
-[20.10.21 20:26:45.433] ! Version conflict in shader 'selflight_static'
-[20.10.21 20:26:45.433] [CTextureDescrMngr::LoadLTX] count of *textures*.ltx files: [1]
-[20.10.21 20:26:45.545] * NULLRT supported
-[20.10.21 20:26:45.545] * ...and used
-[20.10.21 20:26:45.545] * HWDST/PCF supported and used
-[20.10.21 20:26:45.545] * NV-DBT supported and used
-[20.10.21 20:26:46.573] --LUA version: [LuaJIT 2.1.0-beta3]
-[20.10.21 20:26:46.613] Starting engine...
-[20.10.21 20:26:50.078] * phase time: 11 ms
-[20.10.21 20:26:50.102] * phase cmem: 176828 K
-[20.10.21 20:26:50.161] --LUA version: [LuaJIT 2.1.0-beta3]
-[20.10.21 20:26:50.185] * phase time: 107 ms
-[20.10.21 20:26:50.209] * phase cmem: 145639 K
-[20.10.21 20:26:50.214] * Loading spawn registry...
-[20.10.21 20:26:50.759] * 8976 spawn points are successfully loaded
-[20.10.21 20:26:50.760] * Loading objects...
-[20.10.21 20:26:51.071] * 18370 objects are successfully loaded
-[20.10.21 20:26:51.569] * Game Данил_quicksave is successfully loaded from file 'z:\programs\priboi ogsr\userdata\savedgames\Данил_quicksave.sav' (1.360s)
-[20.10.21 20:26:51.569] * phase time: 1384 ms
-[20.10.21 20:26:51.613] * phase cmem: 197356 K
-[20.10.21 20:26:51.662] # Player not found. New player created.
-[20.10.21 20:26:51.662] !!xrServer::Check_GameSpy_CDKey_Success - 1
-[20.10.21 20:26:51.662] * client : connection accepted - <>
-[20.10.21 20:26:51.679] * phase time: 109 ms
-[20.10.21 20:26:51.723] * phase cmem: 197402 K
-[20.10.21 20:26:51.723] * phase time: 44 ms
-[20.10.21 20:26:51.766] * phase cmem: 197403 K
-[20.10.21 20:26:53.146] --[ISpatial_DB::initialize] bbc is [-123.7, 2.8, 188.3], bbd is [320.0, 30.6, 320.0]
-[20.10.21 20:26:53.146] --[ISpatial_DB::initialize] bbc is [-123.7, 2.8, 188.3], bbd is [320.0, 30.6, 320.0]
-[20.10.21 20:26:53.148] * phase time: 1424 ms
-[20.10.21 20:26:53.192] * phase cmem: 308097 K
-[20.10.21 20:26:53.383] * phase time: 235 ms
-[20.10.21 20:26:53.429] * phase cmem: 311537 K
-[20.10.21 20:26:53.430] * [Loading VB] 65535 verts, 2047 Kb
-[20.10.21 20:26:53.441] * [Loading VB] 65531 verts, 2047 Kb
-[20.10.21 20:26:53.450] * [Loading VB] 65527 verts, 2047 Kb
-[20.10.21 20:26:53.458] * [Loading VB] 65509 verts, 2047 Kb
-[20.10.21 20:26:53.467] * [Loading VB] 65533 verts, 2047 Kb
-[20.10.21 20:26:53.476] * [Loading VB] 65481 verts, 2046 Kb
-[20.10.21 20:26:53.484] * [Loading VB] 9630 verts, 300 Kb
-[20.10.21 20:26:53.486] * [Loading VB] 65535 verts, 2047 Kb
-[20.10.21 20:26:53.495] * [Loading VB] 65535 verts, 2047 Kb
-[20.10.21 20:26:53.504] * [Loading VB] 65535 verts, 2047 Kb
-[20.10.21 20:26:53.513] * [Loading VB] 65535 verts, 2047 Kb
-[20.10.21 20:26:53.521] * [Loading VB] 65535 verts, 2047 Kb
-[20.10.21 20:26:53.529] * [Loading VB] 65526 verts, 2047 Kb
-[20.10.21 20:26:53.539] * [Loading VB] 65534 verts, 2047 Kb
-[20.10.21 20:26:53.549] * [Loading VB] 65535 verts, 2047 Kb
-[20.10.21 20:26:53.557] * [Loading VB] 65535 verts, 2047 Kb
-[20.10.21 20:26:53.566] * [Loading VB] 65535 verts, 2047 Kb
-[20.10.21 20:26:53.575] * [Loading VB] 65529 verts, 2047 Kb
-[20.10.21 20:26:53.583] * [Loading VB] 65532 verts, 2047 Kb
-[20.10.21 20:26:53.592] * [Loading VB] 65535 verts, 2047 Kb
-[20.10.21 20:26:53.600] * [Loading VB] 65534 verts, 2047 Kb
-[20.10.21 20:26:53.609] * [Loading VB] 65533 verts, 2047 Kb
-[20.10.21 20:26:53.617] * [Loading VB] 11187 verts, 349 Kb
-[20.10.21 20:26:53.619] * [Loading VB] 65533 verts, 2047 Kb
-[20.10.21 20:26:53.628] * [Loading VB] 65533 verts, 2047 Kb
-[20.10.21 20:26:53.637] * [Loading VB] 65535 verts, 2047 Kb
-[20.10.21 20:26:53.645] * [Loading VB] 65535 verts, 2047 Kb
-[20.10.21 20:26:53.657] * [Loading VB] 58148 verts, 1817 Kb
-[20.10.21 20:26:53.663] * [Loading IB] 1048575 indices, 2047 Kb
-[20.10.21 20:26:53.672] * [Loading IB] 1048575 indices, 2047 Kb
-[20.10.21 20:26:53.680] * [Loading IB] 1048575 indices, 2047 Kb
-[20.10.21 20:26:53.688] * [Loading IB] 1048575 indices, 2047 Kb
-[20.10.21 20:26:53.696] * [Loading IB] 1048575 indices, 2047 Kb
-[20.10.21 20:26:53.706] * [Loading IB] 1048575 indices, 2047 Kb
-[20.10.21 20:26:53.716] * [Loading IB] 1048575 indices, 2047 Kb
-[20.10.21 20:26:53.724] * [Loading IB] 1048575 indices, 2047 Kb
-[20.10.21 20:26:53.732] * [Loading IB] 1048575 indices, 2047 Kb
-[20.10.21 20:26:53.740] * [Loading IB] 1048575 indices, 2047 Kb
-[20.10.21 20:26:53.748] * [Loading IB] 1048575 indices, 2047 Kb
-[20.10.21 20:26:53.756] * [Loading IB] 1048575 indices, 2047 Kb
-[20.10.21 20:26:53.764] * [Loading IB] 1048575 indices, 2047 Kb
-[20.10.21 20:26:53.774] * [Loading IB] 274437 indices, 536 Kb
-[20.10.21 20:26:53.779] * [Loading VB] 65535 verts, 767 Kb
-[20.10.21 20:26:53.785] * [Loading VB] 65534 verts, 767 Kb
-[20.10.21 20:26:53.787] * [Loading VB] 65534 verts, 767 Kb
-[20.10.21 20:26:53.791] * [Loading VB] 65534 verts, 767 Kb
-[20.10.21 20:26:53.795] * [Loading VB] 65535 verts, 767 Kb
-[20.10.21 20:26:53.799] * [Loading VB] 65534 verts, 767 Kb
-[20.10.21 20:26:53.802] * [Loading VB] 65533 verts, 767 Kb
-[20.10.21 20:26:53.805] * [Loading VB] 65534 verts, 767 Kb
-[20.10.21 20:26:53.808] * [Loading VB] 65535 verts, 767 Kb
-[20.10.21 20:26:53.813] * [Loading VB] 65535 verts, 767 Kb
-[20.10.21 20:26:53.816] * [Loading VB] 29335 verts, 343 Kb
-[20.10.21 20:26:53.818] * [Loading IB] 1048575 indices, 2047 Kb
-[20.10.21 20:26:53.827] * [Loading IB] 1048575 indices, 2047 Kb
-[20.10.21 20:26:53.839] * [Loading IB] 1048575 indices, 2047 Kb
-[20.10.21 20:26:53.845] * [Loading IB] 1048575 indices, 2047 Kb
-[20.10.21 20:26:53.846] * [Loading IB] 550890 indices, 1075 Kb
-[20.10.21 20:26:53.847] * phase time: 463 ms
-[20.10.21 20:26:53.892] * phase cmem: 410448 K
-[20.10.21 20:26:54.095] * phase time: 248 ms
-[20.10.21 20:26:54.141] * phase cmem: 413535 K
-[20.10.21 20:26:54.156] * [DETAILS] VertexConsts(256), Batch(61)
-[20.10.21 20:26:54.156] * [DETAILS] 40687 v(20), 26352 p
-[20.10.21 20:26:54.157] * [DETAILS] Batch(61), VB(794K), IB(154K)
-[20.10.21 20:26:54.157] * phase time: 61 ms
-[20.10.21 20:26:54.204] * phase cmem: 414513 K
-[20.10.21 20:26:54.204] * Loading HOM: z:\programs\priboi ogsr\gamedata\levels\l07_military\level.hom
-[20.10.21 20:26:54.206] * phase time: 48 ms
-[20.10.21 20:26:54.253] * phase cmem: 414814 K
-[20.10.21 20:26:54.254] * phase time: 48 ms
-[20.10.21 20:26:54.300] * phase cmem: 414814 K
-[20.10.21 20:26:54.311] - Game configuring : Started 
-[20.10.21 20:26:54.312] - Game configuring : Finished 
-[20.10.21 20:26:54.436] * phase time: 182 ms
-[20.10.21 20:26:54.483] * phase cmem: 425904 K
-[20.10.21 20:26:59.914] * t-report - base: 1254, 1075530 K
-[20.10.21 20:26:59.914] * t-report - lmap: 8, 8193 K
-[20.10.21 20:26:59.914] * phase time: 5477 ms
-[20.10.21 20:26:59.967] * phase cmem: 1561059 K
-[20.10.21 20:26:59.985] * phase time: 71 ms
-[20.10.21 20:27:00.040] * phase cmem: 1561062 K
-[20.10.21 20:27:00.101] --------------------------------------------------------------------------------
-[20.10.21 20:27:00.101] [8143MB] physical memory installed, [1936MB] available, [76] percent of memory in use
-[20.10.21 20:27:00.101] PageFile usage: [1860MB], Peak PageFile usage: [1862MB]
-[20.10.21 20:27:00.101] --------------------------------------------------------------------------------
-[20.10.21 20:27:00.101] * [ D3D ]: textures[1083723 K]
-[20.10.21 20:27:00.101] * [x-ray]: process heap[1560438 K], render[0 K]
-[20.10.21 20:27:00.101] * [x-ray]: economy: strings[7444 K], smem[0 K]
-[20.10.21 20:27:08.334] * MEMORY USAGE: 2052987 K
-[20.10.21 20:27:08.334] * End of synchronization A[1] R[1]
-[20.10.21 20:27:08.334] * phase time: 8420 ms
-[20.10.21 20:27:08.431] * phase cmem: 2052987 K
-[20.10.21 20:27:10.104] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:10.782] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:11.733] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:11.783] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:11.783] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:13.757] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:13.770] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:13.770] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:14.198] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:14.899] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:17.047] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:17.114] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:17.114] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:19.897] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:20.198] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:21.232] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:21.382] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:22.000] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:23.531] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:26.398] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:27.433] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:27.483] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:28.250] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:28.250] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:29.361] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:29.915] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:30.782] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:31.599] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:32.697] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[20.10.21 20:27:36.830] - Disconnect
-[20.10.21 20:27:38.401] - Destroying level
-[20.10.21 20:27:38.599] DestroySingleton::RefCounter: 0
-[20.10.21 20:27:38.600] DestroySingleton::RefCounter: -646
-[20.10.21 20:27:38.604] DestroySingleton::RefCounter: 0
-[20.10.21 20:27:38.604] DestroySingleton::RefCounter: 0
-[20.10.21 20:27:38.612] Input:  1
-[20.10.21 20:27:38.619] Config-file [z:\programs\priboi ogsr\userdata\user.ltx] saved successfully
-[20.10.21 20:27:38.834] Destroying Direct3D...
-[20.10.21 20:27:38.834] * [R_occlusion::occq_destroy]: fids[122] used[122] pool[122]
-[20.10.21 20:27:38.834] * [R_occlusion::occq_destroy]: released [0] used and [122] pool queries
-[20.10.21 20:27:38.885] * RM_Dump: textures  : 0
-[20.10.21 20:27:38.885] * RM_Dump: rtargets  : 0
-[20.10.21 20:27:38.885] * RM_Dump: vs        : 0
-[20.10.21 20:27:38.885] * RM_Dump: ps        : 0
-[20.10.21 20:27:38.885] * RM_Dump: dcl       : 0
-[20.10.21 20:27:38.885] * RM_Dump: states    : 0
-[20.10.21 20:27:38.885] * RM_Dump: tex_list  : 0
-[20.10.21 20:27:38.885] * RM_Dump: matrices  : 0
-[20.10.21 20:27:38.885] * RM_Dump: lst_constants: 0
-[20.10.21 20:27:38.885] * RM_Dump: v_passes  : 0
-[20.10.21 20:27:38.885] * RM_Dump: v_elements: 0
-[20.10.21 20:27:38.885] * RM_Dump: v_shaders : 0
-[20.10.21 20:27:38.886] refCount:pBaseZB 1
-[20.10.21 20:27:38.886] refCount:pBaseRT 1
-[20.10.21 20:27:38.886] DeviceREF: 1
-[20.10.21 20:27:38.940] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[20.10.21 20:27:38.940] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[24.10.21 19:44:15.034] * Detected CPU: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz [GenuineIntel], F6/M158/S10
+[24.10.21 19:44:15.036] * CPU features: RDTSC, MMX, SSE, SSE2, SSE3, MONITOR/MWAIT, SSSE3, SSE4.1, SSE4.2, AVX, AVX2
+[24.10.21 19:44:15.036] * CPU cores: [6], threads: [6]
+[24.10.21 19:44:15.036] * CPU0 current freq: 2808 MHz, max freq: 2808 MHz
+[24.10.21 19:44:15.036] * CPU1 current freq: 2808 MHz, max freq: 2808 MHz
+[24.10.21 19:44:15.036] * CPU2 current freq: 2808 MHz, max freq: 2808 MHz
+[24.10.21 19:44:15.036] * CPU3 current freq: 2808 MHz, max freq: 2808 MHz
+[24.10.21 19:44:15.036] * CPU4 current freq: 2808 MHz, max freq: 2808 MHz
+[24.10.21 19:44:15.036] * CPU5 current freq: 2808 MHz, max freq: 2808 MHz
+[24.10.21 19:44:15.036] Initializing File System...
+[24.10.21 19:44:15.037] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db0], size: [678577379]
+[24.10.21 19:44:15.091] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db1], size: [708434331]
+[24.10.21 19:44:15.098] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db2], size: [671169415]
+[24.10.21 19:44:15.103] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db3], size: [684792231]
+[24.10.21 19:44:15.110] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db4], size: [671392842]
+[24.10.21 19:44:15.608] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db5], size: [697475082]
+[24.10.21 19:44:15.694] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db6], size: [672288151]
+[24.10.21 19:44:15.701] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db7], size: [672462598]
+[24.10.21 19:44:15.734] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db8], size: [293378144]
+[24.10.21 19:44:15.748] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db9], size: [79312307]
+[24.10.21 19:44:15.775] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dba], size: [22884835]
+[24.10.21 19:44:15.781] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbb], size: [55194918]
+[24.10.21 19:44:15.787] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbc], size: [160948]
+[24.10.21 19:44:15.788] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbd], size: [101014]
+[24.10.21 19:44:15.789] using fs-ltx fsgame.ltx
+[24.10.21 19:44:15.789] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\]
+[24.10.21 19:44:15.789]   files: [6]
+[24.10.21 19:44:15.790] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\]
+[24.10.21 19:44:15.790]   files: [16]
+[24.10.21 19:44:15.790] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\spawns\]
+[24.10.21 19:44:15.790]   files: [4]
+[24.10.21 19:44:15.790] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\anims\]
+[24.10.21 19:44:15.790]   files: [23]
+[24.10.21 19:44:15.792] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\]
+[24.10.21 19:44:15.792]   files: [12]
+[24.10.21 19:44:15.793] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\meshes\]
+[24.10.21 19:44:15.793]   files: [13]
+[24.10.21 19:44:15.807] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\meshes\]
+[24.10.21 19:44:15.807]   files: [13]
+[24.10.21 19:44:15.819] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\shaders\]
+[24.10.21 19:44:15.819]   files: [7]
+[24.10.21 19:44:15.828] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\sounds\]
+[24.10.21 19:44:15.828]   files: [22]
+[24.10.21 19:44:15.852] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\textures\]
+[24.10.21 19:44:15.852]   files: [62]
+[24.10.21 19:44:15.939] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\scripts\]
+[24.10.21 19:44:15.940]   files: [127]
+[24.10.21 19:44:15.941] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\]
+[24.10.21 19:44:15.941]   files: [30]
+[24.10.21 19:44:15.949] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\]
+[24.10.21 19:44:15.949]   files: [12]
+[24.10.21 19:44:15.949] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\]
+[24.10.21 19:44:15.949]   files: [12]
+[24.10.21 19:44:15.949] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\logs\]
+[24.10.21 19:44:15.949]   files: [43]
+[24.10.21 19:44:15.949] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\screenshots\]
+[24.10.21 19:44:15.949]   files: [8]
+[24.10.21 19:44:15.949] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\mods\]
+[24.10.21 19:44:15.949]   files: [3]
+[24.10.21 19:44:15.953] --Found external arch: [mp_military_2.xdb0], size: [50350518]
+[24.10.21 19:44:15.957] FS: 34626 files cached, 7146Kb memory used.
+[24.10.21 19:44:15.957] Init FileSystem 0.921372 sec
+[24.10.21 19:44:15.958] [OGSR Engine (x64)] build date: [Sep 22 2021 10:23:51]
+[24.10.21 19:44:15.958] [AppVeyor] build version: [2.1.293], repo: [OGSR/OGSR-Engine]
+[24.10.21 19:44:15.958] [_MSC_FULL_VER]: [191627045], [_MSVC_LANG]: [201703L]
+[24.10.21 19:44:15.958] Working Directory: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64]
+[24.10.21 19:44:15.958] CommandLine: ["Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe"  -high]
+[24.10.21 19:44:16.174] Initializing Engine...
+[24.10.21 19:44:16.176] Starting INPUT device...
+[24.10.21 19:44:16.330] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[24.10.21 19:44:16.331] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[24.10.21 19:44:16.361] refCount:m_pAdapter 1
+[24.10.21 19:44:16.361] refCount:pFactory 1
+[24.10.21 19:44:16.362] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[24.10.21 19:44:16.362] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[24.10.21 19:44:16.502] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[24.10.21 19:44:16.503] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[24.10.21 19:44:16.506] --[CEngineAPI::CreateRendererList] Available render modes [5]:
+[24.10.21 19:44:16.506] --  [renderer_r2a]
+[24.10.21 19:44:16.506] --  [renderer_r2]
+[24.10.21 19:44:16.506] --  [renderer_r2.5]
+[24.10.21 19:44:16.506] --  [renderer_r3]
+[24.10.21 19:44:16.506] --  [renderer_r4]
+[24.10.21 19:44:16.506] Executing config-script "user.ltx"...
+[24.10.21 19:44:16.507] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
+[24.10.21 19:44:16.507] [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\user.ltx] successfully loaded.
+[24.10.21 19:44:16.507] --Loading DLL: [xrRender_R2.dll]
+[24.10.21 19:44:16.510] --Loading DLL: [xrGame.dll]
+[24.10.21 19:44:16.547] --------------------------------------------------------------------------------
+[24.10.21 19:44:16.547] [8143MB] physical memory installed, [3458MB] available, [57] percent of memory in use
+[24.10.21 19:44:16.547] PageFile usage: [45MB], Peak PageFile usage: [92MB]
+[24.10.21 19:44:16.547] --------------------------------------------------------------------------------
+[24.10.21 19:44:16.547] * [ D3D ]: textures[0 K]
+[24.10.21 19:44:16.547] * [x-ray]: process heap[24177 K], render[0 K]
+[24.10.21 19:44:16.547] * [x-ray]: economy: strings[4940 K], smem[0 K]
+[24.10.21 19:44:16.549] SOUND: OpenAL: enumerate devices...
+[24.10.21 19:44:16.549] SOUND: OpenAL: EnumerationExtension Present
+[24.10.21 19:44:16.744] devices Generic Software
+[24.10.21 19:44:16.744] SOUND: OpenAL: system  default SndDevice name is Generic Software
+[24.10.21 19:44:17.051] SOUND: OpenAL: All available devices:
+[24.10.21 19:44:17.051] 1. Generic Software, Spec Version 1.1 (default) eax[2] efx[no] xram[no]
+[24.10.21 19:44:17.051] 2. OpenAL Soft, Spec Version 1.1  eax[0] efx[yes] xram[no]
+[24.10.21 19:44:17.052] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx"...
+[24.10.21 19:44:17.060] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx] successfully loaded.
+[24.10.21 19:44:17.060] Executing config-script "user.ltx"...
+[24.10.21 19:44:17.062] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\rspec_high.ltx"...
+[24.10.21 19:44:17.063] ! Unknown command:  r2_sun_shafts
+[24.10.21 19:44:17.064] ! Unknown command:  r__supersample
+[24.10.21 19:44:17.064] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\rspec_high.ltx] successfully loaded.
+[24.10.21 19:44:17.064] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx"...
+[24.10.21 19:44:17.066] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx] successfully loaded.
+[24.10.21 19:44:17.069] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
+[24.10.21 19:44:17.070] [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\user.ltx] successfully loaded.
+[24.10.21 19:44:17.070] SOUND: Selected device is Generic Software
+[24.10.21 19:44:17.127] [OpenAL] EAX 2.0 extension: present
+[24.10.21 19:44:17.127] [OpenAL] EAX 2.0 deferred: present
+[24.10.21 19:44:17.131] * sound : cache: 65537 kb, 4856 lines, 13820 bpl
+[24.10.21 19:44:17.153] Starting RENDER device...
+[24.10.21 19:44:17.191] * GPU [vendor:10DE]-[device:1C81]: NVIDIA GeForce GTX 1050
+[24.10.21 19:44:17.191] * GPU driver: 30.0.14.7196
+[24.10.21 19:44:17.980] * CREATE: DeviceREF: 1
+[24.10.21 19:44:17.980] * Vertex Processor: PURE HARDWARE
+[24.10.21 19:44:17.980] *     Texture memory: 4087 M
+[24.10.21 19:44:17.980] *          DDI-level: 9.0
+[24.10.21 19:44:17.991] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+[24.10.21 19:44:17.993] * GPU vertex cache: unrecognized, 16
+[24.10.21 19:44:17.997] * DVB created: 16384K
+[24.10.21 19:44:17.997] * DIB created: 512K
+[24.10.21 19:44:18.089] ! Version conflict in shader 'models\lightplanes_00'
+[24.10.21 19:44:18.089] ! Version conflict in shader 'models\lightplanesself'
+[24.10.21 19:44:18.089] ! Version conflict in shader 'models\model_puh'
+[24.10.21 19:44:18.089] ! Version conflict in shader 'models\model_refl'
+[24.10.21 19:44:18.089] ! Version conflict in shader 'models\xbrainglass'
+[24.10.21 19:44:18.089] ! Version conflict in shader 'models\xdistortcolorlinv'
+[24.10.21 19:44:18.089] ! Version conflict in shader 'models\xglass'
+[24.10.21 19:44:18.089] ! Version conflict in shader 'models\xglass2'
+[24.10.21 19:44:18.089] ! Version conflict in shader 'models\xlens'
+[24.10.21 19:44:18.089] ! Version conflict in shader 'selflight_static'
+[24.10.21 19:44:18.092] [CTextureDescrMngr::LoadLTX] count of *textures*.ltx files: [1]
+[24.10.21 19:44:18.407] * NULLRT supported
+[24.10.21 19:44:18.407] * ...and used
+[24.10.21 19:44:18.407] * HWDST/PCF supported and used
+[24.10.21 19:44:18.407] * NV-DBT supported and used
+[24.10.21 19:44:19.691] --LUA version: [LuaJIT 2.1.0-beta3]
+[24.10.21 19:44:19.741] Starting engine...
+[24.10.21 19:44:27.110] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[24.10.21 19:44:27.110] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[24.10.21 19:44:27.672] * DVB created: 16384K
+[24.10.21 19:44:27.672] * DIB created: 512K
+[24.10.21 19:44:28.658] * RM_Dump: textures  : 506
+[24.10.21 19:44:28.658] * RM_Dump: rtargets  : 22
+[24.10.21 19:44:28.658] * RM_Dump: vs        : 14
+[24.10.21 19:44:28.658] * RM_Dump: ps        : 53
+[24.10.21 19:44:28.658] * RM_Dump: dcl       : 12
+[24.10.21 19:44:28.658] * RM_Dump: states    : 53
+[24.10.21 19:44:28.658] * RM_Dump: tex_list  : 274
+[24.10.21 19:44:28.658] * RM_Dump: matrices  : 0
+[24.10.21 19:44:28.658] * RM_Dump: lst_constants: 0
+[24.10.21 19:44:28.658] * RM_Dump: v_passes  : 567
+[24.10.21 19:44:28.658] * RM_Dump: v_elements: 567
+[24.10.21 19:44:28.658] * RM_Dump: v_shaders : 355
+[24.10.21 19:44:28.658] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+[24.10.21 19:44:28.659] * GPU vertex cache: recognized, 24
+[24.10.21 19:44:28.659] *** RESET [1550 ms]
+[24.10.21 19:44:28.684] Config-file [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\user.ltx] saved successfully
+[24.10.21 19:44:29.051] * MEMORY USAGE: 178750 K
+[24.10.21 19:44:29.051] * End of synchronization A[1] R[1]
+[24.10.21 19:44:32.232] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[24.10.21 19:44:32.232] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[24.10.21 19:44:32.307] * DVB created: 16384K
+[24.10.21 19:44:32.308] * DIB created: 512K
+[24.10.21 19:44:33.207] * RM_Dump: textures  : 506
+[24.10.21 19:44:33.208] * RM_Dump: rtargets  : 22
+[24.10.21 19:44:33.208] * RM_Dump: vs        : 14
+[24.10.21 19:44:33.208] * RM_Dump: ps        : 53
+[24.10.21 19:44:33.208] * RM_Dump: dcl       : 12
+[24.10.21 19:44:33.208] * RM_Dump: states    : 53
+[24.10.21 19:44:33.208] * RM_Dump: tex_list  : 274
+[24.10.21 19:44:33.208] * RM_Dump: matrices  : 0
+[24.10.21 19:44:33.208] * RM_Dump: lst_constants: 0
+[24.10.21 19:44:33.208] * RM_Dump: v_passes  : 567
+[24.10.21 19:44:33.208] * RM_Dump: v_elements: 567
+[24.10.21 19:44:33.208] * RM_Dump: v_shaders : 355
+[24.10.21 19:44:33.208] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+[24.10.21 19:44:33.208] * GPU vertex cache: recognized, 24
+[24.10.21 19:44:33.208] *** RESET [976 ms]
+[24.10.21 19:44:33.616] * MEMORY USAGE: 177965 K
+[24.10.21 19:44:33.616] * End of synchronization A[1] R[1]
+[24.10.21 19:44:39.745] * phase time: 8 ms
+[24.10.21 19:44:39.775] * phase cmem: 181309 K
+[24.10.21 19:44:39.805] --LUA version: [LuaJIT 2.1.0-beta3]
+[24.10.21 19:44:39.835] * phase time: 89 ms
+[24.10.21 19:44:39.860] * phase cmem: 148620 K
+[24.10.21 19:44:39.866] * Loading spawn registry...
+[24.10.21 19:44:40.429] * 8976 spawn points are successfully loaded
+[24.10.21 19:44:40.429] * Loading objects...
+[24.10.21 19:44:40.727] * 17131 objects are successfully loaded
+[24.10.21 19:44:41.137] * Game щ сознание is successfully loaded from file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\щ сознание.sav' (1.278s)
+[24.10.21 19:44:41.137] * phase time: 1302 ms
+[24.10.21 19:44:41.180] * phase cmem: 193839 K
+[24.10.21 19:44:41.227] # Player not found. New player created.
+[24.10.21 19:44:41.227] !!xrServer::Check_GameSpy_CDKey_Success - 1
+[24.10.21 19:44:41.227] * client : connection accepted - <>
+[24.10.21 19:44:41.228] * phase time: 90 ms
+[24.10.21 19:44:41.270] * phase cmem: 193851 K
+[24.10.21 19:44:41.271] * phase time: 42 ms
+[24.10.21 19:44:41.313] * phase cmem: 193851 K
+[24.10.21 19:44:41.497] --[ISpatial_DB::initialize] bbc is [-0.0, -32.6, -1.8], bbd is [44.0, 11.9, 42.5]
+[24.10.21 19:44:41.497] --[ISpatial_DB::initialize] bbc is [-0.0, -32.6, -1.8], bbd is [44.0, 11.9, 42.5]
+[24.10.21 19:44:41.501] * phase time: 230 ms
+[24.10.21 19:44:41.545] * phase cmem: 210381 K
+[24.10.21 19:44:41.635] * phase time: 133 ms
+[24.10.21 19:44:41.678] * phase cmem: 212994 K
+[24.10.21 19:44:41.678] * [Loading VB] 65532 verts, 2047 Kb
+[24.10.21 19:44:41.689] * [Loading VB] 65530 verts, 2047 Kb
+[24.10.21 19:44:41.698] * [Loading VB] 65525 verts, 2047 Kb
+[24.10.21 19:44:41.706] * [Loading VB] 65525 verts, 2047 Kb
+[24.10.21 19:44:41.716] * [Loading VB] 60154 verts, 1879 Kb
+[24.10.21 19:44:41.724] * [Loading VB] 64539 verts, 2016 Kb
+[24.10.21 19:44:41.732] * [Loading VB] 7068 verts, 220 Kb
+[24.10.21 19:44:41.733] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:44:41.744] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:44:41.754] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:44:41.762] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:44:41.770] * [Loading IB] 180858 indices, 353 Kb
+[24.10.21 19:44:41.773] * [Loading VB] 65533 verts, 767 Kb
+[24.10.21 19:44:41.776] * [Loading VB] 65535 verts, 767 Kb
+[24.10.21 19:44:41.779] * [Loading VB] 65534 verts, 767 Kb
+[24.10.21 19:44:41.784] * [Loading VB] 58531 verts, 685 Kb
+[24.10.21 19:44:41.790] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:44:41.799] * [Loading IB] 1048572 indices, 2047 Kb
+[24.10.21 19:44:41.807] * [Loading IB] 1048572 indices, 2047 Kb
+[24.10.21 19:44:41.815] * [Loading IB] 809220 indices, 1580 Kb
+[24.10.21 19:44:41.821] * phase time: 186 ms
+[24.10.21 19:44:41.863] * phase cmem: 244589 K
+[24.10.21 19:44:41.884] * phase time: 63 ms
+[24.10.21 19:44:41.926] * phase cmem: 246097 K
+[24.10.21 19:44:41.927] * phase time: 42 ms
+[24.10.21 19:44:41.969] * phase cmem: 246059 K
+[24.10.21 19:44:41.970] * Loading HOM: z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\l12u_control_monolith\level.hom
+[24.10.21 19:44:41.974] * phase time: 47 ms
+[24.10.21 19:44:42.017] * phase cmem: 246265 K
+[24.10.21 19:44:42.017] * phase time: 43 ms
+[24.10.21 19:44:42.061] * phase cmem: 246265 K
+[24.10.21 19:44:42.073] - Game configuring : Started 
+[24.10.21 19:44:42.078] - Game configuring : Finished 
+[24.10.21 19:44:42.186] * phase time: 168 ms
+[24.10.21 19:44:42.230] * phase cmem: 251184 K
+[24.10.21 19:44:43.824] * t-report - base: 728, 634471 K
+[24.10.21 19:44:43.824] * t-report - lmap: 3, 3072 K
+[24.10.21 19:44:43.824] * phase time: 1638 ms
+[24.10.21 19:44:43.872] * phase cmem: 908644 K
+[24.10.21 19:44:43.880] * phase time: 56 ms
+[24.10.21 19:44:43.928] * phase cmem: 908648 K
+[24.10.21 19:44:43.983] --------------------------------------------------------------------------------
+[24.10.21 19:44:43.983] [8143MB] physical memory installed, [2412MB] available, [70] percent of memory in use
+[24.10.21 19:44:43.983] PageFile usage: [1250MB], Peak PageFile usage: [1250MB]
+[24.10.21 19:44:43.983] --------------------------------------------------------------------------------
+[24.10.21 19:44:43.983] * [ D3D ]: textures[637544 K]
+[24.10.21 19:44:43.983] * [x-ray]: process heap[908423 K], render[0 K]
+[24.10.21 19:44:43.983] * [x-ray]: economy: strings[7291 K], smem[0 K]
+[24.10.21 19:44:47.125] * MEMORY USAGE: 1138036 K
+[24.10.21 19:44:47.125] * End of synchronization A[1] R[1]
+[24.10.21 19:44:47.125] * phase time: 3300 ms
+[24.10.21 19:44:47.183] * phase cmem: 1138036 K
+[24.10.21 19:44:57.645] DO TIMER ACTION: sleep_med
+[24.10.21 19:45:24.692] DO TIMER ACTION: sleep_med
+[24.10.21 19:45:28.712] DO TIMER ACTION: sleep_med
+[24.10.21 19:45:33.747] * Saving spawns...
+[24.10.21 19:45:33.747] * Saving objects...
+[24.10.21 19:45:33.785] * 17128 objects are successfully saved
+[24.10.21 19:45:33.791] * Game Данил_autosave.sav is successfully saved to file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_autosave.sav'
+[24.10.21 19:45:33.793] - Disconnect
+[24.10.21 19:45:34.601] - Destroying level
+[24.10.21 19:45:34.643] * phase time: 15 ms
+[24.10.21 19:45:34.697] * phase cmem: 788134 K
+[24.10.21 19:45:34.728] --LUA version: [LuaJIT 2.1.0-beta3]
+[24.10.21 19:45:34.744] * phase time: 100 ms
+[24.10.21 19:45:34.793] * phase cmem: 783705 K
+[24.10.21 19:45:34.798] * Loading spawn registry...
+[24.10.21 19:45:35.280] * 8976 spawn points are successfully loaded
+[24.10.21 19:45:35.280] * Loading objects...
+[24.10.21 19:45:35.570] * 17128 objects are successfully loaded
+[24.10.21 19:45:35.976] * Game Данил_autosave is successfully loaded from file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_autosave.sav' (1.183s)
+[24.10.21 19:45:35.976] * phase time: 1232 ms
+[24.10.21 19:45:36.033] * phase cmem: 814409 K
+[24.10.21 19:45:36.080] # Player not found. New player created.
+[24.10.21 19:45:36.080] !!xrServer::Check_GameSpy_CDKey_Success - 1
+[24.10.21 19:45:36.080] * client : connection accepted - <>
+[24.10.21 19:45:36.081] * phase time: 104 ms
+[24.10.21 19:45:36.136] * phase cmem: 814470 K
+[24.10.21 19:45:36.140] * phase time: 59 ms
+[24.10.21 19:45:36.196] * phase cmem: 814470 K
+[24.10.21 19:45:37.408] * phase time: 1267 ms
+[24.10.21 19:45:37.465] * phase cmem: 910551 K
+[24.10.21 19:45:37.630] * phase time: 222 ms
+[24.10.21 19:45:37.686] * phase cmem: 913658 K
+[24.10.21 19:45:37.690] * [Loading VB] 64443 verts, 2013 Kb
+[24.10.21 19:45:37.700] * [Loading VB] 63891 verts, 1996 Kb
+[24.10.21 19:45:37.708] * [Loading VB] 10511 verts, 328 Kb
+[24.10.21 19:45:37.710] * [Loading VB] 65521 verts, 2047 Kb
+[24.10.21 19:45:37.719] * [Loading VB] 65535 verts, 2047 Kb
+[24.10.21 19:45:37.728] * [Loading VB] 65516 verts, 2047 Kb
+[24.10.21 19:45:37.737] * [Loading VB] 65533 verts, 2047 Kb
+[24.10.21 19:45:37.747] * [Loading VB] 65528 verts, 2047 Kb
+[24.10.21 19:45:37.756] * [Loading VB] 65535 verts, 2047 Kb
+[24.10.21 19:45:37.765] * [Loading VB] 65512 verts, 2047 Kb
+[24.10.21 19:45:37.773] * [Loading VB] 65532 verts, 2047 Kb
+[24.10.21 19:45:37.781] * [Loading VB] 65534 verts, 2047 Kb
+[24.10.21 19:45:37.789] * [Loading VB] 65533 verts, 2047 Kb
+[24.10.21 19:45:37.797] * [Loading VB] 65535 verts, 2047 Kb
+[24.10.21 19:45:37.806] * [Loading VB] 65535 verts, 2047 Kb
+[24.10.21 19:45:37.813] * [Loading VB] 65533 verts, 2047 Kb
+[24.10.21 19:45:37.821] * [Loading VB] 65527 verts, 2047 Kb
+[24.10.21 19:45:37.831] * [Loading VB] 65535 verts, 2047 Kb
+[24.10.21 19:45:37.840] * [Loading VB] 65535 verts, 2047 Kb
+[24.10.21 19:45:37.850] * [Loading VB] 65499 verts, 2046 Kb
+[24.10.21 19:45:37.858] * [Loading VB] 65533 verts, 2047 Kb
+[24.10.21 19:45:37.867] * [Loading VB] 65535 verts, 2047 Kb
+[24.10.21 19:45:37.876] * [Loading VB] 65521 verts, 2047 Kb
+[24.10.21 19:45:37.885] * [Loading VB] 65535 verts, 2047 Kb
+[24.10.21 19:45:37.894] * [Loading VB] 65523 verts, 2047 Kb
+[24.10.21 19:45:37.903] * [Loading VB] 65535 verts, 2047 Kb
+[24.10.21 19:45:37.912] * [Loading VB] 65533 verts, 2047 Kb
+[24.10.21 19:45:37.921] * [Loading VB] 65535 verts, 2047 Kb
+[24.10.21 19:45:37.930] * [Loading VB] 65535 verts, 2047 Kb
+[24.10.21 19:45:37.940] * [Loading VB] 65518 verts, 2047 Kb
+[24.10.21 19:45:37.948] * [Loading VB] 65529 verts, 2047 Kb
+[24.10.21 19:45:37.957] * [Loading VB] 65533 verts, 2047 Kb
+[24.10.21 19:45:37.966] * [Loading VB] 65533 verts, 2047 Kb
+[24.10.21 19:45:37.975] * [Loading VB] 65532 verts, 2047 Kb
+[24.10.21 19:45:37.983] * [Loading VB] 65534 verts, 2047 Kb
+[24.10.21 19:45:37.992] * [Loading VB] 65471 verts, 2045 Kb
+[24.10.21 19:45:38.001] * [Loading VB] 65533 verts, 2047 Kb
+[24.10.21 19:45:38.009] * [Loading VB] 3714 verts, 116 Kb
+[24.10.21 19:45:38.010] * [Loading VB] 65523 verts, 2047 Kb
+[24.10.21 19:45:38.019] * [Loading VB] 34492 verts, 1077 Kb
+[24.10.21 19:45:38.023] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.033] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.043] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.051] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.059] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.068] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.076] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.085] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.093] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.102] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.114] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.123] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.131] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.140] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.149] * [Loading IB] 537219 indices, 1049 Kb
+[24.10.21 19:45:38.155] * [Loading VB] 65535 verts, 767 Kb
+[24.10.21 19:45:38.160] * [Loading VB] 65533 verts, 767 Kb
+[24.10.21 19:45:38.164] * [Loading VB] 65535 verts, 767 Kb
+[24.10.21 19:45:38.167] * [Loading VB] 65535 verts, 767 Kb
+[24.10.21 19:45:38.171] * [Loading VB] 65533 verts, 767 Kb
+[24.10.21 19:45:38.174] * [Loading VB] 65535 verts, 767 Kb
+[24.10.21 19:45:38.178] * [Loading VB] 65533 verts, 767 Kb
+[24.10.21 19:45:38.180] * [Loading VB] 65535 verts, 767 Kb
+[24.10.21 19:45:38.184] * [Loading VB] 65535 verts, 767 Kb
+[24.10.21 19:45:38.190] * [Loading VB] 65535 verts, 767 Kb
+[24.10.21 19:45:38.192] * [Loading VB] 65535 verts, 767 Kb
+[24.10.21 19:45:38.195] * [Loading VB] 65535 verts, 767 Kb
+[24.10.21 19:45:38.199] * [Loading VB] 65533 verts, 767 Kb
+[24.10.21 19:45:38.202] * [Loading VB] 65535 verts, 767 Kb
+[24.10.21 19:45:38.206] * [Loading VB] 65535 verts, 767 Kb
+[24.10.21 19:45:38.208] * [Loading VB] 65535 verts, 767 Kb
+[24.10.21 19:45:38.212] * [Loading VB] 65534 verts, 767 Kb
+[24.10.21 19:45:38.217] * [Loading VB] 65532 verts, 767 Kb
+[24.10.21 19:45:38.219] * [Loading VB] 65535 verts, 767 Kb
+[24.10.21 19:45:38.222] * [Loading VB] 59450 verts, 696 Kb
+[24.10.21 19:45:38.227] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.238] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.247] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.256] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.266] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.275] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.283] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.291] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.299] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.307] * [Loading IB] 1048575 indices, 2047 Kb
+[24.10.21 19:45:38.315] * [Loading IB] 1037157 indices, 2025 Kb
+[24.10.21 19:45:38.323] * phase time: 692 ms
+[24.10.21 19:45:38.380] * phase cmem: 1058552 K
+[24.10.21 19:45:38.812] * phase time: 489 ms
+[24.10.21 19:45:38.869] * phase cmem: 1062799 K
+[24.10.21 19:45:38.897] * [DETAILS] VertexConsts(256), Batch(61)
+[24.10.21 19:45:38.897] * [DETAILS] 40687 v(20), 26352 p
+[24.10.21 19:45:38.897] * [DETAILS] Batch(61), VB(794K), IB(154K)
+[24.10.21 19:45:38.898] * phase time: 86 ms
+[24.10.21 19:45:38.955] * phase cmem: 1063815 K
+[24.10.21 19:45:38.955] * Loading HOM: z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\l12_stancia_2\level.hom
+[24.10.21 19:45:38.958] * phase time: 60 ms
+[24.10.21 19:45:39.016] * phase cmem: 1064025 K
+[24.10.21 19:45:39.017] * phase time: 58 ms
+[24.10.21 19:45:39.076] * phase cmem: 1064025 K
+[24.10.21 19:45:39.088] - Game configuring : Started 
+[24.10.21 19:45:39.097] - Game configuring : Finished 
+[24.10.21 19:45:39.103] * phase time: 86 ms
+[24.10.21 19:45:39.161] * phase cmem: 1072128 K
+[24.10.21 19:45:41.880] * t-report - base: 1144, 951777 K
+[24.10.21 19:45:41.880] * t-report - lmap: 10, 10241 K
+[24.10.21 19:45:41.880] * phase time: 2776 ms
+[24.10.21 19:45:41.941] * phase cmem: 1494480 K
+[24.10.21 19:45:41.946] * phase time: 66 ms
+[24.10.21 19:45:42.007] * phase cmem: 1494481 K
+[24.10.21 19:45:42.076] --------------------------------------------------------------------------------
+[24.10.21 19:45:42.076] [8143MB] physical memory installed, [2008MB] available, [75] percent of memory in use
+[24.10.21 19:45:42.076] PageFile usage: [1809MB], Peak PageFile usage: [1811MB]
+[24.10.21 19:45:42.076] --------------------------------------------------------------------------------
+[24.10.21 19:45:42.076] * [ D3D ]: textures[962018 K]
+[24.10.21 19:45:42.076] * [x-ray]: process heap[1494077 K], render[0 K]
+[24.10.21 19:45:42.076] * [x-ray]: economy: strings[8707 K], smem[5122 K]
+[24.10.21 19:45:45.232] !!CAI_Stalker : cannot access class member action_planner! Object: [esc_heli_00]
+[24.10.21 19:45:45.232] *********************************************************************************
+[24.10.21 19:45:45.232] [print_output([CScriptEngine::lua_pcall_failed])] SCRIPT RUNTIME ERROR:
+...er shadow of chernobyl\gamedata\scripts\xr_remark.script:205: attempt to index local 'manager' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	...er shadow of chernobyl\gamedata\scripts\xr_remark.script:205: in function 'add_to_binder'
+	...ker shadow of chernobyl\gamedata\scripts\xr_logic.script:466: in function 'assign_storage_and_bind'
+	...er shadow of chernobyl\gamedata\scripts\xr_remark.script:261: in function 'set_scheme'
+	...ker shadow of chernobyl\gamedata\scripts\xr_logic.script:379: in function 'activate_by_section'
+	...ker shadow of chernobyl\gamedata\scripts\xr_logic.script:1402: in function 'initialize_obj'
+	...er shadow of chernobyl\gamedata\scripts\bind_heli.script:74: in function <...er shadow of chernobyl\gamedata\scripts\bind_heli.script:66>
+[24.10.21 19:45:45.232] *********************************************************************************
+[24.10.21 19:45:45.232] 
+FATAL ERROR
+
+[error]Expression    : FATAL ERROR
+[error]Function      : CScriptEngine::lua_pcall_failed
+[error]File          : d:\a\ogsr-engine\ogsr-engine\ogsr_engine\common_ai\script_engine.cpp
+[error]Line          : 52
+[error]Description   : [CScriptEngine::lua_pcall_failed]: ...er shadow of chernobyl\gamedata\scripts\xr_remark.script:205: attempt to index local 'manager' (a nil value)
+
+[24.10.21 19:45:45.232] ***************************[ScriptCrashHandler]**********************************
+[24.10.21 19:45:45.232] stack traceback:
+	[C]: in function '__index'
+	...er shadow of chernobyl\gamedata\scripts\xr_remark.script:205: in function 'add_to_binder'
+	...ker shadow of chernobyl\gamedata\scripts\xr_logic.script:466: in function 'assign_storage_and_bind'
+	...er shadow of chernobyl\gamedata\scripts\xr_remark.script:261: in function 'set_scheme'
+	...ker shadow of chernobyl\gamedata\scripts\xr_logic.script:379: in function 'activate_by_section'
+	...ker shadow of chernobyl\gamedata\scripts\xr_logic.script:1402: in function 'initialize_obj'
+	...er shadow of chernobyl\gamedata\scripts\bind_heli.script:74: in function <...er shadow of chernobyl\gamedata\scripts\bind_heli.script:66>
+[24.10.21 19:45:45.232] 	Locals: 
+[24.10.21 19:45:45.232] 	 string (*temporary) : ...er shadow of chernobyl\gamedata\scripts\xr_remark.script:205: attempt to index local 'manager' (a nil value)
+[24.10.21 19:45:45.232] 	End
+[24.10.21 19:45:45.232] 	Locals: 
+[24.10.21 19:45:45.232] 	 userdata npc : (game_object): 0000022E0F9DDFF0
+[24.10.21 19:45:45.232] 	 userdata ini : (ini_file): 0000022DC5E49E30
+[24.10.21 19:45:45.232] 	 string scheme : remark
+[24.10.21 19:45:45.232] 	 string section : remark1
+[24.10.21 19:45:45.232] 	 Table: storage
+[24.10.21 19:45:45.232] 	 Table: operators
+[24.10.21 19:45:45.232] 			 number operators.action_remark : 3884.000000
+[24.10.21 19:45:45.232] 	 Table: properties
+[24.10.21 19:45:45.232] 			 number properties.need_remark : 4565.000000
+[24.10.21 19:45:45.232] 			 number properties.event : 49.000000
+[24.10.21 19:45:45.232] 	 nil manager : [not available]
+[24.10.21 19:45:45.232] 	 number (*temporary) : 3884.000000
+[24.10.21 19:45:45.232] 	 nil (*temporary) : [not available]
+[24.10.21 19:45:45.232] 	 function (*temporary) : [[function]]
+[24.10.21 19:45:45.232] 	 number (*temporary) : 0.000000
+[24.10.21 19:45:45.232] 	 string (*temporary) : DEBUG: add_to_binder [%s]: scheme='%s', section='%s'
+[24.10.21 19:45:45.232] 	 number (*temporary) : 0.000000
+[24.10.21 19:45:45.232] 	 Table: (*temporary)
+[24.10.21 19:45:45.232] 			 function (*temporary).remove_precondition : [[function]]
+[24.10.21 19:45:45.232] 			 function (*temporary).execute : [[function]]
+[24.10.21 19:45:45.232] 			 function (*temporary).finalize : [[function]]
+[24.10.21 19:45:45.232] 			 function (*temporary).add_precondition : [[function]]
+[24.10.21 19:45:45.232] 			 function (*temporary).set_weight : [[function]]
+[24.10.21 19:45:45.232] 			 function (*temporary).time_callback : [[function]]
+[24.10.21 19:45:45.232] 			 function (*temporary).initialize : [[function]]
+[24.10.21 19:45:45.232] 			 function (*temporary).setup : [[function]]
+[24.10.21 19:45:45.232] 			 function (*temporary).turn_end_callback : [[function]]
+[24.10.21 19:45:45.232] 			 function (*temporary).add_effect : [[function]]
+[24.10.21 19:45:45.232] 			 function (*temporary).get_target : [[function]]
+[24.10.21 19:45:45.232] 			 function (*temporary).remove_effect : [[function]]
+[24.10.21 19:45:45.232] 			 function (*temporary).__init : [[function]]
+[24.10.21 19:45:45.233] 			 function (*temporary).activate_scheme : [[function]]
+[24.10.21 19:45:45.233] 			 function (*temporary).update : [[function]]
+[24.10.21 19:45:45.233] 			 function (*temporary).weight : [[function]]
+[24.10.21 19:45:45.233] 	 string (*temporary) : attempt to index local 'manager' (a nil value)
+[24.10.21 19:45:45.233] 	End
+[24.10.21 19:45:45.233] 	Locals: 
+[24.10.21 19:45:45.233] 	 userdata npc : (game_object): 0000022E0F9DDFF0
+[24.10.21 19:45:45.233] 	 userdata ini : (ini_file): 0000022DC5E49E30
+[24.10.21 19:45:45.233] 	 string scheme : remark
+[24.10.21 19:45:45.233] 	 string section : remark1
+[24.10.21 19:45:45.233] 	 number npc_id : 16197.000000
+[24.10.21 19:45:45.233] 	 Table: st
+[24.10.21 19:45:45.233] 	End
+[24.10.21 19:45:45.233] 	Locals: 
+[24.10.21 19:45:45.233] 	 userdata npc : (game_object): 0000022E0F9DDFF0
+[24.10.21 19:45:45.233] 	 userdata ini : (ini_file): 0000022DC5E49E30
+[24.10.21 19:45:45.233] 	 string scheme : remark
+[24.10.21 19:45:45.233] 	 string section : remark1
+[24.10.21 19:45:45.233] 	 string gulag_name : 
+[24.10.21 19:45:45.233] 	End
+[24.10.21 19:45:45.233] 	Locals: 
+[24.10.21 19:45:45.233] 	 userdata npc : (game_object): 0000022E0F9DDFF0
+[24.10.21 19:45:45.233] 	 userdata ini : (ini_file): 0000022DC5E49E30
+[24.10.21 19:45:45.233] 	 string section : remark1
+[24.10.21 19:45:45.233] 	 boolean loading : false
+[24.10.21 19:45:45.233] 	 number npc_id : 16197.000000
+[24.10.21 19:45:45.233] 	 string scheme : remark
+[24.10.21 19:45:45.233] 	 string filename : xr_remark
+[24.10.21 19:45:45.233] 	End
+[24.10.21 19:45:45.233] 	Locals: 
+[24.10.21 19:45:45.233] 	 userdata obj : (game_object): 0000022E0F9DDFF0
+[24.10.21 19:45:45.233] 	 Table: st
+[24.10.21 19:45:45.233] 			 userdata st.activation_game_time : (CTime): 0000022E12A97F30
+[24.10.21 19:45:45.233] 			 Userdata: st.combat
+[24.10.21 19:45:45.233] 					 table st.combat.st : [...]
+[24.10.21 19:45:45.233] 					 number st.combat.vis_dec : 6.000000
+[24.10.21 19:45:45.233] 					 number st.combat.flyby_attack_dist : 100.000000
+[24.10.21 19:45:45.233] 					 boolean st.combat.initialized : false
+[24.10.21 19:45:45.233] 					 number st.combat.default_safe_altitude : 153.606003
+[24.10.21 19:45:45.233] 					 boolean st.combat.attack_before_retreat : false
+[24.10.21 19:45:45.233] 					 number st.combat.vis_threshold : 60.000000
+[24.10.21 19:45:45.233] 					 number st.combat.vis_inc : 6.000000
+[24.10.21 19:45:45.233] 					 userdata st.combat.heliObject : (CHelicopter): 0000022D90E11760
+[24.10.21 19:45:45.233] 					 userdata st.combat.object : (game_object): 0000022E0F9DDFF0
+[24.10.21 19:45:45.233] 					 number st.combat.search_velocity : 5.000000
+[24.10.21 19:45:45.233] 					 number st.combat.default_velocity : 30.000000
+[24.10.21 19:45:45.233] 					 number st.combat.m_max_mgun_dist : 150.000000
+[24.10.21 19:45:45.233] 					 number st.combat.vis_time_quant : 200.000000
+[24.10.21 19:45:45.233] 					 number st.combat.level_max_y : 150.606003
+[24.10.21 19:45:45.233] 					 number st.combat.vis_next_time : 0.000000
+[24.10.21 19:45:45.233] 					 boolean st.combat.enemy_forgetable : true
+[24.10.21 19:45:45.233] 					 number st.combat.search_attack_dist : 70.000000
+[24.10.21 19:45:45.233] 					 number st.combat.flame_start_health : 0.300000
+[24.10.21 19:45:45.233] 					 number st.combat.round_velocity : 10.000000
+[24.10.21 19:45:45.233] 					 number st.combat.forget_timeout : 60000.000000
+[24.10.21 19:45:45.233] 					 boolean st.combat.section_changed : false
+[24.10.21 19:45:45.233] 					 number st.combat.vis : 0.000000
+[24.10.21 19:45:45.233] 			 string st.section_logic : logic
+[24.10.21 19:45:45.233] 			 string st.ini_filename : <customdata>
+[24.10.21 19:45:45.233] 			 number st.alt_check_time : 83040.000000
+[24.10.21 19:45:45.233] 			 userdata st.ini : (ini_file): 0000022DC5E49E30
+[24.10.21 19:45:45.233] 			 Table: st.remark
+[24.10.21 19:45:45.233] 			 Table: st.overrides
+[24.10.21 19:45:45.233] 					 boolean st.overrides.companion_enabled : false
+[24.10.21 19:45:45.233] 					 boolean st.overrides.combat_ignore_keep_when_attacked : false
+[24.10.21 19:45:45.233] 			 number st.last_alt : 3.000000
+[24.10.21 19:45:45.233] 			 number st.activation_time : 82463.000000
+[24.10.21 19:45:45.233] 			 userdata st.flame_start_snd : (sound_object): 0000022E0F9DDE40
+[24.10.21 19:45:45.233] 			 string st.gulag_name : 
+[24.10.21 19:45:45.233] 			 number st.stype : 3.000000
+[24.10.21 19:45:45.233] 	 boolean loaded : false
+[24.10.21 19:45:45.233] 	 userdata actor : (game_object): 0000022DB1B98ED0
+[24.10.21 19:45:45.233] 	 number stype : 3.000000
+[24.10.21 19:45:45.233] 	 string ini_filename : <customdata>
+[24.10.21 19:45:45.233] 	 string sect : remark1
+[24.10.21 19:45:45.233] 	End
+[24.10.21 19:45:45.233] 	Locals: 
+[24.10.21 19:45:45.233] 	 Userdata: self
+[24.10.21 19:45:45.233] 			 userdata self.ini : (ini_file): 0000022DC5E49E30
+[24.10.21 19:45:45.233] 			 Table: self.st
+[24.10.21 19:45:45.233] 					 userdata self.st.activation_game_time : (CTime): 0000022E12A97F30
+[24.10.21 19:45:45.233] 					 Userdata: self.st.combat
+[24.10.21 19:45:45.233] 							 table self.st.combat.st : [...]
+[24.10.21 19:45:45.233] 							 number self.st.combat.vis_dec : 6.000000
+[24.10.21 19:45:45.233] 							 number self.st.combat.flyby_attack_dist : 100.000000
+[24.10.21 19:45:45.233] 							 boolean self.st.combat.initialized : false
+[24.10.21 19:45:45.233] 							 number self.st.combat.default_safe_altitude : 153.606003
+[24.10.21 19:45:45.233] 							 boolean self.st.combat.attack_before_retreat : false
+[24.10.21 19:45:45.233] 							 number self.st.combat.vis_threshold : 60.000000
+[24.10.21 19:45:45.233] 							 number self.st.combat.vis_inc : 6.000000
+[24.10.21 19:45:45.233] 							 userdata self.st.combat.heliObject : (CHelicopter): 0000022D90E11760
+[24.10.21 19:45:45.233] 							 userdata self.st.combat.object : (game_object): 0000022E0F9DDFF0
+[24.10.21 19:45:45.233] 							 number self.st.combat.search_velocity : 5.000000
+[24.10.21 19:45:45.233] 							 number self.st.combat.default_velocity : 30.000000
+[24.10.21 19:45:45.233] 							 number self.st.combat.m_max_mgun_dist : 150.000000
+[24.10.21 19:45:45.233] 							 number self.st.combat.vis_time_quant : 200.000000
+[24.10.21 19:45:45.233] 							 number self.st.combat.level_max_y : 150.606003
+[24.10.21 19:45:45.233] 							 number self.st.combat.vis_next_time : 0.000000
+[24.10.21 19:45:45.233] 							 boolean self.st.combat.enemy_forgetable : true
+[24.10.21 19:45:45.233] 							 number self.st.combat.search_attack_dist : 70.000000
+[24.10.21 19:45:45.233] 							 number self.st.combat.flame_start_health : 0.300000
+[24.10.21 19:45:45.233] 							 number self.st.combat.round_velocity : 10.000000
+[24.10.21 19:45:45.233] 							 number self.st.combat.forget_timeout : 60000.000000
+[24.10.21 19:45:45.233] 							 boolean self.st.combat.section_changed : false
+[24.10.21 19:45:45.233] 							 number self.st.combat.vis : 0.000000
+[24.10.21 19:45:45.233] 					 string self.st.section_logic : logic
+[24.10.21 19:45:45.233] 					 string self.st.ini_filename : <customdata>
+[24.10.21 19:45:45.233] 					 number self.st.alt_check_time : 83040.000000
+[24.10.21 19:45:45.233] 					 userdata self.st.ini : (ini_file): 0000022DC5E49E30
+[24.10.21 19:45:45.233] 					 table self.st.remark : [...]
+[24.10.21 19:45:45.233] 					 table self.st.overrides : [...]
+[24.10.21 19:45:45.234] 					 number self.st.last_alt : 3.000000
+[24.10.21 19:45:45.234] 					 number self.st.activation_time : 82463.000000
+[24.10.21 19:45:45.234] 					 userdata self.st.flame_start_snd : (sound_object): 0000022E0F9DDE40
+[24.10.21 19:45:45.234] 					 string self.st.gulag_name : 
+[24.10.21 19:45:45.234] 					 number self.st.stype : 3.000000
+[24.10.21 19:45:45.234] 			 number self.flame_start_health : 0.300000
+[24.10.21 19:45:45.234] 			 number self.last_hit_snd_timeout : 0.000000
+[24.10.21 19:45:45.234] 			 boolean self.loaded : false
+[24.10.21 19:45:45.234] 			 boolean self.initialized : true
+[24.10.21 19:45:45.234] 	 number delta : 175.000000
+[24.10.21 19:45:45.234] 	End
+[24.10.21 19:45:45.234] *********************************************************************************
+[24.10.21 19:45:45.234] ********************************************************************************
+[24.10.21 19:45:45.234] !![LogStackTrace] Thread: [X-RAY Primary thread]
+[24.10.21 19:45:46.434] !!stack trace:
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFC74563E58], Fun: [BuildStackTrace()] + [48 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\stacktrace_collector.cpp-->152]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFC7458A7E1], Fun: [LogStackTrace()] + [73 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->58] + [13 byte(s)]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFC7458A626], Fun: [xrDebug::backend()] + [174 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->172]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFC7458A563], Fun: [xrDebug::fatal()] + [131 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->252]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFC2C90B864], Fun: [CScriptEngine::lua_pcall_failed()] + [120 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\common_ai\script_engine.cpp-->53]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFC301A5490], Fun: [lj_BC_FUNCC()] + [66 byte(s)]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFC301E3E47], Fun: [lj_err_run()] + [327 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_err.c-->851]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFC301E2F19], Fun: [err_msgv()] + [121 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_err.c-->874] + [8 byte(s)]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFC301E3C26], Fun: [lj_err_optype()] + [182 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_err.c-->908] + [34 byte(s)]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFC301FA0C8], Fun: [lj_meta_tget()] + [440 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_meta.c-->147] + [17 byte(s)]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFC301A5977], Fun: [lj_vmeta_tgetv()] + [44 byte(s)]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFC301AF0BB], Fun: [lua_pcall()] + [171 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_api.c-->1144]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\Luabind.dll], AddrPC.Offset: [000000018000EB84], Fun: [luabind::detail::pcall()] + [100 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\src\pcall.cpp-->40] + [16 byte(s)]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFC2C861E55], Fun: [luabind::detail::proxy_member_void_caller<unsigned int const *>::~proxy_member_void_caller<unsigned int const *>()] + [73 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\luabind\detail\call_member.hpp-->269] + [16 byte(s)]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFC2C861A81], Fun: [CScriptBinderObjectWrapper::shedule_Update()] + [53 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\script_binder_object_wrapper.cpp-->67]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFC2C77CCE3], Fun: [CScriptBinder::shedule_Update()] + [19 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\script_binder.cpp-->119]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFC2C96BCBF], Fun: [CEntity::shedule_Update()] + [27 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\entity.cpp-->325]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFC2CA2DFB6], Fun: [CHelicopter::shedule_Update()] + [46 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\helicopter.cpp-->442]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7B5CDA133], Fun: [CSheduler::ProcessStep()] + [467 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\xrsheduler.cpp-->356]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7B5CDA4E5], Fun: [CSheduler::Update()] + [389 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\xrsheduler.cpp-->462]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFC2C91E8AA], Fun: [CGamePersistent::OnFrame()] + [638 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\gamepersistent.cpp-->582]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7B5D0CD48], Fun: [CRegistrator<pureFrame>::Process()] + [84 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\pure.h-->86]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7B5D0BE28], Fun: [CRenderDevice::FrameMove()] + [292 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->443]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7B5D0C197], Fun: [CRenderDevice::on_idle()] + [223 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->214]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7B5D0C97E], Fun: [CRenderDevice::message_loop()] + [98 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->316]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7B5D0BFFB], Fun: [CRenderDevice::Run()] + [411 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->389]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7B5CCEDA8], Fun: [Startup()] + [296 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\x_ray.cpp-->218]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7B5CCF11E], Fun: [WinMain_impl()] + [478 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\x_ray.cpp-->418]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7B5CCC7F8], Fun: [WinMain()] + [72 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\x_ray.cpp-->439]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7B5D2E12A], Fun: [__scrt_common_main_seh()] + [262 byte(s)], File-->Line: [d:\agent\_work\3\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl-->288] + [33 byte(s)]
+! Module: [C:\WINDOWS\System32\KERNEL32.DLL], AddrPC.Offset: [00007FFC9D107034], Fun: [BaseThreadInitThunk()] + [20 byte(s)]
+! Module: [C:\WINDOWS\SYSTEM32\ntdll.dll], AddrPC.Offset: [00007FFC9EFA2651], Fun: [RtlUserThreadStart()] + [33 byte(s)]
+[24.10.21 19:45:46.434] ********************************************************************************
+[24.10.21 19:45:56.007] * [R_occlusion::occq_destroy]: fids[84] used[84] pool[84]
+[24.10.21 19:45:56.010] * [R_occlusion::occq_destroy]: released [0] used and [84] pool queries
+[24.10.21 19:45:56.018] 
+FATAL ERROR
+
+[error]Expression    : ExitFromWinMain
+[error]Function      : xrDebug::_initialize::<lambda_c6715271fb6c8a51385a964c2e1e361c>::operator ()
+[error]File          : d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp
+[error]Line          : 541
+[error]Description   : Unexpected application exit!
+
+[24.10.21 19:45:56.018] ***************************[ScriptCrashHandler]**********************************
+[24.10.21 19:45:56.018] stack traceback:
+	[C]: in function '__index'
+	...er shadow of chernobyl\gamedata\scripts\xr_remark.script:205: in function 'add_to_binder'
+	...ker shadow of chernobyl\gamedata\scripts\xr_logic.script:466: in function 'assign_storage_and_bind'
+	...er shadow of chernobyl\gamedata\scripts\xr_remark.script:261: in function 'set_scheme'
+	...ker shadow of chernobyl\gamedata\scripts\xr_logic.script:379: in function 'activate_by_section'
+	...ker shadow of chernobyl\gamedata\scripts\xr_logic.script:1402: in function 'initialize_obj'
+	...er shadow of chernobyl\gamedata\scripts\bind_heli.script:74: in function <...er shadow of chernobyl\gamedata\scripts\bind_heli.script:66>
+[24.10.21 19:45:56.018] 	Locals: 
+[24.10.21 19:45:56.018] 	 string (*temporary) : ...er shadow of chernobyl\gamedata\scripts\xr_remark.script:205: attempt to index local 'manager' (a nil value)
+[24.10.21 19:45:56.018] 	End
+[24.10.21 19:45:56.018] 	Locals: 
+[24.10.21 19:45:56.018] 	 userdata npc : (game_object): 0000022E0F9DDFF0
+[24.10.21 19:45:56.018] 	 userdata ini : (ini_file): 0000022DC5E49E30
+[24.10.21 19:45:56.018] 	 string scheme : remark
+[24.10.21 19:45:56.018] 	 string section : remark1
+[24.10.21 19:45:56.018] 	 Table: storage
+[24.10.21 19:45:56.018] 	 Table: operators
+[24.10.21 19:45:56.018] 			 number operators.action_remark : 3884.000000
+[24.10.21 19:45:56.018] 	 Table: properties
+[24.10.21 19:45:56.018] 			 number properties.need_remark : 4565.000000
+[24.10.21 19:45:56.018] 			 number properties.event : 49.000000
+[24.10.21 19:45:56.018] 	 nil manager : [not available]
+[24.10.21 19:45:56.018] 	 number (*temporary) : 3884.000000
+[24.10.21 19:45:56.018] 	 nil (*temporary) : [not available]
+[24.10.21 19:45:56.018] 	 function (*temporary) : [[function]]
+[24.10.21 19:45:56.018] 	 number (*temporary) : 0.000000
+[24.10.21 19:45:56.018] 	 string (*temporary) : DEBUG: add_to_binder [%s]: scheme='%s', section='%s'
+[24.10.21 19:45:56.018] 	 number (*temporary) : 0.000000
+[24.10.21 19:45:56.018] 	 Table: (*temporary)
+[24.10.21 19:45:56.018] 			 function (*temporary).remove_precondition : [[function]]
+[24.10.21 19:45:56.018] 			 function (*temporary).execute : [[function]]
+[24.10.21 19:45:56.018] 			 function (*temporary).finalize : [[function]]
+[24.10.21 19:45:56.018] 			 function (*temporary).add_precondition : [[function]]
+[24.10.21 19:45:56.018] 			 function (*temporary).set_weight : [[function]]
+[24.10.21 19:45:56.018] 			 function (*temporary).time_callback : [[function]]
+[24.10.21 19:45:56.018] 			 function (*temporary).initialize : [[function]]
+[24.10.21 19:45:56.018] 			 function (*temporary).setup : [[function]]
+[24.10.21 19:45:56.018] 			 function (*temporary).turn_end_callback : [[function]]
+[24.10.21 19:45:56.018] 			 function (*temporary).add_effect : [[function]]
+[24.10.21 19:45:56.018] 			 function (*temporary).get_target : [[function]]
+[24.10.21 19:45:56.018] 			 function (*temporary).remove_effect : [[function]]
+[24.10.21 19:45:56.018] 			 function (*temporary).__init : [[function]]
+[24.10.21 19:45:56.018] 			 function (*temporary).activate_scheme : [[function]]
+[24.10.21 19:45:56.018] 			 function (*temporary).update : [[function]]
+[24.10.21 19:45:56.018] 			 function (*temporary).weight : [[function]]
+[24.10.21 19:45:56.018] 	 string (*temporary) : attempt to index local 'manager' (a nil value)
+[24.10.21 19:45:56.018] 	End
+[24.10.21 19:45:56.018] 	Locals: 
+[24.10.21 19:45:56.018] 	 userdata npc : (game_object): 0000022E0F9DDFF0
+[24.10.21 19:45:56.018] 	 userdata ini : (ini_file): 0000022DC5E49E30
+[24.10.21 19:45:56.018] 	 string scheme : remark
+[24.10.21 19:45:56.018] 	 string section : remark1
+[24.10.21 19:45:56.018] 	 number npc_id : 16197.000000
+[24.10.21 19:45:56.018] 	 Table: st
+[24.10.21 19:45:56.018] 	End
+[24.10.21 19:45:56.018] 	Locals: 
+[24.10.21 19:45:56.018] 	 userdata npc : (game_object): 0000022E0F9DDFF0
+[24.10.21 19:45:56.018] 	 userdata ini : (ini_file): 0000022DC5E49E30
+[24.10.21 19:45:56.018] 	 string scheme : remark
+[24.10.21 19:45:56.018] 	 string section : remark1
+[24.10.21 19:45:56.018] 	 string gulag_name : 
+[24.10.21 19:45:56.018] 	End
+[24.10.21 19:45:56.018] 	Locals: 
+[24.10.21 19:45:56.018] 	 userdata npc : (game_object): 0000022E0F9DDFF0
+[24.10.21 19:45:56.018] 	 userdata ini : (ini_file): 0000022DC5E49E30
+[24.10.21 19:45:56.018] 	 string section : remark1
+[24.10.21 19:45:56.018] 	 boolean loading : false
+[24.10.21 19:45:56.018] 	 number npc_id : 16197.000000
+[24.10.21 19:45:56.018] 	 string scheme : remark
+[24.10.21 19:45:56.018] 	 string filename : xr_remark
+[24.10.21 19:45:56.018] 	End
+[24.10.21 19:45:56.018] 	Locals: 
+[24.10.21 19:45:56.018] 	 userdata obj : (game_object): 0000022E0F9DDFF0
+[24.10.21 19:45:56.019] 	 Table: st
+[24.10.21 19:45:56.019] 			 userdata st.activation_game_time : (CTime): 0000022E12A97F30
+[24.10.21 19:45:56.019] 			 Userdata: st.combat
+[24.10.21 19:45:56.019] 					 table st.combat.st : [...]
+[24.10.21 19:45:56.019] 					 number st.combat.vis_dec : 6.000000
+[24.10.21 19:45:56.019] 					 number st.combat.flyby_attack_dist : 100.000000
+[24.10.21 19:45:56.019] 					 boolean st.combat.initialized : false
+[24.10.21 19:45:56.019] 					 number st.combat.default_safe_altitude : 153.606003
+[24.10.21 19:45:56.019] 					 boolean st.combat.attack_before_retreat : false
+[24.10.21 19:45:56.019] 					 number st.combat.vis_threshold : 60.000000
+[24.10.21 19:45:56.019] 					 number st.combat.vis_inc : 6.000000
+[24.10.21 19:45:56.019] 					 userdata st.combat.heliObject : (CHelicopter): 0000022D90E11760
+[24.10.21 19:45:56.019] 					 userdata st.combat.object : (game_object): 0000022E0F9DDFF0
+[24.10.21 19:45:56.019] 					 number st.combat.search_velocity : 5.000000
+[24.10.21 19:45:56.019] 					 number st.combat.default_velocity : 30.000000
+[24.10.21 19:45:56.019] 					 number st.combat.m_max_mgun_dist : 150.000000
+[24.10.21 19:45:56.019] 					 number st.combat.vis_time_quant : 200.000000
+[24.10.21 19:45:56.019] 					 number st.combat.level_max_y : 150.606003
+[24.10.21 19:45:56.019] 					 number st.combat.vis_next_time : 0.000000
+[24.10.21 19:45:56.019] 					 boolean st.combat.enemy_forgetable : true
+[24.10.21 19:45:56.019] 					 number st.combat.search_attack_dist : 70.000000
+[24.10.21 19:45:56.019] 					 number st.combat.flame_start_health : 0.300000
+[24.10.21 19:45:56.019] 					 number st.combat.round_velocity : 10.000000
+[24.10.21 19:45:56.019] 					 number st.combat.forget_timeout : 60000.000000
+[24.10.21 19:45:56.019] 					 boolean st.combat.section_changed : false
+[24.10.21 19:45:56.019] 					 number st.combat.vis : 0.000000
+[24.10.21 19:45:56.019] 			 string st.section_logic : logic
+[24.10.21 19:45:56.019] 			 string st.ini_filename : <customdata>
+[24.10.21 19:45:56.019] 			 number st.alt_check_time : 83040.000000
+[24.10.21 19:45:56.019] 			 userdata st.ini : (ini_file): 0000022DC5E49E30
+[24.10.21 19:45:56.019] 			 Table: st.remark
+[24.10.21 19:45:56.019] 			 Table: st.overrides
+[24.10.21 19:45:56.019] 					 boolean st.overrides.companion_enabled : false
+[24.10.21 19:45:56.019] 					 boolean st.overrides.combat_ignore_keep_when_attacked : false
+[24.10.21 19:45:56.019] 			 number st.last_alt : 3.000000
+[24.10.21 19:45:56.019] 			 number st.activation_time : 82463.000000
+[24.10.21 19:45:56.019] 			 userdata st.flame_start_snd : (sound_object): 0000022E0F9DDE40
+[24.10.21 19:45:56.019] 			 string st.gulag_name : 
+[24.10.21 19:45:56.019] 			 number st.stype : 3.000000
+[24.10.21 19:45:56.019] 	 boolean loaded : false
+[24.10.21 19:45:56.019] 	 userdata actor : (game_object): 0000022DB1B98ED0
+[24.10.21 19:45:56.019] 	 number stype : 3.000000
+[24.10.21 19:45:56.019] 	 string ini_filename : <customdata>
+[24.10.21 19:45:56.019] 	 string sect : remark1
+[24.10.21 19:45:56.019] 	End
+[24.10.21 19:45:56.019] 	Locals: 
+[24.10.21 19:45:56.019] 	 Userdata: self
+[24.10.21 19:45:56.019] 			 userdata self.ini : (ini_file): 0000022DC5E49E30
+[24.10.21 19:45:56.019] 			 Table: self.st
+[24.10.21 19:45:56.019] 					 userdata self.st.activation_game_time : (CTime): 0000022E12A97F30
+[24.10.21 19:45:56.019] 					 Userdata: self.st.combat
+[24.10.21 19:45:56.019] 							 table self.st.combat.st : [...]
+[24.10.21 19:45:56.019] 							 number self.st.combat.vis_dec : 6.000000
+[24.10.21 19:45:56.019] 							 number self.st.combat.flyby_attack_dist : 100.000000
+[24.10.21 19:45:56.019] 							 boolean self.st.combat.initialized : false
+[24.10.21 19:45:56.019] 							 number self.st.combat.default_safe_altitude : 153.606003
+[24.10.21 19:45:56.019] 							 boolean self.st.combat.attack_before_retreat : false
+[24.10.21 19:45:56.019] 							 number self.st.combat.vis_threshold : 60.000000
+[24.10.21 19:45:56.019] 							 number self.st.combat.vis_inc : 6.000000
+[24.10.21 19:45:56.019] 							 userdata self.st.combat.heliObject : (CHelicopter): 0000022D90E11760
+[24.10.21 19:45:56.019] 							 userdata self.st.combat.object : (game_object): 0000022E0F9DDFF0
+[24.10.21 19:45:56.019] 							 number self.st.combat.search_velocity : 5.000000
+[24.10.21 19:45:56.019] 							 number self.st.combat.default_velocity : 30.000000
+[24.10.21 19:45:56.019] 							 number self.st.combat.m_max_mgun_dist : 150.000000
+[24.10.21 19:45:56.019] 							 number self.st.combat.vis_time_quant : 200.000000
+[24.10.21 19:45:56.019] 							 number self.st.combat.level_max_y : 150.606003
+[24.10.21 19:45:56.019] 							 number self.st.combat.vis_next_time : 0.000000
+[24.10.21 19:45:56.019] 							 boolean self.st.combat.enemy_forgetable : true
+[24.10.21 19:45:56.019] 							 number self.st.combat.search_attack_dist : 70.000000
+[24.10.21 19:45:56.019] 							 number self.st.combat.flame_start_health : 0.300000
+[24.10.21 19:45:56.019] 							 number self.st.combat.round_velocity : 10.000000
+[24.10.21 19:45:56.019] 							 number self.st.combat.forget_timeout : 60000.000000
+[24.10.21 19:45:56.019] 							 boolean self.st.combat.section_changed : false
+[24.10.21 19:45:56.019] 							 number self.st.combat.vis : 0.000000
+[24.10.21 19:45:56.019] 					 string self.st.section_logic : logic
+[24.10.21 19:45:56.019] 					 string self.st.ini_filename : <customdata>
+[24.10.21 19:45:56.019] 					 number self.st.alt_check_time : 83040.000000
+[24.10.21 19:45:56.019] 					 userdata self.st.ini : (ini_file): 0000022DC5E49E30
+[24.10.21 19:45:56.019] 					 table self.st.remark : [...]
+[24.10.21 19:45:56.019] 					 table self.st.overrides : [...]
+[24.10.21 19:45:56.019] 					 number self.st.last_alt : 3.000000
+[24.10.21 19:45:56.019] 					 number self.st.activation_time : 82463.000000
+[24.10.21 19:45:56.019] 					 userdata self.st.flame_start_snd : (sound_object): 0000022E0F9DDE40
+[24.10.21 19:45:56.019] 					 string self.st.gulag_name : 
+[24.10.21 19:45:56.019] 					 number self.st.stype : 3.000000
+[24.10.21 19:45:56.019] 			 number self.flame_start_health : 0.300000
+[24.10.21 19:45:56.019] 			 number self.last_hit_snd_timeout : 0.000000
+[24.10.21 19:45:56.019] 			 boolean self.loaded : false
+[24.10.21 19:45:56.019] 			 boolean self.initialized : true
+[24.10.21 19:45:56.019] 	 number delta : 175.000000
+[24.10.21 19:45:56.019] 	End
+[24.10.21 19:45:56.019] *********************************************************************************
+[24.10.21 19:45:56.019] ********************************************************************************
+[24.10.21 19:45:56.019] !![LogStackTrace] Thread: [X-RAY Primary thread]
+[24.10.21 19:45:56.185] !!stack trace:
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFC74563E58], Fun: [BuildStackTrace()] + [48 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\stacktrace_collector.cpp-->152]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFC7458A7E1], Fun: [LogStackTrace()] + [73 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->58] + [13 byte(s)]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFC7458A626], Fun: [xrDebug::backend()] + [174 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->172]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFC7458B03C], Fun: [<lambda_c6715271fb6c8a51385a964c2e1e361c>::<lambda_invoker_cdecl>()] + [80 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->541] + [80 byte(s)]
+! Module: [C:\WINDOWS\System32\ucrtbase.dll], AddrPC.Offset: [00007FFC9CBA42D6], Fun: [execute_onexit_table()] + [342 byte(s)]
+! Module: [C:\WINDOWS\System32\ucrtbase.dll], AddrPC.Offset: [00007FFC9CBA41FB], Fun: [execute_onexit_table()] + [123 byte(s)]
+! Module: [C:\WINDOWS\System32\ucrtbase.dll], AddrPC.Offset: [00007FFC9CBA41B4], Fun: [execute_onexit_table()] + [52 byte(s)]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFC7458E96E], Fun: [dllmain_crt_process_detach()] + [82 byte(s)], File-->Line: [d:\agent\_work\3\s\src\vctools\crt\vcstartup\src\startup\dll_dllmain.cpp-->108]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFC7458EA94], Fun: [dllmain_dispatch()] + [232 byte(s)], File-->Line: [d:\agent\_work\3\s\src\vctools\crt\vcstartup\src\startup\dll_dllmain.cpp-->212] + [13 byte(s)]
+! Module: [C:\WINDOWS\SYSTEM32\ntdll.dll], AddrPC.Offset: [00007FFC9EF69A1D], Fun: [RtlActivateActivationContextUnsafeFast()] + [285 byte(s)]
+! Module: [C:\WINDOWS\SYSTEM32\ntdll.dll], AddrPC.Offset: [00007FFC9EFADB91], Fun: [LdrShutdownProcess()] + [321 byte(s)]
+! Module: [C:\WINDOWS\SYSTEM32\ntdll.dll], AddrPC.Offset: [00007FFC9EFADA2D], Fun: [RtlExitUserProcess()] + [173 byte(s)]
+! Module: [C:\WINDOWS\System32\KERNEL32.DLL], AddrPC.Offset: [00007FFC9D10E0AB], Fun: [FatalExit()] + [11 byte(s)]
+! Module: [C:\WINDOWS\System32\ucrtbase.dll], AddrPC.Offset: [00007FFC9CBB05BC], Fun: [exit()] + [476 byte(s)]
+! Module: [C:\WINDOWS\System32\ucrtbase.dll], AddrPC.Offset: [00007FFC9CBB045F], Fun: [exit()] + [127 byte(s)]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFC7458A6AA], Fun: [xrDebug::backend()] + [306 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->191] + [8 byte(s)]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFC7458A563], Fun: [xrDebug::fatal()] + [131 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->252]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFC2C90B864], Fun: [CScriptEngine::lua_pcall_failed()] + [120 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\common_ai\script_engine.cpp-->53]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFC301A5490], Fun: [lj_BC_FUNCC()] + [66 byte(s)]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFC301E3E47], Fun: [lj_err_run()] + [327 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_err.c-->851]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFC301E2F19], Fun: [err_msgv()] + [121 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_err.c-->874] + [8 byte(s)]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFC301E3C26], Fun: [lj_err_optype()] + [182 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_err.c-->908] + [34 byte(s)]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFC301FA0C8], Fun: [lj_meta_tget()] + [440 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_meta.c-->147] + [17 byte(s)]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFC301A5977], Fun: [lj_vmeta_tgetv()] + [44 byte(s)]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFC301AF0BB], Fun: [lua_pcall()] + [171 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_api.c-->1144]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\Luabind.dll], AddrPC.Offset: [000000018000EB84], Fun: [luabind::detail::pcall()] + [100 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\src\pcall.cpp-->40] + [16 byte(s)]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFC2C861E55], Fun: [luabind::detail::proxy_member_void_caller<unsigned int const *>::~proxy_member_void_caller<unsigned int const *>()] + [73 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\luabind\detail\call_member.hpp-->269] + [16 byte(s)]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFC2C861A81], Fun: [CScriptBinderObjectWrapper::shedule_Update()] + [53 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\script_binder_object_wrapper.cpp-->67]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFC2C77CCE3], Fun: [CScriptBinder::shedule_Update()] + [19 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\script_binder.cpp-->119]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFC2C96BCBF], Fun: [CEntity::shedule_Update()] + [27 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\entity.cpp-->325]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFC2CA2DFB6], Fun: [CHelicopter::shedule_Update()] + [46 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\helicopter.cpp-->442]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7B5CDA133], Fun: [CSheduler::ProcessStep()] + [467 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\xrsheduler.cpp-->356]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7B5CDA4E5], Fun: [CSheduler::Update()] + [389 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\xrsheduler.cpp-->462]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFC2C91E8AA], Fun: [CGamePersistent::OnFrame()] + [638 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\gamepersistent.cpp-->582]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7B5D0CD48], Fun: [CRegistrator<pureFrame>::Process()] + [84 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\pure.h-->86]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7B5D0BE28], Fun: [CRenderDevice::FrameMove()] + [292 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->443]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7B5D0C197], Fun: [CRenderDevice::on_idle()] + [223 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->214]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7B5D0C97E], Fun: [CRenderDevice::message_loop()] + [98 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->316]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7B5D0BFFB], Fun: [CRenderDevice::Run()] + [411 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->389]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7B5CCEDA8], Fun: [Startup()] + [296 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\x_ray.cpp-->218]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7B5CCF11E], Fun: [WinMain_impl()] + [478 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\x_ray.cpp-->418]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7B5CCC7F8], Fun: [WinMain()] + [72 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\x_ray.cpp-->439]
+! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7B5D2E12A], Fun: [__scrt_common_main_seh()] + [262 byte(s)], File-->Line: [d:\agent\_work\3\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl-->288] + [33 byte(s)]
+! Module: [C:\WINDOWS\System32\KERNEL32.DLL], AddrPC.Offset: [00007FFC9D107034], Fun: [BaseThreadInitThunk()] + [20 byte(s)]
+! Module: [C:\WINDOWS\SYSTEM32\ntdll.dll], AddrPC.Offset: [00007FFC9EFA2651], Fun: [RtlUserThreadStart()] + [33 byte(s)]
+[24.10.21 19:45:56.185] ********************************************************************************
+[24.10.21 19:45:57.530] --Saved dump file to [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\logs\xray_Данил_10-24-21_19-45-57.mdmp]

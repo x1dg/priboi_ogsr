@@ -3,6 +3,7 @@
 #include "thunderbolt.ltx"
 
 #include "weather_default.ltx"
+
 #include "weather_sarkofag.ltx"
 ;#include "weather_mp.ltx"
 #include "weather_test.ltx"
@@ -44,6 +45,14 @@ vivid_stormy   = sect_vivid_stormy_weather
 vivid_pure   = sect_vivid_pure_weather
 vivid_foggy   = sect_vivid_foggy_weather
 
+amk_for_blow = amk_sect_for_sun
+pre_blow = sect_stancia
+black = sect_m_black
+
 [weather_effects]
 surge_day		= sect_surge_day
+preblow_we = sect_preblow
+aftersurge_we = sect_after_surge
 p_surge_day     = sect_p_surge_day
+amk_surge_day		= amk_sect_surge_day
+amk_p_surge_day     = amk_sect_p_surge_day

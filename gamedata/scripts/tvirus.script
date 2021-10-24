@@ -11,6 +11,7 @@ function infect(tte)
 	if not has_alife_info("priboy_t_virus_infected") then
 		db.actor:give_info_portion("priboy_t_virus_infected")
 		time_to_elapse = tte
+		log1("INFECT")
 	end
 end
 
@@ -19,7 +20,7 @@ function x18_infect()
 end
 
 function on_item_take(obj)
-	if obj:section() == "sid_doc_last" then
+	if obj:section() == "ghost_doc_uhsf" then
 		if not has_alife_info("warehouses_infected") then
 			db.actor:give_info_portion("warehouses_infected")
 			infect(warehouses_time)

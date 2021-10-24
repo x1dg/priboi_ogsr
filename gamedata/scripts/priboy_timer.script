@@ -8,8 +8,8 @@ local timer_counterclockwise = nil
 timer_allowed = false
 
 function set_timer_on()
-	priboy_utils.send_hud_message("Warning! X-virus alert",
-		"Use the X-virus antidote immediately!", "commander", 10, nil)
+	priboy_utils.send_hud_message("Опасность! Заражение X-вирусом!",
+		"Используйте противоядие немедленно!", "commander", 10, nil)
 	timer_allowed = true
 end
 

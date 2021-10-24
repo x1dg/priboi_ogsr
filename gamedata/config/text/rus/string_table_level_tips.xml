@@ -107,4 +107,43 @@
 	<string id="st_found_new_pda">
 		<text>Найдена информация:</text>
 	</string>
+<string id="news_manager_location_1_text">
+		<text> на Кордоне</text>
+	</string>	
+	<string id="news_manager_location_2_text">
+		<text> на Свалке</text>
+	</string>
+	<string id="news_manager_location_3_text">
+		<text> в подземелье Агропрома</text>
+	</string>
+	<string id="news_manager_location_4_text">
+		<text> на Агропроме</text>
+	</string>
+	<string id="news_manager_location_5_text">
+		<text> в Тёмной долине</text>
+	</string>
+	<string id="news_manager_location_6_text">
+		<text> на Армейских складах</text>
+	</string>
+	<string id="news_manager_location_7_text">
+		<text> на Янтаре</text>
+	</string>	
+	<string id="news_manager_location_8_text">
+		<text> в Х-16</text>
+	</string>
+	<string id="news_manager_location_9_text">
+		<text> на Радаре</text>
+	</string>
+	<string id="news_manager_location_10_text">
+		<text> в Припяти</text>
+	</string>
+	<string id="news_manager_location_11_text">
+		<text> в Х-18</text>
+	</string>
+	<string id="news_manager_location_12_text">
+		<text> в Баре</text>
+	</string>
+	<string id="news_manager_location_13_text">
+		<text> на Дикой территории</text>
+	</string>
 </string_table>

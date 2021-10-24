@@ -231,7 +231,6 @@ function release_wolf()
 			end
 		end
 	end
-	log1("WOLFID: "..wolfid)
 	local obj1=alife():object(wolfid)
 	if (obj1.m_level_vertex_id ~= 145881) and (obj1.m_game_vertex_id ~= 22) and (obj1.position.x ~= -111.17) and (obj1.position.y ~= -29.81) then
 		alife():release(obj1,true)
