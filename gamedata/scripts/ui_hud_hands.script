@@ -40,5 +40,4 @@ function update() -- тут у нас вызывается смена текстуры.
 	end
 	last_outfit = outfit
 	end
-
 end

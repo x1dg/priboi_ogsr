@@ -65,6 +65,7 @@ function on_spawn()
 		local item_in_slot = db.actor:item_in_slot(hud_item_slot)
 		
 		if item_in_slot and item_in_slot:section() == hud_section then
+			log1("DESTOYING: "..item_in_slot:section())
 			destroy_actor_item(item_in_slot:section())
 			spawn(hud_item_slot_default)
 			spawn(k)
@@ -73,6 +74,7 @@ function on_spawn()
 end
 
 function on_use(obj)
+	log1("START EATING")
 	local section = obj:section()
 	
 	if available_sections[section] == nil then
@@ -91,7 +93,7 @@ function on_use(obj)
 	
 	-- проверка занятости рук
 	if use_timer > time_global() then
-		tip("Невозможно использовать предмет: у Вас заняты руки")
+		tip("Ќевозможно использовать предмет, у вас зан€ты руки")
 		spawn(section) -- возвращаем предмет игроку и выходим из функции
 		return
 	end
@@ -140,20 +142,24 @@ function on_use(obj)
 	
 	-- события дожидания конца таймера
 	local effect_start = function()
+		log1("EFFECT START")
 		-- не даём переключиться на другой слот
 		if hud_obj_section ~= nil then
+			log1("ACTIVE SLOT: "..tostring(db.actor:active_slot()))
 			if db.actor:active_slot() ~= hud_item_slot then
+				log1("ACTIVATE SLOT")
 				db.actor:activate_slot(hud_item_slot)
 			end
 		end
 		
 		-- ждёмс
+		log1("TIME GLOBAL: "..tostring(time_global()).." USE TIMER: "..tostring(use_timer))
 		if use_timer < time_global() then
 			return true
 		end
 	end
 	local effect_stop = function()
-	
+			log1("TIME GLOBAL2: "..tostring(time_global()).." USE TIMER2: "..tostring(use_timer))
 		-- останавливаем звук при наличии
 		if sound_obj then
 			if sound_obj:playing () then
@@ -179,6 +185,7 @@ function on_use(obj)
 	
 	-- ждём убирания оружия
 	local wait_start = function()
+		log1("WAIT TIME GLOBAL: "..tostring(time_global()).." USE TIMER: "..tostring(use_timer))
 		if db.actor:active_slot() == hud_item_slot or hud_obj_section == nil then
 			return true
 		end
@@ -186,6 +193,7 @@ function on_use(obj)
 	
 	local wait_stop = function()
 		-- играем звук при наличии
+		log1("WAIT TIME GLOBA2L: "..tostring(time_global()).." USE TIMER2: "..tostring(use_timer))
 		if sound_obj then
 			sound_obj:play_at_pos(db.actor, vector():set(0,0,0), 0, sound_object.s2d)
 		end

@@ -1,0 +1,166 @@
+﻿local animation_enable = true
+local anim_in_action = false
+local anim_applied = false
+local snd_in_use, cam_effect, anim_exist_tm, anim_exist_used_tm, anim_used_tm, anim_completed_tm, anm_sect
+
+local SLOT_RESTORE
+
+function attach( sm ) -- для менеджера сигналов
+	sm:subscribe({ signal = "on_actor_before_use",  	fun = this.on_actor_before_use  	})
+        sm:subscribe({ signal = "on_update", 		        fun = this.on_update                    })
+	sm:subscribe({ signal = "on_item_to_slot", 	        fun = this.on_item_to_slot 		})
+	sm:subscribe({ signal = "on_item_to_ruck", 	        fun = this.on_item_to_ruck 		})
+	sm:subscribe({ signal = "on_before_first_update", 	fun = this.on_before_first_update 	})
+end
+
+local cfg = {
+	"eat_health",
+	"eat_power",
+	"eat_radiation",
+	"eat_satiety",
+	"eat_thirst",
+	"eat_alcohol",
+	"eat_psy_health",
+	"wounds_heal_perc",
+}
+
+function on_actor_before_use( obj )
+	local sect = obj:section()
+	if animation_enable == true then
+		local snd = get_string( sect, "use_sound_anm" )
+		if not(db.actor.inventory:is_active_slot_blocked()) and snd and not( anim_in_action ) then
+
+			anm_sect = "anm_" .. obj:section()
+			cam_effect = get_string( anm_sect, "cam_effect")
+			anim_used_tm = get_u32( anm_sect, "item_used_timing" )
+			anim_completed_tm = get_u32( anm_sect, "anim_timing" )
+			
+			SLOT_RESTORE = db.actor:active_slot()
+
+			ogse.save_var( "drop_bind", bind_to_dik( key_bindings.kDROP )  )
+			cmd( "unbind drop" )
+			alife():create( anm_sect, db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id() )
+			if db.actor:has_info( "ui_inventory" ) then
+				level.start_stop_menu( level.main_input_receiver(), true )
+			end			
+			obj:zero_effects()
+			snd_in_use = sound_object( snd )
+			snd_in_use:play( db.actor, 0, sound_object.s2d )
+			level.add_cam_effector( cam_effect, 8010, false, "" )
+		elseif snd and db.actor:has_info("ui_talk") and not( anim_in_action ) then
+			if snd then
+				if snd_in_use then
+					snd_in_use:stop()
+				end
+				snd_in_use = sound_object( snd )
+				snd_in_use:play( db.actor, 0, sound_object.s2d )
+			end
+		elseif not( anim_in_action ) then
+		local snd = get_string( sect, "use_sound" )
+		if snd then
+			if snd_in_use then
+				snd_in_use:stop()
+			end
+			snd_in_use = sound_object( snd )
+			snd_in_use:play( db.actor, 0, sound_object.s2d )
+		end
+		else
+			obj:zero_effects()
+			alife():create( obj:section(), db.actor:position(), db.actor:level_vertex_id(), db.actor:game_vertex_id(), db.actor:id() )
+		end
+	else
+		local snd = get_string( sect, "use_sound" )
+		if snd then
+			if snd_in_use then
+				snd_in_use:stop()
+			end
+			snd_in_use = sound_object( snd )
+			snd_in_use:play( db.actor, 0, sound_object.s2d )
+		end
+	end
+end
+
+function on_item_to_ruck( obj )
+	if not( string.find( obj:section(), "anm_" ) ) then return end
+	local release_item = obj:section()
+	alife():release(alife():object(db.actor:object(release_item):id()))
+end
+
+function on_item_to_slot( obj )
+	if not( string.find( obj:section(), "anm_" ) ) then return end
+	db.actor:activate_slot(8)
+	anim_in_action = true
+end
+
+function on_before_first_update()
+	local obj
+
+	for i=0, db.actor:object_count() - 1 do
+		obj = db.actor:object( i )
+		if string.find( obj:section(), "anm_" ) then
+			anim_in_action = true
+			anm_sect = obj:section()
+			anim_used_tm = get_u32( anm_sect, "item_used_timing" )
+			anim_completed_tm = get_u32( anm_sect, "anim_timing" )
+		end
+	end
+end
+
+function on_update()
+
+	local tg = time_global()
+	if anim_in_action then
+		if not anim_exist_tm then
+			if db.actor:active_slot() == 8 then
+				db.actor:hide_weapon()
+				anim_exist_tm = tg + anim_completed_tm
+				anim_exist_used_tm = tg + anim_used_tm
+			end
+		end
+		if anim_exist_used_tm and not( anim_applied ) then
+			if anim_exist_used_tm <= tg then
+				local sect = string.sub( anm_sect, 5 )
+				apply_item( sect )
+				anim_applied = true
+			end
+		end
+		if anim_exist_tm then
+			if anim_exist_tm <= tg then
+				db.actor:restore_weapon()
+			
+				ogse.remove_item_from_inventory_by_name( anm_sect, db.actor )
+				db.actor:activate_slot(SLOT_RESTORE)
+if dik_to_keyname( ogse.load_var_safe( "drop_bind" )) ~= nil then
+	cmd( "bind drop " .. dik_to_keyname( ogse.load_var_safe( "drop_bind" )))
+end
+
+				cam_effect = nil
+				anim_used_tm = nil
+				anim_in_action = false
+				anim_applied = false
+				anim_completed_tm = nil
+				anim_exist_tm = nil	
+				anim_exist_used_tm = nil
+			end
+			
+		end
+	end
+end
+
+
+function apply_item( sect )
+	for k, v in pairs( cfg ) do
+		local val = get_float( sect, v )
+		if val ~= 0	then
+			if k == 1 then db.actor.health = val
+			elseif k == 2 then db.actor.power = val
+			elseif k == 3 then db.actor.radiation = val
+			elseif k == 4 then db.actor.satiety = val
+			elseif k == 5 then db.actor.thirst = val
+			elseif k == 6 then db.actor.alcohol = val
+			elseif k == 7 then db.actor.psy_health = val
+			elseif k == 8 then db.actor:heal_wounds( val )
+			end
+		end
+	end
+end

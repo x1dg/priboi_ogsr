@@ -11,7 +11,6 @@ scheduled					= off							; option for ALife Simulator
 cform						= skeleton
 class						= WP_BINOC
 hud							= wpn_binoc_hud
-default_to_ruck = false
 
 ef_main_weapon_type			= 5
 ef_weapon_type				= 0
@@ -112,20 +111,20 @@ light_var_color		 		= 0.05
 light_var_range		 		= 0.5
 light_time 		 			= 0.2
 
-snd_draw					= weapons\generic_draw
-snd_holster					= weapons\generic_holster
-snd_gyro					= weapons\binoculars_gyro
-snd_zoomin					= weapons\binoculars_zoomin
-snd_zoomout					= weapons\binoculars_zoomout
-snd_shoot					= weapons\walther_p99_shoot
-snd_empty					= weapons\pistol_empty
-snd_reload					= weapons\pm_reload, 0.8
-snd_close					= weapons\generic_close
+snd_draw					= weapons\binoculars_zoomin, 0.5
+snd_holster					= weapons\binoculars_zoomout, 0.5
+snd_gyro					= weapons\binoculars_gyro, 0.5
+snd_zoomin					= weapons\binoculars_gyro, 0.5
+snd_zoomout					= weapons\binoculars_gyro, 0.5
+snd_shoot					= weapons\walther_p99_shoot, 0.5
+snd_empty					= weapons\empty, 0.5
+snd_reload					= weapons\pm_reload, 0.5
+snd_close					= weapons\generic_close, 0.5
 
 
 
 
-vision_present				= true
+vision_present				= false
 vis_frame_speed				= 4				; скорость, с которой наводится рамка на цель
 vis_frame_color				= 0.7,0.7,0.7,1.0	; цвет рамки RGBA (A) Не учитывается
 found_snd					= detectors\DA-2_beep1
@@ -134,20 +133,21 @@ found_snd					= detectors\DA-2_beep1
 shell_point					= 0.0, 0.0, 0.0
 fire_point              	= 0.05, 0.0, 0.1
 fire_bone               	= wpn_body
-orientation             	= 0,0,0
-position                	= 0,0,0.10
+orientation             	= 180,0,0
+position                	= 0.000000,0.080000,0.300000
 visual                  	= weapons\binoculars\wpn_binoculars_hud.ogf
 
-zoom_offset					= 0,-0.14,0.000000
-zoom_rotate_x				= -0.414000
-zoom_rotate_y				= 0.0
+zoom_offset					= 0.000000,0.053600,0.000000
+zoom_rotate_x				= 0.000000
+zoom_rotate_y				= 0.000000
 
-anim_idle					= idle
-anim_reload					= idle
-anim_draw					= draw
-anim_holster				= holster
-anim_shoot					= idle
-anim_idle_aim				= idle
+anim_idle					= bino_idle
+anim_reload					= bino_idle
+anim_draw					= bino_draw
+anim_holster				= bino_holster
+anim_shoot					= bino_idle
+anim_idle_aim				= bino_idle
+
 
 
 

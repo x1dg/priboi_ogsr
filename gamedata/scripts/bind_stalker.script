@@ -289,8 +289,8 @@ function actor_binder:update(delta)
 --	slowdown.update()
 
 	if not db.actor:object("wpn_binoc") and not db.actor:item_in_slot(4) then
-		alife():create("wpn_binoc", db.actor:position(), 1, db.actor:game_vertex_id(), db.actor:id())
-		db.actor:restore_weapon()
+		--alife():create("wpn_binoc", db.actor:position(), 1, db.actor:game_vertex_id(), db.actor:id())
+		--db.actor:restore_weapon()
 	end
 	
 	-- barin start
