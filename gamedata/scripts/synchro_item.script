@@ -197,7 +197,7 @@ function on_use(obj)
 	end
 	
 	db.actor:activate_slot(hud_item_slot) -- активируем слот
-	--level.add_call(wait_start, wait_stop) -- запускаем всю эту систему
+	level.add_call(wait_start, wait_stop) -- запускаем всю эту систему
 end
 
 
