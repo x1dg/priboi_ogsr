@@ -2,7 +2,7 @@
 -- by barin aka pepe_84
 -- last edited: 13.01.2008
 
-local priboy_timer_name = "priboy_hud_timer" -- config\ui\ui_custom_msgs.xml
+local priboy_timer_name = "hud_timer" -- config\ui\ui_custom_msgs.xml
 local timer_counterclockwise = nil
 
 timer_allowed = false

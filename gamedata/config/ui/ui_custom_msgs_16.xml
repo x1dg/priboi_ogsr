@@ -2,8 +2,8 @@
 <!-- ПОЛЬЗОВАТЕЛЬСКИЙ ХУД -->
 <header>
 	<priboy_dump_vertex  x="800" y="10" width="200" height="30" complex_mode="1">
-        	<text align="l" font="small"  r="240" g="217" b="182" a="255"/>
-    	</priboy_dump_vertex>
+        <text align="l" font="small"  r="240" g="217" b="182" a="255"/>
+    </priboy_dump_vertex>
 		
 	<priboy_gasmask_hud x="940" y="170" width="64" height="64">
 		<texture x="851" y="1756" width="64" height="64">ui\ui_icon_equipment</texture>
@@ -28,13 +28,16 @@
 		<texture>ui_hud_frame_clock</texture>
 	</timer_hud>
 
-	<hud_timer  x="852" y="15" width="157" height="67">
-		<text x="-15" y="23it" font="graffiti32" r="238" g="155" b="23" a="255" align="r"/>
-		<texture>ui_hud_frame_clock</texture>
-	</hud_timer>
-
-	<hud_timer_text x="852" y="80" width="157" height="67" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="0" la_text="1" la_alpha="1">
-		<text x="0" y="0" font="graffiti22" r="240" g="217" b="182" a="255" align="c"/>
+  	<hud_timer  x="395" y="3" width="236" height="60" stretch="1">
+        <text x="-1" y="27" font="graffiti32" color="hud_timer" align="c"/>
+        <texture>ui_hud_frame_clock</texture>
+		<auto_static x="83" y="28" width="70" height="27" stretch="1" light_anim="ui_slow_blinking_alpha" la_cyclic="1" la_texture="1" la_text="0" la_alpha="1">
+			<texture color="hud_timer_flash">ui_hud_frame_flash</texture>
+		</auto_static>
+    </hud_timer>
+	
+	<hud_timer_text x="338" y="5" width="350" height="18">
+		<text font="letterica16" color="hud_timer_name" align="c"/>
 	</hud_timer_text>
 
 	<!-- Часы на миникарте -->

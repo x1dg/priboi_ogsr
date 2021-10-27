@@ -63,7 +63,7 @@ function mark_priboi_supplies()
 end
 
 function new_enc_entry()
-	priboy_utils.send_hud_message("New encyclopedy entry", "Check the PDA ...", nil, 10, nil)
+	priboy_utils.send_hud_message("Новая статья", "Проверьте ПДА..", nil, 10, nil)
 end
 
 function close_case()

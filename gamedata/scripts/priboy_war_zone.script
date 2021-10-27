@@ -136,9 +136,9 @@ function BarWarZone:ShowMessage(counter, enemy)
 	if counter ~= 0 then
 		if not (relation_registry.community_goodwill("dolg", db.actor:id()) < -500) then
 			if enemy == "npcs" then
-				priboy_utils.send_hud_message("Attention!", "Enemy at the gate. Help us to protect Duty territory!", "voronin", 10, nil)
+				priboy_utils.send_hud_message("Внимание!", "Враг на подходе. Помогите нам защитить мирную территорию!", "voronin", 10, nil)
 			else
-				priboy_utils.send_hud_message("Attention!", "Mutants wave attacked the Bar! Be careful ...", "voronin", 10, nil)
+				priboy_utils.send_hud_message("Внимание!", "Мутанды атаковали Бар! Будьте осторожны..", "voronin", 10, nil)
 			end
 		end
 	end

@@ -162,8 +162,8 @@
 	<color name="hud_enemy_name"		r="180" g="180" b="180"/>			<!-- худ: имя врага на шкале -->
 	<color name="hud_weapon_name"		r="128" g="128" b="128"/>			<!-- худ: название оружия/тип патронов -->
 	<color name="hud_new_msg"			r="0" g="192" b="192"/>				<!-- худ: сообщение в кпк (задачи/журнал/справка) -->
-	<color name="hud_game_time"			r="192" g="192" b="192"/>			<!-- худ: время -->
-	<color name="hud_online"			r="150" g="150" b="150"/>			<!-- худ: контакты -->
+	<color name="hud_game_time"			r="255" g="32" b="32"/>				<!-- худ: время -->
+	<color name="hud_online"			r="255" g="32" b="32"/>				<!-- худ: контакты -->
 	<color name="hud_weapon_pane"		r="64" g="64" b="64"/>				<!-- худ: weapon_pane -->
 	<color name="hud_timer"				r="192" g="192" b="192"/>			<!-- худ: таймер -->
 	<color name="hud_timer_flash"		r="96" g="0" b="0"/>				<!-- худ: мигающий индикатор таймера -->

@@ -1,492 +1,298 @@
 
-[26.10.21 16:04:11.493] * Detected CPU: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz [GenuineIntel], F6/M158/S10
-[26.10.21 16:04:11.495] * CPU features: RDTSC, MMX, SSE, SSE2, SSE3, MONITOR/MWAIT, SSSE3, SSE4.1, SSE4.2, AVX, AVX2
-[26.10.21 16:04:11.495] * CPU cores: [6], threads: [6]
-[26.10.21 16:04:11.495] * CPU0 current freq: 2808 MHz, max freq: 2808 MHz
-[26.10.21 16:04:11.495] * CPU1 current freq: 2808 MHz, max freq: 2808 MHz
-[26.10.21 16:04:11.495] * CPU2 current freq: 2808 MHz, max freq: 2808 MHz
-[26.10.21 16:04:11.495] * CPU3 current freq: 2808 MHz, max freq: 2808 MHz
-[26.10.21 16:04:11.495] * CPU4 current freq: 2808 MHz, max freq: 2808 MHz
-[26.10.21 16:04:11.495] * CPU5 current freq: 2808 MHz, max freq: 2808 MHz
-[26.10.21 16:04:11.495] Initializing File System...
-[26.10.21 16:04:11.496] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db0], size: [678577379]
-[26.10.21 16:04:11.552] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db1], size: [708434331]
-[26.10.21 16:04:11.559] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db2], size: [671169415]
-[26.10.21 16:04:11.562] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db3], size: [684792231]
-[26.10.21 16:04:11.566] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db4], size: [671392842]
-[26.10.21 16:04:11.963] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db5], size: [697475082]
-[26.10.21 16:04:12.046] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db6], size: [672288151]
-[26.10.21 16:04:12.048] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db7], size: [672462598]
-[26.10.21 16:04:12.090] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db8], size: [293378144]
-[26.10.21 16:04:12.109] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db9], size: [79312307]
-[26.10.21 16:04:12.151] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dba], size: [22884835]
-[26.10.21 16:04:12.156] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbb], size: [55194918]
-[26.10.21 16:04:12.168] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbc], size: [160948]
-[26.10.21 16:04:12.168] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbd], size: [101014]
-[26.10.21 16:04:12.169] using fs-ltx fsgame.ltx
-[26.10.21 16:04:12.169] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\]
-[26.10.21 16:04:12.169]   files: [6]
-[26.10.21 16:04:12.171] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\]
-[26.10.21 16:04:12.172]   files: [16]
-[26.10.21 16:04:12.172] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\spawns\]
-[26.10.21 16:04:12.172]   files: [4]
-[26.10.21 16:04:12.172] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\anims\]
-[26.10.21 16:04:12.173]   files: [23]
-[26.10.21 16:04:12.175] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\]
-[26.10.21 16:04:12.175]   files: [12]
-[26.10.21 16:04:12.183] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\meshes\]
-[26.10.21 16:04:12.183]   files: [12]
-[26.10.21 16:04:12.204] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\meshes\]
-[26.10.21 16:04:12.204]   files: [12]
-[26.10.21 16:04:12.224] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\shaders\]
-[26.10.21 16:04:12.224]   files: [7]
-[26.10.21 16:04:12.234] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\sounds\]
-[26.10.21 16:04:12.234]   files: [22]
-[26.10.21 16:04:12.271] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\textures\]
-[26.10.21 16:04:12.272]   files: [62]
-[26.10.21 16:04:12.386] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\scripts\]
-[26.10.21 16:04:12.387]   files: [129]
-[26.10.21 16:04:12.388] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\]
-[26.10.21 16:04:12.388]   files: [30]
-[26.10.21 16:04:12.402] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\]
-[26.10.21 16:04:12.402]   files: [12]
-[26.10.21 16:04:12.402] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\]
-[26.10.21 16:04:12.402]   files: [14]
-[26.10.21 16:04:12.402] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\logs\]
-[26.10.21 16:04:12.402]   files: [62]
-[26.10.21 16:04:12.403] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\screenshots\]
-[26.10.21 16:04:12.403]   files: [9]
-[26.10.21 16:04:12.403] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\mods\]
-[26.10.21 16:04:12.403]   files: [3]
-[26.10.21 16:04:12.403] --Found external arch: [mp_military_2.xdb0], size: [50350518]
-[26.10.21 16:04:12.409] FS: 34643 files cached, 7149Kb memory used.
-[26.10.21 16:04:12.409] Init FileSystem 0.913479 sec
-[26.10.21 16:04:12.409] [OGSR Engine (x64)] build date: [Sep 22 2021 10:23:51]
-[26.10.21 16:04:12.409] [AppVeyor] build version: [2.1.293], repo: [OGSR/OGSR-Engine]
-[26.10.21 16:04:12.409] [_MSC_FULL_VER]: [191627045], [_MSVC_LANG]: [201703L]
-[26.10.21 16:04:12.409] Working Directory: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64]
-[26.10.21 16:04:12.409] CommandLine: ["Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe"  -high]
-[26.10.21 16:04:12.549] Initializing Engine...
-[26.10.21 16:04:12.550] Starting INPUT device...
-[26.10.21 16:04:12.615] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[26.10.21 16:04:12.616] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
-[26.10.21 16:04:12.637] refCount:m_pAdapter 1
-[26.10.21 16:04:12.637] refCount:pFactory 1
-[26.10.21 16:04:12.638] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[26.10.21 16:04:12.638] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
-[26.10.21 16:04:12.765] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[26.10.21 16:04:12.765] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
-[26.10.21 16:04:12.767] --[CEngineAPI::CreateRendererList] Available render modes [5]:
-[26.10.21 16:04:12.767] --  [renderer_r2a]
-[26.10.21 16:04:12.767] --  [renderer_r2]
-[26.10.21 16:04:12.767] --  [renderer_r2.5]
-[26.10.21 16:04:12.767] --  [renderer_r3]
-[26.10.21 16:04:12.767] --  [renderer_r4]
-[26.10.21 16:04:12.767] Executing config-script "user.ltx"...
-[26.10.21 16:04:12.767] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
-[26.10.21 16:04:12.767] [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\user.ltx] successfully loaded.
-[26.10.21 16:04:12.767] --Loading DLL: [xrRender_R2.dll]
-[26.10.21 16:04:12.768] --Loading DLL: [xrGame.dll]
-[26.10.21 16:04:12.786] --------------------------------------------------------------------------------
-[26.10.21 16:04:12.786] [8143MB] physical memory installed, [2181MB] available, [73] percent of memory in use
-[26.10.21 16:04:12.786] PageFile usage: [45MB], Peak PageFile usage: [92MB]
-[26.10.21 16:04:12.786] --------------------------------------------------------------------------------
-[26.10.21 16:04:12.786] * [ D3D ]: textures[0 K]
-[26.10.21 16:04:12.786] * [x-ray]: process heap[24181 K], render[0 K]
-[26.10.21 16:04:12.786] * [x-ray]: economy: strings[4940 K], smem[0 K]
-[26.10.21 16:04:12.786] SOUND: OpenAL: enumerate devices...
-[26.10.21 16:04:12.786] SOUND: OpenAL: EnumerationExtension Present
-[26.10.21 16:04:12.909] devices Generic Software
-[26.10.21 16:04:12.909] SOUND: OpenAL: system  default SndDevice name is Generic Software
-[26.10.21 16:04:13.191] SOUND: OpenAL: All available devices:
-[26.10.21 16:04:13.191] 1. Generic Software, Spec Version 1.1 (default) eax[2] efx[no] xram[no]
-[26.10.21 16:04:13.191] 2. OpenAL Soft, Spec Version 1.1  eax[0] efx[yes] xram[no]
-[26.10.21 16:04:13.191] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx"...
-[26.10.21 16:04:13.196] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx] successfully loaded.
-[26.10.21 16:04:13.196] Executing config-script "user.ltx"...
-[26.10.21 16:04:13.196] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\rspec_high.ltx"...
-[26.10.21 16:04:13.196] ! Unknown command:  r2_sun_shafts
-[26.10.21 16:04:13.196] ! Unknown command:  r__supersample
-[26.10.21 16:04:13.196] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\rspec_high.ltx] successfully loaded.
-[26.10.21 16:04:13.196] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx"...
-[26.10.21 16:04:13.197] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx] successfully loaded.
-[26.10.21 16:04:13.197] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
-[26.10.21 16:04:13.197] [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\user.ltx] successfully loaded.
-[26.10.21 16:04:13.197] SOUND: Selected device is Generic Software
-[26.10.21 16:04:13.231] [OpenAL] EAX 2.0 extension: present
-[26.10.21 16:04:13.231] [OpenAL] EAX 2.0 deferred: present
-[26.10.21 16:04:13.231] * sound : cache: 65537 kb, 4856 lines, 13820 bpl
-[26.10.21 16:04:13.262] Starting RENDER device...
-[26.10.21 16:04:13.303] * GPU [vendor:10DE]-[device:1C81]: NVIDIA GeForce GTX 1050
-[26.10.21 16:04:13.303] * GPU driver: 30.0.14.7196
-[26.10.21 16:04:13.418] * CREATE: DeviceREF: 1
-[26.10.21 16:04:13.418] * Vertex Processor: PURE HARDWARE
-[26.10.21 16:04:13.418] *     Texture memory: 4072 M
-[26.10.21 16:04:13.418] *          DDI-level: 9.0
-[26.10.21 16:04:13.421] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
-[26.10.21 16:04:13.422] * GPU vertex cache: unrecognized, 16
-[26.10.21 16:04:13.423] * DVB created: 16384K
-[26.10.21 16:04:13.424] * DIB created: 512K
-[26.10.21 16:04:13.458] ! Version conflict in shader 'models\lightplanes_00'
-[26.10.21 16:04:13.458] ! Version conflict in shader 'models\lightplanesself'
-[26.10.21 16:04:13.458] ! Version conflict in shader 'models\model_puh'
-[26.10.21 16:04:13.458] ! Version conflict in shader 'models\model_refl'
-[26.10.21 16:04:13.458] ! Version conflict in shader 'models\xbrainglass'
-[26.10.21 16:04:13.458] ! Version conflict in shader 'models\xdistortcolorlinv'
-[26.10.21 16:04:13.458] ! Version conflict in shader 'models\xglass'
-[26.10.21 16:04:13.458] ! Version conflict in shader 'models\xglass2'
-[26.10.21 16:04:13.458] ! Version conflict in shader 'models\xlens'
-[26.10.21 16:04:13.458] ! Version conflict in shader 'selflight_static'
-[26.10.21 16:04:13.459] [CTextureDescrMngr::LoadLTX] count of *textures*.ltx files: [1]
-[26.10.21 16:04:13.601] * NULLRT supported
-[26.10.21 16:04:13.601] * ...and used
-[26.10.21 16:04:13.601] * HWDST/PCF supported and used
-[26.10.21 16:04:13.601] * NV-DBT supported and used
-[26.10.21 16:04:14.676] --LUA version: [LuaJIT 2.1.0-beta3]
-[26.10.21 16:04:14.714] Starting engine...
-[26.10.21 16:04:21.455] * phase time: 14 ms
-[26.10.21 16:04:21.482] * phase cmem: 180727 K
-[26.10.21 16:04:21.537] --LUA version: [LuaJIT 2.1.0-beta3]
-[26.10.21 16:04:21.555] * phase time: 99 ms
-[26.10.21 16:04:21.580] * phase cmem: 149533 K
-[26.10.21 16:04:21.585] * Loading spawn registry...
-[26.10.21 16:04:22.147] * 8976 spawn points are successfully loaded
-[26.10.21 16:04:22.147] * Loading objects...
-[26.10.21 16:04:22.476] * 17646 objects are successfully loaded
-[26.10.21 16:04:22.627] * [CPatrolPathStorage::safe_path]: path[gar_seryi_bandits_search] pp[wp02] level_vertex_id[4294967295] -> 131021
-[26.10.21 16:04:23.126] * Game Данил_quicksave is successfully loaded from file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_quicksave.sav' (1.546s)
-[26.10.21 16:04:23.126] * phase time: 1571 ms
-[26.10.21 16:04:23.170] * phase cmem: 199894 K
-[26.10.21 16:04:23.205] # Player not found. New player created.
-[26.10.21 16:04:23.206] !!xrServer::Check_GameSpy_CDKey_Success - 1
-[26.10.21 16:04:23.206] * client : connection accepted - <>
-[26.10.21 16:04:23.224] * phase time: 97 ms
-[26.10.21 16:04:23.267] * phase cmem: 199913 K
-[26.10.21 16:04:23.268] * phase time: 44 ms
-[26.10.21 16:04:23.312] * phase cmem: 199914 K
-[26.10.21 16:04:24.396] --[ISpatial_DB::initialize] bbc is [-0.3, 25.8, -14.6], bbd is [322.0, 61.1, 332.6]
-[26.10.21 16:04:24.396] --[ISpatial_DB::initialize] bbc is [-0.3, 25.8, -14.6], bbd is [322.0, 61.1, 332.6]
-[26.10.21 16:04:24.398] * phase time: 1130 ms
-[26.10.21 16:04:24.442] * phase cmem: 284063 K
-[26.10.21 16:04:24.629] * phase time: 230 ms
-[26.10.21 16:04:24.674] * phase cmem: 287272 K
-[26.10.21 16:04:24.677] * [Loading VB] 65531 verts, 2047 Kb
-[26.10.21 16:04:24.689] * [Loading VB] 65532 verts, 2047 Kb
-[26.10.21 16:04:24.698] * [Loading VB] 65530 verts, 2047 Kb
-[26.10.21 16:04:24.707] * [Loading VB] 24512 verts, 766 Kb
-[26.10.21 16:04:24.712] * [Loading VB] 65535 verts, 2047 Kb
-[26.10.21 16:04:24.720] * [Loading VB] 65534 verts, 2047 Kb
-[26.10.21 16:04:24.729] * [Loading VB] 65533 verts, 2047 Kb
-[26.10.21 16:04:24.738] * [Loading VB] 65534 verts, 2047 Kb
-[26.10.21 16:04:24.746] * [Loading VB] 65502 verts, 2046 Kb
-[26.10.21 16:04:24.755] * [Loading VB] 65535 verts, 2047 Kb
-[26.10.21 16:04:24.763] * [Loading VB] 65533 verts, 2047 Kb
-[26.10.21 16:04:24.771] * [Loading VB] 65534 verts, 2047 Kb
-[26.10.21 16:04:24.780] * [Loading VB] 51552 verts, 1611 Kb
-[26.10.21 16:04:24.787] * [Loading VB] 65530 verts, 2047 Kb
-[26.10.21 16:04:24.797] * [Loading VB] 62255 verts, 1945 Kb
-[26.10.21 16:04:24.806] * [Loading IB] 1048572 indices, 2047 Kb
-[26.10.21 16:04:24.818] * [Loading IB] 1048572 indices, 2047 Kb
-[26.10.21 16:04:24.827] * [Loading IB] 1048575 indices, 2047 Kb
-[26.10.21 16:04:24.834] * [Loading IB] 1048575 indices, 2047 Kb
-[26.10.21 16:04:24.842] * [Loading IB] 1048575 indices, 2047 Kb
-[26.10.21 16:04:24.850] * [Loading IB] 1048572 indices, 2047 Kb
-[26.10.21 16:04:24.858] * [Loading IB] 1048572 indices, 2047 Kb
-[26.10.21 16:04:24.866] * [Loading IB] 438036 indices, 855 Kb
-[26.10.21 16:04:24.868] * [Loading VB] 65535 verts, 767 Kb
-[26.10.21 16:04:24.873] * [Loading VB] 65533 verts, 767 Kb
-[26.10.21 16:04:24.878] * [Loading VB] 65533 verts, 767 Kb
-[26.10.21 16:04:24.881] * [Loading VB] 65534 verts, 767 Kb
-[26.10.21 16:04:24.886] * [Loading VB] 65530 verts, 767 Kb
-[26.10.21 16:04:24.889] * [Loading VB] 42643 verts, 499 Kb
-[26.10.21 16:04:24.890] * [Loading IB] 1048572 indices, 2047 Kb
-[26.10.21 16:04:24.900] * [Loading IB] 1048575 indices, 2047 Kb
-[26.10.21 16:04:24.911] * [Loading IB] 615231 indices, 1201 Kb
-[26.10.21 16:04:24.916] * phase time: 287 ms
-[26.10.21 16:04:24.961] * phase cmem: 341376 K
-[26.10.21 16:04:25.284] * phase time: 367 ms
-[26.10.21 16:04:25.329] * phase cmem: 345065 K
-[26.10.21 16:04:25.352] * [DETAILS] VertexConsts(256), Batch(61)
-[26.10.21 16:04:25.352] * [DETAILS] 40687 v(20), 26352 p
-[26.10.21 16:04:25.352] * [DETAILS] Batch(61), VB(794K), IB(154K)
-[26.10.21 16:04:25.353] * phase time: 69 ms
-[26.10.21 16:04:25.399] * phase cmem: 346081 K
-[26.10.21 16:04:25.400] * Loading HOM: z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\l02_garbage\level.hom
-[26.10.21 16:04:25.401] * phase time: 47 ms
-[26.10.21 16:04:25.447] * phase cmem: 346177 K
-[26.10.21 16:04:25.449] * phase time: 47 ms
-[26.10.21 16:04:25.494] * phase cmem: 346177 K
-[26.10.21 16:04:25.503] - Game configuring : Started 
-[26.10.21 16:04:25.503] - Game configuring : Finished 
-[26.10.21 16:04:25.632] * phase time: 183 ms
-[26.10.21 16:04:25.678] * phase cmem: 352601 K
-[26.10.21 16:04:31.898] * t-report - base: 1152, 1019480 K
-[26.10.21 16:04:31.898] * t-report - lmap: 6, 6144 K
-[26.10.21 16:04:31.898] * phase time: 6266 ms
-[26.10.21 16:04:31.951] * phase cmem: 1424346 K
-[26.10.21 16:04:31.962] * phase time: 63 ms
-[26.10.21 16:04:32.015] * phase cmem: 1424350 K
-[26.10.21 16:04:32.078] --------------------------------------------------------------------------------
-[26.10.21 16:04:32.078] [8143MB] physical memory installed, [990MB] available, [87] percent of memory in use
-[26.10.21 16:04:32.078] PageFile usage: [1728MB], Peak PageFile usage: [1730MB]
-[26.10.21 16:04:32.078] --------------------------------------------------------------------------------
-[26.10.21 16:04:32.078] * [ D3D ]: textures[1025625 K]
-[26.10.21 16:04:32.078] * [x-ray]: process heap[1423727 K], render[0 K]
-[26.10.21 16:04:32.078] * [x-ray]: economy: strings[7338 K], smem[0 K]
-[26.10.21 16:04:32.835] ! auto-generated bump map: wpn\tec-9\wpn_tec_kg9_gun_bump#
-[26.10.21 16:04:32.849] ! auto-generated bump map: wpn\tec-9\wpn_tec_kg9_mag_bump#
-[26.10.21 16:04:32.863] ! auto-generated bump map: wpn\ots_33\wpn_ots33_gps_bump#
-[26.10.21 16:04:32.881] ! auto-generated bump map: wpn\ots_33\wpn_ots33_frame_bump#
-[26.10.21 16:04:32.892] ! auto-generated bump map: wpn\ots_33\wpn_ots33_mag_bump#
-[26.10.21 16:04:33.713] ! auto-generated bump map: wpn\silencer\wpn_9mm_silencer_bump#
-[26.10.21 16:04:34.322] ! auto-generated bump map: wpn\mac10\wpn_mac10_grip_bump#
-[26.10.21 16:04:34.333] ! auto-generated bump map: wpn\mac10\wpn_mac10_upper_bump#
-[26.10.21 16:04:34.340] ! auto-generated bump map: wpn\mac10\wpn_mac10_mag_bump#
-[26.10.21 16:04:34.347] ! auto-generated bump map: wpn\mac10\wpn_mac10_lower_bump#
-[26.10.21 16:04:35.360] ! auto-generated bump map: wpn\benelli\wpn_short_body_bump#
-[26.10.21 16:04:35.373] ! auto-generated bump map: wpn\benelli\wpn_short_barrel_bump#
-[26.10.21 16:04:35.660] ! Can't find sound [weapons\empty.ogg]
-[26.10.21 16:04:38.859] * MEMORY USAGE: 1846481 K
-[26.10.21 16:04:38.859] * End of synchronization A[1] R[1]
-[26.10.21 16:04:38.863] * phase time: 6964 ms
-[26.10.21 16:04:38.952] * phase cmem: 1846481 K
-[26.10.21 16:06:03.240] * Saving spawns...
-[26.10.21 16:06:03.240] * Saving objects...
-[26.10.21 16:06:03.266] * 17634 objects are successfully saved
-[26.10.21 16:06:03.272] * Game Данил_quicksave.sav is successfully saved to file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_quicksave.sav'
-[26.10.21 16:06:04.535] * Saving spawns...
-[26.10.21 16:06:04.535] * Saving objects...
-[26.10.21 16:06:04.563] * 17634 objects are successfully saved
-[26.10.21 16:06:04.568] * Game Данил_quicksave.sav is successfully saved to file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_quicksave.sav'
-[26.10.21 16:06:26.782] * Saving spawns...
-[26.10.21 16:06:26.782] * Saving objects...
-[26.10.21 16:06:26.819] * 17630 objects are successfully saved
-[26.10.21 16:06:26.828] * Game Данил_quicksave.sav is successfully saved to file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_quicksave.sav'
-[26.10.21 16:07:29.975] * Saving spawns...
-[26.10.21 16:07:29.975] * Saving objects...
-[26.10.21 16:07:30.002] * 17611 objects are successfully saved
-[26.10.21 16:07:30.008] * Game Данил_quicksave.sav is successfully saved to file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_quicksave.sav'
-[26.10.21 16:07:33.474] * Saving spawns...
-[26.10.21 16:07:33.474] * Saving objects...
-[26.10.21 16:07:33.539] * 17611 objects are successfully saved
-[26.10.21 16:07:33.548] * Game Данил_quicksave.sav is successfully saved to file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_quicksave.sav'
-[26.10.21 16:07:39.354] * Saving spawns...
-[26.10.21 16:07:39.354] * Saving objects...
-[26.10.21 16:07:39.391] * 17611 objects are successfully saved
-[26.10.21 16:07:39.396] * Game Данил_quicksave.sav is successfully saved to file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_quicksave.sav'
-[26.10.21 16:08:12.172] * Saving spawns...
-[26.10.21 16:08:12.172] * Saving objects...
-[26.10.21 16:08:12.198] * 17612 objects are successfully saved
-[26.10.21 16:08:12.204] * Game Данил_quicksave.sav is successfully saved to file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_quicksave.sav'
-[26.10.21 16:08:47.210] * [R_occlusion::occq_destroy]: fids[63] used[63] pool[63]
-[26.10.21 16:08:47.210] * [R_occlusion::occq_destroy]: released [0] used and [63] pool queries
-[26.10.21 16:08:47.473] * DVB created: 16384K
-[26.10.21 16:08:47.473] * DIB created: 512K
-[26.10.21 16:08:48.461] * RM_Dump: textures  : 1593
-[26.10.21 16:08:48.461] * RM_Dump: rtargets  : 22
-[26.10.21 16:08:48.461] * RM_Dump: vs        : 71
-[26.10.21 16:08:48.461] * RM_Dump: ps        : 86
-[26.10.21 16:08:48.461] * RM_Dump: dcl       : 19
-[26.10.21 16:08:48.461] * RM_Dump: states    : 81
-[26.10.21 16:08:48.461] * RM_Dump: tex_list  : 1152
-[26.10.21 16:08:48.461] * RM_Dump: matrices  : 0
-[26.10.21 16:08:48.461] * RM_Dump: lst_constants: 0
-[26.10.21 16:08:48.461] * RM_Dump: v_passes  : 1701
-[26.10.21 16:08:48.461] * RM_Dump: v_elements: 1703
-[26.10.21 16:08:48.461] * RM_Dump: v_shaders : 1020
-[26.10.21 16:08:48.461] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
-[26.10.21 16:08:48.461] * GPU vertex cache: recognized, 24
-[26.10.21 16:08:48.461] *** RESET [1251 ms]
-[26.10.21 16:08:49.338] * MEMORY USAGE: 1867720 K
-[26.10.21 16:08:49.339] * End of synchronization A[1] R[1]
-[26.10.21 16:08:54.392] * Saving spawns...
-[26.10.21 16:08:54.392] * Saving objects...
-[26.10.21 16:08:54.421] * 17612 objects are successfully saved
-[26.10.21 16:08:54.426] * Game Данил_quicksave.sav is successfully saved to file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_quicksave.sav'
-[26.10.21 16:09:05.965] ~ [CPHSkeleton::RestoreNetState]: [gar_seryi_drug3] has different state in saved_bones[0] PHGetSyncItemsNumber[1] Visual[actors\neytral\stalker_neytral_hood_2] alive[no]
-[26.10.21 16:09:07.149] * Saving spawns...
-[26.10.21 16:09:07.149] * Saving objects...
-[26.10.21 16:09:07.192] * 17607 objects are successfully saved
-[26.10.21 16:09:07.198] * Game Данил_quicksave.sav is successfully saved to file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_quicksave.sav'
-[26.10.21 16:09:41.011] * Saving spawns...
-[26.10.21 16:09:41.011] * Saving objects...
-[26.10.21 16:09:41.040] * 17583 objects are successfully saved
-[26.10.21 16:09:41.046] * Game Данил_quicksave.sav is successfully saved to file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_quicksave.sav'
-[26.10.21 16:10:14.779] * Saving spawns...
-[26.10.21 16:10:14.779] * Saving objects...
-[26.10.21 16:10:14.803] * 17561 objects are successfully saved
-[26.10.21 16:10:14.809] * Game Данил_quicksave.sav is successfully saved to file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_quicksave.sav'
-[26.10.21 16:11:27.410] * [R_occlusion::occq_destroy]: fids[80] used[80] pool[80]
-[26.10.21 16:11:27.410] * [R_occlusion::occq_destroy]: released [0] used and [80] pool queries
-[26.10.21 16:11:27.638] * DVB created: 16384K
-[26.10.21 16:11:27.639] * DIB created: 512K
-[26.10.21 16:11:28.577] * RM_Dump: textures  : 1598
-[26.10.21 16:11:28.577] * RM_Dump: rtargets  : 22
-[26.10.21 16:11:28.577] * RM_Dump: vs        : 71
-[26.10.21 16:11:28.577] * RM_Dump: ps        : 86
-[26.10.21 16:11:28.577] * RM_Dump: dcl       : 19
-[26.10.21 16:11:28.577] * RM_Dump: states    : 81
-[26.10.21 16:11:28.577] * RM_Dump: tex_list  : 1155
-[26.10.21 16:11:28.577] * RM_Dump: matrices  : 0
-[26.10.21 16:11:28.577] * RM_Dump: lst_constants: 0
-[26.10.21 16:11:28.577] * RM_Dump: v_passes  : 1705
-[26.10.21 16:11:28.577] * RM_Dump: v_elements: 1707
-[26.10.21 16:11:28.577] * RM_Dump: v_shaders : 1023
-[26.10.21 16:11:28.577] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
-[26.10.21 16:11:28.577] * GPU vertex cache: recognized, 24
-[26.10.21 16:11:28.577] *** RESET [1167 ms]
-[26.10.21 16:11:29.414] * MEMORY USAGE: 1875459 K
-[26.10.21 16:11:29.414] * End of synchronization A[1] R[1]
-[26.10.21 16:12:15.812] * Saving spawns...
-[26.10.21 16:12:15.812] * Saving objects...
-[26.10.21 16:12:15.836] * 17561 objects are successfully saved
-[26.10.21 16:12:15.841] * Game Данил_autosave.sav is successfully saved to file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_autosave.sav'
-[26.10.21 16:12:15.847] - Disconnect
-[26.10.21 16:12:16.991] - Destroying level
-[26.10.21 16:12:17.108] * phase time: 0 ms
-[26.10.21 16:12:17.188] * phase cmem: 830943 K
-[26.10.21 16:12:17.248] --LUA version: [LuaJIT 2.1.0-beta3]
-[26.10.21 16:12:17.276] * phase time: 167 ms
-[26.10.21 16:12:17.343] * phase cmem: 810130 K
-[26.10.21 16:12:17.348] * Loading spawn registry...
-[26.10.21 16:12:17.910] * 8976 spawn points are successfully loaded
-[26.10.21 16:12:17.910] * Loading objects...
-[26.10.21 16:12:18.233] * 17561 objects are successfully loaded
-[26.10.21 16:12:18.862] * Game Данил_autosave is successfully loaded from file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_autosave.sav' (1.519s)
-[26.10.21 16:12:18.862] * phase time: 1586 ms
-[26.10.21 16:12:18.935] * phase cmem: 842519 K
-[26.10.21 16:12:18.976] # Player not found. New player created.
-[26.10.21 16:12:18.976] !!xrServer::Check_GameSpy_CDKey_Success - 1
-[26.10.21 16:12:18.976] * client : connection accepted - <>
-[26.10.21 16:12:18.994] * phase time: 132 ms
-[26.10.21 16:12:19.067] * phase cmem: 842553 K
-[26.10.21 16:12:19.070] * phase time: 76 ms
-[26.10.21 16:12:19.143] * phase cmem: 842553 K
-[26.10.21 16:12:19.978] * phase time: 907 ms
-[26.10.21 16:12:20.051] * phase cmem: 910697 K
-[26.10.21 16:12:20.247] * phase time: 268 ms
-[26.10.21 16:12:20.320] * phase cmem: 913995 K
-[26.10.21 16:12:20.324] * [Loading VB] 65506 verts, 2047 Kb
-[26.10.21 16:12:20.336] * [Loading VB] 65362 verts, 2042 Kb
-[26.10.21 16:12:20.345] * [Loading VB] 21425 verts, 669 Kb
-[26.10.21 16:12:20.345] * [Loading VB] 65535 verts, 2047 Kb
-[26.10.21 16:12:20.354] * [Loading VB] 65533 verts, 2047 Kb
-[26.10.21 16:12:20.362] * [Loading VB] 65534 verts, 2047 Kb
-[26.10.21 16:12:20.369] * [Loading VB] 65534 verts, 2047 Kb
-[26.10.21 16:12:20.377] * [Loading VB] 65533 verts, 2047 Kb
-[26.10.21 16:12:20.384] * [Loading VB] 65535 verts, 2047 Kb
-[26.10.21 16:12:20.392] * [Loading VB] 65533 verts, 2047 Kb
-[26.10.21 16:12:20.400] * [Loading VB] 50456 verts, 1576 Kb
-[26.10.21 16:12:20.409] * [Loading VB] 65535 verts, 2047 Kb
-[26.10.21 16:12:20.417] * [Loading VB] 65533 verts, 2047 Kb
-[26.10.21 16:12:20.426] * [Loading VB] 65534 verts, 2047 Kb
-[26.10.21 16:12:20.434] * [Loading VB] 65532 verts, 2047 Kb
-[26.10.21 16:12:20.442] * [Loading VB] 7538 verts, 235 Kb
-[26.10.21 16:12:20.443] * [Loading IB] 1048575 indices, 2047 Kb
-[26.10.21 16:12:20.453] * [Loading IB] 1048575 indices, 2047 Kb
-[26.10.21 16:12:20.460] * [Loading IB] 1048575 indices, 2047 Kb
-[26.10.21 16:12:20.467] * [Loading IB] 1048572 indices, 2047 Kb
-[26.10.21 16:12:20.476] * [Loading IB] 1048572 indices, 2047 Kb
-[26.10.21 16:12:20.484] * [Loading IB] 1048569 indices, 2047 Kb
-[26.10.21 16:12:20.491] * [Loading IB] 340623 indices, 665 Kb
-[26.10.21 16:12:20.493] * [Loading VB] 65534 verts, 767 Kb
-[26.10.21 16:12:20.498] * [Loading VB] 65535 verts, 767 Kb
-[26.10.21 16:12:20.500] * [Loading VB] 65535 verts, 767 Kb
-[26.10.21 16:12:20.503] * [Loading VB] 65534 verts, 767 Kb
-[26.10.21 16:12:20.507] * [Loading VB] 65534 verts, 767 Kb
-[26.10.21 16:12:20.511] * [Loading VB] 65532 verts, 767 Kb
-[26.10.21 16:12:20.513] * [Loading VB] 56409 verts, 661 Kb
-[26.10.21 16:12:20.516] * [Loading IB] 1048575 indices, 2047 Kb
-[26.10.21 16:12:20.525] * [Loading IB] 1048575 indices, 2047 Kb
-[26.10.21 16:12:20.533] * [Loading IB] 1048575 indices, 2047 Kb
-[26.10.21 16:12:20.543] * [Loading IB] 205905 indices, 402 Kb
-[26.10.21 16:12:20.546] * phase time: 298 ms
-[26.10.21 16:12:20.618] * phase cmem: 966965 K
-[26.10.21 16:12:20.896] * phase time: 349 ms
-[26.10.21 16:12:20.969] * phase cmem: 970275 K
-[26.10.21 16:12:20.996] * [DETAILS] VertexConsts(256), Batch(61)
-[26.10.21 16:12:20.996] * [DETAILS] 23485 v(20), 15799 p
-[26.10.21 16:12:20.997] * [DETAILS] Batch(61), VB(458K), IB(92K)
-[26.10.21 16:12:20.997] * phase time: 101 ms
-[26.10.21 16:12:21.073] * phase cmem: 970869 K
-[26.10.21 16:12:21.074] * Loading HOM: z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\l03_agroprom\level.hom
-[26.10.21 16:12:21.078] * phase time: 80 ms
-[26.10.21 16:12:21.152] * phase cmem: 970896 K
-[26.10.21 16:12:21.153] * phase time: 74 ms
-[26.10.21 16:12:21.226] * phase cmem: 970884 K
-[26.10.21 16:12:21.233] - Game configuring : Started 
-[26.10.21 16:12:21.241] - Game configuring : Finished 
-[26.10.21 16:12:21.246] * phase time: 92 ms
-[26.10.21 16:12:21.321] * phase cmem: 975053 K
-[26.10.21 16:12:24.638] * t-report - base: 1196, 1005999 K
-[26.10.21 16:12:24.638] * t-report - lmap: 8, 8193 K
-[26.10.21 16:12:24.638] * phase time: 3392 ms
-[26.10.21 16:12:24.716] * phase cmem: 1454408 K
-[26.10.21 16:12:24.727] * phase time: 88 ms
-[26.10.21 16:12:24.803] * phase cmem: 1454386 K
-[26.10.21 16:12:24.889] --------------------------------------------------------------------------------
-[26.10.21 16:12:24.889] [8143MB] physical memory installed, [1960MB] available, [75] percent of memory in use
-[26.10.21 16:12:24.889] PageFile usage: [1862MB], Peak PageFile usage: [3132MB]
-[26.10.21 16:12:24.889] --------------------------------------------------------------------------------
-[26.10.21 16:12:24.889] * [ D3D ]: textures[1014192 K]
-[26.10.21 16:12:24.889] * [x-ray]: process heap[1453810 K], render[0 K]
-[26.10.21 16:12:24.889] * [x-ray]: economy: strings[8654 K], smem[8382 K]
-[26.10.21 16:12:25.234] ! auto-generated bump map: wpn\tec-9\wpn_tec_kg9_gun_bump#
-[26.10.21 16:12:25.244] ! auto-generated bump map: wpn\tec-9\wpn_tec_kg9_mag_bump#
-[26.10.21 16:12:25.252] ! auto-generated bump map: wpn\ots_33\wpn_ots33_gps_bump#
-[26.10.21 16:12:25.267] ! auto-generated bump map: wpn\ots_33\wpn_ots33_frame_bump#
-[26.10.21 16:12:25.277] ! auto-generated bump map: wpn\ots_33\wpn_ots33_mag_bump#
-[26.10.21 16:12:25.379] ! auto-generated bump map: wpn\silencer\wpn_9mm_silencer_bump#
-[26.10.21 16:12:25.417] ! auto-generated bump map: wpn\benelli\wpn_short_body_bump#
-[26.10.21 16:12:25.430] ! auto-generated bump map: wpn\benelli\wpn_short_barrel_bump#
-[26.10.21 16:12:28.953] * MEMORY USAGE: 1671316 K
-[26.10.21 16:12:28.953] * End of synchronization A[1] R[1]
-[26.10.21 16:12:28.953] * phase time: 4314 ms
-[26.10.21 16:12:29.040] * phase cmem: 1671316 K
-[26.10.21 16:12:47.241] * Saving spawns...
-[26.10.21 16:12:47.241] * Saving objects...
-[26.10.21 16:12:47.274] * 17561 objects are successfully saved
-[26.10.21 16:12:47.279] * Game Уничтожить всех наёмников на Агропроме.sav is successfully saved to file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Уничтожить всех наёмников на Агропроме.sav'
-[26.10.21 16:13:04.641] * Saving spawns...
-[26.10.21 16:13:04.641] * Saving objects...
-[26.10.21 16:13:04.668] * 17560 objects are successfully saved
-[26.10.21 16:13:04.674] * Game Данил_quicksave.sav is successfully saved to file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_quicksave.sav'
-[26.10.21 16:13:07.661] - Disconnect
-[26.10.21 16:13:08.587] - Destroying level
-[26.10.21 16:13:08.746] DestroySingleton::RefCounter: 0
-[26.10.21 16:13:08.750] DestroySingleton::RefCounter: -646
-[26.10.21 16:13:08.754] DestroySingleton::RefCounter: 0
-[26.10.21 16:13:08.754] DestroySingleton::RefCounter: 0
-[26.10.21 16:13:08.761] Input:  1
-[26.10.21 16:13:08.771] Config-file [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\user.ltx] saved successfully
-[26.10.21 16:13:08.989] Destroying Direct3D...
-[26.10.21 16:13:08.989] * [R_occlusion::occq_destroy]: fids[54] used[54] pool[54]
-[26.10.21 16:13:08.989] * [R_occlusion::occq_destroy]: released [0] used and [54] pool queries
-[26.10.21 16:13:09.044] * RM_Dump: textures  : 9
-[26.10.21 16:13:09.044] *        :   1: ui\seq\ui_hint_pane
-[26.10.21 16:13:09.044] *        :   1: ui\ui_common
-[26.10.21 16:13:09.044] *        :   1: ui\ui_icon_equipment
-[26.10.21 16:13:09.044] *        :   1: ui\ui_icons_outfit
-[26.10.21 16:13:09.044] *        :   1: ui\ui_iconstotal
-[26.10.21 16:13:09.044] *        :   1: ui\ui_inventory
-[26.10.21 16:13:09.044] *        :   1: ui\ui_inventory2
-[26.10.21 16:13:09.044] *        :   1: ui\ui_numpad
-[26.10.21 16:13:09.044] *        :   1: ui\ui_pda
-[26.10.21 16:13:09.044] * RM_Dump: rtargets  : 0
-[26.10.21 16:13:09.044] * RM_Dump: vs        : 1
-[26.10.21 16:13:09.044] *        :   9: null
-[26.10.21 16:13:09.044] * RM_Dump: ps        : 1
-[26.10.21 16:13:09.044] *        :   9: null
-[26.10.21 16:13:09.044] * RM_Dump: dcl       : 0
-[26.10.21 16:13:09.044] * RM_Dump: states    : 1
-[26.10.21 16:13:09.044] * RM_Dump: tex_list  : 9
-[26.10.21 16:13:09.044] * RM_Dump: matrices  : 0
-[26.10.21 16:13:09.044] * RM_Dump: lst_constants: 0
-[26.10.21 16:13:09.044] * RM_Dump: v_passes  : 9
-[26.10.21 16:13:09.044] * RM_Dump: v_elements: 9
-[26.10.21 16:13:09.044] * RM_Dump: v_shaders : 9
-[26.10.21 16:13:09.044] refCount:pBaseZB 1
-[26.10.21 16:13:09.044] refCount:pBaseRT 1
-[26.10.21 16:13:09.044] DeviceREF: 30
-[26.10.21 16:13:09.048] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[26.10.21 16:13:09.048] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[27.10.21 16:33:15.664] * Detected CPU: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz [GenuineIntel], F6/M158/S10
+[27.10.21 16:33:15.665] * CPU features: RDTSC, MMX, SSE, SSE2, SSE3, MONITOR/MWAIT, SSSE3, SSE4.1, SSE4.2, AVX, AVX2
+[27.10.21 16:33:15.665] * CPU cores: [6], threads: [6]
+[27.10.21 16:33:15.665] * CPU0 current freq: 2808 MHz, max freq: 2808 MHz
+[27.10.21 16:33:15.665] * CPU1 current freq: 2808 MHz, max freq: 2808 MHz
+[27.10.21 16:33:15.665] * CPU2 current freq: 2808 MHz, max freq: 2808 MHz
+[27.10.21 16:33:15.665] * CPU3 current freq: 2808 MHz, max freq: 2808 MHz
+[27.10.21 16:33:15.665] * CPU4 current freq: 2808 MHz, max freq: 2808 MHz
+[27.10.21 16:33:15.665] * CPU5 current freq: 2808 MHz, max freq: 2808 MHz
+[27.10.21 16:33:15.665] Initializing File System...
+[27.10.21 16:33:15.666] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db0], size: [678577379]
+[27.10.21 16:33:15.714] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db1], size: [708434331]
+[27.10.21 16:33:15.720] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db2], size: [671169415]
+[27.10.21 16:33:15.722] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db3], size: [684792231]
+[27.10.21 16:33:15.725] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db4], size: [671392842]
+[27.10.21 16:33:16.293] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db5], size: [697475082]
+[27.10.21 16:33:16.370] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db6], size: [672288151]
+[27.10.21 16:33:16.376] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db7], size: [672462598]
+[27.10.21 16:33:16.430] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db8], size: [293378144]
+[27.10.21 16:33:16.446] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db9], size: [79312307]
+[27.10.21 16:33:16.481] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dba], size: [22884835]
+[27.10.21 16:33:16.487] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbb], size: [55194918]
+[27.10.21 16:33:16.494] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbc], size: [160948]
+[27.10.21 16:33:16.494] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbd], size: [101014]
+[27.10.21 16:33:16.498] using fs-ltx fsgame.ltx
+[27.10.21 16:33:16.498] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\]
+[27.10.21 16:33:16.498]   files: [6]
+[27.10.21 16:33:16.502] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\]
+[27.10.21 16:33:16.502]   files: [16]
+[27.10.21 16:33:16.502] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\spawns\]
+[27.10.21 16:33:16.502]   files: [4]
+[27.10.21 16:33:16.502] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\anims\]
+[27.10.21 16:33:16.502]   files: [23]
+[27.10.21 16:33:16.504] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\]
+[27.10.21 16:33:16.504]   files: [12]
+[27.10.21 16:33:16.505] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\meshes\]
+[27.10.21 16:33:16.505]   files: [12]
+[27.10.21 16:33:16.529] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\meshes\]
+[27.10.21 16:33:16.529]   files: [12]
+[27.10.21 16:33:16.548] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\shaders\]
+[27.10.21 16:33:16.548]   files: [7]
+[27.10.21 16:33:16.563] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\sounds\]
+[27.10.21 16:33:16.563]   files: [22]
+[27.10.21 16:33:16.590] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\textures\]
+[27.10.21 16:33:16.590]   files: [62]
+[27.10.21 16:33:16.744] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\scripts\]
+[27.10.21 16:33:16.745]   files: [129]
+[27.10.21 16:33:16.747] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\]
+[27.10.21 16:33:16.749]   files: [30]
+[27.10.21 16:33:16.761] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\]
+[27.10.21 16:33:16.761]   files: [12]
+[27.10.21 16:33:16.761] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\]
+[27.10.21 16:33:16.761]   files: [20]
+[27.10.21 16:33:16.761] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\logs\]
+[27.10.21 16:33:16.761]   files: [68]
+[27.10.21 16:33:16.762] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\screenshots\]
+[27.10.21 16:33:16.762]   files: [10]
+[27.10.21 16:33:16.794] FS: 34630 files cached, 7146Kb memory used.
+[27.10.21 16:33:16.794] Init FileSystem 1.128873 sec
+[27.10.21 16:33:16.795] [OGSR Engine (x64)] build date: [Sep 22 2021 10:23:51]
+[27.10.21 16:33:16.795] [AppVeyor] build version: [2.1.293], repo: [OGSR/OGSR-Engine]
+[27.10.21 16:33:16.795] [_MSC_FULL_VER]: [191627045], [_MSVC_LANG]: [201703L]
+[27.10.21 16:33:16.795] Working Directory: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64]
+[27.10.21 16:33:16.795] CommandLine: ["Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe"  -high]
+[27.10.21 16:33:17.032] Initializing Engine...
+[27.10.21 16:33:17.033] Starting INPUT device...
+[27.10.21 16:33:17.350] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[27.10.21 16:33:17.350] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[27.10.21 16:33:17.446] refCount:m_pAdapter 1
+[27.10.21 16:33:17.446] refCount:pFactory 1
+[27.10.21 16:33:17.447] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[27.10.21 16:33:17.447] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[27.10.21 16:33:17.662] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[27.10.21 16:33:17.663] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[27.10.21 16:33:17.665] --[CEngineAPI::CreateRendererList] Available render modes [5]:
+[27.10.21 16:33:17.665] --  [renderer_r2a]
+[27.10.21 16:33:17.665] --  [renderer_r2]
+[27.10.21 16:33:17.665] --  [renderer_r2.5]
+[27.10.21 16:33:17.665] --  [renderer_r3]
+[27.10.21 16:33:17.665] --  [renderer_r4]
+[27.10.21 16:33:17.665] Executing config-script "user.ltx"...
+[27.10.21 16:33:17.665] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
+[27.10.21 16:33:17.665] [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\user.ltx] successfully loaded.
+[27.10.21 16:33:17.665] --Loading DLL: [xrRender_R2.dll]
+[27.10.21 16:33:17.668] --Loading DLL: [xrGame.dll]
+[27.10.21 16:33:17.708] --------------------------------------------------------------------------------
+[27.10.21 16:33:17.708] [8143MB] physical memory installed, [2787MB] available, [65] percent of memory in use
+[27.10.21 16:33:17.708] PageFile usage: [47MB], Peak PageFile usage: [94MB]
+[27.10.21 16:33:17.708] --------------------------------------------------------------------------------
+[27.10.21 16:33:17.708] * [ D3D ]: textures[0 K]
+[27.10.21 16:33:17.708] * [x-ray]: process heap[24175 K], render[0 K]
+[27.10.21 16:33:17.708] * [x-ray]: economy: strings[4940 K], smem[0 K]
+[27.10.21 16:33:17.708] SOUND: OpenAL: enumerate devices...
+[27.10.21 16:33:17.709] SOUND: OpenAL: EnumerationExtension Present
+[27.10.21 16:33:18.005] devices Generic Software
+[27.10.21 16:33:18.005] SOUND: OpenAL: system  default SndDevice name is Generic Software
+[27.10.21 16:33:18.330] SOUND: OpenAL: All available devices:
+[27.10.21 16:33:18.330] 1. Generic Software, Spec Version 1.1 (default) eax[2] efx[no] xram[no]
+[27.10.21 16:33:18.330] 2. OpenAL Soft, Spec Version 1.1  eax[0] efx[yes] xram[no]
+[27.10.21 16:33:18.331] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx"...
+[27.10.21 16:33:18.339] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx] successfully loaded.
+[27.10.21 16:33:18.339] Executing config-script "user.ltx"...
+[27.10.21 16:33:18.340] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\rspec_high.ltx"...
+[27.10.21 16:33:18.340] ! Unknown command:  r2_sun_shafts
+[27.10.21 16:33:18.340] ! Unknown command:  r__supersample
+[27.10.21 16:33:18.340] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\rspec_high.ltx] successfully loaded.
+[27.10.21 16:33:18.340] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx"...
+[27.10.21 16:33:18.341] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx] successfully loaded.
+[27.10.21 16:33:18.342] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
+[27.10.21 16:33:18.342] [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\user.ltx] successfully loaded.
+[27.10.21 16:33:18.342] SOUND: Selected device is Generic Software
+[27.10.21 16:33:18.381] [OpenAL] EAX 2.0 extension: present
+[27.10.21 16:33:18.381] [OpenAL] EAX 2.0 deferred: present
+[27.10.21 16:33:18.382] * sound : cache: 65537 kb, 4856 lines, 13820 bpl
+[27.10.21 16:33:18.412] Starting RENDER device...
+[27.10.21 16:33:18.458] * GPU [vendor:10DE]-[device:1C81]: NVIDIA GeForce GTX 1050
+[27.10.21 16:33:18.458] * GPU driver: 30.0.14.7196
+[27.10.21 16:33:18.605] * CREATE: DeviceREF: 1
+[27.10.21 16:33:18.605] * Vertex Processor: PURE HARDWARE
+[27.10.21 16:33:18.606] *     Texture memory: 4072 M
+[27.10.21 16:33:18.606] *          DDI-level: 9.0
+[27.10.21 16:33:18.612] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+[27.10.21 16:33:18.613] * GPU vertex cache: unrecognized, 16
+[27.10.21 16:33:18.619] * DVB created: 16384K
+[27.10.21 16:33:18.620] * DIB created: 512K
+[27.10.21 16:33:18.676] ! Version conflict in shader 'models\lightplanes_00'
+[27.10.21 16:33:18.676] ! Version conflict in shader 'models\lightplanesself'
+[27.10.21 16:33:18.676] ! Version conflict in shader 'models\model_puh'
+[27.10.21 16:33:18.676] ! Version conflict in shader 'models\model_refl'
+[27.10.21 16:33:18.676] ! Version conflict in shader 'models\xbrainglass'
+[27.10.21 16:33:18.676] ! Version conflict in shader 'models\xdistortcolorlinv'
+[27.10.21 16:33:18.676] ! Version conflict in shader 'models\xglass'
+[27.10.21 16:33:18.676] ! Version conflict in shader 'models\xglass2'
+[27.10.21 16:33:18.677] ! Version conflict in shader 'models\xlens'
+[27.10.21 16:33:18.677] ! Version conflict in shader 'selflight_static'
+[27.10.21 16:33:18.678] [CTextureDescrMngr::LoadLTX] count of *textures*.ltx files: [1]
+[27.10.21 16:33:18.872] * NULLRT supported
+[27.10.21 16:33:18.872] * ...and used
+[27.10.21 16:33:18.872] * HWDST/PCF supported and used
+[27.10.21 16:33:18.872] * NV-DBT supported and used
+[27.10.21 16:33:20.507] --LUA version: [LuaJIT 2.1.0-beta3]
+[27.10.21 16:33:20.577] Starting engine...
+[27.10.21 16:34:04.564] * phase time: 7 ms
+[27.10.21 16:34:04.594] * phase cmem: 180384 K
+[27.10.21 16:34:04.660] --LUA version: [LuaJIT 2.1.0-beta3]
+[27.10.21 16:34:04.701] * phase time: 136 ms
+[27.10.21 16:34:04.730] * phase cmem: 149180 K
+[27.10.21 16:34:04.738] * Loading spawn registry...
+[27.10.21 16:34:05.389] * 8976 spawn points are successfully loaded
+[27.10.21 16:34:05.389] * Loading objects...
+[27.10.21 16:34:05.748] * 17903 objects are successfully loaded
+[27.10.21 16:34:06.518] * Game Данил_quicksave is successfully loaded from file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_quicksave.sav' (1.787s)
+[27.10.21 16:34:06.518] * phase time: 1816 ms
+[27.10.21 16:34:06.568] * phase cmem: 200543 K
+[27.10.21 16:34:06.619] # Player not found. New player created.
+[27.10.21 16:34:06.619] !!xrServer::Check_GameSpy_CDKey_Success - 1
+[27.10.21 16:34:06.619] * client : connection accepted - <>
+[27.10.21 16:34:06.636] * phase time: 117 ms
+[27.10.21 16:34:06.684] * phase cmem: 200600 K
+[27.10.21 16:34:06.686] * phase time: 49 ms
+[27.10.21 16:34:06.736] * phase cmem: 200600 K
+[27.10.21 16:34:08.392] --[ISpatial_DB::initialize] bbc is [-123.7, 2.8, 188.3], bbd is [320.0, 30.6, 320.0]
+[27.10.21 16:34:08.392] --[ISpatial_DB::initialize] bbc is [-123.7, 2.8, 188.3], bbd is [320.0, 30.6, 320.0]
+[27.10.21 16:34:08.406] * phase time: 1720 ms
+[27.10.21 16:34:08.455] * phase cmem: 311295 K
+[27.10.21 16:34:08.728] * phase time: 322 ms
+[27.10.21 16:34:08.786] * phase cmem: 314735 K
+[27.10.21 16:34:08.790] * [Loading VB] 65535 verts, 2047 Kb
+[27.10.21 16:34:08.800] * [Loading VB] 65531 verts, 2047 Kb
+[27.10.21 16:34:08.812] * [Loading VB] 65527 verts, 2047 Kb
+[27.10.21 16:34:08.821] * [Loading VB] 65509 verts, 2047 Kb
+[27.10.21 16:34:08.841] * [Loading VB] 65533 verts, 2047 Kb
+[27.10.21 16:34:08.851] * [Loading VB] 65481 verts, 2046 Kb
+[27.10.21 16:34:08.861] * [Loading VB] 9630 verts, 300 Kb
+[27.10.21 16:34:08.864] * [Loading VB] 65535 verts, 2047 Kb
+[27.10.21 16:34:08.873] * [Loading VB] 65535 verts, 2047 Kb
+[27.10.21 16:34:08.882] * [Loading VB] 65535 verts, 2047 Kb
+[27.10.21 16:34:08.892] * [Loading VB] 65535 verts, 2047 Kb
+[27.10.21 16:34:08.902] * [Loading VB] 65535 verts, 2047 Kb
+[27.10.21 16:34:08.914] * [Loading VB] 65526 verts, 2047 Kb
+[27.10.21 16:34:08.924] * [Loading VB] 65534 verts, 2047 Kb
+[27.10.21 16:34:08.933] * [Loading VB] 65535 verts, 2047 Kb
+[27.10.21 16:34:08.943] * [Loading VB] 65535 verts, 2047 Kb
+[27.10.21 16:34:08.952] * [Loading VB] 65535 verts, 2047 Kb
+[27.10.21 16:34:08.960] * [Loading VB] 65529 verts, 2047 Kb
+[27.10.21 16:34:08.969] * [Loading VB] 65532 verts, 2047 Kb
+[27.10.21 16:34:08.979] * [Loading VB] 65535 verts, 2047 Kb
+[27.10.21 16:34:08.988] * [Loading VB] 65534 verts, 2047 Kb
+[27.10.21 16:34:08.997] * [Loading VB] 65533 verts, 2047 Kb
+[27.10.21 16:34:09.006] * [Loading VB] 11187 verts, 349 Kb
+[27.10.21 16:34:09.008] * [Loading VB] 65533 verts, 2047 Kb
+[27.10.21 16:34:09.021] * [Loading VB] 65533 verts, 2047 Kb
+[27.10.21 16:34:09.031] * [Loading VB] 65535 verts, 2047 Kb
+[27.10.21 16:34:09.040] * [Loading VB] 65535 verts, 2047 Kb
+[27.10.21 16:34:09.090] * [Loading VB] 58148 verts, 1817 Kb
+[27.10.21 16:34:09.097] * [Loading IB] 1048575 indices, 2047 Kb
+[27.10.21 16:34:09.106] * [Loading IB] 1048575 indices, 2047 Kb
+[27.10.21 16:34:09.115] * [Loading IB] 1048575 indices, 2047 Kb
+[27.10.21 16:34:09.136] * [Loading IB] 1048575 indices, 2047 Kb
+[27.10.21 16:34:09.145] * [Loading IB] 1048575 indices, 2047 Kb
+[27.10.21 16:34:09.153] * [Loading IB] 1048575 indices, 2047 Kb
+[27.10.21 16:34:09.164] * [Loading IB] 1048575 indices, 2047 Kb
+[27.10.21 16:34:09.174] * [Loading IB] 1048575 indices, 2047 Kb
+[27.10.21 16:34:09.184] * [Loading IB] 1048575 indices, 2047 Kb
+[27.10.21 16:34:09.193] * [Loading IB] 1048575 indices, 2047 Kb
+[27.10.21 16:34:09.202] * [Loading IB] 1048575 indices, 2047 Kb
+[27.10.21 16:34:09.210] * [Loading IB] 1048575 indices, 2047 Kb
+[27.10.21 16:34:09.220] * [Loading IB] 1048575 indices, 2047 Kb
+[27.10.21 16:34:09.229] * [Loading IB] 274437 indices, 536 Kb
+[27.10.21 16:34:09.247] * [Loading VB] 65535 verts, 767 Kb
+[27.10.21 16:34:09.251] * [Loading VB] 65534 verts, 767 Kb
+[27.10.21 16:34:09.256] * [Loading VB] 65534 verts, 767 Kb
+[27.10.21 16:34:09.258] * [Loading VB] 65534 verts, 767 Kb
+[27.10.21 16:34:09.263] * [Loading VB] 65535 verts, 767 Kb
+[27.10.21 16:34:09.267] * [Loading VB] 65534 verts, 767 Kb
+[27.10.21 16:34:09.270] * [Loading VB] 65533 verts, 767 Kb
+[27.10.21 16:34:09.273] * [Loading VB] 65534 verts, 767 Kb
+[27.10.21 16:34:09.277] * [Loading VB] 65535 verts, 767 Kb
+[27.10.21 16:34:09.282] * [Loading VB] 65535 verts, 767 Kb
+[27.10.21 16:34:09.284] * [Loading VB] 29335 verts, 343 Kb
+[27.10.21 16:34:09.286] * [Loading IB] 1048575 indices, 2047 Kb
+[27.10.21 16:34:09.295] * [Loading IB] 1048575 indices, 2047 Kb
+[27.10.21 16:34:09.304] * [Loading IB] 1048575 indices, 2047 Kb
+[27.10.21 16:34:09.313] * [Loading IB] 1048575 indices, 2047 Kb
+[27.10.21 16:34:09.323] * [Loading IB] 550890 indices, 1075 Kb
+[27.10.21 16:34:09.329] * phase time: 600 ms
+[27.10.21 16:34:09.393] * phase cmem: 413646 K
+[27.10.21 16:34:09.647] * phase time: 317 ms
+[27.10.21 16:34:09.699] * phase cmem: 416710 K
+[27.10.21 16:34:09.723] * [DETAILS] VertexConsts(256), Batch(61)
+[27.10.21 16:34:09.723] * [DETAILS] 40687 v(20), 26352 p
+[27.10.21 16:34:09.724] * [DETAILS] Batch(61), VB(794K), IB(154K)
+[27.10.21 16:34:09.725] * phase time: 77 ms
+[27.10.21 16:34:09.776] * phase cmem: 417714 K
+[27.10.21 16:34:09.778] * Loading HOM: z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\l07_military\level.hom
+[27.10.21 16:34:09.784] * phase time: 59 ms
+[27.10.21 16:34:09.834] * phase cmem: 418015 K
+[27.10.21 16:34:09.836] * phase time: 51 ms
+[27.10.21 16:34:09.887] * phase cmem: 418015 K
+[27.10.21 16:34:09.910] - Game configuring : Started 
+[27.10.21 16:34:09.913] - Game configuring : Finished 
+[27.10.21 16:34:10.094] * phase time: 258 ms
+[27.10.21 16:34:10.146] * phase cmem: 431432 K
+[27.10.21 16:34:18.118] * t-report - base: 1256, 1075557 K
+[27.10.21 16:34:18.118] * t-report - lmap: 8, 8193 K
+[27.10.21 16:34:18.118] * phase time: 8024 ms
+[27.10.21 16:34:18.196] * phase cmem: 1566667 K
+[27.10.21 16:34:18.375] * phase time: 257 ms
+[27.10.21 16:34:18.451] * phase cmem: 1566674 K
+[27.10.21 16:34:18.520] --------------------------------------------------------------------------------
+[27.10.21 16:34:18.520] [8143MB] physical memory installed, [1310MB] available, [83] percent of memory in use
+[27.10.21 16:34:18.520] PageFile usage: [1879MB], Peak PageFile usage: [1881MB]
+[27.10.21 16:34:18.520] --------------------------------------------------------------------------------
+[27.10.21 16:34:18.520] * [ D3D ]: textures[1083750 K]
+[27.10.21 16:34:18.520] * [x-ray]: process heap[1566052 K], render[0 K]
+[27.10.21 16:34:18.520] * [x-ray]: economy: strings[7377 K], smem[0 K]
+[27.10.21 16:34:23.969] ! Can't find sound [weapons\empty.ogg]
+[27.10.21 16:34:26.494] FUCKING NPC: mil_ara_guard2
+[27.10.21 16:34:26.649] FUCKING NPC: mil_ara
+[27.10.21 16:34:26.678] FUCKING NPC: mil_ara_guard1
+[27.10.21 16:34:26.692] FUCKING NPC: mil_ara_guard3
+[27.10.21 16:34:28.983] ! auto-generated bump map: wpn\benelli\wpn_short_body_bump#
+[27.10.21 16:34:29.012] ! auto-generated bump map: wpn\benelli\wpn_short_barrel_bump#
+[27.10.21 16:34:32.125] * MEMORY USAGE: 2039178 K
+[27.10.21 16:34:32.125] * End of synchronization A[1] R[1]
+[27.10.21 16:34:32.135] * phase time: 14016 ms
+[27.10.21 16:34:32.245] * phase cmem: 2039178 K
+[27.10.21 16:34:34.400] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[27.10.21 16:34:35.032] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[27.10.21 16:34:38.324] - Disconnect
+[27.10.21 16:34:40.467] - Destroying level
+[27.10.21 16:34:41.017] DestroySingleton::RefCounter: 0
+[27.10.21 16:34:41.021] DestroySingleton::RefCounter: -646
+[27.10.21 16:34:41.025] DestroySingleton::RefCounter: 0
+[27.10.21 16:34:41.026] DestroySingleton::RefCounter: 0
+[27.10.21 16:34:41.037] Input:  1
+[27.10.21 16:34:41.063] Config-file [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\user.ltx] saved successfully
+[27.10.21 16:34:41.301] Destroying Direct3D...
+[27.10.21 16:34:41.303] * [R_occlusion::occq_destroy]: fids[56] used[56] pool[56]
+[27.10.21 16:34:41.303] * [R_occlusion::occq_destroy]: released [0] used and [56] pool queries
+[27.10.21 16:34:41.370] * RM_Dump: textures  : 0
+[27.10.21 16:34:41.370] * RM_Dump: rtargets  : 0
+[27.10.21 16:34:41.370] * RM_Dump: vs        : 0
+[27.10.21 16:34:41.370] * RM_Dump: ps        : 0
+[27.10.21 16:34:41.370] * RM_Dump: dcl       : 0
+[27.10.21 16:34:41.370] * RM_Dump: states    : 0
+[27.10.21 16:34:41.370] * RM_Dump: tex_list  : 0
+[27.10.21 16:34:41.370] * RM_Dump: matrices  : 0
+[27.10.21 16:34:41.370] * RM_Dump: lst_constants: 0
+[27.10.21 16:34:41.370] * RM_Dump: v_passes  : 0
+[27.10.21 16:34:41.370] * RM_Dump: v_elements: 0
+[27.10.21 16:34:41.370] * RM_Dump: v_shaders : 0
+[27.10.21 16:34:41.370] refCount:pBaseZB 1
+[27.10.21 16:34:41.370] refCount:pBaseRT 1
+[27.10.21 16:34:41.370] DeviceREF: 11
+[27.10.21 16:34:41.431] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[27.10.21 16:34:41.431] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
