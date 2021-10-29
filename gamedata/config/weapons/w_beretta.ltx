@@ -1,10 +1,10 @@
 [wpn_beretta]:identity_immunities
 GroupControlSection			= spawn_group
 discovery_dependency 		= 
-$spawn                   	= "weapons\beretta"					; option for Level Editor
-$npc			 			= on		; option for Level Editor
+$spawn                   	= "weapons\beretta"
+$npc			 			= on
 $prefetch 					= 8
-scheduled         		   	= off              ; option for ALife Simulator
+scheduled         		   	= off
 cform             		    = skeleton
 class                    	= WP_PM
 min_radius               	= 0
@@ -13,99 +13,81 @@ description					= enc_weapons1_wpn-beretta
 
 ef_weapon_type				= 5
 
-;--- scope weapons -----------------------------------------------------------------
-holder_range_modifier	= 1.0               ; во сколько раз увеличивается eye_range 
-holder_fov_modifier		= 1.0              ; во сколько раз увеличивается eye_fov
-;-----------------------------------------------------------------------------------
+holder_range_modifier	= 1.0
+holder_fov_modifier		= 1.0
 
-cost					 	= 5000 ;2900	;300
+cost					 	= 4500
 
-ammo_limit		 			= 900
+ammo_limit		 			= 120
 ammo_current		 		= 96
 ammo_elapsed		 		= 16
 
-ammo_mag_size		 		= 17;15
+ammo_mag_size		 		= 16
 ammo_class		 			= ammo_9x19_fmj, ammo_9x19_pbp
 
 hand_dependence		 		= 1
 single_handed				= 1							
 
 slot 			 			= 1
-animation_slot				= 1									; type of the animation that will be used
-
+animation_slot				= 1
 
 inv_name					= wpn-beretta
 inv_name_short				= wpn-beretta
-inv_weight					= 1.0	;.5
+inv_weight					= 1.0
 
-inv_grid_width				= 2
-inv_grid_height				= 1
-inv_grid_x					= 12
-inv_grid_y					= 8
+inv_grid_width     = 2
+inv_grid_height    = 1
+inv_grid_x         = 12
+inv_grid_y         = 8
 
 kill_msg_x			= 200
 kill_msg_y			= 153
 kill_msg_width		= 37
 kill_msg_height		= 24
 
-;-----------------------------------------------------------------------------------
-;базовая дисперсия
-fire_dispersion_base		= 0.04 		;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+fire_dispersion_base		= 0.1
 
-;отдача
-cam_relax_speed         	= 0		;скорость возврата в исходное положение
-cam_relax_speed_ai         	= 8
-cam_dispersion          	= 0.65		;увеличения угла (в градусах) с каждым выстрелом
-cam_dispersion_inc		= 0.0		;увеличениe cam_dispersion с каждым выстрелом
-cam_dispertion_frac		= 1.0		;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
-cam_max_angle			= 20.0		;максимальный угол отдачи
-cam_max_angle_horz		= 10.0		;(degree) maximum shot horizontal degree 
-cam_step_angle_horz		= 0.9		;(degree) size of step camera moved in horizontal position while shooting
+cam_relax_speed         	= 8
+cam_dispersion          	= 3.0
+cam_dispersion_inc		= 0.0
+cam_dispertion_frac		= 1.0
+cam_max_angle			= 20.0
+cam_max_angle_horz		= 10.0
+cam_step_angle_horz		= 0.9
 
-fire_dispersion_condition_factor = 5		;увеличение дисперсии в процентах при максимальном износе 
-misfire_probability 		= 0.005	    	;вероятность осечки при максимальном износе 
-condition_shot_dec 		= 0.0001	;увеличение износа при каждом выстреле
+fire_dispersion_condition_factor = 5
+misfire_probability 		= 0.005
+condition_shot_dec 		= 0.00005
 
-;-----------------------------------------------------------------------------------
-; ttc
-hit_power                	= 0.45 ;0.64
-hit_impulse		 			= 12
-hit_type 					= fire_wound	
+hit_power                	= 0.35
+hit_impulse		 	= 125
+hit_type 			= fire_wound	
 
-PDM_disp_base 				= 1.0
-PDM_disp_vel_factor 		= 0.8
-PDM_disp_accel_factor 		= 0.8
-PDM_crouch	 				= 1.0
-PDM_crouch_no_acc 			= 1.0
+PDM_disp_base 			= 0.3
+PDM_disp_vel_factor 		= 0.7
+PDM_disp_accel_factor 		= 0.7
+PDM_crouch	 		= 0.1
+PDM_crouch_no_acc 		= 0.1
 
-use_aim_bullet				= true		;Поддерживается ли первая суппер пуля
+use_aim_bullet				= true
 time_to_aim					= 1.0	
 
-fire_distance            	= 50 ;800
-bullet_speed		 		= 365		
+fire_distance            	= 50
+bullet_speed		 	= 360		
 rpm                      	= 250
-rpm_empty_click 	 		= 250
-; end ttc
+rpm_empty_click 	 	= 250
 
-silencer_hit_power       	= 0.35 ;0.55
-silencer_hit_impulse	 	= 10 ;105
-silencer_fire_distance   	= 150 ;500
+silencer_hit_power       	= 0.52
+silencer_hit_impulse	 	= 105
+silencer_fire_distance   	= 100
 silencer_bullet_speed	 	= 240
 
-;-----------------------------------------------------------------------------------
 hud                      	= wpn_beretta_hud
-;hud                      	= wpn_FORT_hud
 visual                   	= weapons\beretta92fs\wpn_beretta92fs.ogf
 
 normal                   	= 0, 1, 0
 position                 	= -0.021, -0.085, 0.0
 orientation              	= 0, 0, 0
-
-;--STRAP PARAMETERS-----------------------------------------------------------------
-;strap_position         		= -0.1,-0.45,0.2			; position (offset) and orientation of the weapon when it is strapped
-;strap_orientation      		= 1.57,0,0						; (3rd person view)
-;strap_bone0					= bip01_spine2
-;strap_bone1					= bip01_spine1
 
 direction           	    = 0, 0, 1
 fire_point               	= 0.0, 0.133, 0.161
@@ -115,10 +97,7 @@ smoke_particles		   		= weapons\generic_shoot_00
 
 shell_point		 			= 0.0, 0.133, 0.047
 shell_dir		 			= 0.0, 0.0, 0.4
-shell_particles	 			= weapons\generic_shells
-
-;-----------------------------------------------------------------------------------
-;startup_ammo            	= 90
+shell_particles	 			= amik\weapons\9x18\9x18_r_01
 
 light_color		 			= 0.6,0.5,0.3
 light_range		 			= 3.0
@@ -127,17 +106,14 @@ light_var_range		 		= 0.5
 light_time 		 			= 0.2
 
 ph_mass			 			= 1
-;cost			 			= 350
 
-;addons
 scope_status				= 0
 silencer_status				= 2
 grenade_launcher_status		= 0
 
 zoom_enabled				= true
-scope_zoom_factor	    	= 75 ;80 ;90
+scope_zoom_factor	    	= 70
 
-;звуки
 snd_draw					= weapons\walther_draw, 0.3
 snd_holster					= weapons\generic_holster, 0.3
 snd_shoot					= weapons\t_beretta_shot   ;walther_p99_shoot
@@ -145,55 +121,43 @@ snd_empty					= weapons\pistol_empty
 snd_reload					= weapons\pm_reload, 0.5
 snd_close					= weapons\generic_close
 
+silencer_name  				= wpn_addon_silencer_9x19
+silencer_x 					= 70
+silencer_y 					= -18
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; silencer
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-silencer_name  				= wpn_addon_silencer		; section name for the attachable silencer
-silencer_x 					= 65						; offset in inventory icon
-silencer_y 					= -18				
-
-;params when silencer is attached 
-;similar to corresponding params without prefix silencer_
-
-;silencer_flame_particles 	= weapons\generic_weapon01
 silencer_smoke_particles 	= weapons\generic_shoot_00
-snd_silncer_shot			= weapons\pistol_silenced, 0.4 
+snd_silncer_shot			= weapons\p99\p99_sil_shoot
 silencer_light_color		= 0.6,0.5,0.3
 silencer_light_range		= 0.01
 silencer_light_var_color	= 0.05
 silencer_light_var_range	= 0.5
 silencer_light_time 		= 0.2
 
-
- 
 [wpn_beretta_hud]
-shell_point			= -0.000000,0.060000,-0.400000
-fire_point			= -0.002000,0.056000,-0.300999
-fire_bone                	= wpn_body
-orientation              	= 0,0,0
-position                 	= 0,0,0
-;visual                   	=weapons\fort\wpn_fort.ogf
+shell_point			        = -0.05,0.05,-0.5
+fire_point			        = 0,0,-0.3
+fire_bone                	= bolt
+orientation              	= 3,1,0
+position                 	= 0.0,-0.09,0.0
 visual                   	= weapons\beretta92FS\wpn_beretta92fs_hud.ogf 
 
-anim_holster				= holster
-anim_idle					= idle
-anim_empty					= empty
-anim_reload					= reload_full
-anim_reload_empty			= reload
-anim_draw					= draw
-anim_draw_empty				= draw_empty
-anim_shoot					= shoot
-anim_shot_last				= shoot_last
-anim_close					= holster ;idle
-anim_idle_aim				= idle_aim
-anim_idle_sprint			= idle_sprint
+anim_holster				= pm_holster
+anim_idle					= pm_idle
+anim_empty					= pm_idle_empty
+anim_reload					= beretta92fs_reload
+anim_reload_empty			= beretta92fs_reload_empty
+;anim_reload_jammed         = reload_jammed
+anim_draw					= pm_draw
+anim_draw_empty				= pm_draw_empty
+anim_shoot					= pm_shoot
+anim_shot_last				= pm_shoot_last
+anim_close					= pm_holster_empty
+anim_idle_aim				= pm_idle
+anim_idle_sprint			= pm_idle_sprint
+anim_idle_moving		    = pm_idle_moving
+anim_idle_sprint_empty		= pm_idle_sprint_empty
+anim_idle_moving_empty		= pm_idle_moving_empty
 
-;смещения HUD для режима приближения
-zoom_offset			= -0.172000,0.069200,-0.211500
-zoom_rotate_x		= -0.000600
-zoom_rotate_y		= 0.000500
-
-
-
+zoom_offset			= -0.10625,0.0275,0.0
+zoom_rotate_x		= 0.02
+zoom_rotate_y		= 0.0538

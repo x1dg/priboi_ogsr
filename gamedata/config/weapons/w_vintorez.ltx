@@ -1,25 +1,23 @@
 [wpn_vintorez]:identity_immunities
 GroupControlSection		 	= spawn_group
 discovery_dependency 	 	= 
-$spawn                   	= "weapons\vintorez"					; option for Level Editor
+$spawn                   	= "weapons\vintorez"
 $npc                     	= off
 $prefetch 		         	= 8
-scheduled                	= off                              ; option for ALife Simulator
+scheduled                	= off
 cform                    	= skeleton
 class                    	= WP_VINT
-min_radius               	= 0 ;50
-max_radius               	= 180
+min_radius               	= 50
+max_radius               	= 150
 description					= enc_weapons1_wpn-vintorez
 
 ef_main_weapon_type			= 3
 ef_weapon_type				= 8
 
-;--- scope weapons -----------------------------------------------------------------
-holder_range_modifier	= 2.0               ; во сколько раз увеличивается eye_range 
-holder_fov_modifier		= 0.3              ; во сколько раз увеличивается eye_fov
-;-----------------------------------------------------------------------------------
+holder_range_modifier	= 2.0
+holder_fov_modifier		= 0.3
 
-cost					 	= 28000 ;17930
+cost					 	= 20000
 weapon_class			 	= sniper_rifle
 
 ammo_limit		         	= 180
@@ -31,87 +29,78 @@ ammo_mag_size		     	= 10
 hand_dependence		     	= 1
 single_handed				= 0
 
-ammo_class		         	= ammo_9x39_sp5, ammo_9x39_ap
+ammo_class		         	= ammo_9x39_pab9, ammo_9x39_sp5, ammo_9x39_ap
 fire_modes					= 1, -1
 
-slot 			         	= 2		; // secondary
-animation_slot			 	= 8		; type of the animation that will be used
+slot 			         	= 2		
+animation_slot			 	= 2
 	
 inv_name		         	= wpn-vintorez
 inv_name_short		     	= wpn-vintorez
 inv_weight		         	= 3.2
 
-inv_grid_width				= 5
-inv_grid_height				= 2
-inv_grid_x					= 0
-inv_grid_y					= 4
+inv_grid_width     = 5
+inv_grid_height    = 2
+inv_grid_x         = 0
+inv_grid_y         = 4
 
 kill_msg_x			= 98
 kill_msg_y			= 0
 kill_msg_width		= 78
 kill_msg_height		= 25
 
-;-----------------------------------------------------------------------------------
-;базовая дисперсия
-fire_dispersion_base		= 0.008	;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+fire_dispersion_base		= 0.05
 control_inertion_factor		= 1.04f
 
-;отдача
-cam_relax_speed         	= 0.0	;скорость возврата в исходное положение
-cam_relax_speed_ai         	= 4.75
-cam_dispersion          	= 0.12	;увеличения угла (в градусах) с каждым выстрелом
-cam_dispersion_inc		= 0.2	;увеличениe cam_dispersion с каждым выстрелом
-cam_dispertion_frac		= 1.5	;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
-cam_max_angle			= 5.0	;максимальный угол отдачи
-cam_max_angle_horz		= 3.0	;(degree) maximum shot horizontal degree 
-cam_step_angle_horz		= 0.9;0.3	;(degree) size of step camera moved in horizontal position while shooting
+cam_relax_speed         	= 4.75	
+cam_dispersion          	= 0.500	
+cam_dispersion_inc		= 0.2
+cam_dispertion_frac		= 1.0
+cam_max_angle			= 9.0
+cam_max_angle_horz		= 5.0
+cam_step_angle_horz		= 0.4
 
-fire_dispersion_condition_factor = 5	;увеличение дисперсии в процентах при максимальном износе 
-misfire_probability 	= 0.005	;вероятность осечки при максимальном износе 
+fire_dispersion_condition_factor = 5
+misfire_probability 	= 0.005
 misfire_condition_k		= 0.05
-condition_shot_dec 		= 0.0001 ;увеличение износа при каждом выстреле
-;-----------------------------------------------------------------------------------
+condition_shot_dec 		= 0.0002
 
 direction                	= 0, 0, 1
 
-fire_point               	= 0.0, 0.207, 0.474
-
+fire_point               	= 0.0, 0.127, 0.559
 
 smoke_particles				= weapons\generic_shoot_00
 
-shell_point		 			= 0.0, 0.211, 0.99
+shell_point		 			= 0.0, 0.127, 0.10
 shell_dir		 			= 0.0, 1.0, 0.0
-; shell_particles	 			= weapons\generic_shells ;weapons\arsenal_shells1
+shell_particles	 			= amik\weapons\9x39\9x39_shells_r_01
 
 rpm_empty_click 	     	= 200
 
-PDM_disp_base 			= 3.0
-PDM_disp_vel_factor 		= 1.4
-PDM_disp_accel_factor 		= 1.0
-PDM_crouch	 		= 1.2
+PDM_disp_base 			= 1.0
+PDM_disp_vel_factor 		= 1.2
+PDM_disp_accel_factor 		= 1.2
+PDM_crouch	 		= 1.0
 PDM_crouch_no_acc 		= 1.0
 
-; ttc
-hit_power           = 1.5 ;0.8
-hit_impulse		    = 60
+hit_power           = 0.75
+hit_impulse		    = 87
 hit_type 			= fire_wound
 
-fire_distance           = 400 ;700 ;900 ;1000
-bullet_speed			= 350 ;600	;начальная скорость пули
-rpm                     = 600
-; end ttc
+fire_distance           = 500
+bullet_speed			= 290
+rpm                     = 500
 
-use_aim_bullet				= true		;Поддерживается ли первая суппер пуля
+use_aim_bullet				= true
 time_to_aim					= 1.0	
 
 hud                      	= wpn_vintorez_hud
 normal                   	= 0, 1, 0
-position         	    	= -0.026,-0.172,0
+position                 	= -0.026, -0.084, 0.0
 orientation              	= 0, 0, 0
-;--STRAP PARAMETERS-----------------------------------------------------------------
-;под мишкой
-strap_position         		= -0.26,-0.11,0.20			; position (offset) and orientation of the weapon when it is strapped
-strap_orientation      		= -15,-9,110				; (3rd person view in degrees)
+
+strap_position         		= -0.26,-0.11,0.20		
+strap_orientation      		= -15,-9,110
 strap_bone0					= bip01_spine2
 strap_bone1					= bip01_spine1
 
@@ -121,48 +110,54 @@ visual                   	= weapons\vintorez\wpn_vintorez.ogf
 light_disabled				= true
 
 ph_mass			         	= 4
-;cost			         	= 5000
 
-;addons
-scope_status				= 1
+scope_status				= 2
 silencer_status				= 1
 grenade_launcher_status		= 0
 zoom_enabled				= true
-scope_texture				= wpn\wpn_crosshair ;wpn\wpn_crosshair_red
-scope_zoom_factor	    	= 10		;ПСО-1 4X
 
-;SOUND By: -- Darius6 for SmP 2.4 ---
-snd_draw				= darius\generic_draw, 0.4
-snd_holster				= darius\generic_holster, 0.4
-snd_shoot				= darius\9x39_silenced_00, 0.8
-snd_empty				= darius\rifle_empty, 0.4
-snd_reload				= darius\vss_reload, 0.6
-;snd_shoot_grenade		= weapons\gen_grenshoot
-;snd_reload_grenade		= weapons\gen_grenload
-;-------------------------------------------------------
+scope_texture				= wpn\wpn_crosshair
 
+zoom_enabled				= true
+scope_zoom_factor		    = 15
+scope_name 					= wpn_addon_scope
+scope_texture				= wpn\wpn_crosshair
+scope_x 			= 42
+scope_y 			= 3
+
+scope_zoom_factor	    	= 70
+
+snd_draw					= weapons\val_vss\vss_draw
+snd_holster					= weapons\val_vss\vss_hide
+snd_shoot					= weapons\val_vss\vss_shoot
+snd_empty			        = weapons\glock17\glock17_dry
+snd_reload					= weapons\val_vss\vss_reload_full
+snd_reload_partly			= weapons\val_vss\vss_reload
+snd_reload_jammed			= weapons\val_vss\vss_revival
+
+snd_shoot_grenade			= weapons\gen_grenshoot
+snd_reload_grenade			= weapons\gen_grenload
 
 [wpn_vintorez_hud]
+shell_point          		= 0.00, 0.00, -0.2
+shell_dir			 		= 0.0, 0.0, 0.0
+fire_point               	= 0,-0.05,-0.2
+fire_bone                	= bolt
+orientation             	= 2, 1, 0	
+position                	= 0.01, -0.01, 0.15
+visual                   	= weapons\vintorez\wpn_vintorez_hud.ogf
 
-shell_point          		= -0.15, -0.02, 0.05
-shell_dir			 		= 0.0, 1.0, 0.0
+anim_idle		= vss_idle
+anim_idle_aim	= vss_idle
+anim_reload		= vss_reload_full
+anim_reload_partly	= vss_reload_partly
+anim_reload_jammed          = vss_draw
+anim_draw		= vss_draw
+anim_holster	= vss_holster
+anim_shoot		= vss_shoot
+anim_idle_sprint	= vss_sprint
+anim_idle_moving		    = vss_moving
 
-
-fire_point					= 0.207,0.0,-0.0239
-fire_bone                	= wpn_body
-orientation              	= 0, 0, 0
-position                 	= 0, 0, 0
-visual                   	= Arsenal_Mod\wpn_vss_sk1_hud.ogf
-
-anim_idle		= idle
-anim_idle_aim	= idle
-anim_reload		= reload
-anim_draw		= draw
-anim_holster	= holster
-anim_shoot		= shoot
-anim_idle_sprint			= idle_sprint
-
-;смещения HUD для режима приближения
-zoom_offset			= -0.1264,0.0279,-0.1369
-zoom_rotate_x		= 0.0
-zoom_rotate_y		= 0.0
+zoom_offset			= -0.127,0.053,0  ;0.051
+zoom_rotate_x		= 0.02
+zoom_rotate_y		= 0.036

@@ -1,0 +1,34 @@
+[ammo_gauss]:ammo_base
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn			= "weapons\ammo\ammo_gauss" ; option for Level Editor
+class			= AMMO
+cform                   = skeleton
+visual                  = weapons\ammo\ammo_gauss.ogf
+description				= enc_weapons1_ammo_ammo-gauss
+$prefetch 		= 64
+
+cost			= 550
+
+box_size		= 10
+
+inv_name		= ammo-gauss
+inv_name_short	= ammo-gauss_s
+inv_weight		= .5
+
+inv_grid_width     = 1
+inv_grid_height    = 1
+inv_grid_x         = 35
+inv_grid_y         = 3
+
+k_dist			= 1.1
+k_disp			= 1
+k_hit			= 5
+k_impulse		= 10
+k_pierce		= 2.5
+impair			= 0.7
+buck_shot		= 1
+tracer			= off
+wm_size         = 0.05
+
+explosive		= on

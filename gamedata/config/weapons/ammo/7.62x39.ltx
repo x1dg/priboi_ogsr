@@ -1,0 +1,49 @@
+[ammo_7.62x39_fmj]:ammo_base
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn			= "weapons\ammo\ammo_7.62x39_fmj"
+class			= AMMO
+cform                   = skeleton
+visual                  = weapons\ammo\ammo_762x39_fmj.ogf
+description				= enc_weapons1_ammo_ammo-7.62x39-fmj
+$prefetch 		= 64
+box_size		= 30
+
+inv_weight		= .32
+
+cost					 = 300
+
+inv_name		= ammo-7.62x39-fmj
+inv_name_short	= ammo-7.62x39-fmj_s
+
+inv_grid_width     = 2
+inv_grid_height    = 1
+inv_grid_x         = 35
+inv_grid_y         = 9
+
+k_dist			= 1.1
+k_disp			= 1
+k_hit			= 0.95
+k_pierce		= 0.9
+k_impulse		= 0.95
+impair			= 1.02
+buck_shot		= 1
+tracer			= on
+wm_size         = 0.05
+
+[ammo_7.62x39_ap]:ammo_7.62x39_fmj
+$spawn			= "weapons\ammo\ammo_7.62x39_ap"
+visual                  = weapons\ammo\ammo_762x39_ap.ogf
+description				= enc_weapons1_ammo_ammo-7.62x39-ap
+
+cost					 = 500
+
+inv_name		= ammo-7.62x39-ap
+inv_name_short	= ammo-7.62x39-ap_s
+
+inv_grid_width     = 2
+inv_grid_height    = 1
+inv_grid_x         = 37
+inv_grid_y         = 9
+
+k_hit			= 1.1

@@ -1,0 +1,65 @@
+[ammo_5.45x39_fmj]:ammo_base
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn			= "weapons\ammo\ammo_5.45x39_fmj" ; option for Level Editor
+class			= AMMO
+cform                   = skeleton
+visual                  = weapons\ammo\ammo_545x39_fmj.ogf
+description				= enc_weapons1_ammo_ammo-5.45x39-fmj
+$prefetch 		= 64
+
+cost					 = 200	;150
+
+box_size		= 30	;60
+
+inv_name		= ammo-5.45x39-fmj
+inv_name_short	= ammo-5.45x39-fmj_s
+inv_weight		= .32
+
+inv_grid_width     = 2
+inv_grid_height    = 1
+inv_grid_x         = 35
+inv_grid_y         = 4
+
+k_dist			= 1
+k_disp			= 3
+k_hit			= 0.9
+k_impulse		= 1
+k_pierce		= 1
+impair			= 1
+buck_shot		= 1
+tracer			= on
+wm_size         = 0.05
+
+[ammo_5.45x39_ap]:ammo_base
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn			= "weapons\ammo\ammo_5.45x39_ap" ; option for Level Editor
+class			= AMMO
+cform                   = skeleton
+visual                  = weapons\ammo\ammo_545x39_ap.ogf
+description				= enc_weapons1_ammo_ammo-5.45x39-ap
+$prefetch 		= 64
+
+cost					 = 250
+
+box_size		= 30	;60
+
+inv_name		= ammo-5.45x39-ap
+inv_name_short	= ammo-5.45x39-ap_s
+inv_weight		= .32
+
+inv_grid_width     = 2
+inv_grid_height    = 1
+inv_grid_x         = 35
+inv_grid_y         = 5
+
+k_dist			= 1
+k_disp			= 2.5;3
+k_hit			= 1
+k_impulse		= 0.95
+k_pierce		= 1.75
+impair			= 1.02
+buck_shot		= 1
+tracer			= on
+wm_size         = 0.05

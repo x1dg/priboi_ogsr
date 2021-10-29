@@ -1,24 +1,21 @@
 [wpn_desert_eagle]:identity_immunities
 GroupControlSection			= spawn_group
 discovery_dependency 		= 
-$spawn                   	= "weapons\Desert Eagle"					; option for Level Editor
-$npc			 			= on				; option for Level Editor
+$spawn                   	= "weapons\Desert Eagle"
+$npc			 			= on
 $prefetch 					= 8
-scheduled            		= off              ; option for ALife Simulator
+scheduled            		= off
 cform                    	= skeleton
 class                    	= WP_PM
 min_radius               	= 5
 max_radius               	= 30
 description					= enc_weapons1_wpn-desert-eagle
-
 ef_weapon_type				= 5
 
-;-----------------------------------------------------------------------------------
-holder_range_modifier	= 1.0               ; во сколько раз увеличивается eye_range 
-holder_fov_modifier		= 1.0              ; во сколько раз увеличивается eye_fov
-;-----------------------------------------------------------------------------------
+holder_range_modifier	= 1.0
+holder_fov_modifier		= 1.0
 
-cost					 	= 6000;8500 ;3800
+cost					 	= 7500
 
 ammo_limit		 			= 120
 ammo_current		 		= 90
@@ -27,93 +24,79 @@ ammo_elapsed		 		= 12
 ammo_mag_size		 		= 8
 ammo_class		 			= ammo_11.43x23_fmj, ammo_11.43x23_hydro
 
-
 hand_dependence		 		= 1
 single_handed				= 1
 
-slot 				 		= 1		; // primary
-animation_slot		 		= 1		; type of the animation that will be used
+slot 				 		= 1
+animation_slot		 		= 1
 
 inv_name					= wp_desert_eagle
 inv_name_short				= wp_desert_eagle
-inv_weight				= 2.0
+inv_weight				= 1.7
 
-inv_grid_width				= 2
-inv_grid_height				= 1
-inv_grid_x					= 14
-inv_grid_y					= 8
+inv_grid_width     = 2
+inv_grid_height    = 1
+inv_grid_x         = 14
+inv_grid_y         = 8
 
 kill_msg_x			= 194
 kill_msg_y			= 123
 kill_msg_width		= 46
 kill_msg_height		= 27
 
-;-----------------------------------------------------------------------------------
-;базовая дисперсия
-fire_dispersion_base		= 0.06  ;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+fire_dispersion_base		= 0.1
 control_inertion_factor		= 1.3f
 
-;отдача
-cam_relax_speed         	= 0	;скорость возврата в исходное положение
-cam_relax_speed_ai         	= 6.0
-cam_dispersion          	= 6.0	;увеличения угла (в градусах) с каждым выстрелом
-cam_dispersion_inc		= 0.0	;увеличениe cam_dispersion с каждым выстрелом
-cam_dispertion_frac		= 1.0	;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
-cam_max_angle			= 90.0	;максимальный угол отдачи
-cam_max_angle_horz		= 10.0	;(degree) maximum shot horizontal degree 
-cam_step_angle_horz		= 1.5	;(degree) size of step camera moved in horizontal position while shooting
+cam_relax_speed         	= 6.0
+cam_dispersion          	= 4.0
+cam_dispersion_inc		= 0.0
+cam_dispertion_frac		= 1.0
+cam_max_angle			= 90.0
+cam_max_angle_horz		= 10.0
+cam_step_angle_horz		= 1.5
 
-fire_dispersion_condition_factor = 5	;увеличение дисперсии в процентах при максимальном износе 
-misfire_probability 		= 0.003	;вероятность осечки при максимальном износе
-misfire_condition_k			= 0.05 
-condition_shot_dec 			= 0.0001 ;увеличение износа при каждом выстреле
-;-----------------------------------------------------------------------------------
+fire_dispersion_condition_factor = 5
+misfire_probability 		= 0.003
+misfire_condition_k			= 0.05
+condition_shot_dec 			= 0.0003
 
 direction                	= 0, 0, 1
 fire_point			= -0.005000,0.130000,0.220000
 
 flame_particles		   		= weapons\generic_weapon05
 smoke_particles		   		= weapons\generic_shoot_00
-rpm_empty_click 	 		= 200
+rpm_empty_click 	 		= 250
 
 shell_point		 			= 0.0, 0.133, 0.06
 shell_dir		 			= 0.0, 0.0, 0.4
-shell_particles	 			= weapons\generic_shells
+shell_particles	 			= amik\weapons\50ae\50ae_r
 
-PDM_disp_base 			= 1.0
-PDM_disp_vel_factor 		= 1.1
-PDM_disp_accel_factor 		= 1.1
-PDM_crouch	 		= 1.0
-PDM_crouch_no_acc 		= 1.0
+PDM_disp_base 			= 0.3
+PDM_disp_vel_factor 		= 0.7
+PDM_disp_accel_factor 		= 0.7
+PDM_crouch	 		= 0.1
+PDM_crouch_no_acc 		= 0.1
 
-; ttc
-hit_power           = 0.50 ;0.75, 0.75, 0.75, 0.75
-hit_impulse		 	= 16
+hit_power           = 0.50
+hit_impulse		 	= 140
 hit_type 			= fire_wound
 
-fire_distance       = 70 ;800
-bullet_speed		= 300 ;420			
-rpm                 = 200
-; end ttc
+fire_distance       = 100
+bullet_speed		= 400			
+rpm                 = 250
 
-use_aim_bullet				= true		;Поддерживается ли первая суппер пуля
+use_aim_bullet				= true
 time_to_aim					= 1.0	
 
-silencer_hit_power       	= 0.50; 0.40 ;0.65
-silencer_hit_impulse	 	= 10 ;60
-silencer_fire_distance   	= 50 ; 500
+silencer_hit_power       	= 0.75
+silencer_hit_impulse	 	= 60
+silencer_fire_distance   	= 100
 silencer_bullet_speed	 	= 250
 
 hud                      	= wpn_desert_eagle_hud
 normal                   	= 0, 1, 0
 position                 	= -0.021, -0.09, 0.0
 orientation              	= 0, 0, 0
-
-;--STRAP PARAMETERS-----------------------------------------------------------------
-;strap_position         		= -0.1,-0.45,0.2			; position (offset) and orientation of the weapon when it is strapped
-;strap_orientation      		= 1.57,0,0						; (3rd person view)
-;strap_bone0					= bip01_spine2
-;strap_bone1					= bip01_spine1
 
 startup_ammo             	= 90
 visual                   	= weapons\desert_eagle\wpn_desert_eagle.ogf
@@ -125,38 +108,29 @@ light_var_range		 		= 0.5
 light_time 		 			= 0.2
 
 ph_mass			 			= 1
-;cost			 			= 350
 
-;addons
 scope_status				= 0
 silencer_status				= 0
 grenade_launcher_status		= 0
 
 zoom_enabled				= true
-scope_zoom_factor	   		= 74 ;80 ;90
+scope_zoom_factor	   		= 70
 
-;§ўгЄЁ
-snd_draw					= weapons\fort_draw, 0.3
-snd_holster					= weapons\generic_holster, 0.3
-snd_shoot					= weapons\t_desert_eagle_shot     ;pm_shoot ;fort_shoot
-snd_empty					= weapons\pistol_empty
-snd_reload					= weapons\pm_reload, 0.5
-snd_close					= weapons\generic_close
+snd_draw					= weapons\deagle\de_draw
+snd_holster					= weapons\generic_hide
+snd_shoot					= weapons\deagle\de_shoot 
+snd_empty					= weapons\glock17\glock17_dry
+snd_reload					= weapons\deagle\de_reload_full
+snd_reload_partly			= weapons\deagle\de_reload
+snd_reload_jammed			= weapons\walther\reload_jammed
+snd_close					= weapons\deagle\de_draw
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; silencer
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-silencer_name  				= wpn_addon_silencer		; section name for the attachable silencer
-silencer_x 					= 77						; offset in inventory icon
+silencer_name  				= wpn_addon_silencer
+silencer_x 					= 77
 silencer_y 					= -17					
 
-;params when silencer is attached 
-;similar to corresponding params without prefix silencer_
-
-;silencer_flame_particles 	= weapons\generic_weapon01
 silencer_smoke_particles 	= weapons\generic_shoot_00
-snd_silncer_shot			= weapons\usp_silenced, 0.5
+snd_silncer_shot			= weapons\silshot\Deagle
 silencer_light_color		= 0.6,0.5,0.3
 silencer_light_range		= 0.01
 silencer_light_var_color	= 0.05
@@ -164,29 +138,48 @@ silencer_light_var_range	= 0.5
 silencer_light_time 		= 0.2
 
 [wpn_desert_eagle_hud]
-
-shell_point			= -0.000000,0.040000,-0.235000
-fire_point               	= -0.001000,0.056000,-0.200000
-
-fire_bone                	= wpn_body
-orientation              	= 0,0,0
-position                 	= 0,0,0
+shell_point			        = -0.05,0.0,-0.5
+fire_point			        = 0,0,-0.2
+fire_bone                	= bolt
+orientation              	= 3,1,0
+position                 	= 0.0,-0.09,0.15
 visual                   	= weapons\desert_eagle\wpn_desert_eagle_hud.ogf
 
 anim_holster				= holster
 anim_idle					= idle
-anim_empty					= empty
-anim_reload					= reload_full
-anim_reload_empty			= reload
+anim_empty					= idle_empty
+anim_reload					= reload_empty     ;reload
+anim_reload_empty			= reload_empty     ;reload_empty
+anim_reload_jammed          = draw
 anim_draw					= draw
-anim_draw_empty				= draw
+anim_draw_empty				= draw_empty
 anim_shoot					= shoot
 anim_shot_last				= shoot_last
-anim_close					= holster ;draw
-anim_idle_aim				= idle_aim
+anim_close					= holster
+anim_idle_aim				= idle
 anim_idle_sprint			= idle_sprint
+anim_idle_moving		    = idle_moving
+anim_idle_sprint_empty		= idle_sprint_empty
+anim_idle_moving_empty		= idle_moving_empty
 
-;смещения HUD для режима приближения
-zoom_offset			= -0.119400,0.044400,-0.011400
-zoom_rotate_x		= -0.021800
-zoom_rotate_y		= 0.000500
+zoom_offset			= -0.115,0.019,0.0
+zoom_rotate_x		= 0.01
+zoom_rotate_y		= 0.055
+
+[wpn_eagle_m1]:wpn_desert_eagle	;Ѓольшой Ѓэн
+$spawn             				= "weapons\uniq\wpn_eagle_m1"	
+description						= enc_weapons1_wpn-eagle_m1
+inv_name						= wpn-eagle_m1
+inv_name_short					= wpn-eagle_m1
+ammo_class						= ammo_9x39_sp5, ammo_9x39_ap, ammo_9x39_pab9
+hit_power               		= 0.67
+cam_dispersion          	= 2.0
+condition_shot_dec				= 0.0003
+inv_grid_width     = 3
+inv_grid_height    = 1
+inv_grid_x         = 9
+inv_grid_y         = 22
+visual                   	= weapons\desert_eagle\wpn_desert_eagle_m1.ogf
+hud                      	= wpn_desert_eagle_hud_m1
+[wpn_desert_eagle_hud_m1]:wpn_desert_eagle_hud
+visual                   	= weapons\desert_eagle\wpn_desert_eagle_m1_hud.ogf

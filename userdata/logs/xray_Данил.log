@@ -1,917 +1,662 @@
 
-[27.10.21 21:02:14.961] * Detected CPU: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz [GenuineIntel], F6/M158/S10
-[27.10.21 21:02:14.963] * CPU features: RDTSC, MMX, SSE, SSE2, SSE3, MONITOR/MWAIT, SSSE3, SSE4.1, SSE4.2, AVX, AVX2
-[27.10.21 21:02:14.963] * CPU cores: [6], threads: [6]
-[27.10.21 21:02:14.963] * CPU0 current freq: 2808 MHz, max freq: 2808 MHz
-[27.10.21 21:02:14.963] * CPU1 current freq: 2808 MHz, max freq: 2808 MHz
-[27.10.21 21:02:14.963] * CPU2 current freq: 2808 MHz, max freq: 2808 MHz
-[27.10.21 21:02:14.963] * CPU3 current freq: 2808 MHz, max freq: 2808 MHz
-[27.10.21 21:02:14.963] * CPU4 current freq: 2808 MHz, max freq: 2808 MHz
-[27.10.21 21:02:14.963] * CPU5 current freq: 2808 MHz, max freq: 2808 MHz
-[27.10.21 21:02:14.963] Initializing File System...
-[27.10.21 21:02:14.964] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db0], size: [678577379]
-[27.10.21 21:02:15.024] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db1], size: [708434331]
-[27.10.21 21:02:15.031] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db2], size: [671169415]
-[27.10.21 21:02:15.033] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db3], size: [684792231]
-[27.10.21 21:02:15.037] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db4], size: [671392842]
-[27.10.21 21:02:15.329] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db5], size: [697475082]
-[27.10.21 21:02:15.373] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db6], size: [672288151]
-[27.10.21 21:02:15.376] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db7], size: [672462598]
-[27.10.21 21:02:15.403] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db8], size: [293378144]
-[27.10.21 21:02:15.414] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db9], size: [79312307]
-[27.10.21 21:02:15.438] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dba], size: [22884835]
-[27.10.21 21:02:15.441] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbb], size: [55194918]
-[27.10.21 21:02:15.445] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbc], size: [160948]
-[27.10.21 21:02:15.445] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbd], size: [101014]
-[27.10.21 21:02:15.446] using fs-ltx fsgame.ltx
-[27.10.21 21:02:15.446] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\]
-[27.10.21 21:02:15.446]   files: [6]
-[27.10.21 21:02:15.447] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\]
-[27.10.21 21:02:15.447]   files: [16]
-[27.10.21 21:02:15.447] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\spawns\]
-[27.10.21 21:02:15.447]   files: [4]
-[27.10.21 21:02:15.447] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\anims\]
-[27.10.21 21:02:15.447]   files: [23]
-[27.10.21 21:02:15.453] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\]
-[27.10.21 21:02:15.453]   files: [12]
-[27.10.21 21:02:15.454] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\meshes\]
-[27.10.21 21:02:15.454]   files: [12]
-[27.10.21 21:02:15.473] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\meshes\]
-[27.10.21 21:02:15.473]   files: [12]
-[27.10.21 21:02:15.482] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\shaders\]
-[27.10.21 21:02:15.482]   files: [7]
-[27.10.21 21:02:15.491] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\sounds\]
-[27.10.21 21:02:15.491]   files: [22]
-[27.10.21 21:02:15.522] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\textures\]
-[27.10.21 21:02:15.522]   files: [62]
-[27.10.21 21:02:15.610] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\scripts\]
-[27.10.21 21:02:15.611]   files: [129]
-[27.10.21 21:02:15.612] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\]
-[27.10.21 21:02:15.612]   files: [30]
-[27.10.21 21:02:15.620] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\]
-[27.10.21 21:02:15.620]   files: [12]
-[27.10.21 21:02:15.620] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\]
-[27.10.21 21:02:15.620]   files: [20]
-[27.10.21 21:02:15.620] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\logs\]
-[27.10.21 21:02:15.620]   files: [68]
-[27.10.21 21:02:15.620] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\screenshots\]
-[27.10.21 21:02:15.620]   files: [10]
-[27.10.21 21:02:15.624] FS: 34630 files cached, 7146Kb memory used.
-[27.10.21 21:02:15.624] Init FileSystem 0.661044 sec
-[27.10.21 21:02:15.624] [OGSR Engine (x64)] build date: [Sep 22 2021 10:23:51]
-[27.10.21 21:02:15.624] [AppVeyor] build version: [2.1.293], repo: [OGSR/OGSR-Engine]
-[27.10.21 21:02:15.624] [_MSC_FULL_VER]: [191627045], [_MSVC_LANG]: [201703L]
-[27.10.21 21:02:15.624] Working Directory: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64]
-[27.10.21 21:02:15.624] CommandLine: ["Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe"  -high]
-[27.10.21 21:02:15.742] Initializing Engine...
-[27.10.21 21:02:15.743] Starting INPUT device...
-[27.10.21 21:02:15.812] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[27.10.21 21:02:15.812] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
-[27.10.21 21:02:15.832] refCount:m_pAdapter 1
-[27.10.21 21:02:15.832] refCount:pFactory 1
-[27.10.21 21:02:15.833] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[27.10.21 21:02:15.833] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
-[27.10.21 21:02:15.963] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[27.10.21 21:02:15.963] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
-[27.10.21 21:02:15.964] --[CEngineAPI::CreateRendererList] Available render modes [5]:
-[27.10.21 21:02:15.964] --  [renderer_r2a]
-[27.10.21 21:02:15.964] --  [renderer_r2]
-[27.10.21 21:02:15.964] --  [renderer_r2.5]
-[27.10.21 21:02:15.964] --  [renderer_r3]
-[27.10.21 21:02:15.964] --  [renderer_r4]
-[27.10.21 21:02:15.964] Executing config-script "user.ltx"...
-[27.10.21 21:02:15.964] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
-[27.10.21 21:02:15.964] [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\user.ltx] successfully loaded.
-[27.10.21 21:02:15.964] --Loading DLL: [xrRender_R2.dll]
-[27.10.21 21:02:15.966] --Loading DLL: [xrGame.dll]
-[27.10.21 21:02:15.983] --------------------------------------------------------------------------------
-[27.10.21 21:02:15.984] [8143MB] physical memory installed, [3728MB] available, [54] percent of memory in use
-[27.10.21 21:02:15.984] PageFile usage: [46MB], Peak PageFile usage: [92MB]
-[27.10.21 21:02:15.984] --------------------------------------------------------------------------------
-[27.10.21 21:02:15.984] * [ D3D ]: textures[0 K]
-[27.10.21 21:02:15.984] * [x-ray]: process heap[24179 K], render[0 K]
-[27.10.21 21:02:15.984] * [x-ray]: economy: strings[4940 K], smem[0 K]
-[27.10.21 21:02:15.984] SOUND: OpenAL: enumerate devices...
-[27.10.21 21:02:15.984] SOUND: OpenAL: EnumerationExtension Present
-[27.10.21 21:02:16.108] devices Generic Software
-[27.10.21 21:02:16.108] SOUND: OpenAL: system  default SndDevice name is Generic Software
-[27.10.21 21:02:16.383] SOUND: OpenAL: All available devices:
-[27.10.21 21:02:16.383] 1. Generic Software, Spec Version 1.1 (default) eax[2] efx[no] xram[no]
-[27.10.21 21:02:16.383] 2. OpenAL Soft, Spec Version 1.1  eax[0] efx[yes] xram[no]
-[27.10.21 21:02:16.383] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx"...
-[27.10.21 21:02:16.384] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx] successfully loaded.
-[27.10.21 21:02:16.384] Executing config-script "user.ltx"...
-[27.10.21 21:02:16.385] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\rspec_high.ltx"...
-[27.10.21 21:02:16.385] ! Unknown command:  r2_sun_shafts
-[27.10.21 21:02:16.385] ! Unknown command:  r__supersample
-[27.10.21 21:02:16.385] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\rspec_high.ltx] successfully loaded.
-[27.10.21 21:02:16.385] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx"...
-[27.10.21 21:02:16.385] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx] successfully loaded.
-[27.10.21 21:02:16.386] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
-[27.10.21 21:02:16.386] [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\user.ltx] successfully loaded.
-[27.10.21 21:02:16.386] SOUND: Selected device is Generic Software
-[27.10.21 21:02:16.419] [OpenAL] EAX 2.0 extension: present
-[27.10.21 21:02:16.419] [OpenAL] EAX 2.0 deferred: present
-[27.10.21 21:02:16.419] * sound : cache: 65537 kb, 4856 lines, 13820 bpl
-[27.10.21 21:02:16.449] Starting RENDER device...
-[27.10.21 21:02:16.489] * GPU [vendor:10DE]-[device:1C81]: NVIDIA GeForce GTX 1050
-[27.10.21 21:02:16.489] * GPU driver: 30.0.14.7196
-[27.10.21 21:02:16.591] * CREATE: DeviceREF: 1
-[27.10.21 21:02:16.591] * Vertex Processor: PURE HARDWARE
-[27.10.21 21:02:16.591] *     Texture memory: 4072 M
-[27.10.21 21:02:16.591] *          DDI-level: 9.0
-[27.10.21 21:02:16.593] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
-[27.10.21 21:02:16.593] * GPU vertex cache: unrecognized, 16
-[27.10.21 21:02:16.594] * DVB created: 16384K
-[27.10.21 21:02:16.594] * DIB created: 512K
-[27.10.21 21:02:16.620] ! Version conflict in shader 'models\lightplanes_00'
-[27.10.21 21:02:16.620] ! Version conflict in shader 'models\lightplanesself'
-[27.10.21 21:02:16.620] ! Version conflict in shader 'models\model_puh'
-[27.10.21 21:02:16.620] ! Version conflict in shader 'models\model_refl'
-[27.10.21 21:02:16.620] ! Version conflict in shader 'models\xbrainglass'
-[27.10.21 21:02:16.620] ! Version conflict in shader 'models\xdistortcolorlinv'
-[27.10.21 21:02:16.620] ! Version conflict in shader 'models\xglass'
-[27.10.21 21:02:16.620] ! Version conflict in shader 'models\xglass2'
-[27.10.21 21:02:16.620] ! Version conflict in shader 'models\xlens'
-[27.10.21 21:02:16.620] ! Version conflict in shader 'selflight_static'
-[27.10.21 21:02:16.621] [CTextureDescrMngr::LoadLTX] count of *textures*.ltx files: [1]
-[27.10.21 21:02:16.743] * NULLRT supported
-[27.10.21 21:02:16.743] * ...and used
-[27.10.21 21:02:16.743] * HWDST/PCF supported and used
-[27.10.21 21:02:16.743] * NV-DBT supported and used
-[27.10.21 21:02:17.792] --LUA version: [LuaJIT 2.1.0-beta3]
-[27.10.21 21:02:17.829] Starting engine...
-[27.10.21 21:02:29.575] * phase time: 15 ms
-[27.10.21 21:02:29.602] * phase cmem: 180721 K
-[27.10.21 21:02:29.627] --LUA version: [LuaJIT 2.1.0-beta3]
-[27.10.21 21:02:29.643] * phase time: 68 ms
-[27.10.21 21:02:29.668] * phase cmem: 149517 K
-[27.10.21 21:02:29.673] * Loading spawn registry...
-[27.10.21 21:02:30.189] * 8976 spawn points are successfully loaded
-[27.10.21 21:02:30.190] * Loading objects...
-[27.10.21 21:02:30.509] * 17890 objects are successfully loaded
-[27.10.21 21:02:31.065] * Game Данил_quicksave is successfully loaded from file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_quicksave.sav' (1.397s)
-[27.10.21 21:02:31.065] * phase time: 1421 ms
-[27.10.21 21:02:31.109] * phase cmem: 200845 K
-[27.10.21 21:02:31.158] # Player not found. New player created.
-[27.10.21 21:02:31.158] !!xrServer::Check_GameSpy_CDKey_Success - 1
-[27.10.21 21:02:31.158] * client : connection accepted - <>
-[27.10.21 21:02:31.179] * phase time: 113 ms
-[27.10.21 21:02:31.223] * phase cmem: 200933 K
-[27.10.21 21:02:31.224] * phase time: 45 ms
-[27.10.21 21:02:31.268] * phase cmem: 200933 K
-[27.10.21 21:02:32.648] --[ISpatial_DB::initialize] bbc is [-123.7, 2.8, 188.3], bbd is [320.0, 30.6, 320.0]
-[27.10.21 21:02:32.648] --[ISpatial_DB::initialize] bbc is [-123.7, 2.8, 188.3], bbd is [320.0, 30.6, 320.0]
-[27.10.21 21:02:32.650] * phase time: 1426 ms
-[27.10.21 21:02:32.695] * phase cmem: 311628 K
-[27.10.21 21:02:32.898] * phase time: 248 ms
-[27.10.21 21:02:32.943] * phase cmem: 315066 K
-[27.10.21 21:02:32.947] * [Loading VB] 65535 verts, 2047 Kb
-[27.10.21 21:02:32.960] * [Loading VB] 65531 verts, 2047 Kb
-[27.10.21 21:02:32.969] * [Loading VB] 65527 verts, 2047 Kb
-[27.10.21 21:02:32.979] * [Loading VB] 65509 verts, 2047 Kb
-[27.10.21 21:02:32.988] * [Loading VB] 65533 verts, 2047 Kb
-[27.10.21 21:02:32.997] * [Loading VB] 65481 verts, 2046 Kb
-[27.10.21 21:02:33.006] * [Loading VB] 9630 verts, 300 Kb
-[27.10.21 21:02:33.009] * [Loading VB] 65535 verts, 2047 Kb
-[27.10.21 21:02:33.018] * [Loading VB] 65535 verts, 2047 Kb
-[27.10.21 21:02:33.027] * [Loading VB] 65535 verts, 2047 Kb
-[27.10.21 21:02:33.037] * [Loading VB] 65535 verts, 2047 Kb
-[27.10.21 21:02:33.046] * [Loading VB] 65535 verts, 2047 Kb
-[27.10.21 21:02:33.055] * [Loading VB] 65526 verts, 2047 Kb
-[27.10.21 21:02:33.064] * [Loading VB] 65534 verts, 2047 Kb
-[27.10.21 21:02:33.072] * [Loading VB] 65535 verts, 2047 Kb
-[27.10.21 21:02:33.081] * [Loading VB] 65535 verts, 2047 Kb
-[27.10.21 21:02:33.090] * [Loading VB] 65535 verts, 2047 Kb
-[27.10.21 21:02:33.099] * [Loading VB] 65529 verts, 2047 Kb
-[27.10.21 21:02:33.107] * [Loading VB] 65532 verts, 2047 Kb
-[27.10.21 21:02:33.116] * [Loading VB] 65535 verts, 2047 Kb
-[27.10.21 21:02:33.125] * [Loading VB] 65534 verts, 2047 Kb
-[27.10.21 21:02:33.136] * [Loading VB] 65533 verts, 2047 Kb
-[27.10.21 21:02:33.145] * [Loading VB] 11187 verts, 349 Kb
-[27.10.21 21:02:33.147] * [Loading VB] 65533 verts, 2047 Kb
-[27.10.21 21:02:33.155] * [Loading VB] 65533 verts, 2047 Kb
-[27.10.21 21:02:33.165] * [Loading VB] 65535 verts, 2047 Kb
-[27.10.21 21:02:33.174] * [Loading VB] 65535 verts, 2047 Kb
-[27.10.21 21:02:33.183] * [Loading VB] 58148 verts, 1817 Kb
-[27.10.21 21:02:33.190] * [Loading IB] 1048575 indices, 2047 Kb
-[27.10.21 21:02:33.199] * [Loading IB] 1048575 indices, 2047 Kb
-[27.10.21 21:02:33.208] * [Loading IB] 1048575 indices, 2047 Kb
-[27.10.21 21:02:33.217] * [Loading IB] 1048575 indices, 2047 Kb
-[27.10.21 21:02:33.225] * [Loading IB] 1048575 indices, 2047 Kb
-[27.10.21 21:02:33.234] * [Loading IB] 1048575 indices, 2047 Kb
-[27.10.21 21:02:33.243] * [Loading IB] 1048575 indices, 2047 Kb
-[27.10.21 21:02:33.254] * [Loading IB] 1048575 indices, 2047 Kb
-[27.10.21 21:02:33.263] * [Loading IB] 1048575 indices, 2047 Kb
-[27.10.21 21:02:33.271] * [Loading IB] 1048575 indices, 2047 Kb
-[27.10.21 21:02:33.280] * [Loading IB] 1048575 indices, 2047 Kb
-[27.10.21 21:02:33.289] * [Loading IB] 1048575 indices, 2047 Kb
-[27.10.21 21:02:33.298] * [Loading IB] 1048575 indices, 2047 Kb
-[27.10.21 21:02:33.307] * [Loading IB] 274437 indices, 536 Kb
-[27.10.21 21:02:33.316] * [Loading VB] 65535 verts, 767 Kb
-[27.10.21 21:02:33.320] * [Loading VB] 65534 verts, 767 Kb
-[27.10.21 21:02:33.325] * [Loading VB] 65534 verts, 767 Kb
-[27.10.21 21:02:33.328] * [Loading VB] 65534 verts, 767 Kb
-[27.10.21 21:02:33.332] * [Loading VB] 65535 verts, 767 Kb
-[27.10.21 21:02:33.336] * [Loading VB] 65534 verts, 767 Kb
-[27.10.21 21:02:33.338] * [Loading VB] 65533 verts, 767 Kb
-[27.10.21 21:02:33.342] * [Loading VB] 65534 verts, 767 Kb
-[27.10.21 21:02:33.345] * [Loading VB] 65535 verts, 767 Kb
-[27.10.21 21:02:33.350] * [Loading VB] 65535 verts, 767 Kb
-[27.10.21 21:02:33.352] * [Loading VB] 29335 verts, 343 Kb
-[27.10.21 21:02:33.355] * [Loading IB] 1048575 indices, 2047 Kb
-[27.10.21 21:02:33.365] * [Loading IB] 1048575 indices, 2047 Kb
-[27.10.21 21:02:33.373] * [Loading IB] 1048575 indices, 2047 Kb
-[27.10.21 21:02:33.382] * [Loading IB] 1048575 indices, 2047 Kb
-[27.10.21 21:02:33.391] * [Loading IB] 550890 indices, 1075 Kb
-[27.10.21 21:02:33.397] * phase time: 499 ms
-[27.10.21 21:02:33.442] * phase cmem: 413978 K
-[27.10.21 21:02:33.666] * phase time: 268 ms
-[27.10.21 21:02:33.713] * phase cmem: 417065 K
-[27.10.21 21:02:33.732] * [DETAILS] VertexConsts(256), Batch(61)
-[27.10.21 21:02:33.732] * [DETAILS] 40687 v(20), 26352 p
-[27.10.21 21:02:33.733] * [DETAILS] Batch(61), VB(794K), IB(154K)
-[27.10.21 21:02:33.733] * phase time: 66 ms
-[27.10.21 21:02:33.779] * phase cmem: 418042 K
-[27.10.21 21:02:33.780] * Loading HOM: z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\l07_military\level.hom
-[27.10.21 21:02:33.782] * phase time: 48 ms
-[27.10.21 21:02:33.828] * phase cmem: 418343 K
-[27.10.21 21:02:33.829] * phase time: 47 ms
-[27.10.21 21:02:33.876] * phase cmem: 418343 K
-[27.10.21 21:02:33.889] - Game configuring : Started 
-[27.10.21 21:02:33.890] - Game configuring : Finished 
-[27.10.21 21:02:34.016] * phase time: 186 ms
-[27.10.21 21:02:34.063] * phase cmem: 431876 K
-[27.10.21 21:02:37.080] * t-report - base: 1256, 1075557 K
-[27.10.21 21:02:37.080] * t-report - lmap: 8, 8193 K
-[27.10.21 21:02:37.081] * phase time: 3064 ms
-[27.10.21 21:02:37.138] * phase cmem: 1567124 K
-[27.10.21 21:02:37.143] * phase time: 62 ms
-[27.10.21 21:02:37.201] * phase cmem: 1567127 K
-[27.10.21 21:02:37.263] --------------------------------------------------------------------------------
-[27.10.21 21:02:37.263] [8143MB] physical memory installed, [2167MB] available, [73] percent of memory in use
-[27.10.21 21:02:37.263] PageFile usage: [1864MB], Peak PageFile usage: [1866MB]
-[27.10.21 21:02:37.263] --------------------------------------------------------------------------------
-[27.10.21 21:02:37.263] * [ D3D ]: textures[1083750 K]
-[27.10.21 21:02:37.263] * [x-ray]: process heap[1566505 K], render[0 K]
-[27.10.21 21:02:37.263] * [x-ray]: economy: strings[7376 K], smem[0 K]
-[27.10.21 21:02:39.225] ! Can't find sound [weapons\empty.ogg]
-[27.10.21 21:02:40.491] FUCKING NPC: mil_ara_guard2
-[27.10.21 21:02:40.619] FUCKING NPC: mil_ara
-[27.10.21 21:02:40.640] FUCKING NPC: mil_ara_guard1
-[27.10.21 21:02:40.651] FUCKING NPC: mil_ara_guard3
-[27.10.21 21:02:41.996] ! auto-generated bump map: wpn\benelli\wpn_short_body_bump#
-[27.10.21 21:02:42.013] ! auto-generated bump map: wpn\benelli\wpn_short_barrel_bump#
-[27.10.21 21:02:42.721] ! auto-generated bump map: hands\act_arm_0_bump#
-[27.10.21 21:02:42.829] DESTOYING: bandage_hud
-[27.10.21 21:02:42.830] USING SPAWN: wpn_binoc
-[27.10.21 21:02:42.830] USING SPAWN: bandage
-[27.10.21 21:02:44.458] * MEMORY USAGE: 2076445 K
-[27.10.21 21:02:44.458] * End of synchronization A[1] R[1]
-[27.10.21 21:02:44.458] * phase time: 7377 ms
-[27.10.21 21:02:44.561] * phase cmem: 2076445 K
-[27.10.21 21:02:46.388] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:02:47.218] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:02:47.781] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:02:49.098] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:02:49.115] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:02:49.132] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:02:50.949] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:02:50.965] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:02:50.982] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:02:53.449] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:02:54.282] FUCKING NPC: mil_dolg_stalker0001
-[27.10.21 21:02:55.348] START EATING
-[27.10.21 21:02:55.348] UPDATE REMOVING: wpn_binoc
-[27.10.21 21:02:55.348] USING SPAWN: bandage_hud
-[27.10.21 21:02:55.351] WAIT TIME GLOBAL: 32518 USE TIMER: 36518
-[27.10.21 21:02:55.365] WAIT TIME GLOBAL: 32535 USE TIMER: 36518
-[27.10.21 21:02:55.381] WAIT TIME GLOBAL: 32552 USE TIMER: 36518
-[27.10.21 21:02:55.398] WAIT TIME GLOBAL: 32568 USE TIMER: 36518
-[27.10.21 21:02:55.415] WAIT TIME GLOBAL: 32585 USE TIMER: 36518
-[27.10.21 21:02:55.432] WAIT TIME GLOBAL: 32602 USE TIMER: 36518
-[27.10.21 21:02:55.448] WAIT TIME GLOBAL: 32619 USE TIMER: 36518
-[27.10.21 21:02:55.465] WAIT TIME GLOBAL: 32635 USE TIMER: 36518
-[27.10.21 21:02:55.482] WAIT TIME GLOBAL: 32652 USE TIMER: 36518
-[27.10.21 21:02:55.499] WAIT TIME GLOBAL: 32669 USE TIMER: 36518
-[27.10.21 21:02:55.515] WAIT TIME GLOBAL: 32685 USE TIMER: 36518
-[27.10.21 21:02:55.532] WAIT TIME GLOBAL: 32702 USE TIMER: 36518
-[27.10.21 21:02:55.549] WAIT TIME GLOBAL: 32718 USE TIMER: 36518
-[27.10.21 21:02:55.566] WAIT TIME GLOBAL: 32735 USE TIMER: 36518
-[27.10.21 21:02:55.581] WAIT TIME GLOBAL: 32751 USE TIMER: 36518
-[27.10.21 21:02:55.600] WAIT TIME GLOBAL: 32769 USE TIMER: 36518
-[27.10.21 21:02:55.616] WAIT TIME GLOBAL: 32785 USE TIMER: 36518
-[27.10.21 21:02:55.632] WAIT TIME GLOBAL: 32802 USE TIMER: 36518
-[27.10.21 21:02:55.648] WAIT TIME GLOBAL: 32818 USE TIMER: 36518
-[27.10.21 21:02:55.666] WAIT TIME GLOBAL: 32835 USE TIMER: 36518
-[27.10.21 21:02:55.682] WAIT TIME GLOBAL: 32852 USE TIMER: 36518
-[27.10.21 21:02:55.699] WAIT TIME GLOBAL: 32869 USE TIMER: 36518
-[27.10.21 21:02:55.715] WAIT TIME GLOBAL: 32885 USE TIMER: 36518
-[27.10.21 21:02:55.732] WAIT TIME GLOBAL: 32902 USE TIMER: 36518
-[27.10.21 21:02:55.752] WAIT TIME GLOBAL: 32919 USE TIMER: 36518
-[27.10.21 21:02:55.773] WAIT TIME GLOBAL: 32935 USE TIMER: 36518
-[27.10.21 21:02:55.782] WAIT TIME GLOBAL: 32952 USE TIMER: 36518
-[27.10.21 21:02:55.798] WAIT TIME GLOBAL: 32969 USE TIMER: 36518
-[27.10.21 21:02:55.815] WAIT TIME GLOBAL: 32985 USE TIMER: 36518
-[27.10.21 21:02:55.832] WAIT TIME GLOBAL: 33002 USE TIMER: 36518
-[27.10.21 21:02:55.849] WAIT TIME GLOBAL: 33018 USE TIMER: 36518
-[27.10.21 21:02:55.865] WAIT TIME GLOBAL: 33035 USE TIMER: 36518
-[27.10.21 21:02:55.882] WAIT TIME GLOBAL: 33052 USE TIMER: 36518
-[27.10.21 21:02:55.898] WAIT TIME GLOBAL: 33068 USE TIMER: 36518
-[27.10.21 21:02:55.916] WAIT TIME GLOBAL: 33086 USE TIMER: 36518
-[27.10.21 21:02:55.932] WAIT TIME GLOBAL: 33102 USE TIMER: 36518
-[27.10.21 21:02:55.948] WAIT TIME GLOBAL: 33118 USE TIMER: 36518
-[27.10.21 21:02:55.965] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:02:55.965] WAIT TIME GLOBAL: 33135 USE TIMER: 36518
-[27.10.21 21:02:55.982] WAIT TIME GLOBAL: 33151 USE TIMER: 36518
-[27.10.21 21:02:56.000] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:02:56.000] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:02:56.000] WAIT TIME GLOBAL: 33169 USE TIMER: 36518
-[27.10.21 21:02:56.016] WAIT TIME GLOBAL: 33185 USE TIMER: 36518
-[27.10.21 21:02:56.032] WAIT TIME GLOBAL: 33202 USE TIMER: 36518
-[27.10.21 21:02:56.048] WAIT TIME GLOBAL: 33218 USE TIMER: 36518
-[27.10.21 21:02:56.065] WAIT TIME GLOBAL: 33235 USE TIMER: 36518
-[27.10.21 21:02:56.082] WAIT TIME GLOBAL: 33252 USE TIMER: 36518
-[27.10.21 21:02:56.099] WAIT TIME GLOBAL: 33269 USE TIMER: 36518
-[27.10.21 21:02:56.115] WAIT TIME GLOBAL: 33285 USE TIMER: 36518
-[27.10.21 21:02:56.133] WAIT TIME GLOBAL: 33302 USE TIMER: 36518
-[27.10.21 21:02:56.149] WAIT TIME GLOBAL: 33319 USE TIMER: 36518
-[27.10.21 21:02:56.165] WAIT TIME GLOBAL: 33335 USE TIMER: 36518
-[27.10.21 21:02:56.182] WAIT TIME GLOBAL: 33352 USE TIMER: 36518
-[27.10.21 21:02:56.200] WAIT TIME GLOBAL: 33369 USE TIMER: 36518
-[27.10.21 21:02:56.216] WAIT TIME GLOBAL: 33385 USE TIMER: 36518
-[27.10.21 21:02:56.632] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:02:58.983] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:02:59.349] END OF EATING
-[27.10.21 21:02:59.349] USING SPAWN: wpn_binoc
-[27.10.21 21:02:59.349] USING SPAWN: bandage_use
-[27.10.21 21:02:59.371] START EATING
-[27.10.21 21:02:59.564] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:03:01.000] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:03:02.332] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:03:04.767] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:03:05.234] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:03:11.066] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:03:11.300] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:03:11.450] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:03:13.250] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:03:20.610] * [R_occlusion::occq_destroy]: fids[68] used[68] pool[68]
-[27.10.21 21:03:20.610] * [R_occlusion::occq_destroy]: released [0] used and [68] pool queries
-[27.10.21 21:03:20.841] * DVB created: 16384K
-[27.10.21 21:03:20.841] * DIB created: 512K
-[27.10.21 21:03:21.761] * RM_Dump: textures  : 1715
-[27.10.21 21:03:21.761] * RM_Dump: rtargets  : 22
-[27.10.21 21:03:21.761] * RM_Dump: vs        : 76
-[27.10.21 21:03:21.761] * RM_Dump: ps        : 85
-[27.10.21 21:03:21.761] * RM_Dump: dcl       : 19
-[27.10.21 21:03:21.761] * RM_Dump: states    : 82
-[27.10.21 21:03:21.761] * RM_Dump: tex_list  : 1574
-[27.10.21 21:03:21.761] * RM_Dump: matrices  : 0
-[27.10.21 21:03:21.761] * RM_Dump: lst_constants: 0
-[27.10.21 21:03:21.761] * RM_Dump: v_passes  : 2190
-[27.10.21 21:03:21.761] * RM_Dump: v_elements: 2196
-[27.10.21 21:03:21.761] * RM_Dump: v_shaders : 1289
-[27.10.21 21:03:21.761] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
-[27.10.21 21:03:21.761] * GPU vertex cache: recognized, 24
-[27.10.21 21:03:21.761] *** RESET [0 ms]
-[27.10.21 21:03:22.281] * MEMORY USAGE: 2084282 K
-[27.10.21 21:03:22.281] * End of synchronization A[1] R[1]
-[27.10.21 21:03:25.017] --LUA version: [LuaJIT 2.1.0-beta3]
-[27.10.21 21:03:25.046] * phase time: 86 ms
-[27.10.21 21:03:25.118] * phase cmem: 1659964 K
-[27.10.21 21:03:25.124] * Loading spawn registry...
-[27.10.21 21:03:25.664] * 8976 spawn points are successfully loaded
-[27.10.21 21:03:25.664] * Loading objects...
-[27.10.21 21:03:25.974] * 17801 objects are successfully loaded
-[27.10.21 21:03:26.509] * Game Данил_autosave is successfully loaded from file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_autosave.sav' (1.390s)
-[27.10.21 21:03:26.509] * phase time: 1463 ms
-[27.10.21 21:03:26.587] * phase cmem: 1687470 K
-[27.10.21 21:03:26.587] * phase time: 78 ms
-[27.10.21 21:03:26.667] * phase cmem: 1687464 K
-[27.10.21 21:03:26.667] * phase time: 79 ms
-[27.10.21 21:03:26.746] * phase cmem: 1687464 K
-[27.10.21 21:03:26.835] --------------------------------------------------------------------------------
-[27.10.21 21:03:26.835] [8143MB] physical memory installed, [1935MB] available, [76] percent of memory in use
-[27.10.21 21:03:26.835] PageFile usage: [2099MB], Peak PageFile usage: [3451MB]
-[27.10.21 21:03:26.835] --------------------------------------------------------------------------------
-[27.10.21 21:03:26.835] * [ D3D ]: textures[1140336 K]
-[27.10.21 21:03:26.835] * [x-ray]: process heap[1686902 K], render[0 K]
-[27.10.21 21:03:26.835] * [x-ray]: economy: strings[7547 K], smem[10445 K]
-[27.10.21 21:03:27.422] ! auto-generated bump map: wpn\benelli\wpn_short_body_bump#
-[27.10.21 21:03:27.425] ! auto-generated bump map: wpn\benelli\wpn_short_barrel_bump#
-[27.10.21 21:03:27.848] FUCKING NPC: mil_ara_guard2
-[27.10.21 21:03:27.902] FUCKING NPC: mil_ara
-[27.10.21 21:03:27.922] FUCKING NPC: mil_ara_guard1
-[27.10.21 21:03:27.931] FUCKING NPC: mil_ara_guard3
-[27.10.21 21:03:28.809] * Saving spawns...
-[27.10.21 21:03:28.809] * Saving objects...
-[27.10.21 21:03:28.835] * 17801 objects are successfully saved
-[27.10.21 21:03:28.840] * Game Исследовать место крушения.sav is successfully saved to file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Исследовать место крушения.sav'
-[27.10.21 21:03:30.127] * MEMORY USAGE: 2010155 K
-[27.10.21 21:03:30.127] * End of synchronization A[1] R[1]
-[27.10.21 21:03:30.127] * phase time: 3540 ms
-[27.10.21 21:03:30.220] * phase cmem: 2010155 K
-[27.10.21 21:05:16.637] START EATING
-[27.10.21 21:05:16.637] UPDATE REMOVING: wpn_binoc
-[27.10.21 21:05:16.638] USING SPAWN: medkit_hud
-[27.10.21 21:05:16.640] WAIT TIME GLOBAL: 59146 USE TIMER: 63646
-[27.10.21 21:05:16.678] WAIT TIME GLOBAL: 59163 USE TIMER: 63646
-[27.10.21 21:05:17.137] DO TIMER ACTION: sleep_med
-[27.10.21 21:05:17.457] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:05:17.472] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:05:17.605] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:05:20.641] * [R_occlusion::occq_destroy]: fids[87] used[87] pool[87]
-[27.10.21 21:05:20.641] * [R_occlusion::occq_destroy]: released [0] used and [87] pool queries
-[27.10.21 21:05:20.859] * DVB created: 16384K
-[27.10.21 21:05:20.859] * DIB created: 512K
-[27.10.21 21:05:21.732] * RM_Dump: textures  : 1667
-[27.10.21 21:05:21.732] * RM_Dump: rtargets  : 22
-[27.10.21 21:05:21.732] * RM_Dump: vs        : 75
-[27.10.21 21:05:21.732] * RM_Dump: ps        : 84
-[27.10.21 21:05:21.732] * RM_Dump: dcl       : 19
-[27.10.21 21:05:21.732] * RM_Dump: states    : 79
-[27.10.21 21:05:21.732] * RM_Dump: tex_list  : 1548
-[27.10.21 21:05:21.732] * RM_Dump: matrices  : 0
-[27.10.21 21:05:21.732] * RM_Dump: lst_constants: 0
-[27.10.21 21:05:21.732] * RM_Dump: v_passes  : 2145
-[27.10.21 21:05:21.732] * RM_Dump: v_elements: 2151
-[27.10.21 21:05:21.732] * RM_Dump: v_shaders : 1264
-[27.10.21 21:05:21.732] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
-[27.10.21 21:05:21.733] * GPU vertex cache: recognized, 24
-[27.10.21 21:05:21.733] *** RESET [1092 ms]
-[27.10.21 21:05:22.513] * MEMORY USAGE: 1987699 K
-[27.10.21 21:05:22.513] * End of synchronization A[1] R[1]
-[27.10.21 21:05:22.692] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:05:22.692] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:05:22.709] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:05:23.437] END OF EATING
-[27.10.21 21:05:23.438] USING SPAWN: wpn_binoc
-[27.10.21 21:05:23.438] USING SPAWN: medkit_use
-[27.10.21 21:05:23.457] START EATING
-[27.10.21 21:05:26.055] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:05:27.704] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:05:27.705] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:05:28.405] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:05:28.405] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:05:33.655] START EATING
-[27.10.21 21:05:33.655] UPDATE REMOVING: wpn_binoc
-[27.10.21 21:05:33.655] USING SPAWN: bandage_hud
-[27.10.21 21:05:33.658] WAIT TIME GLOBAL: 73876 USE TIMER: 77876
-[27.10.21 21:05:33.671] WAIT TIME GLOBAL: 73893 USE TIMER: 77876
-[27.10.21 21:05:33.688] WAIT TIME GLOBAL: 73909 USE TIMER: 77876
-[27.10.21 21:05:33.705] WAIT TIME GLOBAL: 73926 USE TIMER: 77876
-[27.10.21 21:05:33.722] WAIT TIME GLOBAL: 73943 USE TIMER: 77876
-[27.10.21 21:05:33.738] WAIT TIME GLOBAL: 73959 USE TIMER: 77876
-[27.10.21 21:05:33.754] WAIT TIME GLOBAL: 73976 USE TIMER: 77876
-[27.10.21 21:05:33.771] WAIT TIME GLOBAL: 73993 USE TIMER: 77876
-[27.10.21 21:05:33.788] WAIT TIME GLOBAL: 74009 USE TIMER: 77876
-[27.10.21 21:05:33.805] WAIT TIME GLOBAL: 74026 USE TIMER: 77876
-[27.10.21 21:05:33.822] WAIT TIME GLOBAL: 74043 USE TIMER: 77876
-[27.10.21 21:05:33.838] WAIT TIME GLOBAL: 74059 USE TIMER: 77876
-[27.10.21 21:05:33.855] WAIT TIME GLOBAL: 74076 USE TIMER: 77876
-[27.10.21 21:05:33.871] WAIT TIME GLOBAL: 74093 USE TIMER: 77876
-[27.10.21 21:05:33.888] WAIT TIME GLOBAL: 74109 USE TIMER: 77876
-[27.10.21 21:05:33.905] WAIT TIME GLOBAL: 74126 USE TIMER: 77876
-[27.10.21 21:05:33.922] WAIT TIME GLOBAL: 74143 USE TIMER: 77876
-[27.10.21 21:05:33.938] WAIT TIME GLOBAL: 74159 USE TIMER: 77876
-[27.10.21 21:05:33.955] WAIT TIME GLOBAL: 74176 USE TIMER: 77876
-[27.10.21 21:05:33.971] WAIT TIME GLOBAL: 74193 USE TIMER: 77876
-[27.10.21 21:05:33.988] WAIT TIME GLOBAL: 74209 USE TIMER: 77876
-[27.10.21 21:05:34.005] WAIT TIME GLOBAL: 74226 USE TIMER: 77876
-[27.10.21 21:05:34.021] WAIT TIME GLOBAL: 74243 USE TIMER: 77876
-[27.10.21 21:05:34.038] WAIT TIME GLOBAL: 74259 USE TIMER: 77876
-[27.10.21 21:05:34.055] WAIT TIME GLOBAL: 74276 USE TIMER: 77876
-[27.10.21 21:05:34.071] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:05:34.071] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:05:34.072] WAIT TIME GLOBAL: 74293 USE TIMER: 77876
-[27.10.21 21:05:34.088] WAIT TIME GLOBAL: 74309 USE TIMER: 77876
-[27.10.21 21:05:34.106] WAIT TIME GLOBAL: 74326 USE TIMER: 77876
-[27.10.21 21:05:34.122] WAIT TIME GLOBAL: 74343 USE TIMER: 77876
-[27.10.21 21:05:34.139] WAIT TIME GLOBAL: 74359 USE TIMER: 77876
-[27.10.21 21:05:34.155] WAIT TIME GLOBAL: 74376 USE TIMER: 77876
-[27.10.21 21:05:34.172] WAIT TIME GLOBAL: 74393 USE TIMER: 77876
-[27.10.21 21:05:34.188] WAIT TIME GLOBAL: 74409 USE TIMER: 77876
-[27.10.21 21:05:34.205] WAIT TIME GLOBAL: 74426 USE TIMER: 77876
-[27.10.21 21:05:34.222] WAIT TIME GLOBAL: 74443 USE TIMER: 77876
-[27.10.21 21:05:34.239] WAIT TIME GLOBAL: 74459 USE TIMER: 77876
-[27.10.21 21:05:34.256] WAIT TIME GLOBAL: 74476 USE TIMER: 77876
-[27.10.21 21:05:34.271] WAIT TIME GLOBAL: 74493 USE TIMER: 77876
-[27.10.21 21:05:34.288] WAIT TIME GLOBAL: 74509 USE TIMER: 77876
-[27.10.21 21:05:34.305] WAIT TIME GLOBAL: 74526 USE TIMER: 77876
-[27.10.21 21:05:34.321] WAIT TIME GLOBAL: 74542 USE TIMER: 77876
-[27.10.21 21:05:34.338] WAIT TIME GLOBAL: 74559 USE TIMER: 77876
-[27.10.21 21:05:34.355] WAIT TIME GLOBAL: 74576 USE TIMER: 77876
-[27.10.21 21:05:34.372] WAIT TIME GLOBAL: 74592 USE TIMER: 77876
-[27.10.21 21:05:34.388] WAIT TIME GLOBAL: 74609 USE TIMER: 77876
-[27.10.21 21:05:34.404] WAIT TIME GLOBAL: 74626 USE TIMER: 77876
-[27.10.21 21:05:34.421] WAIT TIME GLOBAL: 74643 USE TIMER: 77876
-[27.10.21 21:05:34.438] WAIT TIME GLOBAL: 74659 USE TIMER: 77876
-[27.10.21 21:05:34.455] WAIT TIME GLOBAL: 74676 USE TIMER: 77876
-[27.10.21 21:05:34.472] WAIT TIME GLOBAL: 74692 USE TIMER: 77876
-[27.10.21 21:05:34.488] WAIT TIME GLOBAL: 74709 USE TIMER: 77876
-[27.10.21 21:05:34.505] WAIT TIME GLOBAL: 74726 USE TIMER: 77876
-[27.10.21 21:05:34.521] WAIT TIME GLOBAL: 74743 USE TIMER: 77876
-[27.10.21 21:05:34.539] WAIT TIME GLOBAL: 74759 USE TIMER: 77876
-[27.10.21 21:05:34.554] WAIT TIME GLOBAL: 74776 USE TIMER: 77876
-[27.10.21 21:05:34.572] WAIT TIME GLOBAL: 74792 USE TIMER: 77876
-[27.10.21 21:05:34.588] WAIT TIME GLOBAL: 74809 USE TIMER: 77876
-[27.10.21 21:05:34.605] WAIT TIME GLOBAL: 74826 USE TIMER: 77876
-[27.10.21 21:05:34.622] WAIT TIME GLOBAL: 74843 USE TIMER: 77876
-[27.10.21 21:05:34.638] WAIT TIME GLOBAL: 74859 USE TIMER: 77876
-[27.10.21 21:05:34.655] WAIT TIME GLOBAL: 74876 USE TIMER: 77876
-[27.10.21 21:05:34.672] WAIT TIME GLOBAL: 74893 USE TIMER: 77876
-[27.10.21 21:05:34.688] WAIT TIME GLOBAL: 74909 USE TIMER: 77876
-[27.10.21 21:05:34.705] WAIT TIME GLOBAL: 74926 USE TIMER: 77876
-[27.10.21 21:05:34.721] WAIT TIME GLOBAL: 74942 USE TIMER: 77876
-[27.10.21 21:05:34.739] WAIT TIME GLOBAL: 74959 USE TIMER: 77876
-[27.10.21 21:05:34.756] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:05:34.756] WAIT TIME GLOBAL: 74976 USE TIMER: 77876
-[27.10.21 21:05:34.772] WAIT TIME GLOBAL: 74993 USE TIMER: 77876
-[27.10.21 21:05:34.788] WAIT TIME GLOBAL: 75009 USE TIMER: 77876
-[27.10.21 21:05:34.805] WAIT TIME GLOBAL: 75026 USE TIMER: 77876
-[27.10.21 21:05:34.821] WAIT TIME GLOBAL: 75042 USE TIMER: 77876
-[27.10.21 21:05:34.839] WAIT TIME GLOBAL: 75059 USE TIMER: 77876
-[27.10.21 21:05:34.855] WAIT TIME GLOBAL: 75076 USE TIMER: 77876
-[27.10.21 21:05:34.871] WAIT TIME GLOBAL: 75093 USE TIMER: 77876
-[27.10.21 21:05:34.888] WAIT TIME GLOBAL: 75109 USE TIMER: 77876
-[27.10.21 21:05:34.905] WAIT TIME GLOBAL: 75126 USE TIMER: 77876
-[27.10.21 21:05:34.921] WAIT TIME GLOBAL: 75142 USE TIMER: 77876
-[27.10.21 21:05:34.938] WAIT TIME GLOBAL: 75159 USE TIMER: 77876
-[27.10.21 21:05:34.956] WAIT TIME GLOBAL: 75176 USE TIMER: 77876
-[27.10.21 21:05:34.972] WAIT TIME GLOBAL: 75193 USE TIMER: 77876
-[27.10.21 21:05:34.988] WAIT TIME GLOBAL: 75209 USE TIMER: 77876
-[27.10.21 21:05:35.005] WAIT TIME GLOBAL: 75226 USE TIMER: 77876
-[27.10.21 21:05:35.021] WAIT TIME GLOBAL: 75242 USE TIMER: 77876
-[27.10.21 21:05:35.038] WAIT TIME GLOBAL: 75259 USE TIMER: 77876
-[27.10.21 21:05:35.056] WAIT TIME GLOBAL: 75276 USE TIMER: 77876
-[27.10.21 21:05:35.072] WAIT TIME GLOBAL: 75293 USE TIMER: 77876
-[27.10.21 21:05:35.088] WAIT TIME GLOBAL: 75309 USE TIMER: 77876
-[27.10.21 21:05:35.105] WAIT TIME GLOBAL: 75326 USE TIMER: 77876
-[27.10.21 21:05:35.121] WAIT TIME GLOBAL: 75343 USE TIMER: 77876
-[27.10.21 21:05:35.138] WAIT TIME GLOBAL: 75360 USE TIMER: 77876
-[27.10.21 21:05:35.154] WAIT TIME GLOBAL: 75376 USE TIMER: 77876
-[27.10.21 21:05:35.171] WAIT TIME GLOBAL: 75392 USE TIMER: 77876
-[27.10.21 21:05:35.188] WAIT TIME GLOBAL: 75409 USE TIMER: 77876
-[27.10.21 21:05:35.206] WAIT TIME GLOBAL: 75426 USE TIMER: 77876
-[27.10.21 21:05:35.221] WAIT TIME GLOBAL: 75442 USE TIMER: 77876
-[27.10.21 21:05:35.240] WAIT TIME GLOBAL: 75459 USE TIMER: 77876
-[27.10.21 21:05:35.256] WAIT TIME GLOBAL: 75476 USE TIMER: 77876
-[27.10.21 21:05:35.271] WAIT TIME GLOBAL: 75493 USE TIMER: 77876
-[27.10.21 21:05:35.288] WAIT TIME GLOBAL: 75509 USE TIMER: 77876
-[27.10.21 21:05:35.305] WAIT TIME GLOBAL: 75526 USE TIMER: 77876
-[27.10.21 21:05:35.322] WAIT TIME GLOBAL: 75543 USE TIMER: 77876
-[27.10.21 21:05:35.339] WAIT TIME GLOBAL: 75559 USE TIMER: 77876
-[27.10.21 21:05:35.355] WAIT TIME GLOBAL: 75576 USE TIMER: 77876
-[27.10.21 21:05:35.372] WAIT TIME GLOBAL: 75593 USE TIMER: 77876
-[27.10.21 21:05:35.389] WAIT TIME GLOBAL: 75609 USE TIMER: 77876
-[27.10.21 21:05:35.405] WAIT TIME GLOBAL: 75626 USE TIMER: 77876
-[27.10.21 21:05:35.422] WAIT TIME GLOBAL: 75643 USE TIMER: 77876
-[27.10.21 21:05:35.438] WAIT TIME GLOBAL: 75659 USE TIMER: 77876
-[27.10.21 21:05:35.455] WAIT TIME GLOBAL: 75676 USE TIMER: 77876
-[27.10.21 21:05:35.471] WAIT TIME GLOBAL: 75692 USE TIMER: 77876
-[27.10.21 21:05:35.488] WAIT TIME GLOBAL: 75709 USE TIMER: 77876
-[27.10.21 21:05:35.505] WAIT TIME GLOBAL: 75726 USE TIMER: 77876
-[27.10.21 21:05:35.521] WAIT TIME GLOBAL: 75743 USE TIMER: 77876
-[27.10.21 21:05:35.538] WAIT TIME GLOBAL: 75759 USE TIMER: 77876
-[27.10.21 21:05:35.555] WAIT TIME GLOBAL: 75776 USE TIMER: 77876
-[27.10.21 21:05:35.572] WAIT TIME GLOBAL: 75793 USE TIMER: 77876
-[27.10.21 21:05:35.588] WAIT TIME GLOBAL: 75809 USE TIMER: 77876
-[27.10.21 21:05:35.605] WAIT TIME GLOBAL: 75826 USE TIMER: 77876
-[27.10.21 21:05:35.621] WAIT TIME GLOBAL: 75842 USE TIMER: 77876
-[27.10.21 21:05:35.638] WAIT TIME GLOBAL: 75859 USE TIMER: 77876
-[27.10.21 21:05:35.655] WAIT TIME GLOBAL: 75876 USE TIMER: 77876
-[27.10.21 21:05:35.671] WAIT TIME GLOBAL: 75893 USE TIMER: 77876
-[27.10.21 21:05:35.688] WAIT TIME GLOBAL: 75909 USE TIMER: 77876
-[27.10.21 21:05:35.705] WAIT TIME GLOBAL: 75926 USE TIMER: 77876
-[27.10.21 21:05:35.722] WAIT TIME GLOBAL: 75942 USE TIMER: 77876
-[27.10.21 21:05:35.738] WAIT TIME GLOBAL: 75959 USE TIMER: 77876
-[27.10.21 21:05:35.754] WAIT TIME GLOBAL: 75976 USE TIMER: 77876
-[27.10.21 21:05:35.772] WAIT TIME GLOBAL: 75992 USE TIMER: 77876
-[27.10.21 21:05:35.788] WAIT TIME GLOBAL: 76009 USE TIMER: 77876
-[27.10.21 21:05:35.805] WAIT TIME GLOBAL: 76026 USE TIMER: 77876
-[27.10.21 21:05:35.825] WAIT TIME GLOBAL: 76043 USE TIMER: 77876
-[27.10.21 21:05:35.838] WAIT TIME GLOBAL: 76059 USE TIMER: 77876
-[27.10.21 21:05:35.855] WAIT TIME GLOBAL: 76076 USE TIMER: 77876
-[27.10.21 21:05:35.872] WAIT TIME GLOBAL: 76093 USE TIMER: 77876
-[27.10.21 21:05:35.888] WAIT TIME GLOBAL: 76109 USE TIMER: 77876
-[27.10.21 21:05:35.906] WAIT TIME GLOBAL: 76126 USE TIMER: 77876
-[27.10.21 21:05:35.921] WAIT TIME GLOBAL: 76143 USE TIMER: 77876
-[27.10.21 21:05:35.939] WAIT TIME GLOBAL: 76159 USE TIMER: 77876
-[27.10.21 21:05:35.956] WAIT TIME GLOBAL: 76176 USE TIMER: 77876
-[27.10.21 21:05:35.972] WAIT TIME GLOBAL: 76193 USE TIMER: 77876
-[27.10.21 21:05:35.988] WAIT TIME GLOBAL: 76209 USE TIMER: 77876
-[27.10.21 21:05:36.005] WAIT TIME GLOBAL: 76226 USE TIMER: 77876
-[27.10.21 21:05:36.023] WAIT TIME GLOBAL: 76243 USE TIMER: 77876
-[27.10.21 21:05:36.039] WAIT TIME GLOBAL: 76259 USE TIMER: 77876
-[27.10.21 21:05:36.055] WAIT TIME GLOBAL: 76276 USE TIMER: 77876
-[27.10.21 21:05:36.072] WAIT TIME GLOBAL: 76293 USE TIMER: 77876
-[27.10.21 21:05:36.088] WAIT TIME GLOBAL: 76309 USE TIMER: 77876
-[27.10.21 21:05:36.105] WAIT TIME GLOBAL: 76326 USE TIMER: 77876
-[27.10.21 21:05:36.122] WAIT TIME GLOBAL: 76343 USE TIMER: 77876
-[27.10.21 21:05:36.138] WAIT TIME GLOBAL: 76359 USE TIMER: 77876
-[27.10.21 21:05:36.155] WAIT TIME GLOBAL: 76376 USE TIMER: 77876
-[27.10.21 21:05:36.171] WAIT TIME GLOBAL: 76392 USE TIMER: 77876
-[27.10.21 21:05:36.188] WAIT TIME GLOBAL: 76409 USE TIMER: 77876
-[27.10.21 21:05:36.205] WAIT TIME GLOBAL: 76426 USE TIMER: 77876
-[27.10.21 21:05:36.221] WAIT TIME GLOBAL: 76443 USE TIMER: 77876
-[27.10.21 21:05:36.238] WAIT TIME GLOBAL: 76459 USE TIMER: 77876
-[27.10.21 21:05:36.256] WAIT TIME GLOBAL: 76476 USE TIMER: 77876
-[27.10.21 21:05:36.272] WAIT TIME GLOBAL: 76493 USE TIMER: 77876
-[27.10.21 21:05:36.288] WAIT TIME GLOBAL: 76509 USE TIMER: 77876
-[27.10.21 21:05:36.306] WAIT TIME GLOBAL: 76526 USE TIMER: 77876
-[27.10.21 21:05:36.322] WAIT TIME GLOBAL: 76543 USE TIMER: 77876
-[27.10.21 21:05:36.339] WAIT TIME GLOBAL: 76560 USE TIMER: 77876
-[27.10.21 21:05:36.355] WAIT TIME GLOBAL: 76577 USE TIMER: 77876
-[27.10.21 21:05:36.372] WAIT TIME GLOBAL: 76592 USE TIMER: 77876
-[27.10.21 21:05:36.388] WAIT TIME GLOBAL: 76609 USE TIMER: 77876
-[27.10.21 21:05:36.405] WAIT TIME GLOBAL: 76626 USE TIMER: 77876
-[27.10.21 21:05:36.421] WAIT TIME GLOBAL: 76642 USE TIMER: 77876
-[27.10.21 21:05:36.438] WAIT TIME GLOBAL: 76659 USE TIMER: 77876
-[27.10.21 21:05:36.455] WAIT TIME GLOBAL: 76676 USE TIMER: 77876
-[27.10.21 21:05:36.471] WAIT TIME GLOBAL: 76693 USE TIMER: 77876
-[27.10.21 21:05:36.488] WAIT TIME GLOBAL: 76709 USE TIMER: 77876
-[27.10.21 21:05:36.505] WAIT TIME GLOBAL: 76726 USE TIMER: 77876
-[27.10.21 21:05:36.522] WAIT TIME GLOBAL: 76743 USE TIMER: 77876
-[27.10.21 21:05:36.538] WAIT TIME GLOBAL: 76759 USE TIMER: 77876
-[27.10.21 21:05:36.555] WAIT TIME GLOBAL: 76776 USE TIMER: 77876
-[27.10.21 21:05:36.571] WAIT TIME GLOBAL: 76793 USE TIMER: 77876
-[27.10.21 21:05:36.589] WAIT TIME GLOBAL: 76809 USE TIMER: 77876
-[27.10.21 21:05:36.605] WAIT TIME GLOBAL: 76826 USE TIMER: 77876
-[27.10.21 21:05:36.622] WAIT TIME GLOBAL: 76843 USE TIMER: 77876
-[27.10.21 21:05:36.638] WAIT TIME GLOBAL: 76859 USE TIMER: 77876
-[27.10.21 21:05:36.655] WAIT TIME GLOBAL: 76876 USE TIMER: 77876
-[27.10.21 21:05:36.672] WAIT TIME GLOBAL: 76893 USE TIMER: 77876
-[27.10.21 21:05:36.688] WAIT TIME GLOBAL: 76910 USE TIMER: 77876
-[27.10.21 21:05:36.705] WAIT TIME GLOBAL: 76926 USE TIMER: 77876
-[27.10.21 21:05:36.722] WAIT TIME GLOBAL: 76942 USE TIMER: 77876
-[27.10.21 21:05:36.738] WAIT TIME GLOBAL: 76959 USE TIMER: 77876
-[27.10.21 21:05:36.755] WAIT TIME GLOBAL: 76976 USE TIMER: 77876
-[27.10.21 21:05:36.771] WAIT TIME GLOBAL: 76993 USE TIMER: 77876
-[27.10.21 21:05:36.788] WAIT TIME GLOBAL: 77009 USE TIMER: 77876
-[27.10.21 21:05:36.805] WAIT TIME GLOBAL: 77026 USE TIMER: 77876
-[27.10.21 21:05:36.821] WAIT TIME GLOBAL: 77043 USE TIMER: 77876
-[27.10.21 21:05:36.838] WAIT TIME GLOBAL: 77059 USE TIMER: 77876
-[27.10.21 21:05:36.855] WAIT TIME GLOBAL: 77076 USE TIMER: 77876
-[27.10.21 21:05:36.871] WAIT TIME GLOBAL: 77093 USE TIMER: 77876
-[27.10.21 21:05:36.888] WAIT TIME GLOBAL: 77109 USE TIMER: 77876
-[27.10.21 21:05:36.905] WAIT TIME GLOBAL: 77126 USE TIMER: 77876
-[27.10.21 21:05:36.922] WAIT TIME GLOBAL: 77142 USE TIMER: 77876
-[27.10.21 21:05:36.939] WAIT TIME GLOBAL: 77159 USE TIMER: 77876
-[27.10.21 21:05:36.955] WAIT TIME GLOBAL: 77176 USE TIMER: 77876
-[27.10.21 21:05:36.972] WAIT TIME GLOBAL: 77193 USE TIMER: 77876
-[27.10.21 21:05:36.988] WAIT TIME GLOBAL: 77209 USE TIMER: 77876
-[27.10.21 21:05:37.005] WAIT TIME GLOBAL: 77226 USE TIMER: 77876
-[27.10.21 21:05:37.022] WAIT TIME GLOBAL: 77243 USE TIMER: 77876
-[27.10.21 21:05:37.038] WAIT TIME GLOBAL: 77259 USE TIMER: 77876
-[27.10.21 21:05:37.055] WAIT TIME GLOBAL: 77276 USE TIMER: 77876
-[27.10.21 21:05:37.071] WAIT TIME GLOBAL: 77293 USE TIMER: 77876
-[27.10.21 21:05:37.088] WAIT TIME GLOBAL: 77309 USE TIMER: 77876
-[27.10.21 21:05:37.105] WAIT TIME GLOBAL: 77326 USE TIMER: 77876
-[27.10.21 21:05:37.121] WAIT TIME GLOBAL: 77343 USE TIMER: 77876
-[27.10.21 21:05:37.138] WAIT TIME GLOBAL: 77359 USE TIMER: 77876
-[27.10.21 21:05:37.155] WAIT TIME GLOBAL: 77376 USE TIMER: 77876
-[27.10.21 21:05:37.172] WAIT TIME GLOBAL: 77392 USE TIMER: 77876
-[27.10.21 21:05:37.188] WAIT TIME GLOBAL: 77409 USE TIMER: 77876
-[27.10.21 21:05:37.205] WAIT TIME GLOBAL: 77426 USE TIMER: 77876
-[27.10.21 21:05:37.222] WAIT TIME GLOBAL: 77443 USE TIMER: 77876
-[27.10.21 21:05:37.247] WAIT TIME GLOBAL: 77459 USE TIMER: 77876
-[27.10.21 21:05:37.258] WAIT TIME GLOBAL: 77478 USE TIMER: 77876
-[27.10.21 21:05:37.274] WAIT TIME GLOBAL: 77494 USE TIMER: 77876
-[27.10.21 21:05:37.290] WAIT TIME GLOBAL: 77509 USE TIMER: 77876
-[27.10.21 21:05:37.306] WAIT TIME GLOBAL: 77526 USE TIMER: 77876
-[27.10.21 21:05:37.322] WAIT TIME GLOBAL: 77542 USE TIMER: 77876
-[27.10.21 21:05:37.338] WAIT TIME GLOBAL: 77559 USE TIMER: 77876
-[27.10.21 21:05:37.356] WAIT TIME GLOBAL: 77576 USE TIMER: 77876
-[27.10.21 21:05:37.373] WAIT TIME GLOBAL: 77593 USE TIMER: 77876
-[27.10.21 21:05:37.389] WAIT TIME GLOBAL: 77610 USE TIMER: 77876
-[27.10.21 21:05:37.405] WAIT TIME GLOBAL: 77626 USE TIMER: 77876
-[27.10.21 21:05:37.422] WAIT TIME GLOBAL: 77643 USE TIMER: 77876
-[27.10.21 21:05:37.438] WAIT TIME GLOBAL: 77659 USE TIMER: 77876
-[27.10.21 21:05:37.455] WAIT TIME GLOBAL: 77676 USE TIMER: 77876
-[27.10.21 21:05:37.472] WAIT TIME GLOBAL: 77693 USE TIMER: 77876
-[27.10.21 21:05:37.488] WAIT TIME GLOBAL: 77710 USE TIMER: 77876
-[27.10.21 21:05:37.505] WAIT TIME GLOBAL: 77726 USE TIMER: 77876
-[27.10.21 21:05:37.521] WAIT TIME GLOBAL: 77743 USE TIMER: 77876
-[27.10.21 21:05:37.538] WAIT TIME GLOBAL: 77759 USE TIMER: 77876
-[27.10.21 21:05:37.555] WAIT TIME GLOBAL: 77776 USE TIMER: 77876
-[27.10.21 21:05:37.572] WAIT TIME GLOBAL: 77793 USE TIMER: 77876
-[27.10.21 21:05:37.589] WAIT TIME GLOBAL: 77809 USE TIMER: 77876
-[27.10.21 21:05:37.605] WAIT TIME GLOBAL: 77826 USE TIMER: 77876
-[27.10.21 21:05:37.622] WAIT TIME GLOBAL: 77842 USE TIMER: 77876
-[27.10.21 21:05:37.638] WAIT TIME GLOBAL: 77859 USE TIMER: 77876
-[27.10.21 21:05:37.655] WAIT TIME GLOBAL: 77876 USE TIMER: 77876
-[27.10.21 21:05:37.671] WAIT TIME GLOBAL: 77893 USE TIMER: 77876
-[27.10.21 21:05:37.689] WAIT TIME GLOBAL: 77909 USE TIMER: 77876
-[27.10.21 21:05:37.705] WAIT TIME GLOBAL: 77926 USE TIMER: 77876
-[27.10.21 21:05:37.722] WAIT TIME GLOBAL: 77943 USE TIMER: 77876
-[27.10.21 21:05:37.738] WAIT TIME GLOBAL: 77959 USE TIMER: 77876
-[27.10.21 21:05:37.755] WAIT TIME GLOBAL: 77976 USE TIMER: 77876
-[27.10.21 21:05:37.772] WAIT TIME GLOBAL: 77993 USE TIMER: 77876
-[27.10.21 21:05:37.788] WAIT TIME GLOBAL: 78009 USE TIMER: 77876
-[27.10.21 21:05:37.805] WAIT TIME GLOBAL: 78026 USE TIMER: 77876
-[27.10.21 21:05:37.821] WAIT TIME GLOBAL: 78042 USE TIMER: 77876
-[27.10.21 21:05:37.838] WAIT TIME GLOBAL: 78059 USE TIMER: 77876
-[27.10.21 21:05:37.856] WAIT TIME GLOBAL: 78076 USE TIMER: 77876
-[27.10.21 21:05:37.872] WAIT TIME GLOBAL: 78093 USE TIMER: 77876
-[27.10.21 21:05:37.888] WAIT TIME GLOBAL: 78109 USE TIMER: 77876
-[27.10.21 21:05:37.905] WAIT TIME GLOBAL: 78126 USE TIMER: 77876
-[27.10.21 21:05:37.922] WAIT TIME GLOBAL: 78142 USE TIMER: 77876
-[27.10.21 21:05:37.939] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[27.10.21 21:05:37.940] WAIT TIME GLOBAL: 78160 USE TIMER: 77876
-[27.10.21 21:05:37.955] WAIT TIME GLOBAL: 78176 USE TIMER: 77876
-[27.10.21 21:05:37.972] WAIT TIME GLOBAL: 78193 USE TIMER: 77876
-[27.10.21 21:05:37.988] WAIT TIME GLOBAL: 78209 USE TIMER: 77876
-[27.10.21 21:05:38.005] WAIT TIME GLOBAL: 78226 USE TIMER: 77876
-[27.10.21 21:05:38.022] WAIT TIME GLOBAL: 78242 USE TIMER: 77876
-[27.10.21 21:05:38.038] WAIT TIME GLOBAL: 78259 USE TIMER: 77876
-[27.10.21 21:05:38.056] WAIT TIME GLOBAL: 78276 USE TIMER: 77876
-[27.10.21 21:05:38.073] WAIT TIME GLOBAL: 78293 USE TIMER: 77876
-[27.10.21 21:05:38.088] WAIT TIME GLOBAL: 78310 USE TIMER: 77876
-[27.10.21 21:05:38.105] WAIT TIME GLOBAL: 78326 USE TIMER: 77876
-[27.10.21 21:05:38.125] WAIT TIME GLOBAL: 78342 USE TIMER: 77876
-[27.10.21 21:05:38.139] WAIT TIME GLOBAL: 78360 USE TIMER: 77876
-[27.10.21 21:05:38.155] WAIT TIME GLOBAL: 78376 USE TIMER: 77876
-[27.10.21 21:05:38.171] START EATING
-[27.10.21 21:05:38.171] UPDATE REMOVING: bandage_hud
-[27.10.21 21:05:38.171] *********************************************************************************
-[27.10.21 21:05:38.171] [print_output([CScriptEngine::lua_pcall_failed])] SCRIPT RUNTIME ERROR:
-...shadow of chernobyl\gamedata\scripts\synchro_item.script:212: attempt to index a nil value
-stack traceback:
-	[C]: in function '__index'
-	...shadow of chernobyl\gamedata\scripts\synchro_item.script:212: in function 'destroy_actor_item'
-	...shadow of chernobyl\gamedata\scripts\synchro_item.script:120: in function 'on_use'
-	...shadow of chernobyl\gamedata\scripts\bind_stalker.script:144: in function <...shadow of chernobyl\gamedata\scripts\bind_stalker.script:143>
-	[C]: in function 'eat'
-	...lker shadow of chernobyl\gamedata\scripts\hotkeys.script:76: in function <...lker shadow of chernobyl\gamedata\scripts\hotkeys.script:70>
-	...lker shadow of chernobyl\gamedata\scripts\hotkeys.script:41: in function 'on_key'
-	...er shadow of chernobyl\gamedata\scripts\ui_loader.script:19: in function 'on_key'
-	...shadow of chernobyl\gamedata\scripts\bind_stalker.script:147: in function <...shadow of chernobyl\gamedata\scripts\bind_stalker.script:146>
-[27.10.21 21:05:38.172] *********************************************************************************
-[27.10.21 21:05:38.172] 
-FATAL ERROR
-
-[error]Expression    : FATAL ERROR
-[error]Function      : CScriptEngine::lua_pcall_failed
-[error]File          : d:\a\ogsr-engine\ogsr-engine\ogsr_engine\common_ai\script_engine.cpp
-[error]Line          : 52
-[error]Description   : [CScriptEngine::lua_pcall_failed]: ...shadow of chernobyl\gamedata\scripts\synchro_item.script:212: attempt to index a nil value
-
-[27.10.21 21:05:38.172] ***************************[ScriptCrashHandler]**********************************
-[27.10.21 21:05:38.172] stack traceback:
-	[C]: in function '__index'
-	...shadow of chernobyl\gamedata\scripts\synchro_item.script:212: in function 'destroy_actor_item'
-	...shadow of chernobyl\gamedata\scripts\synchro_item.script:120: in function 'on_use'
-	...shadow of chernobyl\gamedata\scripts\bind_stalker.script:144: in function <...shadow of chernobyl\gamedata\scripts\bind_stalker.script:143>
-	[C]: in function 'eat'
-	...lker shadow of chernobyl\gamedata\scripts\hotkeys.script:76: in function <...lker shadow of chernobyl\gamedata\scripts\hotkeys.script:70>
-	...lker shadow of chernobyl\gamedata\scripts\hotkeys.script:41: in function 'on_key'
-	...er shadow of chernobyl\gamedata\scripts\ui_loader.script:19: in function 'on_key'
-	...shadow of chernobyl\gamedata\scripts\bind_stalker.script:147: in function <...shadow of chernobyl\gamedata\scripts\bind_stalker.script:146>
-[27.10.21 21:05:38.172] 	Locals: 
-[27.10.21 21:05:38.172] 	 string (*temporary) : ...shadow of chernobyl\gamedata\scripts\synchro_item.script:212: attempt to index a nil value
-[27.10.21 21:05:38.172] 	End
-[27.10.21 21:05:38.172] 	Locals: 
-[27.10.21 21:05:38.172] 	 string section : wpn_binoc
-[27.10.21 21:05:38.172] 	 function (*temporary) : [[function]]
-[27.10.21 21:05:38.172] 	 number (*temporary) : 0.000000
-[27.10.21 21:05:38.172] 	 userdata (*temporary) : (alife_simulator): 000002499DFAA740
-[27.10.21 21:05:38.172] 	 function (*temporary) : [[function]]
-[27.10.21 21:05:38.172] 	 number (*temporary) : 0.000000
-[27.10.21 21:05:38.172] 	 userdata (*temporary) : (alife_simulator): 000002499DFAA740
-[27.10.21 21:05:38.172] 	 nil (*temporary) : [not available]
-[27.10.21 21:05:38.172] 	 number (*temporary) : 0.000000
-[27.10.21 21:05:38.172] 	 nil (*temporary) : [not available]
-[27.10.21 21:05:38.172] 	 string (*temporary) : wpn_binoc
-[27.10.21 21:05:38.172] 	 string (*temporary) : attempt to index a nil value
-[27.10.21 21:05:38.172] 	End
-[27.10.21 21:05:38.172] 	Locals: 
-[27.10.21 21:05:38.172] 	 userdata obj : (game_object): 000002499E362540
-[27.10.21 21:05:38.172] 	 string section : bandage
-[27.10.21 21:05:38.172] 	 Table: section_params
-[27.10.21 21:05:38.172] 			 string section_params.1 : bandage_hud
-[27.10.21 21:05:38.179] Can't dump script call stack - Engine corrupted
-[27.10.21 21:05:38.180] ********************************************************************************
-[27.10.21 21:05:38.180] !![LogStackTrace] Thread: [X-RAY Primary thread]
-[27.10.21 21:05:39.421] !!stack trace:
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFD4C313E58], Fun: [BuildStackTrace()] + [48 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\stacktrace_collector.cpp-->152]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFD4C33A7E1], Fun: [LogStackTrace()] + [73 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->58] + [13 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFD4C33A626], Fun: [xrDebug::backend()] + [174 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->172]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFD4C33A563], Fun: [xrDebug::fatal()] + [131 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->252]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFD390AB864], Fun: [CScriptEngine::lua_pcall_failed()] + [120 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\common_ai\script_engine.cpp-->53]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFD3F635490], Fun: [lj_BC_FUNCC()] + [66 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFD3F673E47], Fun: [lj_err_run()] + [327 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_err.c-->851]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFD3F672F19], Fun: [err_msgv()] + [121 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_err.c-->874] + [8 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFD3F673C3A], Fun: [lj_err_optype()] + [202 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_err.c-->910] + [19 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFD3F68A0C8], Fun: [lj_meta_tget()] + [440 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_meta.c-->147] + [17 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFD3F635977], Fun: [lj_vmeta_tgetv()] + [44 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFD3F63F0BB], Fun: [lua_pcall()] + [171 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_api.c-->1144]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\Luabind.dll], AddrPC.Offset: [000000018000EB84], Fun: [luabind::detail::pcall()] + [100 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\src\pcall.cpp-->40] + [16 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFD39034BAE], Fun: [luabind::detail::proxy_functor_void_caller<luabind::object const *,CScriptGameObject * const *>::~proxy_functor_void_caller<luabind::object const *,CScriptGameObject * const *>()] + [94 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\luabind\functor.hpp-->292] + [16 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFD390F77F9], Fun: [CScriptCallbackEx<void>::operator()<CScriptGameObject *>()] + [129 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\script_callback_ex.h-->181] + [56 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFD3913E7BF], Fun: [CInventory::Eat()] + [367 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\inventory.cpp-->922]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFD3901BBC7], Fun: [CScriptGameObject::eat()] + [219 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\script_game_object.cpp-->450]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFD38E8D0EC], Fun: [luabind::detail::returns<void>::call<CScriptGameObject,2,void (__cdecl CScriptGameObject::*&)(CScriptGameObject *),CScriptGameObject *>()] + [144 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\luabind\detail\call.hpp-->168] + [49 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFD38E933DD], Fun: [std::_Func_impl_no_alloc<luabind::detail::mem_fn_callback<void (__cdecl CScriptGameObject::*)(CScriptGameObject *),CScriptGameObject>,int,lua_State *>::_Do_call()] + [33 byte(s)], File-->Line: [c:\program files (x86)\microsoft visual studio\2019\enterprise\vc\tools\msvc\14.16.27023\include\functional-->15732480]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\Luabind.dll], AddrPC.Offset: [000000018000EA07], Fun: [luabind::detail::overload_rep::call()] + [51 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\luabind\detail\overload_rep_impl.hpp-->35] + [11 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\Luabind.dll], AddrPC.Offset: [000000018000AA85], Fun: [luabind::detail::class_rep::function_dispatcher()] + [269 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\src\class_rep.cpp-->648] + [14 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFD3F635490], Fun: [lj_BC_FUNCC()] + [66 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFD3F63F0BB], Fun: [lua_pcall()] + [171 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_api.c-->1144]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\Luabind.dll], AddrPC.Offset: [000000018000EB84], Fun: [luabind::detail::pcall()] + [100 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\src\pcall.cpp-->40] + [16 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFD390C3A1A], Fun: [luabind::detail::proxy_functor_void_caller<luabind::object const *,int const *,int const *>::~proxy_functor_void_caller<luabind::object const *,int const *,int const *>()] + [114 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\luabind\functor.hpp-->292] + [16 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFD390C36F7], Fun: [CScriptCallbackEx<void>::operator()<int &,enum EGameActions>()] + [163 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\script_callback_ex.h-->181] + [77 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFD390C2C9C], Fun: [CLevel::IR_OnKeyboardPress()] + [332 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\level_input.cpp-->162]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7CD1C7BA4], Fun: [CInput::KeyUpdate()] + [280 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\xr_input.cpp-->174]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7CD1C8425], Fun: [CInput::OnFrame()] + [69 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\xr_input.cpp-->427]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7CD1FCD48], Fun: [CRegistrator<pureFrame>::Process()] + [84 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\pure.h-->86]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7CD1FBE28], Fun: [CRenderDevice::FrameMove()] + [292 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->443]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7CD1FC197], Fun: [CRenderDevice::on_idle()] + [223 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->214]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7CD1FC97E], Fun: [CRenderDevice::message_loop()] + [98 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->316]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7CD1FBFFB], Fun: [CRenderDevice::Run()] + [411 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->389]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7CD1BEDA8], Fun: [Startup()] + [296 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\x_ray.cpp-->218]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7CD1BF11E], Fun: [WinMain_impl()] + [478 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\x_ray.cpp-->418]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7CD1BC7F8], Fun: [WinMain()] + [72 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\x_ray.cpp-->439]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7CD21E12A], Fun: [__scrt_common_main_seh()] + [262 byte(s)], File-->Line: [d:\agent\_work\3\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl-->288] + [33 byte(s)]
-! Module: [C:\WINDOWS\System32\KERNEL32.DLL], AddrPC.Offset: [00007FFDAB607034], Fun: [BaseThreadInitThunk()] + [20 byte(s)]
-! Module: [C:\WINDOWS\SYSTEM32\ntdll.dll], AddrPC.Offset: [00007FFDAC082651], Fun: [RtlUserThreadStart()] + [33 byte(s)]
-[27.10.21 21:05:39.421] ********************************************************************************
-[27.10.21 21:06:05.693] * [R_occlusion::occq_destroy]: fids[61] used[61] pool[61]
-[27.10.21 21:06:05.695] * [R_occlusion::occq_destroy]: released [0] used and [61] pool queries
-[27.10.21 21:06:05.699] 
-FATAL ERROR
-
-[error]Expression    : ExitFromWinMain
-[error]Function      : xrDebug::_initialize::<lambda_c6715271fb6c8a51385a964c2e1e361c>::operator ()
-[error]File          : d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp
-[error]Line          : 541
-[error]Description   : Unexpected application exit!
-
-[27.10.21 21:06:05.699] ***************************[ScriptCrashHandler]**********************************
-[27.10.21 21:06:05.699] stack traceback:
-	[C]: in function '__index'
-	...shadow of chernobyl\gamedata\scripts\synchro_item.script:212: in function 'destroy_actor_item'
-	...shadow of chernobyl\gamedata\scripts\synchro_item.script:120: in function 'on_use'
-	...shadow of chernobyl\gamedata\scripts\bind_stalker.script:144: in function <...shadow of chernobyl\gamedata\scripts\bind_stalker.script:143>
-	[C]: in function 'eat'
-	...lker shadow of chernobyl\gamedata\scripts\hotkeys.script:76: in function <...lker shadow of chernobyl\gamedata\scripts\hotkeys.script:70>
-	...lker shadow of chernobyl\gamedata\scripts\hotkeys.script:41: in function 'on_key'
-	...er shadow of chernobyl\gamedata\scripts\ui_loader.script:19: in function 'on_key'
-	...shadow of chernobyl\gamedata\scripts\bind_stalker.script:147: in function <...shadow of chernobyl\gamedata\scripts\bind_stalker.script:146>
-[27.10.21 21:06:05.699] *********************************************************************************
-[27.10.21 21:06:05.699] ********************************************************************************
-[27.10.21 21:06:05.699] !![LogStackTrace] Thread: [X-RAY Primary thread]
-[27.10.21 21:06:05.868] !!stack trace:
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFD4C313E58], Fun: [BuildStackTrace()] + [48 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\stacktrace_collector.cpp-->152]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFD4C33A7E1], Fun: [LogStackTrace()] + [73 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->58] + [13 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFD4C33A626], Fun: [xrDebug::backend()] + [174 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->172]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFD4C33B03C], Fun: [<lambda_c6715271fb6c8a51385a964c2e1e361c>::<lambda_invoker_cdecl>()] + [80 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->541] + [80 byte(s)]
-! Module: [C:\WINDOWS\System32\ucrtbase.dll], AddrPC.Offset: [00007FFDA9D642D6], Fun: [execute_onexit_table()] + [342 byte(s)]
-! Module: [C:\WINDOWS\System32\ucrtbase.dll], AddrPC.Offset: [00007FFDA9D641FB], Fun: [execute_onexit_table()] + [123 byte(s)]
-! Module: [C:\WINDOWS\System32\ucrtbase.dll], AddrPC.Offset: [00007FFDA9D641B4], Fun: [execute_onexit_table()] + [52 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFD4C33E96E], Fun: [dllmain_crt_process_detach()] + [82 byte(s)], File-->Line: [d:\agent\_work\3\s\src\vctools\crt\vcstartup\src\startup\dll_dllmain.cpp-->108]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFD4C33EA94], Fun: [dllmain_dispatch()] + [232 byte(s)], File-->Line: [d:\agent\_work\3\s\src\vctools\crt\vcstartup\src\startup\dll_dllmain.cpp-->212] + [13 byte(s)]
-! Module: [C:\WINDOWS\SYSTEM32\ntdll.dll], AddrPC.Offset: [00007FFDAC049A1D], Fun: [RtlActivateActivationContextUnsafeFast()] + [285 byte(s)]
-! Module: [C:\WINDOWS\SYSTEM32\ntdll.dll], AddrPC.Offset: [00007FFDAC08DB91], Fun: [LdrShutdownProcess()] + [321 byte(s)]
-! Module: [C:\WINDOWS\SYSTEM32\ntdll.dll], AddrPC.Offset: [00007FFDAC08DA2D], Fun: [RtlExitUserProcess()] + [173 byte(s)]
-! Module: [C:\WINDOWS\System32\KERNEL32.DLL], AddrPC.Offset: [00007FFDAB60E0AB], Fun: [FatalExit()] + [11 byte(s)]
-! Module: [C:\WINDOWS\System32\ucrtbase.dll], AddrPC.Offset: [00007FFDA9D705BC], Fun: [exit()] + [476 byte(s)]
-! Module: [C:\WINDOWS\System32\ucrtbase.dll], AddrPC.Offset: [00007FFDA9D7045F], Fun: [exit()] + [127 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFD4C33A6AA], Fun: [xrDebug::backend()] + [306 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->191] + [8 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrCore.dll], AddrPC.Offset: [00007FFD4C33A563], Fun: [xrDebug::fatal()] + [131 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrcore\xrdebugnew.cpp-->252]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFD390AB864], Fun: [CScriptEngine::lua_pcall_failed()] + [120 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\common_ai\script_engine.cpp-->53]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFD3F635490], Fun: [lj_BC_FUNCC()] + [66 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFD3F673E47], Fun: [lj_err_run()] + [327 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_err.c-->851]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFD3F672F19], Fun: [err_msgv()] + [121 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_err.c-->874] + [8 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFD3F673C3A], Fun: [lj_err_optype()] + [202 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_err.c-->910] + [19 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFD3F68A0C8], Fun: [lj_meta_tget()] + [440 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_meta.c-->147] + [17 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFD3F635977], Fun: [lj_vmeta_tgetv()] + [44 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFD3F63F0BB], Fun: [lua_pcall()] + [171 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_api.c-->1144]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\Luabind.dll], AddrPC.Offset: [000000018000EB84], Fun: [luabind::detail::pcall()] + [100 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\src\pcall.cpp-->40] + [16 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFD39034BAE], Fun: [luabind::detail::proxy_functor_void_caller<luabind::object const *,CScriptGameObject * const *>::~proxy_functor_void_caller<luabind::object const *,CScriptGameObject * const *>()] + [94 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\luabind\functor.hpp-->292] + [16 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFD390F77F9], Fun: [CScriptCallbackEx<void>::operator()<CScriptGameObject *>()] + [129 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\script_callback_ex.h-->181] + [56 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFD3913E7BF], Fun: [CInventory::Eat()] + [367 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\inventory.cpp-->922]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFD3901BBC7], Fun: [CScriptGameObject::eat()] + [219 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\script_game_object.cpp-->450]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFD38E8D0EC], Fun: [luabind::detail::returns<void>::call<CScriptGameObject,2,void (__cdecl CScriptGameObject::*&)(CScriptGameObject *),CScriptGameObject *>()] + [144 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\luabind\detail\call.hpp-->168] + [49 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFD38E933DD], Fun: [std::_Func_impl_no_alloc<luabind::detail::mem_fn_callback<void (__cdecl CScriptGameObject::*)(CScriptGameObject *),CScriptGameObject>,int,lua_State *>::_Do_call()] + [33 byte(s)], File-->Line: [c:\program files (x86)\microsoft visual studio\2019\enterprise\vc\tools\msvc\14.16.27023\include\functional-->15732480]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\Luabind.dll], AddrPC.Offset: [000000018000EA07], Fun: [luabind::detail::overload_rep::call()] + [51 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\luabind\detail\overload_rep_impl.hpp-->35] + [11 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\Luabind.dll], AddrPC.Offset: [000000018000AA85], Fun: [luabind::detail::class_rep::function_dispatcher()] + [269 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\src\class_rep.cpp-->648] + [14 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFD3F635490], Fun: [lj_BC_FUNCC()] + [66 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\LuaJIT.dll], AddrPC.Offset: [00007FFD3F63F0BB], Fun: [lua_pcall()] + [171 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luajit\src\lj_api.c-->1144]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\Luabind.dll], AddrPC.Offset: [000000018000EB84], Fun: [luabind::detail::pcall()] + [100 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\src\pcall.cpp-->40] + [16 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFD390C3A1A], Fun: [luabind::detail::proxy_functor_void_caller<luabind::object const *,int const *,int const *>::~proxy_functor_void_caller<luabind::object const *,int const *,int const *>()] + [114 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\luabind\luabind\functor.hpp-->292] + [16 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFD390C36F7], Fun: [CScriptCallbackEx<void>::operator()<int &,enum EGameActions>()] + [163 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\script_callback_ex.h-->181] + [77 byte(s)]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrGame.dll], AddrPC.Offset: [00007FFD390C2C9C], Fun: [CLevel::IR_OnKeyboardPress()] + [332 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xrgame\level_input.cpp-->162]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7CD1C7BA4], Fun: [CInput::KeyUpdate()] + [280 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\xr_input.cpp-->174]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7CD1C8425], Fun: [CInput::OnFrame()] + [69 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\xr_input.cpp-->427]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7CD1FCD48], Fun: [CRegistrator<pureFrame>::Process()] + [84 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\pure.h-->86]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7CD1FBE28], Fun: [CRenderDevice::FrameMove()] + [292 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->443]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7CD1FC197], Fun: [CRenderDevice::on_idle()] + [223 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->214]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7CD1FC97E], Fun: [CRenderDevice::message_loop()] + [98 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->316]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7CD1FBFFB], Fun: [CRenderDevice::Run()] + [411 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\device.cpp-->389]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7CD1BEDA8], Fun: [Startup()] + [296 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\x_ray.cpp-->218]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7CD1BF11E], Fun: [WinMain_impl()] + [478 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\x_ray.cpp-->418]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7CD1BC7F8], Fun: [WinMain()] + [72 byte(s)], File-->Line: [d:\a\ogsr-engine\ogsr-engine\ogsr_engine\xr_3da\x_ray.cpp-->439]
-! Module: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe], AddrPC.Offset: [00007FF7CD21E12A], Fun: [__scrt_common_main_seh()] + [262 byte(s)], File-->Line: [d:\agent\_work\3\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl-->288] + [33 byte(s)]
-! Module: [C:\WINDOWS\System32\KERNEL32.DLL], AddrPC.Offset: [00007FFDAB607034], Fun: [BaseThreadInitThunk()] + [20 byte(s)]
-! Module: [C:\WINDOWS\SYSTEM32\ntdll.dll], AddrPC.Offset: [00007FFDAC082651], Fun: [RtlUserThreadStart()] + [33 byte(s)]
-[27.10.21 21:06:05.868] ********************************************************************************
-[27.10.21 21:06:07.181] --Saved dump file to [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\logs\xray_Данил_10-27-21_21-06-06.mdmp]
+[29.10.21 16:04:13.281] * Detected CPU: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz [GenuineIntel], F6/M158/S10
+[29.10.21 16:04:13.282] * CPU features: RDTSC, MMX, SSE, SSE2, SSE3, MONITOR/MWAIT, SSSE3, SSE4.1, SSE4.2, AVX, AVX2
+[29.10.21 16:04:13.282] * CPU cores: [6], threads: [6]
+[29.10.21 16:04:13.282] * CPU0 current freq: 2808 MHz, max freq: 2808 MHz
+[29.10.21 16:04:13.282] * CPU1 current freq: 2808 MHz, max freq: 2808 MHz
+[29.10.21 16:04:13.283] * CPU2 current freq: 2808 MHz, max freq: 2808 MHz
+[29.10.21 16:04:13.283] * CPU3 current freq: 2808 MHz, max freq: 2808 MHz
+[29.10.21 16:04:13.283] * CPU4 current freq: 2808 MHz, max freq: 2808 MHz
+[29.10.21 16:04:13.283] * CPU5 current freq: 2808 MHz, max freq: 2808 MHz
+[29.10.21 16:04:13.283] Initializing File System...
+[29.10.21 16:04:13.283] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db0], size: [678577379]
+[29.10.21 16:04:13.366] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db1], size: [708434331]
+[29.10.21 16:04:13.371] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db2], size: [671169415]
+[29.10.21 16:04:13.374] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db3], size: [684792231]
+[29.10.21 16:04:13.379] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db4], size: [671392842]
+[29.10.21 16:04:13.809] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db5], size: [697475082]
+[29.10.21 16:04:13.880] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db6], size: [672288151]
+[29.10.21 16:04:13.884] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db7], size: [672462598]
+[29.10.21 16:04:13.924] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db8], size: [293378144]
+[29.10.21 16:04:13.939] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db9], size: [79312307]
+[29.10.21 16:04:13.968] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dba], size: [22884835]
+[29.10.21 16:04:13.972] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbb], size: [55194918]
+[29.10.21 16:04:13.976] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbc], size: [160948]
+[29.10.21 16:04:13.976] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbd], size: [101014]
+[29.10.21 16:04:13.976] using fs-ltx fsgame.ltx
+[29.10.21 16:04:13.977] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\]
+[29.10.21 16:04:13.977]   files: [6]
+[29.10.21 16:04:13.981] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\]
+[29.10.21 16:04:13.981]   files: [16]
+[29.10.21 16:04:13.981] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\spawns\]
+[29.10.21 16:04:13.981]   files: [4]
+[29.10.21 16:04:13.981] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\anims\]
+[29.10.21 16:04:13.981]   files: [23]
+[29.10.21 16:04:13.983] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\]
+[29.10.21 16:04:13.983]   files: [12]
+[29.10.21 16:04:13.984] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\meshes\]
+[29.10.21 16:04:13.984]   files: [12]
+[29.10.21 16:04:14.005] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\meshes\]
+[29.10.21 16:04:14.005]   files: [12]
+[29.10.21 16:04:14.015] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\shaders\]
+[29.10.21 16:04:14.015]   files: [7]
+[29.10.21 16:04:14.024] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\sounds\]
+[29.10.21 16:04:14.024]   files: [22]
+[29.10.21 16:04:14.062] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\textures\]
+[29.10.21 16:04:14.062]   files: [66]
+[29.10.21 16:04:14.171] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\scripts\]
+[29.10.21 16:04:14.172]   files: [129]
+[29.10.21 16:04:14.173] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\]
+[29.10.21 16:04:14.173]   files: [30]
+[29.10.21 16:04:14.204] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\]
+[29.10.21 16:04:14.204]   files: [12]
+[29.10.21 16:04:14.204] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\]
+[29.10.21 16:04:14.204]   files: [22]
+[29.10.21 16:04:14.204] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\logs\]
+[29.10.21 16:04:14.205]   files: [104]
+[29.10.21 16:04:14.205] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\screenshots\]
+[29.10.21 16:04:14.205]   files: [10]
+[29.10.21 16:04:14.211] FS: 36008 files cached, 7412Kb memory used.
+[29.10.21 16:04:14.211] Init FileSystem 0.928388 sec
+[29.10.21 16:04:14.212] [OGSR Engine (x64)] build date: [Sep 22 2021 10:23:51]
+[29.10.21 16:04:14.212] [AppVeyor] build version: [2.1.293], repo: [OGSR/OGSR-Engine]
+[29.10.21 16:04:14.212] [_MSC_FULL_VER]: [191627045], [_MSVC_LANG]: [201703L]
+[29.10.21 16:04:14.212] Working Directory: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64]
+[29.10.21 16:04:14.212] CommandLine: ["Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe"  -high]
+[29.10.21 16:04:14.324] Initializing Engine...
+[29.10.21 16:04:14.325] Starting INPUT device...
+[29.10.21 16:04:14.387] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[29.10.21 16:04:14.387] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[29.10.21 16:04:14.408] refCount:m_pAdapter 1
+[29.10.21 16:04:14.408] refCount:pFactory 1
+[29.10.21 16:04:14.409] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[29.10.21 16:04:14.409] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[29.10.21 16:04:14.536] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[29.10.21 16:04:14.536] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[29.10.21 16:04:14.538] --[CEngineAPI::CreateRendererList] Available render modes [5]:
+[29.10.21 16:04:14.538] --  [renderer_r2a]
+[29.10.21 16:04:14.538] --  [renderer_r2]
+[29.10.21 16:04:14.538] --  [renderer_r2.5]
+[29.10.21 16:04:14.538] --  [renderer_r3]
+[29.10.21 16:04:14.538] --  [renderer_r4]
+[29.10.21 16:04:14.538] Executing config-script "user.ltx"...
+[29.10.21 16:04:14.539] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
+[29.10.21 16:04:14.539] [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\user.ltx] successfully loaded.
+[29.10.21 16:04:14.539] --Loading DLL: [xrRender_R2.dll]
+[29.10.21 16:04:14.540] --Loading DLL: [xrGame.dll]
+[29.10.21 16:04:14.556] --------------------------------------------------------------------------------
+[29.10.21 16:04:14.557] [8143MB] physical memory installed, [3795MB] available, [53] percent of memory in use
+[29.10.21 16:04:14.557] PageFile usage: [47MB], Peak PageFile usage: [93MB]
+[29.10.21 16:04:14.557] --------------------------------------------------------------------------------
+[29.10.21 16:04:14.557] * [ D3D ]: textures[0 K]
+[29.10.21 16:04:14.557] * [x-ray]: process heap[24503 K], render[0 K]
+[29.10.21 16:04:14.557] * [x-ray]: economy: strings[4969 K], smem[0 K]
+[29.10.21 16:04:14.557] SOUND: OpenAL: enumerate devices...
+[29.10.21 16:04:14.557] SOUND: OpenAL: EnumerationExtension Present
+[29.10.21 16:04:14.690] devices Generic Software
+[29.10.21 16:04:14.690] SOUND: OpenAL: system  default SndDevice name is Generic Software
+[29.10.21 16:04:15.007] SOUND: OpenAL: All available devices:
+[29.10.21 16:04:15.007] 1. Generic Software, Spec Version 1.1 (default) eax[2] efx[no] xram[no]
+[29.10.21 16:04:15.007] 2. OpenAL Soft, Spec Version 1.1  eax[0] efx[yes] xram[no]
+[29.10.21 16:04:15.007] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx"...
+[29.10.21 16:04:15.051] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx] successfully loaded.
+[29.10.21 16:04:15.051] Executing config-script "user.ltx"...
+[29.10.21 16:04:15.051] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\rspec_high.ltx"...
+[29.10.21 16:04:15.051] ! Unknown command:  r2_sun_shafts
+[29.10.21 16:04:15.051] ! Unknown command:  r__supersample
+[29.10.21 16:04:15.051] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\rspec_high.ltx] successfully loaded.
+[29.10.21 16:04:15.051] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx"...
+[29.10.21 16:04:15.052] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx] successfully loaded.
+[29.10.21 16:04:15.052] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
+[29.10.21 16:04:15.052] [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\user.ltx] successfully loaded.
+[29.10.21 16:04:15.052] SOUND: Selected device is Generic Software
+[29.10.21 16:04:15.086] [OpenAL] EAX 2.0 extension: present
+[29.10.21 16:04:15.086] [OpenAL] EAX 2.0 deferred: present
+[29.10.21 16:04:15.087] * sound : cache: 65537 kb, 4856 lines, 13820 bpl
+[29.10.21 16:04:15.115] Starting RENDER device...
+[29.10.21 16:04:15.156] * GPU [vendor:10DE]-[device:1C81]: NVIDIA GeForce GTX 1050
+[29.10.21 16:04:15.156] * GPU driver: 30.0.14.7196
+[29.10.21 16:04:15.260] * CREATE: DeviceREF: 1
+[29.10.21 16:04:15.260] * Vertex Processor: PURE HARDWARE
+[29.10.21 16:04:15.260] *     Texture memory: 4072 M
+[29.10.21 16:04:15.260] *          DDI-level: 9.0
+[29.10.21 16:04:15.262] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+[29.10.21 16:04:15.263] * GPU vertex cache: unrecognized, 16
+[29.10.21 16:04:15.263] * DVB created: 16384K
+[29.10.21 16:04:15.263] * DIB created: 512K
+[29.10.21 16:04:15.290] ! Version conflict in shader 'models\lightplanes_00'
+[29.10.21 16:04:15.290] ! Version conflict in shader 'models\lightplanesself'
+[29.10.21 16:04:15.290] ! Version conflict in shader 'models\model_puh'
+[29.10.21 16:04:15.290] ! Version conflict in shader 'models\model_refl'
+[29.10.21 16:04:15.290] ! Version conflict in shader 'models\xbrainglass'
+[29.10.21 16:04:15.290] ! Version conflict in shader 'models\xdistortcolorlinv'
+[29.10.21 16:04:15.290] ! Version conflict in shader 'models\xglass'
+[29.10.21 16:04:15.290] ! Version conflict in shader 'models\xglass2'
+[29.10.21 16:04:15.290] ! Version conflict in shader 'models\xlens'
+[29.10.21 16:04:15.290] ! Version conflict in shader 'selflight_static'
+[29.10.21 16:04:15.291] [CTextureDescrMngr::LoadLTX] count of *textures*.ltx files: [1]
+[29.10.21 16:04:15.418] * NULLRT supported
+[29.10.21 16:04:15.418] * ...and used
+[29.10.21 16:04:15.418] * HWDST/PCF supported and used
+[29.10.21 16:04:15.418] * NV-DBT supported and used
+[29.10.21 16:04:16.575] --LUA version: [LuaJIT 2.1.0-beta3]
+[29.10.21 16:04:16.621] Starting engine...
+[29.10.21 16:04:20.823] * phase time: 2 ms
+[29.10.21 16:04:20.848] * phase cmem: 181375 K
+[29.10.21 16:04:20.898] --LUA version: [LuaJIT 2.1.0-beta3]
+[29.10.21 16:04:20.923] * phase time: 100 ms
+[29.10.21 16:04:20.948] * phase cmem: 150171 K
+[29.10.21 16:04:20.953] * Loading spawn registry...
+[29.10.21 16:04:21.521] * 8976 spawn points are successfully loaded
+[29.10.21 16:04:21.522] * Loading objects...
+[29.10.21 16:04:21.860] * 17917 objects are successfully loaded
+[29.10.21 16:04:22.394] * Game Данил_quicksave is successfully loaded from file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_quicksave.sav' (1.446s)
+[29.10.21 16:04:22.394] * phase time: 1471 ms
+[29.10.21 16:04:22.438] * phase cmem: 197691 K
+[29.10.21 16:04:22.490] # Player not found. New player created.
+[29.10.21 16:04:22.490] !!xrServer::Check_GameSpy_CDKey_Success - 1
+[29.10.21 16:04:22.490] * client : connection accepted - <>
+[29.10.21 16:04:22.508] * phase time: 113 ms
+[29.10.21 16:04:22.552] * phase cmem: 197753 K
+[29.10.21 16:04:22.552] * phase time: 44 ms
+[29.10.21 16:04:22.596] * phase cmem: 197754 K
+[29.10.21 16:04:23.328] --[ISpatial_DB::initialize] bbc is [0.0, 25.2, -0.0], bbd is [512.0, 47.0, 512.0]
+[29.10.21 16:04:23.328] --[ISpatial_DB::initialize] bbc is [0.0, 25.2, -0.0], bbd is [512.0, 47.0, 512.0]
+[29.10.21 16:04:23.330] * phase time: 777 ms
+[29.10.21 16:04:23.373] * phase cmem: 255862 K
+[29.10.21 16:04:23.566] * phase time: 236 ms
+[29.10.21 16:04:23.610] * phase cmem: 259165 K
+[29.10.21 16:04:23.618] * [Loading VB] 65435 verts, 2044 Kb
+[29.10.21 16:04:23.629] * [Loading VB] 65236 verts, 2038 Kb
+[29.10.21 16:04:23.637] * [Loading VB] 65530 verts, 2047 Kb
+[29.10.21 16:04:23.645] * [Loading VB] 65534 verts, 2047 Kb
+[29.10.21 16:04:23.653] * [Loading VB] 65535 verts, 2047 Kb
+[29.10.21 16:04:23.661] * [Loading VB] 65532 verts, 2047 Kb
+[29.10.21 16:04:23.669] * [Loading VB] 65535 verts, 2047 Kb
+[29.10.21 16:04:23.679] * [Loading VB] 65534 verts, 2047 Kb
+[29.10.21 16:04:23.687] * [Loading VB] 65535 verts, 2047 Kb
+[29.10.21 16:04:23.694] * [Loading VB] 65533 verts, 2047 Kb
+[29.10.21 16:04:23.704] * [Loading VB] 65535 verts, 2047 Kb
+[29.10.21 16:04:23.713] * [Loading VB] 57122 verts, 1785 Kb
+[29.10.21 16:04:23.719] * [Loading VB] 65535 verts, 2047 Kb
+[29.10.21 16:04:23.727] * [Loading VB] 65533 verts, 2047 Kb
+[29.10.21 16:04:23.735] * [Loading VB] 65534 verts, 2047 Kb
+[29.10.21 16:04:23.744] * [Loading VB] 65534 verts, 2047 Kb
+[29.10.21 16:04:23.752] * [Loading VB] 65535 verts, 2047 Kb
+[29.10.21 16:04:23.760] * [Loading VB] 43641 verts, 1363 Kb
+[29.10.21 16:04:23.766] * [Loading IB] 1048575 indices, 2047 Kb
+[29.10.21 16:04:23.774] * [Loading IB] 1048575 indices, 2047 Kb
+[29.10.21 16:04:23.783] * [Loading IB] 1048575 indices, 2047 Kb
+[29.10.21 16:04:23.791] * [Loading IB] 1048575 indices, 2047 Kb
+[29.10.21 16:04:23.800] * [Loading IB] 1048575 indices, 2047 Kb
+[29.10.21 16:04:23.810] * [Loading IB] 1048575 indices, 2047 Kb
+[29.10.21 16:04:23.818] * [Loading IB] 780369 indices, 1524 Kb
+[29.10.21 16:04:23.825] * [Loading VB] 65534 verts, 767 Kb
+[29.10.21 16:04:23.830] * [Loading VB] 65535 verts, 767 Kb
+[29.10.21 16:04:23.833] * [Loading VB] 65535 verts, 767 Kb
+[29.10.21 16:04:23.838] * [Loading VB] 65535 verts, 767 Kb
+[29.10.21 16:04:23.842] * [Loading VB] 65535 verts, 767 Kb
+[29.10.21 16:04:23.842] * [Loading VB] 65535 verts, 767 Kb
+[29.10.21 16:04:23.846] * [Loading VB] 65532 verts, 767 Kb
+[29.10.21 16:04:23.850] * [Loading VB] 54604 verts, 639 Kb
+[29.10.21 16:04:23.851] * [Loading IB] 1048575 indices, 2047 Kb
+[29.10.21 16:04:23.860] * [Loading IB] 1048575 indices, 2047 Kb
+[29.10.21 16:04:23.869] * [Loading IB] 1048575 indices, 2047 Kb
+[29.10.21 16:04:23.878] * [Loading IB] 950730 indices, 1856 Kb
+[29.10.21 16:04:23.889] * phase time: 323 ms
+[29.10.21 16:04:23.934] * phase cmem: 323189 K
+[29.10.21 16:04:24.113] * phase time: 224 ms
+[29.10.21 16:04:24.158] * phase cmem: 325943 K
+[29.10.21 16:04:24.175] * [DETAILS] VertexConsts(256), Batch(61)
+[29.10.21 16:04:24.175] * [DETAILS] 40687 v(20), 26352 p
+[29.10.21 16:04:24.176] * [DETAILS] Batch(61), VB(794K), IB(154K)
+[29.10.21 16:04:24.176] * phase time: 63 ms
+[29.10.21 16:04:24.222] * phase cmem: 326959 K
+[29.10.21 16:04:24.223] * Loading HOM: z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\l05_bar\level.hom
+[29.10.21 16:04:24.237] * phase time: 60 ms
+[29.10.21 16:04:24.284] * phase cmem: 327299 K
+[29.10.21 16:04:24.286] * phase time: 49 ms
+[29.10.21 16:04:24.331] * phase cmem: 327299 K
+[29.10.21 16:04:24.344] - Game configuring : Started 
+[29.10.21 16:04:24.394] - Game configuring : Finished 
+[29.10.21 16:04:24.527] * phase time: 240 ms
+[29.10.21 16:04:24.573] * phase cmem: 341727 K
+[29.10.21 16:04:28.233] * t-report - base: 1307, 1055986 K
+[29.10.21 16:04:28.233] * t-report - lmap: 5, 5120 K
+[29.10.21 16:04:28.233] * phase time: 3706 ms
+[29.10.21 16:04:28.287] * phase cmem: 1454343 K
+[29.10.21 16:04:28.292] * phase time: 58 ms
+[29.10.21 16:04:28.345] * phase cmem: 1454335 K
+[29.10.21 16:04:28.408] --------------------------------------------------------------------------------
+[29.10.21 16:04:28.408] [8143MB] physical memory installed, [2456MB] available, [69] percent of memory in use
+[29.10.21 16:04:28.408] PageFile usage: [1758MB], Peak PageFile usage: [1760MB]
+[29.10.21 16:04:28.408] --------------------------------------------------------------------------------
+[29.10.21 16:04:28.408] * [ D3D ]: textures[1061106 K]
+[29.10.21 16:04:28.408] * [x-ray]: process heap[1453714 K], render[0 K]
+[29.10.21 16:04:28.408] * [x-ray]: economy: strings[7471 K], smem[0 K]
+[29.10.21 16:04:29.339] ! auto-generated bump map: wpn\fwr_rnm_016\upgrades\silencer\sil_45_bump#
+[29.10.21 16:04:29.339] ! auto-generated bump map: wpn\fwr_rnm_016\upgrades\silencer\sil_45_bump
+[29.10.21 16:04:29.675] * [CPatrolPathStorage::safe_path]: path[bar_barman_hole_look] pp[name00|a=barman_tv] level_vertex_id[4294967295] -> 36053
+[29.10.21 16:04:30.312] ! auto-generated bump map: wpn\ots_33\wpn_ots33_gps_bump#
+[29.10.21 16:04:30.329] ! auto-generated bump map: wpn\ots_33\wpn_ots33_frame_bump#
+[29.10.21 16:04:30.340] ! auto-generated bump map: wpn\ots_33\wpn_ots33_mag_bump#
+[29.10.21 16:04:32.412] * [CPatrolPathStorage::safe_path]: path[bar_house_look] pp[wp03|a=wait|t=25000] level_vertex_id[4294967295] -> 33195
+[29.10.21 16:04:33.972] ! auto-generated bump map: wpn\tec-9\wpn_tec_kg9_gun_bump#
+[29.10.21 16:04:33.983] ! auto-generated bump map: wpn\tec-9\wpn_tec_kg9_mag_bump#
+[29.10.21 16:04:34.029] ! auto-generated bump map: wpn\mac10\wpn_mac10_grip_bump#
+[29.10.21 16:04:34.039] ! auto-generated bump map: wpn\mac10\wpn_mac10_upper_bump#
+[29.10.21 16:04:34.045] ! auto-generated bump map: wpn\mac10\wpn_mac10_mag_bump#
+[29.10.21 16:04:34.051] ! auto-generated bump map: wpn\mac10\wpn_mac10_lower_bump#
+[29.10.21 16:04:34.060] ! auto-generated bump map: wpn\silencer\wpn_9mm_silencer_bump#
+[29.10.21 16:04:34.107] ! auto-generated bump map: wpn\benelli\wpn_short_body_bump#
+[29.10.21 16:04:34.118] ! auto-generated bump map: wpn\benelli\wpn_short_barrel_bump#
+[29.10.21 16:04:34.260] ! Can't find sound [weapons\empty.ogg]
+[29.10.21 16:04:34.330] ! auto-generated bump map: wpn\wpn_p90_bump.dds#
+[29.10.21 16:04:34.975] ! Can't find sound [weapons\g36\draw.ogg]
+[29.10.21 16:04:34.975] ! Can't find sound [weapons\g36\holster.ogg]
+[29.10.21 16:04:34.976] ! Can't find sound [weapons\g36\shot0.ogg]
+[29.10.21 16:04:34.976] ! Can't find sound [weapons\g36\shot1.ogg]
+[29.10.21 16:04:34.976] ! Can't find sound [weapons\g36\shot2.ogg]
+[29.10.21 16:04:34.976] ! Can't find sound [weapons\g36\empty.ogg]
+[29.10.21 16:04:34.976] ! Can't find sound [weapons\g36\reload.ogg]
+[29.10.21 16:04:34.977] ! Can't find sound [weapons\g36\grenshoot.ogg]
+[29.10.21 16:04:34.978] ! Can't find sound [weapons\g36\grenload.ogg]
+[29.10.21 16:04:34.978] ! Can't find sound [weapons\g36\switch.ogg]
+[29.10.21 16:04:35.094] ! auto-generated bump map: wpn\smg_tmp\wpn_tmp_body_bump#
+[29.10.21 16:04:35.107] ! auto-generated bump map: wpn\smg_tmp\wpn_tmp_mag_bump#
+[29.10.21 16:04:35.167] ! Can't find texture 'death_mod\difmap'
+[29.10.21 16:04:38.042] ! [R_occlusion::cleanup_lost]: cleanup 1 lost queries
+[29.10.21 16:04:38.701] * MEMORY USAGE: 2314376 K
+[29.10.21 16:04:38.701] * End of synchronization A[1] R[1]
+[29.10.21 16:04:38.701] * phase time: 10468 ms
+[29.10.21 16:04:38.803] * phase cmem: 2314376 K
+[29.10.21 16:04:39.658] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:04:39.928] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:04:40.045] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:04:40.232] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:04:40.578] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:04:40.645] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:04:40.981] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:04:41.011] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:04:41.295] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:04:41.378] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:38.928] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:38.994] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:39.113] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:39.431] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:39.746] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:40.063] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:41.260] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:41.947] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:41.997] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:42.297] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:42.581] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:42.630] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:42.698] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:43.147] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:43.364] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:43.515] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:43.714] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:43.881] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:44.898] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:45.215] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:45.731] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:45.915] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:46.048] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:46.965] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:47.850] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:49.048] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:49.099] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:49.216] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:49.364] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:49.766] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:50.464] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:50.565] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:50.865] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:51.448] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:51.598] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:52.431] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:52.551] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:53.099] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:53.332] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:54.197] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:54.250] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:55.214] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:55.748] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:56.064] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:56.947] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:57.714] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:58.882] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:59.684] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:05:59.816] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:00.298] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:01.382] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:01.615] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:02.300] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:02.498] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:03.299] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:03.348] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:03.382] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:03.749] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:03.914] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:04.699] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:04.732] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:05.148] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:05.648] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:05.766] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:06.310] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:06.449] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:06.948] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:06.980] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:07.381] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:08.300] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:08.482] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:09.681] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:09.799] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:09.849] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:10.501] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:11.458] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:11.504] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:11.699] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:11.815] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:11.849] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:11.981] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:12.115] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:12.381] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:13.198] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:13.848] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:15.198] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:15.450] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:15.450] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:15.748] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:16.507] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:16.831] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:17.065] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:17.699] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:18.350] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:18.766] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:18.799] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:18.982] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:19.666] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:20.165] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:20.748] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:21.050] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:22.333] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:23.250] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:23.766] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:23.800] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:23.950] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:24.266] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:25.332] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:25.515] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:26.225] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:26.240] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:26.850] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:26.865] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:27.383] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:27.482] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:27.882] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:28.417] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:29.233] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:29.583] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:29.749] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:31.065] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:31.099] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:32.167] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:32.300] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:32.300] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:32.734] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:33.333] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:33.699] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:33.782] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:34.317] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:34.366] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:34.633] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:35.634] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:36.083] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:36.450] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:37.149] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:37.699] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:37.967] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:37.967] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:38.149] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:38.617] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:38.750] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:38.783] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:38.967] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:39.283] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:39.316] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:39.633] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:39.633] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:40.334] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:40.483] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:41.967] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:42.317] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:42.632] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:42.967] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:43.149] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:43.666] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:43.683] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:43.749] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:44.200] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:44.450] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:44.633] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:45.199] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:45.867] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:46.116] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:46.617] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:46.733] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:47.533] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:48.666] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:49.168] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:49.200] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:49.450] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:49.967] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:49.967] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:50.084] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:50.133] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:50.199] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:50.599] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:51.500] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:52.516] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:52.884] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:06:53.217] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:07:00.633] * Saving spawns...
+[29.10.21 16:07:00.634] * Saving objects...
+[29.10.21 16:07:00.664] * 17967 objects are successfully saved
+[29.10.21 16:07:00.670] * Game weapons.sav is successfully saved to file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\weapons.sav'
+[29.10.21 16:07:03.665] ! [R_occlusion::cleanup_lost]: cleanup 1 lost queries
+[29.10.21 16:07:03.724] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:07:03.857] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:07:04.350] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:07:04.467] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:07:05.284] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:07:05.651] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:08:56.383] * [R_occlusion::occq_destroy]: fids[65] used[65] pool[65]
+[29.10.21 16:08:56.383] * [R_occlusion::occq_destroy]: released [0] used and [65] pool queries
+[29.10.21 16:08:56.608] * DVB created: 16384K
+[29.10.21 16:08:56.608] * DIB created: 512K
+[29.10.21 16:08:57.521] * RM_Dump: textures  : 1986
+[29.10.21 16:08:57.521] * RM_Dump: rtargets  : 22
+[29.10.21 16:08:57.521] * RM_Dump: vs        : 64
+[29.10.21 16:08:57.521] * RM_Dump: ps        : 86
+[29.10.21 16:08:57.521] * RM_Dump: dcl       : 19
+[29.10.21 16:08:57.521] * RM_Dump: states    : 78
+[29.10.21 16:08:57.521] * RM_Dump: tex_list  : 1556
+[29.10.21 16:08:57.521] * RM_Dump: matrices  : 0
+[29.10.21 16:08:57.521] * RM_Dump: lst_constants: 0
+[29.10.21 16:08:57.521] * RM_Dump: v_passes  : 2228
+[29.10.21 16:08:57.521] * RM_Dump: v_elements: 2232
+[29.10.21 16:08:57.521] * RM_Dump: v_shaders : 1377
+[29.10.21 16:08:57.521] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+[29.10.21 16:08:57.522] * GPU vertex cache: recognized, 24
+[29.10.21 16:08:57.522] *** RESET [0 ms]
+[29.10.21 16:08:58.198] * MEMORY USAGE: 2359645 K
+[29.10.21 16:08:58.198] * End of synchronization A[1] R[1]
+[29.10.21 16:09:00.858] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:01.139] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:01.489] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:01.954] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:01.985] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:02.505] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:02.772] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:02.855] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:03.155] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:03.689] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:03.822] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:04.173] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:04.423] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:05.088] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:05.605] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:06.121] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:06.489] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:06.755] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:06.889] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:06.956] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:07.122] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:07.522] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:07.772] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:07.822] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:08.688] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:08.822] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:08.922] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:09.339] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:10.088] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:10.239] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:10.772] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:10.772] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:11.122] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:11.922] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:12.271] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:12.675] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:12.823] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:13.222] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:15.155] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:15.840] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:16.439] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:16.905] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:16.922] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:17.122] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:17.545] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:18.007] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:18.223] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:18.257] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:18.257] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:18.289] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:18.506] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:18.891] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:19.173] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:20.239] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:20.455] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:21.271] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:21.638] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:22.989] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:23.718] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:24.639] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:25.122] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:25.372] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:26.355] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:28.707] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:30.124] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:30.358] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:32.405] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:33.391] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:33.707] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:34.190] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:37.374] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:38.423] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:39.425] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:40.208] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:40.724] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:40.824] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:42.757] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:45.391] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:45.507] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:45.824] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:46.874] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:48.741] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:50.475] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:51.142] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:51.441] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:52.475] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:54.491] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:09:57.475] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:00.076] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:00.875] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:01.757] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:01.841] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:04.230] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:05.140] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:05.857] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:07.275] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:07.392] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:07.558] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:07.691] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:07.775] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:07.992] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:08.141] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:08.425] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:08.509] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:09.191] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:09.208] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:09.808] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:10.408] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:10.691] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:11.291] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:11.341] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:11.491] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:11.525] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:11.758] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:11.858] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:12.158] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:13.758] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:14.376] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:14.608] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:14.624] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:14.874] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:15.009] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:15.509] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:15.841] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:16.475] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:16.558] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:17.226] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[29.10.21 16:10:20.621] - Disconnect
+[29.10.21 16:10:22.267] - Destroying level
+[29.10.21 16:10:22.503] DestroySingleton::RefCounter: 0
+[29.10.21 16:10:22.504] DestroySingleton::RefCounter: -646
+[29.10.21 16:10:22.505] DestroySingleton::RefCounter: 0
+[29.10.21 16:10:22.509] DestroySingleton::RefCounter: 0
+[29.10.21 16:10:22.509] DestroySingleton::RefCounter: 0
+[29.10.21 16:10:22.519] Input:  1
+[29.10.21 16:10:22.531] Config-file [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\user.ltx] saved successfully
+[29.10.21 16:10:22.751] Destroying Direct3D...
+[29.10.21 16:10:22.751] * [R_occlusion::occq_destroy]: fids[177] used[177] pool[177]
+[29.10.21 16:10:22.751] * [R_occlusion::occq_destroy]: released [0] used and [177] pool queries
+[29.10.21 16:10:22.814] * RM_Dump: textures  : 9
+[29.10.21 16:10:22.814] *        :   1: ui\seq\ui_hint_pane
+[29.10.21 16:10:22.814] *        :   1: ui\ui_common
+[29.10.21 16:10:22.814] *        :   1: ui\ui_hud
+[29.10.21 16:10:22.814] *        :   1: ui\ui_icon_equipment
+[29.10.21 16:10:22.814] *        :   1: ui\ui_icons_outfit
+[29.10.21 16:10:22.814] *        :   1: ui\ui_iconstotal
+[29.10.21 16:10:22.814] *        :   1: ui\ui_inventory
+[29.10.21 16:10:22.814] *        :   1: ui\ui_inventory2
+[29.10.21 16:10:22.814] *        :   1: ui\ui_numpad
+[29.10.21 16:10:22.814] * RM_Dump: rtargets  : 0
+[29.10.21 16:10:22.814] * RM_Dump: vs        : 1
+[29.10.21 16:10:22.814] *        :   9: null
+[29.10.21 16:10:22.814] * RM_Dump: ps        : 1
+[29.10.21 16:10:22.814] *        :   9: null
+[29.10.21 16:10:22.814] * RM_Dump: dcl       : 0
+[29.10.21 16:10:22.814] * RM_Dump: states    : 1
+[29.10.21 16:10:22.814] * RM_Dump: tex_list  : 9
+[29.10.21 16:10:22.814] * RM_Dump: matrices  : 0
+[29.10.21 16:10:22.814] * RM_Dump: lst_constants: 0
+[29.10.21 16:10:22.814] * RM_Dump: v_passes  : 9
+[29.10.21 16:10:22.814] * RM_Dump: v_elements: 9
+[29.10.21 16:10:22.814] * RM_Dump: v_shaders : 9
+[29.10.21 16:10:22.814] refCount:pBaseZB 1
+[29.10.21 16:10:22.814] refCount:pBaseRT 1
+[29.10.21 16:10:22.814] DeviceREF: 30
+[29.10.21 16:10:22.827] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[29.10.21 16:10:22.827] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries

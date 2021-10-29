@@ -1,141 +1,130 @@
 [wpn_lr300]:identity_immunities
-GroupControlSection		= spawn_group
-discovery_dependency 	= 
-$spawn                  = "weapons\lr300ml_sk1"					; option for Level Editor
-$npc			 		= on				; option for Level Editor
-$prefetch 		 		= 8
-scheduled               = off              ; option for ALife Simulator
-cform                   = skeleton
-class                   = WP_AK74
-min_radius              = 0
-max_radius              = 50
-description				= enc_weapons1_wpn-lr300
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn                   	= "weapons\lr-300"
+$npc			 			= on
+$prefetch 		 			= 8
+scheduled                	= off
+cform                    	= skeleton
+class                    	= WP_AK74
+min_radius               	= 0
+max_radius               	= 50
+description					= enc_weapons1_wpn-lr300
 
-ef_main_weapon_type		= 1 ;2
-ef_weapon_type			= 6
+ef_main_weapon_type			= 2
+ef_weapon_type				= 6
 
-;-----------------------------------------------------------------------------------
-holder_range_modifier	= 1.0		       ; во сколько раз увеличивается eye_range 
-holder_fov_modifier		= 0.7              ; во сколько раз увеличивается eye_fov
-;-----------------------------------------------------------------------------------
+holder_range_modifier	= 1.0
+holder_fov_modifier		= 0.7
 
+cost					 	= 17500
+weapon_class			 	= assault_rifle
 
-weapon_class			= assault_rifle
+ammo_limit		 			= 210
+ammo_current		 		= 30
+ammo_elapsed		 		= 30
 
-cost					= 20000
-
-ammo_limit		 		= 210
-ammo_current			= 30
-ammo_elapsed		 	= 30
-
-ammo_mag_size		 	= 30
-ammo_class		 		= ammo_5.56x45_ss190, ammo_5.56x45_ap
-grenade_class			= ammo_m209
-fire_modes				= 1, 3, -1
+ammo_mag_size		 		= 30
+ammo_class		 			= ammo_5.56x45_ss190, ammo_5.56x45_ap
+grenade_class				= ammo_m209
+fire_modes					= 1, 3, -1
 launch_speed = 0
 
-hand_dependence		 	= 1
-single_handed			= 0
+hand_dependence		 		= 1
+single_handed				= 0
 
-inv_name				= wpn-lr300
-inv_name_short			= wpn-lr300
-inv_weight				= 3.1
+inv_name					= wpn-lr300
+inv_name_short				= wpn-lr300
+inv_weight					= 2.7
 
-inv_grid_width			= 5
-inv_grid_height			= 2
-inv_grid_x				= 0
-inv_grid_y				= 6
+inv_grid_width     = 5
+inv_grid_height    = 2
+inv_grid_x         = 0
+inv_grid_y         = 6
 
 kill_msg_x			= 175
 kill_msg_y			= 0
 kill_msg_width		= 82
 kill_msg_height		= 28
 
-slot 					= 2		; // secondary
-animation_slot			= 2		; type of the animation that will be used
+slot 			 			= 2
+animation_slot				= 2
 
-;-----------------------------------------------------------------------------------
-;базовая дисперсия
-fire_dispersion_base		= 0.18 	;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+fire_dispersion_base		= 0.18
 control_inertion_factor		= 1.2f
 
-;отдача
-cam_relax_speed        		= 6;0.15	;скорость возврата в исходное положение
-cam_dispersion         		= 0.15	;увеличения угла (в градусах) с каждым выстрелом
-cam_dispersion_inc		= 0.15	;увеличениe cam_dispersion с каждым выстрелом
-cam_dispertion_frac		= 1	;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
-cam_max_angle			= 7	;максимальный угол отдачи
-cam_max_angle_horz		= 5.0	;(degree) maximum shot horizontal degree 
-cam_step_angle_horz		= 0.5;0.4	;(degree) size of step camera moved in horizontal position while shooting
+cam_relax_speed        		= 6
+cam_dispersion         		= 0.15
+cam_dispersion_inc		= 0.15
+cam_dispertion_frac		= 1
+cam_max_angle			= 7
+cam_max_angle_horz		= 5.0
+cam_step_angle_horz		= 0.5
 
-fire_dispersion_condition_factor = 5	;увеличение дисперсии в процентах при максимальном износе 
-misfire_probability 		= 0.003 ;вероятность осечки при максимальном износе
+fire_dispersion_condition_factor = 5
+misfire_probability 		= 0.003
 misfire_condition_k			= 0.05 
-condition_shot_dec 			= 0.0003 ;увеличение износа при каждом выстреле
-;--------------------------------------------------------------------------------
+condition_shot_dec 			= 0.0001
 
-direction               = 0, 0, 1
+direction                	= 0, 0, 1
 
-fire_point             	=  0,0.231,0.51
-flame_particles			= weapons\generic_weapon05
-; shell_particles	 		= weapons\generic_shells ;weapons\arsenal_shells1
+fire_point               	= 0.0, 0.199, 0.575
+
+flame_particles				= weapons\generic_weapon05
+smoke_particles         	= weapons\generic_shoot_00
 grenade_flame_particles		= weapons\generic_weapon01
 
-shell_point		 		= 0,0.235,0.089
-shell_dir		 		= 0.0, 1.0, 0.0
+shell_point		 			= 0.0, 0.199, 0.09
+shell_dir		 			= 0.0, 1.0, 0.0
+shell_particles	 			= amik\weapons\5_56x45\5_56x45_r_00
 
-rpm_empty_click 	 	= 200
+rpm_empty_click 	 		= 200
 
 PDM_disp_base 			= 1.0
-PDM_disp_vel_factor 		= 0.8
-PDM_disp_accel_factor 		= 0.8
+PDM_disp_vel_factor 		= 1.2
+PDM_disp_accel_factor 		= 1.2
 PDM_crouch	 		= 1.0
 PDM_crouch_no_acc 		= 1.0
 
-; ttc
-hit_power        	= 0.91 ;0.64, 0.68, 0.71, 0.74
-hit_impulse		 	= 90 ; 40
+hit_power        	= 0.60
+hit_impulse		 	= 140
 hit_type 			= fire_wound
 
-fire_distance          	= 350 ;1000
-bullet_speed			= 900 ;начальная скорость пули
-rpm                     = 950
-; end ttc
+fire_distance            	= 300
+bullet_speed			    = 930
+rpm                      	= 750
 
-use_aim_bullet				= true		;Поддерживается ли первая суппер пуля
-time_to_aim					= 1.0
+use_aim_bullet				= true
+time_to_aim					= 1.0	
 
-silencer_hit_power       	= 0.91; 0.65 ; 0.55
-silencer_hit_impulse	 	= 20
-silencer_fire_distance   	= 300
-silencer_bullet_speed	 	= 450
+hud                      	= wpn_lr300_hud
+normal                   	= 0, 1, 0
+position                 	= -0.026, -0.130, 0.0
+orientation              	= 0.0, 0.0, 0.0
 
-hud                     = wpn_lr300ml_sk1_hud
-normal                  = 0, 1, 0
-position         	    = -0.026,-0.172,0
-orientation             = 0, 0, 0
-
-;--STRAP PARAMETERS-----------------------------------------------------------------
-strap_position         		= -0.16,-0.36,0.15			; position (offset) and orientation of the weapon when it is strapped
-strap_orientation      		= -10,-5,10					; (3rd person view in degrees)
+strap_position         		= -0.15,-0.37,0.2
+strap_orientation      		= -10,-5,10
 strap_bone0					= bip01_spine2
 strap_bone1					= bip01_spine1
 
-startup_ammo            = 1000
-visual                  = weapons\lr300\wpn_lr300.ogf
+startup_ammo             	= 1000
+visual                   	= weapons\lr300\wpn_lr300.ogf
 
-light_color		 		= 0.6,0.5,0.3
-light_range		 		= 5
-light_var_color		 	= 0.05
-light_var_range		 	= 0.1
-light_time 		 		= 0.2
+light_color		 			= 0.6,0.5,0.3
+light_range		 			= 5
+light_var_color		 		= 0.05
+light_var_range		 		= 0.1
+light_time 		 			= 0.2
 
-ph_mass			 		= 5
+ph_mass			 			= 3
 
-;addons
-scope_status			= 2
-silencer_status			= 2
-grenade_launcher_status	= 2
+scope_status				= 2
+silencer_status				= 2
+grenade_launcher_status		= 0
+
+zoom_enabled				= true
+scope_zoom_factor	    	= 70
+scope_texture				= wpn\wpn_crosshair_l85
 
 scope_name 					= wpn_addon_scope_susat
 scope_x 					= 86
@@ -149,99 +138,99 @@ grenade_launcher_name 		= wpn_addon_grenade_launcher_m203
 grenade_launcher_x 			= 128
 grenade_launcher_y 			= 28
 
-;silencer_flame_particles 	= weapons\generic_weapon01
+snd_draw					= weapons\sig550\sig550_draw
+snd_holster					= weapons\generic_hide
+snd_shoot					= weapons\lr300\lr300_shoot
+snd_empty					= weapons\glock17\glock17_dry
+snd_reload_partly			= weapons\l85\l85_reload
+snd_reload					= weapons\l85\l85_reload_empty
+snd_shoot_grenade			= weapons\lr300\m203_shoot
+snd_reload_grenade			= weapons\lr300\m203_reload
+snd_switch					= weapons\lr300\m203_activate
+
+silencer_hit_power       	= 0.44
+silencer_hit_impulse	 	= 120
+silencer_fire_distance   	= 250
+silencer_bullet_speed	 	= 600
+
 silencer_smoke_particles 	= weapons\generic_shoot_00
 
-silencer_light_color		= 1.0, 0.1, 0.0
+snd_silncer_shot			= weapons\lr300\lr300_shoot_sil
+
+silencer_light_color		= 0.58
 silencer_light_range		= 0.01
 silencer_light_var_color	= 0.05
 silencer_light_var_range	= 0.5
 silencer_light_time 		= 0.2
 
-zoom_enabled			= true
-scope_zoom_factor	    = 60 ;40
+[wpn_lr300_hud]
+shell_point			        = 0,0,-0.15
+shell_dir			     	= 0,0,0
+fire_point			        = -0.03,0.03,0
+fire_bone               	= bolt
+orientation             	= 2, 1, 0	
+position                	= 0.01, 0.01, 0.17
+visual           	        = weapons\lr300\wpn_lr300_hud.ogf
+grenade_bone            	= wpn_launcher_grenade
 
-;звуки
-snd_draw			= darius\generic_draw ;weapons\generic_draw
-snd_holster			= darius\generic_holster ;weapons\generic_holster
-snd_shoot			= darius\car15_fire ;weapons\lr300ml_shot
-snd_empty			= weapons\gen_empty, 0.5
-snd_reload			= weapons\ar15_reload
-snd_shoot_grenade			= weapons\m203_shot
-snd_reload_grenade			= weapons\m203_reload
-snd_switch					= weapons\groza_switch, 1.0, 0.5
+anim_idle				= lr300_idle
+anim_idle_aim			= lr300_idle
+anim_reload				= lr300_reload_empty
+anim_reload_partly		= lr300_reload_partly
+anim_draw				= lr300_draw
+anim_holster			= lr300_holster
+anim_shoot				= lr300_shoot
+anim_idle_sprint		= lr300_idle_sprint
+anim_idle_moving	    = lr300_idle_moving
 
-;params when silencer is attached 
-;similar to corresponding params without prefix silencer_
+anim_idle_g					= lr300_idle_gl
+anim_idle_g_aim				= lr300_idle_gl
+anim_reload_g				= lr300_shoot_gl
+anim_shoot_g				= lr300_shoot_gl
+anim_switch_grenade_on		= lr300_grenade_activate
+anim_switch_grenade_off		= lr300_grenade_diactivate
+anim_draw_g					= lr300_draw_gl
+anim_holster_g				= lr300_holster_gl
+anim_idle_moving_g          = lr300_idle_moving_gl
 
-;silencer_flame_particles 	= weapons\generic_weapon01
-silencer_smoke_particles 	= weapons\generic_shoot_00
+anim_idle_gl				= lr300_idle_w_gl
+anim_idle_gl_aim			= lr300_idle_w_gl
+anim_reload_gl				= lr300_reload_empty_w_gl
+anim_reload_gl_partly       = lr300_reload_partly_w_gl
+anim_draw_gl				= lr300_draw_w_gl
+anim_holster_gl				= lr300_holster_w_gl
+anim_shoot_gl				= lr300_shoot_w_gl
+anim_idle_sprint_gl			= lr300_idle_sprint
+anim_idle_moving_gl         = lr300_idle_moving_w_gl
 
-snd_silncer_shot			= weapons\ar15_silent
+zoom_offset			= -0.1257,0.027,0   ;-0.1247,0.023,0
+zoom_rotate_x		= 0.02
+zoom_rotate_y		= 0.0345
 
-[wpn_lr300ml_sk1_hud]
-shell_point          	= 0.00, 0.00, 0.00
-shell_dir		 = 0.0, 0.0, 0.0
+grenade_normal_zoom_offset		= -0.1213,0.0,0
+grenade_normal_zoom_rotate_x	= 0.02
+grenade_normal_zoom_rotate_y	= 0.0345
 
-fire_bone               = wpn_body
-fire_point              = 0.13,0.0,0.0
-fire_point2             = 0.13,0.0,-0.09
+grenade_zoom_offset			= -0.15,0.0,0
+grenade_zoom_rotate_x		= 0.02
+grenade_zoom_rotate_y		= 0.0345
 
-orientation             = 0, 0, 0
-position                = 0, 0, 0
-visual                  = Arsenal_Mod\wpn_lr300ml_sk1_hud.ogf
+[wpn_lr300_m1]:wpn_lr300	;LR300 Рњ1
+$spawn             				= "weapons\uniq\wpn_lr300_m1"	
+description						= enc_weapons1_wpn-lr300_m1
+inv_name						= wpn-lr300_m1
+inv_name_short					= wpn-lr300_m1
+rpm								= 300
+fire_dispersion_base			= 0.09
+scope_texture					= wpn\wpn_crosshair_l85
+scope_status					= 1
+silencer_status					= 1
+condition_shot_dec 				= 0.00005
+inv_grid_width     = 6
+inv_grid_height    = 2
+inv_grid_x         = 2
+inv_grid_y         = 45
 
-grenade_bone            	= grenka1	; name of the bone in the model for grenade launcher
-
-; animation names
-
-anim_idle					= idle
-anim_idle_aim				= idle_aim
-anim_reload					= reload
-anim_draw					= draw
-anim_holster				= holster
-anim_shoot					= shoot
-anim_idle_sprint			= idle_sprint
-
-; animation names
-; attached grenade launcher [GRENADE fire mode]
-anim_idle_g					= idle_g
-anim_idle_g_aim				= idle_g_aim
-anim_reload_g				= reload_g
-anim_shoot_g				= shoot_g
-anim_switch_grenade_on		= g_on
-anim_switch_grenade_off		= g_off
-anim_draw_g					= draw_g
-anim_holster_g				= holster_g
-
-; attached grenade launcher [NORMAL fire mode]
-anim_idle_gl				= idle_w_gl
-anim_idle_gl_aim			= idle_w_gl_aim
-anim_reload_gl				= reload_w_gl
-anim_draw_gl				= draw_w_gl
-anim_holster_gl				= holster_w_gl
-anim_shoot_gl				= shoot_w_gl
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;HUD offset in zoom mode (to all)
-;(use CONSOLE: hud_adjust_mode 0,1,2, then keys WSADQE and P to show current value in console)
-
-zoom_offset			= -0.126851,-0.002551,-0.145
-zoom_rotate_x		= -0.0
-zoom_rotate_y		= 0.0
-
-zoom_hide_crosshair	= true						;to hide crosshair in zoom 
-
-; same as above, but for attached grenade launcher for
-; in NORMAL shoot mode
-
-grenade_normal_zoom_offset			= -0.126851,-0.002551,-0.145
-grenade_normal_zoom_rotate_x		= -0.0
-grenade_normal_zoom_rotate_y		= 0.0
-
-; same as above, but for attached grenade launcher for
-; in GRENADE mode
-
-grenade_zoom_offset			= -0.126851,-0.194851,-0.045
-grenade_zoom_rotate_x		= -0.2
-grenade_zoom_rotate_y		= -0.0
+smoke_particles 				= weapons\generic_shoot_00
+flame_particles					= 
+light_disabled					= true

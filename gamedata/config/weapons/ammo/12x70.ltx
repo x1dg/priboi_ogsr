@@ -1,0 +1,32 @@
+[ammo_12x70_buck]:ammo_base
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn			= "weapons\ammo\ammo_12x70_buck" ; option for Level Editor
+class			= AMMO
+cform                   = skeleton
+visual                  = weapons\ammo\ammo_12x70.ogf
+description				= enc_weapons1_ammo_ammo-12x70-buck
+$prefetch 		= 64
+
+cost					 = 50
+
+box_size		= 10
+
+inv_name		= ammo-12x70-buck
+inv_name_short	= ammo-12x70-buck_s
+inv_weight		= .45
+
+inv_grid_width     = 2
+inv_grid_height    = 1
+inv_grid_x         = 39
+inv_grid_y         = 6
+
+k_dist			= 0.75;1
+k_disp			= 5
+k_hit			= 0.4
+k_impulse		= 0.3
+k_pierce		= 0.8
+impair			= 1
+buck_shot		= 10
+tracer			= off
+wm_size         = 0.05

@@ -119,44 +119,19 @@ local ammo_table = {
 	"ammo_16x70_buck"
 }
 local wpn_table = {
-	"wpn_knife_base",
-	"fake_wpn_knife_base",
-	"monnoroch",
 	"wpn_ppsh",
 	"wpn_ppsh41_sk2",
-	"wpn_fake_missile",
-	"wpn_fake_missile1",
-	"wpn_fake_missile2",
-	"explosive_fuelcan",
-	"explosive_tank",
-	"explosive_barrel_low",
-	"explosive_barrel",
-	"explosive_mobiltank",
-	"wpn_addon_scope",
-	"wpn_addon_scope_susat",
 	"wpn_addon_scope_susat_g3",
 	"wpn_addon_scope_susat_mp5sd",
-	"wpn_addon_silencer",
-	"wpn_addon_grenade_launcher",
-	"wpn_addon_grenade_launcher_m203",
-	"wpn_type_teg",
-	"wpn_type_hbgteg",
-	"ammo_7.62x25_p",
-	"ammo_7.62x25_ps",
-	"ammo_7.62x51_fmj",
-	"ammo_7.62x51_ap",
-	"weapon_base",
 	"wpn_abakan",
 	"wpn_ak103",
 	"wpn_ak74",
 	"wpn_ak74u",
 	"wpn_benelli_short",
 	"wpn_beretta",
-	"wpn_binoc",
 	"wpn_bizon",
 	"wpn_bm16",
 	"wpn_bm16_full",
-	"bolt",
 	"wpn_colt1911",
 	"wpn_desert_eagle",
 	"grenade_f1",
@@ -184,7 +159,6 @@ local wpn_table = {
 	"wpn_rg-6",
 	"grenade_rgd5",
 	"wpn_rpg7",
-	"wpn_rpg7_missile",
 	"wpn_saiga12c",
 	"wpn_sig220",
 	"wpn_sig550",
@@ -198,8 +172,7 @@ local wpn_table = {
 	"wpn_val",
 	"wpn_vintorez",
 	"wpn_walther",
-	"wpn_wincheaster1300",
-	"uv_light_torch"
+	"wpn_wincheaster1300"
 }
 local art_table = {
 	"af_base",
@@ -542,6 +515,9 @@ local obj = alife():create(item,pos,db.actor:level_vertex_id(),db.actor:game_ver
      anom.create_anom(obj,3, pos, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 end
 end
+
+
+--Edition By SpawnerToolKit (Author SDK: SuhininKirill | VK: UPFS)
 
 
 --Edition By SpawnerToolKit (Author SDK: SuhininKirill | VK: UPFS)

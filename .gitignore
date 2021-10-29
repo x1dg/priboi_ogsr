@@ -15,7 +15,7 @@ ehthumbs.db
 
 *.db*
 */*.db*
-ArenaExtension/
+gamedata_stable/
 gamedata_monolith/
 gamedata_priboi/
 bin*/

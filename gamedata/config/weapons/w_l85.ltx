@@ -1,191 +1,258 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 [wpn_l85]:identity_immunities
 GroupControlSection		= spawn_group
 discovery_dependency	= 
-$spawn              	= "weapons\l85"		; option for Level Editor
+$spawn             = "weapons\uniq\wpn_l85_susat"		; option for Level Editor
 $npc					= on				; option for Level Editor
 $prefetch 				= 8
 scheduled				= off				; option for ALife Simulator
 cform               	= skeleton
-class               	= WP_LR300
-min_radius          	= 0;30
+class               	= WP_AK74
+min_radius          	= 30
 max_radius          	= 100
 description				= enc_weapons1_wpn-l85
 	
-ef_main_weapon_type		= 1 ;2
+ef_main_weapon_type		= 2
 ef_weapon_type			= 6
 
-;-----------------------------------------------------------------------------------
-holder_range_modifier	= 1.85		       ; во скольк?ра?увеличивается eye_range 
-holder_fov_modifier		= 0.3              ; во скольк?ра?увеличивается eye_fov
-;-----------------------------------------------------------------------------------
+holder_range_modifier	= 1.85
+holder_fov_modifier		= 0.3
 
+cost					= 13500
 weapon_class			= assault_rifle
-
-cost					= 16870
-
-ammo_limit		 		= 210
-ammo_current			= 30
-ammo_elapsed		 	= 30
-
-ammo_mag_size		 	= 30
-ammo_class		 		= ammo_5.56x45_ss190, ammo_5.56x45_ap
+launch_speed = 0
+	
+ammo_limit				= 210
+ammo_current			= 180
+ammo_elapsed			= 30
+	
+ammo_mag_size			= 30
+ammo_class				= ammo_5.56x45_ss190, ammo_5.56x45_ap
+grenade_class			= ammo_m209
 fire_modes				= 1, -1
 
-hand_dependence		 	= 1
+hand_dependence			= 1
 single_handed			= 0
 
-inv_name				= wpn-l85
-inv_name_short			= wpn-l85
-inv_weight				= 4.5 ;4.7
+slot 					= 2
+animation_slot			= 2
 
-inv_grid_width			= 5
-inv_grid_height			= 2
-inv_grid_x				= 0 ;47 ;0
-inv_grid_y				= 12 ;0 ;12
+inv_name	        	= wpn-l85
+inv_name_short			= wpn-l85
+inv_weight				= 5
+
+inv_grid_width     = 5
+inv_grid_height    = 2
+inv_grid_x         = 0
+inv_grid_y         = 12
 
 kill_msg_x				= 84
 kill_msg_y				= 28
 kill_msg_width			= 73
 kill_msg_height			= 30
 
-slot 					= 2		; // secondary
-animation_slot			= 8		; type of the animation that will be used
-
-;-----------------------------------------------------------------------------------
-;базовая дисперсия
-fire_dispersion_base		= 0.009; 0.16	;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
+fire_dispersion_base		= 0.25
 control_inertion_factor		= 1.35f
 
-;отдача
-cam_relax_speed         	= 0		;скорость возврата в исходное положение
-cam_relax_speed_ai         	= 5
-cam_dispersion          	= 0.15		;увеличения угла (в градусах) с каждым выстрелом
-cam_dispersion_inc			= 0.3		;увеличениe cam_dispersion с каждым выстрелом
-cam_dispertion_frac			= 0.9		;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
-cam_max_angle				= 10.0	    	;максимальный угол отдачи
-cam_max_angle_horz			= 20.0		;(degree) maximum shot horizontal degree 
-cam_step_angle_horz			= 1.0		;(degree) size of step camera moved in horizontal position while shooting
+cam_relax_speed         	= 5
+cam_dispersion          	= 0.15
+cam_dispersion_inc			= 0.3
+cam_dispertion_frac			= 0.9
+cam_max_angle				= 10.0
+cam_max_angle_horz			= 20.0
+cam_step_angle_horz			= 1.0
 
-fire_dispersion_condition_factor 	= 5	    	;увеличение дисперсии в процентах при максимальном износе 
-misfire_probability 		= 0.003	;вероятность осечки при максимальном износе 
-misfire_condition_k			= 0.05
-condition_shot_dec 			= 0.0002	;увеличение износа при каждом выстреле
-;--------------------------------------------------------------------------------
-;parent dispersion modifiers
+fire_dispersion_condition_factor 	= 5
+misfire_probability 		= 0.0025
+misfire_condition_k			= 0.045
+condition_shot_dec 			= 0.00025
 
-PDM_disp_base 			= 1.0
-PDM_disp_vel_factor 		= 0.8
-PDM_disp_accel_factor 		= 0.8
-PDM_crouch	 		= 1.0
-PDM_crouch_no_acc 		= 1.0
+PDM_disp_base 				= 1.0
+PDM_disp_vel_factor 		= 1.4
+PDM_disp_accel_factor 		= 1.4
+PDM_crouch	 				= 1.0
+PDM_crouch_no_acc 			= 1.0
 
-direction               = 0, 0, 1
-fire_point             	=  0.0,0.222,0.406
+direction              		=  0, 0, 1
+fire_point             		=  0.0, 0.186, 0.435
+fire_point2            		=  0.0, 0.106, 0.468
 
-flame_particles			= weapons\generic_weapon05
+flame_particles				= weapons\generic_weapon05
 smoke_particles				= weapons\generic_shoot_00
+grenade_flame_particles		= weapons\generic_weapon01
+	
+shell_point		 			= 0.0, 0.186, 0.0
+shell_dir		 			= 0.0, 0.0, 0.4
+shell_particles	 			= amik\weapons\5_56x45\5_56x45_r_00
 
-shell_point		 		= 0.0,-0.18,0.238
-shell_dir		 		= 0.0, 1.0, 0.0
-; shell_particles	 		= weapons\generic_shells
+rpm_empty_click 	 		= 200
 
-rpm_empty_click 	 	= 200
-
-; ttc
-hit_power                	= 0.90 ;0.78
-hit_impulse		 			= 90 ;50
+hit_power                	= 0.65
+hit_impulse		 			= 140
 hit_type 					= fire_wound 	
 
-fire_distance            	= 500 ;800
-bullet_speed				= 920 ;950	;начальная скорость пули
+fire_distance            	= 800
+bullet_speed				= 950
 rpm                      	= 650
-; end ttc
 
-use_aim_bullet				= true		;Поддерживает? ли перв? суппер пу?
+use_aim_bullet				= true
 time_to_aim					= 1.0	
 
-silencer_hit_power       	= 0.90; 0.70
-silencer_hit_impulse	 	= 10
-silencer_fire_distance   	= 700
-silencer_bullet_speed	 	= 850
+silencer_hit_power       	= 0.65
+silencer_hit_impulse	 	= 120
+silencer_fire_distance   	= 250
+silencer_bullet_speed	 	= 600
 
-hud                     = wpn_l85a2_sk1_hud
-normal                  = 0, 1, 0
-position         	    = -0.026,-0.172,0
-orientation             = 0, 0, 0
+hud                      	= wpn_l85_hud
+normal                   	= 0, 1, 0
 
-;--STRAP PARAMETERS-----------------------------------------------------------------
-strap_position         		= -0.16,-0.36,0.15			; position (offset) and orientation of the weapon when it is strapped
-strap_orientation      		= -10,-5,10					; (3rd person view in degrees)
+position         	        = -0.026, -0.135, 0.0
+orientation      	        = 0, 0, 0
+
+strap_position         		= -0.15,-0.36,0.25
+strap_orientation      		= -10,-5,10
 strap_bone0					= bip01_spine2
 strap_bone1					= bip01_spine1
 
-startup_ammo            = 1000
-visual                  = weapons\l85\wpn_l85.ogf
+startup_ammo   		        = 90
+visual         		            = weapons\l85\wpn_l85_susat.ogf
+	
+light_color					= 0.6,0.5,0.3
+light_range					= 5
+light_var_color				= 0.05
+light_var_range				= 0.5
+light_time 					= 0.2
 
-light_color		 		= 0.6,0.5,0.3
-light_range		 		= 5
-light_var_color		 	= 0.05
-light_var_range		 	= 0.1
-light_time 		 		= 0.2
+ph_mass						= 5
 
-ph_mass			 		= 5
+scope_status				= 1
+silencer_status				= 2
+grenade_launcher_status		= 0
 
-;addons
-scope_status			= 1 ;2
-silencer_status			= 2
-grenade_launcher_status	= 0
-
-zoom_enabled			= true
-scope_zoom_factor	    = 50 ;90 ;75
+zoom_enabled				= true
+scope_zoom_factor			= 70
 scope_texture				= wpn\wpn_crosshair_l85
 
-scope_name 					= wpn_addon_scope_susat ;wpn_addon_scope ;wpn_addon_scope_susat			; section name for the attachable scope
-scope_x 					= 60 ;77 ;42						; offset in inventory icon
-scope_y 					= -2 ;-5
+scope_name 					= wpn_addon_scope_susat
+scope_names                 = wpn_addon_scope_susat
+scope_x 					= -999
+scope_y 					= -999
+silencer_name  				= wpn_addon_silencer
+silencer_x 					= 210
+silencer_y 					= 9
+grenade_launcher_name 		= wpn_addon_grenade_launcher_m203
+grenade_launcher_x 			= 128
+grenade_launcher_y 			= 28
 
-silencer_name  				= wpn_addon_silencer ;wpn_addon_sil_556_ar
-silencer_x 					= 190 ;218
-silencer_y 					= 10 ;13
+snd_draw					= weapons\sig550\sig550_draw
+snd_holster					= weapons\generic_hide
+snd_shoot					= weapons\l85\l85_shoot
+snd_empty					= weapons\glock17\glock17_dry
+snd_reload_partly			= weapons\l85\l85_reload
+snd_reload					= weapons\l85\l85_reload_empty
+snd_shoot_grenade			= weapons\l85\l85_gl_shoot
+snd_reload_grenade			= weapons\l85\l85_gl_reload
+snd_switch					= weapons\l85\l85_gl_activate
 
-;silencer_flame_particles 	= weapons\generic_weapon01
 silencer_smoke_particles 	= weapons\generic_shoot_00
 
-silencer_light_color		= 1.0, 0.1, 0.0
+snd_silncer_shot			= weapons\l85\l85_shoot_silencer
+
+silencer_light_color		= 0.6,0.5,0.3
 silencer_light_range		= 0.01
 silencer_light_var_color	= 0.05
 silencer_light_var_range	= 0.5
 silencer_light_time 		= 0.2
 
-;SOUND By: --Darius6 for SmP 2.4 ---
-snd_draw				= darius\generic_draw, 0.4
-snd_holster				= darius\generic_holster, 0.4
-snd_shoot				= darius\l85_fire1
-snd_empty				= darius\rifle_empty, 0.4
-snd_reload				= darius\l85_reload, 0.5
-snd_silncer_shot		= darius\aug_silenced, 0.5
-;----------------------------------------------------------
+[wpn_l85_hud]
+shell_point			        = 0,0,-0.18
+shell_dir			     	= 0,0,0
+fire_point			        = -0.05,0.03,0
+fire_bone               	= bolt
+orientation             	= 2, 1, 0	
+position                	= 0.01, 0.01, 0.17
+visual                  	= weapons\l85\wpn_l85_susat_hud.ogf
+grenade_bone            	= wpn_launcher_grenade
 
-[wpn_l85a2_sk1_hud]
-shell_point          	= 0.0, 0.0, 0.0
-shell_dir		 		= 0.0, 0.0, 0.0
+anim_idle				= idle
+anim_idle_aim			= idle
+anim_reload				= reload_empty
+anim_reload_partly		= reload_partly
+anim_draw				= draw
+anim_holster			= holster
+anim_shoot				= shoot
+anim_idle_sprint		= idle_sprint
+anim_idle_moving	    = idle_moving
 
-fire_point				= -0.063,0.0,0.0
-fire_bone               = wpn_body
-orientation             = 0, 0, 0
-position                = 0, 0, 0
-visual                  = Arsenal_Mod\wpn_l85a2_sk1_hud.ogf
+anim_idle_g					= idle_gl
+anim_idle_g_aim				= idle_aim_gl
+anim_reload_g				= reload_gl
+anim_shoot_g				= shoot_gl
+anim_switch_grenade_on		= gl_activate
+anim_switch_grenade_off		= gl_diactivate
+anim_draw_g					= draw_gl
+anim_holster_g				= holster_gl
+anim_idle_moving_g          = idle_moving_gl
+ 
+anim_idle_gl				= idle_w_gl
+anim_idle_gl_aim			= idle_w_gl
+anim_reload_gl				= reload_empty_w_gl
+anim_reload_gl_partly       = reload_partly_w_gl
+anim_draw_gl				= draw_w_gl
+anim_holster_gl				= holster_w_gl
+anim_shoot_gl				= shoot_w_gl
+anim_idle_sprint_gl			= idle_sprint
+anim_idle_moving_gl         = idle_moving_w_gl
 
-anim_idle			= idle
-anim_idle_aim		= idle_aim
-anim_reload			= reload
-anim_draw			= draw
-anim_holster		= holster
-anim_shoot			= shoot
-anim_idle_sprint	= idle_sprint
+zoom_offset			= -0.126,0.001,0
+zoom_rotate_x		= 0.02
+zoom_rotate_y		= 0.0345
 
-;смещения HUD для режима приближения
-zoom_offset			= -0.1275,0.0252,-0.163
-zoom_rotate_x		= -0.0
-zoom_rotate_y		= 0.0
+grenade_normal_zoom_offset		= -0.1213,0.0,0
+grenade_normal_zoom_rotate_x	= 0.02
+grenade_normal_zoom_rotate_y	= 0.0345
+
+grenade_zoom_offset			= -0.15,0.0,0
+grenade_zoom_rotate_x		= 0.02
+grenade_zoom_rotate_y		= 0.0345
+
+[wpn_l85_m1]:wpn_l85           ; L85A2 + L123A2 UGL
+inv_name	        			= wpn-l85_m1
+inv_name_short					= wpn-l85_m1
+$spawn             = "weapons\uniq\wpn_l85_m1"
+description		   = enc_weapons1_wpn-l85_m1
+inv_grid_width     = 5
+inv_grid_height    = 2
+inv_grid_x         = 5
+inv_grid_y         = 25
+inv_weight				= 6.5
+grenade_launcher_status			= 1
+grenade_vel						= 76
+scope_status				= 0
+scope_name 					= wpn_addon_scope_susat
+scope_respawn_wpn_addon_scope_susat = wpn_l85_m1_susat
+visual         		        = weapons\l85\wpn_l85_m1.ogf
+hud                             = wpn_l85_m1_hud
+[wpn_l85_m1_hud]:wpn_l85_hud
+visual                  	= weapons\l85\wpn_l85_m1_hud.ogf
+grenade_zoom_offset			= -0.08,-0.01,0
+grenade_zoom_rotate_x		= -0.02
+grenade_zoom_rotate_y		= 0.0345
+
+[wpn_l85_m2]:wpn_l85	;РћР±Р»РµРіС‡РµРЅРЅР°СЏ l85
+$spawn             				= "weapons\uniq\wpn_l85_m2"	
+description						= enc_weapons1_wpn-l85_m2
+inv_name	        			= wpn-l85_m2
+inv_name_short					= wpn-l85_m2
+silencer_status					= 1
+inv_weight						= 3
+condition_shot_dec 				= 0.00005
+inv_grid_width     = 6
+inv_grid_height    = 2
+inv_grid_x         = 3
+inv_grid_y         = 43
+
+snd_shoot			= weapons\l85\l85_shoot_silencer
+
+smoke_particles 				= weapons\generic_shoot_00
+flame_particles					= 
+light_disabled					= true

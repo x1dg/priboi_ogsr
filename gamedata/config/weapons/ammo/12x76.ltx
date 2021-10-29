@@ -1,0 +1,71 @@
+[ammo_12x76_dart]:ammo_base
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn			= "weapons\ammo\ammo_12x76_dart" ; option for Level Editor
+class			= AMMO
+cform                   = skeleton
+visual                  = weapons\ammo\ammo_12x70.ogf
+description				= enc_weapons1_ammo_ammo-12x76-dart
+$prefetch 		= 64
+
+cost					 = 100
+
+box_size		= 10
+
+inv_name		= ammo-12x76-dart
+inv_name_short	= ammo-12x76-dart_s
+inv_weight		= .50
+
+inv_grid_width     = 2
+inv_grid_height    = 1
+inv_grid_x         = 39
+inv_grid_y         = 8
+
+k_dist			= 3.0
+k_disp			= 0.8
+k_hit			= 1.35
+k_impulse		= 1.3
+k_pierce		= 2.50
+impair			= 1.2
+buck_shot		= 1
+tracer			= on
+wm_size         = 0.05
+explosive		= off
+
+[ammo_12x76_zhekan]:ammo_base
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn			= "weapons\ammo\ammo_12x76_zhekan" ; option for Level Editor
+class			= AMMO
+cform                   = skeleton
+visual                  = weapons\ammo\ammo_12x70.ogf
+description				= enc_weapons1_ammo_ammo-12x76-zhekan
+$prefetch 		= 64
+
+cost					 = 60
+
+box_size		= 10
+
+inv_name		= ammo-12x76-zhekan
+inv_name_short	= ammo-12x76-zhekan_s
+inv_weight		= .50
+
+inv_grid_width     = 2
+inv_grid_height    = 1
+inv_grid_x         = 39
+inv_grid_y         = 7
+
+k_dist			= 1.7
+k_disp			= 1.0
+k_hit			= 1.2
+k_impulse		= 2.0
+k_pierce		= 1
+impair			= 1.15
+buck_shot		= 1
+tracer			= on
+wm_size         = 0.05
+explosive		= off
+
+[ammo_12x76_zhekan_heli]:ammo_12x76_zhekan
+$spawn			= "weapons\ammo\ammo_12x76_zhekan_heli" ; option for Level Editor
+explosive		= on

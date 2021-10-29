@@ -1,0 +1,36 @@
+[ammo_og-7b]:ammo_base
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn			= "weapons\ammo\ammo_og-7b" ; option for Level Editor
+class			= A_OG7B
+cform                   = skeleton
+visual                  = weapons\ammo\ammo_og-7b.ogf
+description				= enc_weapons1_ammo_ammo-og-7b
+$prefetch 		= 64
+
+cost					 = 1000
+
+box_size		= 1
+
+inv_name		= ammo-og-7b
+inv_name_short	= ammo-og-7b
+inv_weight		= 1.0
+
+inv_grid_width     = 3
+inv_grid_height    = 1
+inv_grid_x         = 38
+inv_grid_y         = 3
+
+
+k_dist			= 1
+k_disp			= 1
+k_hit			= 1.5
+k_impulse		= 1
+k_pierce		= 1.25
+impair			= 1.15
+buck_shot		= 0
+tracer			= off
+wm_size         = 0.1
+
+;могут ли боеприпасы быть неограниченными : 1 - могут, 0 - не могут
+can_be_unlimited = true ;false

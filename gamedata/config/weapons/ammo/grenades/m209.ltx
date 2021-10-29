@@ -1,0 +1,43 @@
+[ammo_m209]:ammo_base
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn			= "weapons\ammo\ammo_m209" ; option for Level Editor
+class			= A_M209
+cform                   = skeleton
+visual                  = weapons\ammo\ammo_m209.ogf
+description				= enc_weapons1_ammo_ammo-m209
+$prefetch 		= 64
+
+cost					 = 155
+
+box_size		= 1
+
+inv_name		= ammo-m209
+inv_name_short	= ammo-m209_s
+inv_weight		= .08
+
+inv_grid_width     = 1
+inv_grid_height    = 1
+inv_grid_x         = 36
+inv_grid_y         = 3
+
+kill_msg_x			= 61
+kill_msg_y			= 232
+kill_msg_width		= 19
+kill_msg_height		= 22
+
+
+k_dist			= 1
+k_disp			= 1
+k_hit			= 1
+k_impulse		= 1
+k_pierce		= 1.25
+impair			= 1
+buck_shot		= 0
+tracer			= off
+wm_size         = 0.05
+
+fake_grenade_name = wpn_fake_missile2
+
+;могут ли боеприпасы быть неограниченными : 1 - могут, 0 - не могут
+can_be_unlimited = true ;false

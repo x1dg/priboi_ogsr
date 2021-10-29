@@ -1,0 +1,68 @@
+[explosive_dinamit]:delayed_action_fuse
+GroupControlSection	= spawn_group
+discovery_dependency = 
+$spawn 				= "weapons\explosive\dinamit"
+$prefetch			= 16
+class				= II_EXPLO
+cform				= skeleton
+visual		 		= physics\box\expl_dinamit.ogf
+inv_name			= Dimanit
+inv_name_short		= 
+inv_weight			= 10.0
+
+inv_grid_width		= 1
+inv_grid_height		= 1
+inv_grid_x			= 9
+inv_grid_y			= 9
+
+;вещь невозможно подобрать
+can_take			= false
+
+cost				= 50
+;-----------------------------------------------------------------------------------
+blast				= 2.00
+blast_r				= 5
+blast_impulse		= 250
+;delete
+blast_impulse_factor = 1
+
+
+frags				= 5
+frags_r				= 8
+frag_hit			= 0.55
+frag_hit_impulse	= 150
+
+hit_type_blast		= chemical_burn ;explosion
+hit_type_frag		= burn
+
+up_throw_factor		= 1.0
+;-----------------------------------------------------------------------------------
+wm_size                  = 0.1
+
+explode_particles		 = explosions\explosion_dynamite
+
+light_color		         = 1.9,1.3,0.5
+light_range		         = 30.0
+light_time 		         = 1.5
+
+;трассы от осколков
+fragment_speed				= 100
+
+explode_duration		 = 5		;подолжительность взрыва (с)
+
+;звуки
+snd_explode = weapons\f1_explode
+immunities_sect			= dinamit_immunities_sect
+wallmark_section		= explosion_marks
+
+[dinamit_immunities_sect]
+;коэффициенты для попаданий различными типами хитов
+burn_immunity			= 0.0
+strike_immunity			= 0.0
+shock_immunity			= 0.0
+wound_immunity			= 0.0
+radiation_immunity		= 0.0
+telepatic_immunity		= 0.0
+chemical_burn_immunity	= 1.0
+explosion_immunity		= 0.0
+fire_wound_immunity		= 0.0

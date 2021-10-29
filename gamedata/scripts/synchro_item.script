@@ -118,6 +118,7 @@ function on_use(obj)
 		if db.actor:item_in_slot(hud_item_slot) then
 			log1("UPDATE REMOVING: "..db.actor:item_in_slot(hud_item_slot):section())
 			destroy_actor_item(hud_item_slot_default)
+			db.actor:restore_weapon()
 		end
 		spawn(hud_obj_section)
 	else

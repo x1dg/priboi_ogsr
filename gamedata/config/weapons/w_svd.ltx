@@ -1,10 +1,10 @@
 [wpn_svd]:identity_immunities
 GroupControlSection	= spawn_group
 discovery_dependency = 
-$spawn                  = "weapons\svd"		; option for Level Editor
-$npc			 		= on				; option for Level Editor
+$spawn                  = "weapons\svd"
+$npc			 		= on
 $prefetch 		 		= 8
-scheduled               = off              	; option for ALife Simulator
+scheduled               = off
 cform                   = skeleton
 class                   = WP_SVD
 min_radius              = 0
@@ -14,12 +14,10 @@ description				= enc_weapons1_wpn-svd
 ef_main_weapon_type		 = 3
 ef_weapon_type			 = 8
 
-;--- scope weapons -----------------------------------------------------------------
-holder_range_modifier	= 2.15               ; во сколько раз увеличивается eye_range 
-holder_fov_modifier		= 0.3              ; во сколько раз увеличивается eye_fov
-;-----------------------------------------------------------------------------------
+holder_range_modifier	= 2.15
+holder_fov_modifier		= 0.3
 
-cost					= 70000 ;27000
+cost					= 20000
 weapon_class			= sniper_rifle
 
 ammo_limit				= 60
@@ -27,45 +25,40 @@ ammo_current			= 10
 ammo_elapsed			= 0
 
 ammo_mag_size			= 10
-ammo_class				= ammo_7.62x54_7h14, ammo_7.62x54_ap; , ammo_7.62x54_7h1  
+ammo_class				= ammo_7.62x54_7h1, ammo_7.62x54_7h14, ammo_7.62x54_ap 
 
 sprint_allowed			= true
-;-----------------------------------------------------------------------------------
-;базовая дисперсия
-fire_dispersion_base		= 0.0009 ;0.011;0.0075	;угол (в градусах) базовой дисперсии оружия (оружия зажатого в тисках)
-control_inertion_factor		= 1.8f; 2.2f
-	
-;отдача
-cam_relax_speed         	= 0	;скорость возврата в исходное положение
-cam_relax_speed_ai         	= 120.5
-cam_dispersion          	= 2.0	;увеличения угла (в градусах) с каждым выстрелом
-cam_dispersion_inc		= 0.5	;увеличениe cam_dispersion с каждым выстрелом
-cam_dispertion_frac		= 1.0	;ствол будет подыматься на cam_dispersion*cam_dispertion_frac +- cam_dispersion*(1-cam_dispertion_frac)
-cam_max_angle			= 15.0	;максимальный угол отдачи
-cam_max_angle_horz		= 3.0	;(degree) maximum shot horizontal degree 
-cam_step_angle_horz		= 0.25	;(degree) size of step camera moved in horizontal position while shooting
 
-fire_dispersion_condition_factor = 5	;увеличение дисперсии в процентах при максимальном износе 
-misfire_probability 		= 0.005 ;вероятность осечки при максимальном износе 
+fire_dispersion_base		= 0.01
+control_inertion_factor		= 2.2f
+
+cam_relax_speed         	= 4.5
+cam_dispersion          	= 2.0
+cam_dispersion_inc		= 0.5
+cam_dispertion_frac		= 1.0
+cam_max_angle			= 15.0
+cam_max_angle_horz		= 3.0
+cam_step_angle_horz		= 1.0
+
+fire_dispersion_condition_factor = 5
+misfire_probability 		= 0.005
 misfire_condition_k			= 0.05
-condition_shot_dec 			= 0.00001 ;увеличение износа при каждом выстреле
-;-----------------------------------------------------------------------------------
+condition_shot_dec 			= 0.0002
 
 hand_dependence 		= 1
 single_handed			= 0
 
-slot 					= 2		; // secondary
-animation_slot			= 2		; type of the animation that will be used
-
+slot 					= 2
+animation_slot			= 2
 
 inv_name				= wpn-svd
 inv_name_short			= wpn-svd
-inv_weight				= 4.3
+inv_weight				= 4.9
 
-inv_grid_width			= 6
-inv_grid_height			= 2
-inv_grid_x				= 0 ;41
-inv_grid_y				= 0
+inv_grid_width     = 6
+inv_grid_height    = 2
+inv_grid_x         = 0
+inv_grid_y         = 0
 
 kill_msg_x			= 0
 kill_msg_y			= 0
@@ -74,43 +67,40 @@ kill_msg_height		= 23
 
 direction               = 0, 0, 1
 
-fire_point              = 0.0, 0.227, 0.944
+fire_point              = 0.0, 0.129, 0.942
 
 flame_particles		    = weapons\generic_weapon06
 smoke_particles		   	= weapons\generic_shoot_00
 rpm_empty_click 		= 200
 
-shell_point		 		= 0.0, 0.23, 0.179
+shell_point		 		= 0.0, 0.129, 0.192	
 shell_dir		 		= 0.0, 0.0, 0.4
-; shell_particles	 		= weapons\arsenal_shells1
+shell_particles	 		= 
 
-PDM_disp_base 			= 6.0
+PDM_disp_base 			= 2.0
 PDM_disp_vel_factor 		= 0.9
 PDM_disp_accel_factor 		= 1.0
 PDM_crouch	 		= 1.0
 PDM_crouch_no_acc 		= 1.0
 
-; ttc
-hit_power           = 2.0 ;1.85, 1.20, 1.10, 1.17
-hit_impulse		 	= 170 ;70
+hit_power           = 1.10
+hit_impulse		 	= 190
 hit_type 			= fire_wound
 
-fire_distance           	= 900 ;1000
-bullet_speed		 	= 830	;начальная скорость пули
+fire_distance           	= 800
+bullet_speed		 	= 850
 rpm                     	= 120
-; end ttc
 
-use_aim_bullet				= true		;Поддерживается ли первая суппер пуля
+use_aim_bullet				= true
 time_to_aim					= 1.0	
 
-hud                     = wpn_svd_sk1_hud
+hud                     = wpn_svd_hud
 normal                  = 0, 1, 0
-position         	    = -0.026,-0.172,0
+position                = -0.026, -0.077, 0.00
 orientation             = 0, 0, 0
 
-;--STRAP PARAMETERS-----------------------------------------------------------------
-strap_position         		= -0.16,-0.36,0.15			; position (offset) and orientation of the weapon when it is strapped
-strap_orientation      		= -10,-5,10					; (3rd person view in degrees)
+strap_position         		= -0.15,-0.15,0.45
+strap_orientation      		= -25,-189,65
 strap_bone0					= bip01_spine2
 strap_bone1					= bip01_spine1
 
@@ -123,61 +113,65 @@ light_var_color		 	= 0.05
 light_var_range		 	= 0.5
 light_time 		 		= 0.2
 
-ph_mass			 		= 5
+ph_mass			 		= 3
 
-;addons
-scope_status				= 1 ;2
-silencer_status				= 0 ;2
+scope_status				= 1
+silencer_status				= 0
 grenade_launcher_status		= 0
 zoom_enabled				= true
 
-scope_name 					= wpn_addon_scope			; section name for the attachable scope
-scope_x 					= 42						; offset in inventory icon
-scope_y 					= 3
-
-scope_zoom_factor	    = 10
 scope_texture			= wpn\wpn_crosshair
+zoom_enabled			= true
+scope_zoom_factor	    = 15
 
-;silencer_name  				= wpn_addon_silencer ;wpn_addon_sil_762_pms
-;silencer_x 					= 41 ;260
-;silencer_y 					= -12 ;16
+snd_draw		        = weapons\svd\svd_draw
+snd_holster		        = weapons\svd\svd_hide
+snd_shoot		        = weapons\svd\svd_shoot
+snd_empty		        = weapons\glock17\glock17_dry
+snd_reload		        = weapons\svd\svd_reload_empty
+snd_reload_partly		= weapons\svd\svd_reload
+snd_reload_jammed		= weapons\svd\svd_revival
 
-silencer_light_color		= 1.0, 0.1, 0.0
-silencer_light_range		= 0.01
-silencer_light_var_color	= 0.05
-silencer_light_var_range	= 0.5
-silencer_light_time 		= 0.2
+[wpn_svd_hud]
+shell_point			    = 0,0,0.0
+shell_dir		 		= 0.0,0.0,0.0
+fire_point			    = -0.05,0.01,0.1
+fire_bone               = bolt
+orientation             = 2, 1, 0	
+position                = 0.01, 0.01, 0.15
+visual                  = weapons\svd\wpn_svd_hud.ogf
 
-;SOUND by: --Darius6 for SmP 2.4 --
-snd_draw		= darius\generic_draw, 0.4
-snd_holster		= darius\generic_holster, 0.4
-snd_shoot		= darius\sr25_shot
-snd_empty		= darius\rifle_empty, 0.4
-snd_reload		= darius\svd_reload, 0.5
-;snd_silncer_shot	= darius\ak_silenced_01, 0.5
+anim_holster	= svd_hide
+anim_idle		= svd_idle
+anim_idle_aim	= svd_idle_aim
+anim_reload		= svd_reload_full
+anim_reload_partly		= svd_reload
+anim_reload_jammed		= svd_revival
+anim_draw		= svd_draw
+anim_shoot		= svd_shoot
+anim_idle_moving		= svd_walk
+anim_idle_sprint		= svd_sprint
 
-silencer_smoke_particles 	= weapons\generic_shoot_00
+zoom_offset			= -0.103,0.02,0
+zoom_rotate_x		= 0.02
+zoom_rotate_y		= 0.036
 
-[wpn_svd_sk1_hud]
+\\\\\\\\\\\\\\
+\\Upgrade's\\\
+\\\\\\\\\\\\\\
 
-shell_point			= -0.140000,-0.030000,0.080000
-shell_dir		 		= 0.0, 1.0, 0.0
-
-fire_point			= 0.462,0.0,0.00924
-fire_bone               = wpn_body
-orientation             = 0, 0, 0
-position                = 0, 0, 0
-visual                  = Arsenal_Mod\wpn_svd_sk1_hud.ogf
-
-anim_idle			= idle
-anim_idle_aim		= idle_aim
-anim_reload			= reload
-anim_draw			= draw
-anim_holster		= holster
-anim_shoot			= shoot
-anim_idle_sprint	= idle_sprint
-
-;смещения HUD для режима приближения
-zoom_offset				= -0.127151,0.043251,-0.145000
-zoom_rotate_x			= 0.000000
-zoom_rotate_y			= -0.000000
+[wpn_svd_m1]:wpn_svd	        ;СВД + Кобра
+description						= enc_weapons1_wpn-svd_m1
+inv_grid_width     = 6
+inv_grid_height    = 2
+inv_grid_x         = 5
+inv_grid_y         = 23
+scope_status					= 0
+scope_zoom_factor	    = 65
+visual                  = weapons\svd\wpn_svd_m1.ogf
+hud                             = wpn_svd_m1_hud
+[wpn_svd_m1_hud]:wpn_svd_hud
+visual                  = weapons\svd\wpn_svd_m1_hud.ogf
+zoom_offset			= -0.1356,0.0198,0
+zoom_rotate_x		= 0.015
+zoom_rotate_y		= 0.03
