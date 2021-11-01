@@ -1,662 +1,826 @@
 
-[29.10.21 16:04:13.281] * Detected CPU: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz [GenuineIntel], F6/M158/S10
-[29.10.21 16:04:13.282] * CPU features: RDTSC, MMX, SSE, SSE2, SSE3, MONITOR/MWAIT, SSSE3, SSE4.1, SSE4.2, AVX, AVX2
-[29.10.21 16:04:13.282] * CPU cores: [6], threads: [6]
-[29.10.21 16:04:13.282] * CPU0 current freq: 2808 MHz, max freq: 2808 MHz
-[29.10.21 16:04:13.282] * CPU1 current freq: 2808 MHz, max freq: 2808 MHz
-[29.10.21 16:04:13.283] * CPU2 current freq: 2808 MHz, max freq: 2808 MHz
-[29.10.21 16:04:13.283] * CPU3 current freq: 2808 MHz, max freq: 2808 MHz
-[29.10.21 16:04:13.283] * CPU4 current freq: 2808 MHz, max freq: 2808 MHz
-[29.10.21 16:04:13.283] * CPU5 current freq: 2808 MHz, max freq: 2808 MHz
-[29.10.21 16:04:13.283] Initializing File System...
-[29.10.21 16:04:13.283] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db0], size: [678577379]
-[29.10.21 16:04:13.366] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db1], size: [708434331]
-[29.10.21 16:04:13.371] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db2], size: [671169415]
-[29.10.21 16:04:13.374] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db3], size: [684792231]
-[29.10.21 16:04:13.379] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db4], size: [671392842]
-[29.10.21 16:04:13.809] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db5], size: [697475082]
-[29.10.21 16:04:13.880] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db6], size: [672288151]
-[29.10.21 16:04:13.884] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db7], size: [672462598]
-[29.10.21 16:04:13.924] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db8], size: [293378144]
-[29.10.21 16:04:13.939] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db9], size: [79312307]
-[29.10.21 16:04:13.968] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dba], size: [22884835]
-[29.10.21 16:04:13.972] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbb], size: [55194918]
-[29.10.21 16:04:13.976] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbc], size: [160948]
-[29.10.21 16:04:13.976] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbd], size: [101014]
-[29.10.21 16:04:13.976] using fs-ltx fsgame.ltx
-[29.10.21 16:04:13.977] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\]
-[29.10.21 16:04:13.977]   files: [6]
-[29.10.21 16:04:13.981] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\]
-[29.10.21 16:04:13.981]   files: [16]
-[29.10.21 16:04:13.981] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\spawns\]
-[29.10.21 16:04:13.981]   files: [4]
-[29.10.21 16:04:13.981] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\anims\]
-[29.10.21 16:04:13.981]   files: [23]
-[29.10.21 16:04:13.983] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\]
-[29.10.21 16:04:13.983]   files: [12]
-[29.10.21 16:04:13.984] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\meshes\]
-[29.10.21 16:04:13.984]   files: [12]
-[29.10.21 16:04:14.005] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\meshes\]
-[29.10.21 16:04:14.005]   files: [12]
-[29.10.21 16:04:14.015] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\shaders\]
-[29.10.21 16:04:14.015]   files: [7]
-[29.10.21 16:04:14.024] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\sounds\]
-[29.10.21 16:04:14.024]   files: [22]
-[29.10.21 16:04:14.062] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\textures\]
-[29.10.21 16:04:14.062]   files: [66]
-[29.10.21 16:04:14.171] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\scripts\]
-[29.10.21 16:04:14.172]   files: [129]
-[29.10.21 16:04:14.173] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\]
-[29.10.21 16:04:14.173]   files: [30]
-[29.10.21 16:04:14.204] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\]
-[29.10.21 16:04:14.204]   files: [12]
-[29.10.21 16:04:14.204] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\]
-[29.10.21 16:04:14.204]   files: [22]
-[29.10.21 16:04:14.204] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\logs\]
-[29.10.21 16:04:14.205]   files: [104]
-[29.10.21 16:04:14.205] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\screenshots\]
-[29.10.21 16:04:14.205]   files: [10]
-[29.10.21 16:04:14.211] FS: 36008 files cached, 7412Kb memory used.
-[29.10.21 16:04:14.211] Init FileSystem 0.928388 sec
-[29.10.21 16:04:14.212] [OGSR Engine (x64)] build date: [Sep 22 2021 10:23:51]
-[29.10.21 16:04:14.212] [AppVeyor] build version: [2.1.293], repo: [OGSR/OGSR-Engine]
-[29.10.21 16:04:14.212] [_MSC_FULL_VER]: [191627045], [_MSVC_LANG]: [201703L]
-[29.10.21 16:04:14.212] Working Directory: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64]
-[29.10.21 16:04:14.212] CommandLine: ["Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe"  -high]
-[29.10.21 16:04:14.324] Initializing Engine...
-[29.10.21 16:04:14.325] Starting INPUT device...
-[29.10.21 16:04:14.387] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[29.10.21 16:04:14.387] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
-[29.10.21 16:04:14.408] refCount:m_pAdapter 1
-[29.10.21 16:04:14.408] refCount:pFactory 1
-[29.10.21 16:04:14.409] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[29.10.21 16:04:14.409] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
-[29.10.21 16:04:14.536] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[29.10.21 16:04:14.536] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
-[29.10.21 16:04:14.538] --[CEngineAPI::CreateRendererList] Available render modes [5]:
-[29.10.21 16:04:14.538] --  [renderer_r2a]
-[29.10.21 16:04:14.538] --  [renderer_r2]
-[29.10.21 16:04:14.538] --  [renderer_r2.5]
-[29.10.21 16:04:14.538] --  [renderer_r3]
-[29.10.21 16:04:14.538] --  [renderer_r4]
-[29.10.21 16:04:14.538] Executing config-script "user.ltx"...
-[29.10.21 16:04:14.539] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
-[29.10.21 16:04:14.539] [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\user.ltx] successfully loaded.
-[29.10.21 16:04:14.539] --Loading DLL: [xrRender_R2.dll]
-[29.10.21 16:04:14.540] --Loading DLL: [xrGame.dll]
-[29.10.21 16:04:14.556] --------------------------------------------------------------------------------
-[29.10.21 16:04:14.557] [8143MB] physical memory installed, [3795MB] available, [53] percent of memory in use
-[29.10.21 16:04:14.557] PageFile usage: [47MB], Peak PageFile usage: [93MB]
-[29.10.21 16:04:14.557] --------------------------------------------------------------------------------
-[29.10.21 16:04:14.557] * [ D3D ]: textures[0 K]
-[29.10.21 16:04:14.557] * [x-ray]: process heap[24503 K], render[0 K]
-[29.10.21 16:04:14.557] * [x-ray]: economy: strings[4969 K], smem[0 K]
-[29.10.21 16:04:14.557] SOUND: OpenAL: enumerate devices...
-[29.10.21 16:04:14.557] SOUND: OpenAL: EnumerationExtension Present
-[29.10.21 16:04:14.690] devices Generic Software
-[29.10.21 16:04:14.690] SOUND: OpenAL: system  default SndDevice name is Generic Software
-[29.10.21 16:04:15.007] SOUND: OpenAL: All available devices:
-[29.10.21 16:04:15.007] 1. Generic Software, Spec Version 1.1 (default) eax[2] efx[no] xram[no]
-[29.10.21 16:04:15.007] 2. OpenAL Soft, Spec Version 1.1  eax[0] efx[yes] xram[no]
-[29.10.21 16:04:15.007] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx"...
-[29.10.21 16:04:15.051] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx] successfully loaded.
-[29.10.21 16:04:15.051] Executing config-script "user.ltx"...
-[29.10.21 16:04:15.051] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\rspec_high.ltx"...
-[29.10.21 16:04:15.051] ! Unknown command:  r2_sun_shafts
-[29.10.21 16:04:15.051] ! Unknown command:  r__supersample
-[29.10.21 16:04:15.051] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\rspec_high.ltx] successfully loaded.
-[29.10.21 16:04:15.051] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx"...
-[29.10.21 16:04:15.052] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx] successfully loaded.
-[29.10.21 16:04:15.052] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
-[29.10.21 16:04:15.052] [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\user.ltx] successfully loaded.
-[29.10.21 16:04:15.052] SOUND: Selected device is Generic Software
-[29.10.21 16:04:15.086] [OpenAL] EAX 2.0 extension: present
-[29.10.21 16:04:15.086] [OpenAL] EAX 2.0 deferred: present
-[29.10.21 16:04:15.087] * sound : cache: 65537 kb, 4856 lines, 13820 bpl
-[29.10.21 16:04:15.115] Starting RENDER device...
-[29.10.21 16:04:15.156] * GPU [vendor:10DE]-[device:1C81]: NVIDIA GeForce GTX 1050
-[29.10.21 16:04:15.156] * GPU driver: 30.0.14.7196
-[29.10.21 16:04:15.260] * CREATE: DeviceREF: 1
-[29.10.21 16:04:15.260] * Vertex Processor: PURE HARDWARE
-[29.10.21 16:04:15.260] *     Texture memory: 4072 M
-[29.10.21 16:04:15.260] *          DDI-level: 9.0
-[29.10.21 16:04:15.262] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
-[29.10.21 16:04:15.263] * GPU vertex cache: unrecognized, 16
-[29.10.21 16:04:15.263] * DVB created: 16384K
-[29.10.21 16:04:15.263] * DIB created: 512K
-[29.10.21 16:04:15.290] ! Version conflict in shader 'models\lightplanes_00'
-[29.10.21 16:04:15.290] ! Version conflict in shader 'models\lightplanesself'
-[29.10.21 16:04:15.290] ! Version conflict in shader 'models\model_puh'
-[29.10.21 16:04:15.290] ! Version conflict in shader 'models\model_refl'
-[29.10.21 16:04:15.290] ! Version conflict in shader 'models\xbrainglass'
-[29.10.21 16:04:15.290] ! Version conflict in shader 'models\xdistortcolorlinv'
-[29.10.21 16:04:15.290] ! Version conflict in shader 'models\xglass'
-[29.10.21 16:04:15.290] ! Version conflict in shader 'models\xglass2'
-[29.10.21 16:04:15.290] ! Version conflict in shader 'models\xlens'
-[29.10.21 16:04:15.290] ! Version conflict in shader 'selflight_static'
-[29.10.21 16:04:15.291] [CTextureDescrMngr::LoadLTX] count of *textures*.ltx files: [1]
-[29.10.21 16:04:15.418] * NULLRT supported
-[29.10.21 16:04:15.418] * ...and used
-[29.10.21 16:04:15.418] * HWDST/PCF supported and used
-[29.10.21 16:04:15.418] * NV-DBT supported and used
-[29.10.21 16:04:16.575] --LUA version: [LuaJIT 2.1.0-beta3]
-[29.10.21 16:04:16.621] Starting engine...
-[29.10.21 16:04:20.823] * phase time: 2 ms
-[29.10.21 16:04:20.848] * phase cmem: 181375 K
-[29.10.21 16:04:20.898] --LUA version: [LuaJIT 2.1.0-beta3]
-[29.10.21 16:04:20.923] * phase time: 100 ms
-[29.10.21 16:04:20.948] * phase cmem: 150171 K
-[29.10.21 16:04:20.953] * Loading spawn registry...
-[29.10.21 16:04:21.521] * 8976 spawn points are successfully loaded
-[29.10.21 16:04:21.522] * Loading objects...
-[29.10.21 16:04:21.860] * 17917 objects are successfully loaded
-[29.10.21 16:04:22.394] * Game Данил_quicksave is successfully loaded from file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_quicksave.sav' (1.446s)
-[29.10.21 16:04:22.394] * phase time: 1471 ms
-[29.10.21 16:04:22.438] * phase cmem: 197691 K
-[29.10.21 16:04:22.490] # Player not found. New player created.
-[29.10.21 16:04:22.490] !!xrServer::Check_GameSpy_CDKey_Success - 1
-[29.10.21 16:04:22.490] * client : connection accepted - <>
-[29.10.21 16:04:22.508] * phase time: 113 ms
-[29.10.21 16:04:22.552] * phase cmem: 197753 K
-[29.10.21 16:04:22.552] * phase time: 44 ms
-[29.10.21 16:04:22.596] * phase cmem: 197754 K
-[29.10.21 16:04:23.328] --[ISpatial_DB::initialize] bbc is [0.0, 25.2, -0.0], bbd is [512.0, 47.0, 512.0]
-[29.10.21 16:04:23.328] --[ISpatial_DB::initialize] bbc is [0.0, 25.2, -0.0], bbd is [512.0, 47.0, 512.0]
-[29.10.21 16:04:23.330] * phase time: 777 ms
-[29.10.21 16:04:23.373] * phase cmem: 255862 K
-[29.10.21 16:04:23.566] * phase time: 236 ms
-[29.10.21 16:04:23.610] * phase cmem: 259165 K
-[29.10.21 16:04:23.618] * [Loading VB] 65435 verts, 2044 Kb
-[29.10.21 16:04:23.629] * [Loading VB] 65236 verts, 2038 Kb
-[29.10.21 16:04:23.637] * [Loading VB] 65530 verts, 2047 Kb
-[29.10.21 16:04:23.645] * [Loading VB] 65534 verts, 2047 Kb
-[29.10.21 16:04:23.653] * [Loading VB] 65535 verts, 2047 Kb
-[29.10.21 16:04:23.661] * [Loading VB] 65532 verts, 2047 Kb
-[29.10.21 16:04:23.669] * [Loading VB] 65535 verts, 2047 Kb
-[29.10.21 16:04:23.679] * [Loading VB] 65534 verts, 2047 Kb
-[29.10.21 16:04:23.687] * [Loading VB] 65535 verts, 2047 Kb
-[29.10.21 16:04:23.694] * [Loading VB] 65533 verts, 2047 Kb
-[29.10.21 16:04:23.704] * [Loading VB] 65535 verts, 2047 Kb
-[29.10.21 16:04:23.713] * [Loading VB] 57122 verts, 1785 Kb
-[29.10.21 16:04:23.719] * [Loading VB] 65535 verts, 2047 Kb
-[29.10.21 16:04:23.727] * [Loading VB] 65533 verts, 2047 Kb
-[29.10.21 16:04:23.735] * [Loading VB] 65534 verts, 2047 Kb
-[29.10.21 16:04:23.744] * [Loading VB] 65534 verts, 2047 Kb
-[29.10.21 16:04:23.752] * [Loading VB] 65535 verts, 2047 Kb
-[29.10.21 16:04:23.760] * [Loading VB] 43641 verts, 1363 Kb
-[29.10.21 16:04:23.766] * [Loading IB] 1048575 indices, 2047 Kb
-[29.10.21 16:04:23.774] * [Loading IB] 1048575 indices, 2047 Kb
-[29.10.21 16:04:23.783] * [Loading IB] 1048575 indices, 2047 Kb
-[29.10.21 16:04:23.791] * [Loading IB] 1048575 indices, 2047 Kb
-[29.10.21 16:04:23.800] * [Loading IB] 1048575 indices, 2047 Kb
-[29.10.21 16:04:23.810] * [Loading IB] 1048575 indices, 2047 Kb
-[29.10.21 16:04:23.818] * [Loading IB] 780369 indices, 1524 Kb
-[29.10.21 16:04:23.825] * [Loading VB] 65534 verts, 767 Kb
-[29.10.21 16:04:23.830] * [Loading VB] 65535 verts, 767 Kb
-[29.10.21 16:04:23.833] * [Loading VB] 65535 verts, 767 Kb
-[29.10.21 16:04:23.838] * [Loading VB] 65535 verts, 767 Kb
-[29.10.21 16:04:23.842] * [Loading VB] 65535 verts, 767 Kb
-[29.10.21 16:04:23.842] * [Loading VB] 65535 verts, 767 Kb
-[29.10.21 16:04:23.846] * [Loading VB] 65532 verts, 767 Kb
-[29.10.21 16:04:23.850] * [Loading VB] 54604 verts, 639 Kb
-[29.10.21 16:04:23.851] * [Loading IB] 1048575 indices, 2047 Kb
-[29.10.21 16:04:23.860] * [Loading IB] 1048575 indices, 2047 Kb
-[29.10.21 16:04:23.869] * [Loading IB] 1048575 indices, 2047 Kb
-[29.10.21 16:04:23.878] * [Loading IB] 950730 indices, 1856 Kb
-[29.10.21 16:04:23.889] * phase time: 323 ms
-[29.10.21 16:04:23.934] * phase cmem: 323189 K
-[29.10.21 16:04:24.113] * phase time: 224 ms
-[29.10.21 16:04:24.158] * phase cmem: 325943 K
-[29.10.21 16:04:24.175] * [DETAILS] VertexConsts(256), Batch(61)
-[29.10.21 16:04:24.175] * [DETAILS] 40687 v(20), 26352 p
-[29.10.21 16:04:24.176] * [DETAILS] Batch(61), VB(794K), IB(154K)
-[29.10.21 16:04:24.176] * phase time: 63 ms
-[29.10.21 16:04:24.222] * phase cmem: 326959 K
-[29.10.21 16:04:24.223] * Loading HOM: z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\l05_bar\level.hom
-[29.10.21 16:04:24.237] * phase time: 60 ms
-[29.10.21 16:04:24.284] * phase cmem: 327299 K
-[29.10.21 16:04:24.286] * phase time: 49 ms
-[29.10.21 16:04:24.331] * phase cmem: 327299 K
-[29.10.21 16:04:24.344] - Game configuring : Started 
-[29.10.21 16:04:24.394] - Game configuring : Finished 
-[29.10.21 16:04:24.527] * phase time: 240 ms
-[29.10.21 16:04:24.573] * phase cmem: 341727 K
-[29.10.21 16:04:28.233] * t-report - base: 1307, 1055986 K
-[29.10.21 16:04:28.233] * t-report - lmap: 5, 5120 K
-[29.10.21 16:04:28.233] * phase time: 3706 ms
-[29.10.21 16:04:28.287] * phase cmem: 1454343 K
-[29.10.21 16:04:28.292] * phase time: 58 ms
-[29.10.21 16:04:28.345] * phase cmem: 1454335 K
-[29.10.21 16:04:28.408] --------------------------------------------------------------------------------
-[29.10.21 16:04:28.408] [8143MB] physical memory installed, [2456MB] available, [69] percent of memory in use
-[29.10.21 16:04:28.408] PageFile usage: [1758MB], Peak PageFile usage: [1760MB]
-[29.10.21 16:04:28.408] --------------------------------------------------------------------------------
-[29.10.21 16:04:28.408] * [ D3D ]: textures[1061106 K]
-[29.10.21 16:04:28.408] * [x-ray]: process heap[1453714 K], render[0 K]
-[29.10.21 16:04:28.408] * [x-ray]: economy: strings[7471 K], smem[0 K]
-[29.10.21 16:04:29.339] ! auto-generated bump map: wpn\fwr_rnm_016\upgrades\silencer\sil_45_bump#
-[29.10.21 16:04:29.339] ! auto-generated bump map: wpn\fwr_rnm_016\upgrades\silencer\sil_45_bump
-[29.10.21 16:04:29.675] * [CPatrolPathStorage::safe_path]: path[bar_barman_hole_look] pp[name00|a=barman_tv] level_vertex_id[4294967295] -> 36053
-[29.10.21 16:04:30.312] ! auto-generated bump map: wpn\ots_33\wpn_ots33_gps_bump#
-[29.10.21 16:04:30.329] ! auto-generated bump map: wpn\ots_33\wpn_ots33_frame_bump#
-[29.10.21 16:04:30.340] ! auto-generated bump map: wpn\ots_33\wpn_ots33_mag_bump#
-[29.10.21 16:04:32.412] * [CPatrolPathStorage::safe_path]: path[bar_house_look] pp[wp03|a=wait|t=25000] level_vertex_id[4294967295] -> 33195
-[29.10.21 16:04:33.972] ! auto-generated bump map: wpn\tec-9\wpn_tec_kg9_gun_bump#
-[29.10.21 16:04:33.983] ! auto-generated bump map: wpn\tec-9\wpn_tec_kg9_mag_bump#
-[29.10.21 16:04:34.029] ! auto-generated bump map: wpn\mac10\wpn_mac10_grip_bump#
-[29.10.21 16:04:34.039] ! auto-generated bump map: wpn\mac10\wpn_mac10_upper_bump#
-[29.10.21 16:04:34.045] ! auto-generated bump map: wpn\mac10\wpn_mac10_mag_bump#
-[29.10.21 16:04:34.051] ! auto-generated bump map: wpn\mac10\wpn_mac10_lower_bump#
-[29.10.21 16:04:34.060] ! auto-generated bump map: wpn\silencer\wpn_9mm_silencer_bump#
-[29.10.21 16:04:34.107] ! auto-generated bump map: wpn\benelli\wpn_short_body_bump#
-[29.10.21 16:04:34.118] ! auto-generated bump map: wpn\benelli\wpn_short_barrel_bump#
-[29.10.21 16:04:34.260] ! Can't find sound [weapons\empty.ogg]
-[29.10.21 16:04:34.330] ! auto-generated bump map: wpn\wpn_p90_bump.dds#
-[29.10.21 16:04:34.975] ! Can't find sound [weapons\g36\draw.ogg]
-[29.10.21 16:04:34.975] ! Can't find sound [weapons\g36\holster.ogg]
-[29.10.21 16:04:34.976] ! Can't find sound [weapons\g36\shot0.ogg]
-[29.10.21 16:04:34.976] ! Can't find sound [weapons\g36\shot1.ogg]
-[29.10.21 16:04:34.976] ! Can't find sound [weapons\g36\shot2.ogg]
-[29.10.21 16:04:34.976] ! Can't find sound [weapons\g36\empty.ogg]
-[29.10.21 16:04:34.976] ! Can't find sound [weapons\g36\reload.ogg]
-[29.10.21 16:04:34.977] ! Can't find sound [weapons\g36\grenshoot.ogg]
-[29.10.21 16:04:34.978] ! Can't find sound [weapons\g36\grenload.ogg]
-[29.10.21 16:04:34.978] ! Can't find sound [weapons\g36\switch.ogg]
-[29.10.21 16:04:35.094] ! auto-generated bump map: wpn\smg_tmp\wpn_tmp_body_bump#
-[29.10.21 16:04:35.107] ! auto-generated bump map: wpn\smg_tmp\wpn_tmp_mag_bump#
-[29.10.21 16:04:35.167] ! Can't find texture 'death_mod\difmap'
-[29.10.21 16:04:38.042] ! [R_occlusion::cleanup_lost]: cleanup 1 lost queries
-[29.10.21 16:04:38.701] * MEMORY USAGE: 2314376 K
-[29.10.21 16:04:38.701] * End of synchronization A[1] R[1]
-[29.10.21 16:04:38.701] * phase time: 10468 ms
-[29.10.21 16:04:38.803] * phase cmem: 2314376 K
-[29.10.21 16:04:39.658] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:04:39.928] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:04:40.045] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:04:40.232] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:04:40.578] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:04:40.645] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:04:40.981] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:04:41.011] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:04:41.295] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:04:41.378] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:38.928] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:38.994] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:39.113] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:39.431] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:39.746] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:40.063] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:41.260] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:41.947] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:41.997] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:42.297] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:42.581] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:42.630] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:42.698] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:43.147] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:43.364] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:43.515] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:43.714] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:43.881] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:44.898] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:45.215] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:45.731] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:45.915] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:46.048] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:46.965] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:47.850] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:49.048] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:49.099] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:49.216] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:49.364] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:49.766] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:50.464] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:50.565] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:50.865] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:51.448] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:51.598] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:52.431] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:52.551] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:53.099] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:53.332] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:54.197] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:54.250] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:55.214] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:55.748] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:56.064] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:56.947] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:57.714] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:58.882] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:59.684] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:05:59.816] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:00.298] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:01.382] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:01.615] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:02.300] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:02.498] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:03.299] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:03.348] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:03.382] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:03.749] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:03.914] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:04.699] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:04.732] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:05.148] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:05.648] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:05.766] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:06.310] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:06.449] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:06.948] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:06.980] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:07.381] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:08.300] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:08.482] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:09.681] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:09.799] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:09.849] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:10.501] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:11.458] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:11.504] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:11.699] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:11.815] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:11.849] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:11.981] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:12.115] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:12.381] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:13.198] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:13.848] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:15.198] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:15.450] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:15.450] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:15.748] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:16.507] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:16.831] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:17.065] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:17.699] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:18.350] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:18.766] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:18.799] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:18.982] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:19.666] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:20.165] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:20.748] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:21.050] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:22.333] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:23.250] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:23.766] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:23.800] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:23.950] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:24.266] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:25.332] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:25.515] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:26.225] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:26.240] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:26.850] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:26.865] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:27.383] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:27.482] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:27.882] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:28.417] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:29.233] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:29.583] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:29.749] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:31.065] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:31.099] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:32.167] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:32.300] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:32.300] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:32.734] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:33.333] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:33.699] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:33.782] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:34.317] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:34.366] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:34.633] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:35.634] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:36.083] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:36.450] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:37.149] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:37.699] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:37.967] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:37.967] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:38.149] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:38.617] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:38.750] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:38.783] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:38.967] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:39.283] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:39.316] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:39.633] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:39.633] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:40.334] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:40.483] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:41.967] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:42.317] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:42.632] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:42.967] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:43.149] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:43.666] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:43.683] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:43.749] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:44.200] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:44.450] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:44.633] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:45.199] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:45.867] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:46.116] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:46.617] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:46.733] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:47.533] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:48.666] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:49.168] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:49.200] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:49.450] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:49.967] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:49.967] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:50.084] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:50.133] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:50.199] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:50.599] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:51.500] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:52.516] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:52.884] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:06:53.217] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:07:00.633] * Saving spawns...
-[29.10.21 16:07:00.634] * Saving objects...
-[29.10.21 16:07:00.664] * 17967 objects are successfully saved
-[29.10.21 16:07:00.670] * Game weapons.sav is successfully saved to file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\weapons.sav'
-[29.10.21 16:07:03.665] ! [R_occlusion::cleanup_lost]: cleanup 1 lost queries
-[29.10.21 16:07:03.724] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:07:03.857] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:07:04.350] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:07:04.467] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:07:05.284] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:07:05.651] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:08:56.383] * [R_occlusion::occq_destroy]: fids[65] used[65] pool[65]
-[29.10.21 16:08:56.383] * [R_occlusion::occq_destroy]: released [0] used and [65] pool queries
-[29.10.21 16:08:56.608] * DVB created: 16384K
-[29.10.21 16:08:56.608] * DIB created: 512K
-[29.10.21 16:08:57.521] * RM_Dump: textures  : 1986
-[29.10.21 16:08:57.521] * RM_Dump: rtargets  : 22
-[29.10.21 16:08:57.521] * RM_Dump: vs        : 64
-[29.10.21 16:08:57.521] * RM_Dump: ps        : 86
-[29.10.21 16:08:57.521] * RM_Dump: dcl       : 19
-[29.10.21 16:08:57.521] * RM_Dump: states    : 78
-[29.10.21 16:08:57.521] * RM_Dump: tex_list  : 1556
-[29.10.21 16:08:57.521] * RM_Dump: matrices  : 0
-[29.10.21 16:08:57.521] * RM_Dump: lst_constants: 0
-[29.10.21 16:08:57.521] * RM_Dump: v_passes  : 2228
-[29.10.21 16:08:57.521] * RM_Dump: v_elements: 2232
-[29.10.21 16:08:57.521] * RM_Dump: v_shaders : 1377
-[29.10.21 16:08:57.521] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
-[29.10.21 16:08:57.522] * GPU vertex cache: recognized, 24
-[29.10.21 16:08:57.522] *** RESET [0 ms]
-[29.10.21 16:08:58.198] * MEMORY USAGE: 2359645 K
-[29.10.21 16:08:58.198] * End of synchronization A[1] R[1]
-[29.10.21 16:09:00.858] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:01.139] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:01.489] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:01.954] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:01.985] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:02.505] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:02.772] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:02.855] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:03.155] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:03.689] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:03.822] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:04.173] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:04.423] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:05.088] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:05.605] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:06.121] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:06.489] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:06.755] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:06.889] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:06.956] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:07.122] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:07.522] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:07.772] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:07.822] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:08.688] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:08.822] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:08.922] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:09.339] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:10.088] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:10.239] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:10.772] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:10.772] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:11.122] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:11.922] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:12.271] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:12.675] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:12.823] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:13.222] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:15.155] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:15.840] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:16.439] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:16.905] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:16.922] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:17.122] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:17.545] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:18.007] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:18.223] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:18.257] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:18.257] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:18.289] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:18.506] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:18.891] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:19.173] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:20.239] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:20.455] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:21.271] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:21.638] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:22.989] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:23.718] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:24.639] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:25.122] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:25.372] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:26.355] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:28.707] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:30.124] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:30.358] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:32.405] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:33.391] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:33.707] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:34.190] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:37.374] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:38.423] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:39.425] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:40.208] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:40.724] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:40.824] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:42.757] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:45.391] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:45.507] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:45.824] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:46.874] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:48.741] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:50.475] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:51.142] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:51.441] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:52.475] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:54.491] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:09:57.475] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:00.076] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:00.875] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:01.757] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:01.841] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:04.230] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:05.140] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:05.857] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:07.275] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:07.392] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:07.558] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:07.691] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:07.775] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:07.992] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:08.141] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:08.425] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:08.509] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:09.191] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:09.208] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:09.808] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:10.408] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:10.691] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:11.291] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:11.341] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:11.491] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:11.525] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:11.758] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:11.858] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:12.158] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:13.758] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:14.376] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:14.608] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:14.624] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:14.874] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:15.009] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:15.509] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:15.841] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:16.475] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:16.558] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:17.226] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
-[29.10.21 16:10:20.621] - Disconnect
-[29.10.21 16:10:22.267] - Destroying level
-[29.10.21 16:10:22.503] DestroySingleton::RefCounter: 0
-[29.10.21 16:10:22.504] DestroySingleton::RefCounter: -646
-[29.10.21 16:10:22.505] DestroySingleton::RefCounter: 0
-[29.10.21 16:10:22.509] DestroySingleton::RefCounter: 0
-[29.10.21 16:10:22.509] DestroySingleton::RefCounter: 0
-[29.10.21 16:10:22.519] Input:  1
-[29.10.21 16:10:22.531] Config-file [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\user.ltx] saved successfully
-[29.10.21 16:10:22.751] Destroying Direct3D...
-[29.10.21 16:10:22.751] * [R_occlusion::occq_destroy]: fids[177] used[177] pool[177]
-[29.10.21 16:10:22.751] * [R_occlusion::occq_destroy]: released [0] used and [177] pool queries
-[29.10.21 16:10:22.814] * RM_Dump: textures  : 9
-[29.10.21 16:10:22.814] *        :   1: ui\seq\ui_hint_pane
-[29.10.21 16:10:22.814] *        :   1: ui\ui_common
-[29.10.21 16:10:22.814] *        :   1: ui\ui_hud
-[29.10.21 16:10:22.814] *        :   1: ui\ui_icon_equipment
-[29.10.21 16:10:22.814] *        :   1: ui\ui_icons_outfit
-[29.10.21 16:10:22.814] *        :   1: ui\ui_iconstotal
-[29.10.21 16:10:22.814] *        :   1: ui\ui_inventory
-[29.10.21 16:10:22.814] *        :   1: ui\ui_inventory2
-[29.10.21 16:10:22.814] *        :   1: ui\ui_numpad
-[29.10.21 16:10:22.814] * RM_Dump: rtargets  : 0
-[29.10.21 16:10:22.814] * RM_Dump: vs        : 1
-[29.10.21 16:10:22.814] *        :   9: null
-[29.10.21 16:10:22.814] * RM_Dump: ps        : 1
-[29.10.21 16:10:22.814] *        :   9: null
-[29.10.21 16:10:22.814] * RM_Dump: dcl       : 0
-[29.10.21 16:10:22.814] * RM_Dump: states    : 1
-[29.10.21 16:10:22.814] * RM_Dump: tex_list  : 9
-[29.10.21 16:10:22.814] * RM_Dump: matrices  : 0
-[29.10.21 16:10:22.814] * RM_Dump: lst_constants: 0
-[29.10.21 16:10:22.814] * RM_Dump: v_passes  : 9
-[29.10.21 16:10:22.814] * RM_Dump: v_elements: 9
-[29.10.21 16:10:22.814] * RM_Dump: v_shaders : 9
-[29.10.21 16:10:22.814] refCount:pBaseZB 1
-[29.10.21 16:10:22.814] refCount:pBaseRT 1
-[29.10.21 16:10:22.814] DeviceREF: 30
-[29.10.21 16:10:22.827] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[29.10.21 16:10:22.827] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[01.11.21 23:51:05.886] * Detected CPU: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz [GenuineIntel], F6/M158/S10
+[01.11.21 23:51:05.887] * CPU features: RDTSC, MMX, SSE, SSE2, SSE3, MONITOR/MWAIT, SSSE3, SSE4.1, SSE4.2, AVX, AVX2
+[01.11.21 23:51:05.887] * CPU cores: [6], threads: [6]
+[01.11.21 23:51:05.887] * CPU0 current freq: 2808 MHz, max freq: 2808 MHz
+[01.11.21 23:51:05.887] * CPU1 current freq: 2808 MHz, max freq: 2808 MHz
+[01.11.21 23:51:05.887] * CPU2 current freq: 2808 MHz, max freq: 2808 MHz
+[01.11.21 23:51:05.888] * CPU3 current freq: 2808 MHz, max freq: 2808 MHz
+[01.11.21 23:51:05.888] * CPU4 current freq: 2808 MHz, max freq: 2808 MHz
+[01.11.21 23:51:05.888] * CPU5 current freq: 2808 MHz, max freq: 2808 MHz
+[01.11.21 23:51:05.888] Initializing File System...
+[01.11.21 23:51:05.889] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db0], size: [678577379]
+[01.11.21 23:51:05.954] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db1], size: [708434331]
+[01.11.21 23:51:05.962] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db2], size: [671169415]
+[01.11.21 23:51:05.965] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db3], size: [684792231]
+[01.11.21 23:51:05.974] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db4], size: [671392842]
+[01.11.21 23:51:06.365] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db5], size: [697475082]
+[01.11.21 23:51:06.450] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db6], size: [672288151]
+[01.11.21 23:51:06.454] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db7], size: [672462598]
+[01.11.21 23:51:06.494] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db8], size: [293378144]
+[01.11.21 23:51:06.513] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db9], size: [79312307]
+[01.11.21 23:51:06.556] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dba], size: [22884835]
+[01.11.21 23:51:06.560] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbb], size: [55194918]
+[01.11.21 23:51:06.569] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbc], size: [160948]
+[01.11.21 23:51:06.570] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbd], size: [101014]
+[01.11.21 23:51:06.570] using fs-ltx fsgame.ltx
+[01.11.21 23:51:06.571] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\]
+[01.11.21 23:51:06.571]   files: [6]
+[01.11.21 23:51:06.576] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\]
+[01.11.21 23:51:06.576]   files: [16]
+[01.11.21 23:51:06.576] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\spawns\]
+[01.11.21 23:51:06.576]   files: [4]
+[01.11.21 23:51:06.576] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\anims\]
+[01.11.21 23:51:06.577]   files: [24]
+[01.11.21 23:51:06.579] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\]
+[01.11.21 23:51:06.579]   files: [12]
+[01.11.21 23:51:06.580] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\meshes\]
+[01.11.21 23:51:06.581]   files: [12]
+[01.11.21 23:51:06.613] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\meshes\]
+[01.11.21 23:51:06.613]   files: [12]
+[01.11.21 23:51:06.644] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\shaders\]
+[01.11.21 23:51:06.644]   files: [7]
+[01.11.21 23:51:06.660] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\sounds\]
+[01.11.21 23:51:06.660]   files: [22]
+[01.11.21 23:51:06.691] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\textures\]
+[01.11.21 23:51:06.692]   files: [67]
+[01.11.21 23:51:06.791] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\scripts\]
+[01.11.21 23:51:06.792]   files: [129]
+[01.11.21 23:51:06.793] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\]
+[01.11.21 23:51:06.793]   files: [30]
+[01.11.21 23:51:06.800] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\]
+[01.11.21 23:51:06.800]   files: [12]
+[01.11.21 23:51:06.801] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\]
+[01.11.21 23:51:06.801]   files: [28]
+[01.11.21 23:51:06.801] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\logs\]
+[01.11.21 23:51:06.801]   files: [153]
+[01.11.21 23:51:06.801] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\screenshots\]
+[01.11.21 23:51:06.801]   files: [11]
+[01.11.21 23:51:06.806] FS: 36263 files cached, 7465Kb memory used.
+[01.11.21 23:51:06.806] Init FileSystem 0.917964 sec
+[01.11.21 23:51:06.806] [OGSR Engine (x64)] build date: [Sep 22 2021 10:23:51]
+[01.11.21 23:51:06.806] [AppVeyor] build version: [2.1.293], repo: [OGSR/OGSR-Engine]
+[01.11.21 23:51:06.806] [_MSC_FULL_VER]: [191627045], [_MSVC_LANG]: [201703L]
+[01.11.21 23:51:06.806] Working Directory: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64]
+[01.11.21 23:51:06.806] CommandLine: ["Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe"  -high]
+[01.11.21 23:51:06.898] Initializing Engine...
+[01.11.21 23:51:06.899] Starting INPUT device...
+[01.11.21 23:51:06.981] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[01.11.21 23:51:06.981] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[01.11.21 23:51:07.011] refCount:m_pAdapter 1
+[01.11.21 23:51:07.011] refCount:pFactory 1
+[01.11.21 23:51:07.011] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[01.11.21 23:51:07.011] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[01.11.21 23:51:07.149] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[01.11.21 23:51:07.149] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[01.11.21 23:51:07.150] --[CEngineAPI::CreateRendererList] Available render modes [5]:
+[01.11.21 23:51:07.150] --  [renderer_r2a]
+[01.11.21 23:51:07.150] --  [renderer_r2]
+[01.11.21 23:51:07.150] --  [renderer_r2.5]
+[01.11.21 23:51:07.150] --  [renderer_r3]
+[01.11.21 23:51:07.150] --  [renderer_r4]
+[01.11.21 23:51:07.150] Executing config-script "user.ltx"...
+[01.11.21 23:51:07.151] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
+[01.11.21 23:51:07.151] [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\user.ltx] successfully loaded.
+[01.11.21 23:51:07.151] --Loading DLL: [xrRender_R2.dll]
+[01.11.21 23:51:07.152] --Loading DLL: [xrGame.dll]
+[01.11.21 23:51:07.168] --------------------------------------------------------------------------------
+[01.11.21 23:51:07.168] [8143MB] physical memory installed, [4100MB] available, [49] percent of memory in use
+[01.11.21 23:51:07.168] PageFile usage: [47MB], Peak PageFile usage: [93MB]
+[01.11.21 23:51:07.168] --------------------------------------------------------------------------------
+[01.11.21 23:51:07.168] * [ D3D ]: textures[0 K]
+[01.11.21 23:51:07.168] * [x-ray]: process heap[24383 K], render[0 K]
+[01.11.21 23:51:07.168] * [x-ray]: economy: strings[4916 K], smem[0 K]
+[01.11.21 23:51:07.169] SOUND: OpenAL: enumerate devices...
+[01.11.21 23:51:07.169] SOUND: OpenAL: EnumerationExtension Present
+[01.11.21 23:51:07.290] devices Generic Software
+[01.11.21 23:51:07.290] SOUND: OpenAL: system  default SndDevice name is Generic Software
+[01.11.21 23:51:07.557] SOUND: OpenAL: All available devices:
+[01.11.21 23:51:07.557] 1. Generic Software, Spec Version 1.1 (default) eax[2] efx[no] xram[no]
+[01.11.21 23:51:07.557] 2. OpenAL Soft, Spec Version 1.1  eax[0] efx[yes] xram[no]
+[01.11.21 23:51:07.557] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx"...
+[01.11.21 23:51:07.558] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx] successfully loaded.
+[01.11.21 23:51:07.558] Executing config-script "user.ltx"...
+[01.11.21 23:51:07.559] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\rspec_high.ltx"...
+[01.11.21 23:51:07.559] ! Unknown command:  r2_sun_shafts
+[01.11.21 23:51:07.559] ! Unknown command:  r__supersample
+[01.11.21 23:51:07.559] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\rspec_high.ltx] successfully loaded.
+[01.11.21 23:51:07.559] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx"...
+[01.11.21 23:51:07.559] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx] successfully loaded.
+[01.11.21 23:51:07.560] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
+[01.11.21 23:51:07.560] [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\user.ltx] successfully loaded.
+[01.11.21 23:51:07.560] SOUND: Selected device is Generic Software
+[01.11.21 23:51:07.593] [OpenAL] EAX 2.0 extension: present
+[01.11.21 23:51:07.593] [OpenAL] EAX 2.0 deferred: present
+[01.11.21 23:51:07.596] * sound : cache: 65537 kb, 4856 lines, 13820 bpl
+[01.11.21 23:51:07.624] Starting RENDER device...
+[01.11.21 23:51:07.664] * GPU [vendor:10DE]-[device:1C81]: NVIDIA GeForce GTX 1050
+[01.11.21 23:51:07.664] * GPU driver: 30.0.14.7196
+[01.11.21 23:51:07.764] * CREATE: DeviceREF: 1
+[01.11.21 23:51:07.765] * Vertex Processor: PURE HARDWARE
+[01.11.21 23:51:07.765] *     Texture memory: 4072 M
+[01.11.21 23:51:07.765] *          DDI-level: 9.0
+[01.11.21 23:51:07.767] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+[01.11.21 23:51:07.767] * GPU vertex cache: unrecognized, 16
+[01.11.21 23:51:07.768] * DVB created: 16384K
+[01.11.21 23:51:07.768] * DIB created: 512K
+[01.11.21 23:51:07.778] ! Version conflict in shader 'models\lightplanes_00'
+[01.11.21 23:51:07.778] ! Version conflict in shader 'models\lightplanesself'
+[01.11.21 23:51:07.778] ! Version conflict in shader 'models\model_puh'
+[01.11.21 23:51:07.778] ! Version conflict in shader 'models\model_refl'
+[01.11.21 23:51:07.778] ! Version conflict in shader 'models\xbrainglass'
+[01.11.21 23:51:07.778] ! Version conflict in shader 'models\xdistortcolorlinv'
+[01.11.21 23:51:07.778] ! Version conflict in shader 'models\xglass'
+[01.11.21 23:51:07.778] ! Version conflict in shader 'models\xglass2'
+[01.11.21 23:51:07.778] ! Version conflict in shader 'models\xlens'
+[01.11.21 23:51:07.778] ! Version conflict in shader 'selflight_static'
+[01.11.21 23:51:07.779] [CTextureDescrMngr::LoadLTX] count of *textures*.ltx files: [1]
+[01.11.21 23:51:07.888] * NULLRT supported
+[01.11.21 23:51:07.888] * ...and used
+[01.11.21 23:51:07.888] * HWDST/PCF supported and used
+[01.11.21 23:51:07.888] * NV-DBT supported and used
+[01.11.21 23:51:08.910] --LUA version: [LuaJIT 2.1.0-beta3]
+[01.11.21 23:51:08.911] --_G loaded from: stack traceback:
+- 	...n\stalker shadow of chernobyl\gamedata\scripts\_g.script:1855: in main chunk
+[01.11.21 23:51:08.951] Starting engine...
+[01.11.21 23:52:44.920] * phase time: 14 ms
+[01.11.21 23:52:44.947] * phase cmem: 180904 K
+[01.11.21 23:52:45.000] --LUA version: [LuaJIT 2.1.0-beta3]
+[01.11.21 23:52:45.000] --_G loaded from: stack traceback:
+- 	...n\stalker shadow of chernobyl\gamedata\scripts\_g.script:1855: in main chunk
+[01.11.21 23:52:45.019] * phase time: 99 ms
+[01.11.21 23:52:45.044] * phase cmem: 149662 K
+[01.11.21 23:52:45.049] * Loading spawn registry...
+[01.11.21 23:52:45.606] * 8976 spawn points are successfully loaded
+[01.11.21 23:52:45.606] * Loading objects...
+[01.11.21 23:52:45.926] * 17967 objects are successfully loaded
+[01.11.21 23:52:46.464] * Game weapons is successfully loaded from file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\weapons.sav' (1.420s)
+[01.11.21 23:52:46.464] * phase time: 1445 ms
+[01.11.21 23:52:46.509] * phase cmem: 197333 K
+[01.11.21 23:52:46.553] # Player not found. New player created.
+[01.11.21 23:52:46.553] !!xrServer::Check_GameSpy_CDKey_Success - 1
+[01.11.21 23:52:46.553] * client : connection accepted - <>
+[01.11.21 23:52:46.574] * phase time: 109 ms
+[01.11.21 23:52:46.618] * phase cmem: 197386 K
+[01.11.21 23:52:46.619] * phase time: 45 ms
+[01.11.21 23:52:46.664] * phase cmem: 197386 K
+[01.11.21 23:52:47.404] --[ISpatial_DB::initialize] bbc is [0.0, 25.2, -0.0], bbd is [512.0, 47.0, 512.0]
+[01.11.21 23:52:47.404] --[ISpatial_DB::initialize] bbc is [0.0, 25.2, -0.0], bbd is [512.0, 47.0, 512.0]
+[01.11.21 23:52:47.405] * phase time: 786 ms
+[01.11.21 23:52:47.450] * phase cmem: 255495 K
+[01.11.21 23:52:47.630] * phase time: 225 ms
+[01.11.21 23:52:47.675] * phase cmem: 258797 K
+[01.11.21 23:52:47.679] * [Loading VB] 65435 verts, 2044 Kb
+[01.11.21 23:52:47.690] * [Loading VB] 65236 verts, 2038 Kb
+[01.11.21 23:52:47.698] * [Loading VB] 65530 verts, 2047 Kb
+[01.11.21 23:52:47.706] * [Loading VB] 65534 verts, 2047 Kb
+[01.11.21 23:52:47.714] * [Loading VB] 65535 verts, 2047 Kb
+[01.11.21 23:52:47.722] * [Loading VB] 65532 verts, 2047 Kb
+[01.11.21 23:52:47.730] * [Loading VB] 65535 verts, 2047 Kb
+[01.11.21 23:52:47.740] * [Loading VB] 65534 verts, 2047 Kb
+[01.11.21 23:52:47.748] * [Loading VB] 65535 verts, 2047 Kb
+[01.11.21 23:52:47.756] * [Loading VB] 65533 verts, 2047 Kb
+[01.11.21 23:52:47.764] * [Loading VB] 65535 verts, 2047 Kb
+[01.11.21 23:52:47.772] * [Loading VB] 57122 verts, 1785 Kb
+[01.11.21 23:52:47.778] * [Loading VB] 65535 verts, 2047 Kb
+[01.11.21 23:52:47.786] * [Loading VB] 65533 verts, 2047 Kb
+[01.11.21 23:52:47.794] * [Loading VB] 65534 verts, 2047 Kb
+[01.11.21 23:52:47.803] * [Loading VB] 65534 verts, 2047 Kb
+[01.11.21 23:52:47.811] * [Loading VB] 65535 verts, 2047 Kb
+[01.11.21 23:52:47.819] * [Loading VB] 43641 verts, 1363 Kb
+[01.11.21 23:52:47.825] * [Loading IB] 1048575 indices, 2047 Kb
+[01.11.21 23:52:47.833] * [Loading IB] 1048575 indices, 2047 Kb
+[01.11.21 23:52:47.841] * [Loading IB] 1048575 indices, 2047 Kb
+[01.11.21 23:52:47.851] * [Loading IB] 1048575 indices, 2047 Kb
+[01.11.21 23:52:47.860] * [Loading IB] 1048575 indices, 2047 Kb
+[01.11.21 23:52:47.870] * [Loading IB] 1048575 indices, 2047 Kb
+[01.11.21 23:52:47.878] * [Loading IB] 780369 indices, 1524 Kb
+[01.11.21 23:52:47.885] * [Loading VB] 65534 verts, 767 Kb
+[01.11.21 23:52:47.890] * [Loading VB] 65535 verts, 767 Kb
+[01.11.21 23:52:47.894] * [Loading VB] 65535 verts, 767 Kb
+[01.11.21 23:52:47.901] * [Loading VB] 65535 verts, 767 Kb
+[01.11.21 23:52:47.904] * [Loading VB] 65535 verts, 767 Kb
+[01.11.21 23:52:47.905] * [Loading VB] 65535 verts, 767 Kb
+[01.11.21 23:52:47.909] * [Loading VB] 65532 verts, 767 Kb
+[01.11.21 23:52:47.913] * [Loading VB] 54604 verts, 639 Kb
+[01.11.21 23:52:47.914] * [Loading IB] 1048575 indices, 2047 Kb
+[01.11.21 23:52:47.924] * [Loading IB] 1048575 indices, 2047 Kb
+[01.11.21 23:52:47.933] * [Loading IB] 1048575 indices, 2047 Kb
+[01.11.21 23:52:47.942] * [Loading IB] 950730 indices, 1856 Kb
+[01.11.21 23:52:47.952] * phase time: 321 ms
+[01.11.21 23:52:47.997] * phase cmem: 322822 K
+[01.11.21 23:52:48.187] * phase time: 235 ms
+[01.11.21 23:52:48.233] * phase cmem: 325562 K
+[01.11.21 23:52:48.248] * [DETAILS] VertexConsts(256), Batch(61)
+[01.11.21 23:52:48.248] * [DETAILS] 40687 v(20), 26352 p
+[01.11.21 23:52:48.249] * [DETAILS] Batch(61), VB(794K), IB(154K)
+[01.11.21 23:52:48.249] * phase time: 61 ms
+[01.11.21 23:52:48.295] * phase cmem: 326578 K
+[01.11.21 23:52:48.296] * Loading HOM: z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\l05_bar\level.hom
+[01.11.21 23:52:48.302] * phase time: 52 ms
+[01.11.21 23:52:48.348] * phase cmem: 326919 K
+[01.11.21 23:52:48.350] * phase time: 47 ms
+[01.11.21 23:52:48.396] * phase cmem: 326919 K
+[01.11.21 23:52:48.408] - Game configuring : Started 
+[01.11.21 23:52:48.420] - Game configuring : Finished 
+[01.11.21 23:52:48.527] * phase time: 176 ms
+[01.11.21 23:52:48.574] * phase cmem: 341797 K
+[01.11.21 23:52:53.464] * t-report - base: 1307, 1055986 K
+[01.11.21 23:52:53.464] * t-report - lmap: 5, 5120 K
+[01.11.21 23:52:53.464] * phase time: 4937 ms
+[01.11.21 23:52:53.522] * phase cmem: 1454413 K
+[01.11.21 23:52:53.539] * phase time: 74 ms
+[01.11.21 23:52:53.593] * phase cmem: 1454417 K
+[01.11.21 23:52:53.657] --------------------------------------------------------------------------------
+[01.11.21 23:52:53.657] [8143MB] physical memory installed, [2654MB] available, [67] percent of memory in use
+[01.11.21 23:52:53.657] PageFile usage: [1753MB], Peak PageFile usage: [1755MB]
+[01.11.21 23:52:53.657] --------------------------------------------------------------------------------
+[01.11.21 23:52:53.657] * [ D3D ]: textures[1061106 K]
+[01.11.21 23:52:53.657] * [x-ray]: process heap[1453795 K], render[0 K]
+[01.11.21 23:52:53.657] * [x-ray]: economy: strings[7425 K], smem[0 K]
+[01.11.21 23:52:55.145] ! auto-generated bump map: wpn\fwr_rnm_016\upgrades\silencer\sil_45_bump#
+[01.11.21 23:52:55.146] ! auto-generated bump map: wpn\fwr_rnm_016\upgrades\silencer\sil_45_bump
+[01.11.21 23:52:57.064] * [CPatrolPathStorage::safe_path]: path[bar_barman_hole_look] pp[name00|a=barman_tv] level_vertex_id[4294967295] -> 36053
+[01.11.21 23:52:57.782] ! auto-generated bump map: wpn\ots_33\wpn_ots33_gps_bump#
+[01.11.21 23:52:57.792] ! auto-generated bump map: wpn\ots_33\wpn_ots33_frame_bump#
+[01.11.21 23:52:57.799] ! auto-generated bump map: wpn\ots_33\wpn_ots33_mag_bump#
+[01.11.21 23:52:59.426] * [CPatrolPathStorage::safe_path]: path[bar_house_look] pp[wp03|a=wait|t=25000] level_vertex_id[4294967295] -> 33195
+[01.11.21 23:53:00.688] ! auto-generated bump map: wpn\wpn_p90_bump.dds#
+[01.11.21 23:53:00.862] ! auto-generated bump map: wpn\tec-9\wpn_tec_kg9_gun_bump#
+[01.11.21 23:53:00.873] ! auto-generated bump map: wpn\tec-9\wpn_tec_kg9_mag_bump#
+[01.11.21 23:53:00.918] ! auto-generated bump map: wpn\mac10\wpn_mac10_grip_bump#
+[01.11.21 23:53:00.927] ! auto-generated bump map: wpn\mac10\wpn_mac10_upper_bump#
+[01.11.21 23:53:00.933] ! auto-generated bump map: wpn\mac10\wpn_mac10_mag_bump#
+[01.11.21 23:53:00.939] ! auto-generated bump map: wpn\mac10\wpn_mac10_lower_bump#
+[01.11.21 23:53:00.948] ! auto-generated bump map: wpn\silencer\wpn_9mm_silencer_bump#
+[01.11.21 23:53:00.993] ! auto-generated bump map: wpn\benelli\wpn_short_body_bump#
+[01.11.21 23:53:01.005] ! auto-generated bump map: wpn\benelli\wpn_short_barrel_bump#
+[01.11.21 23:53:01.144] ! Can't find sound [weapons\empty.ogg]
+[01.11.21 23:53:01.799] ! auto-generated bump map: wpn\smg_tmp\wpn_tmp_body_bump#
+[01.11.21 23:53:01.811] ! auto-generated bump map: wpn\smg_tmp\wpn_tmp_mag_bump#
+[01.11.21 23:53:01.857] ! Can't find texture 'death_mod\difmap'
+[01.11.21 23:53:04.718] * MEMORY USAGE: 2328028 K
+[01.11.21 23:53:04.718] * End of synchronization A[1] R[1]
+[01.11.21 23:53:04.721] * phase time: 11257 ms
+[01.11.21 23:53:04.825] * phase cmem: 2328028 K
+[01.11.21 23:55:21.854] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:22.115] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:22.198] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:22.414] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:25.763] * [R_occlusion::occq_destroy]: fids[125] used[125] pool[125]
+[01.11.21 23:55:25.763] * [R_occlusion::occq_destroy]: released [0] used and [125] pool queries
+[01.11.21 23:55:25.976] * DVB created: 16384K
+[01.11.21 23:55:25.976] * DIB created: 512K
+[01.11.21 23:55:26.909] * RM_Dump: textures  : 1977
+[01.11.21 23:55:26.909] * RM_Dump: rtargets  : 22
+[01.11.21 23:55:26.909] * RM_Dump: vs        : 64
+[01.11.21 23:55:26.909] * RM_Dump: ps        : 85
+[01.11.21 23:55:26.909] * RM_Dump: dcl       : 19
+[01.11.21 23:55:26.909] * RM_Dump: states    : 77
+[01.11.21 23:55:26.909] * RM_Dump: tex_list  : 1547
+[01.11.21 23:55:26.909] * RM_Dump: matrices  : 0
+[01.11.21 23:55:26.909] * RM_Dump: lst_constants: 0
+[01.11.21 23:55:26.909] * RM_Dump: v_passes  : 2222
+[01.11.21 23:55:26.909] * RM_Dump: v_elements: 2226
+[01.11.21 23:55:26.909] * RM_Dump: v_shaders : 1369
+[01.11.21 23:55:26.909] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+[01.11.21 23:55:26.909] * GPU vertex cache: recognized, 24
+[01.11.21 23:55:26.909] *** RESET [1147 ms]
+[01.11.21 23:55:27.626] * MEMORY USAGE: 2311643 K
+[01.11.21 23:55:27.626] * End of synchronization A[1] R[1]
+[01.11.21 23:55:27.630] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:27.630] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:27.630] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:27.650] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:28.366] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:28.366] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:28.366] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:28.366] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:30.732] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:31.048] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:31.435] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:31.749] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:32.015] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:32.015] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:32.166] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:32.283] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:32.799] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:32.865] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:32.915] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:33.015] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:33.083] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:33.701] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:33.732] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:34.347] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:34.347] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:34.783] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:34.832] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:35.583] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:35.716] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:36.266] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:36.432] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:37.048] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:37.415] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:37.783] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:38.532] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:38.732] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:38.932] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:39.065] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:39.683] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:39.832] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:41.082] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:41.166] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:42.783] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:42.866] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:42.916] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:43.033] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:43.183] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:44.433] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:45.366] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:46.233] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:46.515] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:46.832] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:47.216] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:47.233] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:47.316] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:47.865] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:47.915] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:48.116] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:48.416] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:48.699] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:49.200] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:50.566] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:50.566] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:50.983] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:51.233] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:51.266] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:51.466] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:52.983] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:53.267] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:54.082] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:54.602] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:54.867] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:55.019] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:55.168] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:55.232] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:55.649] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:55.883] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:56.450] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:56.600] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:56.667] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:57.217] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:58.500] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:58.583] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:58.800] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:58.982] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:59.219] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:59.232] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:59.500] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:55:59.767] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:01.449] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:01.667] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:02.216] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:02.566] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:03.849] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:04.767] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:05.000] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:05.149] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:05.167] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:06.333] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:07.184] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:07.301] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:07.884] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:07.884] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:07.933] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:08.217] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:08.483] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:08.850] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:08.969] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:09.668] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:09.784] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:11.220] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:11.220] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:11.550] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[01.11.21 23:56:12.183] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:02.547] * [R_occlusion::occq_destroy]: fids[121] used[121] pool[121]
+[02.11.21 00:00:02.547] * [R_occlusion::occq_destroy]: released [0] used and [121] pool queries
+[02.11.21 00:00:02.795] * DVB created: 16384K
+[02.11.21 00:00:02.795] * DIB created: 512K
+[02.11.21 00:00:03.669] * RM_Dump: textures  : 1979
+[02.11.21 00:00:03.669] * RM_Dump: rtargets  : 22
+[02.11.21 00:00:03.669] * RM_Dump: vs        : 64
+[02.11.21 00:00:03.669] * RM_Dump: ps        : 85
+[02.11.21 00:00:03.669] * RM_Dump: dcl       : 19
+[02.11.21 00:00:03.669] * RM_Dump: states    : 77
+[02.11.21 00:00:03.669] * RM_Dump: tex_list  : 1549
+[02.11.21 00:00:03.669] * RM_Dump: matrices  : 0
+[02.11.21 00:00:03.669] * RM_Dump: lst_constants: 0
+[02.11.21 00:00:03.669] * RM_Dump: v_passes  : 2224
+[02.11.21 00:00:03.669] * RM_Dump: v_elements: 2228
+[02.11.21 00:00:03.669] * RM_Dump: v_shaders : 1371
+[02.11.21 00:00:03.669] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+[02.11.21 00:00:03.669] * GPU vertex cache: recognized, 24
+[02.11.21 00:00:03.669] *** RESET [1123 ms]
+[02.11.21 00:00:03.933] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:03.964] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:04.147] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:04.388] * MEMORY USAGE: 2317563 K
+[02.11.21 00:00:04.389] * End of synchronization A[1] R[1]
+[02.11.21 00:00:04.411] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:05.028] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:05.895] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:05.993] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:06.044] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:06.143] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:06.544] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:41.086] * [R_occlusion::occq_destroy]: fids[121] used[121] pool[121]
+[02.11.21 00:00:41.087] * [R_occlusion::occq_destroy]: released [0] used and [121] pool queries
+[02.11.21 00:00:41.295] * DVB created: 16384K
+[02.11.21 00:00:41.295] * DIB created: 512K
+[02.11.21 00:00:42.161] * RM_Dump: textures  : 1979
+[02.11.21 00:00:42.161] * RM_Dump: rtargets  : 22
+[02.11.21 00:00:42.161] * RM_Dump: vs        : 64
+[02.11.21 00:00:42.161] * RM_Dump: ps        : 85
+[02.11.21 00:00:42.161] * RM_Dump: dcl       : 19
+[02.11.21 00:00:42.161] * RM_Dump: states    : 77
+[02.11.21 00:00:42.161] * RM_Dump: tex_list  : 1549
+[02.11.21 00:00:42.161] * RM_Dump: matrices  : 0
+[02.11.21 00:00:42.161] * RM_Dump: lst_constants: 0
+[02.11.21 00:00:42.161] * RM_Dump: v_passes  : 2224
+[02.11.21 00:00:42.161] * RM_Dump: v_elements: 2228
+[02.11.21 00:00:42.161] * RM_Dump: v_shaders : 1371
+[02.11.21 00:00:42.161] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+[02.11.21 00:00:42.161] * GPU vertex cache: recognized, 24
+[02.11.21 00:00:42.161] *** RESET [1076 ms]
+[02.11.21 00:00:42.197] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:42.426] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:42.507] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:42.747] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:42.920] * MEMORY USAGE: 2321040 K
+[02.11.21 00:00:42.920] * End of synchronization A[1] R[1]
+[02.11.21 00:00:43.230] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:44.095] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:44.279] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:44.411] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:44.765] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:45.779] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:45.829] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:46.246] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:46.579] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:47.045] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:47.295] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:47.846] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:47.930] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:48.011] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:49.263] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:49.278] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:49.546] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:49.945] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:50.395] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:50.430] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:50.646] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:51.195] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:00:51.346] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:05.768] * [R_occlusion::occq_destroy]: fids[120] used[120] pool[120]
+[02.11.21 00:01:05.768] * [R_occlusion::occq_destroy]: released [0] used and [120] pool queries
+[02.11.21 00:01:05.970] * DVB created: 16384K
+[02.11.21 00:01:05.970] * DIB created: 512K
+[02.11.21 00:01:06.838] * RM_Dump: textures  : 1979
+[02.11.21 00:01:06.838] * RM_Dump: rtargets  : 22
+[02.11.21 00:01:06.838] * RM_Dump: vs        : 64
+[02.11.21 00:01:06.838] * RM_Dump: ps        : 85
+[02.11.21 00:01:06.838] * RM_Dump: dcl       : 19
+[02.11.21 00:01:06.838] * RM_Dump: states    : 77
+[02.11.21 00:01:06.838] * RM_Dump: tex_list  : 1549
+[02.11.21 00:01:06.838] * RM_Dump: matrices  : 0
+[02.11.21 00:01:06.838] * RM_Dump: lst_constants: 0
+[02.11.21 00:01:06.838] * RM_Dump: v_passes  : 2224
+[02.11.21 00:01:06.838] * RM_Dump: v_elements: 2228
+[02.11.21 00:01:06.838] * RM_Dump: v_shaders : 1371
+[02.11.21 00:01:06.838] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+[02.11.21 00:01:06.838] * GPU vertex cache: recognized, 24
+[02.11.21 00:01:06.838] *** RESET [1071 ms]
+[02.11.21 00:01:07.183] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:07.402] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:07.540] * MEMORY USAGE: 2318641 K
+[02.11.21 00:01:07.540] * End of synchronization A[1] R[1]
+[02.11.21 00:01:08.480] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:08.529] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:09.399] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:09.529] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:09.813] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:10.263] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:10.397] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:10.580] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:10.763] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:10.912] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:11.080] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:11.979] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:11.997] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:12.730] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:13.464] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:13.530] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:13.946] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:14.430] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:15.330] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:15.330] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:15.912] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:15.930] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:16.062] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:16.165] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:16.812] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:17.464] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:17.497] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:18.430] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:19.347] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:19.613] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:20.797] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:20.846] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:21.513] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:21.547] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:21.846] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:22.147] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:22.547] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:23.181] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:24.099] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:24.281] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:24.780] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:25.030] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:25.548] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:26.031] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:26.530] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:26.664] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:27.147] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:27.231] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:27.414] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:27.531] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:28.131] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:28.248] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:29.947] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:30.013] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:30.214] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:30.313] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:30.714] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:30.747] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:31.230] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:31.415] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:31.799] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:33.212] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:33.262] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:33.562] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:33.563] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:33.647] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:33.662] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:33.948] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:56.038] * [R_occlusion::occq_destroy]: fids[120] used[120] pool[120]
+[02.11.21 00:01:56.038] * [R_occlusion::occq_destroy]: released [0] used and [120] pool queries
+[02.11.21 00:01:56.219] * DVB created: 16384K
+[02.11.21 00:01:56.219] * DIB created: 512K
+[02.11.21 00:01:57.096] * RM_Dump: textures  : 1979
+[02.11.21 00:01:57.096] * RM_Dump: rtargets  : 22
+[02.11.21 00:01:57.096] * RM_Dump: vs        : 64
+[02.11.21 00:01:57.096] * RM_Dump: ps        : 85
+[02.11.21 00:01:57.096] * RM_Dump: dcl       : 19
+[02.11.21 00:01:57.096] * RM_Dump: states    : 77
+[02.11.21 00:01:57.096] * RM_Dump: tex_list  : 1549
+[02.11.21 00:01:57.096] * RM_Dump: matrices  : 0
+[02.11.21 00:01:57.096] * RM_Dump: lst_constants: 0
+[02.11.21 00:01:57.096] * RM_Dump: v_passes  : 2224
+[02.11.21 00:01:57.096] * RM_Dump: v_elements: 2228
+[02.11.21 00:01:57.096] * RM_Dump: v_shaders : 1371
+[02.11.21 00:01:57.096] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+[02.11.21 00:01:57.096] * GPU vertex cache: recognized, 24
+[02.11.21 00:01:57.096] *** RESET [1059 ms]
+[02.11.21 00:01:57.370] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:57.842] * MEMORY USAGE: 2317692 K
+[02.11.21 00:01:57.842] * End of synchronization A[1] R[1]
+[02.11.21 00:01:58.282] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:59.148] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:01:59.564] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:00.433] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:00.764] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:01.046] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:01.714] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:02.113] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:02.465] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:03.365] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:03.383] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:03.582] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:04.149] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:05.583] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:06.699] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:06.715] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:06.732] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:06.915] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:33.228] * [R_occlusion::occq_destroy]: fids[119] used[119] pool[119]
+[02.11.21 00:02:33.229] * [R_occlusion::occq_destroy]: released [0] used and [119] pool queries
+[02.11.21 00:02:33.427] * DVB created: 16384K
+[02.11.21 00:02:33.427] * DIB created: 512K
+[02.11.21 00:02:34.305] * RM_Dump: textures  : 1979
+[02.11.21 00:02:34.305] * RM_Dump: rtargets  : 22
+[02.11.21 00:02:34.305] * RM_Dump: vs        : 64
+[02.11.21 00:02:34.305] * RM_Dump: ps        : 85
+[02.11.21 00:02:34.305] * RM_Dump: dcl       : 19
+[02.11.21 00:02:34.305] * RM_Dump: states    : 77
+[02.11.21 00:02:34.305] * RM_Dump: tex_list  : 1549
+[02.11.21 00:02:34.305] * RM_Dump: matrices  : 0
+[02.11.21 00:02:34.305] * RM_Dump: lst_constants: 0
+[02.11.21 00:02:34.305] * RM_Dump: v_passes  : 2224
+[02.11.21 00:02:34.305] * RM_Dump: v_elements: 2228
+[02.11.21 00:02:34.305] * RM_Dump: v_shaders : 1371
+[02.11.21 00:02:34.305] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+[02.11.21 00:02:34.305] * GPU vertex cache: recognized, 24
+[02.11.21 00:02:34.305] *** RESET [1077 ms]
+[02.11.21 00:02:34.647] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:34.854] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:34.901] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:35.060] * MEMORY USAGE: 2319145 K
+[02.11.21 00:02:35.060] * End of synchronization A[1] R[1]
+[02.11.21 00:02:35.065] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:35.065] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:35.283] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:35.366] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:38.401] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:38.701] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:38.750] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:39.966] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:40.001] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:40.066] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:40.366] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:40.584] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:40.850] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:43.134] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:43.134] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:43.701] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:45.000] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:45.235] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:45.850] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:45.902] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:45.933] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:46.184] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:46.301] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:46.851] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:46.934] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:48.133] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:48.667] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:48.800] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:49.234] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:49.284] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:49.401] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:50.201] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:50.284] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:51.850] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:52.068] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:52.084] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:52.718] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:52.751] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:53.951] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:54.334] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:55.267] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:55.385] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:55.434] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:56.067] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:56.351] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:56.984] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:57.066] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:57.118] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:58.735] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:58.752] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:58.918] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:58.952] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:02:59.585] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:00.272] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:00.318] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:00.434] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:00.451] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:01.034] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:01.501] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:02.183] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:02.932] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:02.983] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:03.000] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:04.185] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:04.385] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:04.419] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:04.585] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:04.834] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:05.518] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:06.334] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:07.019] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:07.019] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:07.986] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:08.103] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:08.103] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:08.486] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:09.019] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:09.851] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:10.318] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:10.368] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:10.368] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:11.352] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:11.835] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:12.336] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:12.535] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:13.103] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:13.103] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:13.602] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:13.703] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:14.018] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:14.085] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:14.152] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:15.318] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:15.686] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:16.351] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:16.553] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:16.935] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:17.652] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:18.203] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:19.085] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:19.336] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:19.368] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:19.735] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:19.886] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:20.985] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:21.668] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:21.768] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:22.368] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:22.487] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:22.686] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:22.786] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:23.085] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:23.118] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:23.886] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:24.603] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:25.369] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:26.453] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:26.668] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:27.085] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:27.787] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:28.035] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:28.669] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:28.887] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:29.002] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:29.153] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:29.186] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:29.387] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:29.819] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:30.286] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:30.368] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:30.618] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:31.619] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:32.004] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:32.354] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:32.720] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:32.753] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:32.886] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:33.168] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:33.420] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:33.968] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:34.135] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:34.152] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:35.136] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:36.220] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:36.620] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:37.137] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:37.436] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:37.668] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:38.136] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:38.421] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:38.836] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:38.921] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:39.803] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:40.136] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:40.387] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:40.486] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:40.786] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:40.804] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:41.003] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:41.553] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:41.720] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:41.854] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:42.187] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:42.269] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:43.154] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:03:43.353] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:05:13.819] * [R_occlusion::occq_destroy]: fids[120] used[120] pool[120]
+[02.11.21 00:05:13.820] * [R_occlusion::occq_destroy]: released [0] used and [120] pool queries
+[02.11.21 00:05:14.026] * DVB created: 16384K
+[02.11.21 00:05:14.026] * DIB created: 512K
+[02.11.21 00:05:14.907] * RM_Dump: textures  : 1979
+[02.11.21 00:05:14.907] * RM_Dump: rtargets  : 22
+[02.11.21 00:05:14.907] * RM_Dump: vs        : 64
+[02.11.21 00:05:14.907] * RM_Dump: ps        : 85
+[02.11.21 00:05:14.907] * RM_Dump: dcl       : 19
+[02.11.21 00:05:14.907] * RM_Dump: states    : 77
+[02.11.21 00:05:14.907] * RM_Dump: tex_list  : 1549
+[02.11.21 00:05:14.907] * RM_Dump: matrices  : 0
+[02.11.21 00:05:14.907] * RM_Dump: lst_constants: 0
+[02.11.21 00:05:14.907] * RM_Dump: v_passes  : 2224
+[02.11.21 00:05:14.907] * RM_Dump: v_elements: 2228
+[02.11.21 00:05:14.907] * RM_Dump: v_shaders : 1371
+[02.11.21 00:05:14.907] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+[02.11.21 00:05:14.907] * GPU vertex cache: recognized, 24
+[02.11.21 00:05:14.907] *** RESET [1089 ms]
+[02.11.21 00:05:14.945] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:05:15.179] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[02.11.21 00:05:15.210] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]

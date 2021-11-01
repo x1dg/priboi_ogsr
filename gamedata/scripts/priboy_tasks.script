@@ -59,15 +59,15 @@ function remove_variables(task_name, task_objective)
 end
 
 function mark_priboi_supplies()
-	level_tasks.add_location(501501, "crlc_mdl", "Your house and supplies")
+	level_tasks.add_location(501501, "crlc_mdl", "Ваш дом и вещи")
 end
 
 function new_enc_entry()
-	priboy_utils.send_hud_message("РќРѕРІР°СЏ СЃС‚Р°С‚СЊСЏ", "РџСЂРѕРІРµСЂСЊС‚Рµ РџР”Рђ..", nil, 10, nil)
+	priboy_utils.send_hud_message("Новая статья", "Проверьте ПДА..", nil, 10, nil)
 end
 
 function close_case()
-	priboy_utils.send_hud_message("New orders", "Our chopper is waiting for you outside the NPP. Hurry up ...", "commander", 10, nil)
+	priboy_utils.send_hud_message("Новые заказы", "Наш вертолет ждет тебя за пределами АЭС. Поторопись..", "commander", 10, nil)
 end
 
 --[[ ************************ Find uhsf stuff ************************ --]]

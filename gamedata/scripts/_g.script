@@ -1541,3 +1541,1136 @@ quest_section["hunters_toz"]    = true
 quest_section["bar_ecolog_flash"] = true
 quest_section["bar_tiran_pda"]    = true
 quest_section["bar_lucky_pda"]    = true
+
+-- служебные функции для чтения параметров из секций объектов
+function get_string( section, param, def_val, ini_file )
+  ASSERT(
+    section,
+    "get_string: section '%s' not defined, param = %s",
+    tostring( section ), tostring( param )
+  )
+  local ini = ini_file or sys_ini
+  ASSERT(
+    ini:section_exist( section ),
+    "get_string: section '%s' doesn't exist, param = %s",
+    tostring( section ), tostring( param )
+  )
+  if ini:line_exist( section, param ) then
+    return ini:r_string( section, param )
+  else
+    return def_val
+  end
+end
+
+
+function get_string_wq( section, param, def_val, ini_file )
+  ASSERT(
+    section,
+    "get_string_wq: section '%s' not defined, param = %s",
+    tostring( section ), tostring( param )
+  )
+  local ini = ini_file or sys_ini
+  ASSERT(
+    ini:section_exist( section ),
+    "get_string_wq: section '%s' doesn't exist, param = %s",
+    tostring( section ), tostring( param )
+  )
+  if ini:line_exist( section, param ) then
+    return ini:r_string_wq( section, param )
+  else
+    return def_val
+  end
+end
+
+
+function get_u32( section, param, def_val, ini_file )
+  ASSERT(
+    section,
+    "get_u32: section '%s' not defined, param = %s",
+    tostring( section ), tostring( param )
+  )
+  local ini = ini_file or sys_ini
+  ASSERT(
+    ini:section_exist( section ),
+    "get_u32: section '%s' doesn't exist, param = %s",
+    tostring( section ), tostring( param )
+  )
+  if ini:line_exist( section, param ) then
+    return ini:r_u32( section, param )
+  else
+    return def_val
+  end
+end
+
+
+function get_bool( section, param, def_val, ini_file )
+  ASSERT(
+    section,
+    "get_bool: section '%s' not defined, param = %s",
+    tostring( section ), tostring( param )
+  )
+  local ini = ini_file or sys_ini
+  ASSERT(
+    ini:section_exist( section ),
+    "get_bool: section '%s' doesn't exist, param = %s",
+    tostring( section ), tostring( param )
+  )
+  if ini:line_exist( section, param ) then
+    return ini:r_bool( section, param )
+  else
+    return not ( not def_val )
+  end
+end
+
+
+function get_float( section, param, def_val, ini_file )
+  ASSERT(
+    section,
+    "get_float: section '%s' not defined, param = %s",
+    tostring( section ), tostring( param )
+  )
+  local ini = ini_file or sys_ini
+  ASSERT(
+    ini:section_exist( section ),
+    "get_float: section '%s' doesn't exist, param = %s",
+    tostring( section ), tostring( param )
+  )
+  if ini:line_exist( section, param ) then
+    return ini:r_float( section, param )
+  else
+    return def_val
+  end
+end
+
+
+-- получить класс из секции, полезно в том случае, если нет объекта (и недоступен метод clsid), а есть только имя секции
+function get_class( section )
+  ASSERT( section, "get_class: section parameter is not defined" )
+  ASSERT(
+    sys_ini:section_exist( section ),
+    "get_class: section '%s' doesn't exist", tostring( section )
+  )
+  ASSERT(
+    sys_ini:line_exist( section, "class" ),
+    "get_class: there is no 'class' parameter in the section '%s'",
+    tostring( section )
+  )
+  return sys_ini:r_clsid( section, "class" )
+end
+
+
+-- делит строку в виде "aaa,bbb,ccc" на строки "aaa", "bbb", "ccc" и возвращает
+-- их в виде массива
+function split_comma_separated_list( s )
+  return string.explode( ",", s )
+end
+
+
+-- читает время, сохранённое в виде строки со значениями, разделёнными запятой, и конвертирует в значение класса CTime
+function unpack_time_from_string(str_time)
+	local time_values = {}
+	for i,s in ipairs(split_comma_separated_list(str_time)) do
+		local value = tonumber(s)
+		ASSERT(value, "unpack_time_from_string: problem with unpacking saved time '%s', value #%d (%s)", str_time, i, tostring(s))
+		table.insert(time_values, value)
+	end
+	ASSERT(#time_values == 7, "unpack_time_from_string: packed time '%s' has wrong number of components. Must be equal to seven.")
+	local res = game.CTime()
+	res:set(unpack(time_values))
+	return res
+end
+-- упаковать время в виде объекта CTime в строку значений, разделённых запятой
+function pack_time_to_string(t)
+	ASSERT(t, "pack_time_to_string: t is a nil reference")
+	return table.concat({t:get()}, ',')
+end
+-- читает строку вида "s1,s2,s3" и парсит на строковые значения, разделённые запятой, в таблицу вида {s1, s2, s3}
+function get_names(section, param, ini_file)
+	ASSERT(section, "get_names: section not defined, param="..param)
+	local ini = ini_file or sys_ini
+	ASSERT(ini:section_exist(section), "get_names: section '"..section.."' doesn't exist")
+	local s = ini:r_string(section, param)
+	return split_comma_separated_list(s)
+end
+-- читает строку вида "s1,s2,s3" и парсит на численные значения, разделённые запятой, в таблицу вида {n1, n2, n3}
+function get_numbers(section, param, ini_file)
+	local t = {}
+	for i,sv in ipairs(get_names(section, param, ini_file)) do
+		local v = tonumber(sv)
+		ASSERT(v, "get_numbers: can not convert to number item ["..i.."]: "..tostring(sv))
+		table.insert(t, v)
+	end
+	return t
+end
+
+function get_section_keys( section, ini_file )
+  local ini = ini_file or sys_ini
+  ASSERT( ini:section_exist( section ), "get_section_keys: section '" .. section .. "' doesn't exist" )
+  local t = {}
+  for i = 0, ini:line_count( section ) - 1 do
+    local _, key, v = ini:r_line( section, i )
+      table.insert( t, key )
+  end
+  return t
+end
+
+function get_section_keys_and_values( section, ini_file )
+  local ini = ini_file or sys_ini
+  ASSERT( ini:section_exist( section ), "get_section_keys: section '" .. section .. "' doesn't exist" )
+  local t = {}
+  for i = 0, ini:line_count( section ) - 1 do
+  local _, key, v = ini:r_line( section, i, "", "" )
+    t[ key ] = v
+  end
+  return t
+end
+
+function get_vector(section, param, def_val, ini_file)
+	ASSERT(section, "get_vector: section not defined, param="..param)
+	local ini = ini_file or sys_ini
+	ASSERT(ini:section_exist(section), "get_vector: section '"..section.."' doesn't exist")
+	if ini:line_exist(section, param) then
+		local pos = get_names(section, param, ini)
+		return vector():set(tonumber(pos[1]), tonumber(pos[2]), tonumber(pos[3]))
+	else 
+		if def_val then
+			return def_val
+		else
+			return vector():set(0,0,0)
+		end
+	end
+end
+
+-- значение по умолчанию должно задаваться таблицей {num1, num2}
+function get_vector2(section, param, def_val, ini_file)
+	ASSERT(section, "get_vector2: section not defined, param=%s", param)
+	local ini = ini_file or sys_ini
+	ASSERT(ini:section_exist(section), "get_vector2: section '"..section.."' doesn't exist")
+	if ini:line_exist(section, param) then
+		local pos = get_names(section, param, ini)
+		return tonumber(pos[1]), tonumber(pos[2])
+	else
+		return def_val and unpack(def_val)
+	end
+end
+
+-- Берём параметры иконки из конфигов
+function get_inventory_icon_rect(sect)
+	return 50*sys_ini:r_u32(sect, "inv_grid_x"), 50*sys_ini:r_u32(sect, "inv_grid_y"), 50*sys_ini:r_u32(sect, "inv_grid_width"), 50*sys_ini:r_u32(sect, "inv_grid_height")
+end
+
+
+-- получить номер локации по номеру глобального вертекса
+function location_id_by_gvid( gvid )
+  if gvid and game_graph():valid_vertex_id( gvid ) then
+    return game_graph():vertex( gvid ):level_id()
+  end
+end
+
+
+-- получить номер локации для клиентского объекта
+function object_location_id( obj )
+  return obj.level_id
+end
+
+
+function object_level_name( obj )
+  return obj.level_name
+end
+
+
+function level_system_name_by_lid( lid )
+  if lid then
+    return alife():level_name( lid )
+  end
+end
+
+
+function level_name_by_level_system_name( lname )
+  return game.translate_string( lname )
+end
+
+
+-- системное имя уровня
+function level_system_name_by_gvid( gvid )
+  return level_system_name_by_lid( location_id_by_gvid( gvid ) )
+end
+
+
+-- Внятное имя уровня (не системное, а то, которое изображается на карте):
+function level_name_by_gvid( gvid )
+  return level_name_by_level_system_name( level_system_name_by_gvid( gvid ) )
+end
+
+
+--***********************************[Функции для вывода в лог]****************
+-------------------------------------------------------------------------------
+local tostring_all_tbl = {
+	["table"] =		function(table, ind) --Распечатка таблиц
+						local res = "{" --Начало
+						local end_res = ind and "\n"..ind.."}" or "\n}" --Конец
+						local def_ind = "  " --Отступ от начала строки
+						ind = ind and ind..def_ind or def_ind --Для каждой "таблицы внутри таблицы" отступ увеличивается в 2 раза
+						for k, v in pairs(table) do
+							res = res.."\n"..ind.."["..tostring_all(k, ind).."] = "..tostring_all(v, ind)..","
+						end
+						return res..end_res
+					end,
+	["string"] =	function(v) return "'"..v.."'" end, --Строки берём в кавычки. Это нужно, чтобы можно было отличить строку "123" от числа 123, "nil" от nil и тд...
+	["number"] =	function(v) return tostring(v) end,
+	["boolean"] =	function(v) return tostring(v) end,
+	["nil"] =		function(v) return tostring(v) end,
+	["function"] =	function() return "[[FUNCTION]]" end, --Function, Userdata и Thread распечатать нельзя, просто заменим на строки
+	["userdata"] =	function() return "[[USERDATA]]" end,
+	["thread"] =	function() return "[[THREAD]]" end,
+}
+
+--Конвертирование чего угодно в строку. Использовать только для вывода в лог!
+-- ind - служебный аргумент для распечатки "таблиц в таблицах".
+function tostring_all( obj, ind )
+  ASSERT(
+    tostring_all_tbl[ type( obj ) ],
+    "unknown type %s", tostring( type( obj ) )
+  )
+  return tostring_all_tbl[ type( obj ) ]( obj, ind )
+end
+
+--Функциональная обёртка для log1.
+--Делает дополнительную работу по конвертации параметров, которые не воспринимаются родной функцией string.format.
+--Параметры можно передавать ЛЮБОГО ТИПА! В строке формата они должны стоять как %s (потому, что будут сконвертированы в строки).
+function log3( fmt, ... )
+  local t = {}
+  for _, v in ipairs({ ... }) do
+    table.insert( t, tostring_all( v ) )
+  end
+  local res, msg = pcall( string.format, fmt, unpack( t ) )
+  if not res then -- Если произошла ошибка
+    msg = "!!log3 failed: " .. msg .. "\n" .. debug.traceback()
+  end
+  log1( msg )
+end
+
+-----------------------------------------------------------------------------------------
+-- Помогает определить, из за чего в некоторых случаях перезагружается _G
+log1("--_G loaded from: "..debug.traceback())
+-----------------------------------------------------------------------------------------
+local logs_cach = {}
+--Функция создаёт новый лог-файл и выводит текст в него.
+--fname - название лог-файла, например "Anomaly_Evader". Он будет создан в папке logs, к названию добавится дата и время создания.
+--fmt, ... - строка формата с параметрами как и в функции log3
+function log4(fname, fmt, ...)
+	local f = logs_cach[fname]
+	if not f then
+		local dt = os.date("*t")
+		local fpath = getFS():update_path("$logs$", string.format("%s_%02d.%02d.%02d_%02d.%02d.%02d.log",fname,dt.day,dt.month,dt.year,dt.hour,dt.min,dt.sec))
+		f = io.open(fpath, "w")
+		logs_cach[fname] = f
+	end
+	local args = {...}
+	for i=1, #args do
+		args[i] = tostring_all(args[i])
+	end
+	local res, msg = pcall(string.format, fmt, unpack(args))
+	if not res then
+		msg = "!!log4 failed: "..msg.."\n"..debug.traceback()
+	end
+	f:write(msg..'\n')
+	f:flush()
+end
+-----------------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------------------
+function log2(fmt, ...) --Простая обёртка для log1.
+	log1(fmt:format(...))
+end
+-----------------------------------------------------------------------------------------
+function clear_log() --Очистить лог
+	cmd("clear_log")	
+end
+-----------------------------------------------------------------------------------------
+--*****************************************************************************************************
+
+function get_item_weight_by_section(section)
+	local res = get_float(section, "inv_weight")
+	ASSERT(res, "get_item_weight_by_section: there is no 'inv_weight' parameters in section '"..section.."'")
+	return res
+end
+
+function get_ammo_weight_by_section(section, count)
+	local box_weight = get_item_weight_by_section(section)
+	local box_size = get_int(section, "box_size", 0)
+	ASSERT(box_size > 0, "get_ammo_weight_by_section: 'box_size' parameters in section '"..section.."' is zero or missed")
+	return box_weight * count / box_size
+end
+
+function print_vector(name, v)
+	log1(string.format("%s: %9.3f, %9.3f, %9.3f", name, v.x, v.y, v.z))
+end
+function print_matrix(name, m)
+	log1(name..":")
+	log1(string.format("[%9.3f, %9.3f, %9.3f, %9.3f]", m.i.x, m.i.y, m.i.z, m._14_))
+	log1(string.format("[%9.3f, %9.3f, %9.3f, %9.3f]", m.j.x, m.j.y, m.j.z, m._24_))
+	log1(string.format("[%9.3f, %9.3f, %9.3f, %9.3f]", m.k.x, m.k.y, m.k.z, m._34_))
+	log1(string.format("[%9.3f, %9.3f, %9.3f, %9.3f]", m.c.x, m.c.y, m.c.z, m._44_))
+end
+function time2string(time, fmt, order)
+	ASSERT(time, "[_g.time2string] 'time' is a nil reference")
+	if not fmt then
+		return time:timeToString(game.CTime.TimeToMilisecs).." "..time:dateToString(game.CTime.DateToDay)
+	else
+		local y,m,d,h,min,s,ms = time:get()
+		local args = {y=y,m=m,d=d,h=h,min=min,s=s,ms=ms,a=a,b=b}
+		if order then
+			args = {args[order[1]], args[order[2]], args[order[3]], args[order[4]], args[order[5]], args[order[6]], args[order[7]], args[order[8]], args[order[9]]}
+		end
+		return fmt:format(unpack(args))
+	end
+end
+function print_time(title, time)
+	log1(title..": "..time2string(time))
+end
+
+
+function hit_object(obj, dir, imp, dr, pow, t)
+	local h = hit()
+	h.direction = dir
+	h.impulse = imp
+    h.draftsman = dr
+	h.power = pow
+	h.type = t
+	obj:hit(h)
+end
+
+function hit_object_ex(hit_params)
+	local h = hit()
+	ASSERT(hit_params.obj, "hit_object_ex: target is not defined! 'obj' field is a nil reference")
+	h.direction = hit_params.dir or vector():set(1,0,0)
+	h.impulse = hit_params.imp or 0
+    h.draftsman = hit_params.dr or hit_params.obj
+	h.power = hit_params.pow or 0
+	h.type = hit_params.t or 0
+	h.bone = hit_params.bone or ""
+	hit_params.obj:hit(h)
+end
+
+--/Нанести хит
+
+function hit_obj_by_id_simple(ObjId, Pwr, iImpulse)
+	local obj2hit = level.object_by_id(ObjId)
+	ASSERT(obj2hit, "[hit_obj_by_id_simple] no object found for id = %d", ObjId)
+	local hit_params = {
+		["t"] = hit.explosion, 
+		["dir"] = vector():set(0, 0, 0),
+		["dr"] = obj2hit,
+		["obj"] = obj2hit,
+		["imp"] = iImpulse,
+		["pow"] = Pwr,
+	}
+	hit_object_ex(hit_params)
+end
+
+
+function seconds2ctime(time_sec)
+	local s,ms = math.modf(time_sec)
+	local t = game.CTime()
+	t:setHMSms(0,0,s,ms*1000)
+	return t
+end
+
+-- надёжнее, чем device().aspect_ratio, поскольку не зависит от инициализированности рендера
+-- однако медленная. Не рекомендуется использовать часто
+function get_aspect_ratio()
+	local s =  get_console():get_string("vid_mode")
+	local sw,sh = string.match(s, "(%d+)x(%d+)")
+	return tonumber(sh)/tonumber(sw)
+end
+
+
+-- получение некоторых значений с плавающей запятой
+-- параметры бега
+function get_walk_accel()         return get_actor_obj().walk_accel end
+function get_jump_speed()         return get_actor_obj().jump_speed end
+function get_run_factor()         return get_actor_obj().run_coef end
+function get_run_back_factor()    return get_actor_obj().run_back_coef end
+function get_walk_back_factor()   return get_actor_obj().walk_back_coef end
+function get_crouch_factor()      return get_actor_obj().crouch_coef end
+function get_climb_factor()       return get_actor_obj().climb_coef end
+function get_sprint_factor()      return get_actor_obj().sprint_koef end
+function get_walk_strafe_factor() return get_actor_obj().walk_strafe_coef end
+function get_run_strafe_factor()  return get_actor_obj().run_strafe_coef end
+-- параметры стрельбы
+function get_disp_base()          return get_actor_obj().disp_base end -- в радианах
+function get_disp_aim()           return get_actor_obj().disp_aim end -- в радианах
+function get_disp_vel_factor()    return get_actor_obj().disp_vel_factor end
+function get_disp_accel_factor()  return get_actor_obj().disp_accel_factor end
+function get_disp_crouch_factor() return get_actor_obj().disp_crouch_factor end
+function get_disp_crouch_no_accel_factor()  return get_actor_obj().disp_crouch_no_acc_factor end
+-- получение некоторых целых и логических значений
+-- режим прицеливания
+function zoom_mode() return db.actor:zoom_mode() end -- возвращает true/false
+
+-- установка некоторых значений
+-- параметры бега
+function set_sprint_factor(v)      get_actor_obj().sprint_koef = v end
+function set_jump_speed(v)         get_actor_obj().jump_speed = v end
+function set_walk_accel(v)         get_actor_obj().walk_accel = v end
+function set_run_factor(v)         get_actor_obj().run_coef = v end
+function set_run_back_factor(v)    get_actor_obj().run_back_coef = v end
+function set_walk_back_factor(v)   get_actor_obj().walk_back_coef = v end
+function set_crouch_factor(v)      get_actor_obj().crouch_coef = v end
+function set_climb_factor(v)       get_actor_obj().climb_coef = v end
+function set_walk_strafe_factor(v) get_actor_obj().walk_strafe_coef = v end
+function set_run_strafe_factor(v)  get_actor_obj().run_strafe_coef = v end
+-- параметры стрельбы
+function set_disp_base(v)          get_actor_obj().disp_base = v end -- в радианах
+function set_disp_aim( v )         get_actor_obj().disp_aim = v end
+
+function set_jump_power( v )
+  get_actor_obj().condition.jump_power = v
+end
+function set_jump_weight_power( v )
+  get_actor_obj().condition.jump_weight_power = v
+end
+function set_overweight_jump_k( v )
+  get_actor_obj().condition.overweight_jump_k = v
+end
+
+function set_stand_power( v )
+  get_actor_obj().condition.stand_power = v
+end
+function set_walk_power( v )
+  get_actor_obj().condition.walk_power = v
+end
+function set_walk_weight_power( v )
+  get_actor_obj().condition.walk_weight_power = v
+end
+function set_overweight_walk_k( v )
+  get_actor_obj().condition.overweight_walk_k = v
+end
+
+function get_actor_power_max()
+  return db.actor.conditions.power_max
+end
+function set_actor_power_max( v )
+  db.actor.conditions.power_max = v
+end
+
+
+local body_states = { -- флажки состояния тела актора
+[1]		= "fwd",
+[2]		= "back",
+[4]		= "l_strafe",
+[8]		= "r_strafe",
+[16]	= "crouch",
+[32]	= "accel",
+[64]	= "turn",
+[128]	= "jump",
+[256]	= "fall",
+[512]	= "landing",
+[1024]	= "landing2",
+[2048]	= "climb",
+[4096]	= "sprint",
+[8192]	= "l_lookout",
+[16384]	= "r_lookout"
+}
+-- получения флагов состояния тела актора
+function actor_body_state()
+  local body_state = body_states[ get_actor_obj():get_body_state() ]
+  if body_state then
+    return body_state
+  else
+    return ""
+  end
+end
+
+
+-- установка невидимости сталкера со стороны аномалий
+function set_anomaly_invisibility( npc, vis )
+  npc:get_custom_monster().visible_for_zones = not vis
+end
+
+-- получение статуса невидимости сталкера со стороны аномалий
+function get_anomaly_invisibility( npc )
+  return not npc:get_custom_monster().visible_for_zones
+end
+
+
+function get_day_time_sec(t)
+	local y,m,d,h,min,s,ms = t:get()
+	return h * 3600.0 + min * 60.0 + s + ms * 1e-3
+end
+
+-- получить текушее игровое время от начала суток, измеренное в часах (значение в пределах [0, 24) )
+function get_game_day_time_h()
+	local gt = game.get_game_time()
+	local y,m,d,h,min,sec,ms = gt:get()
+	return math.fmod(h + min/60.0 + (sec + 0.001*ms)/3600.0, 24.0)
+end
+
+function is_16_9_mode()
+	local dev = device()
+	return dev.width / dev.height > 1.34
+end
+-- вернуть значение v, ограниченное сверху и снизу значениями l и u
+function math.clamp(v, l, u)
+	if v < l then 
+		return l
+	elseif v > u then 
+		return u
+	end
+	return v
+end
+-- округление к ближайшему
+function math.round(v)
+	return math.floor(v + 0.5)
+end
+
+function math.lerp(x1, x2, y1, y2, x)
+	return (x - x1) * (y2 - y1) / (x2 - x1)
+end
+
+function math.similar(a1, a2, tol)
+	return math.abs(a1 - a2) <= tol
+end
+
+
+-- обнуление всех эффектов съедаемого предмета
+-- изменённые значения в сейве не сохраняются
+-- функция предназначена в основном для использования в событии предиспользования,
+-- когда эффекты предмета ещё не применены и их можно изменить, что повлияет на собственно эффект от 
+-- предмета на параметры здоровья, радиации и т.п.. При этом подразумевается,
+-- что предмет после использования будет удалён, поэтому вопрос о сохранении этих свойств не стоит
+-- если используется подход с eat_portions_num > 1 (обычно задаётся "бесконечное" значение, типа 10000),
+-- то эту функцию либо использовать нельзя, либо надо таким же образом восстанавливать свойства предмета
+-- в событии использования (стандартный колбек callback.use, который в сущности является колбеком на 
+-- "послеиспользование", когда эффекты предмета уже применены)
+function zero_all_item_effects( item )
+  ASSERT( item:is_eatable_item(), "" )
+  item:zero_effects()
+end
+
+
+-- установка направления взгляда актора в заданную точку
+function actor_look_at_point( target_point )
+  ASSERT(
+    target_point, "actor_look_at_point: target point vector is a nil reference!"
+  )
+  local look_dir = vector():sub( target_point, device().cam_pos )
+  local cam      = actor_camera( 0 )
+  if cam then
+    cam.yaw   = -look_dir:getH()
+    cam.pitch = -look_dir:getP()
+  end
+end
+
+
+local con = get_console()
+function cmd(scmd, ...)
+	ASSERT(scmd, "[cmd] scmd is a nil reference")
+	local args = {...}
+	if #args ~= 0 then
+		scmd = scmd..' '..table.concat(args, ' ')
+	end
+	con:execute(scmd)
+end
+function get_con_float(param)
+	return con:get_float(param)
+end
+function get_con_string(param)
+	return con:get_string(param)
+end
+function get_con_bool(param)
+	return con:get_bool(param)
+end
+
+-- проверка сушествования файла на диске
+-- примечания: 
+-- 1. это  для проверки существования реального файла, не в архиве
+-- 2. способ неуклюжий, но другого в чистом Lua нет
+function file_exists(name)
+	local f = io.open(name,"r")
+	if f then
+		f:close()
+		return true
+	end
+	return false
+end
+
+
+function set_item_untakeable( item )
+  local f = item:get_inventory_item_flags()
+  f:set( global_flags.FCanTake, false )
+  item:set_inventory_item_flags( f )
+end
+
+function set_item_takeable( item )
+  local f = item:get_inventory_item_flags()
+  f:set( global_flags.FCanTake, true )
+  item:set_inventory_item_flags( f )
+end
+
+function mark_grenade_non_pickable( obj )
+  if obj:parent() then
+    local timeout = time_global() + 10000
+    obj:set_fastcall(
+      function ( obj )
+        if obj:parent() then
+          if timeout < time_global() then
+            log3(
+              "[mark_grenade_non_pickable]: %s still has parent %s",
+              obj:name(), obj:parent():name()
+            )
+            return true
+          end
+          return false
+        else
+          set_item_untakeable( obj )
+          return true
+        end
+      end,
+      obj
+    )
+  else
+    set_item_untakeable( obj )
+  end
+end
+
+
+-- сделать предмет безусловно негруппируемым в окнах инвентаря
+function set_item_ungroupable( item )
+  local f = item:get_inventory_item_flags()
+  f:set( global_flags.FIUngroupable, true )
+  item:set_inventory_item_flags( f )
+end
+
+-- включить движковую группировку для предмета
+function set_item_default_grouping( item )
+  local f = item:get_inventory_item_flags()
+  f:set( global_flags.FIUngroupable, false )
+  item:set_inventory_item_flags( f )
+end
+
+-- сделать предмет безусловно непродаваемым, будет показан красным. Для
+-- избежания глюков надо также выключать группируемость для этого предмета.
+function set_item_always_untradable( item )
+  local f = item:get_inventory_item_flags()
+  f:set( global_flags.FIAlwaysUntradable, true )
+  item:set_inventory_item_flags( f )
+end
+
+-- убрать принудительную неторгуемость и негруппирумость и оставить только
+-- движковый алгоритм
+function set_item_default_tradability( item )
+  local f = item:get_inventory_item_flags()
+  f:set( global_flags.FIAlwaysUntradable, false )
+  item:set_inventory_item_flags( f )
+end
+
+-- сделать предмет невидимым в инвентаре
+function set_item_inv_hidden( item )
+  local f = item:get_inventory_item_flags()
+  f:set( global_flags.FIHiddenForInventory, true )
+  item:set_inventory_item_flags( f )
+end
+
+-- сделать его обратно видимым
+function set_item_inv_visible( item )
+  local f = item:get_inventory_item_flags()
+  f:set( global_flags.FIHiddenForInventory, false )
+  item:set_inventory_item_flags( f )
+end
+
+-- Покрасить предмет в окнах обыска тайников/трупов в зелёный цвет
+function set_item_always_highlighting( item )
+  local f = item:get_inventory_item_flags()
+  f:set( global_flags.FIAlwaysHighlighted, true )
+  item:set_inventory_item_flags( f )
+end
+
+-- использовать только движковую раскраску
+function set_item_default_highlighting( item )
+  local f = item:get_inventory_item_flags()
+  f:set( global_flags.FIAlwaysHighlighted, false )
+  item:set_inventory_item_flags( f )
+end
+
+
+function need_show_condition(item)
+	local b = sys_ini:r_bool(item:section(), "show_condition", nil)
+	return ( ( item:is_weapon() or item:is_outfit() ) and b ~= false ) or b == true
+end
+
+function set_item_always_ungroupable( obj, flag )
+  obj:get_inventory_item().always_ungroupable = flag
+end
+
+
+--отладочные обёртки для глобальных функций level.enable_input и level.disable_input
+local enable_input_orig = level.enable_input
+level.enable_input = function()
+	--log1("level.enable_input")
+	--log1(debug.traceback())
+	enable_input_orig()
+end
+local disable_input_orig = level.disable_input
+level.disable_input = function()
+	--log1("level.disable_input")
+	--log1(debug.traceback())
+	disable_input_orig()
+end
+
+
+-- http://www.amk-team.ru/forum/index.php?showtopic=6185&p=945289
+weapon_states = {
+  idle      = global_flags.eIdle,
+  fire      = global_flags.eFire,
+  fire2     = global_flags.eFire2,
+  reload    = global_flags.eReload,
+  showing   = global_flags.eShowing,
+  hiding    = global_flags.eHiding,
+  hidden    = global_flags.eHidden,
+  misfire   = global_flags.eMisfire,
+  mag_empty = global_flags.eMagEmpty,
+  switch    = global_flags.eSwitch,
+}
+
+
+-- показывает, что оружие находится в соостоянии поворота для приближенного
+-- прицеливания. См. xr_3da\xrGame\Weapon.h:253
+-- bool IsRotatingToZoom() const { return (m_fZoomRotationFactor < 1.f); }
+function wpn_IsRotatingToZoom( wpn )
+  return wpn:get_weapon().zoom_rotation_factor < 1
+end
+
+
+function zero_all_af_effects( af )
+  local af_obj = af:get_artefact()
+  for _, k in ipairs({
+    "bleeding_restore_speed",
+    "health_restore_speed",
+    "power_restore_speed",
+    "satiety_restore_speed",
+  }) do
+    af_obj[ k ] = 0
+  end
+
+  local iitem = af:get_inventory_item()
+  ASSERT( iitem, "%s not an inventory_item", af:name() )
+  for _, k in ipairs({
+    "psy_health_restore_speed",
+    "radiation_restore_speed",
+  }) do
+    iitem[ k ] = 0
+  end
+
+  local af_imm = af.immunities
+  for _, k in ipairs({
+    "chemical_burn_immunity",
+    "burn_immunity",
+    "explosion_immunity",
+    "fire_wound_immunity",
+    "radiation_immunity",
+    "shock_immunity",
+    "strike_immunity",
+    "telepatic_immunity",
+    "wound_immunity",
+  }) do
+    af_imm[ k ] = 1
+  end
+end
+
+
+function set_outfit_protection( obj, k, v )
+  local outfit = obj:get_outfit()
+  outfit[ k ] = v
+end
+
+function zero_outfit_protection( obj )
+  local outfit = obj:get_outfit()
+  for _, k in ipairs({   
+    "burn_protection",
+    "chemical_burn_protection",
+    "fire_wound_protection",
+    "explosion_protection",
+    "radiation_protection",
+    "shock_protection",
+    "strike_protection",
+    "telepatic_protection",
+    "wound_protection",
+  }) do
+    outfit[ k ] = 0
+  end
+end
+
+
+function set_outfit_power_loss( obj, val )
+  obj:get_outfit().power_loss = val
+end
+
+
+function set_outfit_additional_inventory_weight( obj, val )
+  obj:set_additional_max_walk_weight( val )
+end
+
+function set_outfit_additional_inventory_weight2( obj, val )
+  obj:set_additional_max_weight( val )
+end
+
+
+function set_inv_item_cost( obj, cost )
+  obj:get_inventory_item().cost = cost
+end
+
+
+function get_inv_item_slot( obj )
+  return obj:get_inventory_item().slot
+end
+
+function set_inv_item_slot( obj, slot )
+  obj:get_inventory_item().slot = slot
+end
+
+
+-- http://www.amk-team.ru/forum/topic/10538-x-ray-extensions/?p=1002890
+function normal_triangle( element ) -- нормаль треугольника
+  local n = vector():set( 0, 0, 0 )
+  local a = level.get_tri_vertex1( element )
+  local b = level.get_tri_vertex2( element )
+  local c = level.get_tri_vertex3( element )
+  n.x = ( ( b.z - a.z ) * ( c.y - a.y ) ) - ( ( b.y - a.y ) * ( c.z -a.z ) )
+  n.y = ( ( b.x - a.x ) * ( c.z - a.z ) ) - ( ( b.z - a.z ) * ( c.x -a.x ) )
+  n.z = ( ( b.y - a.y ) * ( c.x - a.x ) ) - ( ( b.x - a.x ) * ( c.y -a.y ) )
+  return n:normalize()
+end
+
+
+-- возвращает имя кости по ее индексу
+-- http://xray-engine.org/index.php?title=X-Ray_extensions
+function get_bone_name_by_id( obj, bone_id )
+  return obj:get_bone_name( bone_id )
+end
+
+
+-- возвращает level_vertex_id по позиции на уровне
+function level.vertex_id_by_pos( ... )
+  return level.vertex_id( ... )
+end
+
+
+-- запускает эффектор шатания камеры с заданными параметрами
+function level.add_cam_effector3( total_time, amplitude, period_number, power )
+  level.set_ce_time( total_time )
+  level.set_ce_amplitude( amplitude )
+  level.set_ce_period_number( period_number )
+  level.set_ce_power( power )
+  level.add_ce()
+end
+
+
+-- Взято отсюда: https://github.com/davidm/lua-bit-numberlua
+function bit_rshift( a, disp )
+  if disp < 0 then return bit_lshift( a, -disp ) end
+  return math.floor( a % 2^32 / 2^disp )
+end
+
+function bit_lshift( a, disp )
+  if disp < 0 then return rshift( a, -disp ) end
+  return ( a * 2^disp ) % 2^32
+end
+
+--=================================[CUIScriptWnd Extension]=====================================
+-- Вызов обычный, как и в AddCallback, но после последнего аргумента можно передавать множество дополнительных.
+function CUIScriptWnd:Connect(name, event, func, ...)
+	local args = {...}
+	return self:AddCallback( name, event, function() func(unpack(args)) end )
+end
+--==============================================================================================
+
+_G.GetIconParams = function (section)
+    if section~=nil and section~=""
+        and sys_ini:section_exist(section)
+        and sys_ini:line_exist(section, "inv_grid_x")
+    then
+        return {x = sys_ini:r_u32(section, "inv_grid_x") *50,
+                y = sys_ini:r_u32(section, "inv_grid_y") *50,
+                w = sys_ini:r_u32(section, "inv_grid_width") *50,
+                h = sys_ini:r_u32(section, "inv_grid_height") *50,
+                g = sys_ini:r_u32(section, "icon_group", 0) }
+    end
+    return {x=0, y=0, w=1, h=1, g=0}
+end
+
+local IsBlocked = false
+_G.BlockUIDescr = function( b )
+	if b == nil then
+		return IsBlocked
+	else
+		IsBlocked = b
+	end
+end
+
+local ShiftHold = false
+_G.ShiftPressed = function( b )
+	if b == nil then
+		return ShiftHold
+	else
+		ShiftHold = b
+	end
+end
+
+_G.sys_ini = system_ini()
+_G.kScreen = math.min( (1024/768) / (device().width/device().height), 1 )
+_G.isWideScreen = _G.kScreen <= 0.85
+
+
+-- class 'CUIScriptWnd'
+local wnd_id        = 1
+local registered_windows = {}
+CUIScriptWnd.AddCallbackEx = function ( self, ui_name, ui_event, func, ... )
+	local id = self.__CUIScriptWnd_id
+	if id == nil then
+		id = wnd_id
+		wnd_id = wnd_id + 1
+		self.__CUIScriptWnd_id = id
+		registered_windows[ id ] = {}
+		registered_windows[ id ]["__window"] = self
+	end
+	if registered_windows[ id ][ ui_name ] == nil then
+		registered_windows[ id ][ ui_name ] = {}
+	end
+	registered_windows[ id ][ ui_name ][ ui_event ] = { ... }
+
+	self:AddCallback( ui_name, ui_event,
+		function ( i )
+			local t = registered_windows[ i ]
+			if t then
+				local wnd = t["__window"]
+				local p = t[ ui_name ][ ui_event ]
+				func( wnd, unpack( p ) )
+			else
+				log( "[CUIScriptWnd]: ignore callback for unregistered window %s: ui_name = %s, ui_event = %s",
+					i, ui_name, ui_event )
+			end
+		end,
+	id )
+end
+CUIScriptWnd.ClearCallbacks = function ( self )
+	local id = self.__CUIScriptWnd_id
+	if id == nil then
+	--	log("~ CUIScriptWnd.ClearCallbacks : __CUIScriptWnd_id not found" )
+	else
+		if self.__reg_childs then
+			for i, v in ipairs( self.__reg_childs ) do
+				registered_windows[ v ]["__window"] = nil
+				registered_windows[ v ] = nil
+			end
+			self.__reg_childs = nil
+		end
+		registered_windows[ id ]["__window"] = nil
+		registered_windows[ id ] = nil
+	end
+--	log("CUIScriptWnd.ClearCallbacks [%s]: registered windows count [%d]", tostring(id), table.size(registered_windows) )
+end
+CUIScriptWnd.RegisterChild = function( self, child )
+	if child.__CUIScriptWnd_id == nil then return end
+
+	local id = self.__CUIScriptWnd_id
+	if id == nil then
+		id = wnd_id
+		wnd_id = wnd_id + 1
+		self.__CUIScriptWnd_id = id
+		registered_windows[ id ] = {}
+		registered_windows[ id ]["__window"] = self
+	--	log("CUIScriptWnd.RegisterChild: parent window has no __CUIScriptWnd_id" )
+	end
+
+	if self.__reg_childs == nil then
+		self.__reg_childs = {}
+	end
+	table.insert( self.__reg_childs, child.__CUIScriptWnd_id )
+end
+
+
+-- 'Возвращение строки
+function to_string(val)
+	if val==nil then
+		return val
+	end
+	return tostring(val)
+end
+-- 'Возвращение цифры
+function to_number(val)
+	if val==nil then
+		return val
+	end
+	return tonumber(val)
+end
+
+-- 'Дистанция до обьекта.
+function distance_to_object(obj,type,dist_value,absence_parent)
+	local currert_distance=db.actor:position():distance_to(obj:position())
+	if ((type=="<=" and currert_distance<=dist_value) or (type=="<" and currert_distance<dist_value) or (type==">=" and currert_distance>=dist_value) or (type==">" and currert_distance>dist_value) or (type=="==" and currert_distance<dist_value)) and ((absence_parent==nil) or (absence_parent~=nil and absence_parent==false and obj:parent()~=nil) or (absence_parent~=nil and absence_parent==true and obj:parent()==nil)) then 
+		return true
+	end
+	return false
+end
+
+
+-- переносим акторские неквестовые вещи в ящик с указанным story_id
+function transfer_to_box(box_sid)
+local box = level_object_by_sid(box_sid)
+if box then
+		for i = 0, db.actor:object_count() - 1 do
+			local obj = db.actor:object(i)
+			if obj and alife():object(obj:id()) then
+				local sect = obj:section()
+				if obj and not (sys_ini:line_exist(sect, "quest_item") and sys_ini:r_bool(sect, "quest_item")) 
+					and not string.find(sect, "device_pda") 
+					and not string.find(sect, "device_torch") 
+					and not string.find(sect, "separator") 
+					and not string.find(sect, "bolt") then
+
+				db.actor:transfer_item(obj, box)
+	      end
+	   end
+	end
+    end
+end
+
+-- переносим все вещи из ящика с указанным story_id
+function transfer_from_box( box_sid )
+	local box = level_object_by_sid(box_sid)
+	if not box then return end
+
+	local cnt = box:inv_box_count()
+	for i=0, cnt-1 do
+		local obj = box:object_from_inv_box(i)
+		-- есть ли объект
+		if obj then
+			local sect = obj:section()
+			-- передаем предмет
+			box:transfer_item(obj, db.actor)
+		end
+	end
+end
+
+
+-------
+-- получить список id вещей лежащих в ящике
+-- {id1, id2, ...} enum_box_items(game_object box)
+-------
+function enum_box_items(box)
+	local ids = {}
+	for i=0, box:inv_box_count()-1 do
+		local obj = box:object_from_inv_box(i)
+		table.insert(ids, obj:id())
+	end
+	return ids
+end
+
+-- получить машину, в которой сидит ГГ
+function get_actor_car()
+	local holder = db.actor:get_holder()
+	if holder and holder:is_car() then return holder end
+	return false
+end

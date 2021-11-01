@@ -95,6 +95,7 @@ function actor_binder:net_destroy()
 	self.object:set_callback(callback.on_cell_item_focus, nil) -- фокус на ячейке (MonolithUI)
 	self.object:set_callback(callback.on_cell_item_focus_lost, nil) -- потеря фокуса на ячейке (MonolithUI)
 	self.object:set_callback(callback.on_mouse_wheel, nil) -- прокрутка колесиком (MonolithUI)
+	self.object:set_callback(callback.on_before_use_item, nil )
 
 	if sr_psy_antenna.psy_antenna then
 		sr_psy_antenna.psy_antenna:destroy()
@@ -138,10 +139,11 @@ function actor_binder:reinit()
 	self.object:set_callback(callback.on_cell_item_focus, self.on_cell_item_focus, self) -- MonolithUI
 	self.object:set_callback(callback.on_cell_item_focus_lost, self.on_cell_item_focus_lost, self) --MonolithUI
 	self.object:set_callback(callback.on_mouse_wheel, self.on_wheel_rotation, self) -- MonolithUI
+	self.object:set_callback( callback.on_before_use_item, self.before_use, self )
 end
 ----------------------------------------------------------------------------------------------------------------------
 function actor_binder:on_use(obj) -- MonolithUI
-	synchro_item.on_use(obj)
+	--synchro_item.on_use(obj)
 end
 function actor_binder:on_key(dik) -- MonolithUI
 	ui_loader.on_key(dik)
@@ -150,10 +152,15 @@ function actor_binder:on_key_free(dik) -- MonolithUI
 	ui_loader.on_key_free(dik)
 end
 function actor_binder:item_to_backpack(obj) -- MonolithUI
-	ui_loader.item_to_backpack(obj)
+	local sobj = alife():object( obj:id() )
+	if sobj then
+		ui_loader.item_to_backpack(obj)
+	end
+	laucer_items_anims.on_item_to_ruck(obj)
 end
 function actor_binder:item_to_slot(obj) -- MonolithUI
 	ui_loader.item_to_slot(obj)
+	laucer_items_anims.on_item_to_slot(obj)
 end
 function actor_binder:weapon_reload(obj) -- MonolithUI
 	ui_loader.weapon_reload(obj)
@@ -181,7 +188,7 @@ function actor_binder:take_item_from_box(box, item)
 		return
 	end
 	
-	--' Необходимо уменьшить счетчик в респавнере
+	-- Необходимо уменьшить счетчик в респавнере
 	respawner:remove_spawned(item:id())
 
 	local smart_terrain = db.strn_by_respawn[respawner:name()]
@@ -252,6 +259,10 @@ function actor_binder:on_item_drop (obj)
 	ui_loader.on_item_drop(obj) -- MonolithUI
 end
 ----------------------------------------------------------------------------------------------------------------------
+function actor_binder:before_use(obj)
+	laucer_items_anims.on_actor_before_use(obj)
+end
+----------------------------------------------------------------------------------------------------------------------
 
 function actor_binder:task_callback(_task, _objective, _state)
 	task_manager.task_callback(_task:get_id(), _objective:get_idx(), _state)
@@ -282,9 +293,16 @@ function actor_binder:map_location_added_callback(spot_type_str, object_id)
 	--'news_manager.send_task(db.actor, "new")
 end
 ----------------------------------------------------------------------------------------------------------------------
+local update_was_never_called = true
+
 function actor_binder:update(delta)
 	object_binder.update(self, delta)
-
+	
+	if update_was_never_called then
+		laucer_items_anims.on_before_first_update()
+	end
+	update_was_never_called = false
+	
 	-- DEBUG slowdown
 --	slowdown.update()
 
@@ -417,11 +435,13 @@ function actor_binder:update(delta)
 		if not has_alife_info("level_changer_icons") then
 			self.object:give_info_portion("level_changer_icons")
 		end
-		synchro_item.on_spawn()
+		--synchro_item.on_spawn()
 		level_tasks.add_lchanger_location()
 
 		self.bCheckStart = false		
 	end
+	
+	laucer_items_anims.on_update()
 	amk.on_actor_upade()
 	ui_loader.update() -- MonolithUI	
 end

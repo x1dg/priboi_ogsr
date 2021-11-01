@@ -172,7 +172,8 @@ local wpn_table = {
 	"wpn_val",
 	"wpn_vintorez",
 	"wpn_walther",
-	"wpn_wincheaster1300"
+	"wpn_wincheaster1300",
+	"wpn_addon_silencer_groza"
 }
 local art_table = {
 	"af_base",
@@ -515,6 +516,9 @@ local obj = alife():create(item,pos,db.actor:level_vertex_id(),db.actor:game_ver
      anom.create_anom(obj,3, pos, db.actor:level_vertex_id(), db.actor:game_vertex_id())
 end
 end
+
+
+--Edition By SpawnerToolKit (Author SDK: SuhininKirill | VK: UPFS)
 
 
 --Edition By SpawnerToolKit (Author SDK: SuhininKirill | VK: UPFS)

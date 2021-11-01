@@ -2,11 +2,11 @@
 -- *** barin ***
 
 traitor_warn = nil
-local traitor_wth = "What are you doing?!"
-local traitor_warn1 = "Are you crazy?! Cease firing immediately! That's an order!!!"
-local traitor_warn2 = "Cease firing immediately! If you disobey the order, you are a dead man!!!"
-local traitor_header = "Traitor!"
-local military_traitor = "You failed obeyed direct order! You will be killed for your actions and your death will be a lesson to others! Our allies will teach you a lesson ..."
+local traitor_wth = "Что ты творишь??!"
+local traitor_warn1 = "Ты ебнутый??! Cease firing immediately! That's an order!!!"
+local traitor_warn2 = "Хватит стрелять! Мы тебя ебнем, если не прекратишь!!!"
+local traitor_header = "Предатель!"
+local military_traitor = "Ты не подчинился! Ты будешь убить и это станет уроком для осталных.."
 
 function GiveInfoportion(info)
 	if not has_alife_info(info)	then

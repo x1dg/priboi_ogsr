@@ -1,17 +1,10 @@
-﻿local animation_enable = true
+local animation_enable = true
 local anim_in_action = false
 local anim_applied = false
+local debug_disable = false
 local snd_in_use, cam_effect, anim_exist_tm, anim_exist_used_tm, anim_used_tm, anim_completed_tm, anm_sect
 
 local SLOT_RESTORE
-
-function attach( sm ) -- для менеджера сигналов
-	sm:subscribe({ signal = "on_actor_before_use",  	fun = this.on_actor_before_use  	})
-        sm:subscribe({ signal = "on_update", 		        fun = this.on_update                    })
-	sm:subscribe({ signal = "on_item_to_slot", 	        fun = this.on_item_to_slot 		})
-	sm:subscribe({ signal = "on_item_to_ruck", 	        fun = this.on_item_to_ruck 		})
-	sm:subscribe({ signal = "on_before_first_update", 	fun = this.on_before_first_update 	})
-end
 
 local cfg = {
 	"eat_health",
@@ -25,6 +18,9 @@ local cfg = {
 }
 
 function on_actor_before_use( obj )
+	if debug_disable then
+		return
+	end
 	local sect = obj:section()
 	if animation_enable == true then
 		local snd = get_string( sect, "use_sound_anm" )
@@ -81,18 +77,27 @@ function on_actor_before_use( obj )
 end
 
 function on_item_to_ruck( obj )
+	if debug_disable then
+		return
+	end
 	if not( string.find( obj:section(), "anm_" ) ) then return end
 	local release_item = obj:section()
 	alife():release(alife():object(db.actor:object(release_item):id()))
 end
 
 function on_item_to_slot( obj )
+	if debug_disable then
+		return
+	end
 	if not( string.find( obj:section(), "anm_" ) ) then return end
 	db.actor:activate_slot(8)
 	anim_in_action = true
 end
 
 function on_before_first_update()
+	if debug_disable then
+		return
+	end
 	local obj
 
 	for i=0, db.actor:object_count() - 1 do
@@ -107,7 +112,9 @@ function on_before_first_update()
 end
 
 function on_update()
-
+	if debug_disable then
+		return
+	end
 	local tg = time_global()
 	if anim_in_action then
 		if not anim_exist_tm then
@@ -125,14 +132,15 @@ function on_update()
 			end
 		end
 		if anim_exist_tm then
+			log1("TG: "..tostring(tg))
 			if anim_exist_tm <= tg then
 				db.actor:restore_weapon()
 			
 				ogse.remove_item_from_inventory_by_name( anm_sect, db.actor )
 				db.actor:activate_slot(SLOT_RESTORE)
-if dik_to_keyname( ogse.load_var_safe( "drop_bind" )) ~= nil then
-	cmd( "bind drop " .. dik_to_keyname( ogse.load_var_safe( "drop_bind" )))
-end
+				if dik_to_keyname( ogse.load_var_safe( "drop_bind" )) ~= nil then
+					cmd( "bind drop " .. dik_to_keyname( ogse.load_var_safe( "drop_bind" )))
+				end
 
 				cam_effect = nil
 				anim_used_tm = nil
@@ -146,7 +154,6 @@ end
 		end
 	end
 end
-
 
 function apply_item( sect )
 	for k, v in pairs( cfg ) do

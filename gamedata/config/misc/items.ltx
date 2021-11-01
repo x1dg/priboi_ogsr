@@ -1,11 +1,27 @@
-[dummy_food]
-eat_health = 0
-eat_satiety = 0
-eat_power = 0
-eat_radiation = 0
-wounds_heal_perc = 0
-eat_portions_num = -1
-eat_max_power = 0
+[food]:identity_immunities
+GroupControlSection	    = spawn_group
+discovery_dependency	=
+;$prefetch 		        = 32
+class		        	= II_FOOD
+cform			        = skeleton
+
+attach_angle_offset	    = -0.287979, 1.560923, 1.544060
+attach_position_offset	= 0.096910, -0.013594, 0.107925
+attach_bone_name	    = bip01_r_hand
+auto_attach		        = false
+
+bone_name		        = bip01_r_hand
+position_offset		    = 0.0,0.0,0.0
+angle_offset		    = 1.570790,1.570790,3.92699
+
+; food item
+;slot			    = 6
+animation_slot		= 4
+
+;hud item
+hud			        = wpn_vodka_hud
+
+use_sound = addon\inv_food
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;	FOOD
@@ -13,7 +29,7 @@ eat_max_power = 0
 
 ;;;;;;;;;; NEW DRINKS ;;;;;;;;;;
 
-[absolut_vodka]:identity_immunities, dummy_food
+[absolut_vodka]:food
 GroupControlSection		= spawn_group
 discovery_dependency	=
 class							= II_BOTTL
@@ -36,14 +52,22 @@ auto_attach				= false
 bone_name					= bip01_r_hand
 position_offset			= 0.0,0.0,0.0
 angle_offset				= 1.570790,1.570790,3.92699
+eat_health					= 0.0000
+eat_satiety					= 0.0001
+eat_power					= -0.5 ;0
+eat_radiation				= -0.31;-0.11
+eat_alcohol					= 0.2; 0.3
+wounds_heal_perc		= 0
+eat_portions_num		= -1
 slot							= 4
 animation_slot				= 4
 hud = absolut_vodka_hud
 break_particles			= explosions\explosion_bottle
 break_sound				= material\bottle\collide\bottle_break_1
 
+use_sound_anm = interface\item_usage\vodka_use
 
-[nemiroff_vodka]:identity_immunities, dummy_food
+[nemiroff_vodka]:food
 GroupControlSection		= spawn_group
 discovery_dependency	=
 class							= II_BOTTL
@@ -66,13 +90,22 @@ auto_attach				= false
 bone_name					= bip01_r_hand
 position_offset			= 0.0,0.0,0.0
 angle_offset				= 1.570790,1.570790,3.92699
+eat_health					= 0.0000
+eat_satiety					= 0.0002
+eat_power					= -0.5 ;0
+eat_radiation				= -0.15;-0.1
+eat_alcohol					= 0.2
+wounds_heal_perc		= 0
+eat_portions_num		= -1
 slot							= 4
 animation_slot				= 4
 hud = nemiroff_vodka_hud
 break_particles			= explosions\explosion_bottle
 break_sound				= material\bottle\collide\bottle_break_1
 
-[smirnoff_vodka]:identity_immunities, dummy_food
+use_sound_anm = interface\item_usage\vodka_use
+
+[smirnoff_vodka]:food
 GroupControlSection		= spawn_group
 discovery_dependency	=
 class							= II_BOTTL
@@ -107,6 +140,8 @@ animation_slot				= 4
 hud = smirnoff_vodka_hud
 break_particles			= explosions\explosion_bottle
 break_sound				= material\bottle\collide\bottle_break_1
+
+use_sound_anm = interface\item_usage\vodka_use
 
 [mineral_water]:identity_immunities
 GroupControlSection		= spawn_group
@@ -489,7 +524,9 @@ bone_name				= bip01_r_hand
 position_offset			 = 0.0,0.0,0.0
 angle_offset			 = 1.570790,1.570790,3.92699
 
-[bread]:identity_immunities, dummy_food
+use_sound_anm = items_sounds\inv_food
+
+[bread]:food
 GroupControlSection	= spawn_group
 discovery_dependency =
 $spawn 				= "food and drugs\bread"
@@ -519,6 +556,14 @@ bone_name				= bip01_r_hand
 position_offset			 = 0.0,0.0,0.0
 angle_offset			 = 1.570790,1.570790,3.92699
 
+; eatable item
+eat_health = 0.0 ;0.008
+eat_satiety = 0.2
+eat_power = 0.01
+eat_radiation = 0
+wounds_heal_perc = 0
+eat_portions_num = -1
+
 ; food item
 slot				= 4
 animation_slot		= 4
@@ -526,8 +571,9 @@ animation_slot		= 4
 ;hud item
 hud = wpn_vodka_hud
 
+use_sound_anm = items_sounds\inv_food
 
-[kolbasa]:identity_immunities, dummy_food
+[kolbasa]:food
 GroupControlSection	= spawn_group
 discovery_dependency =
 $spawn 				= "food and drugs\kolbasa"
@@ -557,12 +603,22 @@ bone_name				= bip01_r_hand
 position_offset			 = 0.0,0.0,0.0
 angle_offset			 = 1.570790,1.570790,3.92699
 
+; eatable item
+eat_health = 0.0 ;0.008
+eat_satiety = 0.3
+eat_power = 0.0
+eat_radiation = 0
+wounds_heal_perc = 0
+eat_portions_num = -1
+
 ; food item
 slot				= 4
 animation_slot		= 4
 
 ;hud item
 hud = wpn_vodka_hud
+
+use_sound_anm = items_sounds\inv_food
 
 [kolbasa_a]:identity_immunities
 GroupControlSection		= spawn_group
@@ -590,7 +646,7 @@ bone_name				= bip01_r_hand
 position_offset			 = 0.0,0.0,0.0
 angle_offset			 = 1.570790,1.570790,3.92699
 
-[conserva]:identity_immunities, dummy_food
+[conserva]:food
 GroupControlSection	= spawn_group
 discovery_dependency =
 $spawn 				= "food and drugs\conserva"
@@ -610,6 +666,14 @@ inv_grid_x			= 9
 inv_grid_y			= 13
 cost				= 100
 
+; eatable item
+eat_health = 0.0 ;0.02
+eat_satiety = 0.4
+eat_power = 0.01
+eat_radiation = 0
+wounds_heal_perc = 0
+eat_portions_num = -1
+
 ; food item
 slot				= 4
 animation_slot		= 4
@@ -626,6 +690,8 @@ auto_attach				= false
 bone_name				= bip01_r_hand
 position_offset			 = 0.0,0.0,0.0
 angle_offset			 = 1.570790,1.570790,3.92699
+
+use_sound_anm = interface\item_usage\conserva_use
 
 [vodka_a]:identity_immunities
 GroupControlSection		= spawn_group
@@ -653,7 +719,7 @@ bone_name				= bip01_r_hand
 position_offset			 = 0.0,0.0,0.0
 angle_offset			 = 1.570790,1.570790,3.92699
 
-[vodka]:identity_immunities, dummy_food
+[vodka]:food
 GroupControlSection	= spawn_group
 discovery_dependency =
 $spawn 				= "food and drugs\vodka"
@@ -686,8 +752,15 @@ can_take			= true
 hand_dependence			= 1									; how many hands (1 or 2) we used to hold weapon in
 single_handed			= 1
 	
-slot 					= 4								; number of slot in inventory we put weapon in (1 - knife slot, 2 - pistol, 3 - rifle, 4 - grenade, 5 - apparatus)
-animation_slot			= 4	
+; eatable item
+eat_health		= 0.0 ;0.0001
+eat_satiety		= 0.0001
+eat_power		= 0
+eat_radiation	= -0.1
+eat_alcohol		= 0.3
+wounds_heal_perc 	= 0
+eat_portions_num 	= -1
+
 anim_draw					= draw_wo_gl
 
 // should be deleted after update
@@ -695,11 +768,8 @@ bone_name				= bip01_r_hand
 position_offset			 = 0.0,0.0,0.0
 angle_offset			 = 1.570790,1.570790,3.92699
 
-slot				= 4
-
 ; food item
 slot				= 4
-animation_slot		= 4
 
 ;hud item
 hud = wpn_vodka_hud
@@ -707,6 +777,7 @@ hud = wpn_vodka_hud
 break_particles		= explosions\explosion_bottle
 break_sound			= material\bottle\collide\bottle_break_1
 
+use_sound_anm = interface\item_usage\vodka_use
 
 [guitar_a]:identity_immunities
 GroupControlSection		= spawn_group
@@ -854,7 +925,20 @@ cost							= 5000
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;	MEDICAL
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-[antirad]:identity_immunities, dummy_food
+[medicin]:identity_immunities
+GroupControlSection	= spawn_group
+discovery_dependency =
+cform           = skeleton
+$prefetch 		= 32
+; food item
+animation_slot		= 4
+
+;hud item
+hud                 = wpn_vodka_hud
+
+use_sound = items_sounds\inv_medic
+
+[antirad]:medicin
 GroupControlSection	= spawn_group
 discovery_dependency =
 $spawn 			= "food and drugs\antirad"
@@ -874,6 +958,14 @@ inv_grid_x			= 18
 inv_grid_y			= 12
 cost				= 300
 
+; eatable item
+eat_health = -0.09 ;0
+eat_satiety = 0
+eat_power = -0.3 ;0
+eat_radiation = -1.0
+wounds_heal_perc = 0
+eat_portions_num = 1
+
 ; food item
 slot				= 4
 animation_slot		= 4
@@ -881,8 +973,9 @@ animation_slot		= 4
 ;hud item
 hud = wpn_vodka_hud
 
+use_sound_anm = interface\item_usage\antirad_use
 
-[medkit]:identity_immunities, dummy_food
+[medkit]:medicin
 GroupControlSection	= spawn_group
 discovery_dependency =
 $spawn 				= "food and drugs\medkit"
@@ -901,6 +994,15 @@ inv_grid_x			= 6
 inv_grid_y			= 14
 cost				= 150
 
+; eatable item
+eat_health			= 0.5
+eat_satiety			= 0
+eat_power			= 0.0
+eat_radiation		= -0.01
+wounds_heal_perc	= 0.1
+eat_portions_num	= 1
+eat_max_power		= 0.1
+
 ; food item
 slot				= 4
 animation_slot		= 4
@@ -908,7 +1010,9 @@ animation_slot		= 4
 ;hud item
 hud = wpn_vodka_hud
 
-[medkit_army]:identity_immunities, dummy_food
+use_sound_anm = interface\item_usage\medkit_use
+
+[medkit_army]:medicin
 GroupControlSection	= spawn_group
 discovery_dependency =
 $spawn 				= "food and drugs\medkit_army"
@@ -927,6 +1031,15 @@ inv_grid_x			= 7
 inv_grid_y			= 14
 cost				= 220
 
+; eatable item
+eat_health			= 0.6
+eat_satiety			= 0.1
+eat_power			= 0.0
+eat_radiation		= -0.1
+wounds_heal_perc	= 0.15
+eat_portions_num	= 1
+eat_max_power		= 0.1
+
 ; food item
 slot				= 4
 animation_slot		= 4
@@ -934,7 +1047,9 @@ animation_slot		= 4
 ;hud item
 hud = wpn_vodka_hud
 
-[medkit_scientic]:identity_immunities, dummy_food
+use_sound_anm = interface\item_usage\medkit_use
+
+[medkit_scientic]:medicin
 GroupControlSection	= spawn_group
 discovery_dependency =
 $spawn 				= "food and drugs\medkit_scientic"
@@ -953,6 +1068,15 @@ inv_grid_x			= 7
 inv_grid_y			= 13
 cost				= 200
 
+; eatable item
+eat_health			= 0.8
+eat_satiety			= 0.01
+eat_power			= 0.1
+eat_radiation		= -0.5
+wounds_heal_perc	= 0.2
+eat_portions_num	= 1
+eat_max_power		= 0.1
+
 ; food item
 slot				= 4
 animation_slot		= 4
@@ -960,8 +1084,10 @@ animation_slot		= 4
 ;hud item
 hud = wpn_vodka_hud
 
+use_sound_anm = interface\item_usage\medkit_use
 
-[energy_drink]:vodka, dummy_food
+
+[energy_drink]:food
 $spawn 				= "food and drugs\energy_drink"
 inv_name			= energy_drink_name_nonstop
 inv_name_short		= energy_drink_short_name
@@ -975,12 +1101,23 @@ inv_grid_x			= 19 ;19 ;11
 inv_grid_y			= 7 ;7  ;0
 inv_weight			= 0.33
 
+eat_health			= 0.0 ;0.001
+eat_satiety			= 0.08
+eat_power			= 1.0
+eat_alcohol			= 0
+eat_radiation		= -0.0001
+wounds_heal_perc	= 0
+eat_portions_num	= 1
+eat_max_power		= 0.3
+
 attach_angle_offset		= 0.000000, 0.000000, 0.000000
 attach_position_offset	= 0.087266, -0.078540, 0.052360
 attach_bone_name		= bip01_r_hand
 auto_attach				= false
 
-[energy_drink_2]:vodka, dummy_food
+use_sound_anm = interface\item_usage\drink_soda_use
+
+[energy_drink_2]:food
 $spawn 				= "food and drugs\energy_drink"
 inv_name			= energy_drink_name
 inv_name_short		= energy_drink_short_name
@@ -994,15 +1131,23 @@ inv_grid_x			= 11 ;11
 inv_grid_y			= 0 ;0
 inv_weight			= 0.3
 
+eat_health			= 0
+eat_satiety			= 0
+eat_power			= 1.0
+eat_alcohol			= 0
+eat_radiation		= 0
+wounds_heal_perc	= 0
+eat_portions_num	= 1
+eat_max_power		= 0.2
+
 attach_angle_offset		= 0.000000, 0.000000, 0.000000
 attach_position_offset	= 0.087266, -0.078540, 0.052360
 attach_bone_name		= bip01_r_hand
 auto_attach				= false
 
+use_sound_anm = interface\item_usage\drink_soda_use
 
-
-
-[bandage]:identity_immunities, dummy_food
+[bandage]:medicin
 GroupControlSection	= spawn_group
 discovery_dependency =
 $spawn 				= "food and drugs\bandage"
@@ -1022,12 +1167,22 @@ inv_grid_x			= 3
 inv_grid_y			= 18
 cost				= 20
 
+; eatable item
+eat_health = 	0.001 ;0.1
+eat_satiety = 	0
+eat_power = 	0 ;0.1
+eat_radiation = 0.0
+wounds_heal_perc = 1.0
+eat_portions_num = 1	;100
+
 ; food item
 slot				= 4
 animation_slot		= 4
 
 ;hud item
 hud = wpn_vodka_hud
+
+use_sound_anm = interface\item_usage\bandage_use
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1135,7 +1290,6 @@ radius				= 10	;15
 buzzer_radius		= 1.5
 noise				= zone_mosquito_bald       ;detectors\geiger_noise_loop
 buzzer				= zone_mosquito_bald       ;detectors\DA-2_alarm_loop
-slot				= 8
 ef_detector_type	= 1
 
 inv_name			= st_detector
@@ -1183,6 +1337,8 @@ zone_class_4		= zone_gravi_zone
 zone_sound_4_		= detectors\DA-2_beep1
 zone_min_freq_4		= 0.5
 zone_max_freq_4		= 30
+
+belt					= true
 
 [detector_advances]:identity_immunities
 GroupControlSection	= spawn_group
@@ -1237,7 +1393,8 @@ inv_grid_x			= 15
 inv_grid_y			= 7
 cost				= 1000	;30
 default_to_ruck		= false
-slot				= 8
+
+belt					= true
 
 [detector_elite]:identity_immunities
 GroupControlSection	= spawn_group
@@ -1293,125 +1450,13 @@ inv_grid_x			= 5
 inv_grid_y			= 14
 cost				= 1500	;30
 default_to_ruck		= false
-slot				= 8
 
 attach_angle_offset		= -0.160570,-1.425061,-0.361283
 attach_position_offset	= 0.160570,-0.060214,0.020071
 attach_bone_name		= bip01_l_hand
 auto_attach				= false
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;	OTHERS
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-[bread_use]:bread
-eat_health = 0.05
-eat_satiety = 0.2
-eat_power = 0
-eat_radiation = 0
-wounds_heal_perc = 0
-eat_portions_num = -1
-[kolbasa_use]:kolbasa
-eat_health = 0.1
-eat_satiety = 0.3
-eat_power = 0
-eat_radiation = 0
-wounds_heal_perc = 0
-eat_portions_num = -1
-[conserva_use]:conserva
-eat_health = 0.15
-eat_satiety = 0.4
-eat_power = 0
-eat_radiation = 0
-wounds_heal_perc = 0
-eat_portions_num = -1
-[vodka_use]:vodka
-eat_health = 0.01
-eat_satiety = 0.01
-eat_power = 0
-eat_radiation = -0.3
-eat_alcohol = 0.1
-wounds_heal_perc = 0
-eat_portions_num = -1
-[absolut_vodka_use]:vodka
-eat_health = 0.01
-eat_satiety = 0.01
-eat_power = 0
-eat_radiation = -0.3
-eat_alcohol = 0.1
-wounds_heal_perc = 0
-eat_portions_num = -1
-[nemiroff_vodka_use]:vodka
-eat_health = 0.01
-eat_satiety = 0.01
-eat_power = 0
-eat_radiation = -0.3
-eat_alcohol = 0.1
-wounds_heal_perc = 0
-eat_portions_num = -1
-[smirnoff_vodka_use]:vodka
-eat_health = 0.01
-eat_satiety = 0.01
-eat_power = 0
-eat_radiation = -0.3
-eat_alcohol = 0.1
-wounds_heal_perc = 0
-eat_portions_num = -1
-[energy_drink_use]:energy_drink
-eat_health = 0
-eat_satiety = 0
-eat_power = 1.0
-eat_alcohol = 0
-eat_radiation = 0
-wounds_heal_perc = 0
-eat_portions_num = 1
-eat_max_power = 0.2
-[energy_drink_2_use]:energy_drink
-eat_health = 0
-eat_satiety = 0
-eat_power = 1.0
-eat_alcohol = 0
-eat_radiation = 0
-wounds_heal_perc = 0
-eat_portions_num = 1
-eat_max_power = 0.2
-[antirad_use]:antirad
-eat_health = 0
-eat_satiety = 0
-eat_power = 0
-eat_radiation = -1.0
-wounds_heal_perc = 0
-eat_portions_num = 1
-[bandage_use]:bandage
-eat_health = 0.1
-eat_satiety = 0
-eat_power = 0.0
-eat_radiation = 0.0
-wounds_heal_perc = 1.0
-eat_portions_num = 1 ;100
-[medkit_use]:medkit
-eat_health = 0.6
-eat_satiety = 0
-eat_power = 0.0
-eat_radiation = -0.1
-wounds_heal_perc = 0.3
-eat_portions_num = 1
-eat_max_power = 0.1
-[medkit_army_use]:medkit_army
-eat_health = 1.0
-eat_satiety = 0
-eat_power = 0.0
-eat_radiation = -0.1
-wounds_heal_perc = 1.0
-eat_portions_num = 1
-eat_max_power = 0.1
-[medkit_scientic_use]:medkit_scientic
-eat_health = 1.0
-eat_satiety = 0
-eat_power = 0.0
-eat_radiation = -1.0
-wounds_heal_perc = 0.3
-eat_portions_num = 1
-eat_max_power = 0.1
+belt					= true
 
 [wpn_vodka_hud]:identity_immunities
 fire_point			= 0.0, 0.0, 0.06

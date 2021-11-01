@@ -1,0 +1,90 @@
+[anm_medkit]:item_base
+visual                  	= huds\medkit_hud.ogf
+
+hud							= anm_medkit_hud
+
+cam_effect = itemuse_anm_effects\aptechka_use.anm
+anim_timing = 4350
+item_used_timing = 2800
+
+[anm_medkit_hud]
+shell_point					= 0.0, 0.0, 0.0
+fire_point              	= 0.05, 0.0, 0.1
+fire_bone               	= bip01
+
+orientation             	= 0, 0, 0
+position                	= 0.0, -0.1, -0.14
+visual                  	= huds\medkit_hud.ogf
+
+anim_idle					= using
+anim_reload					= using
+anim_draw					= using
+anim_holster				= using
+anim_shoot					= using
+anim_idle_aim				= using
+
+[anm_medkit_army]:item_base
+hud							= anm_medkit_army_hud
+
+cam_effect = itemuse_anm_effects\aptechka_use.anm
+anim_timing = 4350
+item_used_timing = 2800
+
+[anm_medkit_army_hud]:anm_medkit_hud
+visual						= huds\medkit_army_hud.ogf
+
+[anm_medkit_scientic]:hud_base
+hud							= anm_medkit_scientic_hud
+
+cam_effect = itemuse_anm_effects\aptechka_use.anm
+anim_timing = 4350
+item_used_timing = 2800
+
+[anm_medkit_scientic_hud]:anm_medkit_hud
+visual						= huds\medkit_scientic_hud.ogf
+
+[anm_antirad]:item_base
+hud							= anm_antirad_hud
+
+cam_effect = itemuse_anm_effects\antirad_use.anm
+anim_timing = 4350
+item_used_timing = 4350
+
+[anm_antirad_hud]
+shell_point					= 0.0, 0.0, 0.0
+fire_point          		= 0.05, 0.0, 0.1
+fire_bone           		= bip01_neck
+
+orientation             	= 0, 0, 0		
+position                	= 0, 0, 0
+visual              		= huds\syringe_hud.ogf
+
+anim_idle					= kaif
+anim_reload					= kaif
+anim_draw					= kaif
+anim_holster				= kaif
+anim_shoot					= kaif
+anim_idle_aim				= kaif
+
+[anm_bandage]:item_base
+hud							= anm_bandage_hud
+
+cam_effect = itemuse_anm_effects\bint_use.anm
+anim_timing = 2150
+item_used_timing = 2150
+
+[anm_bandage_hud]
+shell_point					= 0.0, 0.0, 0.0
+fire_point          		= 0.05, 0.0, 0.1
+fire_bone           		= bip01_neck
+
+orientation             	= 0, 0, 0		
+position                	= 0, 0.1, -0.15
+visual              		= huds\hands\hand_opuch.ogf
+
+anim_idle					= idle
+anim_reload					= idle
+anim_draw					= idle
+anim_holster				= idle
+anim_shoot					= idle
+anim_idle_aim				= idle

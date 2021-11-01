@@ -222,7 +222,7 @@
 <!---------------------------SOLDIERS PROFILES----------------------->
 <!---------------------------SOLDIER COMMANDER----------------------->
 	<specific_character id="aes_Soldier_commander" team_default = "1">
-		<name>Willy Herzog</name>
+		<name>Прапорщик Иваныч</name>
 		<icon>ui_npc_u_soldier_beret_5</icon>
 		<map_icon x="2" y="0"></map_icon>
 		<bio>aes_Soldier_commander_bio</bio>

@@ -12,6 +12,18 @@ local progress = nil
 local hide = 0
 local hud = get_hud()
 local show_health = system_ini():r_bool ("mui_options","mui_show_health")
+local cfg = {
+	["stalker"] 		= "Одиночка",
+	["bandit"] 			= "Бандит",
+	["freedom"] 		= "Свобода",
+	["dolg"] 			= "Долг",
+	["ecolog"] 			= "Ученый",
+	["military"] 		= "Военный",
+	["killer"] 			= "Наемник",
+	["monolith"] 		= "Монолит",
+	["zombied"] = "Зомбированный",
+	["trader"] 			= "Торговец",
+}
 --------------------------------------------------------------------------------------------------
 -- не используется
 function IsHelicopter(o,c)
@@ -41,10 +53,16 @@ function on_hit(obj, amount, local_direction, who, bone_index)
 		progress:Show(true)
 		progress:SetProgressPos(hp*100)
 		local text = ""
-		if (IsStalker(nil,cls)) or (IsMonster(nil,cls)) then
+		if (IsStalker(nil,cls)) then
 			text = obj:character_name()
+			local community = cfg[obj:section()]
+			if community then
+				text = text.." ["..community.."]"
+			end
+		elseif (IsMonster(nil,cls)) then
+			text = get_string( obj:section(), "mutant_name" )
 		elseif (IsHelicopter(nil,cls)) then
-			text = "Helicopter"
+			text = "Вертолет"
 		else
 			local sid = get_object_story_id(obj:id())
 			if (sid) then
