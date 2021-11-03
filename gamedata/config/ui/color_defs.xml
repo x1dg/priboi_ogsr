@@ -202,4 +202,5 @@
 	<color name="hud_layer_sleep"		r="0" g="0" b="0" a="214"/>			<!-- худ: эффект значка сна -->
 	<color name="hud_layer_weight"		r="0" g="0" b="0" a="214"/>			<!-- худ: эффект значка переносимого веса -->
 	<color name="hud_layer_thirst"		r="0" g="0" b="0" a="214"/>			<!-- худ: эффект значка жажды (OGSR опция) -->
+	<color name="hud_claws"				r="255" g="32" b="32"/>				<!-- худ: мутант -->
 </colors>

@@ -4,26 +4,18 @@
  Source			: Call Of Chernobyl
  Author			: Alundaio
  Modified		: Enframed
+ Modified2		: 1beer
  Date			: 2015
- Last edit		: 2021
+ Middle edit	: 2021
+ Last edit		: 03.11.2021
 --]]-----------------------------------------------------------------------------------------------
 
 local progress = nil
+local enemy_icon = nil
+local mutant_icon = nil
 local hide = 0
 local hud = get_hud()
 local show_health = system_ini():r_bool ("mui_options","mui_show_health")
-local cfg = {
-	["stalker"] 		= "Одиночка",
-	["bandit"] 			= "Бандит",
-	["freedom"] 		= "Свобода",
-	["dolg"] 			= "Долг",
-	["ecolog"] 			= "Ученый",
-	["military"] 		= "Военный",
-	["killer"] 			= "Наемник",
-	["monolith"] 		= "Монолит",
-	["zombied"] = "Зомбированный",
-	["trader"] 			= "Торговец",
-}
 --------------------------------------------------------------------------------------------------
 -- не используется
 function IsHelicopter(o,c)
@@ -47,6 +39,8 @@ function on_hit(obj, amount, local_direction, who, bone_index)
 		cs = hud:GetCustomStatic("cs_enemy_health")
 		local w = cs:wnd()
 		progress = xml:InitProgressBar("cs_enemy_health:enemy_health", w)
+		enemy_icon = xml:InitStatic("cs_enemy_health:enemy_icon", w)
+		mutant_icon = xml:InitStatic("cs_enemy_health:mutant_icon", w)
 	end
 
 	if  (show_health == true) and (hp > 0.005) then
@@ -54,13 +48,17 @@ function on_hit(obj, amount, local_direction, who, bone_index)
 		progress:SetProgressPos(hp*100)
 		local text = ""
 		if (IsStalker(nil,cls)) then
+			mutant_icon:Show(false)
+			enemy_icon:Show(true)
 			text = obj:character_name()
-			local community = cfg[obj:section()]
+			local community = obj:character_community()
 			if community then
-				text = text.." ["..community.."]"
+				text = text.." ["..game.translate_string(community).."]"
 			end
 		elseif (IsMonster(nil,cls)) then
-			text = get_string( obj:section(), "mutant_name" )
+			enemy_icon:Show(false)
+			mutant_icon:Show(true)
+			text = game.translate_string(get_string( obj:section(), "mutant_name" ))
 		elseif (IsHelicopter(nil,cls)) then
 			text = "Вертолет"
 		else

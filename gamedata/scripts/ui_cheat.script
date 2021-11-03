@@ -12,8 +12,6 @@ function cheat:__finalize() end
 
 function cheat:InitControls()
 	-- здесь определяем координаты левого верхнего угла и ширину-высоту
-	log1("DEVICE WIDTH: "..(device().width)/2)
-	log1("DEVICE HEIGHT: "..(device().height)/2)
 	self:Init(1024/2-550/2,768/2-450/2,550,450)
 
 	-- файл-описатель наших элементов

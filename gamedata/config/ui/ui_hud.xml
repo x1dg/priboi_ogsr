@@ -178,4 +178,6 @@
     <texture id="ui_mg_progress_efficiency_full"		x="450" y="261" width="31" height="2"/>
 	<texture id="ui_hud_frame_voting_dop"				x="0" y="0" width="0" height="0"/>
     <texture id="ui_hud_frame_voting_dop2"				x="0" y="0" width="0" height="0"/>
+	<texture id="ui_hud_claws"							x="0" y="550" width="50" height="50"/>		<!-- индикатор мутанта -->
+	<texture id="ui_hud_pistol"							x="0" y="500" width="50" height="50"/>		<!-- индикатор энеми -->
 </ui_texture>

@@ -159,6 +159,16 @@
 	
 	<!-- Шкала жизни врага -->
 	<cs_enemy_health x="696" y="20" width="302" height="36">
+		<enemy_icon x="-40" y="-5" width="30" height="40" stretch="1" horz="1" min="0" max="100">
+			<auto_static x="0" y="0" width="30" height="40" stretch="1">
+				<texture>ui_hud_pistol</texture>
+			</auto_static>
+		</enemy_icon>
+		<mutant_icon x="-40" y="-5" width="30" height="40" stretch="1" horz="1" min="0" max="100">
+			<auto_static x="0" y="0" width="30" height="40" stretch="1">
+				<texture color="hud_claws">ui_hud_claws</texture>
+			</auto_static>
+		</mutant_icon>
 		<text x="0" y="3" width="302" height="17" font="letterica16" color="hud_enemy_name" align="c"/>
 		<texture>ui_hud_enemy_frame</texture>
 		<enemy_health x="4" y="23" width="294" height="9" horz="1" min="0" max="100">
