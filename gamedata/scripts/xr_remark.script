@@ -198,7 +198,6 @@ function add_to_binder(npc, ini, scheme, section, storage)
 	if not manager then
 		return
 	end
-	log1("FUCKING NPC: "..npc:name())
 
     properties["event"]     = xr_evaluators_id.reaction
     properties["need_remark"] = xr_evaluators_id.zmey_remark_base + 1

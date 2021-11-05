@@ -1,272 +1,1597 @@
 
-[03.11.21 20:02:21.408] * Detected CPU: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz [GenuineIntel], F6/M158/S10
-[03.11.21 20:02:21.410] * CPU features: RDTSC, MMX, SSE, SSE2, SSE3, MONITOR/MWAIT, SSSE3, SSE4.1, SSE4.2, AVX, AVX2
-[03.11.21 20:02:21.410] * CPU cores: [6], threads: [6]
-[03.11.21 20:02:21.410] * CPU0 current freq: 2808 MHz, max freq: 2808 MHz
-[03.11.21 20:02:21.410] * CPU1 current freq: 2808 MHz, max freq: 2808 MHz
-[03.11.21 20:02:21.410] * CPU2 current freq: 2808 MHz, max freq: 2808 MHz
-[03.11.21 20:02:21.410] * CPU3 current freq: 2808 MHz, max freq: 2808 MHz
-[03.11.21 20:02:21.410] * CPU4 current freq: 2808 MHz, max freq: 2808 MHz
-[03.11.21 20:02:21.410] * CPU5 current freq: 2808 MHz, max freq: 2808 MHz
-[03.11.21 20:02:21.410] Initializing File System...
-[03.11.21 20:02:21.411] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db0], size: [678577379]
-[03.11.21 20:02:21.473] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db1], size: [708434331]
-[03.11.21 20:02:21.478] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db2], size: [671169415]
-[03.11.21 20:02:21.481] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db3], size: [684792231]
-[03.11.21 20:02:21.484] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db4], size: [671392842]
-[03.11.21 20:02:21.878] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db5], size: [697475082]
-[03.11.21 20:02:21.923] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db6], size: [672288151]
-[03.11.21 20:02:21.925] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db7], size: [672462598]
-[03.11.21 20:02:21.954] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db8], size: [293378144]
-[03.11.21 20:02:21.976] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.db9], size: [79312307]
-[03.11.21 20:02:22.018] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dba], size: [22884835]
-[03.11.21 20:02:22.022] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbb], size: [55194918]
-[03.11.21 20:02:22.029] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbc], size: [160948]
-[03.11.21 20:02:22.030] --Found base arch: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata.dbd], size: [101014]
-[03.11.21 20:02:22.030] using fs-ltx fsgame.ltx
-[03.11.21 20:02:22.030] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\]
-[03.11.21 20:02:22.030]   files: [6]
-[03.11.21 20:02:22.039] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\]
-[03.11.21 20:02:22.039]   files: [16]
-[03.11.21 20:02:22.039] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\spawns\]
-[03.11.21 20:02:22.039]   files: [4]
-[03.11.21 20:02:22.040] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\anims\]
-[03.11.21 20:02:22.040]   files: [24]
-[03.11.21 20:02:22.045] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\]
-[03.11.21 20:02:22.045]   files: [12]
-[03.11.21 20:02:22.049] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\meshes\]
-[03.11.21 20:02:22.049]   files: [12]
-[03.11.21 20:02:22.117] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\meshes\]
-[03.11.21 20:02:22.117]   files: [12]
-[03.11.21 20:02:22.127] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\shaders\]
-[03.11.21 20:02:22.127]   files: [7]
-[03.11.21 20:02:22.153] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\sounds\]
-[03.11.21 20:02:22.153]   files: [22]
-[03.11.21 20:02:22.259] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\textures\]
-[03.11.21 20:02:22.259]   files: [67]
-[03.11.21 20:02:22.587] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\scripts\]
-[03.11.21 20:02:22.590]   files: [129]
-[03.11.21 20:02:22.591] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\]
-[03.11.21 20:02:22.591]   files: [30]
-[03.11.21 20:02:22.611] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\]
-[03.11.21 20:02:22.611]   files: [12]
-[03.11.21 20:02:22.611] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\]
-[03.11.21 20:02:22.611]   files: [28]
-[03.11.21 20:02:22.611] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\logs\]
-[03.11.21 20:02:22.612]   files: [160]
-[03.11.21 20:02:22.612] --Found FS dir: [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\screenshots\]
-[03.11.21 20:02:22.612]   files: [13]
-[03.11.21 20:02:22.616] FS: 36272 files cached, 7466Kb memory used.
-[03.11.21 20:02:22.616] Init FileSystem 1.206327 sec
-[03.11.21 20:02:22.617] [OGSR Engine (x64)] build date: [Sep 22 2021 10:23:51]
-[03.11.21 20:02:22.617] [AppVeyor] build version: [2.1.293], repo: [OGSR/OGSR-Engine]
-[03.11.21 20:02:22.617] [_MSC_FULL_VER]: [191627045], [_MSVC_LANG]: [201703L]
-[03.11.21 20:02:22.617] Working Directory: [Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64]
-[03.11.21 20:02:22.617] CommandLine: ["Z:\Steam\steamapps\common\STALKER Shadow of Chernobyl\bin_x64\xrEngine.exe"  -high]
-[03.11.21 20:02:22.740] Initializing Engine...
-[03.11.21 20:02:22.740] Starting INPUT device...
-[03.11.21 20:02:22.862] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[03.11.21 20:02:22.862] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
-[03.11.21 20:02:22.887] refCount:m_pAdapter 1
-[03.11.21 20:02:22.887] refCount:pFactory 1
-[03.11.21 20:02:22.888] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[03.11.21 20:02:22.888] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
-[03.11.21 20:02:23.023] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
-[03.11.21 20:02:23.023] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
-[03.11.21 20:02:23.025] --[CEngineAPI::CreateRendererList] Available render modes [5]:
-[03.11.21 20:02:23.025] --  [renderer_r2a]
-[03.11.21 20:02:23.025] --  [renderer_r2]
-[03.11.21 20:02:23.025] --  [renderer_r2.5]
-[03.11.21 20:02:23.025] --  [renderer_r3]
-[03.11.21 20:02:23.025] --  [renderer_r4]
-[03.11.21 20:02:23.025] Executing config-script "user.ltx"...
-[03.11.21 20:02:23.025] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
-[03.11.21 20:02:23.025] [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\user.ltx] successfully loaded.
-[03.11.21 20:02:23.025] --Loading DLL: [xrRender_R2.dll]
-[03.11.21 20:02:23.027] --Loading DLL: [xrGame.dll]
-[03.11.21 20:02:23.068] --------------------------------------------------------------------------------
-[03.11.21 20:02:23.068] [8143MB] physical memory installed, [3738MB] available, [54] percent of memory in use
-[03.11.21 20:02:23.068] PageFile usage: [45MB], Peak PageFile usage: [92MB]
-[03.11.21 20:02:23.068] --------------------------------------------------------------------------------
-[03.11.21 20:02:23.068] * [ D3D ]: textures[0 K]
-[03.11.21 20:02:23.068] * [x-ray]: process heap[24443 K], render[0 K]
-[03.11.21 20:02:23.068] * [x-ray]: economy: strings[4930 K], smem[0 K]
-[03.11.21 20:02:23.070] SOUND: OpenAL: enumerate devices...
-[03.11.21 20:02:23.070] SOUND: OpenAL: EnumerationExtension Present
-[03.11.21 20:02:23.211] devices Generic Software
-[03.11.21 20:02:23.211] SOUND: OpenAL: system  default SndDevice name is Generic Software
-[03.11.21 20:02:23.489] SOUND: OpenAL: All available devices:
-[03.11.21 20:02:23.489] 1. Generic Software, Spec Version 1.1 (default) eax[2] efx[no] xram[no]
-[03.11.21 20:02:23.489] 2. OpenAL Soft, Spec Version 1.1  eax[0] efx[yes] xram[no]
-[03.11.21 20:02:23.489] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx"...
-[03.11.21 20:02:23.492] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx] successfully loaded.
-[03.11.21 20:02:23.492] Executing config-script "user.ltx"...
-[03.11.21 20:02:23.492] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\rspec_high.ltx"...
-[03.11.21 20:02:23.493] ! Unknown command:  r2_sun_shafts
-[03.11.21 20:02:23.493] ! Unknown command:  r__supersample
-[03.11.21 20:02:23.493] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\rspec_high.ltx] successfully loaded.
-[03.11.21 20:02:23.493] Executing config-script "z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx"...
-[03.11.21 20:02:23.493] [z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\config\default_controls.ltx] successfully loaded.
-[03.11.21 20:02:23.495] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
-[03.11.21 20:02:23.495] [z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\user.ltx] successfully loaded.
-[03.11.21 20:02:23.495] SOUND: Selected device is Generic Software
-[03.11.21 20:02:23.528] [OpenAL] EAX 2.0 extension: present
-[03.11.21 20:02:23.528] [OpenAL] EAX 2.0 deferred: present
-[03.11.21 20:02:23.529] * sound : cache: 65537 kb, 4856 lines, 13820 bpl
-[03.11.21 20:02:23.556] Starting RENDER device...
-[03.11.21 20:02:23.601] * GPU [vendor:10DE]-[device:1C81]: NVIDIA GeForce GTX 1050
-[03.11.21 20:02:23.601] * GPU driver: 30.0.14.7196
-[03.11.21 20:02:23.760] * CREATE: DeviceREF: 1
-[03.11.21 20:02:23.760] * Vertex Processor: PURE HARDWARE
-[03.11.21 20:02:23.760] *     Texture memory: 4072 M
-[03.11.21 20:02:23.760] *          DDI-level: 9.0
-[03.11.21 20:02:23.766] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
-[03.11.21 20:02:23.766] * GPU vertex cache: unrecognized, 16
-[03.11.21 20:02:23.769] * DVB created: 16384K
-[03.11.21 20:02:23.769] * DIB created: 512K
-[03.11.21 20:02:23.811] ! Version conflict in shader 'models\lightplanes_00'
-[03.11.21 20:02:23.811] ! Version conflict in shader 'models\lightplanesself'
-[03.11.21 20:02:23.811] ! Version conflict in shader 'models\model_puh'
-[03.11.21 20:02:23.811] ! Version conflict in shader 'models\model_refl'
-[03.11.21 20:02:23.811] ! Version conflict in shader 'models\xbrainglass'
-[03.11.21 20:02:23.811] ! Version conflict in shader 'models\xdistortcolorlinv'
-[03.11.21 20:02:23.811] ! Version conflict in shader 'models\xglass'
-[03.11.21 20:02:23.811] ! Version conflict in shader 'models\xglass2'
-[03.11.21 20:02:23.811] ! Version conflict in shader 'models\xlens'
-[03.11.21 20:02:23.811] ! Version conflict in shader 'selflight_static'
-[03.11.21 20:02:23.813] [CTextureDescrMngr::LoadLTX] count of *textures*.ltx files: [1]
-[03.11.21 20:02:24.035] * NULLRT supported
-[03.11.21 20:02:24.035] * ...and used
-[03.11.21 20:02:24.035] * HWDST/PCF supported and used
-[03.11.21 20:02:24.035] * NV-DBT supported and used
-[03.11.21 20:02:25.213] --LUA version: [LuaJIT 2.1.0-beta3]
-[03.11.21 20:02:25.213] --_G loaded from: stack traceback:
-- 	...n\stalker shadow of chernobyl\gamedata\scripts\_g.script:1855: in main chunk
-[03.11.21 20:02:25.270] Starting engine...
-[03.11.21 20:02:29.577] * phase time: 9 ms
-[03.11.21 20:02:29.603] * phase cmem: 181348 K
-[03.11.21 20:02:29.658] --LUA version: [LuaJIT 2.1.0-beta3]
-[03.11.21 20:02:29.658] --_G loaded from: stack traceback:
-- 	...n\stalker shadow of chernobyl\gamedata\scripts\_g.script:1855: in main chunk
-[03.11.21 20:02:29.686] * phase time: 108 ms
-[03.11.21 20:02:29.712] * phase cmem: 150103 K
-[03.11.21 20:02:29.719] * Loading spawn registry...
-[03.11.21 20:02:30.286] * 8976 spawn points are successfully loaded
-[03.11.21 20:02:30.286] * Loading objects...
-[03.11.21 20:02:30.591] * 17803 objects are successfully loaded
-[03.11.21 20:02:30.673] * 1 script vars are successfully loaded
-[03.11.21 20:02:31.058] * Game Данил_quicksave is successfully loaded from file 'z:\steam\steamapps\common\stalker shadow of chernobyl\userdata\savedgames\Данил_quicksave.sav' (1.346s)
-[03.11.21 20:02:31.058] * phase time: 1372 ms
-[03.11.21 20:02:31.102] * phase cmem: 196370 K
-[03.11.21 20:02:31.144] # Player not found. New player created.
-[03.11.21 20:02:31.144] !!xrServer::Check_GameSpy_CDKey_Success - 1
-[03.11.21 20:02:31.144] * client : connection accepted - <>
-[03.11.21 20:02:31.161] * phase time: 102 ms
-[03.11.21 20:02:31.205] * phase cmem: 196381 K
-[03.11.21 20:02:31.205] * phase time: 43 ms
-[03.11.21 20:02:31.249] * phase cmem: 196381 K
-[03.11.21 20:02:31.562] --[ISpatial_DB::initialize] bbc is [33.9, 41.8, 5.9], bbd is [68.9, 53.0, 49.4]
-[03.11.21 20:02:31.562] --[ISpatial_DB::initialize] bbc is [33.9, 41.8, 5.9], bbd is [68.9, 53.0, 49.4]
-[03.11.21 20:02:31.562] * phase time: 357 ms
-[03.11.21 20:02:31.605] * phase cmem: 223153 K
-[03.11.21 20:02:31.715] * phase time: 152 ms
-[03.11.21 20:02:31.759] * phase cmem: 225882 K
-[03.11.21 20:02:31.759] * [Loading VB] 65535 verts, 2047 Kb
-[03.11.21 20:02:31.766] * [Loading VB] 65528 verts, 2047 Kb
-[03.11.21 20:02:31.777] * [Loading VB] 65529 verts, 2047 Kb
-[03.11.21 20:02:31.785] * [Loading VB] 65532 verts, 2047 Kb
-[03.11.21 20:02:31.794] * [Loading VB] 65533 verts, 2047 Kb
-[03.11.21 20:02:31.802] * [Loading VB] 65532 verts, 2047 Kb
-[03.11.21 20:02:31.810] * [Loading VB] 65525 verts, 2047 Kb
-[03.11.21 20:02:31.818] * [Loading VB] 65525 verts, 2047 Kb
-[03.11.21 20:02:31.826] * [Loading VB] 65534 verts, 2047 Kb
-[03.11.21 20:02:31.834] * [Loading VB] 65514 verts, 2047 Kb
-[03.11.21 20:02:31.842] * [Loading VB] 65495 verts, 2046 Kb
-[03.11.21 20:02:31.850] * [Loading VB] 65513 verts, 2047 Kb
-[03.11.21 20:02:31.858] * [Loading VB] 42548 verts, 1329 Kb
-[03.11.21 20:02:31.864] * [Loading VB] 12436 verts, 388 Kb
-[03.11.21 20:02:31.864] * [Loading IB] 1048575 indices, 2047 Kb
-[03.11.21 20:02:31.875] * [Loading IB] 1048572 indices, 2047 Kb
-[03.11.21 20:02:31.884] * [Loading IB] 1048572 indices, 2047 Kb
-[03.11.21 20:02:31.893] * [Loading IB] 1048572 indices, 2047 Kb
-[03.11.21 20:02:31.903] * [Loading IB] 1048572 indices, 2047 Kb
-[03.11.21 20:02:31.911] * [Loading IB] 1048572 indices, 2047 Kb
-[03.11.21 20:02:31.920] * [Loading IB] 1048572 indices, 2047 Kb
-[03.11.21 20:02:31.930] * [Loading IB] 1048575 indices, 2047 Kb
-[03.11.21 20:02:31.939] * [Loading IB] 955236 indices, 1865 Kb
-[03.11.21 20:02:31.949] * [Loading VB] 65534 verts, 767 Kb
-[03.11.21 20:02:31.954] * [Loading VB] 65533 verts, 767 Kb
-[03.11.21 20:02:31.956] * [Loading VB] 65534 verts, 767 Kb
-[03.11.21 20:02:31.959] * [Loading VB] 65534 verts, 767 Kb
-[03.11.21 20:02:31.962] * [Loading VB] 65535 verts, 767 Kb
-[03.11.21 20:02:31.965] * [Loading VB] 65532 verts, 767 Kb
-[03.11.21 20:02:31.968] * [Loading VB] 65533 verts, 767 Kb
-[03.11.21 20:02:31.972] * [Loading VB] 37710 verts, 441 Kb
-[03.11.21 20:02:31.974] * [Loading IB] 1048575 indices, 2047 Kb
-[03.11.21 20:02:31.986] * [Loading IB] 1048572 indices, 2047 Kb
-[03.11.21 20:02:31.994] * [Loading IB] 1048575 indices, 2047 Kb
-[03.11.21 20:02:32.002] * [Loading IB] 1048575 indices, 2047 Kb
-[03.11.21 20:02:32.011] * [Loading IB] 1048572 indices, 2047 Kb
-[03.11.21 20:02:32.020] * [Loading IB] 1048575 indices, 2047 Kb
-[03.11.21 20:02:32.028] * [Loading IB] 1048572 indices, 2047 Kb
-[03.11.21 20:02:32.038] * [Loading IB] 467067 indices, 912 Kb
-[03.11.21 20:02:32.040] * phase time: 324 ms
-[03.11.21 20:02:32.084] * phase cmem: 291596 K
-[03.11.21 20:02:32.135] * phase time: 94 ms
-[03.11.21 20:02:32.180] * phase cmem: 294382 K
-[03.11.21 20:02:32.181] * phase time: 45 ms
-[03.11.21 20:02:32.226] * phase cmem: 294383 K
-[03.11.21 20:02:32.227]  WARNING: Occlusion map 'z:\steam\steamapps\common\stalker shadow of chernobyl\gamedata\levels\l12u_sarcofag\level.hom' not found.
-[03.11.21 20:02:32.227] * phase time: 46 ms
-[03.11.21 20:02:32.273] * phase cmem: 294489 K
-[03.11.21 20:02:32.274] * phase time: 47 ms
-[03.11.21 20:02:32.320] * phase cmem: 294489 K
-[03.11.21 20:02:32.333] - Game configuring : Started 
-[03.11.21 20:02:32.340] - Game configuring : Finished 
-[03.11.21 20:02:32.467] * phase time: 192 ms
-[03.11.21 20:02:32.512] * phase cmem: 304489 K
-[03.11.21 20:02:37.201] * t-report - base: 911, 718397 K
-[03.11.21 20:02:37.201] * t-report - lmap: 5, 5120 K
-[03.11.21 20:02:37.201] * phase time: 4734 ms
-[03.11.21 20:02:37.251] * phase cmem: 1058844 K
-[03.11.21 20:02:37.268] * phase time: 67 ms
-[03.11.21 20:02:37.318] * phase cmem: 1058826 K
-[03.11.21 20:02:37.375] --------------------------------------------------------------------------------
-[03.11.21 20:02:37.375] [8143MB] physical memory installed, [2722MB] available, [66] percent of memory in use
-[03.11.21 20:02:37.375] PageFile usage: [1342MB], Peak PageFile usage: [1349MB]
-[03.11.21 20:02:37.375] --------------------------------------------------------------------------------
-[03.11.21 20:02:37.375] * [ D3D ]: textures[723517 K]
-[03.11.21 20:02:37.375] * [x-ray]: process heap[1058209 K], render[0 K]
-[03.11.21 20:02:37.375] * [x-ray]: economy: strings[7418 K], smem[0 K]
-[03.11.21 20:02:39.352] ! Can't find sound [weapons\empty.ogg]
-[03.11.21 20:02:39.495] ! auto-generated bump map: wpn\fwr_rnm_016\upgrades\silencer\sil_45_bump#
-[03.11.21 20:02:39.496] ! auto-generated bump map: wpn\fwr_rnm_016\upgrades\silencer\sil_45_bump
-[03.11.21 20:02:42.012] * MEMORY USAGE: 1393293 K
-[03.11.21 20:02:42.012] * End of synchronization A[1] R[1]
-[03.11.21 20:02:42.012] * phase time: 4811 ms
-[03.11.21 20:02:42.074] * phase cmem: 1393293 K
-[03.11.21 20:02:54.210] * [R_occlusion::occq_destroy]: fids[147] used[147] pool[147]
-[03.11.21 20:02:54.210] * [R_occlusion::occq_destroy]: released [0] used and [147] pool queries
-[03.11.21 20:02:54.373] * DVB created: 16384K
-[03.11.21 20:02:54.373] * DIB created: 512K
-[03.11.21 20:02:55.223] * RM_Dump: textures  : 1201
-[03.11.21 20:02:55.223] * RM_Dump: rtargets  : 22
-[03.11.21 20:02:55.223] * RM_Dump: vs        : 48
-[03.11.21 20:02:55.223] * RM_Dump: ps        : 76
-[03.11.21 20:02:55.223] * RM_Dump: dcl       : 16
-[03.11.21 20:02:55.223] * RM_Dump: states    : 72
-[03.11.21 20:02:55.223] * RM_Dump: tex_list  : 989
-[03.11.21 20:02:55.223] * RM_Dump: matrices  : 0
-[03.11.21 20:02:55.223] * RM_Dump: lst_constants: 0
-[03.11.21 20:02:55.223] * RM_Dump: v_passes  : 1444
-[03.11.21 20:02:55.223] * RM_Dump: v_elements: 1447
-[03.11.21 20:02:55.223] * RM_Dump: v_shaders : 898
-[03.11.21 20:02:55.223] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
-[03.11.21 20:02:55.223] * GPU vertex cache: recognized, 24
-[03.11.21 20:02:55.223] *** RESET [1014 ms]
-[03.11.21 20:02:55.730] * MEMORY USAGE: 1390702 K
-[03.11.21 20:02:55.730] * End of synchronization A[1] R[1]
-[03.11.21 20:03:08.368] ENEMY SECTION: stalker_monolith
-[03.11.21 20:03:08.368] CHARACTER COMMUNITY: monolith
-[03.11.21 20:03:09.098] ENEMY SECTION: stalker_monolith
-[03.11.21 20:03:09.098] CHARACTER COMMUNITY: monolith
+[05.11.21 17:48:52.036] * Detected CPU: Intel(R) Core(TM) i5-8400 CPU @ 2.80GHz [GenuineIntel], F6/M158/S10
+[05.11.21 17:48:52.037] * CPU features: RDTSC, MMX, SSE, SSE2, SSE3, MONITOR/MWAIT, SSSE3, SSE4.1, SSE4.2, AVX, AVX2
+[05.11.21 17:48:52.037] * CPU cores: [6], threads: [6]
+[05.11.21 17:48:52.037] * CPU0 current freq: 2808 MHz, max freq: 2808 MHz
+[05.11.21 17:48:52.037] * CPU1 current freq: 2808 MHz, max freq: 2808 MHz
+[05.11.21 17:48:52.037] * CPU2 current freq: 2808 MHz, max freq: 2808 MHz
+[05.11.21 17:48:52.037] * CPU3 current freq: 2808 MHz, max freq: 2808 MHz
+[05.11.21 17:48:52.037] * CPU4 current freq: 2808 MHz, max freq: 2808 MHz
+[05.11.21 17:48:52.037] * CPU5 current freq: 2808 MHz, max freq: 2808 MHz
+[05.11.21 17:48:52.037] Initializing File System...
+[05.11.21 17:48:52.037] --Found base arch: [v:\priboi ogsr\gamedata.db0], size: [678577379]
+[05.11.21 17:48:52.073] --Found base arch: [v:\priboi ogsr\gamedata.db1], size: [708434331]
+[05.11.21 17:48:52.078] --Found base arch: [v:\priboi ogsr\gamedata.db2], size: [671169415]
+[05.11.21 17:48:52.079] --Found base arch: [v:\priboi ogsr\gamedata.db3], size: [684792231]
+[05.11.21 17:48:52.082] --Found base arch: [v:\priboi ogsr\gamedata.db4], size: [671392842]
+[05.11.21 17:48:52.301] --Found base arch: [v:\priboi ogsr\gamedata.db5], size: [697475082]
+[05.11.21 17:48:52.337] --Found base arch: [v:\priboi ogsr\gamedata.db6], size: [672288151]
+[05.11.21 17:48:52.338] --Found base arch: [v:\priboi ogsr\gamedata.db7], size: [672462598]
+[05.11.21 17:48:52.357] --Found base arch: [v:\priboi ogsr\gamedata.db8], size: [293378144]
+[05.11.21 17:48:52.365] --Found base arch: [v:\priboi ogsr\gamedata.db9], size: [79312307]
+[05.11.21 17:48:52.385] --Found base arch: [v:\priboi ogsr\gamedata.dba], size: [22884835]
+[05.11.21 17:48:52.388] --Found base arch: [v:\priboi ogsr\gamedata.dbb], size: [55194918]
+[05.11.21 17:48:52.392] --Found base arch: [v:\priboi ogsr\gamedata.dbc], size: [160948]
+[05.11.21 17:48:52.392] --Found base arch: [v:\priboi ogsr\gamedata.dbd], size: [101014]
+[05.11.21 17:48:52.392] using fs-ltx fsgame.ltx
+[05.11.21 17:48:52.392] --Found FS dir: [v:\priboi ogsr\userdata\]
+[05.11.21 17:48:52.392]   files: [6]
+[05.11.21 17:48:52.395] --Found FS dir: [v:\priboi ogsr\gamedata\]
+[05.11.21 17:48:52.395]   files: [16]
+[05.11.21 17:48:52.395] --Found FS dir: [v:\priboi ogsr\gamedata\spawns\]
+[05.11.21 17:48:52.395]   files: [4]
+[05.11.21 17:48:52.395] --Found FS dir: [v:\priboi ogsr\gamedata\anims\]
+[05.11.21 17:48:52.395]   files: [24]
+[05.11.21 17:48:52.400] --Found FS dir: [v:\priboi ogsr\gamedata\levels\]
+[05.11.21 17:48:52.400]   files: [12]
+[05.11.21 17:48:52.401] --Found FS dir: [v:\priboi ogsr\gamedata\meshes\]
+[05.11.21 17:48:52.401]   files: [12]
+[05.11.21 17:48:52.417] --Found FS dir: [v:\priboi ogsr\gamedata\meshes\]
+[05.11.21 17:48:52.417]   files: [12]
+[05.11.21 17:48:52.426] --Found FS dir: [v:\priboi ogsr\gamedata\shaders\]
+[05.11.21 17:48:52.426]   files: [7]
+[05.11.21 17:48:52.432] --Found FS dir: [v:\priboi ogsr\gamedata\sounds\]
+[05.11.21 17:48:52.432]   files: [22]
+[05.11.21 17:48:52.461] --Found FS dir: [v:\priboi ogsr\gamedata\textures\]
+[05.11.21 17:48:52.461]   files: [67]
+[05.11.21 17:48:52.550] --Found FS dir: [v:\priboi ogsr\gamedata\scripts\]
+[05.11.21 17:48:52.551]   files: [129]
+[05.11.21 17:48:52.552] --Found FS dir: [v:\priboi ogsr\gamedata\config\]
+[05.11.21 17:48:52.552]   files: [30]
+[05.11.21 17:48:52.558] --Found FS dir: [v:\priboi ogsr\gamedata\levels\]
+[05.11.21 17:48:52.558]   files: [12]
+[05.11.21 17:48:52.558] --Found FS dir: [v:\priboi ogsr\userdata\savedgames\]
+[05.11.21 17:48:52.558]   files: [31]
+[05.11.21 17:48:52.558] --Found FS dir: [v:\priboi ogsr\userdata\logs\]
+[05.11.21 17:48:52.559]   files: [163]
+[05.11.21 17:48:52.559] --Found FS dir: [v:\priboi ogsr\userdata\screenshots\]
+[05.11.21 17:48:52.559]   files: [13]
+[05.11.21 17:48:52.564] FS: 36276 files cached, 6082Kb memory used.
+[05.11.21 17:48:52.564] Init FileSystem 0.526790 sec
+[05.11.21 17:48:52.564] [OGSR Engine (x64)] build date: [Sep 22 2021 10:23:51]
+[05.11.21 17:48:52.564] [AppVeyor] build version: [2.1.293], repo: [OGSR/OGSR-Engine]
+[05.11.21 17:48:52.564] [_MSC_FULL_VER]: [191627045], [_MSVC_LANG]: [201703L]
+[05.11.21 17:48:52.564] Working Directory: [V:\Priboi OGSR\bin_x64]
+[05.11.21 17:48:52.564] CommandLine: ["V:\Priboi OGSR\bin_x64\xrEngine.exe" ]
+[05.11.21 17:48:52.690] Initializing Engine...
+[05.11.21 17:48:52.691] Starting INPUT device...
+[05.11.21 17:48:52.755] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[05.11.21 17:48:52.755] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[05.11.21 17:48:52.775] refCount:m_pAdapter 1
+[05.11.21 17:48:52.775] refCount:pFactory 1
+[05.11.21 17:48:52.775] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[05.11.21 17:48:52.775] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[05.11.21 17:48:52.908] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[05.11.21 17:48:52.908] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries
+[05.11.21 17:48:52.909] --[CEngineAPI::CreateRendererList] Available render modes [5]:
+[05.11.21 17:48:52.909] --  [renderer_r2a]
+[05.11.21 17:48:52.909] --  [renderer_r2]
+[05.11.21 17:48:52.909] --  [renderer_r2.5]
+[05.11.21 17:48:52.909] --  [renderer_r3]
+[05.11.21 17:48:52.909] --  [renderer_r4]
+[05.11.21 17:48:52.909] Executing config-script "user.ltx"...
+[05.11.21 17:48:52.909] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
+[05.11.21 17:48:52.909] [v:\priboi ogsr\userdata\user.ltx] successfully loaded.
+[05.11.21 17:48:52.909] --Loading DLL: [xrRender_R2.dll]
+[05.11.21 17:48:52.911] --Loading DLL: [xrGame.dll]
+[05.11.21 17:48:52.928] --------------------------------------------------------------------------------
+[05.11.21 17:48:52.928] [8143MB] physical memory installed, [3708MB] available, [54] percent of memory in use
+[05.11.21 17:48:52.928] PageFile usage: [42MB], Peak PageFile usage: [89MB]
+[05.11.21 17:48:52.928] --------------------------------------------------------------------------------
+[05.11.21 17:48:52.928] * [ D3D ]: textures[0 K]
+[05.11.21 17:48:52.928] * [x-ray]: process heap[21522 K], render[0 K]
+[05.11.21 17:48:52.928] * [x-ray]: economy: strings[4934 K], smem[0 K]
+[05.11.21 17:48:52.928] SOUND: OpenAL: enumerate devices...
+[05.11.21 17:48:52.928] SOUND: OpenAL: EnumerationExtension Present
+[05.11.21 17:48:53.031] devices Generic Software
+[05.11.21 17:48:53.031] SOUND: OpenAL: system  default SndDevice name is Generic Software
+[05.11.21 17:48:53.317] SOUND: OpenAL: All available devices:
+[05.11.21 17:48:53.317] 1. Generic Software, Spec Version 1.1 (default) eax[2] efx[no] xram[no]
+[05.11.21 17:48:53.317] 2. OpenAL Soft, Spec Version 1.1  eax[0] efx[yes] xram[no]
+[05.11.21 17:48:53.317] Executing config-script "v:\priboi ogsr\gamedata\config\default_controls.ltx"...
+[05.11.21 17:48:53.322] [v:\priboi ogsr\gamedata\config\default_controls.ltx] successfully loaded.
+[05.11.21 17:48:53.322] Executing config-script "user.ltx"...
+[05.11.21 17:48:53.323] Executing config-script "v:\priboi ogsr\gamedata\config\rspec_high.ltx"...
+[05.11.21 17:48:53.323] ! Unknown command:  r2_sun_shafts
+[05.11.21 17:48:53.323] ! Unknown command:  r__supersample
+[05.11.21 17:48:53.323] [v:\priboi ogsr\gamedata\config\rspec_high.ltx] successfully loaded.
+[05.11.21 17:48:53.323] Executing config-script "v:\priboi ogsr\gamedata\config\default_controls.ltx"...
+[05.11.21 17:48:53.323] [v:\priboi ogsr\gamedata\config\default_controls.ltx] successfully loaded.
+[05.11.21 17:48:53.324] --[CCC_r2::Execute] Executing renderer: [renderer_r2], renderer_value: [1]
+[05.11.21 17:48:53.324] [v:\priboi ogsr\userdata\user.ltx] successfully loaded.
+[05.11.21 17:48:53.324] SOUND: Selected device is Generic Software
+[05.11.21 17:48:53.354] [OpenAL] EAX 2.0 extension: present
+[05.11.21 17:48:53.354] [OpenAL] EAX 2.0 deferred: present
+[05.11.21 17:48:53.355] * sound : cache: 65537 kb, 4856 lines, 13820 bpl
+[05.11.21 17:48:53.374] Starting RENDER device...
+[05.11.21 17:48:53.401] * GPU [vendor:10DE]-[device:1C81]: NVIDIA GeForce GTX 1050
+[05.11.21 17:48:53.402] * GPU driver: 30.0.14.7196
+[05.11.21 17:48:53.486] * CREATE: DeviceREF: 1
+[05.11.21 17:48:53.486] * Vertex Processor: PURE HARDWARE
+[05.11.21 17:48:53.486] *     Texture memory: 4072 M
+[05.11.21 17:48:53.486] *          DDI-level: 9.0
+[05.11.21 17:48:53.488] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+[05.11.21 17:48:53.488] * GPU vertex cache: unrecognized, 16
+[05.11.21 17:48:53.488] * DVB created: 16384K
+[05.11.21 17:48:53.488] * DIB created: 512K
+[05.11.21 17:48:53.516] ! Version conflict in shader 'models\lightplanes_00'
+[05.11.21 17:48:53.516] ! Version conflict in shader 'models\lightplanesself'
+[05.11.21 17:48:53.516] ! Version conflict in shader 'models\model_puh'
+[05.11.21 17:48:53.516] ! Version conflict in shader 'models\model_refl'
+[05.11.21 17:48:53.516] ! Version conflict in shader 'models\xbrainglass'
+[05.11.21 17:48:53.516] ! Version conflict in shader 'models\xdistortcolorlinv'
+[05.11.21 17:48:53.516] ! Version conflict in shader 'models\xglass'
+[05.11.21 17:48:53.516] ! Version conflict in shader 'models\xglass2'
+[05.11.21 17:48:53.516] ! Version conflict in shader 'models\xlens'
+[05.11.21 17:48:53.516] ! Version conflict in shader 'selflight_static'
+[05.11.21 17:48:53.517] [CTextureDescrMngr::LoadLTX] count of *textures*.ltx files: [1]
+[05.11.21 17:48:53.656] * NULLRT supported
+[05.11.21 17:48:53.657] * ...and used
+[05.11.21 17:48:53.657] * HWDST/PCF supported and used
+[05.11.21 17:48:53.657] * NV-DBT supported and used
+[05.11.21 17:48:54.709] --LUA version: [LuaJIT 2.1.0-beta3]
+[05.11.21 17:48:54.709] --_G loaded from: stack traceback:
+- 	v:\priboi ogsr\gamedata\scripts\_g.script:1855: in main chunk
+[05.11.21 17:48:54.749] Starting engine...
+[05.11.21 17:48:57.976] * phase time: 11 ms
+[05.11.21 17:48:58.001] * phase cmem: 177587 K
+[05.11.21 17:48:58.051] --LUA version: [LuaJIT 2.1.0-beta3]
+[05.11.21 17:48:58.051] --_G loaded from: stack traceback:
+- 	v:\priboi ogsr\gamedata\scripts\_g.script:1855: in main chunk
+[05.11.21 17:48:58.073] * phase time: 97 ms
+[05.11.21 17:48:58.099] * phase cmem: 145981 K
+[05.11.21 17:48:58.103] * Loading spawn registry...
+[05.11.21 17:48:58.638] * 8976 spawn points are successfully loaded
+[05.11.21 17:48:58.638] * Loading objects...
+[05.11.21 17:48:58.942] * 17742 objects are successfully loaded
+[05.11.21 17:48:59.022] * 1 script vars are successfully loaded
+[05.11.21 17:48:59.511] * Game 007 is successfully loaded from file 'v:\priboi ogsr\userdata\savedgames\007.sav' (1.412s)
+[05.11.21 17:48:59.511] * phase time: 1437 ms
+[05.11.21 17:48:59.556] * phase cmem: 198924 K
+[05.11.21 17:48:59.593] # Player not found. New player created.
+[05.11.21 17:48:59.593] !!xrServer::Check_GameSpy_CDKey_Success - 1
+[05.11.21 17:48:59.593] * client : connection accepted - <>
+[05.11.21 17:48:59.614] * phase time: 102 ms
+[05.11.21 17:48:59.658] * phase cmem: 199011 K
+[05.11.21 17:48:59.659] * phase time: 44 ms
+[05.11.21 17:48:59.702] * phase cmem: 199011 K
+[05.11.21 17:49:00.883] --[ISpatial_DB::initialize] bbc is [43.8, 37.6, 88.9], bbd is [722.7, 76.3, 722.7]
+[05.11.21 17:49:00.883] --[ISpatial_DB::initialize] bbc is [43.8, 37.6, 88.9], bbd is [722.7, 76.3, 722.7]
+[05.11.21 17:49:00.885] * phase time: 1226 ms
+[05.11.21 17:49:00.933] * phase cmem: 293186 K
+[05.11.21 17:49:01.112] * phase time: 226 ms
+[05.11.21 17:49:01.158] * phase cmem: 296456 K
+[05.11.21 17:49:01.161] * [Loading VB] 65532 verts, 2047 Kb
+[05.11.21 17:49:01.174] * [Loading VB] 65525 verts, 2047 Kb
+[05.11.21 17:49:01.182] * [Loading VB] 65535 verts, 2047 Kb
+[05.11.21 17:49:01.190] * [Loading VB] 65466 verts, 2045 Kb
+[05.11.21 17:49:01.199] * [Loading VB] 17208 verts, 537 Kb
+[05.11.21 17:49:01.201] * [Loading VB] 65533 verts, 2047 Kb
+[05.11.21 17:49:01.209] * [Loading VB] 65534 verts, 2047 Kb
+[05.11.21 17:49:01.217] * [Loading VB] 65534 verts, 2047 Kb
+[05.11.21 17:49:01.226] * [Loading VB] 65531 verts, 2047 Kb
+[05.11.21 17:49:01.234] * [Loading VB] 65535 verts, 2047 Kb
+[05.11.21 17:49:01.242] * [Loading VB] 65535 verts, 2047 Kb
+[05.11.21 17:49:01.250] * [Loading VB] 46595 verts, 1456 Kb
+[05.11.21 17:49:01.257] * [Loading VB] 65534 verts, 2047 Kb
+[05.11.21 17:49:01.264] * [Loading VB] 65533 verts, 2047 Kb
+[05.11.21 17:49:01.272] * [Loading VB] 65535 verts, 2047 Kb
+[05.11.21 17:49:01.280] * [Loading VB] 65532 verts, 2047 Kb
+[05.11.21 17:49:01.288] * [Loading VB] 65533 verts, 2047 Kb
+[05.11.21 17:49:01.300] * [Loading VB] 65533 verts, 2047 Kb
+[05.11.21 17:49:01.308] * [Loading VB] 53181 verts, 1661 Kb
+[05.11.21 17:49:01.314] * [Loading IB] 1048575 indices, 2047 Kb
+[05.11.21 17:49:01.326] * [Loading IB] 1048572 indices, 2047 Kb
+[05.11.21 17:49:01.335] * [Loading IB] 1048572 indices, 2047 Kb
+[05.11.21 17:49:01.343] * [Loading IB] 1048572 indices, 2047 Kb
+[05.11.21 17:49:01.351] * [Loading IB] 1048572 indices, 2047 Kb
+[05.11.21 17:49:01.359] * [Loading IB] 1048572 indices, 2047 Kb
+[05.11.21 17:49:01.367] * [Loading IB] 1048575 indices, 2047 Kb
+[05.11.21 17:49:01.375] * [Loading IB] 1048572 indices, 2047 Kb
+[05.11.21 17:49:01.383] * [Loading IB] 1048575 indices, 2047 Kb
+[05.11.21 17:49:01.394] * [Loading IB] 228285 indices, 445 Kb
+[05.11.21 17:49:01.396] * [Loading VB] 65533 verts, 767 Kb
+[05.11.21 17:49:01.400] * [Loading VB] 65534 verts, 767 Kb
+[05.11.21 17:49:01.403] * [Loading VB] 65534 verts, 767 Kb
+[05.11.21 17:49:01.407] * [Loading VB] 65535 verts, 767 Kb
+[05.11.21 17:49:01.410] * [Loading VB] 65535 verts, 767 Kb
+[05.11.21 17:49:01.415] * [Loading VB] 65534 verts, 767 Kb
+[05.11.21 17:49:01.417] * [Loading VB] 65535 verts, 767 Kb
+[05.11.21 17:49:01.421] * [Loading VB] 14030 verts, 164 Kb
+[05.11.21 17:49:01.422] * [Loading IB] 1048575 indices, 2047 Kb
+[05.11.21 17:49:01.432] * [Loading IB] 1048575 indices, 2047 Kb
+[05.11.21 17:49:01.441] * [Loading IB] 1048575 indices, 2047 Kb
+[05.11.21 17:49:01.450] * [Loading IB] 718302 indices, 1402 Kb
+[05.11.21 17:49:01.457] * phase time: 344 ms
+[05.11.21 17:49:01.502] * phase cmem: 365332 K
+[05.11.21 17:49:02.180] * phase time: 723 ms
+[05.11.21 17:49:02.228] * phase cmem: 370579 K
+[05.11.21 17:49:02.244] * [DETAILS] VertexConsts(256), Batch(61)
+[05.11.21 17:49:02.244] * [DETAILS] 14640 v(20), 9455 p
+[05.11.21 17:49:02.244] * [DETAILS] Batch(61), VB(285K), IB(55K)
+[05.11.21 17:49:02.244] * phase time: 64 ms
+[05.11.21 17:49:02.293] * phase cmem: 370937 K
+[05.11.21 17:49:02.293] * Loading HOM: v:\priboi ogsr\gamedata\levels\l01_escape\level.hom
+[05.11.21 17:49:02.298] * phase time: 53 ms
+[05.11.21 17:49:02.345] * phase cmem: 371160 K
+[05.11.21 17:49:02.346] * phase time: 48 ms
+[05.11.21 17:49:02.392] * phase cmem: 371160 K
+[05.11.21 17:49:02.404] - Game configuring : Started 
+[05.11.21 17:49:02.416] - Game configuring : Finished 
+[05.11.21 17:49:02.531] * phase time: 184 ms
+[05.11.21 17:49:02.578] * phase cmem: 384116 K
+[05.11.21 17:49:05.611] * t-report - base: 1274, 1111999 K
+[05.11.21 17:49:05.611] * t-report - lmap: 7, 7168 K
+[05.11.21 17:49:05.611] * phase time: 3080 ms
+[05.11.21 17:49:05.665] * phase cmem: 1553168 K
+[05.11.21 17:49:05.678] * phase time: 66 ms
+[05.11.21 17:49:05.732] * phase cmem: 1553172 K
+[05.11.21 17:49:05.793] --------------------------------------------------------------------------------
+[05.11.21 17:49:05.793] [8143MB] physical memory installed, [2212MB] available, [72] percent of memory in use
+[05.11.21 17:49:05.793] PageFile usage: [1852MB], Peak PageFile usage: [1854MB]
+[05.11.21 17:49:05.793] --------------------------------------------------------------------------------
+[05.11.21 17:49:05.793] * [ D3D ]: textures[1119168 K]
+[05.11.21 17:49:05.793] * [x-ray]: process heap[1552550 K], render[0 K]
+[05.11.21 17:49:05.793] * [x-ray]: economy: strings[7364 K], smem[0 K]
+[05.11.21 17:49:06.166] LAUCER ITEM TO SLOT: wpn_binoc
+[05.11.21 17:49:06.167] LAUCER ITEM TO SLOT ANIM: nil
+[05.11.21 17:49:06.177] LAUCER ITEM TO SLOT: wpn_kolbasa
+[05.11.21 17:49:06.177] LAUCER ITEM TO SLOT ANIM: nil
+[05.11.21 17:49:06.213] LAUCER ITEM TO SLOT: device_torch
+[05.11.21 17:49:06.213] LAUCER ITEM TO SLOT ANIM: nil
+[05.11.21 17:49:06.217] LAUCER ITEM TO SLOT: device_pda
+[05.11.21 17:49:06.217] LAUCER ITEM TO SLOT ANIM: nil
+[05.11.21 17:49:08.392] ! auto-generated bump map: wpn\tec-9\wpn_tec_kg9_gun_bump#
+[05.11.21 17:49:08.404] ! auto-generated bump map: wpn\tec-9\wpn_tec_kg9_mag_bump#
+[05.11.21 17:49:09.831] LAUCER ITEM TO SLOT: wpn_m1891_30
+[05.11.21 17:49:09.831] LAUCER ITEM TO SLOT ANIM: nil
+[05.11.21 17:49:10.252] LAUCER ITEM TO SLOT: bolt
+[05.11.21 17:49:10.252] LAUCER ITEM TO SLOT ANIM: nil
+[05.11.21 17:49:12.087] * MEMORY USAGE: 2090302 K
+[05.11.21 17:49:12.087] * End of synchronization A[1] R[1]
+[05.11.21 17:49:12.087] * phase time: 6475 ms
+[05.11.21 17:49:12.187] * phase cmem: 2090302 K
+[05.11.21 17:50:49.187] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:50:49.520] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:50:52.887] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:50:56.304] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:50:56.638] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:02.304] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:02.655] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:02.920] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:04.471] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:04.804] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:07.920] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:08.155] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:11.888] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:13.421] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:13.760] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:15.820] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:15.890] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:16.206] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:16.221] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:16.887] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:18.771] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:18.804] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:18.922] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:19.138] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:19.222] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:19.538] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:21.221] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:22.555] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:24.821] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:26.255] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:26.590] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:29.939] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:31.138] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:31.476] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:31.723] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:32.004] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:34.822] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:37.639] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:37.672] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:43.306] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:46.939] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:47.274] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:52.272] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:53.306] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:53.490] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:53.639] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:53.822] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:56.973] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:59.507] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:51:59.756] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:03.090] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:04.473] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:04.807] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:08.140] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:09.423] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:09.757] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:11.456] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:11.807] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:14.757] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:15.157] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:16.207] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:16.541] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:22.208] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:27.091] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:27.391] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:29.741] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:30.741] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:33.090] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:35.775] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:36.142] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:40.009] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:40.274] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:41.141] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:43.341] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:43.674] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:45.275] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:49.342] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:50.575] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:50.908] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:55.908] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:57.459] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:52:57.792] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:00.809] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:01.126] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:01.126] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:03.959] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:04.292] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:04.475] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:07.426] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:08.326] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:09.810] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:09.960] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:10.477] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:10.709] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:11.393] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:12.342] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:13.993] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:14.060] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:16.394] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:17.258] LAUCER ITEM TO SLOT: anm_energy_drink
+[05.11.21 17:53:17.258] LAUCER ITEM TO SLOT ANIM: 1
+[05.11.21 17:53:17.270] TG: 163490
+[05.11.21 17:53:17.300] TG: 163520
+[05.11.21 17:53:17.326] TG: 163546
+[05.11.21 17:53:17.341] TG: 163562
+[05.11.21 17:53:17.343] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:17.359] TG: 163579
+[05.11.21 17:53:17.375] TG: 163595
+[05.11.21 17:53:17.392] TG: 163612
+[05.11.21 17:53:17.408] TG: 163628
+[05.11.21 17:53:17.425] TG: 163645
+[05.11.21 17:53:17.441] TG: 163662
+[05.11.21 17:53:17.458] TG: 163678
+[05.11.21 17:53:17.475] TG: 163695
+[05.11.21 17:53:17.492] TG: 163712
+[05.11.21 17:53:17.508] TG: 163728
+[05.11.21 17:53:17.525] TG: 163745
+[05.11.21 17:53:17.542] TG: 163762
+[05.11.21 17:53:17.559] TG: 163779
+[05.11.21 17:53:17.575] TG: 163795
+[05.11.21 17:53:17.592] TG: 163812
+[05.11.21 17:53:17.608] TG: 163828
+[05.11.21 17:53:17.625] TG: 163845
+[05.11.21 17:53:17.641] TG: 163862
+[05.11.21 17:53:17.659] TG: 163879
+[05.11.21 17:53:17.675] TG: 163895
+[05.11.21 17:53:17.692] TG: 163912
+[05.11.21 17:53:17.708] TG: 163928
+[05.11.21 17:53:17.725] TG: 163945
+[05.11.21 17:53:17.741] TG: 163962
+[05.11.21 17:53:17.741] DO TIMER ACTION: sleep_nrg
+[05.11.21 17:53:17.759] TG: 163978
+[05.11.21 17:53:17.775] TG: 163995
+[05.11.21 17:53:17.792] TG: 164012
+[05.11.21 17:53:17.808] TG: 164029
+[05.11.21 17:53:17.825] TG: 164045
+[05.11.21 17:53:17.842] TG: 164062
+[05.11.21 17:53:17.858] TG: 164078
+[05.11.21 17:53:17.875] TG: 164095
+[05.11.21 17:53:17.892] TG: 164112
+[05.11.21 17:53:17.908] TG: 164129
+[05.11.21 17:53:17.925] TG: 164145
+[05.11.21 17:53:17.942] TG: 164162
+[05.11.21 17:53:17.958] TG: 164178
+[05.11.21 17:53:17.976] TG: 164195
+[05.11.21 17:53:17.992] TG: 164212
+[05.11.21 17:53:18.008] TG: 164229
+[05.11.21 17:53:18.045] TG: 164265
+[05.11.21 17:53:18.060] TG: 164280
+[05.11.21 17:53:18.077] TG: 164296
+[05.11.21 17:53:18.091] TG: 164312
+[05.11.21 17:53:18.108] TG: 164329
+[05.11.21 17:53:18.125] TG: 164345
+[05.11.21 17:53:18.142] TG: 164362
+[05.11.21 17:53:18.158] TG: 164378
+[05.11.21 17:53:18.175] TG: 164395
+[05.11.21 17:53:18.192] TG: 164412
+[05.11.21 17:53:18.209] TG: 164429
+[05.11.21 17:53:18.225] TG: 164445
+[05.11.21 17:53:18.242] TG: 164462
+[05.11.21 17:53:18.258] TG: 164479
+[05.11.21 17:53:18.275] TG: 164495
+[05.11.21 17:53:18.291] TG: 164512
+[05.11.21 17:53:18.309] TG: 164529
+[05.11.21 17:53:18.325] TG: 164545
+[05.11.21 17:53:18.342] TG: 164562
+[05.11.21 17:53:18.358] TG: 164579
+[05.11.21 17:53:18.375] TG: 164595
+[05.11.21 17:53:18.392] TG: 164612
+[05.11.21 17:53:18.409] TG: 164629
+[05.11.21 17:53:18.425] TG: 164645
+[05.11.21 17:53:18.442] TG: 164662
+[05.11.21 17:53:18.458] TG: 164678
+[05.11.21 17:53:18.475] TG: 164695
+[05.11.21 17:53:18.491] TG: 164712
+[05.11.21 17:53:18.509] TG: 164729
+[05.11.21 17:53:18.525] TG: 164745
+[05.11.21 17:53:18.542] TG: 164762
+[05.11.21 17:53:18.558] TG: 164779
+[05.11.21 17:53:18.576] TG: 164795
+[05.11.21 17:53:18.591] TG: 164812
+[05.11.21 17:53:18.609] TG: 164829
+[05.11.21 17:53:18.625] TG: 164845
+[05.11.21 17:53:18.642] TG: 164862
+[05.11.21 17:53:18.658] TG: 164879
+[05.11.21 17:53:18.675] TG: 164895
+[05.11.21 17:53:18.692] TG: 164912
+[05.11.21 17:53:18.709] TG: 164929
+[05.11.21 17:53:18.725] TG: 164945
+[05.11.21 17:53:18.742] TG: 164962
+[05.11.21 17:53:18.758] TG: 164979
+[05.11.21 17:53:18.775] TG: 164995
+[05.11.21 17:53:18.792] TG: 165012
+[05.11.21 17:53:18.809] TG: 165029
+[05.11.21 17:53:18.825] TG: 165045
+[05.11.21 17:53:18.842] TG: 165062
+[05.11.21 17:53:18.858] TG: 165078
+[05.11.21 17:53:18.875] TG: 165095
+[05.11.21 17:53:18.892] TG: 165112
+[05.11.21 17:53:18.909] TG: 165129
+[05.11.21 17:53:18.925] TG: 165145
+[05.11.21 17:53:18.942] TG: 165162
+[05.11.21 17:53:18.958] TG: 165179
+[05.11.21 17:53:18.975] TG: 165195
+[05.11.21 17:53:18.992] TG: 165212
+[05.11.21 17:53:19.009] TG: 165229
+[05.11.21 17:53:19.010] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:19.025] TG: 165245
+[05.11.21 17:53:19.042] TG: 165262
+[05.11.21 17:53:19.058] TG: 165278
+[05.11.21 17:53:19.075] TG: 165295
+[05.11.21 17:53:19.092] TG: 165312
+[05.11.21 17:53:19.109] TG: 165329
+[05.11.21 17:53:19.125] TG: 165345
+[05.11.21 17:53:19.142] TG: 165362
+[05.11.21 17:53:19.158] TG: 165379
+[05.11.21 17:53:19.175] TG: 165396
+[05.11.21 17:53:19.192] TG: 165412
+[05.11.21 17:53:19.209] TG: 165429
+[05.11.21 17:53:19.224] TG: 165445
+[05.11.21 17:53:19.242] TG: 165462
+[05.11.21 17:53:19.257] TG: 165477
+[05.11.21 17:53:19.273] TG: 165493
+[05.11.21 17:53:19.274] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:19.289] TG: 165509
+[05.11.21 17:53:19.305] TG: 165525
+[05.11.21 17:53:19.321] TG: 165541
+[05.11.21 17:53:19.337] TG: 165557
+[05.11.21 17:53:19.358] TG: 165578
+[05.11.21 17:53:19.375] TG: 165595
+[05.11.21 17:53:19.391] TG: 165612
+[05.11.21 17:53:19.408] TG: 165629
+[05.11.21 17:53:19.425] TG: 165646
+[05.11.21 17:53:19.442] TG: 165662
+[05.11.21 17:53:19.458] TG: 165678
+[05.11.21 17:53:19.475] TG: 165695
+[05.11.21 17:53:19.491] TG: 165712
+[05.11.21 17:53:19.508] TG: 165728
+[05.11.21 17:53:19.525] TG: 165745
+[05.11.21 17:53:19.541] TG: 165761
+[05.11.21 17:53:19.558] TG: 165778
+[05.11.21 17:53:19.575] TG: 165795
+[05.11.21 17:53:19.591] TG: 165812
+[05.11.21 17:53:19.608] TG: 165828
+[05.11.21 17:53:19.625] TG: 165845
+[05.11.21 17:53:19.641] TG: 165861
+[05.11.21 17:53:19.658] TG: 165878
+[05.11.21 17:53:19.675] TG: 165895
+[05.11.21 17:53:19.691] TG: 165912
+[05.11.21 17:53:19.708] TG: 165928
+[05.11.21 17:53:19.725] TG: 165945
+[05.11.21 17:53:19.742] TG: 165962
+[05.11.21 17:53:19.758] TG: 165979
+[05.11.21 17:53:19.775] TG: 165995
+[05.11.21 17:53:19.791] TG: 166012
+[05.11.21 17:53:19.808] TG: 166028
+[05.11.21 17:53:19.825] TG: 166045
+[05.11.21 17:53:19.841] TG: 166062
+[05.11.21 17:53:19.858] TG: 166078
+[05.11.21 17:53:19.875] TG: 166095
+[05.11.21 17:53:19.892] TG: 166112
+[05.11.21 17:53:19.908] TG: 166128
+[05.11.21 17:53:19.925] TG: 166145
+[05.11.21 17:53:19.943] TG: 166162
+[05.11.21 17:53:19.958] TG: 166179
+[05.11.21 17:53:19.975] TG: 166195
+[05.11.21 17:53:19.992] TG: 166212
+[05.11.21 17:53:20.008] TG: 166229
+[05.11.21 17:53:20.025] TG: 166245
+[05.11.21 17:53:20.508] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_2], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:36.503] * [R_occlusion::occq_destroy]: fids[45] used[45] pool[45]
+[05.11.21 17:53:36.503] * [R_occlusion::occq_destroy]: released [0] used and [45] pool queries
+[05.11.21 17:53:36.717] * DVB created: 16384K
+[05.11.21 17:53:36.717] * DIB created: 512K
+[05.11.21 17:53:37.624] * RM_Dump: textures  : 1749
+[05.11.21 17:53:37.625] * RM_Dump: rtargets  : 22
+[05.11.21 17:53:37.625] * RM_Dump: vs        : 70
+[05.11.21 17:53:37.625] * RM_Dump: ps        : 85
+[05.11.21 17:53:37.625] * RM_Dump: dcl       : 19
+[05.11.21 17:53:37.625] * RM_Dump: states    : 77
+[05.11.21 17:53:37.625] * RM_Dump: tex_list  : 1430
+[05.11.21 17:53:37.625] * RM_Dump: matrices  : 0
+[05.11.21 17:53:37.625] * RM_Dump: lst_constants: 0
+[05.11.21 17:53:37.625] * RM_Dump: v_passes  : 2069
+[05.11.21 17:53:37.625] * RM_Dump: v_elements: 2074
+[05.11.21 17:53:37.625] * RM_Dump: v_shaders : 1246
+[05.11.21 17:53:37.625] * GPU shading: vs(fffe0300/3.0/30), ps(ffff0300/3.0/30)
+[05.11.21 17:53:37.625] * GPU vertex cache: recognized, 24
+[05.11.21 17:53:37.625] *** RESET [1123 ms]
+[05.11.21 17:53:38.485] * MEMORY USAGE: 2078770 K
+[05.11.21 17:53:38.485] * End of synchronization A[1] R[1]
+[05.11.21 17:53:39.301] LAUCER ITEM TO SLOT: anm_energy_drink
+[05.11.21 17:53:39.301] LAUCER ITEM TO SLOT ANIM: 1
+[05.11.21 17:53:39.315] TG: 170825
+[05.11.21 17:53:39.331] TG: 170840
+[05.11.21 17:53:39.346] TG: 170856
+[05.11.21 17:53:39.363] TG: 170872
+[05.11.21 17:53:39.378] TG: 170888
+[05.11.21 17:53:39.395] TG: 170904
+[05.11.21 17:53:39.410] TG: 170920
+[05.11.21 17:53:39.427] TG: 170936
+[05.11.21 17:53:39.443] TG: 170953
+[05.11.21 17:53:39.460] TG: 170970
+[05.11.21 17:53:39.476] TG: 170986
+[05.11.21 17:53:39.493] TG: 171003
+[05.11.21 17:53:39.509] TG: 171019
+[05.11.21 17:53:39.527] TG: 171036
+[05.11.21 17:53:39.543] TG: 171053
+[05.11.21 17:53:39.560] TG: 171070
+[05.11.21 17:53:39.576] TG: 171086
+[05.11.21 17:53:39.594] TG: 171103
+[05.11.21 17:53:39.609] TG: 171119
+[05.11.21 17:53:39.627] TG: 171136
+[05.11.21 17:53:39.643] TG: 171153
+[05.11.21 17:53:39.660] TG: 171170
+[05.11.21 17:53:39.676] TG: 171186
+[05.11.21 17:53:39.676] DO TIMER ACTION: sleep_nrg
+[05.11.21 17:53:39.694] TG: 171203
+[05.11.21 17:53:39.709] TG: 171219
+[05.11.21 17:53:39.726] TG: 171236
+[05.11.21 17:53:39.743] TG: 171253
+[05.11.21 17:53:39.760] TG: 171270
+[05.11.21 17:53:39.776] TG: 171286
+[05.11.21 17:53:39.793] TG: 171303
+[05.11.21 17:53:39.810] TG: 171320
+[05.11.21 17:53:39.826] TG: 171336
+[05.11.21 17:53:39.843] TG: 171353
+[05.11.21 17:53:39.860] TG: 171370
+[05.11.21 17:53:39.876] TG: 171386
+[05.11.21 17:53:39.893] TG: 171403
+[05.11.21 17:53:39.909] TG: 171419
+[05.11.21 17:53:39.927] TG: 171436
+[05.11.21 17:53:39.943] TG: 171453
+[05.11.21 17:53:39.960] TG: 171470
+[05.11.21 17:53:39.977] TG: 171486
+[05.11.21 17:53:39.993] TG: 171503
+[05.11.21 17:53:40.010] TG: 171520
+[05.11.21 17:53:40.026] TG: 171536
+[05.11.21 17:53:40.043] TG: 171553
+[05.11.21 17:53:40.060] TG: 171570
+[05.11.21 17:53:40.076] TG: 171586
+[05.11.21 17:53:40.093] TG: 171603
+[05.11.21 17:53:40.110] TG: 171620
+[05.11.21 17:53:40.126] TG: 171636
+[05.11.21 17:53:40.143] TG: 171653
+[05.11.21 17:53:40.160] TG: 171669
+[05.11.21 17:53:40.176] TG: 171686
+[05.11.21 17:53:40.193] TG: 171703
+[05.11.21 17:53:40.210] TG: 171720
+[05.11.21 17:53:40.226] TG: 171736
+[05.11.21 17:53:40.244] TG: 171753
+[05.11.21 17:53:40.260] TG: 171770
+[05.11.21 17:53:40.276] TG: 171786
+[05.11.21 17:53:40.293] TG: 171803
+[05.11.21 17:53:40.309] TG: 171820
+[05.11.21 17:53:40.326] TG: 171836
+[05.11.21 17:53:40.343] TG: 171853
+[05.11.21 17:53:40.361] TG: 171871
+[05.11.21 17:53:40.376] TG: 171886
+[05.11.21 17:53:40.393] TG: 171903
+[05.11.21 17:53:40.410] TG: 171920
+[05.11.21 17:53:40.426] TG: 171936
+[05.11.21 17:53:40.443] TG: 171953
+[05.11.21 17:53:40.460] TG: 171969
+[05.11.21 17:53:40.476] TG: 171986
+[05.11.21 17:53:40.493] TG: 172003
+[05.11.21 17:53:40.510] TG: 172020
+[05.11.21 17:53:40.526] TG: 172036
+[05.11.21 17:53:40.543] TG: 172053
+[05.11.21 17:53:40.560] TG: 172069
+[05.11.21 17:53:40.577] TG: 172086
+[05.11.21 17:53:40.593] TG: 172103
+[05.11.21 17:53:40.610] TG: 172120
+[05.11.21 17:53:40.627] TG: 172136
+[05.11.21 17:53:40.643] TG: 172153
+[05.11.21 17:53:40.660] TG: 172170
+[05.11.21 17:53:40.676] TG: 172186
+[05.11.21 17:53:40.693] TG: 172203
+[05.11.21 17:53:40.710] TG: 172220
+[05.11.21 17:53:40.726] TG: 172236
+[05.11.21 17:53:40.743] TG: 172253
+[05.11.21 17:53:40.760] TG: 172269
+[05.11.21 17:53:40.776] TG: 172286
+[05.11.21 17:53:40.793] TG: 172303
+[05.11.21 17:53:40.810] TG: 172320
+[05.11.21 17:53:40.826] TG: 172336
+[05.11.21 17:53:40.843] TG: 172353
+[05.11.21 17:53:40.860] TG: 172369
+[05.11.21 17:53:40.876] TG: 172386
+[05.11.21 17:53:40.893] TG: 172403
+[05.11.21 17:53:40.910] TG: 172420
+[05.11.21 17:53:40.926] TG: 172436
+[05.11.21 17:53:40.943] TG: 172453
+[05.11.21 17:53:40.960] TG: 172469
+[05.11.21 17:53:40.976] TG: 172486
+[05.11.21 17:53:40.993] TG: 172503
+[05.11.21 17:53:41.010] TG: 172520
+[05.11.21 17:53:41.026] TG: 172536
+[05.11.21 17:53:41.043] TG: 172553
+[05.11.21 17:53:41.060] TG: 172570
+[05.11.21 17:53:41.076] TG: 172586
+[05.11.21 17:53:41.093] TG: 172603
+[05.11.21 17:53:41.110] TG: 172620
+[05.11.21 17:53:41.126] TG: 172636
+[05.11.21 17:53:41.127] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:41.143] TG: 172653
+[05.11.21 17:53:41.160] TG: 172670
+[05.11.21 17:53:41.176] TG: 172686
+[05.11.21 17:53:41.193] TG: 172703
+[05.11.21 17:53:41.210] TG: 172720
+[05.11.21 17:53:41.226] TG: 172736
+[05.11.21 17:53:41.243] TG: 172753
+[05.11.21 17:53:41.261] TG: 172770
+[05.11.21 17:53:41.277] TG: 172786
+[05.11.21 17:53:41.293] TG: 172803
+[05.11.21 17:53:41.310] TG: 172820
+[05.11.21 17:53:41.327] TG: 172836
+[05.11.21 17:53:41.343] TG: 172853
+[05.11.21 17:53:41.360] TG: 172869
+[05.11.21 17:53:41.377] TG: 172886
+[05.11.21 17:53:41.407] TG: 172908
+[05.11.21 17:53:41.421] TG: 172931
+[05.11.21 17:53:41.445] TG: 172953
+[05.11.21 17:53:41.459] TG: 172969
+[05.11.21 17:53:41.477] TG: 172986
+[05.11.21 17:53:41.493] TG: 173003
+[05.11.21 17:53:41.510] TG: 173019
+[05.11.21 17:53:41.526] TG: 173036
+[05.11.21 17:53:41.543] TG: 173053
+[05.11.21 17:53:41.559] TG: 173069
+[05.11.21 17:53:41.577] TG: 173086
+[05.11.21 17:53:41.593] TG: 173103
+[05.11.21 17:53:41.610] TG: 173119
+[05.11.21 17:53:41.626] TG: 173136
+[05.11.21 17:53:41.643] TG: 173153
+[05.11.21 17:53:41.659] TG: 173169
+[05.11.21 17:53:41.676] TG: 173186
+[05.11.21 17:53:41.693] TG: 173203
+[05.11.21 17:53:41.710] TG: 173219
+[05.11.21 17:53:41.726] TG: 173236
+[05.11.21 17:53:41.743] TG: 173253
+[05.11.21 17:53:41.759] TG: 173269
+[05.11.21 17:53:41.776] TG: 173286
+[05.11.21 17:53:41.793] TG: 173303
+[05.11.21 17:53:41.810] TG: 173320
+[05.11.21 17:53:41.826] TG: 173336
+[05.11.21 17:53:41.843] TG: 173352
+[05.11.21 17:53:41.859] TG: 173369
+[05.11.21 17:53:41.876] TG: 173386
+[05.11.21 17:53:41.893] TG: 173403
+[05.11.21 17:53:41.909] TG: 173419
+[05.11.21 17:53:41.927] TG: 173436
+[05.11.21 17:53:41.943] TG: 173453
+[05.11.21 17:53:41.960] TG: 173470
+[05.11.21 17:53:41.976] TG: 173486
+[05.11.21 17:53:41.993] TG: 173503
+[05.11.21 17:53:42.010] TG: 173519
+[05.11.21 17:53:42.026] TG: 173536
+[05.11.21 17:53:42.043] TG: 173553
+[05.11.21 17:53:42.059] TG: 173569
+[05.11.21 17:53:42.076] TG: 173586
+[05.11.21 17:53:42.361] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:42.644] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_3], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:44.462] LAUCER ITEM TO SLOT: anm_energy_drink
+[05.11.21 17:53:44.462] LAUCER ITEM TO SLOT ANIM: 1
+[05.11.21 17:53:44.477] TG: 175986
+[05.11.21 17:53:44.493] TG: 176003
+[05.11.21 17:53:44.510] TG: 176020
+[05.11.21 17:53:44.526] TG: 176036
+[05.11.21 17:53:44.543] TG: 176053
+[05.11.21 17:53:44.560] TG: 176070
+[05.11.21 17:53:44.577] TG: 176087
+[05.11.21 17:53:44.593] TG: 176103
+[05.11.21 17:53:44.610] TG: 176120
+[05.11.21 17:53:44.626] TG: 176136
+[05.11.21 17:53:44.644] TG: 176153
+[05.11.21 17:53:44.660] TG: 176170
+[05.11.21 17:53:44.677] TG: 176187
+[05.11.21 17:53:44.677] DO TIMER ACTION: sleep_nrg
+[05.11.21 17:53:44.693] TG: 176203
+[05.11.21 17:53:44.710] TG: 176220
+[05.11.21 17:53:44.726] TG: 176236
+[05.11.21 17:53:44.743] TG: 176253
+[05.11.21 17:53:44.760] TG: 176270
+[05.11.21 17:53:44.777] TG: 176287
+[05.11.21 17:53:44.793] TG: 176303
+[05.11.21 17:53:44.810] TG: 176320
+[05.11.21 17:53:44.826] TG: 176336
+[05.11.21 17:53:44.844] TG: 176353
+[05.11.21 17:53:44.860] TG: 176370
+[05.11.21 17:53:44.877] TG: 176386
+[05.11.21 17:53:44.893] TG: 176403
+[05.11.21 17:53:44.910] TG: 176420
+[05.11.21 17:53:44.927] TG: 176437
+[05.11.21 17:53:44.943] TG: 176453
+[05.11.21 17:53:44.960] TG: 176470
+[05.11.21 17:53:44.976] TG: 176486
+[05.11.21 17:53:44.993] TG: 176503
+[05.11.21 17:53:45.010] TG: 176520
+[05.11.21 17:53:45.026] TG: 176536
+[05.11.21 17:53:45.043] TG: 176553
+[05.11.21 17:53:45.060] TG: 176570
+[05.11.21 17:53:45.077] TG: 176587
+[05.11.21 17:53:45.093] TG: 176603
+[05.11.21 17:53:45.110] TG: 176620
+[05.11.21 17:53:45.127] TG: 176637
+[05.11.21 17:53:45.143] TG: 176653
+[05.11.21 17:53:45.160] TG: 176670
+[05.11.21 17:53:45.177] TG: 176687
+[05.11.21 17:53:45.194] TG: 176703
+[05.11.21 17:53:45.210] TG: 176720
+[05.11.21 17:53:45.226] TG: 176736
+[05.11.21 17:53:45.243] TG: 176753
+[05.11.21 17:53:45.260] TG: 176770
+[05.11.21 17:53:45.277] TG: 176786
+[05.11.21 17:53:45.293] TG: 176803
+[05.11.21 17:53:45.310] TG: 176820
+[05.11.21 17:53:45.327] TG: 176837
+[05.11.21 17:53:45.343] TG: 176853
+[05.11.21 17:53:45.360] TG: 176870
+[05.11.21 17:53:45.377] TG: 176886
+[05.11.21 17:53:45.393] TG: 176903
+[05.11.21 17:53:45.410] TG: 176920
+[05.11.21 17:53:45.427] TG: 176937
+[05.11.21 17:53:45.443] TG: 176953
+[05.11.21 17:53:45.460] TG: 176970
+[05.11.21 17:53:45.477] TG: 176987
+[05.11.21 17:53:45.493] TG: 177003
+[05.11.21 17:53:45.510] TG: 177020
+[05.11.21 17:53:45.526] TG: 177036
+[05.11.21 17:53:45.543] TG: 177053
+[05.11.21 17:53:45.560] TG: 177070
+[05.11.21 17:53:45.577] TG: 177086
+[05.11.21 17:53:45.593] TG: 177103
+[05.11.21 17:53:45.610] TG: 177120
+[05.11.21 17:53:45.627] TG: 177137
+[05.11.21 17:53:45.644] TG: 177153
+[05.11.21 17:53:45.660] TG: 177170
+[05.11.21 17:53:45.677] TG: 177186
+[05.11.21 17:53:45.693] TG: 177203
+[05.11.21 17:53:45.710] TG: 177220
+[05.11.21 17:53:45.726] TG: 177236
+[05.11.21 17:53:45.756] TG: 177253
+[05.11.21 17:53:45.766] TG: 177276
+[05.11.21 17:53:45.782] TG: 177292
+[05.11.21 17:53:45.798] TG: 177308
+[05.11.21 17:53:45.815] TG: 177325
+[05.11.21 17:53:45.831] TG: 177341
+[05.11.21 17:53:45.847] TG: 177357
+[05.11.21 17:53:45.863] TG: 177373
+[05.11.21 17:53:45.880] TG: 177389
+[05.11.21 17:53:45.895] TG: 177405
+[05.11.21 17:53:45.911] TG: 177421
+[05.11.21 17:53:45.927] TG: 177437
+[05.11.21 17:53:45.944] TG: 177453
+[05.11.21 17:53:45.960] TG: 177470
+[05.11.21 17:53:45.977] TG: 177486
+[05.11.21 17:53:45.994] TG: 177503
+[05.11.21 17:53:45.995] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:46.010] TG: 177520
+[05.11.21 17:53:46.027] TG: 177537
+[05.11.21 17:53:46.043] TG: 177553
+[05.11.21 17:53:46.060] TG: 177570
+[05.11.21 17:53:46.077] TG: 177586
+[05.11.21 17:53:46.093] TG: 177603
+[05.11.21 17:53:46.110] TG: 177620
+[05.11.21 17:53:46.127] TG: 177637
+[05.11.21 17:53:46.144] TG: 177653
+[05.11.21 17:53:46.160] TG: 177670
+[05.11.21 17:53:46.177] TG: 177686
+[05.11.21 17:53:46.193] TG: 177703
+[05.11.21 17:53:46.210] TG: 177720
+[05.11.21 17:53:46.227] TG: 177737
+[05.11.21 17:53:46.243] TG: 177753
+[05.11.21 17:53:46.260] TG: 177770
+[05.11.21 17:53:46.277] TG: 177787
+[05.11.21 17:53:46.293] TG: 177803
+[05.11.21 17:53:46.311] TG: 177820
+[05.11.21 17:53:46.327] TG: 177836
+[05.11.21 17:53:46.343] TG: 177853
+[05.11.21 17:53:46.360] TG: 177870
+[05.11.21 17:53:46.377] TG: 177886
+[05.11.21 17:53:46.394] TG: 177903
+[05.11.21 17:53:46.410] TG: 177920
+[05.11.21 17:53:46.427] TG: 177937
+[05.11.21 17:53:46.443] TG: 177953
+[05.11.21 17:53:46.460] TG: 177970
+[05.11.21 17:53:46.477] TG: 177986
+[05.11.21 17:53:46.493] TG: 178003
+[05.11.21 17:53:46.510] TG: 178020
+[05.11.21 17:53:46.527] TG: 178037
+[05.11.21 17:53:46.544] TG: 178053
+[05.11.21 17:53:46.559] TG: 178070
+[05.11.21 17:53:46.577] TG: 178087
+[05.11.21 17:53:46.593] TG: 178103
+[05.11.21 17:53:46.610] TG: 178120
+[05.11.21 17:53:46.627] TG: 178136
+[05.11.21 17:53:46.644] TG: 178153
+[05.11.21 17:53:46.660] TG: 178170
+[05.11.21 17:53:46.677] TG: 178186
+[05.11.21 17:53:46.693] TG: 178203
+[05.11.21 17:53:46.710] TG: 178220
+[05.11.21 17:53:46.726] TG: 178236
+[05.11.21 17:53:46.743] TG: 178253
+[05.11.21 17:53:46.759] TG: 178269
+[05.11.21 17:53:46.776] TG: 178286
+[05.11.21 17:53:46.793] TG: 178303
+[05.11.21 17:53:46.810] TG: 178320
+[05.11.21 17:53:46.826] TG: 178336
+[05.11.21 17:53:46.843] TG: 178353
+[05.11.21 17:53:46.860] TG: 178370
+[05.11.21 17:53:46.876] TG: 178386
+[05.11.21 17:53:46.893] TG: 178403
+[05.11.21 17:53:46.910] TG: 178420
+[05.11.21 17:53:46.926] TG: 178436
+[05.11.21 17:53:46.943] TG: 178453
+[05.11.21 17:53:46.959] TG: 178469
+[05.11.21 17:53:46.976] TG: 178486
+[05.11.21 17:53:46.993] TG: 178503
+[05.11.21 17:53:47.010] TG: 178520
+[05.11.21 17:53:47.026] TG: 178536
+[05.11.21 17:53:47.043] TG: 178553
+[05.11.21 17:53:47.060] TG: 178570
+[05.11.21 17:53:47.077] TG: 178586
+[05.11.21 17:53:47.093] TG: 178603
+[05.11.21 17:53:47.110] TG: 178620
+[05.11.21 17:53:47.126] TG: 178636
+[05.11.21 17:53:47.143] TG: 178653
+[05.11.21 17:53:47.160] TG: 178670
+[05.11.21 17:53:47.177] TG: 178686
+[05.11.21 17:53:47.193] TG: 178703
+[05.11.21 17:53:47.210] TG: 178720
+[05.11.21 17:53:47.226] TG: 178736
+[05.11.21 17:53:47.735] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:48.060] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:49.837] LAUCER ITEM TO SLOT: anm_medkit
+[05.11.21 17:53:49.837] LAUCER ITEM TO SLOT ANIM: 1
+[05.11.21 17:53:49.848] TG: 181357
+[05.11.21 17:53:49.863] TG: 181373
+[05.11.21 17:53:49.878] TG: 181389
+[05.11.21 17:53:49.895] TG: 181405
+[05.11.21 17:53:49.910] TG: 181420
+[05.11.21 17:53:49.927] TG: 181437
+[05.11.21 17:53:49.943] TG: 181453
+[05.11.21 17:53:49.960] TG: 181470
+[05.11.21 17:53:49.977] TG: 181487
+[05.11.21 17:53:49.993] TG: 181503
+[05.11.21 17:53:50.010] TG: 181520
+[05.11.21 17:53:50.027] TG: 181536
+[05.11.21 17:53:50.043] TG: 181553
+[05.11.21 17:53:50.060] TG: 181570
+[05.11.21 17:53:50.077] TG: 181587
+[05.11.21 17:53:50.093] TG: 181603
+[05.11.21 17:53:50.110] TG: 181620
+[05.11.21 17:53:50.127] TG: 181637
+[05.11.21 17:53:50.144] TG: 181654
+[05.11.21 17:53:50.160] TG: 181670
+[05.11.21 17:53:50.177] TG: 181687
+[05.11.21 17:53:50.193] TG: 181703
+[05.11.21 17:53:50.210] TG: 181720
+[05.11.21 17:53:50.210] DO TIMER ACTION: sleep_med
+[05.11.21 17:53:50.227] TG: 181737
+[05.11.21 17:53:50.243] TG: 181753
+[05.11.21 17:53:50.260] TG: 181770
+[05.11.21 17:53:50.277] TG: 181787
+[05.11.21 17:53:50.293] TG: 181803
+[05.11.21 17:53:50.310] TG: 181820
+[05.11.21 17:53:50.327] TG: 181837
+[05.11.21 17:53:50.343] TG: 181853
+[05.11.21 17:53:50.360] TG: 181870
+[05.11.21 17:53:50.377] TG: 181887
+[05.11.21 17:53:50.393] TG: 181903
+[05.11.21 17:53:50.410] TG: 181920
+[05.11.21 17:53:50.427] TG: 181937
+[05.11.21 17:53:50.443] TG: 181953
+[05.11.21 17:53:50.460] TG: 181970
+[05.11.21 17:53:50.477] TG: 181987
+[05.11.21 17:53:50.494] TG: 182003
+[05.11.21 17:53:50.510] TG: 182020
+[05.11.21 17:53:50.527] TG: 182036
+[05.11.21 17:53:50.543] TG: 182053
+[05.11.21 17:53:50.560] TG: 182070
+[05.11.21 17:53:50.577] TG: 182087
+[05.11.21 17:53:50.593] TG: 182103
+[05.11.21 17:53:50.610] TG: 182121
+[05.11.21 17:53:50.627] TG: 182137
+[05.11.21 17:53:50.643] TG: 182153
+[05.11.21 17:53:50.661] TG: 182170
+[05.11.21 17:53:50.677] TG: 182187
+[05.11.21 17:53:50.693] TG: 182203
+[05.11.21 17:53:50.710] TG: 182220
+[05.11.21 17:53:50.727] TG: 182237
+[05.11.21 17:53:50.743] TG: 182253
+[05.11.21 17:53:50.760] TG: 182270
+[05.11.21 17:53:50.777] TG: 182287
+[05.11.21 17:53:50.793] TG: 182303
+[05.11.21 17:53:50.810] TG: 182320
+[05.11.21 17:53:50.827] TG: 182337
+[05.11.21 17:53:50.843] TG: 182354
+[05.11.21 17:53:50.860] TG: 182370
+[05.11.21 17:53:50.877] TG: 182387
+[05.11.21 17:53:50.894] TG: 182403
+[05.11.21 17:53:50.910] TG: 182420
+[05.11.21 17:53:50.927] TG: 182437
+[05.11.21 17:53:50.943] TG: 182453
+[05.11.21 17:53:50.960] TG: 182470
+[05.11.21 17:53:50.977] TG: 182487
+[05.11.21 17:53:50.993] TG: 182503
+[05.11.21 17:53:51.010] TG: 182520
+[05.11.21 17:53:51.027] TG: 182536
+[05.11.21 17:53:51.043] TG: 182553
+[05.11.21 17:53:51.060] TG: 182570
+[05.11.21 17:53:51.077] TG: 182587
+[05.11.21 17:53:51.093] TG: 182603
+[05.11.21 17:53:51.110] TG: 182620
+[05.11.21 17:53:51.127] TG: 182637
+[05.11.21 17:53:51.144] TG: 182653
+[05.11.21 17:53:51.160] TG: 182670
+[05.11.21 17:53:51.177] TG: 182687
+[05.11.21 17:53:51.193] TG: 182703
+[05.11.21 17:53:51.210] TG: 182720
+[05.11.21 17:53:51.227] TG: 182737
+[05.11.21 17:53:51.243] TG: 182753
+[05.11.21 17:53:51.260] TG: 182770
+[05.11.21 17:53:51.277] TG: 182787
+[05.11.21 17:53:51.293] TG: 182803
+[05.11.21 17:53:51.310] TG: 182820
+[05.11.21 17:53:51.327] TG: 182837
+[05.11.21 17:53:51.343] TG: 182853
+[05.11.21 17:53:51.360] TG: 182870
+[05.11.21 17:53:51.377] TG: 182887
+[05.11.21 17:53:51.393] TG: 182903
+[05.11.21 17:53:51.410] TG: 182920
+[05.11.21 17:53:51.427] TG: 182937
+[05.11.21 17:53:51.444] TG: 182954
+[05.11.21 17:53:51.460] TG: 182970
+[05.11.21 17:53:51.477] TG: 182987
+[05.11.21 17:53:51.494] TG: 183004
+[05.11.21 17:53:51.510] TG: 183020
+[05.11.21 17:53:51.527] TG: 183037
+[05.11.21 17:53:51.543] TG: 183053
+[05.11.21 17:53:51.560] TG: 183070
+[05.11.21 17:53:51.577] TG: 183087
+[05.11.21 17:53:51.594] TG: 183103
+[05.11.21 17:53:51.610] TG: 183120
+[05.11.21 17:53:51.627] TG: 183137
+[05.11.21 17:53:51.644] TG: 183153
+[05.11.21 17:53:51.660] TG: 183170
+[05.11.21 17:53:51.677] TG: 183187
+[05.11.21 17:53:51.694] TG: 183204
+[05.11.21 17:53:51.710] TG: 183220
+[05.11.21 17:53:51.727] TG: 183237
+[05.11.21 17:53:51.743] TG: 183253
+[05.11.21 17:53:51.760] TG: 183270
+[05.11.21 17:53:51.777] TG: 183287
+[05.11.21 17:53:51.794] TG: 183304
+[05.11.21 17:53:51.810] TG: 183320
+[05.11.21 17:53:51.827] TG: 183337
+[05.11.21 17:53:51.843] TG: 183353
+[05.11.21 17:53:51.860] TG: 183370
+[05.11.21 17:53:51.877] TG: 183387
+[05.11.21 17:53:51.894] TG: 183404
+[05.11.21 17:53:51.910] TG: 183420
+[05.11.21 17:53:51.927] TG: 183437
+[05.11.21 17:53:51.943] TG: 183453
+[05.11.21 17:53:51.944] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:51.961] TG: 183470
+[05.11.21 17:53:51.977] TG: 183487
+[05.11.21 17:53:51.994] TG: 183504
+[05.11.21 17:53:52.010] TG: 183520
+[05.11.21 17:53:52.027] TG: 183537
+[05.11.21 17:53:52.043] TG: 183553
+[05.11.21 17:53:52.060] TG: 183570
+[05.11.21 17:53:52.076] TG: 183586
+[05.11.21 17:53:52.093] TG: 183603
+[05.11.21 17:53:52.110] TG: 183620
+[05.11.21 17:53:52.127] TG: 183637
+[05.11.21 17:53:52.143] TG: 183653
+[05.11.21 17:53:52.160] TG: 183670
+[05.11.21 17:53:52.177] TG: 183687
+[05.11.21 17:53:52.193] TG: 183703
+[05.11.21 17:53:52.209] TG: 183720
+[05.11.21 17:53:52.227] TG: 183736
+[05.11.21 17:53:52.243] TG: 183753
+[05.11.21 17:53:52.244] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:52.260] TG: 183770
+[05.11.21 17:53:52.277] TG: 183787
+[05.11.21 17:53:52.293] TG: 183803
+[05.11.21 17:53:52.310] TG: 183820
+[05.11.21 17:53:52.327] TG: 183836
+[05.11.21 17:53:52.343] TG: 183853
+[05.11.21 17:53:52.360] TG: 183870
+[05.11.21 17:53:52.377] TG: 183887
+[05.11.21 17:53:52.394] TG: 183903
+[05.11.21 17:53:52.410] TG: 183920
+[05.11.21 17:53:52.427] TG: 183937
+[05.11.21 17:53:52.443] TG: 183953
+[05.11.21 17:53:52.460] TG: 183970
+[05.11.21 17:53:52.477] TG: 183987
+[05.11.21 17:53:52.500] TG: 184010
+[05.11.21 17:53:52.515] TG: 184025
+[05.11.21 17:53:52.533] TG: 184042
+[05.11.21 17:53:52.548] TG: 184058
+[05.11.21 17:53:52.564] TG: 184074
+[05.11.21 17:53:52.579] TG: 184090
+[05.11.21 17:53:52.596] TG: 184105
+[05.11.21 17:53:52.611] TG: 184121
+[05.11.21 17:53:52.627] TG: 184137
+[05.11.21 17:53:52.644] TG: 184153
+[05.11.21 17:53:52.661] TG: 184170
+[05.11.21 17:53:52.677] TG: 184187
+[05.11.21 17:53:52.693] TG: 184203
+[05.11.21 17:53:52.710] TG: 184220
+[05.11.21 17:53:52.727] TG: 184237
+[05.11.21 17:53:52.743] TG: 184253
+[05.11.21 17:53:52.761] TG: 184270
+[05.11.21 17:53:52.777] TG: 184287
+[05.11.21 17:53:52.794] TG: 184303
+[05.11.21 17:53:52.810] TG: 184320
+[05.11.21 17:53:52.827] TG: 184337
+[05.11.21 17:53:52.843] TG: 184353
+[05.11.21 17:53:52.861] TG: 184370
+[05.11.21 17:53:52.877] TG: 184387
+[05.11.21 17:53:52.894] TG: 184404
+[05.11.21 17:53:52.910] TG: 184420
+[05.11.21 17:53:52.927] TG: 184437
+[05.11.21 17:53:52.943] TG: 184453
+[05.11.21 17:53:52.960] TG: 184470
+[05.11.21 17:53:52.977] TG: 184487
+[05.11.21 17:53:52.994] TG: 184504
+[05.11.21 17:53:53.010] TG: 184520
+[05.11.21 17:53:53.027] TG: 184537
+[05.11.21 17:53:53.043] TG: 184553
+[05.11.21 17:53:53.059] TG: 184569
+[05.11.21 17:53:53.060] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:53.075] TG: 184585
+[05.11.21 17:53:53.094] TG: 184603
+[05.11.21 17:53:53.110] TG: 184620
+[05.11.21 17:53:53.126] TG: 184636
+[05.11.21 17:53:53.142] TG: 184652
+[05.11.21 17:53:53.158] TG: 184668
+[05.11.21 17:53:53.173] TG: 184683
+[05.11.21 17:53:53.189] TG: 184699
+[05.11.21 17:53:53.204] TG: 184714
+[05.11.21 17:53:53.221] TG: 184731
+[05.11.21 17:53:53.237] TG: 184747
+[05.11.21 17:53:53.253] TG: 184763
+[05.11.21 17:53:53.268] TG: 184778
+[05.11.21 17:53:53.284] TG: 184794
+[05.11.21 17:53:53.300] TG: 184810
+[05.11.21 17:53:53.327] TG: 184837
+[05.11.21 17:53:53.343] TG: 184853
+[05.11.21 17:53:53.360] TG: 184870
+[05.11.21 17:53:53.376] TG: 184886
+[05.11.21 17:53:53.393] TG: 184902
+[05.11.21 17:53:53.408] TG: 184918
+[05.11.21 17:53:53.425] TG: 184934
+[05.11.21 17:53:53.441] TG: 184950
+[05.11.21 17:53:53.457] TG: 184967
+[05.11.21 17:53:53.473] TG: 184982
+[05.11.21 17:53:53.489] TG: 184999
+[05.11.21 17:53:53.504] TG: 185014
+[05.11.21 17:53:53.521] TG: 185030
+[05.11.21 17:53:53.537] TG: 185047
+[05.11.21 17:53:53.552] TG: 185062
+[05.11.21 17:53:53.577] TG: 185087
+[05.11.21 17:53:53.593] TG: 185103
+[05.11.21 17:53:53.609] TG: 185119
+[05.11.21 17:53:53.625] TG: 185135
+[05.11.21 17:53:53.644] TG: 185154
+[05.11.21 17:53:53.660] TG: 185170
+[05.11.21 17:53:53.677] TG: 185187
+[05.11.21 17:53:53.694] TG: 185203
+[05.11.21 17:53:53.710] TG: 185220
+[05.11.21 17:53:53.727] TG: 185237
+[05.11.21 17:53:53.743] TG: 185254
+[05.11.21 17:53:53.760] TG: 185270
+[05.11.21 17:53:53.777] TG: 185287
+[05.11.21 17:53:53.793] TG: 185303
+[05.11.21 17:53:53.810] TG: 185320
+[05.11.21 17:53:53.827] TG: 185337
+[05.11.21 17:53:53.843] TG: 185354
+[05.11.21 17:53:53.861] TG: 185370
+[05.11.21 17:53:53.877] TG: 185387
+[05.11.21 17:53:53.894] TG: 185403
+[05.11.21 17:53:53.911] TG: 185420
+[05.11.21 17:53:53.927] TG: 185437
+[05.11.21 17:53:53.944] TG: 185454
+[05.11.21 17:53:53.960] TG: 185470
+[05.11.21 17:53:53.977] TG: 185487
+[05.11.21 17:53:53.994] TG: 185504
+[05.11.21 17:53:54.010] TG: 185520
+[05.11.21 17:53:54.027] TG: 185537
+[05.11.21 17:53:54.044] TG: 185554
+[05.11.21 17:53:54.060] TG: 185570
+[05.11.21 17:53:54.077] TG: 185587
+[05.11.21 17:53:54.094] TG: 185603
+[05.11.21 17:53:54.110] TG: 185620
+[05.11.21 17:53:54.127] TG: 185637
+[05.11.21 17:53:54.144] TG: 185654
+[05.11.21 17:53:54.160] TG: 185670
+[05.11.21 17:53:54.177] TG: 185687
+[05.11.21 17:53:54.194] TG: 185704
+[05.11.21 17:53:54.210] TG: 185720
+[05.11.21 17:53:55.578] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:56.467] LAUCER ITEM TO SLOT: anm_antirad
+[05.11.21 17:53:56.467] LAUCER ITEM TO SLOT ANIM: 1
+[05.11.21 17:53:56.487] TG: 187988
+[05.11.21 17:53:56.500] TG: 188010
+[05.11.21 17:53:56.515] TG: 188025
+[05.11.21 17:53:56.531] TG: 188041
+[05.11.21 17:53:56.547] TG: 188057
+[05.11.21 17:53:56.562] TG: 188073
+[05.11.21 17:53:56.579] TG: 188089
+[05.11.21 17:53:56.595] TG: 188106
+[05.11.21 17:53:56.614] TG: 188123
+[05.11.21 17:53:56.628] TG: 188138
+[05.11.21 17:53:56.645] TG: 188154
+[05.11.21 17:53:56.660] TG: 188170
+[05.11.21 17:53:56.677] TG: 188187
+[05.11.21 17:53:56.694] TG: 188204
+[05.11.21 17:53:56.711] TG: 188220
+[05.11.21 17:53:56.727] TG: 188237
+[05.11.21 17:53:56.744] TG: 188254
+[05.11.21 17:53:56.760] TG: 188270
+[05.11.21 17:53:56.778] TG: 188287
+[05.11.21 17:53:56.794] TG: 188304
+[05.11.21 17:53:56.811] TG: 188320
+[05.11.21 17:53:56.827] TG: 188337
+[05.11.21 17:53:56.844] TG: 188354
+[05.11.21 17:53:56.860] TG: 188370
+[05.11.21 17:53:56.877] TG: 188387
+[05.11.21 17:53:56.894] TG: 188404
+[05.11.21 17:53:56.911] TG: 188420
+[05.11.21 17:53:56.927] TG: 188437
+[05.11.21 17:53:56.944] TG: 188454
+[05.11.21 17:53:56.960] TG: 188470
+[05.11.21 17:53:56.977] TG: 188487
+[05.11.21 17:53:56.994] TG: 188504
+[05.11.21 17:53:57.010] TG: 188520
+[05.11.21 17:53:57.027] TG: 188537
+[05.11.21 17:53:57.044] TG: 188554
+[05.11.21 17:53:57.060] TG: 188570
+[05.11.21 17:53:57.077] TG: 188587
+[05.11.21 17:53:57.093] TG: 188604
+[05.11.21 17:53:57.111] TG: 188621
+[05.11.21 17:53:57.127] TG: 188637
+[05.11.21 17:53:57.144] TG: 188654
+[05.11.21 17:53:57.160] TG: 188670
+[05.11.21 17:53:57.177] TG: 188687
+[05.11.21 17:53:57.193] TG: 188704
+[05.11.21 17:53:57.211] TG: 188720
+[05.11.21 17:53:57.227] TG: 188737
+[05.11.21 17:53:57.244] TG: 188754
+[05.11.21 17:53:57.260] TG: 188770
+[05.11.21 17:53:57.278] TG: 188787
+[05.11.21 17:53:57.294] TG: 188804
+[05.11.21 17:53:57.311] TG: 188821
+[05.11.21 17:53:57.327] TG: 188837
+[05.11.21 17:53:57.344] TG: 188854
+[05.11.21 17:53:57.360] TG: 188870
+[05.11.21 17:53:57.377] TG: 188887
+[05.11.21 17:53:57.394] TG: 188904
+[05.11.21 17:53:57.411] TG: 188921
+[05.11.21 17:53:57.427] TG: 188937
+[05.11.21 17:53:57.444] TG: 188954
+[05.11.21 17:53:57.460] TG: 188970
+[05.11.21 17:53:57.477] TG: 188987
+[05.11.21 17:53:57.493] TG: 189004
+[05.11.21 17:53:57.510] TG: 189020
+[05.11.21 17:53:57.527] TG: 189037
+[05.11.21 17:53:57.544] TG: 189054
+[05.11.21 17:53:57.560] TG: 189070
+[05.11.21 17:53:57.578] TG: 189087
+[05.11.21 17:53:57.594] TG: 189104
+[05.11.21 17:53:57.611] TG: 189121
+[05.11.21 17:53:57.627] TG: 189137
+[05.11.21 17:53:57.645] TG: 189154
+[05.11.21 17:53:57.661] TG: 189171
+[05.11.21 17:53:57.677] TG: 189187
+[05.11.21 17:53:57.694] TG: 189204
+[05.11.21 17:53:57.711] TG: 189221
+[05.11.21 17:53:57.727] TG: 189237
+[05.11.21 17:53:57.744] TG: 189254
+[05.11.21 17:53:57.760] TG: 189270
+[05.11.21 17:53:57.777] TG: 189287
+[05.11.21 17:53:57.794] TG: 189304
+[05.11.21 17:53:57.811] TG: 189320
+[05.11.21 17:53:57.827] TG: 189337
+[05.11.21 17:53:57.844] TG: 189354
+[05.11.21 17:53:57.860] TG: 189370
+[05.11.21 17:53:57.878] TG: 189387
+[05.11.21 17:53:57.894] TG: 189404
+[05.11.21 17:53:57.911] TG: 189421
+[05.11.21 17:53:57.927] TG: 189437
+[05.11.21 17:53:57.944] TG: 189454
+[05.11.21 17:53:57.960] TG: 189470
+[05.11.21 17:53:57.978] TG: 189487
+[05.11.21 17:53:57.994] TG: 189504
+[05.11.21 17:53:58.011] TG: 189520
+[05.11.21 17:53:58.027] TG: 189537
+[05.11.21 17:53:58.044] TG: 189554
+[05.11.21 17:53:58.060] TG: 189570
+[05.11.21 17:53:58.077] TG: 189587
+[05.11.21 17:53:58.094] TG: 189604
+[05.11.21 17:53:58.110] TG: 189620
+[05.11.21 17:53:58.127] TG: 189637
+[05.11.21 17:53:58.144] TG: 189654
+[05.11.21 17:53:58.161] TG: 189671
+[05.11.21 17:53:58.177] TG: 189687
+[05.11.21 17:53:58.194] TG: 189704
+[05.11.21 17:53:58.210] TG: 189720
+[05.11.21 17:53:58.227] TG: 189737
+[05.11.21 17:53:58.244] TG: 189754
+[05.11.21 17:53:58.261] TG: 189771
+[05.11.21 17:53:58.288] TG: 189798
+[05.11.21 17:53:58.304] TG: 189814
+[05.11.21 17:53:58.319] TG: 189829
+[05.11.21 17:53:58.334] TG: 189845
+[05.11.21 17:53:58.351] TG: 189861
+[05.11.21 17:53:58.367] TG: 189877
+[05.11.21 17:53:58.382] TG: 189892
+[05.11.21 17:53:58.398] TG: 189908
+[05.11.21 17:53:58.414] TG: 189923
+[05.11.21 17:53:58.430] TG: 189940
+[05.11.21 17:53:58.446] TG: 189956
+[05.11.21 17:53:58.461] TG: 189972
+[05.11.21 17:53:58.477] TG: 189987
+[05.11.21 17:53:58.494] TG: 190004
+[05.11.21 17:53:58.511] TG: 190020
+[05.11.21 17:53:58.527] TG: 190037
+[05.11.21 17:53:58.544] TG: 190054
+[05.11.21 17:53:58.560] TG: 190070
+[05.11.21 17:53:58.578] TG: 190087
+[05.11.21 17:53:58.594] TG: 190104
+[05.11.21 17:53:58.611] TG: 190121
+[05.11.21 17:53:58.627] TG: 190137
+[05.11.21 17:53:58.647] TG: 190154
+[05.11.21 17:53:58.661] TG: 190171
+[05.11.21 17:53:58.679] TG: 190188
+[05.11.21 17:53:58.694] TG: 190204
+[05.11.21 17:53:58.711] TG: 190220
+[05.11.21 17:53:58.728] TG: 190237
+[05.11.21 17:53:58.744] TG: 190254
+[05.11.21 17:53:58.761] TG: 190271
+[05.11.21 17:53:58.778] TG: 190287
+[05.11.21 17:53:58.794] TG: 190304
+[05.11.21 17:53:58.811] TG: 190321
+[05.11.21 17:53:58.828] TG: 190337
+[05.11.21 17:53:58.845] TG: 190354
+[05.11.21 17:53:58.861] TG: 190370
+[05.11.21 17:53:58.877] TG: 190387
+[05.11.21 17:53:58.894] TG: 190404
+[05.11.21 17:53:58.910] TG: 190420
+[05.11.21 17:53:58.927] TG: 190437
+[05.11.21 17:53:58.944] TG: 190454
+[05.11.21 17:53:58.960] TG: 190470
+[05.11.21 17:53:58.977] TG: 190487
+[05.11.21 17:53:58.994] TG: 190504
+[05.11.21 17:53:59.011] TG: 190520
+[05.11.21 17:53:59.027] TG: 190537
+[05.11.21 17:53:59.044] TG: 190554
+[05.11.21 17:53:59.061] TG: 190571
+[05.11.21 17:53:59.077] TG: 190587
+[05.11.21 17:53:59.094] TG: 190604
+[05.11.21 17:53:59.110] TG: 190620
+[05.11.21 17:53:59.127] TG: 190637
+[05.11.21 17:53:59.144] TG: 190654
+[05.11.21 17:53:59.160] TG: 190670
+[05.11.21 17:53:59.177] TG: 190687
+[05.11.21 17:53:59.194] TG: 190704
+[05.11.21 17:53:59.211] TG: 190720
+[05.11.21 17:53:59.227] TG: 190737
+[05.11.21 17:53:59.244] TG: 190754
+[05.11.21 17:53:59.260] TG: 190771
+[05.11.21 17:53:59.277] TG: 190787
+[05.11.21 17:53:59.294] TG: 190804
+[05.11.21 17:53:59.311] TG: 190820
+[05.11.21 17:53:59.327] TG: 190837
+[05.11.21 17:53:59.344] TG: 190854
+[05.11.21 17:53:59.361] TG: 190871
+[05.11.21 17:53:59.377] TG: 190887
+[05.11.21 17:53:59.394] TG: 190904
+[05.11.21 17:53:59.411] TG: 190921
+[05.11.21 17:53:59.412] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_0], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:53:59.427] TG: 190937
+[05.11.21 17:53:59.444] TG: 190954
+[05.11.21 17:53:59.461] TG: 190971
+[05.11.21 17:53:59.477] TG: 190987
+[05.11.21 17:53:59.494] TG: 191004
+[05.11.21 17:53:59.511] TG: 191020
+[05.11.21 17:53:59.527] TG: 191037
+[05.11.21 17:53:59.544] TG: 191054
+[05.11.21 17:53:59.561] TG: 191071
+[05.11.21 17:53:59.577] TG: 191087
+[05.11.21 17:53:59.594] TG: 191104
+[05.11.21 17:53:59.611] TG: 191121
+[05.11.21 17:53:59.628] TG: 191137
+[05.11.21 17:53:59.644] TG: 191154
+[05.11.21 17:53:59.661] TG: 191171
+[05.11.21 17:53:59.678] TG: 191187
+[05.11.21 17:53:59.693] TG: 191204
+[05.11.21 17:53:59.711] TG: 191221
+[05.11.21 17:53:59.727] TG: 191237
+[05.11.21 17:53:59.744] TG: 191254
+[05.11.21 17:53:59.761] TG: 191271
+[05.11.21 17:53:59.777] TG: 191287
+[05.11.21 17:53:59.794] TG: 191304
+[05.11.21 17:53:59.811] TG: 191321
+[05.11.21 17:53:59.827] TG: 191337
+[05.11.21 17:53:59.844] TG: 191354
+[05.11.21 17:53:59.860] TG: 191370
+[05.11.21 17:53:59.877] TG: 191387
+[05.11.21 17:53:59.894] TG: 191404
+[05.11.21 17:53:59.911] TG: 191420
+[05.11.21 17:53:59.929] TG: 191437
+[05.11.21 17:53:59.944] TG: 191453
+[05.11.21 17:53:59.960] TG: 191470
+[05.11.21 17:53:59.989] TG: 191490
+[05.11.21 17:53:59.999] TG: 191509
+[05.11.21 17:54:00.018] TG: 191525
+[05.11.21 17:54:00.031] TG: 191541
+[05.11.21 17:54:00.047] TG: 191557
+[05.11.21 17:54:00.063] TG: 191573
+[05.11.21 17:54:00.079] TG: 191589
+[05.11.21 17:54:00.094] TG: 191605
+[05.11.21 17:54:00.111] TG: 191620
+[05.11.21 17:54:00.127] TG: 191637
+[05.11.21 17:54:00.145] TG: 191654
+[05.11.21 17:54:00.161] TG: 191670
+[05.11.21 17:54:00.178] TG: 191687
+[05.11.21 17:54:00.194] TG: 191704
+[05.11.21 17:54:00.211] TG: 191721
+[05.11.21 17:54:00.227] TG: 191737
+[05.11.21 17:54:00.244] TG: 191754
+[05.11.21 17:54:00.260] TG: 191770
+[05.11.21 17:54:00.277] TG: 191787
+[05.11.21 17:54:00.294] TG: 191804
+[05.11.21 17:54:00.311] TG: 191821
+[05.11.21 17:54:00.327] TG: 191837
+[05.11.21 17:54:00.344] TG: 191854
+[05.11.21 17:54:00.361] TG: 191871
+[05.11.21 17:54:00.378] TG: 191887
+[05.11.21 17:54:00.394] TG: 191904
+[05.11.21 17:54:00.411] TG: 191921
+[05.11.21 17:54:00.427] TG: 191937
+[05.11.21 17:54:00.444] TG: 191954
+[05.11.21 17:54:00.460] TG: 191970
+[05.11.21 17:54:00.477] TG: 191987
+[05.11.21 17:54:00.494] TG: 192004
+[05.11.21 17:54:00.511] TG: 192021
+[05.11.21 17:54:00.527] TG: 192037
+[05.11.21 17:54:00.544] TG: 192054
+[05.11.21 17:54:00.561] TG: 192071
+[05.11.21 17:54:00.578] TG: 192087
+[05.11.21 17:54:00.594] TG: 192104
+[05.11.21 17:54:00.611] TG: 192121
+[05.11.21 17:54:00.627] TG: 192137
+[05.11.21 17:54:00.644] TG: 192154
+[05.11.21 17:54:00.661] TG: 192171
+[05.11.21 17:54:00.677] TG: 192187
+[05.11.21 17:54:00.694] TG: 192204
+[05.11.21 17:54:00.711] TG: 192221
+[05.11.21 17:54:00.727] TG: 192237
+[05.11.21 17:54:00.744] TG: 192254
+[05.11.21 17:54:00.760] TG: 192270
+[05.11.21 17:54:00.777] TG: 192287
+[05.11.21 17:54:00.794] TG: 192304
+[05.11.21 17:54:00.811] TG: 192321
+[05.11.21 17:54:00.827] TG: 192337
+[05.11.21 17:54:00.844] TG: 192354
+[05.11.21 17:54:02.633] LAUCER ITEM TO SLOT: anm_bandage
+[05.11.21 17:54:02.633] LAUCER ITEM TO SLOT ANIM: 1
+[05.11.21 17:54:02.657] ! auto-generated bump map: hands\act_arm_0_bump#
+[05.11.21 17:54:02.675] TG: 194154
+[05.11.21 17:54:02.687] TG: 194197
+[05.11.21 17:54:02.711] TG: 194221
+[05.11.21 17:54:02.727] TG: 194237
+[05.11.21 17:54:02.744] TG: 194254
+[05.11.21 17:54:02.761] TG: 194271
+[05.11.21 17:54:02.762] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:54:02.777] TG: 194287
+[05.11.21 17:54:02.794] TG: 194304
+[05.11.21 17:54:02.811] TG: 194321
+[05.11.21 17:54:02.828] TG: 194338
+[05.11.21 17:54:02.844] TG: 194354
+[05.11.21 17:54:02.861] TG: 194371
+[05.11.21 17:54:02.877] TG: 194387
+[05.11.21 17:54:02.894] TG: 194404
+[05.11.21 17:54:02.911] TG: 194421
+[05.11.21 17:54:02.927] TG: 194437
+[05.11.21 17:54:02.944] TG: 194454
+[05.11.21 17:54:02.961] TG: 194471
+[05.11.21 17:54:02.978] TG: 194487
+[05.11.21 17:54:02.994] TG: 194504
+[05.11.21 17:54:03.011] TG: 194521
+[05.11.21 17:54:03.027] TG: 194537
+[05.11.21 17:54:03.044] TG: 194554
+[05.11.21 17:54:03.061] TG: 194571
+[05.11.21 17:54:03.078] TG: 194587
+[05.11.21 17:54:03.094] TG: 194604
+[05.11.21 17:54:03.111] TG: 194621
+[05.11.21 17:54:03.127] TG: 194637
+[05.11.21 17:54:03.144] TG: 194654
+[05.11.21 17:54:03.160] TG: 194671
+[05.11.21 17:54:03.178] TG: 194687
+[05.11.21 17:54:03.194] TG: 194704
+[05.11.21 17:54:03.211] TG: 194721
+[05.11.21 17:54:03.228] TG: 194738
+[05.11.21 17:54:03.244] TG: 194754
+[05.11.21 17:54:03.261] TG: 194770
+[05.11.21 17:54:03.278] TG: 194787
+[05.11.21 17:54:03.294] TG: 194804
+[05.11.21 17:54:03.311] TG: 194821
+[05.11.21 17:54:03.327] TG: 194837
+[05.11.21 17:54:03.344] TG: 194854
+[05.11.21 17:54:03.361] TG: 194871
+[05.11.21 17:54:03.378] TG: 194887
+[05.11.21 17:54:03.394] TG: 194904
+[05.11.21 17:54:03.411] TG: 194921
+[05.11.21 17:54:03.427] TG: 194937
+[05.11.21 17:54:03.429] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:54:03.444] TG: 194954
+[05.11.21 17:54:03.460] TG: 194970
+[05.11.21 17:54:03.477] TG: 194987
+[05.11.21 17:54:03.494] TG: 195004
+[05.11.21 17:54:03.511] TG: 195021
+[05.11.21 17:54:03.527] TG: 195037
+[05.11.21 17:54:03.545] TG: 195054
+[05.11.21 17:54:03.560] TG: 195071
+[05.11.21 17:54:03.578] TG: 195087
+[05.11.21 17:54:03.594] TG: 195104
+[05.11.21 17:54:03.612] TG: 195121
+[05.11.21 17:54:03.628] TG: 195138
+[05.11.21 17:54:03.645] TG: 195154
+[05.11.21 17:54:03.661] TG: 195171
+[05.11.21 17:54:03.678] TG: 195188
+[05.11.21 17:54:03.694] TG: 195204
+[05.11.21 17:54:03.711] TG: 195221
+[05.11.21 17:54:03.727] TG: 195237
+[05.11.21 17:54:03.744] TG: 195254
+[05.11.21 17:54:03.760] TG: 195270
+[05.11.21 17:54:03.777] TG: 195287
+[05.11.21 17:54:03.794] TG: 195304
+[05.11.21 17:54:03.811] TG: 195321
+[05.11.21 17:54:03.827] TG: 195337
+[05.11.21 17:54:03.844] TG: 195354
+[05.11.21 17:54:03.861] TG: 195371
+[05.11.21 17:54:03.878] TG: 195387
+[05.11.21 17:54:03.894] TG: 195404
+[05.11.21 17:54:03.911] TG: 195421
+[05.11.21 17:54:03.927] TG: 195437
+[05.11.21 17:54:03.944] TG: 195454
+[05.11.21 17:54:03.960] TG: 195471
+[05.11.21 17:54:03.977] TG: 195487
+[05.11.21 17:54:03.994] TG: 195504
+[05.11.21 17:54:04.011] TG: 195520
+[05.11.21 17:54:04.027] TG: 195537
+[05.11.21 17:54:04.044] TG: 195554
+[05.11.21 17:54:04.061] TG: 195571
+[05.11.21 17:54:04.078] TG: 195588
+[05.11.21 17:54:04.094] TG: 195604
+[05.11.21 17:54:04.111] TG: 195621
+[05.11.21 17:54:04.127] TG: 195637
+[05.11.21 17:54:04.144] TG: 195654
+[05.11.21 17:54:04.161] TG: 195671
+[05.11.21 17:54:04.178] TG: 195687
+[05.11.21 17:54:04.194] TG: 195704
+[05.11.21 17:54:04.211] TG: 195721
+[05.11.21 17:54:04.227] TG: 195737
+[05.11.21 17:54:04.244] TG: 195754
+[05.11.21 17:54:04.261] TG: 195771
+[05.11.21 17:54:04.281] TG: 195789
+[05.11.21 17:54:04.294] TG: 195804
+[05.11.21 17:54:04.311] TG: 195821
+[05.11.21 17:54:04.327] TG: 195837
+[05.11.21 17:54:04.344] TG: 195854
+[05.11.21 17:54:04.361] TG: 195871
+[05.11.21 17:54:04.377] TG: 195887
+[05.11.21 17:54:04.394] TG: 195904
+[05.11.21 17:54:04.411] TG: 195921
+[05.11.21 17:54:04.427] TG: 195937
+[05.11.21 17:54:04.444] TG: 195954
+[05.11.21 17:54:04.460] TG: 195971
+[05.11.21 17:54:04.478] TG: 195987
+[05.11.21 17:54:04.494] TG: 196004
+[05.11.21 17:54:04.511] TG: 196021
+[05.11.21 17:54:04.527] TG: 196037
+[05.11.21 17:54:04.545] TG: 196054
+[05.11.21 17:54:04.561] TG: 196071
+[05.11.21 17:54:04.578] TG: 196088
+[05.11.21 17:54:04.594] TG: 196104
+[05.11.21 17:54:04.612] TG: 196122
+[05.11.21 17:54:04.636] TG: 196145
+[05.11.21 17:54:04.651] TG: 196161
+[05.11.21 17:54:04.667] TG: 196177
+[05.11.21 17:54:04.683] TG: 196193
+[05.11.21 17:54:04.698] TG: 196208
+[05.11.21 17:54:04.719] TG: 196228
+[05.11.21 17:54:04.734] TG: 196244
+[05.11.21 17:54:04.751] TG: 196261
+[05.11.21 17:54:04.767] TG: 196277
+[05.11.21 17:54:04.783] TG: 196293
+[05.11.21 17:54:04.798] TG: 196309
+[05.11.21 17:54:05.229] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_1], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:54:05.496] !![CIKLimbsController::PlayLegs] No foot stseps for animation: animation name: [idle_2_idle_4], animation set: [actors\fat_npc_animation.omf]
+[05.11.21 17:54:09.856] - Disconnect
+[05.11.21 17:54:11.704] - Destroying level
+[05.11.21 17:54:11.895] DestroySingleton::RefCounter: 0
+[05.11.21 17:54:11.896] DestroySingleton::RefCounter: -646
+[05.11.21 17:54:11.899] DestroySingleton::RefCounter: 0
+[05.11.21 17:54:11.899] DestroySingleton::RefCounter: 0
+[05.11.21 17:54:11.908] Input:  1
+[05.11.21 17:54:11.914] Config-file [v:\priboi ogsr\userdata\user.ltx] saved successfully
+[05.11.21 17:54:12.124] Destroying Direct3D...
+[05.11.21 17:54:12.124] * [R_occlusion::occq_destroy]: fids[43] used[43] pool[43]
+[05.11.21 17:54:12.124] * [R_occlusion::occq_destroy]: released [0] used and [43] pool queries
+[05.11.21 17:54:12.176] * RM_Dump: textures  : 0
+[05.11.21 17:54:12.176] * RM_Dump: rtargets  : 0
+[05.11.21 17:54:12.176] * RM_Dump: vs        : 0
+[05.11.21 17:54:12.176] * RM_Dump: ps        : 0
+[05.11.21 17:54:12.176] * RM_Dump: dcl       : 0
+[05.11.21 17:54:12.176] * RM_Dump: states    : 0
+[05.11.21 17:54:12.176] * RM_Dump: tex_list  : 0
+[05.11.21 17:54:12.176] * RM_Dump: matrices  : 0
+[05.11.21 17:54:12.176] * RM_Dump: lst_constants: 0
+[05.11.21 17:54:12.176] * RM_Dump: v_passes  : 0
+[05.11.21 17:54:12.176] * RM_Dump: v_elements: 0
+[05.11.21 17:54:12.176] * RM_Dump: v_shaders : 0
+[05.11.21 17:54:12.176] refCount:pBaseZB 1
+[05.11.21 17:54:12.176] refCount:pBaseRT 1
+[05.11.21 17:54:12.176] DeviceREF: 1
+[05.11.21 17:54:12.230] * [R_occlusion::occq_destroy]: fids[0] used[0] pool[0]
+[05.11.21 17:54:12.230] * [R_occlusion::occq_destroy]: released [0] used and [0] pool queries

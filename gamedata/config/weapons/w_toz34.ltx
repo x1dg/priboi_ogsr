@@ -178,8 +178,46 @@ bullet_speed			= 290	;начальная скорость пули
 visual                  	= weapons\toz34\wpn_toz34_short.ogf
 hud                      	= wpn_toz34_short_hud
 
-[wpn_toz34_short_hud]:wpn_shotgun_hud
+[wpn_toz34_short_hud]
+shell_point		 = 0.0, 0.0, 0.0
 fire_point               	= -0.15, -0.01, 0.06
 fire_point2              	= -0.15, -0.01, 0.06
+fire_bone                = wpn_barrel_0
+orientation              = 0, 0, 0
+position                 = 0, 0, 0
 visual                  	= weapons\toz34\wpn_toz34_short_hud.ogf
+
+;anim_idle		= idle
+;anim_reload		= reload
+;anim_draw		= draw
+;anim_holster	= holster
+;anim_shoot		= shoot
+;anim_shoot_both = shoot_both
+;anim_idle_aim	= idle_aim
+
+
+anim_idle					= idle
+anim_reload					= reload ;reload both
+anim_draw					= draw
+anim_holster				= holster
+anim_shoot					= shoot1
+anim_shoot_both 			= shoot1
+anim_idle_aim				= idle_aim
+anim_idle_sprint			= idle_sprint
+
+anim_reload_1				= reload_one
+anim_shoot_1				= shoot1
+
+anim_idle_1					= idle
+anim_idle_2					= idle
+
+anim_zoomed_idle_1			= idle_aim
+anim_zoomedidle_2			= idle_aim
+
+
+;смещения HUD для режима приближения
 zoom_offset			= -0.1266,0.049,0.1
+zoom_rotate_x		= 0.044000
+zoom_rotate_y		= 0.017000
+;время поворота HUD (сек)
+;zoom_rotate_time	= 0.7
